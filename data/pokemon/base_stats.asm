@@ -34,7 +34,7 @@ BaseData::
 	indirect_entries NUM_POKEMON, BaseData1
 	indirect_table_end
 
-BaseData1:
+BaseData::
 INCLUDE "data/pokemon/base_stats/bulbasaur.asm"
 INCLUDE "data/pokemon/base_stats/ivysaur.asm"
 INCLUDE "data/pokemon/base_stats/venusaur.asm"
