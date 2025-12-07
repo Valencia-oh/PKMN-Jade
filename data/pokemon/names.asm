@@ -256,5 +256,6 @@ PokemonNames::
 	dname "HO-OH"
 	dname "CELEBI"
 	dname "APPLIN"
+	dname "APPLETUN"
 	dname "FALINKS"
 	assert_table_length NUM_POKEMON
