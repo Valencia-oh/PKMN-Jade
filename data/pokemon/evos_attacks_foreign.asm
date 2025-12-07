@@ -8,8 +8,9 @@ EvosAttacksPointers3::
 .IndirectEnd::
 
 ApplinEvosAttacks:
-	dbww 0 ; EVOLVE_ITEM, SWEET_APPLE, APPLETUN
-	dbww 0 ; EVOLVE_ITEM, TART_APPLE, FLAPPLE
+	dbww ; EVOLVE_ITEM, SWEET_APPLE, APPLETUN
+	dbww ; EVOLVE_ITEM, TART_APPLE, FLAPPLE
+	db 0 ; no more evolutions
 	dbw 1, WITHDRAW
 	dbw 1, NIGHT_SHADE
 	db 0 ; no more level-up moves
@@ -36,12 +37,10 @@ FlappleEvosAttacks:
 	dbw 1, NIGHT_SHADE
 	dbw 1, SWEET_SCENT
 	dbw 1, GROWTH
-	dbw 2, HEADBUTT
-	dbw 4, CURSE
-	dbw 8, STOMP
-	dbw 12, LEECH_SEED
-	dbw 16, PROTECT
-	dbw 24, RECOVER
+	dbw 9, GUST
+	dbw 15, QUICK_ATTACK
+	dbw 21, WHIRLWIND
+	dbw 29, WING_ATTACK
 	dbw 30, SOLARBEAM
 	dbw 35, TWISTER
 	db 0 ; no more level-up moves
