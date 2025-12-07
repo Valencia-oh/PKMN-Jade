@@ -1238,11 +1238,11 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 2, FALINKS
+	dbw 2, APPLIN
+	dbw 3, FALINKS
+	dbw 3, APPLIN
 	dbw 2, FALINKS
-	dbw 3, FALINKS
-	dbw 3, FALINKS
-	dbw 2, FALINKS
-	dbw 3, FALINKS
+	dbw 3, APPLIN
 	dbw 3, FALINKS
 	; day
 	dbw 2, PIDGEY
