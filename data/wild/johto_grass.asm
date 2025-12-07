@@ -1239,11 +1239,11 @@ JohtoGrassWildMons:
 	; morn
 	dbw 2, FALINKS
 	dbw 2, APPLIN
+	dbw 3, APPLETUN
 	dbw 3, FALINKS
-	dbw 3, APPLIN
-	dbw 2, FALINKS
-	dbw 3, APPLIN
-	dbw 3, FALINKS
+	dbw 2, APPLIN
+	dbw 3, APPLETUN
+	dbw 3, APPLETUN
 	; day
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
