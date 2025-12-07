@@ -711,6 +711,8 @@ UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
+ApplinFrontpic: INCBIN "gfx/pokemon/applin/front.animated.2bpp.lz"
+ApplinBackpic:  INCBIN "gfx/pokemon/applin/back.2bpp.lz"
 FalinksFrontpic: INCBIN "gfx/pokemon/falinks/front.animated.2bpp.lz"
 FalinksBackpic:  INCBIN "gfx/pokemon/falinks/back.2bpp.lz"
 
