@@ -275,7 +275,8 @@ DEF JOHTO_POKEMON EQU const_value
 DEF NUM_JOHTO_POKEMON EQU const_value - 1
 DEF FOREIGN_POKEMON EQU const_value
 	const APPLIN     ; fC
-	const FALINKS    ; fd
+	const APPLETUN   ; fd
+	const FALINKS    ; fe
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
