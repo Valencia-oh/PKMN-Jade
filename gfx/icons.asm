@@ -255,7 +255,11 @@ TyranitarIcon::  INCBIN "gfx/icons/tyranitar.2bpp"
 LugiaIcon::      INCBIN "gfx/icons/lugia.2bpp"
 HoOhIcon::       INCBIN "gfx/icons/ho_oh.2bpp"
 CelebiIcon::     INCBIN "gfx/icons/celebi.2bpp"
+
+SECTION "Mon Icons 3", ROMX
+
 FalinksIcon::    INCBIN "gfx/icons/swinub.2bpp"
+ApplinIcon::     INCBIN "gfx/icons/swinub.2bpp"
 AppletunIcon::   INCBIN "gfx/icons/piloswine.2bpp"
 FlappleIcon::    INCBIN "gfx/icons/noctowl.2bpp"
 EggIcon::        INCBIN "gfx/icons/egg.2bpp"
