@@ -202,7 +202,7 @@ SunkernPokedexEntry::    INCLUDE "data/pokemon/dex_entries/sunkern.asm"
 SunfloraPokedexEntry::   INCLUDE "data/pokemon/dex_entries/sunflora.asm"
 
 
-SECTION "Pokedex Entries 193-253", ROMX
+SECTION "Pokedex Entries 193-254", ROMX
 
 YanmaPokedexEntry::      INCLUDE "data/pokemon/dex_entries/yanma.asm"
 WooperPokedexEntry::     INCLUDE "data/pokemon/dex_entries/wooper.asm"
@@ -264,4 +264,5 @@ LugiaPokedexEntry::      INCLUDE "data/pokemon/dex_entries/lugia.asm"
 HoOhPokedexEntry::       INCLUDE "data/pokemon/dex_entries/ho_oh.asm"
 CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 ApplinPokedexEntry::     INCLUDE "data/pokemon/dex_entries/applin.asm"
+AppletunPokedexEntry::     INCLUDE "data/pokemon/dex_entries/appletun.asm"
 FalinksPokedexEntry::    INCLUDE "data/pokemon/dex_entries/falinks.asm"
