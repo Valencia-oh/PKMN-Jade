@@ -14,7 +14,7 @@ FalinksEvosAttacks:
   dbw 20, METAL_CLAW
 	dbw 25, ENDURE
 	dbw 30, COUNTER
-	dbw 40, MEGA_HORN
+	dbw 40, MEGAHORN
 	dbw 50, COUNTER
 	db 0 ; no more level-up moves
 
