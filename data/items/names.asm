@@ -83,7 +83,7 @@ ItemNames::
 	li "WHT APRICORN" ; 0051
 	li "BLACKBELT"    ; 0052
 	li "BLK APRICORN" ; 0053
-	li "TERU-SAMA"    ; 0054
+	li "TART APPLE"    ; 0054
 	li "PNK APRICORN" ; 0055
 	li "BLACKGLASSES" ; 0056
 	li "SLOWPOKETAIL" ; 0057
