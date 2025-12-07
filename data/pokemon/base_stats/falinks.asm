@@ -17,5 +17,5 @@
 	dn EGG_MINERAL, EGG_FAIRY ; egg groups
 
 	; tm/hm learnset
-	tmhm HYPER_BEAM, REST
+	tmhm HYPER_BEAM, REST, ROCK_SMASH, HIDDEN_POWER
 	; end
