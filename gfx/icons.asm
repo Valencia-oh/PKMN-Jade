@@ -129,10 +129,6 @@ ElectabuzzIcon:: INCBIN "gfx/icons/electabuzz.2bpp"
 MagmarIcon::     INCBIN "gfx/icons/magmar.2bpp"
 PinsirIcon::     INCBIN "gfx/icons/pinsir.2bpp"
 TaurosIcon::     INCBIN "gfx/icons/tauros.2bpp"
-
-
-SECTION "Mon Icons 2", ROMX
-
 MagikarpIcon::   INCBIN "gfx/icons/magikarp.2bpp"
 GyaradosIcon::   INCBIN "gfx/icons/gyarados.2bpp"
 LaprasIcon::     INCBIN "gfx/icons/lapras.2bpp"
@@ -141,6 +137,9 @@ EeveeIcon::      INCBIN "gfx/icons/eevee.2bpp"
 VaporeonIcon::   INCBIN "gfx/icons/vaporeon.2bpp"
 JolteonIcon::    INCBIN "gfx/icons/jolteon.2bpp"
 FlareonIcon::    INCBIN "gfx/icons/flareon.2bpp"
+
+SECTION "Mon Icons 2", ROMX
+
 PorygonIcon::    INCBIN "gfx/icons/porygon.2bpp"
 OmanyteIcon::    INCBIN "gfx/icons/omanyte.2bpp"
 OmastarIcon::    INCBIN "gfx/icons/omastar.2bpp"
