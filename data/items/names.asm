@@ -19,7 +19,7 @@ ItemNames::
 	li "FIRE STONE"   ; 0011
 	li "THUNDERSTONE" ; 0012
 	li "WATER STONE"  ; 0013
-	li "TERU-SAMA"    ; 0014
+	li "SWEET_APPLE"  ; 0014
 	li "HP UP"        ; 0015
 	li "PROTEIN"      ; 0016
 	li "IRON"         ; 0017
@@ -185,7 +185,6 @@ KeyItemNames::
 	li "PASS"         ; 0113
 	li "SQUIRTBOTTLE" ; 0114
 	li "RAINBOW WING" ; 0115
-	li "SWEET APPLE"  ; 0116
 	assert_list_length NUM_KEY_ITEM_POCKET
 
 BallNames::
