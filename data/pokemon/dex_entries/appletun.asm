@@ -3,7 +3,7 @@ db "APPLE_NECTAR@" ; species name
 
 	db   "Big Apple"
 	next "Big Apple."
-	next "Big Apple "
+	next "Big Apple"
 
 	page "Big Allpe"
 	next "Bigger.@"
