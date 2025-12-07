@@ -1,4 +1,4 @@
-Pokemon Jade
+#Pokemon Jade
 
 Jade is a romhack based off the CSE engine for Pokecrystal.
 
