@@ -3,7 +3,7 @@ db "APPLE_CORE@" ; species name
 
 	db   "It spends its life"
 	next "inside an apple."
-	next "It hides from its "
+	next "It hides from its"
 
 	page "natural enemies"
 	next "bird MON.@"
