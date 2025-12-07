@@ -432,6 +432,7 @@ SECTION "Pic Animations 2", ROMX
 
 INCLUDE "gfx/pokemon/frame_pointers.asm"
 INCLUDE "gfx/pokemon/kanto_frames.asm"
+INCLUDE "gfx/pokemon/foreign_frames.asm"
 
 
 SECTION "Pic Animations 3", ROMX
