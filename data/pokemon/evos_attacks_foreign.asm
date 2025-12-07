@@ -8,7 +8,7 @@ EvosAttacksPointers3::
 ApplinEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, WITHDRAW
-	dbw 1, NIGHTSHADE
+	dbw 1, NIGHT_SHADE
 	db 0 ; no more level-up moves
 
 FalinksEvosAttacks:
