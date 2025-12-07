@@ -11,7 +11,7 @@ FalinksEvosAttacks:
 	dbw 5, ROCK_SMASH
 	dbw 10, FOCUS_ENERGY
 	dbw 15, HEADBUTT
-  dbw 20, METAL_CLAW
+    dbw 20, METAL_CLAW
 	dbw 25, ENDURE
 	dbw 30, COUNTER
 	dbw 40, MEGAHORN
