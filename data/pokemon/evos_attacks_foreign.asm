@@ -1,8 +1,15 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
-	dw CelebiEvosAttacks
+	dw ApplinEvosAttacks
+	dw FalinksEvosAttacks
 .IndirectEnd::
+
+ApplinEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, WITHDRAW
+	dbw 1, ASTONISH
+	db 0 ; no more level-up moves
 
 FalinksEvosAttacks:
 	db 0 ; no more evolutions
