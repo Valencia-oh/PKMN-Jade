@@ -253,5 +253,6 @@ PokedexDataPointerTable:
 	dba HoOhPokedexEntry
 	dba CelebiPokedexEntry
 	dba ApplinPokedexEntry
+	dba AppletunPokedexEntry
 	dba FalinksPokedexEntry
 	assert_table_length NUM_POKEMON
