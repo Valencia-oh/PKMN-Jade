@@ -1,5 +1,5 @@
 FramesPointers:
-	table_width 3
+	table_width 4
 	dba BulbasaurFrames
 	dba IvysaurFrames
 	dba VenusaurFrames
