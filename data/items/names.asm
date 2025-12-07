@@ -185,6 +185,7 @@ KeyItemNames::
 	li "PASS"         ; 0113
 	li "SQUIRTBOTTLE" ; 0114
 	li "RAINBOW WING" ; 0115
+	li "SWEET APPLE"  ; 0116
 	assert_list_length NUM_KEY_ITEM_POCKET
 
 BallNames::
