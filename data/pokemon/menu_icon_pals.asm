@@ -262,5 +262,6 @@ MonMenuIconPals:
 	icon_pals RED,    BROWN  ; HO_OH
 	icon_pals GREEN,  PINK   ; CELEBI
 	icon_pals RED,    GREEN  ; APPLIN
+	icon_pals RED,    GREEN  ; APPLETUN
 	icon_pals RED,    BROWN  ; FALINKS
 	assert_table_length NUM_POKEMON
