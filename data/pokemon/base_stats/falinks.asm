@@ -1,6 +1,7 @@
 	db FALINKS ; 252
 
 	db 65,  100,  100,   60,  70,  75
+	evs  0,   2,   0,   0,   0,   1
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIGHTING, STEEL ; type
