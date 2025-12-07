@@ -59,6 +59,7 @@ AlphabeticalPokedexOrder:
 	dw ESPEON
 	dw EXEGGCUTE
 	dw EXEGGUTOR
+	dw FALINKS
 	dw FARFETCH_D
 	dw FEAROW
 	dw FERALIGATR
