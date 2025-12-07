@@ -253,5 +253,6 @@ FirstEvoStages::
 	dw HO_OH
 	dw CELEBI
 	dw APPLIN
+	dw APPLIN
 	dw FALINKS
 	assert_table_length NUM_POKEMON
