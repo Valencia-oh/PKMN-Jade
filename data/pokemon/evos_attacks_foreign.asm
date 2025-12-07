@@ -8,8 +8,8 @@ EvosAttacksPointers3::
 .IndirectEnd::
 
 ApplinEvosAttacks:
-	dbww ; EVOLVE_ITEM, SWEET_APPLE, APPLETUN
-	dbww ; EVOLVE_ITEM, TART_APPLE, FLAPPLE
+	dbww EVOLVE_ITEM, SWEET_APPLE, APPLETUN
+	dbww EVOLVE_ITEM, TART_APPLE, FLAPPLE
 	db 0 ; no more evolutions
 	dbw 1, WITHDRAW
 	dbw 1, NIGHT_SHADE
