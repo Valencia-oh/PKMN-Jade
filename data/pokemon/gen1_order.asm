@@ -255,4 +255,5 @@ Pokered_MonIndices:
 	db WOBBUFFET
 	db FALINKS
 	db APPLIN
+	db APPLETUN
 	assert_table_length NUM_POKEMON + 1
