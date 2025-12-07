@@ -715,6 +715,8 @@ ApplinFrontpic: INCBIN "gfx/pokemon/applin/front.animated.2bpp.lz"
 ApplinBackpic:  INCBIN "gfx/pokemon/applin/back.2bpp.lz"
 AppletunFrontpic: INCBIN "gfx/pokemon/appletun/front.animated.2bpp.lz"
 AppletunBackpic:  INCBIN "gfx/pokemon/appletun/back.2bpp.lz"
+FlappleFrontpic: INCBIN "gfx/pokemon/flapple/front.animated.2bpp.lz"
+FlappleBackpic:  INCBIN "gfx/pokemon/flapple/back.2bpp.lz"
 FalinksFrontpic: INCBIN "gfx/pokemon/falinks/front.animated.2bpp.lz"
 FalinksBackpic:  INCBIN "gfx/pokemon/falinks/back.2bpp.lz"
 
