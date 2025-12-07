@@ -66,6 +66,7 @@ AlphabeticalPokedexOrder:
 	dw FEAROW
 	dw FERALIGATR
 	dw FLAAFFY
+	dw FLAPPLE
 	dw FLAREON
 	dw FORRETRESS
 	dw FURRET
