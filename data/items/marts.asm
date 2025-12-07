@@ -107,7 +107,7 @@ MartGoldenrod2F2:
 	dw FLOWER_MAIL
 
 MartGoldenrod3F:
-	db 7 ; # items
+	db 12 ; # items
 	dw X_SPEED
 	dw X_SPECIAL
 	dw X_DEFEND
@@ -115,22 +115,25 @@ MartGoldenrod3F:
 	dw DIRE_HIT
 	dw GUARD_SPEC
 	dw X_ACCURACY
-
-MartGoldenrod4F:
-	db 5 ; # items
 	dw PROTEIN
 	dw IRON
 	dw CARBOS
 	dw CALCIUM
 	dw HP_UP
 
-MartGoldenrod5F1:
-	db 3 ; # items
+MartGoldenrod4F:
+	db 5 ; # items
 	dw SWEET_APPLE
 	dw TART_APPLE
 	dw FIRE_STONE
 	dw WATER_STONE
 	dw ELECTRIC_STONE
+
+MartGoldenrod5F1:
+	db 3 ; # items
+	dw TM_THUNDERPUNCH
+	dw TM_FIRE_PUNCH
+	dw TM_ICE_PUNCH
 
 MartGoldenrod5F2:
 	db 4 ; # items
