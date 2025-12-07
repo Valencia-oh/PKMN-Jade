@@ -127,7 +127,7 @@ MartGoldenrod4F:
 	dw TART_APPLE
 	dw FIRE_STONE
 	dw WATER_STONE
-	dw ELECTRIC_STONE
+	dw THUNDER_STONE
 
 MartGoldenrod5F1:
 	db 3 ; # items
