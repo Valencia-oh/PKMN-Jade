@@ -30,7 +30,7 @@ MACRO tmhm
 ENDM
 
 BaseData::
-	indirect_table BASE_DATA_SIZE, 1
+	indirect_table BASE_DATA_SIZE, +1
 	indirect_entries NUM_POKEMON, BaseData1
 	indirect_table_end
 
