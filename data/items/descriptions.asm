@@ -871,6 +871,6 @@ MirageMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
 
-SweetAppleDesc
+SweetAppleDesc:
 	db   "Evolves Applin to ."
 	next "Appleton.@"
