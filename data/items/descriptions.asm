@@ -28,7 +28,7 @@ ItemDescriptions1:
 	dw FireStoneDesc    ; 0011
 	dw ThunderStoneDesc ; 0012
 	dw WaterStoneDesc   ; 0013
-	dw QuestionMarkDesc ; 0014
+	dw SweetAppleDesc   ; 0014
 	dw HPUpDesc         ; 0015
 	dw ProteinDesc      ; 0016
 	dw IronDesc         ; 0017
@@ -168,7 +168,6 @@ ItemDescriptions1:
 	dw QuestionMarkDesc ; 009D
 	dw QuestionMarkDesc ; 009E
 	dw QuestionMarkDesc ; 009F
-	dw SweetAppleDesc   ; 0116
 .IndirectEnd:
 
 ItemDescriptionsKeyItems:
