@@ -31,9 +31,10 @@ ENDM
 
 BaseData::
 	indirect_table BASE_DATA_SIZE, 1
-	indirect_entries JOHTO_POKEMON - 1, BaseData1
-	indirect_entries FOREIGN_POKEMON - 1, BaseData2
-	indirect_entries NUM_POKEMON, BaseData3
+	indirect_entries KANTO_POKEMON - 1, BaseData1
+	indirect_entries JOHTO_POKEMON - 1, BaseData2
+	indirect_entries FOREIGN_POKEMON, BaseData3
+	indirect_entries NUM_POKEMON, BaseData4
 	indirect_table_end
 
 INCLUDE "data/pokemon/base_stats_kanto.asm"
