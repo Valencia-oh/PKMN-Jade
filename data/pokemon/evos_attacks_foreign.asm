@@ -7,7 +7,8 @@ EvosAttacksPointers3::
 .IndirectEnd::
 
 ApplinEvosAttacks:
-	db 0 ; EVOLVE_ITEM, SWEET_APPLE, APPLETUN
+	dbww 0 ; EVOLVE_ITEM, SWEET_APPLE, APPLETUN
+	dbww 0 ; EVOLVE_ITEM, TART_APPLE, FLAPPLE
 	dbw 1, WITHDRAW
 	dbw 1, NIGHT_SHADE
 	db 0 ; no more level-up moves
