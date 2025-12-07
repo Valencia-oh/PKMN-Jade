@@ -254,5 +254,6 @@ NewPokedexOrder:
 	dw MEW
 	dw CELEBI
 	dw APPLIN
+	dw APPLETUN
 	dw FALINKS
 	assert_table_length NUM_POKEMON
