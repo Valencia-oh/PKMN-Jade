@@ -3,7 +3,7 @@ db "APPLE_WING@" ; species name
 
 	db   "fly Apple"
 	next "fly Apple."
-	next "fly Apple "
+	next "fly Apple"
 
 	page "fly Allpe"
 	next "fly away.@"
