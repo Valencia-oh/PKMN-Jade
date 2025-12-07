@@ -260,4 +260,5 @@ PokemonCries::
 	mon_cry CRY_RHYDON,      -34,  124 ; FALINKS
 	mon_cry CRY_WOOPER,       43,   64 ; APPLIN
 	mon_cry CRY_ODDISH,       48,   48 ; APPLETUN
+	mon_cry CRY_PIDGEOTTO,    23,   78 ; FLAPPLE
 	assert_table_length NUM_POKEMON
