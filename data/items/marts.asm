@@ -126,9 +126,11 @@ MartGoldenrod4F:
 
 MartGoldenrod5F1:
 	db 3 ; # items
-	dw TM_THUNDERPUNCH
-	dw TM_FIRE_PUNCH
-	dw TM_ICE_PUNCH
+	dw SWEET_APPLE
+	dw TART_APPLE
+	dw FIRE_STONE
+	dw WATER_STONE
+	dw ELECTRIC_STONE
 
 MartGoldenrod5F2:
 	db 4 ; # items
