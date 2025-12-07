@@ -253,5 +253,6 @@ FramesPointers:
 	dba CelebiFrames
 	dba ApplinFrames
 	dba AppletunFrames
+	dba FlappleFrames
 	dba FalinksFrames
 	assert_table_length NUM_POKEMON
