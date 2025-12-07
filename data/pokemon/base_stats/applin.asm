@@ -13,7 +13,7 @@ db APPLIN ; 252
 	INCBIN "gfx/pokemon/falinks/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_GRASS, EGG_DRAGON ; egg groups
+	dn EGG_PLANT, EGG_DRAGON ; egg groups
 
 	; tm/hm learnset
 	tmhm ATTRACT
