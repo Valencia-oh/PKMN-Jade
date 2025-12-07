@@ -2,6 +2,7 @@ SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
 	dw ApplinEvosAttacks
+	dw AppletunEvosAttacks
 	dw FalinksEvosAttacks
 .IndirectEnd::
 
@@ -20,7 +21,7 @@ AppletunEvosAttacks:
 	dbw 2, HEADBUTT
 	dbw 4, CURSE
 	dbw 8, STOMP
-	dbw 12, LEECHSEED
+	dbw 12, LEECH_SEED
 	dbw 16, PROTECT
 	dbw 24, RECOVER
 	dbw 30, SOLARBEAM
