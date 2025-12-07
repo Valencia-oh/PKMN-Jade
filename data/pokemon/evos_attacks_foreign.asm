@@ -6,9 +6,25 @@ EvosAttacksPointers3::
 .IndirectEnd::
 
 ApplinEvosAttacks:
+	db 0 ; EVOLVE_ITEM, SWEET_APPLE, APPLETUN
+	dbw 1, WITHDRAW
+	dbw 1, NIGHT_SHADE
+	db 0 ; no more level-up moves
+
+AppletunEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, WITHDRAW
 	dbw 1, NIGHT_SHADE
+	dbw 1, SWEET_SCENT
+	dbw 1, GROWTH
+	dbw 2, HEADBUTT
+	dbw 4, CURSE
+	dbw 8, STOMP
+	dbw 12, LEECHSEED
+	dbw 16, PROTECT
+	dbw 24, RECOVER
+	dbw 30, SOLARBEAM
+	dbw 35, TWISTER
 	db 0 ; no more level-up moves
 
 FalinksEvosAttacks:
