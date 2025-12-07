@@ -25,7 +25,7 @@
 	const FIRE_STONE   ; 0011
 	const THUNDERSTONE ; 0012
 	const WATER_STONE  ; 0013
-	const ITEM_19      ; 0014
+	const SWEET_APPLE  ; 0014
 	const HP_UP        ; 0015
 	const PROTEIN      ; 0016
 	const IRON         ; 0017
@@ -89,7 +89,7 @@
 	const WHT_APRICORN ; 0051
 	const BLACKBELT_I  ; 0052
 	const BLK_APRICORN ; 0053
-	const ITEM_64      ; 0054
+	const TART_APPLE   ; 0054
 	const PNK_APRICORN ; 0055
 	const BLACKGLASSES ; 0056
 	const SLOWPOKETAIL ; 0057
