@@ -168,6 +168,7 @@ ItemDescriptions1:
 	dw QuestionMarkDesc ; 009D
 	dw QuestionMarkDesc ; 009E
 	dw QuestionMarkDesc ; 009F
+	dw SweetAppleDesc   ; 0116
 .IndirectEnd:
 
 ItemDescriptionsKeyItems:
@@ -870,3 +871,7 @@ MusicMailDesc:
 MirageMailDesc:
 	db   "MEW-print MAIL."
 	next "(HOLD)@"
+
+SweetAppleDesc
+	db   "Evolves Applin to ."
+	next "Appleton.@"
