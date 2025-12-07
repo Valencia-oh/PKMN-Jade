@@ -6,6 +6,7 @@
 	db FIGHTING, STEEL ; type
 	db 45 ; catch rate
 	db 165 ; base exp
+	dw NO_ITEM, NO_ITEM ; items
 	db GENDER_UNKNOWN ; gender ratio
 	db 25 ; step cycles to hatch
 	INCBIN "gfx/pokemon/falinks/front.dimensions"
