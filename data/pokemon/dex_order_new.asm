@@ -253,6 +253,8 @@ NewPokedexOrder:
 	dw MEWTWO
 	dw MEW
 	dw CELEBI
+	dw WINGULL
+	dw PELIPPER
 	dw APPLIN
 	dw APPLETUN
 	dw FLAPPLE
