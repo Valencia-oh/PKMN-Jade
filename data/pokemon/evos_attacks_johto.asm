@@ -1013,7 +1013,7 @@ PiloswineEvosAttacks:
 	dbw 28, TAKE_DOWN
 	dbw 33, FURY_ATTACK
 	dbw 42, MIST
-	dbw 42, ANCIENT_POWER
+	dbw 42, ANCIENTPOWER
 	dbw 56, BLIZZARD
 	dbw 70, AMNESIA
 	db 0 ; no more level-up moves
