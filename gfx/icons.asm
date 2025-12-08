@@ -258,7 +258,6 @@ CelebiIcon::     INCBIN "gfx/icons/celebi.2bpp"
 
 SECTION "Mon Icons 3", ROMX
 
-FalinksIcon::    INCBIN "gfx/icons/falinks.2bpp"
 WingullIcon::    INCBIN "gfx/icons/skarmory.2bpp"
 PelipperIcon::   INCBIN "gfx/icons/skarmory.2bpp"
 TogekissIcon::   INCBIN "gfx/icons/togetic.2bpp"
@@ -266,4 +265,6 @@ MamoswineIcon::  INCBIN "gfx/icons/mamoswine.2bpp"
 ApplinIcon::     INCBIN "gfx/icons/swinub.2bpp"
 AppletunIcon::   INCBIN "gfx/icons/piloswine.2bpp"
 FlappleIcon::    INCBIN "gfx/icons/noctowl.2bpp"
+FalinksIcon::    INCBIN "gfx/icons/falinks.2bpp"
 EggIcon::        INCBIN "gfx/icons/egg.2bpp"
+
