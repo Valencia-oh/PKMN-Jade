@@ -1003,6 +1003,7 @@ SwinubEvosAttacks:
 	db 0 ; no more level-up moves
 
 PiloswineEvosAttacks:
+	dbbw EVOLVE_LEVEL, 45, MAMOSWINE	
 	db 0 ; no more evolutions
 	dbw 1, HORN_ATTACK
 	dbw 1, POWDER_SNOW
@@ -1012,6 +1013,7 @@ PiloswineEvosAttacks:
 	dbw 28, TAKE_DOWN
 	dbw 33, FURY_ATTACK
 	dbw 42, MIST
+	dbw 42, ANCIENT_POWER
 	dbw 56, BLIZZARD
 	dbw 70, AMNESIA
 	db 0 ; no more level-up moves
