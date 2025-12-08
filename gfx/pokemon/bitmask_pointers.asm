@@ -251,6 +251,8 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
+	dw WingullBitmasks
+	dw PelipperBitmasks
 	dw ApplinBitmasks
 	dw AppletunBitmasks
 	dw FlappleBitmasks
