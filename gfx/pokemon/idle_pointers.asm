@@ -253,6 +253,7 @@ AnimationIdlePointers:
 	dw CelebiAnimationIdle
 	dw WingullAnimationIdle
 	dw PelipperAnimationIdle
+	dw HonchkrowAnimationIdle
 	dw TogekissAnimationIdle
 	dw MamoswineAnimationIdle
 	dw ApplinAnimationIdle
