@@ -1,4 +1,4 @@
-idb PELIPPER ; 258
+idb PELIPPER ; 257
 
 	db 60,  50,  100,   65,  85,  70
 	evs  0,   0,   2,   0,   0,   0
