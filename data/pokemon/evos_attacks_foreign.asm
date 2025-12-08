@@ -3,6 +3,7 @@ SECTION "Evolutions and Attacks 3", ROMX
 EvosAttacksPointers3::
 	dw WingullEvosAttacks
 	dw PelipperEvosAttacks
+	dw TogekissEvosAttacks
 	dw MamoswineEvosAttacks
 	dw ApplinEvosAttacks
 	dw AppletunEvosAttacks
@@ -33,6 +34,18 @@ PelipperEvosAttacks:
 	dbw 16, HYPNOSIS
 	dbw 25, HYDRO_PUMP
 	dbw 33, TAKE_DOWN
+	db 0 ; no more level-up moves
+
+TogekissEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, GROWL
+	dbw 1, CHARM
+	dbw 7, METRONOME
+	dbw 18, SWEET_KISS
+	dbw 25, ENCORE
+	dbw 27, WING_ATTACK
+	dbw 31, SAFEGUARD
+	dbw 38, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 MamoswineEvosAttacks:
