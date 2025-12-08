@@ -10,12 +10,12 @@ EvosAttacksPointers3::
 .IndirectEnd::
 
 WingullEvosAttacks:
-	dbbw EVOLVE_LEVEL, 25, Pelipper
+	dbbw EVOLVE_LEVEL, 25, PELIPPER
 	db 0 ; no more evolutions
-	dbw 1, WATERGUN
+	dbw 1, WATER_GUN
 	dbw 1, GROWL
 	dbw 5, QUICK_ATTACK
-	dbw 10, WINGATTACK
+	dbw 10, WING_ATTACK
 	dbw 15, SUPERSONIC
 	dbw 20, BUBBLE
 	dbw 28, TAKE_DOWN
@@ -23,17 +23,17 @@ WingullEvosAttacks:
 
 PelipperEvosAttacks:
 	db 0 ; no more evolutions
-	dbw 1, WATERGUN
+	dbw 1, WATER_GUN
 	dbw 1, GROWL
 	dbw 1, PROTECT
-	dbw 1, WINGATTACK
-	dbw 1, QUICKATTACK
+	dbw 1, WING_ATTACK
+	dbw 1, QUICK_ATTACK
 	dbw 1, BUBBLE
 	dbw 16, HYPNOSIS
 	dbw 25, FLING
 	dbw 33, TAKE_DOWN
 	dbw 41, ROOST
-	dbw 57, HYDROPUMP
+	dbw 57, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 ApplinEvosAttacks:
