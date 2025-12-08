@@ -251,6 +251,8 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
+	dw WingullAnimation
+	dw PelipperAnimation
 	dw ApplinAnimation
 	dw AppletunAnimation
 	dw FlappleAnimation
