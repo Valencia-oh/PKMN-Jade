@@ -258,7 +258,7 @@ CelebiIcon::     INCBIN "gfx/icons/celebi.2bpp"
 
 SECTION "Mon Icons 3", ROMX
 
-FalinksIcon::    INCBIN "gfx/icons/swinub.2bpp"
+FalinksIcon::    INCBIN "gfx/icons/falinks.2bpp"
 WingullIcon::    INCBIN "gfx/icons/skarmory.2bpp"
 PelipperIcon::   INCBIN "gfx/icons/skarmory.2bpp"
 TogekissIcon::   INCBIN "gfx/icons/togetic.2bpp"
