@@ -256,7 +256,7 @@ FirstEvoStages::
 	dw WINGULL	
 	dw TOGEPI
 	dw SWINUB
-	dw APPLIN
+	dw APPLIN	  ;ff
 	dw APPLIN
 	dw APPLIN
 	dw FALINKS
