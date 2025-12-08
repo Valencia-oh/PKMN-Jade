@@ -45,7 +45,7 @@ MamoswineEvosAttacks:
 	dbw 1, TAKE_DOWN
 	dbw 1, FURY_ATTACK
 	dbw 1, MIST
-	dbw 1, ANCIENT_POWER
+	dbw 1, ANCIENTPOWER
 	dbw 45, EARTHQUAKE
 	dbw 50, ICY_WIND
 	dbw 56, BLIZZARD
