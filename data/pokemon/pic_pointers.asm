@@ -522,6 +522,8 @@ PokemonPicPointers::
 	dba WingullBackpic
 	dba PelipperFrontpic
 	dba PelipperBackpic
+	dba MamoswineFrontpic
+	dba MamoswineBackpic
 	dba ApplinFrontpic
 	dba ApplinBackpic
 	dba AppletunFrontpic
