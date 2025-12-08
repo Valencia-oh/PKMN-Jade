@@ -879,6 +879,6 @@ TartAppleDesc:
 	db   "Evolves Applin to ."
 	next "Appleton.@"
 
-ShinyStoneDesc
+ShinyStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
