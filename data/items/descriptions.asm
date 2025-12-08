@@ -53,7 +53,7 @@ ItemDescriptions1:
 	dw SodaPopDesc      ; 002A
 	dw LemonadeDesc     ; 002B
 	dw XAttackDesc      ; 002C
-	dw QuestionMarkDesc ; 002D
+	dw ShinyStoneDesc   ; 002D
 	dw XDefendDesc      ; 002E
 	dw XSpeedDesc       ; 002F
 	dw XSpecialDesc     ; 0030
@@ -873,4 +873,12 @@ MirageMailDesc:
 
 SweetAppleDesc:
 	db   "Evolves Applin to ."
+	next "Flapple.@"
+
+TartAppleDesc:
+	db   "Evolves Applin to ."
 	next "Appleton.@"
+
+ShinyStoneDesc
+	db   "Evolves certain"
+	next "kinds of #MON.@"
