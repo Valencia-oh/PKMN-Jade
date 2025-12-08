@@ -263,4 +263,5 @@ PokemonCries::
 	mon_cry CRY_PIDGEOTTO,    23,   78 ; FLAPPLE
 	mon_cry CRY_PIDGEOTTO,    48,   22 ; WINGULL
 	mon_cry CRY_PIDGEOTTO,    93,   35 ; PELIPPER
+	mon_cry CRY_MAGCARGO,   -265,  256 ; MAMOSWINE
 	assert_table_length NUM_POKEMON
