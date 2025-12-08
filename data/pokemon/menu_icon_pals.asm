@@ -263,6 +263,7 @@ MonMenuIconPals:
 	icon_pals GREEN,  PINK   ; CELEBI
 	icon_pals BLUE,   GREEN  ; WINGULL
 	icon_pals BLUE,   GREEN  ; PELIPPER
+	icon_pals BLUE,   PINK   ; HONCHKROW
 	icon_pals RED,    BROWN  ; TOGEKISS
 	icon_pals BROWN,  GREEN  ; MAMOSWINE
 	icon_pals RED,    GREEN  ; APPLIN
