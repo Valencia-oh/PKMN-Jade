@@ -518,6 +518,10 @@ PokemonPicPointers::
 	dba HoOhBackpic
 	dba CelebiFrontpic
 	dba CelebiBackpic
+	dba WingullFrontpic
+	dba WingullBackpic
+	dba PelipperFrontpic
+	dba PelipperBackpic
 	dba ApplinFrontpic
 	dba ApplinBackpic
 	dba AppletunFrontpic
