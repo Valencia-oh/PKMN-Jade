@@ -256,6 +256,8 @@ IconPointers:
 	dw LugiaIcon
 	dw HoOhIcon
 	dw CelebiIcon
+	dw WingullIcon
+	dw PelipperIcon
 	dw ApplinIcon
 	dw AppletunIcon
 	dw FlappleIcon
