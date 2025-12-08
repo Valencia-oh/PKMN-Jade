@@ -309,7 +309,7 @@ ROMX $72
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
-	"Pokedex Entries 193-255"
+	"Pokedex Entries 193-256"
 ROMX $75
 	"16-bit ID stuff"
 ROMX $77
@@ -323,6 +323,7 @@ ROMX $78
 	"Tileset Data 8"
 ROMX $7b
 	"Battle Tower Text"
+	"Pokedex Entries 257-320"
 ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d
