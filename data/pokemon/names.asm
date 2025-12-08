@@ -257,6 +257,7 @@ PokemonNames::
 	dname "CELEBI"
 	dname "WINGULL"
 	dname "PELIPPER"
+	dname "TOGEKISS"
 	dname "MAMOSWINE"
 	dname "APPLIN"
 	dname "APPLETUN"
