@@ -6,6 +6,7 @@ Jade is a romhack based off the CSE engine for Pokecrystal.
 - Removed Trade+Item Evos, now just use the item
 - 8 new pokemon, bringing the total to 259 (Applin, Wingull, and Falinks lines + Mamoswine and Togekiss)
 - HMs done through party not attacks
+- overhauled PC
 
 ## Planned Features
 
