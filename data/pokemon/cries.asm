@@ -261,4 +261,6 @@ PokemonCries::
 	mon_cry CRY_WOOPER,       43,   64 ; APPLIN
 	mon_cry CRY_ODDISH,       48,   48 ; APPLETUN
 	mon_cry CRY_PIDGEOTTO,    23,   78 ; FLAPPLE
+	mon_cry CRY_PIDGEOTTO,    48,   22 ; WINGULL
+	mon_cry CRY_PIDGEOTTO,    93,   35 ; PELIPPER
 	assert_table_length NUM_POKEMON
