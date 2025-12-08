@@ -1,12 +1,13 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
+	dw WingullEvosAttacks
+	dw PelipperEvosAttacks
+	dw MamoswineEvosAttacks
 	dw ApplinEvosAttacks
 	dw AppletunEvosAttacks
 	dw FlappleEvosAttacks
 	dw FalinksEvosAttacks
-	dw WingullEvosAttacks
-	dw PelipperEvosAttacks
 .IndirectEnd::
 
 WingullEvosAttacks:
@@ -32,6 +33,23 @@ PelipperEvosAttacks:
 	dbw 16, HYPNOSIS
 	dbw 25, HYDRO_PUMP
 	dbw 33, TAKE_DOWN
+	db 0 ; no more level-up moves
+
+MamoswineEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, HORN_ATTACK
+	dbw 1, POWDER_SNOW
+	dbw 1, ENDURE
+	dbw 1, POWDER_SNOW
+	dbw 1, ENDURE
+	dbw 1, TAKE_DOWN
+	dbw 1, FURY_ATTACK
+	dbw 1, MIST
+	dbw 1, ANCIENT_POWER
+	dbw 45, EARTHQUAKE
+	dbw 50, ICY_WIND
+	dbw 56, BLIZZARD
+	dbw 70, AMNESIA
 	db 0 ; no more level-up moves
 
 ApplinEvosAttacks:
