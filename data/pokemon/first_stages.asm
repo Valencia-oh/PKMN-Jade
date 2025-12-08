@@ -252,6 +252,8 @@ FirstEvoStages::
 	dw LUGIA
 	dw HO_OH
 	dw CELEBI
+	dw WINGULL
+	dw WINGULL
 	dw APPLIN
 	dw APPLIN
 	dw APPLIN
