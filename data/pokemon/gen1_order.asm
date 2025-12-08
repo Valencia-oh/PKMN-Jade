@@ -253,10 +253,11 @@ Pokered_MonIndices:
 	db QWILFISH
 	db WOBBUFFET
 	db WOBBUFFET
-	db FALINKS
+	db WINGULL
+	db PELIPPER
+	db MAMOSWINE
 	db APPLIN
 	db APPLETUN
 	db FLAPPLE
-	db WINGULL
-	db PELIPPER
+	db FALINKS
 	assert_table_length NUM_POKEMON + 1
