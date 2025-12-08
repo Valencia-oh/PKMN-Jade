@@ -255,6 +255,8 @@ PokemonNames::
 	dname "LUGIA"
 	dname "HO-OH"
 	dname "CELEBI"
+	dname "WINGULL"
+	dname "PELIPPER"
 	dname "APPLIN"
 	dname "APPLETUN"
 	dname "FLAPPLE"
