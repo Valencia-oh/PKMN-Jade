@@ -254,6 +254,7 @@ FirstEvoStages::
 	dw CELEBI
 	dw WINGULL
 	dw WINGULL	
+	dw MURKROW
 	dw TOGEPI
 	dw SWINUB
 	dw APPLIN	  ;ff
