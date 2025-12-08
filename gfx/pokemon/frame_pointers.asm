@@ -251,6 +251,8 @@ FramesPointers:
 	dba LugiaFrames
 	dba HoOhFrames
 	dba CelebiFrames
+	dba WingullFrames
+	dba PelipperFrames
 	dba ApplinFrames
 	dba AppletunFrames
 	dba FlappleFrames
