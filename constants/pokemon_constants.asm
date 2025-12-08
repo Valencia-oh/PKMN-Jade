@@ -274,12 +274,13 @@ DEF JOHTO_POKEMON EQU const_value
 	const CELEBI     ; fb
 DEF NUM_JOHTO_POKEMON EQU const_value - 1
 DEF FOREIGN_POKEMON EQU const_value
-	const WINGULL     ; fc
+	const WINGULL    ; fc
 	const PELIPPER   ; fd
-	const APPLIN     ; fe
-	const APPLETUN   ; ff
-	const FLAPPLE    ; 100
-	const FALINKS    ; 101
+	const MAMOSWINE  ; fe
+	const APPLIN     ; ff
+	const APPLETUN   ; 100
+	const FLAPPLE    ; 101
+	const FALINKS    ; 102
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
