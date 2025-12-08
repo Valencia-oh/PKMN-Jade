@@ -13,7 +13,7 @@ db PELIPPER ; 258
 	INCBIN "gfx/pokemon/wingull/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)
 	db GROWTH_MEDIUM_FAST ; growth rate
-	dn EGG_WATER, EGG_FLYING ; egg groups
+	dn EGG_WATER_1, EGG_FLYING ; egg groups
 
 	; tm/hm learnset
 	tmhm PROTECT, ATTRACT, RAIN_DANCE, SUNNY_DAY, HIDDEN_POWER, SWIFT, DETECT, REST, ATTRACT, THIEF, STEEL_WING, CUT, FLY
