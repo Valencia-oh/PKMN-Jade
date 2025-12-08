@@ -266,10 +266,11 @@ CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 WingullPokedexEntry::    INCLUDE "data/pokemon/dex_entries/wingull.asm"
 PelipperPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pelipper.asm"
 MamoswinePokedexEntry::  INCLUDE "data/pokemon/dex_entries/mamoswine.asm"
-FalinksPokedexEntry::    INCLUDE "data/pokemon/dex_entries/falinks.asm"
+TogekissPokedexEntry::   INCLUDE "data/pokemon/dex_entries/togekiss.asm"
 
 SECTION "Pokedex Entries 257-320", ROMX
 ApplinPokedexEntry::     INCLUDE "data/pokemon/dex_entries/applin.asm"
 AppletunPokedexEntry::   INCLUDE "data/pokemon/dex_entries/appletun.asm"
 FlapplePokedexEntry::    INCLUDE "data/pokemon/dex_entries/flapple.asm"
+FalinksPokedexEntry::    INCLUDE "data/pokemon/dex_entries/falinks.asm"
 
