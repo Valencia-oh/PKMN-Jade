@@ -82,7 +82,7 @@ ItemDescriptions1:
 	dw BigMushroomDesc  ; 0047
 	dw SilverPowderDesc ; 0048
 	dw BluApricornDesc  ; 0049
-	dw TartAppleDesc    ; 004A
+	dw QuestionMarkDesc ; 004A
 	dw AmuletCoinDesc   ; 004B
 	dw YlwApricornDesc  ; 004C
 	dw GrnApricornDesc  ; 004D
@@ -92,7 +92,7 @@ ItemDescriptions1:
 	dw WhtApricornDesc  ; 0051
 	dw BlackbeltDesc    ; 0052
 	dw BlkApricornDesc  ; 0053
-	dw QuestionMarkDesc ; 0054
+	dw TartAppleDesc    ; 0054
 	dw PnkApricornDesc  ; 0055
 	dw BlackGlassesDesc ; 0056
 	dw SlowpokeTailDesc ; 0057
