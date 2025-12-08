@@ -253,7 +253,8 @@ FirstEvoStages::
 	dw HO_OH
 	dw CELEBI
 	dw WINGULL
-	dw WINGULL
+	dw WINGULL	
+	dw TOGEPI
 	dw SWINUB
 	dw APPLIN
 	dw APPLIN
