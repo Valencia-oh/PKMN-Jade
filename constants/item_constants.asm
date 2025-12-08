@@ -50,7 +50,7 @@
 	const SODA_POP     ; 002A
 	const LEMONADE     ; 002B
 	const X_ATTACK     ; 002C
-	const ITEM_32      ; 002D
+	const SHINYSTONE   ; 002D
 	const X_DEFEND     ; 002E
 	const X_SPEED      ; 002F
 	const X_SPECIAL    ; 0030
