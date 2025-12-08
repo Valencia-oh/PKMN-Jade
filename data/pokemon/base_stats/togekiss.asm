@@ -1,4 +1,4 @@
-dw TOGEKISS ; 258
+db TOGEKISS ; 258
 
 	db  85,  50,  95,  80,  120, 115
 	evs  0,   0,   0,   0,   2,   1
