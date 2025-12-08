@@ -257,4 +257,6 @@ Pokered_MonIndices:
 	db APPLIN
 	db APPLETUN
 	db FLAPPLE
+	db WINGULL
+	db PELIPPER
 	assert_table_length NUM_POKEMON + 1
