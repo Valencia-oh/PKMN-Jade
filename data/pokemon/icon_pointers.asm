@@ -258,6 +258,7 @@ IconPointers:
 	dw CelebiIcon
 	dw WingullIcon
 	dw PelipperIcon
+	dw MamoswineIcon
 	dw ApplinIcon
 	dw AppletunIcon
 	dw FlappleIcon
