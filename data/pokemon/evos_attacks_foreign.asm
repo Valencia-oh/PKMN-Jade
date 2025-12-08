@@ -5,7 +5,36 @@ EvosAttacksPointers3::
 	dw AppletunEvosAttacks
 	dw FlappleEvosAttacks
 	dw FalinksEvosAttacks
+	dw WingullEvosAttacks
+	dw PelipperEvosAttacks
 .IndirectEnd::
+
+WingullEvosAttacks:
+	dbbw EVOLVE_LEVEL, 25, Pelipper
+	db 0 ; no more evolutions
+	dbw 1, WATERGUN
+	dbw 1, GROWL
+	dbw 5, QUICK_ATTACK
+	dbw 10, WINGATTACK
+	dbw 15, SUPERSONIC
+	dbw 20, BUBBLE
+	dbw 28, TAKE_DOWN
+	db 0 ; no more level-up moves
+
+PelipperEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, WATERGUN
+	dbw 1, GROWL
+	dbw 1, PROTECT
+	dbw 1, WINGATTACK
+	dbw 1, QUICKATTACK
+	dbw 1, BUBBLE
+	dbw 16, HYPNOSIS
+	dbw 25, FLING
+	dbw 33, TAKE_DOWN
+	dbw 41, ROOST
+	dbw 57, HYDROPUMP
+	db 0 ; no more level-up moves
 
 ApplinEvosAttacks:
 	dbww EVOLVE_ITEM, SWEET_APPLE, APPLETUN
