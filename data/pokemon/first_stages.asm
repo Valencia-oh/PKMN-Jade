@@ -254,6 +254,7 @@ FirstEvoStages::
 	dw CELEBI
 	dw WINGULL
 	dw WINGULL
+	dw SWINUB
 	dw APPLIN
 	dw APPLIN
 	dw APPLIN
