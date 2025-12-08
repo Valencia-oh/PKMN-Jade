@@ -504,6 +504,14 @@ GetIconBank:
 	cp LOW(MAGIKARP)
 	jr c, .return
 	ld b, BANK("Mon Icons 2")
+	ld a, h
+	cp HIGH(WINGULL) ; first species in "Mon Icons 2"
+	lb bc, BANK("Mon Icons 2"), 8
+	jr c, .return
+	ld a, l
+	cp LOW(WINGULL)
+	jr c, .return
+	ld b, BANK("Mon Icons 2")
 .return
 	pop hl
 	ret
