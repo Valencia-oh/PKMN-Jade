@@ -128,7 +128,7 @@ MartGoldenrod4F:
 	dw FIRE_STONE
 	dw WATER_STONE
 	dw THUNDERSTONE
-	dw LEAFSTONE
+	dw LEAF_STONE
 	dw SHINYSTONE
 
 MartGoldenrod5F1:
