@@ -253,6 +253,7 @@ AnimationPointers:
 	dw CelebiAnimation
 	dw WingullAnimation
 	dw PelipperAnimation
+	dw HonchkrowAnimation
 	dw TogekissAnimation
 	dw MamoswineAnimation
 	dw ApplinAnimation
