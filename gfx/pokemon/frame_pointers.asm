@@ -253,6 +253,7 @@ FramesPointers:
 	dba CelebiFrames
 	dba WingullFrames
 	dba PelipperFrames
+	dba TogekissFrames
 	dba MamoswineFrames
 	dba ApplinFrames
 	dba AppletunFrames
