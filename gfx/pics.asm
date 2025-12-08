@@ -713,8 +713,8 @@ SECTION "Pics 19", ROMX
 
 WingullFrontpic: INCBIN "gfx/pokemon/wingull/front.animated.2bpp.lz"
 WingullBackpic:  INCBIN "gfx/pokemon/wingull/back.2bpp.lz"
-PeliperFrontpic: INCBIN "gfx/pokemon/peliper/front.animated.2bpp.lz"
-PeliperBackpic:  INCBIN "gfx/pokemon/peliper/back.2bpp.lz"
+PelipperFrontpic: INCBIN "gfx/pokemon/pelipper/front.animated.2bpp.lz"
+PelipperBackpic:  INCBIN "gfx/pokemon/pelipper/back.2bpp.lz"
 ApplinFrontpic: INCBIN "gfx/pokemon/applin/front.animated.2bpp.lz"
 ApplinBackpic:  INCBIN "gfx/pokemon/applin/back.2bpp.lz"
 AppletunFrontpic: INCBIN "gfx/pokemon/appletun/front.animated.2bpp.lz"
