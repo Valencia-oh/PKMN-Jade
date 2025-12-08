@@ -260,6 +260,7 @@ SECTION "Mon Icons 3", ROMX
 
 WingullIcon::    INCBIN "gfx/icons/skarmory.2bpp"
 PelipperIcon::   INCBIN "gfx/icons/skarmory.2bpp"
+HonchkrowIcon::   INCBIN "gfx/icons/honchkrow.2bpp"
 TogekissIcon::   INCBIN "gfx/icons/togekiss.2bpp"
 MamoswineIcon::  INCBIN "gfx/icons/mamoswine.2bpp"
 ApplinIcon::     INCBIN "gfx/icons/swinub.2bpp"
