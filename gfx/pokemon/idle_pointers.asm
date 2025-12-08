@@ -251,6 +251,8 @@ AnimationIdlePointers:
 	dw LugiaAnimationIdle
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
+	dw WingullAnimationIdle
+	dw PelipperAnimationIdle
 	dw ApplinAnimationIdle
 	dw AppletunAnimationIdle
 	dw FlappleAnimationIdle
