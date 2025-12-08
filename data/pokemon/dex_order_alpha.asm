@@ -160,6 +160,7 @@ AlphabeticalPokedexOrder:
 	dw ONIX
 	dw PARAS
 	dw PARASECT
+	dw PELIPPER
 	dw PERSIAN
 	dw PHANPY
 	dw PICHU
@@ -251,6 +252,7 @@ AlphabeticalPokedexOrder:
 	dw WEEPINBELL
 	dw WEEZING
 	dw WIGGLYTUFF
+	dw WINGULL
 	dw WOBBUFFET
 	dw WOOPER
 	dw XATU
