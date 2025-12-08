@@ -264,4 +264,5 @@ PokemonCries::
 	mon_cry CRY_PIDGEOTTO,    48,   22 ; WINGULL
 	mon_cry CRY_PIDGEOTTO,    93,   35 ; PELIPPER
 	mon_cry CRY_MAGCARGO,   -265,  256 ; MAMOSWINE
+	mon_cry CRY_TOGETIC,      70,   80 ; TOGEKISS
 	assert_table_length NUM_POKEMON
