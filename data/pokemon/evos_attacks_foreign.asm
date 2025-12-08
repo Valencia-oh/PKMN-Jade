@@ -30,10 +30,8 @@ PelipperEvosAttacks:
 	dbw 1, QUICK_ATTACK
 	dbw 1, BUBBLE
 	dbw 16, HYPNOSIS
-	dbw 25, FLING
+	dbw 25, HYDRO_PUMP
 	dbw 33, TAKE_DOWN
-	dbw 41, ROOST
-	dbw 57, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 ApplinEvosAttacks:
