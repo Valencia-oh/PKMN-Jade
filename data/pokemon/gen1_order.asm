@@ -255,6 +255,7 @@ Pokered_MonIndices:
 	db WOBBUFFET
 	db WINGULL
 	db PELIPPER
+	db TOGEKISS
 	db MAMOSWINE
 	db APPLIN
 	db APPLETUN
