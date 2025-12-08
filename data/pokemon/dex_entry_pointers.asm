@@ -252,6 +252,8 @@ PokedexDataPointerTable:
 	dba LugiaPokedexEntry
 	dba HoOhPokedexEntry
 	dba CelebiPokedexEntry
+	dba WingullPokedexEntry
+	dba PelipperPokedexEntry
 	dba ApplinPokedexEntry
 	dba AppletunPokedexEntry
 	dba FlapplePokedexEntry
