@@ -49,6 +49,7 @@ NewPokedexOrder:
 	dw WIGGLYTUFF
 	dw TOGEPI
 	dw TOGETIC
+	dw TOGEKISS
 	dw SANDSHREW
 	dw SANDSLASH
 	dw EKANS
