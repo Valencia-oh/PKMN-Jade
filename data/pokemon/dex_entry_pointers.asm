@@ -261,4 +261,5 @@ PokedexDataPointerTable:
 	dba AppletunPokedexEntry
 	dba FlapplePokedexEntry
 	dba FalinksPokedexEntry
+	dba ErsrheadbbyPokedexEntry
 	assert_table_length NUM_POKEMON
