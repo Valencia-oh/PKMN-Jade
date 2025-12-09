@@ -193,6 +193,7 @@ AI_Types:
 	push de
 	push bc
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and TYPE_MASK
 	ld d, a
 	ld hl, wEnemyMonMoves
 	lb bc, NUM_MOVES + 1, 0
@@ -206,6 +207,7 @@ AI_Types:
 
 	call AIGetEnemyMove
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
+	and TYPE_MASK
 	cp d
 	jr z, .checkmove2
 	ld a, [wEnemyMoveStruct + MOVE_POWER]
