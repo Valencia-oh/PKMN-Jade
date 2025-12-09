@@ -5506,17 +5506,14 @@ MoveInfoBox:
 	ld [wStringBuffer1], a
 	call .PrintPP
 
-farcall UpdateMoveData
-	ld a, [wPlayerMoveStruct + MOVE_ANIM]
-	ld b, a
-	farcall GetMoveCategoryName
 	hlcoord 1, 9
-	ld de, wStringBuffer1
+	ld de, .Type
 	rst PlaceString
 
-	ld h, b
-	ld l, c
+	hlcoord 7, 11
+	ld [hl], '/'
 
+	farcall UpdateMoveData
 	ld a, [wPlayerMoveStruct + MOVE_ANIM]
 	ld b, a
 	hlcoord 2, 10
@@ -5524,7 +5521,8 @@ farcall UpdateMoveData
 
 .Disabled:
 	db "Disabled!@"
-
+.Type:
+	db "TYPE/@"
 
 .PrintPP:
 	hlcoord 5, 11
