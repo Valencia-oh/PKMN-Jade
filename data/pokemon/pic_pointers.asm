@@ -536,4 +536,6 @@ PokemonPicPointers::
 	dba FlappleBackpic
 	dba FalinksFrontpic
 	dba FalinksBackpic
+	dba ErsrheadbbyFrontpic
+	dba ErsrheadbbyBackpic
 	assert_table_length NUM_POKEMON + 1
