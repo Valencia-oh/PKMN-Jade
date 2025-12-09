@@ -45,7 +45,7 @@
 	const SUPER_REPEL  ; 0025
 	const MAX_REPEL    ; 0026
 	const DIRE_HIT     ; 0027
-	const ITEM_2D      ; 0028
+	const DUSK_STONE   ; 0028
 	const FRESH_WATER  ; 0029
 	const SODA_POP     ; 002A
 	const LEMONADE     ; 002B
