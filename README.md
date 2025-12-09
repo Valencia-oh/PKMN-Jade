@@ -8,6 +8,7 @@ Jade is very rough romhack based off the CSE engine for Pokecrystal.
 - 10 new real pokemon, bringing the total to 260 (Applin, Wingull, and Falinks lines + Mamoswine, Honchkrow and Togekiss)
 - HMs done through party not attacks (done through CSE)
 - overhauled PC (done through CSE)
+- Fairy Type
 
 ## Planned Features
 
