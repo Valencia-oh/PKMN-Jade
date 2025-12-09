@@ -58,6 +58,7 @@ AlphabeticalPokedexOrder:
 	dw ELECTRODE
 	dw ELEKID
 	dw ENTEI
+	dw ERSRHEADBBY
 	dw ESPEON
 	dw EXEGGCUTE
 	dw EXEGGUTOR
