@@ -140,7 +140,7 @@ ErsrheadbbyEvosAttacks:
 	dbw 5, ROCK_SMASH
 	dbw 5, BITE
 	dbw 10, FOCUS_ENERGY
-	dbw 12, THEIF
+	dbw 12, THIEF
 	dbw 16, CONFUSION
 	dbw 18, DISABLE
 	dbw 21, PSYBEAM
