@@ -34,7 +34,6 @@ PrintMoveType:
 	ld de, wStringBuffer1
 	call GetMoveData
 	ld a, [wStringBuffer1 + MOVE_TYPE]
-	and TYPE_MASK
 	pop hl
 
 	ld b, a
