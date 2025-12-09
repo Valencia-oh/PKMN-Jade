@@ -565,28 +565,28 @@ JohtoGrassWildMons:
 	def_grass_wildmons ILEX_FOREST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 5, CATERPIE
-	dbw 5, WEEDLE
+	dbw 8, APPLIN
+	dbw 7, APPLIN
 	dbw 7, METAPOD
 	dbw 7, KAKUNA
-	dbw 7, PIDGEY
+	dbw 8, PIDGEY
 	dbw 6, PARAS
-	dbw 6, PARAS
+	dbw 7, PARAS
 	; day
-	dbw 5, CATERPIE
-	dbw 5, WEEDLE
+	dbw 8, APPLIN
+	dbw 7, APPLIN
 	dbw 7, METAPOD
 	dbw 7, KAKUNA
-	dbw 7, PIDGEY
+	dbw 8, PIDGEY
 	dbw 6, PARAS
-	dbw 6, PARAS
+	dbw 7, PARAS
 	; nite
-	dbw 5, ODDISH
-	dbw 5, VENONAT
+	dbw 8, ODDISH
+	dbw 9, VENONAT
 	dbw 7, ODDISH
 	dbw 7, PSYDUCK
-	dbw 7, HOOTHOOT
-	dbw 6, PARAS
+	dbw 8, HOOTHOOT
+	dbw 7, PARAS
 	dbw 6, PARAS
 	end_grass_wildmons
 
