@@ -1,1347 +1,1419 @@
-HasNoItems:
-	ld a, [wNumItems]
+DEF RANDY_OT_ID EQU 01001
+
+TryAddMonToParty:
+; Check if to copy wild mon or generate a new one
+	; Whose is it?
+	ld de, wPartyCount
+	ld a, [wMonType]
+	and $f
+	jr z, .getpartylocation ; PARTYMON
+	ld de, wOTPartyCount
+
+.getpartylocation
+	; Do we have room for it?
+	ld a, [de]
+	inc a
+	cp PARTY_LENGTH + 1
+	ret nc
+	; Increase the party count
+	ld [de], a
+	ldh [hMoveMon], a ; HRAM backup
+	add e
+	ld e, a
+	adc d
+	sub e
+	ld d, a
+	; Load the species of the Pokemon into the party list.
+	; The terminator is usually here, but it'll be back.
+	ld a, [wCurPartySpecies]
+	ld [de], a
+	; Load the terminator into the next slot.
+	inc de
+	ld a, -1
+	ld [de], a
+	; Now let's load the OT name.
+	ld hl, wPartyMonOTs
+	ld a, [wMonType]
+	and $f
+	jr z, .loadOTname
+	ld hl, wOTPartyMonOTs
+
+.loadOTname
+	ldh a, [hMoveMon] ; Restore index from backup
+	dec a
+	call SkipNames
+	ld d, h
+	ld e, l
+	ld hl, wPlayerName
+	ld bc, NAME_LENGTH
+	rst CopyBytes
+	; Only initialize the nickname for party mon
+	ld a, [wMonType]
 	and a
-	ret nz
-	ld a, [wNumKeyItems]
+	jr nz, .skipnickname
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndex], a
+	call GetPokemonName
+	ld hl, wPartyMonNicknames
+	ldh a, [hMoveMon]
+	dec a
+	call SkipNames
+	ld d, h
+	ld e, l
+	ld hl, wStringBuffer1
+	ld bc, MON_NAME_LENGTH
+	rst CopyBytes
+
+.skipnickname
+	ld hl, wPartyMon1Species
+	ld a, [wMonType]
+	and $f
+	jr z, .initializeStats
+	ld hl, wOTPartyMon1Species
+
+.initializeStats
+	ldh a, [hMoveMon]
+	dec a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+GeneratePartyMonStats:
+; wBattleMode specifies whether it's a wild mon or not.
+; wMonType specifies whether it's an opposing mon or not.
+; wCurPartySpecies/wCurPartyLevel specify the species and level.
+; hl points to the wPartyMon struct to fill.
+
+	ld e, l
+	ld d, h
+	push hl
+
+	; Initialize the species
+	ld a, [wCurPartySpecies]
+	ld [wCurSpecies], a
+	call GetBaseData
+	ld a, [wBaseSpecies]
+	ld [de], a
+	inc de
+
+	; Copy the item if it's a wild mon
+	ld a, [wBattleMode]
 	and a
-	ret nz
-	ld a, [wNumBalls]
+	ld a, $0 ; no-optimize a = 0
+	jr z, .skipitem
+	ld a, [wEnemyMonItem]
+.skipitem
+	ld [de], a
+	inc de
+
+	; Copy the moves if it's a wild mon
+	push de
+	ld h, d
+	ld l, e
+	ld a, [wBattleMode]
 	and a
-	ret nz
-	ld hl, wTMsHMs
-	ld b, NUM_TMS + NUM_HMS
+	jr z, .randomlygeneratemoves
+	ld a, [wMonType]
+	and a
+	jr nz, .randomlygeneratemoves
+	ld de, wEnemyMonMoves
+rept NUM_MOVES - 1
+	ld a, [de]
+	inc de
+	ld [hli], a
+endr
+	ld a, [de]
+	ld [hl], a
+	jr .next
+
+.randomlygeneratemoves
+	xor a
+rept NUM_MOVES - 1
+	ld [hli], a
+endr
+	ld [hl], a
+	ld [wSkipMovesBeforeLevelUp], a
+	predef FillMoves
+
+.next
+	pop de
+rept NUM_MOVES
+	inc de
+endr
+
+	; Initialize ID.
+	ld a, [wPlayerID]
+	ld [de], a
+	inc de
+	ld a, [wPlayerID + 1]
+	ld [de], a
+	inc de
+
+	; Initialize Exp.
+	push de
+	ld a, [wCurPartyLevel]
+	ld d, a
+	farcall CalcExpAtLevel
+	pop de
+	ldh a, [hProduct + 1]
+	ld [de], a
+	inc de
+	ldh a, [hProduct + 2]
+	ld [de], a
+	inc de
+	ldh a, [hProduct + 3]
+	ld [de], a
+	inc de
+
+	; Initialize stat experience.
+	xor a
+	ld b, MON_DVS - MON_EVS
+.loop
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .loop
+
+	pop hl
+	push hl
+	ld a, [wMonType]
+	and $f
+	jr z, .registerpokedex
+
+	push hl
+	farcall GetTrainerDVs
+	pop hl
+	jr .initializeDVs
+
+.registerpokedex
+	ld a, [wCurPartySpecies]
+	ld [wTempSpecies], a
+	push de
+	call CheckCaughtMon
+	ld a, [wTempSpecies]
+	call SetSeenAndCaughtMon
+	pop de
+
+	pop hl
+	push hl
+	ld a, [wBattleMode]
+	and a
+	jr nz, .copywildmonDVs
+
+	call Random
+	ld b, a
+	call Random
+	ld c, a
+.initializeDVs
+	ld a, b
+	ld [de], a
+	inc de
+	ld a, c
+	ld [de], a
+	inc de
+
+	; Initialize PP.
+	push hl
+	push de
+	inc hl
+	inc hl
+	call FillPP
+	pop de
+	pop hl
+rept NUM_MOVES
+	inc de
+endr
+
+	; Initialize happiness.
+	ld a, BASE_HAPPINESS
+	ld [de], a
+	inc de
+
+	xor a
+	; PokerusStatus
+	ld [de], a
+	inc de
+	; CaughtData/CaughtTime/CaughtLevel
+	ld [de], a
+	inc de
+	; CaughtGender/CaughtLocation
+	ld [de], a
+	inc de
+
+	; Initialize level.
+	ld a, [wCurPartyLevel]
+	ld [de], a
+	inc de
+
+	xor a
+	; Status
+	ld [de], a
+	inc de
+	; Unused
+	ld [de], a
+	inc de
+
+	; Initialize HP.
+	ld bc, MON_EVS - 1
+	add hl, bc
+	ld a, 1
+	ld c, a
+	ld b, FALSE
+	call CalcMonStatC
+	ldh a, [hProduct + 2]
+	ld [de], a
+	inc de
+	ldh a, [hProduct + 3]
+	ld [de], a
+	inc de
+	jr .initstats
+
+.copywildmonDVs
+	ld a, [wEnemyMonDVs]
+	ld [de], a
+	inc de
+	ld a, [wEnemyMonDVs + 1]
+	ld [de], a
+	inc de
+
+	push hl
+	ld hl, wEnemyMonPP
+	ld b, NUM_MOVES
+.wildmonpploop
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .wildmonpploop
+	pop hl
+
+	; Initialize happiness.
+	ld a, BASE_HAPPINESS
+	ld [de], a
+	inc de
+
+	xor a
+	; PokerusStatus
+	ld [de], a
+	inc de
+	; CaughtData/CaughtTime/CaughtLevel
+	ld [de], a
+	inc de
+	; CaughtGender/CaughtLocation
+	ld [de], a
+	inc de
+
+	; Initialize level.
+	ld a, [wCurPartyLevel]
+	ld [de], a
+	inc de
+
+	ld hl, wEnemyMonStatus
+	; Copy wEnemyMonStatus
+	ld a, [hli]
+	ld [de], a
+	inc de
+	; Copy EnemyMonUnused
+	ld a, [hli]
+	ld [de], a
+	inc de
+	; Copy wEnemyMonHP
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	inc de
+
+.initstats
+	ld a, [wBattleMode]
+	dec a
+	jr nz, .generatestats
+	ld hl, wEnemyMonMaxHP
+	ld bc, PARTYMON_STRUCT_LENGTH - MON_MAXHP
+	rst CopyBytes
+	pop hl
+	jr .registerunowndex
+
+.generatestats
+	pop hl
+	ld bc, MON_EVS - 1
+	add hl, bc
+	ld b, FALSE
+	call CalcMonStats
+
+.registerunowndex
+	ld a, [wMonType]
+	and $f
+	jr nz, .done
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+	else
+		jr nz, .done
+		if HIGH(UNOWN) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(UNOWN)
+		endc
+	endc
+	jr nz, .done
+	ld hl, wPartyMon1DVs
+	ld a, [wPartyCount]
+	dec a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	predef GetUnownLetter
+	farcall UpdateUnownDex
+
+.done
+	scf ; When this function returns, the carry flag indicates success vs failure.
+	ret
+
+FillPP:
+	push bc
+	ld b, NUM_MOVES
 .loop
 	ld a, [hli]
 	and a
-	jr nz, .done
+	jr z, .next
+	push hl
+	push de
+	push bc
+	ld de, wStringBuffer1
+	call GetMoveData
+	pop bc
+	pop de
+	pop hl
+	ld a, [wStringBuffer1 + MOVE_PP]
+
+.next
+	ld [de], a
+	inc de
 	dec b
 	jr nz, .loop
+	pop bc
+	ret
+
+AddTempmonToParty:
+	ld hl, wPartyCount
+	ld a, [hl]
+	cp PARTY_LENGTH
 	scf
-	ret
-.done
-	and a
-	ret
+	ret z
 
-TossItemFromPC:
-	push de
-	call PartyMonItemName
-	farcall _CheckTossableItem
-	ld a, [wItemAttributeValue]
-	and a
-	jr nz, .key_item
-	ld hl, .ItemsTossOutHowManyText
-	call MenuTextbox
-	farcall SelectQuantityToToss
-	push af
-	call CloseWindow
-	call ExitMenu
-	pop af
-	jr c, .quit
-	ld hl, .ItemsThrowAwayText
-	call MenuTextbox
-	call YesNoBox
-	push af
-	call ExitMenu
-	pop af
-	jr c, .quit
-	pop hl
-	ld a, [wCurItemQuantity]
-	call TossItem
-	call PartyMonItemName
-	ld hl, .ItemsDiscardedText
-	call MenuTextbox
-	call ExitMenu
-	and a
-	ret
-
-.key_item
-	call .CantToss
-.quit
-	pop hl
-	scf
-	ret
-
-.ItemsTossOutHowManyText:
-	text_far _ItemsTossOutHowManyText
-	text_end
-
-.ItemsThrowAwayText:
-	text_far _ItemsThrowAwayText
-	text_end
-
-.ItemsDiscardedText:
-	text_far _ItemsDiscardedText
-	text_end
-
-.CantToss:
-	ld hl, .ItemsTooImportantText
-	jmp MenuTextboxBackup
-
-.ItemsTooImportantText:
-	text_far _ItemsTooImportantText
-	text_end
-
-CantUseItem:
-	ld hl, ItemsOakWarningText
-	jmp MenuTextboxWaitButton
-
-ItemsOakWarningText:
-	text_far _ItemsOakWarningText
-	text_end
-
-PartyMonItemName:
-	ld a, [wCurItem]
-	ld [wNamedObjectIndex], a
-	call GetItemName
-	jmp CopyName1
-
-CancelPokemonAction:
-	farcall InitPartyMenuWithCancel
-	farcall UnfreezeMonIcons
-	ld a, 1
-	ret
-
-PokemonActionSubmenu:
-	hlcoord 1, 15
-	lb bc, 2, 18
-	call ClearBox
-	farcall MonSubmenu
-	call GetCurNickname
-	ld a, [wMenuSelection]
-	ld hl, .Actions
-	ld de, 3
-	call IsInArray
-	jr nc, .nothing
-
-	inc hl
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	jp hl
-
-.nothing
-	xor a
-	ret
-
-.Actions:
-	dbw MONMENUITEM_CUT,        MonMenu_Cut
-	dbw MONMENUITEM_FLY,        MonMenu_Fly
-	dbw MONMENUITEM_SURF,       MonMenu_Surf
-	dbw MONMENUITEM_STRENGTH,   MonMenu_Strength
-	dbw MONMENUITEM_FLASH,      MonMenu_Flash
-	dbw MONMENUITEM_WHIRLPOOL,  MonMenu_Whirlpool
-	dbw MONMENUITEM_DIG,        MonMenu_Dig
-	dbw MONMENUITEM_TELEPORT,   MonMenu_Teleport
-	dbw MONMENUITEM_SOFTBOILED, MonMenu_Softboiled_MilkDrink
-	dbw MONMENUITEM_MILKDRINK,  MonMenu_Softboiled_MilkDrink
-	dbw MONMENUITEM_HEADBUTT,   MonMenu_Headbutt
-	dbw MONMENUITEM_WATERFALL,  MonMenu_Waterfall
-	dbw MONMENUITEM_ROCKSMASH,  MonMenu_RockSmash
-	dbw MONMENUITEM_SWEETSCENT, MonMenu_SweetScent
-	dbw MONMENUITEM_STATS,      OpenPartyStats
-	dbw MONMENUITEM_SWITCH,     SwitchPartyMons
-	dbw MONMENUITEM_ITEM,       GiveTakePartyMonItem
-	dbw MONMENUITEM_CANCEL,     CancelPokemonAction
-	dbw MONMENUITEM_MOVE,       ManagePokemonMoves
-	dbw MONMENUITEM_MAIL,       MonMailAction
-
-SwitchPartyMons:
-; Don't try if there's nothing to switch!
-	ld a, [wPartyCount]
-	cp 2
-	jr c, .DontSwitch
-
-	ld a, [wCurPartyMon]
 	inc a
-	ld [wSwitchMon], a
+	ld [hl], a
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, [wCurPartySpecies]
+	ld [hli], a
+	ld [hl], $ff
 
-	farcall HoldSwitchmonIcon
-	farcall InitPartyMenuNoCancel
-
-	ld a, PARTYMENUACTION_MOVE
-	ld [wPartyMenuActionText], a
-	farcall WritePartyMenuTilemap
-	farcall PlacePartyMenuText
-
-	hlcoord 0, 1
-	ld bc, SCREEN_WIDTH * 2
-	ld a, [wSwitchMon]
+	ld hl, wPartyMon1Species
+	ld a, [wPartyCount]
 	dec a
+	ld bc, PARTYMON_STRUCT_LENGTH
 	rst AddNTimes
-	ld [hl], '▷'
-	call WaitBGMap
-	call SetDefaultBGPAndOBP
-	call DelayFrame
+	ld e, l
+	ld d, h
+	ld hl, wTempMonSpecies
+	rst CopyBytes
 
-	farcall PartyMenuSelect
-	bit B_PAD_B, b
-	jr c, .DontSwitch
+	ld hl, wPartyMonOTs
+	ld a, [wPartyCount]
+	dec a
+	call SkipNames
+	ld d, h
+	ld e, l
+	ld hl, wOTPartyMonOTs
+	ld a, [wCurPartyMon]
+	call SkipNames
+	ld bc, NAME_LENGTH
+	rst CopyBytes
 
-	farcall _SwitchPartyMons
+	ld hl, wPartyMonNicknames
+	ld a, [wPartyCount]
+	dec a
+	call SkipNames
+	ld d, h
+	ld e, l
+	ld hl, wOTPartyMonNicknames
+	ld a, [wCurPartyMon]
+	call SkipNames
+	ld bc, MON_NAME_LENGTH
+	rst CopyBytes
 
-	xor a
-	ld [wPartyMenuActionText], a
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndex], a
+	cp EGG
+	jr z, .egg
+	call SetSeenAndCaughtMon
+	ld hl, wPartyMon1Happiness
+	ld a, [wPartyCount]
+	dec a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	ld [hl], BASE_HAPPINESS
+.egg
 
-	farcall LoadPartyMenuGFX
-	farcall InitPartyMenuWithCancel
-	farcall InitPartyMenuGFX
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(UNOWN)
+	if HIGH(UNOWN) == 0
+		or h
+	else
+		jr nz, .done
+		if HIGH(UNOWN) == 1
+			dec h
+		else
+			ld a, h
+			cp HIGH(UNOWN)
+		endc
+	endc
+	jr nz, .done
+	ld hl, wPartyMon1DVs
+	ld a, [wPartyCount]
+	dec a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	predef GetUnownLetter
+	farcall UpdateUnownDex
+	ld a, [wFirstUnownSeen]
+	and a
+	jr nz, .done
+	ld a, [wUnownLetter]
+	ld [wFirstUnownSeen], a
+.done
 
-	ld a, 1
+	and a
 	ret
 
-.DontSwitch:
+RetrieveMonFromDayCareMan:
+	ld a, [wBreedMon1Species]
+	ld [wCurPartySpecies], a
+	ld de, SFX_TRANSACTION
+	call PlaySFX
+	call WaitSFX
+	call GetBreedMon1LevelGrowth
+	ld a, b
+	ld [wPrevPartyLevel], a
+	ld a, e
+	ld [wCurPartyLevel], a
 	xor a
-	ld [wPartyMenuActionText], a
-	jmp CancelPokemonAction
+	ld [wPokemonWithdrawDepositParameter], a
+	jr RetrieveBreedmon
 
-GiveTakePartyMonItem:
-; Eggs can't hold items!
+RetrieveMonFromDayCareLady:
+	ld a, [wBreedMon2Species]
+	ld [wCurPartySpecies], a
+	ld de, SFX_TRANSACTION
+	call PlaySFX
+	call WaitSFX
+	call GetBreedMon2LevelGrowth
+	ld a, b
+	ld [wPrevPartyLevel], a
+	ld a, e
+	ld [wCurPartyLevel], a
+	ld a, PC_DEPOSIT
+	ld [wPokemonWithdrawDepositParameter], a
+; fallthrough
+RetrieveBreedmon:
+	ld hl, wPartyCount
+	ld a, [hl]
+	cp PARTY_LENGTH
+	jr nz, .room_in_party
+	scf
+	ret
+
+.room_in_party
+	inc a
+	ld [hl], a
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld a, [wPokemonWithdrawDepositParameter]
+	and a
+	ld a, [wBreedMon1Species]
+	ld de, wBreedMon1Nickname
+	jr z, .okay
+	ld a, [wBreedMon2Species]
+	ld de, wBreedMon2Nickname
+
+.okay
+	ld [hli], a
+	ld [wCurSpecies], a
+	ld [hl], $ff
+	ld hl, wPartyMonNicknames
+	ld a, [wPartyCount]
+	dec a
+	call SkipNames
+	push hl
+	ld h, d
+	ld l, e
+	pop de
+	rst CopyBytes
+	push hl
+	ld hl, wPartyMonOTs
+	ld a, [wPartyCount]
+	dec a
+	call SkipNames
+	ld d, h
+	ld e, l
+	pop hl
+	rst CopyBytes
+	push hl
+	call GetLastPartyMon
+	pop hl
+	ld bc, BOXMON_STRUCT_LENGTH
+	rst CopyBytes
+	call GetBaseData
+	call GetLastPartyMon
+	ld b, d
+	ld c, e
+	ld hl, MON_LEVEL
+	add hl, bc
+	ld a, [wCurPartyLevel]
+	ld [hl], a
+	ld hl, MON_MAXHP
+	add hl, bc
+	ld d, h
+	ld e, l
+	ld hl, MON_EXP + 2
+	add hl, bc
+	push bc
+	ld b, TRUE
+	call CalcMonStats
+	ld hl, wPartyMon1Moves
+	ld a, [wPartyCount]
+	dec a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	ld d, h
+	ld e, l
+	ld a, TRUE
+	ld [wSkipMovesBeforeLevelUp], a
+	predef FillMoves
+	ld a, [wPartyCount]
+	dec a
+	ld [wCurPartyMon], a
+	call HealPartyMon
+	ld d, MAX_LEVEL
+	farcall CalcExpAtLevel
+	pop bc
+	ld hl, MON_EXP + 2
+	add hl, bc
+	ldh a, [hMultiplicand]
+	ld b, a
+	ldh a, [hMultiplicand + 1]
+	ld c, a
+	ldh a, [hMultiplicand + 2]
+	ld d, a
+	ld a, [hld]
+	sub d
+	ld a, [hld]
+	sbc c
+	ld a, [hl]
+	sbc b
+	jr c, .not_max_exp
+	ld a, b
+	ld [hli], a
+	ld a, c
+	ld [hli], a
+	ld a, d
+	ld [hl], a
+.not_max_exp
+	and a
+	ret
+
+GetLastPartyMon:
+	ld a, [wPartyCount]
+	dec a
+	ld hl, wPartyMon1Species
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	ld d, h
+	ld e, l
+	ret
+
+DepositMonWithDayCareMan:
+	ld de, wBreedMon1Nickname
+	call DepositBreedmon
+	xor a ; REMOVE_PARTY
+	ld [wPokemonWithdrawDepositParameter], a
+	jmp RemoveMonFromParty
+
+DepositMonWithDayCareLady:
+	ld de, wBreedMon2Nickname
+	call DepositBreedmon
+	xor a ; REMOVE_PARTY
+	ld [wPokemonWithdrawDepositParameter], a
+	jmp RemoveMonFromParty
+
+DepositBreedmon:
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMonNicknames
+	call SkipNames
+	rst CopyBytes
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMonOTs
+	call SkipNames
+	rst CopyBytes
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1Species
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	ld bc, BOXMON_STRUCT_LENGTH
+	jmp CopyBytes
+
+SendMonIntoBox:
+; Sends the mon into one of Bills Boxes
+; the data comes mainly from 'wEnemyMon:'
+	farcall NewStorageBoxPointer
+	jr nc, .not_full
+
+	and a
+	ret
+
+.not_full
+	push bc
 	ld a, [wCurPartySpecies]
-	cp EGG
-	jr z, .cancel
+	ld [wCurSpecies], a
 
-	ld hl, GiveTakeItemMenuData
-	call LoadMenuHeader
-	call VerticalMenu
-	call ExitMenu
-	jr c, .cancel
+	call GetBaseData
 
-	call GetCurNickname
+	ld hl, wPlayerName
+	ld de, wBufferMonOT
+	ld bc, NAME_LENGTH
+	rst CopyBytes
+
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndex], a
+	call GetPokemonName
+
+	ld hl, wStringBuffer1
+	ld de, wBufferMonNickname
+	ld bc, MON_NAME_LENGTH
+	rst CopyBytes
+
+	ld hl, wEnemyMon
+	ld de, wBufferMon
+	ld bc, 1 + 1 + NUM_MOVES ; species + item + moves
+	rst CopyBytes
+
+	ld hl, wPlayerID
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	inc de
+	push de
+	ld a, [wCurPartyLevel]
+	ld d, a
+	farcall CalcExpAtLevel
+	pop de
+	ldh a, [hProduct + 1]
+	ld [de], a
+	inc de
+	ldh a, [hProduct + 2]
+	ld [de], a
+	inc de
+	ldh a, [hProduct + 3]
+	ld [de], a
+	inc de
+
+	; Set all 5 Experience Values to 0
+	xor a
+	ld b, 2 * NUM_EXP_STATS
+.loop2
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .loop2
+
+	ld hl, wEnemyMonDVs
+	ld b, 2 + NUM_MOVES ; DVs and PP ; wEnemyMonHappiness - wEnemyMonDVs
+.loop3
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec b
+	jr nz, .loop3
+
+	ld a, BASE_HAPPINESS
+	ld [de], a
+	inc de
+	xor a
+	ld [de], a
+	inc de
+	ld [de], a
+	inc de
+	ld [de], a
+	inc de
+	ld a, [wCurPartyLevel]
+	ld [de], a
+	ld a, [wCurPartySpecies]
+	call SetSeenAndCaughtMon
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	ld a, l
+	sub LOW(UNOWN)
+	jr nz, .not_unown
+	if HIGH(UNOWN) == 0
+		or h
+	elif HIGH(UNOWN) == 1
+		dec h
+	else
+		ld a, h
+		cp HIGH(UNOWN)
+	endc
+	jr nz, .not_unown
+	ld hl, wBufferMonDVs
+	predef GetUnownLetter
+	farcall UpdateUnownDex
+
+.not_unown
+	ld a, [wCurPartySpecies]
+	ld [wBufferMonAltSpecies], a
+
+	pop bc
+	ld a, b
+	ld [wBufferMonBox], a
+	ld a, c
+	ld [wBufferMonSlot], a
+	farcall UpdateStorageBoxMonFromTemp
+	scf
+	ret
+
+GiveEgg::
+	ld a, [wCurPartySpecies]
+	push af
+	farcall GetLowestEvolutionStage
+	ld a, [wCurPartySpecies]
+
+; TryAddMonToParty sets Seen and Caught flags
+; when it is successful.  This routine will make
+; sure that we aren't newly setting flags.
+	push af
+	call CheckCaughtMon
+	pop af
+	push bc
+	call CheckSeenMon
+	push bc
+
+	call TryAddMonToParty
+
+; If we haven't caught this Pokemon before receiving
+; the Egg, reset the flag that was just set by
+; TryAddMonToParty.
+	pop bc
+	ld a, c
+	and a
+	jr nz, .skip_caught_flag
+	ld a, [wCurPartySpecies]
+	call GetPokemonIndexFromID
+	ld d, h
+	ld e, l
+	dec de
+	push de
+	ld hl, wPokedexCaught
+	ld b, RESET_FLAG
+	call FlagAction
+	pop de
+
+.skip_caught_flag
+; If we haven't seen this Pokemon before receiving
+; the Egg, reset the flag that was just set by
+; TryAddMonToParty.
+	pop bc
+	ld a, c
+	and a
+	jr nz, .skip_seen_flag
+	ld hl, wPokedexSeen
+	ld b, RESET_FLAG
+	call FlagAction
+
+.skip_seen_flag
+	pop af
+	ld [wCurPartySpecies], a
+	ld a, [wPartyCount]
+	dec a
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld hl, wPartyMon1Species
+	rst AddNTimes
+	ld a, [wCurPartySpecies]
+	ld [hl], a
+	ld hl, wPartyCount
+	ld a, [hl]
+	ld b, 0
+	ld c, a
+	add hl, bc
+	ld [hl], EGG
+	ld a, [wPartyCount]
+	dec a
+	ld hl, wPartyMonNicknames
+	call SkipNames
+	ld de, String_Egg
+	call CopyName2
+	ld a, [wPartyCount]
+	dec a
+	ld hl, wPartyMon1Happiness
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	ld a, [wDebugFlags]
+	bit DEBUG_FIELD_F, a
+	ld a, 1
+	jr nz, .got_init_happiness
+	ld a, [wBaseEggSteps]
+
+.got_init_happiness
+	ld [hl], a
+	ld a, [wPartyCount]
+	dec a
+	ld hl, wPartyMon1HP
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	xor a
+	ld [hli], a
+	ld [hl], a
+	and a
+	ret
+
+String_Egg:
+	db "EGG@"
+
+RemoveMonFromParty:
+	ld hl, wPartyCount
+
+	ld a, [hl]
+	dec a
+	ld [hli], a
+	ld a, [wCurPartyMon]
+	ld c, a
+	ld b, 0
+	add hl, bc
+	ld e, l
+	ld d, h
+	inc de
+.loop
+	ld a, [de]
+	inc de
+	ld [hli], a
+	inc a
+	jr nz, .loop
+	ld hl, wPartyMonOTs
+	ld d, PARTY_LENGTH - 1
+
+	; If this is the last mon in our party,
+	; shift all the other mons up to close the gap.
+	ld a, [wCurPartyMon]
+	call SkipNames
+	ld a, [wCurPartyMon]
+	cp d
+	jr nz, .delete_inside
+	ld [hl], -1
+	jr .finish
+
+.delete_inside
+	; Shift the OT names
+	ld d, h
+	ld e, l
+	ld bc, MON_NAME_LENGTH
+	add hl, bc
+	ld bc, wPartyMonNicknames
+	call CopyDataUntil
+	; Shift the struct
+	ld hl, wPartyMons
+	ld bc, PARTYMON_STRUCT_LENGTH
+	ld a, [wCurPartyMon]
+	rst AddNTimes
+	ld d, h
+	ld e, l
+	ld bc, PARTYMON_STRUCT_LENGTH
+	add hl, bc
+	ld bc, wPartyMonOTs
+	call CopyDataUntil
+	; Shift the nicknames
+	ld hl, wPartyMonNicknames
+	ld bc, MON_NAME_LENGTH
+	ld a, [wCurPartyMon]
+	rst AddNTimes
+	ld d, h
+	ld e, l
+	ld bc, MON_NAME_LENGTH
+	add hl, bc
+	ld bc, wPartyMonNicknamesEnd
+	call CopyDataUntil
+	; Mail time!
+.finish
+	ld a, [wLinkMode]
+	and a
+	ret nz
+	; Shift mail
+	ld a, BANK(sPartyMail)
+	call OpenSRAM
+	; If this is the last mon in our party, no need to shift mail.
+	ld hl, wPartyCount
+	ld a, [wCurPartyMon]
+	cp [hl]
+	ret z
+	jr z, .close_sram
+	; Shift our mail messages up.
+	ld hl, sPartyMail
+	ld bc, MAIL_STRUCT_LENGTH
+	rst AddNTimes
+	push hl
+	add hl, bc
+	pop de
+	ld a, [wCurPartyMon]
+	ld b, a
+.loop2
+	push bc
+	push hl
+	ld bc, MAIL_STRUCT_LENGTH
+	rst CopyBytes
+	pop hl
+	push hl
+	ld bc, MAIL_STRUCT_LENGTH
+	add hl, bc
+	pop de
+	pop bc
+	inc b
+	ld a, [wPartyCount]
+	cp b
+	jr nz, .loop2
+.close_sram
+	jmp CloseSRAM
+
+ComputeNPCTrademonStats:
+	ld a, MON_LEVEL
+	call GetPartyParamLocation
+	ld a, [hl]
+	ld [MON_LEVEL], a ; should be "ld [wCurPartyLevel], a"
+	ld a, MON_SPECIES
+	call GetPartyParamLocation
+	ld a, [hl]
+	ld [wCurSpecies], a
+	call GetBaseData
+	ld a, MON_MAXHP
+	call GetPartyParamLocation
+	ld d, h
+	ld e, l
+	push de
+	ld a, MON_EVS - 1
+	call GetPartyParamLocation
+	ld b, TRUE
+	call CalcMonStats
+	pop de
+	ld a, MON_HP
+	call GetPartyParamLocation
+	ld a, [de]
+	inc de
+	ld [hli], a
+	ld a, [de]
+	ld [hl], a
+	ret
+
+CalcMonStats:
+; Calculates all 6 Stats of a mon
+; b: Take into account EVs if TRUE
+; 'c' counts from 1-6 and points with 'wBaseStats' to the base value
+; hl is the path to the EVs
+; de points to where the final stats will be saved
+
+	ld c, STAT_HP - 1 ; first stat
+.loop
+	inc c
+	call CalcMonStatC
+	ldh a, [hMultiplicand + 1]
+	ld [de], a
+	inc de
+	ldh a, [hMultiplicand + 2]
+	ld [de], a
+	inc de
+	ld a, c
+	cp STAT_SDEF ; last stat
+	jr nz, .loop
+	ret
+
+CalcMonStatC:
+; 'c' is 1-6 and points to the BaseStat
+; 1: HP
+; 2: Attack
+; 3: Defense
+; 4: Speed
+; 5: SpAtk
+; 6: SpDef
+	push hl
+	push de
+	push bc
+	ld a, b
+	ld d, a
+	push hl
+	ld hl, wBaseStats - 1 ; has to be decreased, because 'c' begins with 1
+	ld b, 0
+	add hl, bc
+	ld a, [hl]
+	ld e, a
+	pop hl
+	push hl
+	ld a, d
+	and a
+	jr z, .no_stat_exp
+	add hl, bc
+	ld a, [hl]
+	ld b, a
+
+.no_stat_exp
+	pop hl
+	push bc
+	ld bc, MON_DVS - MON_HP_EV + 1
+	add hl, bc
+	pop bc
+	ld a, c
+	cp STAT_ATK
+	jr z, .Attack
+	cp STAT_DEF
+	jr z, .Defense
+	cp STAT_SPD
+	jr z, .Speed
+	cp STAT_SATK
+	jr z, .Special
+	cp STAT_SDEF
+	jr z, .Special
+; DV_HP = (DV_ATK & 1) << 3 | (DV_DEF & 1) << 2 | (DV_SPD & 1) << 1 | (DV_SPC & 1)
+	push bc
+	ld a, [hl]
+	swap a
+	and 1
+	add a
+	add a
+	add a
+	ld b, a
+	ld a, [hli]
+	and 1
+	add a
+	add a
+	add b
+	ld b, a
+	ld a, [hl]
+	swap a
+	and 1
+	add a
+	add b
+	ld b, a
+	ld a, [hl]
+	and 1
+	add b
+	pop bc
+	jr .GotDV
+
+.Attack:
+	ld a, [hl]
+	swap a
+	and $f
+	jr .GotDV
+
+.Defense:
+	ld a, [hl]
+	and $f
+	jr .GotDV
+
+.Speed:
+	inc hl
+	ld a, [hl]
+	swap a
+	and $f
+	jr .GotDV
+
+.Special:
+	inc hl
+	ld a, [hl]
+	and $f
+
+.GotDV:
+	ld d, 0
+	add e
+	ld e, a
+	adc d
+	sub e
+	ld d, a
+	sla e
+	rl d
+	srl b
+	srl b
+	ld a, b
+	add e
+	jr nc, .no_overflow_2
+	inc d
+
+.no_overflow_2
+	ldh [hMultiplicand + 2], a
+	ld a, d
+	ldh [hMultiplicand + 1], a
+	xor a
+	ldh [hMultiplicand + 0], a
+	ld a, [wCurPartyLevel]
+	ldh [hMultiplier], a
+	call Multiply
+	ldh a, [hProduct + 1]
+	ldh [hDividend + 0], a
+	ldh a, [hProduct + 2]
+	ldh [hDividend + 1], a
+	ldh a, [hProduct + 3]
+	ldh [hDividend + 2], a
+	ld a, 100
+	ldh [hDivisor], a
+	ld a, 3
+	ld b, a
+	call Divide
+	ld a, c
+	cp STAT_HP
+	ld a, STAT_MIN_NORMAL
+	jr nz, .not_hp
+	ld a, [wCurPartyLevel]
+	ld b, a
+	ldh a, [hQuotient + 3]
+	add b
+	ldh [hMultiplicand + 2], a
+	jr nc, .no_overflow_3
+	ldh a, [hQuotient + 2]
+	inc a
+	ldh [hMultiplicand + 1], a
+
+.no_overflow_3
+	ld a, STAT_MIN_HP
+
+.not_hp
+	ld b, a
+	ldh a, [hQuotient + 3]
+	add b
+	ldh [hMultiplicand + 2], a
+	jr nc, .no_overflow_4
+	ldh a, [hQuotient + 2]
+	inc a
+	ldh [hMultiplicand + 1], a
+
+.no_overflow_4
+	ldh a, [hQuotient + 2]
+	cp HIGH(MAX_STAT_VALUE + 1) + 1
+	jr nc, .max_stat
+	cp HIGH(MAX_STAT_VALUE + 1)
+	jr c, .stat_value_okay
+	ldh a, [hQuotient + 3]
+	cp LOW(MAX_STAT_VALUE + 1)
+	jr c, .stat_value_okay
+
+.max_stat
+	ld a, HIGH(MAX_STAT_VALUE)
+	ldh [hMultiplicand + 1], a
+	ld a, LOW(MAX_STAT_VALUE)
+	ldh [hMultiplicand + 2], a
+
+.stat_value_okay
+	jmp PopBCDEHL
+
+GivePoke::
+	push de
+	push bc
+	xor a ; PARTYMON
+	ld [wMonType], a
+	call TryAddMonToParty
+	jr nc, .failed
+	ld hl, wPartyMonNicknames
+	ld a, [wPartyCount]
+	dec a
+	ld [wCurPartyMon], a
+	call SkipNames
+	ld d, h
+	ld e, l
+	pop bc
+	ld a, b
+	ld b, 0
+	push bc
+	push de
+	push af
+	ld a, [wCurItem]
+	and a
+	jr z, .done
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1Item
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	ld a, [wCurItem]
+	ld [hl], a
+	jr .done
+
+.failed
+	ld a, [wCurPartySpecies]
+	ld [wTempEnemyMonSpecies], a
+	farcall LoadEnemyMon
+	call SendMonIntoBox
+	jmp nc, .FailedToGiveMon
+	ld a, BOXMON
+	ld [wMonType], a
+	xor a
+	ld [wCurPartyMon], a
+	ld de, wMonOrItemNameBuffer
+	pop bc
+	ld a, b
+	ld b, 1
+	push bc
+	push de
+	push af
+	ld a, [wCurItem]
+	and a
+	jr z, .done
+	ld a, [wCurItem]
+	ld [wBufferMonItem], a
+	farcall UpdateStorageBoxMonFromTemp
+
+.done
+	ld a, [wCurPartySpecies]
+	ld [wNamedObjectIndex], a
+	ld [wTempEnemyMonSpecies], a
+	call GetPokemonName
 	ld hl, wStringBuffer1
 	ld de, wMonOrItemNameBuffer
 	ld bc, MON_NAME_LENGTH
 	rst CopyBytes
-	ld a, [wMenuCursorY]
-	cp 1
-	jr nz, .take
+	pop af
+	and a
+	jmp z, .wildmon
+	pop de
+	pop bc
+	pop hl
+	push bc
+	push hl
+	ld a, [wScriptBank]
+	call GetFarWord
+	ld bc, MON_NAME_LENGTH
+	ld a, [wScriptBank]
+	call FarCopyBytes
+	pop hl
+	inc hl
+	inc hl
+	ld a, [wScriptBank]
+	call GetFarWord
+	pop bc
+	ld a, b
+	and a
+	push de
+	push bc
+	jr nz, .send_to_box
 
-	call LoadStandardMenuHeader
-	call ClearPalettes
-	call .GiveItem
-	call ClearPalettes
-	call LoadFontsBattleExtra
-	call ExitMenu
-	xor a
-	ret
+	push hl
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMonOTs
+	call SkipNames
+	ld d, h
+	ld e, l
+	pop hl
+.otnameloop
+	ld a, [wScriptBank]
+	call GetFarByte
+	ld [de], a
+	inc hl
+	inc de
+	cp '@'
+	jr nz, .otnameloop
+	ld a, [wScriptBank]
+	call GetFarByte
+	ld b, a
+	push bc
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1ID
+	ld bc, PARTYMON_STRUCT_LENGTH
+	rst AddNTimes
+	ld a, HIGH(RANDY_OT_ID)
+	ld [hli], a
+	ld [hl], LOW(RANDY_OT_ID)
+	pop bc
+	farcall SetGiftPartyMonCaughtData
+	jr .skip_nickname
 
-.take
-	call TakePartyItem
-	ld a, 3
-	ret
-
-.cancel
-	ld a, 3
-	ret
-
-.GiveItem:
-	ld hl, wItemFlags
-	set IN_BAG_F, [hl]
-	call GetItemToGive
-	ret z
-	call TryGiveItemToPartymon
-	ld hl, wItemFlags
-	res IN_BAG_F, [hl]
-	ret
-
-GetItemToGive:
-; Returns nz if we got an item to give.
-	call DepositSellInitPackBuffers
-	; fallthrough
-_GetItemToGive:
+.send_to_box
+	ld de, wBufferMonOT
 .loop
-	call DepositSellPack
+	ld a, [wScriptBank]
+	call GetFarByte
+	ld [de], a
+	inc hl
+	inc de
+	cp '@'
+	jr nz, .loop
+	ld a, [wScriptBank]
+	call GetFarByte
+	ld b, a
+	ld hl, wBufferMonID
+	call Random
+	ld [hli], a
+	call Random
+	ld [hl], a
+	farcall UpdateStorageBoxMonFromTemp
+	farcall SetGiftBoxMonCaughtData
+	jr .skip_nickname
 
-	ld a, [wPackUsedItem]
+.wildmon
+	pop de
+	pop bc
+	push bc
+	push de
+	ld a, b
+	and a
+	jr z, .party
+	farcall SetBoxMonCaughtData
+	jr .set_caught_data
+
+.party
+	farcall SetCaughtData
+.set_caught_data
+	farcall GiveANickname_YesNo
+	pop de
+	call nc, InitNickname
+; fallthrough
+.skip_nickname
+	pop bc
+	pop de
+	ld a, b
 	and a
 	ret z
-
-	ld a, [wCurPocket]
-	cp KEY_ITEM_POCKET
-	jr z, .next
-
-	call CheckTossableItem
-	ld a, [wItemAttributeValue]
-	and a
-	jr nz, .next
-
-	or 1
-	ret
-
-.next
-	ld hl, ItemCantHeldText
-	call MenuTextboxBackup
-	jr .loop
-
-PCGiveItem:
-	ld hl, wItemFlags
-	set IN_BAG_F, [hl]
-	call DepositSellInitPackBuffers
-.loop
-	call _GetItemToGive
-	jr z, .done
-
-	; Ensure that we aren't trying to give Mail to a Pokémon in storage.
-	ld a, [wCurItem]
-	ld d, a
-	farcall ItemIsMail
-	jr nc, .item_ok
-
-	ld a, [wBufferMonBox]
-	and a
-	jr z, .item_ok
-
-	ld hl, CantPlaceMailInStorageText
-	call MenuTextboxBackup
-	jr .loop
-
-.item_ok
-	call PartyMonItemName
-	call GiveItemToPokemon
-
-	ld hl, wBufferMonNickname
-	ld de, wMonOrItemNameBuffer
+	ld hl, WasSentToBillsPCText
+	call PrintText
+	ld hl, wMonOrItemNameBuffer
+	ld de, wBufferMonNickname
 	ld bc, MON_NAME_LENGTH
 	rst CopyBytes
-
-	ld hl, PokemonHoldItemText
-	call MenuTextboxBackup
-
-	; Now, actually give the item.
-	ld a, [wBufferMonSpecies]
-	ld [wCurPartySpecies], a
-	ld de, wCurItem
-	ld a, [de]
-	ld [wBufferMonItem], a
 	farcall UpdateStorageBoxMonFromTemp
-
-	; We know that if we're dealing with Mail, then we're giving to a partymon.
-	; Thus, there's no harm in using party-specific code.
-	ld a, [wBufferMonSlot]
-	dec a
-	ld [wCurPartyMon], a
-	ld a, [wCurItem]
-	ld d, a
-	farcall ItemIsMail
-	jr nc, .done
-	call ComposeMailMessage
-
-.done
-	ld hl, wItemFlags
-	res IN_BAG_F, [hl]
+	ld b, $1
 	ret
 
-TryGiveItemToPartymon:
-	call SpeechTextbox
-	call PartyMonItemName
-	call GetPartyItemLocation
-	ld a, [hl]
-	and a
-	jr z, .give_item_to_mon
-
-	push hl
-	ld d, a
-	farcall ItemIsMail
-	pop hl
-	jr c, .please_remove_mail
-	ld a, [hl]
-	jr .already_holding_item
-
-.give_item_to_mon
-	call GiveItemToPokemon
-	ld hl, PokemonHoldItemText
-	call MenuTextboxBackup
-	jr GivePartyItem
-
-.please_remove_mail
-	ld hl, PokemonRemoveMailText
-	jmp MenuTextboxBackup
-
-.already_holding_item
-	ld [wNamedObjectIndex], a
-	call GetItemName
-	ld hl, PokemonAskSwapItemText
-	call StartMenuYesNo
-	ret c
-
-	call GiveItemToPokemon
-	ld a, [wNamedObjectIndex]
-	push af
-	ld a, [wCurItem]
-	ld [wNamedObjectIndex], a
-	pop af
-	ld [wCurItem], a
-	call ReceiveItemFromPokemon
-	jr nc, .bag_full
-
-	ld hl, PokemonSwapItemText
-	call MenuTextboxBackup
-	ld a, [wNamedObjectIndex]
-	ld [wCurItem], a
-	jr GivePartyItem
-
-.bag_full
-	ld a, [wNamedObjectIndex]
-	ld [wCurItem], a
-	call ReceiveItemFromPokemon
-	ld hl, ItemStorageFullText
-	jmp MenuTextboxBackup
-
-GivePartyItem:
-	call GetPartyItemLocation
-	ld a, [wCurItem]
-	ld [hl], a
-	ld d, a
-	farcall ItemIsMail
-	ret nc
-	jmp ComposeMailMessage
-
-TakePartyItem:
-	call SpeechTextbox
-	call GetPartyItemLocation
-	ld a, [hl]
-	and a
-	jr z, .not_holding_item
-
-	ld [wCurItem], a
-	call ReceiveItemFromPokemon
-	jr nc, .item_storage_full
-
-	farcall ItemIsMail
-	call GetPartyItemLocation
-	ld a, [hl]
-	ld [wNamedObjectIndex], a
-	ld [hl], NO_ITEM
-	call GetItemName
-	ld hl, PokemonTookItemText
-	jmp MenuTextboxBackup
-
-.not_holding_item
-	ld hl, PokemonNotHoldingText
-	jmp MenuTextboxBackup
-
-.item_storage_full
-	ld hl, ItemStorageFullText
-	jmp MenuTextboxBackup
-
-GiveTakeItemMenuData:
-	db MENU_SPRITE_ANIMS | MENU_BACKUP_TILES ; flags
-	menu_coords 12, 12, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
-	dw .Items
-	db 1 ; default option
-
-.Items:
-	db STATICMENU_CURSOR ; flags
-	db 2 ; # items
-	db "GIVE@"
-	db "TAKE@"
-
-PokemonSwapItemText:
-	text_far _PokemonSwapItemText
-	text_end
-
-PokemonHoldItemText:
-	text_far _PokemonHoldItemText
-	text_end
-
-PokemonRemoveMailText:
-	text_far _PokemonRemoveMailText
-	text_end
-
-PokemonNotHoldingText:
-	text_far _PokemonNotHoldingText
-	text_end
-
-ItemStorageFullText:
-	text_far _ItemStorageFullText
-	text_end
-
-PokemonTookItemText:
-	text_far _PokemonTookItemText
-	text_end
-
-PokemonAskSwapItemText:
-	text_far _PokemonAskSwapItemText
-	text_end
-
-ItemCantHeldText:
-	text_far _ItemCantHeldText
-	text_end
-
-CantPlaceMailInStorageText:
-	text_far _CantPlaceMailInStorageText
-	text_end
-
-GetPartyItemLocation:
-	push af
-	ld a, MON_ITEM
-	call GetPartyParamLocation
-	pop af
+.FailedToGiveMon:
+	pop bc
+	pop de
+	ld b, $2
 	ret
 
-ReceiveItemFromPokemon:
-	ld a, 1
-	ld [wItemQuantityChange], a
-	ld hl, wNumItems
-	jmp ReceiveItem
-
-GiveItemToPokemon:
-	ld a, 1
-	ld [wItemQuantityChange], a
-	ld hl, wNumItems
-	jmp TossItem
-
-StartMenuYesNo:
-	call MenuTextbox
-	call YesNoBox
-	jmp ExitMenu
-
-ComposeMailMessage:
-	ld de, wTempMailMessage
-	call _ComposeMailMessage
-	ld hl, wPlayerName
-	ld de, wTempMailAuthor
-	ld bc, NAME_LENGTH - 1
-	rst CopyBytes
-	ld hl, wPlayerID
-	ld bc, 2
-	rst CopyBytes
-	ld a, [wCurPartySpecies]
-	ld [de], a
-	inc de
-	ld a, [wCurItem]
-	ld [de], a
-	ld a, [wCurPartyMon]
-	ld hl, sPartyMail
-	ld bc, MAIL_STRUCT_LENGTH
-	rst AddNTimes
-	ld d, h
-	ld e, l
-	ld hl, wTempMail
-	ld bc, MAIL_STRUCT_LENGTH
-	ld a, BANK(sPartyMail)
-	call OpenSRAM
-	rst CopyBytes
-	jmp CloseSRAM
-
-MonMailAction:
-; If in the time capsule or trade center,
-; selecting the mail only allows you to
-; read the mail.
-	ld a, [wLinkMode]
-	cp LINK_TIMECAPSULE
-	jr z, .read
-	cp LINK_TRADECENTER
-	jr z, .read
-
-; Show the READ/TAKE/QUIT menu.
-	ld hl, .MenuHeader
-	call LoadMenuHeader
-	call VerticalMenu
-	call ExitMenu
-
-; Interpret the menu.
-	ld a, $3
-	ret c
-	ld a, [wMenuCursorY]
-	cp $1
-	jr z, .read
-	cp $2
-	jr z, TakeMail
-	ld a, $3
-	ret
-
-.read
-	farcall ReadPartyMonMail
-	xor a
-	ret
-
-.MenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 12, 10, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
-	dw .MenuData
-	db 1 ; default option
-
-.MenuData:
-	db STATICMENU_CURSOR ; flags
-	db 3 ; items
-	db "READ@"
-	db "TAKE@"
-	db "QUIT@"
-
-TakeMail:
-	ld hl, .MailAskSendToPCText
-	call StartMenuYesNo
-	jr c, .RemoveMailToBag
-	ld a, [wCurPartyMon]
-	ld b, a
-	farcall SendMailToPC
-	jr c, .MailboxFull
-	ld hl, .MailSentToPCText
-	call MenuTextboxBackup
-	jr .TookMail
-
-.MailboxFull:
-	ld hl, .MailboxFullText
-	call MenuTextboxBackup
-	jr .KeptMail
-
-.RemoveMailToBag:
-	ld hl, .MailLoseMessageText
-	call StartMenuYesNo
-	jr c, .KeptMail
-	call GetPartyItemLocation
-	ld a, [hl]
-	ld [wCurItem], a
-	call ReceiveItemFromPokemon
-	jr nc, .BagIsFull
-	call GetPartyItemLocation
-	ld [hl], $0
-	call GetCurNickname
-	ld hl, .MailDetachedText
-	call MenuTextboxBackup
-	; fallthrough
-.TookMail:
-	scf
-	jr .done
-
-.BagIsFull:
-	ld hl, .MailNoSpaceText
-	call MenuTextboxBackup
-	; fallthrough
-.KeptMail:
-	and a
-.done
-	ld a, $3
-	ret
-
-.MailLoseMessageText:
-	text_far _MailLoseMessageText
+WasSentToBillsPCText:
+	text_far _WasSentToBillsPCText
 	text_end
 
-.MailDetachedText:
-	text_far _MailDetachedText
-	text_end
-
-.MailNoSpaceText:
-	text_far _MailNoSpaceText
-	text_end
-
-.MailAskSendToPCText:
-	text_far _MailAskSendToPCText
-	text_end
-
-.MailboxFullText:
-	text_far _MailboxFullText
-	text_end
-
-.MailSentToPCText:
-	text_far _MailSentToPCText
-	text_end
-
-OpenPartyStats:
-; PartyMon
-	xor a
-	ld [wMonType], a
-	; fallthrough
-_OpenPartyStats:
+InitNickname:
+	push de
 	call LoadStandardMenuHeader
-	call ClearSprites
-	call LowVolume
-	predef StatsScreenInit
-	; This ensures that MaxVolume works as it should if we're in the middle of
-	; playing a cry.
-	ld a, MAX_VOLUME
-	ld [wLastVolume], a
-	call MaxVolume
-	xor a
-	ld [wLastVolume], a
-	call ExitMenu
-	xor a
-	ret
-
-MonMenu_Cut:
-	farcall CutFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_Fly:
-	farcall FlyFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $2
-	jr z, .Fail
-	and a
-	jr z, .Error
-	farcall StubbedTrainerRankings_Fly
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-.Error:
-	xor a
-	ret
-
-MonMenu_Flash:
-	farcall FlashFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_Strength:
-	farcall StrengthFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_Whirlpool:
-	farcall WhirlpoolFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_Waterfall:
-	farcall WaterfallFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_Teleport:
-	farcall TeleportFunction
-	ld a, [wFieldMoveSucceeded]
-	and a
-	jr z, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_Surf:
-	farcall SurfFunction
-	ld a, [wFieldMoveSucceeded]
-	and a
-	jr z, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_Dig:
-	farcall DigFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_Softboiled_MilkDrink:
-	call .CheckMonHasEnoughHP
-	jr nc, .NotEnoughHP
-	farcall Softboiled_MilkDrinkFunction
-	jr .finish
-
-.NotEnoughHP:
-	ld hl, .PokemonNotEnoughHPText
-	call PrintText
-
-.finish
-	xor a
-	ld [wPartyMenuActionText], a
-	ld a, $3
-	ret
-
-.PokemonNotEnoughHPText:
-	text_far _PokemonNotEnoughHPText
-	text_end
-
-.CheckMonHasEnoughHP:
-; Need to have at least (MaxHP / 5) HP left.
-	ld a, MON_MAXHP
-	call GetPartyParamLocation
-	ld a, [hli]
-	ldh [hDividend + 0], a
-	ld a, [hl]
-	ldh [hDividend + 1], a
-	ld a, 5
-	ldh [hDivisor], a
-	ld b, 2
-	call Divide
-	ld a, MON_HP + 1
-	call GetPartyParamLocation
-	ldh a, [hQuotient + 3]
-	sub [hl]
-	dec hl
-	ldh a, [hQuotient + 2]
-	sbc [hl]
-	ret
-
-MonMenu_Headbutt:
-	farcall HeadbuttFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_RockSmash:
-	farcall RockSmashFunction
-	ld a, [wFieldMoveSucceeded]
-	cp $1
-	jr nz, .Fail
-	ld b, $4
-	ld a, $2
-	ret
-
-.Fail:
-	ld a, $3
-	ret
-
-MonMenu_SweetScent:
-	farcall SweetScentFromMenu
-	ld b, $4
-	ld a, $2
-	ret
-
-ChooseMoveToDelete:
-	ld hl, wOptions
-	ld a, [hl]
-	push af
-	set NO_TEXT_SCROLL, [hl]
-	call LoadFontsBattleExtra
-	call .ChooseMoveToDelete
-	pop bc
-	ld a, b
-	ld [wOptions], a
-	push af
-	call ClearBGPalettes
-	pop af
-	ret
-
-.ChooseMoveToDelete
-	call SetUpMoveScreenBG
-	ld de, DeleteMoveScreen2DMenuData
-	call Load2DMenuData
-	call SetUpMoveList
-	ld hl, w2DMenuFlags1
-	set _2DMENU_ENABLE_SPRITE_ANIMS_F, [hl]
-	jr .enter_loop
-
-.loop
-	call ScrollingMenuJoypad
-	bit B_PAD_B, a
-	jr nz, .b_button
-	bit B_PAD_A, a
-	jr nz, .a_button
-
-.enter_loop
-	call PrepareToPlaceMoveData
-	call PlaceMoveData
-	jr .loop
-
-.a_button
-	and a
-	jr .finish
-
-.b_button
-	scf
-
-.finish
-	push af
-	xor a
-	ld [wSwitchMon], a
-	ld hl, w2DMenuFlags1
-	res _2DMENU_ENABLE_SPRITE_ANIMS_F, [hl]
-	call ClearSprites
-	call ClearTilemap
-	pop af
-	ret
-
-DeleteMoveScreen2DMenuData:
-	db 3, 1 ; cursor start y, x
-	db 3, 1 ; rows, columns
-	db _2DMENU_ENABLE_SPRITE_ANIMS ; flags 1
-	db 0 ; flags 2
-	dn 2, 0 ; cursor offset
-	db PAD_UP | PAD_DOWN | PAD_A | PAD_B ; accepted buttons
-
-ManagePokemonMoves:
-	ld a, [wCurPartySpecies]
-	cp EGG
-	jr z, .egg
-	ld hl, wOptions
-	ld a, [hl]
-	push af
-	set NO_TEXT_SCROLL, [hl]
-	call MoveScreenLoop
-	pop af
-	ld [wOptions], a
-	call ClearBGPalettes
-
-.egg
-	xor a
-	ret
-
-MoveScreenLoop:
-	ld a, [wCurPartyMon]
-	inc a
-	ld [wPartyMenuCursor], a
-	call SetUpMoveScreenBG
-	call PlaceMoveScreenArrows
-	ld de, MoveScreen2DMenuData
-	call Load2DMenuData
-.loop
-	call SetUpMoveList
-	ld hl, w2DMenuFlags1
-	set _2DMENU_ENABLE_SPRITE_ANIMS_F, [hl]
-	jr .skip_joy
-
-.joy_loop
-	call ScrollingMenuJoypad
-	bit B_PAD_B, a
-	jr nz, .b_button
-	bit B_PAD_A, a
-	jmp nz, .a_button
-	bit B_PAD_RIGHT, a
-	jr nz, .d_right
-	bit B_PAD_LEFT, a
-	jr nz, .d_left
-
-.skip_joy
-	call PrepareToPlaceMoveData
-	ld a, [wSwappingMove]
-	and a
-	jr nz, .moving_move
-	call PlaceMoveData
-	jr .joy_loop
-
-.moving_move
-	ld a, ' '
-	hlcoord 1, 11
-	ld bc, 5
-	rst ByteFill
-	hlcoord 1, 12
-	lb bc, 5, SCREEN_WIDTH - 2
-	call ClearBox
-	hlcoord 1, 12
-	ld de, String_MoveWhere
-	rst PlaceString
-	jr .joy_loop
-.b_button
-	call PlayClickSFX
-	call WaitSFX
-	ld a, [wSwappingMove]
-	and a
-	jmp z, .exit
-
-	ld a, [wSwappingMove]
-	ld [wMenuCursorY], a
-	xor a
-	ld [wSwappingMove], a
-	hlcoord 1, 2
-	lb bc, 8, SCREEN_WIDTH - 2
-	call ClearBox
-	jr .loop
-
-.d_right
-	ld a, [wSwappingMove]
-	and a
-	jr nz, .joy_loop
-
-	ld a, [wCurPartyMon]
-	ld b, a
-	push bc
-	call .cycle_right
-	pop bc
-	ld a, [wCurPartyMon]
-	cp b
-	jr z, .joy_loop
-	jmp MoveScreenLoop
-
-.d_left
-	ld a, [wSwappingMove]
-	and a
-	jr nz, .joy_loop
-	ld a, [wCurPartyMon]
-	ld b, a
-	push bc
-	call .cycle_left
-	pop bc
-	ld a, [wCurPartyMon]
-	cp b
-	jmp z, .joy_loop
-	jmp MoveScreenLoop
-
-.cycle_right
-	ld a, [wCurPartyMon] ; no-optimize Inefficient WRAM increment/decrement (value is needed in a)
-	inc a
-	ld [wCurPartyMon], a
-	ld c, a
-	ld b, 0
-	ld hl, wPartySpecies
-	add hl, bc
-	ld a, [hl]
-	cp -1
-	jr z, .cycle_left
-	cp EGG
-	ret nz
-	jr .cycle_right
-
-.cycle_left
-	ld a, [wCurPartyMon]
-	and a
-	ret z
-.cycle_left_loop
-	ld a, [wCurPartyMon] ; no-optimize Inefficient WRAM increment/decrement (value is needed in a)
-	dec a
-	ld [wCurPartyMon], a
-	ld c, a
-	ld b, 0
-	ld hl, wPartySpecies
-	add hl, bc
-	ld a, [hl]
-	cp EGG
-	ret nz
-	ld a, [wCurPartyMon]
-	and a
-	jr z, .cycle_right
-	jr .cycle_left_loop
-
-.a_button
-	call PlayClickSFX
-	call WaitSFX
-	ld a, [wSwappingMove]
-	and a
-	jr nz, .place_move
-	ld a, [wMenuCursorY]
-	ld [wSwappingMove], a
-	call PlaceHollowCursor
-	jmp .moving_move
-
-.place_move
-	ld hl, wPartyMon1Moves
-	ld bc, PARTYMON_STRUCT_LENGTH
-	ld a, [wCurPartyMon]
-	rst AddNTimes
-	push hl
-	call .copy_move
+	call DisableSpriteUpdates
+	pop de
+	push de
+	ld b, NAME_MON
+	farcall NamingScreen
 	pop hl
-	ld bc, wPartyMon1PP - wPartyMon1Moves
-	add hl, bc
-	call .copy_move
-	ld a, [wBattleMode]
-	jr z, .swap_moves
-	ld hl, wBattleMonMoves
-	ld bc, wBattleMonStructEnd - wBattleMon
-	ld a, [wCurPartyMon]
-	rst AddNTimes
-	push hl
-	call .copy_move
-	pop hl
-	ld bc, wBattleMonPP - wBattleMonMoves
-	add hl, bc
-	call .copy_move
-
-.swap_moves
-	ld de, SFX_SWITCH_POKEMON
-	call PlaySFX
-	call WaitSFX
-	ld de, SFX_SWITCH_POKEMON
-	call PlaySFX
-	call WaitSFX
-	hlcoord 1, 2
-	lb bc, 8, 18
-	call ClearBox
-	hlcoord 10, 10
-	lb bc, 1, 9
-	call ClearBox
-	jmp .loop
-
-.copy_move
-	push hl
-	ld a, [wMenuCursorY]
-	dec a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld d, h
-	ld e, l
-	pop hl
-	ld a, [wSwappingMove]
-	dec a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [de]
-	ld b, [hl]
-	ld [hl], a
-	ld a, b
-	ld [de], a
-	ret
-
-.exit
-	xor a
-	ld [wSwappingMove], a
-	ld hl, w2DMenuFlags1
-	res _2DMENU_ENABLE_SPRITE_ANIMS_F, [hl]
-	call ClearSprites
-	jmp ClearTilemap
-
-MoveScreen2DMenuData:
-	db 3, 1 ; cursor start y, x
-	db 3, 1 ; rows, columns
-	db _2DMENU_ENABLE_SPRITE_ANIMS ; flags 1
-	db 0 ; flags 2
-	dn 2, 0 ; cursor offsets
-	db PAD_CTRL_PAD | PAD_A | PAD_B ; accepted buttons
-
-String_MoveWhere:
-	db "Where?@"
-
-SetUpMoveScreenBG:
-	call ClearBGPalettes
-	call ClearTilemap
-	call ClearSprites
-	xor a
-	ldh [hBGMapMode], a
-	farcall LoadStatsScreenPageTilesGFX
-	farcall ClearSpriteAnims2
-	ld a, [wCurPartyMon]
-	ld e, a
-	ld d, 0
-	ld hl, wPartySpecies
-	add hl, de
-	ld a, [hl]
-	ld [wTempIconSpecies], a
-	ld e, MONICON_MOVES
-	farcall LoadMenuMonIcon
-	hlcoord 0, 1
-	lb bc, 9, 18
-	call Textbox
-	hlcoord 0, 11
-	lb bc, 5, 18
-	call Textbox
-	hlcoord 2, 0
-	lb bc, 2, 3
-	call ClearBox
-	xor a
-	ld [wMonType], a
-	ld hl, wPartyMonNicknames
-	ld a, [wCurPartyMon]
-	call GetNickname
-	hlcoord 5, 1
-	rst PlaceString
-	push bc
-	farcall CopyMonToTempMon
-	pop hl
-	call PrintLevel
-	ld hl, wPlayerHPPal
-	call SetHPPal
-	ld b, SCGB_MOVE_LIST
-	call GetSGBLayout
-	hlcoord 16, 0
-	lb bc, 1, 3
-	jmp ClearBox
-
-SetUpMoveList:
-	xor a
-	ldh [hBGMapMode], a
-	ld [wSwappingMove], a
-	ld [wMonType], a
-	predef CopyMonToTempMon
-	ld hl, wTempMonMoves
-	ld de, wListMoves_MoveIndicesBuffer
-	ld bc, NUM_MOVES
-	rst CopyBytes
-	ld a, SCREEN_WIDTH * 2
-	ld [wListMovesLineSpacing], a
-	hlcoord 2, 3
-	predef ListMoves
-	hlcoord 10, 4
-	predef ListMovePP
-	call WaitBGMap
-	call SetDefaultBGPAndOBP
-	ld a, [wNumMoves]
-	inc a
-	ld [w2DMenuNumRows], a
-	hlcoord 0, 11
-	lb bc, 5, 18
-	jmp Textbox
-
-PrepareToPlaceMoveData:
-	ld hl, wPartyMon1Moves
-	ld bc, PARTYMON_STRUCT_LENGTH
-	ld a, [wCurPartyMon]
-	rst AddNTimes
-	ld a, [wMenuCursorY]
-	dec a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	ld [wCurSpecies], a
-	hlcoord 1, 12
-	lb bc, 5, 18
-	jmp ClearBox
-
-PlaceMoveData:
-	xor a
-	ldh [hBGMapMode], a
-	hlcoord 0, 10
-	ld de, String_MoveType_Top
-	rst PlaceString
-	hlcoord 0, 11
-	ld de, String_MoveType_Bottom
-	rst PlaceString
-	hlcoord 12, 12
-	ld de, String_MoveAtk
-	rst PlaceString
-	ld a, [wCurSpecies]
-	ld b, a
-	hlcoord 2, 12
-	predef PrintMoveType
-	ld a, [wCurSpecies]
-	ld l, a
-	ld a, MOVE_POWER
-	call GetMoveAttribute
-	hlcoord 16, 12
-	cp 2
-	jr c, .no_power
-	ld [wTextDecimalByte], a
-	ld de, wTextDecimalByte
-	lb bc, 1, 3
-	call PrintNum
-	jr .description
-
-.no_power
-	ld de, String_MoveNoPower
-	rst PlaceString
-
-.description
-	hlcoord 1, 14
-	predef PrintMoveDescription
-	ld a, $1
-	ldh [hBGMapMode], a
-	ret
-
-String_MoveType_Top:
-	db "┌─────┐@"
-String_MoveType_Bottom:
-	db "│TYPE/└@"
-String_MoveAtk:
-	db "ATK/@"
-String_MoveNoPower:
-	db "---@"
-
-PlaceMoveScreenArrows:
-	call PlaceMoveScreenLeftArrow
-	jr PlaceMoveScreenRightArrow
-
-PlaceMoveScreenLeftArrow:
-	ld a, [wCurPartyMon]
-	and a
-	ret z
-	ld c, a
-	ld e, a
-	ld d, 0
-	ld hl, wPartyCount
-	add hl, de
-.loop
-	ld a, [hl]
-	and a
-	jr z, .prev
-	cp MON_TABLE_ENTRIES + 1
-	jr c, .legal
-
-.prev
-	dec hl
-	dec c
-	jr nz, .loop
-	ret
-
-.legal
-	hlcoord 16, 0
-	ld [hl], '◀'
-	ret
-
-PlaceMoveScreenRightArrow:
-	ld a, [wCurPartyMon]
-	inc a
-	ld c, a
-	ld a, [wPartyCount]
-	cp c
-	ret z
-	ld e, c
-	ld d, 0
-	ld hl, wPartySpecies
-	add hl, de
-.loop
-	ld a, [hl]
-	cp -1
-	ret z
-	and a
-	jr z, .next
-	cp MON_TABLE_ENTRIES + 1
-	jr c, .legal
-
-.next
-	inc hl
-	jr .loop
-
-.legal
-	hlcoord 18, 0
-	ld [hl], '▶'
-	ret
+	ld de, wStringBuffer1
+	call InitName
+	ld a, $4 ; ExitAllMenus is in bank 0; maybe it used to be in bank 4
+	ld hl, ExitAllMenus
+	jmp FarCall_hl
