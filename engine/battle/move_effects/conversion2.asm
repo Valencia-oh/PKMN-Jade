@@ -16,7 +16,6 @@ BattleCommand_Conversion2:
 	ld l, a
 	ld a, MOVE_TYPE
 	call GetMoveAttribute
-	and TYPE_MASK
 	ld d, a
 	pop hl
 	cp CURSE_TYPE
@@ -44,7 +43,6 @@ BattleCommand_Conversion2:
 	ld a, d
 	ld [hl], a
 	call BattleCheckTypeMatchup
-	and TYPE_MASK
 	pop hl
 	pop af
 	ld [hl], a
