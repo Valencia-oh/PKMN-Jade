@@ -971,7 +971,7 @@ MoveScreenLoop:
 .moving_move
 	ld a, ' '
 	hlcoord 1, 11
-	ld bc, 8
+	ld bc, 5
 	rst ByteFill
 	hlcoord 1, 12
 	lb bc, 5, SCREEN_WIDTH - 2
