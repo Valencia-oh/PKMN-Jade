@@ -48,7 +48,7 @@ ItemDescriptions1:
 	dw SuperRepelDesc   ; 0025
 	dw MaxRepelDesc     ; 0026
 	dw DireHitDesc      ; 0027
-	dw QuestionMarkDesc ; 0028
+	dw DuskStoneDesc    ; 0028
 	dw FreshWaterDesc   ; 0029
 	dw SodaPopDesc      ; 002A
 	dw LemonadeDesc     ; 002B
@@ -880,5 +880,9 @@ TartAppleDesc:
 	next "Appleton.@"
 
 ShinyStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
+
+DuskStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
