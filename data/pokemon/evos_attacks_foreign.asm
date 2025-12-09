@@ -3,6 +3,7 @@ SECTION "Evolutions and Attacks 3", ROMX
 EvosAttacksPointers3::
 	dw WingullEvosAttacks
 	dw PelipperEvosAttacks
+	dw HonchkrowEvosAttacks
 	dw TogekissEvosAttacks
 	dw MamoswineEvosAttacks
 	dw ApplinEvosAttacks
