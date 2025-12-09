@@ -17,7 +17,7 @@ PrintMonTypes:
 	ld a, [wBaseType2]
 	cp b
 	pop hl
-	jr z, .hide_type_2
+	ret z
 
 	ld bc, SCREEN_WIDTH
 	add hl, bc
@@ -26,30 +26,13 @@ PrintMonTypes:
 	ld b, a
 	jr PrintType
 
-.hide_type_2
-	; Erase any type name that was here before.
-	; Seems to be pointless in localized versions.
-	ld a, ' '
-	ld bc, SCREEN_WIDTH - 3
-	add hl, bc
-	ld [hl], a
-	inc bc
-	add hl, bc
-	ld bc, NAME_LENGTH_JAPANESE - 1
-	jp ByteFill
-
 PrintMoveType:
 ; Print the type of move b at hl.
 
 	push hl
 	ld a, b
-	dec a
-	ld bc, MOVE_LENGTH
-	ld hl, Moves
-	call AddNTimes
 	ld de, wStringBuffer1
-	ld a, BANK(Moves)
-	call FarCopyBytes
+	call GetMoveData
 	ld a, [wStringBuffer1 + MOVE_TYPE]
 	pop hl
 
@@ -67,11 +50,11 @@ PrintType:
 	ld d, 0
 	add hl, de
 	ld a, [hli]
-	ld e, a
 	ld d, [hl]
+	ld e, a
 	pop hl
 
-	jp PlaceString
+	jmp PlaceString
 
 GetTypeName:
 ; Copy the name of type [wNamedObjectIndex] to wStringBuffer1.
@@ -87,6 +70,6 @@ GetTypeName:
 	ld l, a
 	ld de, wStringBuffer1
 	ld bc, MOVE_NAME_LENGTH
-	jp CopyBytes
+	jmp CopyBytes
 
 INCLUDE "data/types/names.asm"
