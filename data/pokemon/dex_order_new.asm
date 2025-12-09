@@ -212,6 +212,7 @@ NewPokedexOrder:
 	dw RHYHORN
 	dw RHYDON
 	dw MURKROW
+	dw HONCHKROW
 	dw HOUNDOUR
 	dw HOUNDOOM
 	dw SLUGMA
