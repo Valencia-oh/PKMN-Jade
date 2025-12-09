@@ -1299,7 +1299,6 @@ BattleCommand_Stab:
 .go
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
-	and TYPE_MASK
 	ld [wCurType], a
 
 	push hl
