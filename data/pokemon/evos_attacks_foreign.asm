@@ -36,6 +36,18 @@ PelipperEvosAttacks:
 	dbw 33, TAKE_DOWN
 	db 0 ; no more level-up moves
 
+HonchkrowEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, PURSUIT
+	dbw 1, HAZE
+	dbw 26, NIGHT_SHADE
+	dbw 28, THIEF
+	dbw 31, FAINT_ATTACK
+	dbw 36, AEROBLAST
+	dbw 41, MEAN_LOOK
+	db 0 ; no more level-up moves
+
 TogekissEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, GROWL
