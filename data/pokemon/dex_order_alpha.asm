@@ -90,6 +90,7 @@ AlphabeticalPokedexOrder:
 	dw HITMONCHAN
 	dw HITMONLEE
 	dw HITMONTOP
+	dw HONCHKROW
 	dw HO_OH
 	dw HOOTHOOT
 	dw HOPPIP
