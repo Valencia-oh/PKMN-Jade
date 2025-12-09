@@ -295,4 +295,5 @@ INCLUDE "data/pokemon/base_stats/applin.asm"
 INCLUDE "data/pokemon/base_stats/appletun.asm"
 INCLUDE "data/pokemon/base_stats/flapple.asm"
 INCLUDE "data/pokemon/base_stats/falinks.asm"
+INCLUDE "data/pokemon/base_stats/ersrheadbby.asm"
 .IndirectEnd::
