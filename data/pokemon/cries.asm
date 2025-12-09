@@ -266,4 +266,5 @@ PokemonCries::
 	mon_cry CRY_MAGCARGO,   -265,  256 ; MAMOSWINE
 	mon_cry CRY_TOGETIC,      70,   80 ; TOGEKISS
 	mon_cry CRY_MARILL,      -64,  394 ; HONCHKROW
+	mon_cry CRY_TOGEPI,      256,  256 ; ERSRHEADBBY
 	assert_table_length NUM_POKEMON
