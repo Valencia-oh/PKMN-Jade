@@ -262,4 +262,5 @@ NewPokedexOrder:
 	dw APPLETUN
 	dw FLAPPLE
 	dw FALINKS
+	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
