@@ -1237,13 +1237,13 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, FLAPPLE
-	dbw 2, WINGULL
-	dbw 3, PELIPPER
-	dbw 3, MAMOSWINE
-	dbw 2, TOGEKISS
-	dbw 3, APPLETUN
-	dbw 3, FALINKS
+	dbw 2, HONCHKROW
+	dbw 2, HONCHKROW
+	dbw 3, HONCHKROW
+	dbw 3, HONCHKROW
+	dbw 2, HONCHKROW
+	dbw 3, HONCHKROW
+	dbw 3, HONCHKROW
 	; day
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
