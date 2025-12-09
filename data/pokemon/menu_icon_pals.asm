@@ -270,4 +270,5 @@ MonMenuIconPals:
 	icon_pals RED,    GREEN  ; APPLETUN
 	icon_pals RED,    GREEN  ; FLAPPLE
 	icon_pals RED,    BROWN  ; FALINKS
+	icon_pals GRAY,    BROWN  ; ERSRHEADBBY
 	assert_table_length NUM_POKEMON
