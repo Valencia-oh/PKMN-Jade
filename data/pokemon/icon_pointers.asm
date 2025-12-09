@@ -265,4 +265,5 @@ IconPointers:
 	dw AppletunIcon
 	dw FlappleIcon
 	dw FalinksIcon
+	dw ErsrheadbbyIcon
 	assert_table_length NUM_POKEMON + 1
