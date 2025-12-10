@@ -256,6 +256,8 @@ BitmasksPointers:
 	dw HonchkrowBitmasks
 	dw TogekissBitmasks
 	dw MamoswineBitmasks
+	dw LarvestaBitmasks
+	dw VolcaronaBitmasks
 	dw ApplinBitmasks
 	dw AppletunBitmasks
 	dw FlappleBitmasks
