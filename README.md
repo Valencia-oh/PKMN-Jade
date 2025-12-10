@@ -5,7 +5,7 @@ Jade is very rough romhack based off the CSE engine for Pokecrystal.
 ## Implemented Features
 - ***ERASERHEAD BABY!!*** really just a joke mon, but I wanted to release a version with it usable
 - Removed Trade+Item Evos, now just use the item
-- 10 new real pokemon, bringing the total to 260 (Applin, Wingull, and Falinks lines + Mamoswine, Honchkrow and Togekiss)
+- 12 new real pokemon, bringing the total to 263 (Applin, Wingull, Volcarona, and Falinks lines + Mamoswine, Honchkrow and Togekiss)
 - HMs done through party not attacks (done through CSE)
 - overhauled PC (done through CSE)
 - Fairy Type
@@ -19,5 +19,6 @@ Jade is very rough romhack based off the CSE engine for Pokecrystal.
   - Link Cable
 ### Credits 
 - The majority of systems would not work without the use of the CSE engine, so shout out to all the devs on there
-- Falinks and the Applin line Sprites are from Sage Deoxys
+- Falinks, Volcarona, and Applin line Sprites are from Sage Deoxys
 - nuukiie made the Togekiss, Mamoswine, Honchkrow and Wingull lines
+- Pokecrystal devs for makeing the code so easy to use and providing numerous incredibly helpful tutorials
