@@ -89,6 +89,9 @@ NewPokedexOrder:
 	dw GLOOM
 	dw VILEPLUME
 	dw BELLOSSOM
+	dw APPLIN
+	dw APPLETUN
+	dw FLAPPLE
 	dw DROWZEE
 	dw HYPNO
 	dw ABRA
@@ -258,10 +261,8 @@ NewPokedexOrder:
 	dw CELEBI
 	dw WINGULL
 	dw PELIPPER
+	dw LARVESTA
 	dw VOLCARONA
-	dw APPLIN
-	dw APPLETUN
-	dw FLAPPLE
 	dw FALINKS
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
