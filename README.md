@@ -1,6 +1,6 @@
 # Pokemon Jade
 
-Jade is very rough romhack based off the CSE engine for Pokecrystal.
+Jade is in development romhack based off the CSE engine for Pokecrystal.
 
 ## Implemented Features
 - ***ERASERHEAD BABY!!*** really just a joke mon, but I wanted to release a version with it usable
