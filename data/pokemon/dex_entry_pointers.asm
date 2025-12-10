@@ -257,6 +257,7 @@ PokedexDataPointerTable:
 	dba HonchkrowPokedexEntry
 	dba TogekissPokedexEntry
 	dba MamoswinePokedexEntry
+	dba VolcaronaPokedexEntry
 	dba ApplinPokedexEntry
 	dba AppletunPokedexEntry
 	dba FlapplePokedexEntry
