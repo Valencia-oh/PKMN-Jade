@@ -249,6 +249,7 @@ AlphabeticalPokedexOrder:
 	dw VENUSAUR
 	dw VICTREEBEL
 	dw VILEPLUME
+	dw VOLCARONA
 	dw VOLTORB
 	dw VULPIX
 	dw WARTORTLE
