@@ -116,6 +116,7 @@ AlphabeticalPokedexOrder:
 	dw KRABBY
 	dw LANTURN
 	dw LAPRAS
+	dw LARVESTA
 	dw LARVITAR
 	dw LEDIAN
 	dw LEDYBA
