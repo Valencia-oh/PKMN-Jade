@@ -279,11 +279,12 @@ DEF FOREIGN_POKEMON EQU const_value
 	const HONCHKROW  ; fe
 	const TOGEKISS   ; ff
 	const MAMOSWINE  ; 100
-	const APPLIN     ; 101
-	const APPLETUN   ; 102
-	const FLAPPLE    ; 103
-	const FALINKS    ; 104
-	const ERSRHEADBBY; 105
+	const VOLCARONA  ; 101
+	const APPLIN     ; 102
+	const APPLETUN   ; 103
+	const FLAPPLE    ; 104
+	const FALINKS    ; 105
+	const ERSRHEADBBY; 106
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
