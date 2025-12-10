@@ -14,7 +14,7 @@ Jade is in development romhack based off the CSE engine for Pokecrystal.
 
 - New Region
 - **350 pokemon** There will eventually be around 350 pokemon (all gens 1+2) and ~100 selected from later generations thanks to the Extended 16-bit Indexes featured in CSE
-  - sprites downloaded but are not yet implemented - Shroomish, Breloom, Paldean Wooper, Clodsire, Pikipek, Trumbeak, Toucannon 
+  - sprites downloaded but are not yet implemented - Shroomish, Breloom, Paldean Wooper, Clodsire, Pikipek, Trumbeak, Toucannon, Flittle, Espathra 
   - Need to get sprites for Dripplin and Hyrdapple
   - Requested Mons: Malamar, Joltik, sigilyph, Lurantis (and all evos and pre-evos thereof)
   - Future Evos still not added: Leafeon, Glaceon, Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile, Ursaluna, Wyrdeer
