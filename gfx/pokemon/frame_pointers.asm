@@ -256,6 +256,8 @@ FramesPointers:
 	dba HonchkrowFrames
 	dba TogekissFrames
 	dba MamoswineFrames
+	dba LarvestaFrames
+	dba VolcaronaFrames
 	dba ApplinFrames
 	dba AppletunFrames
 	dba FlappleFrames
