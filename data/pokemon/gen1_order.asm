@@ -262,5 +262,6 @@ Pokered_MonIndices:
 	db APPLETUN
 	db FLAPPLE
 	db FALINKS
+	db VOLCARONA
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
