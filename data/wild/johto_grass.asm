@@ -1237,12 +1237,12 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, VOLCARONA
+	dbw 2, LARVESTA
 	dbw 2, LARVESTA
 	dbw 3, VOLCARONA
 	dbw 3, LARVESTA
-	dbw 2, ERSRHEADBBY
-	dbw 3, ERSRHEADBBY
+	dbw 2, LARVESTA
+	dbw 3, VOLCARONA
 	dbw 3, ERSRHEADBBY
 	; day
 	dbw 2, PIDGEY
