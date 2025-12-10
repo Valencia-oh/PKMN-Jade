@@ -528,6 +528,8 @@ PokemonPicPointers::
 	dba TogekissBackpic
 	dba MamoswineFrontpic
 	dba MamoswineBackpic
+	dba LarvestaFrontpic
+	dba LarvestaBackpic
 	dba VolcaronaFrontpic
 	dba VolcaronaBackpic
 	dba ApplinFrontpic
