@@ -80,6 +80,22 @@ MamoswineEvosAttacks:
 	dbw 70, AMNESIA
 	db 0 ; no more level-up moves
 
+VolcaronaEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, EMBER
+	dbw 1, LEER
+	dbw 1, SMOG
+	dbw 1, FIRE_PUNCH
+	dbw 7, LEER
+	dbw 13, SMOG
+	dbw 19, FIRE_PUNCH
+	dbw 25, SMOKESCREEN
+	dbw 33, SUNNY_DAY
+	dbw 41, FLAMETHROWER
+	dbw 49, CONFUSE_RAY
+	dbw 57, FIRE_BLAST
+db 0 ; no more level-up moves
+
 ApplinEvosAttacks:
 	dbww EVOLVE_ITEM, SWEET_APPLE, APPLETUN
 	dbww EVOLVE_ITEM, TART_APPLE, FLAPPLE
