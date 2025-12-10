@@ -260,6 +260,7 @@ PokemonNames::
 	dname "HONCHKROW"
 	dname "TOGEKISS"
 	dname "MAMOSWINE"
+	dname "LARVESTA"
 	dname "VOLCARONA"
 	dname "APPLIN"
 	dname "APPLETUN"
