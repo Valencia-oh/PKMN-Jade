@@ -256,6 +256,8 @@ AnimationIdlePointers:
 	dw HonchkrowAnimationIdle
 	dw TogekissAnimationIdle
 	dw MamoswineAnimationIdle
+	dw LarvestaAnimationIdle
+	dw VolcaronaAnimationIdle
 	dw ApplinAnimationIdle
 	dw AppletunAnimationIdle
 	dw FlappleAnimationIdle
