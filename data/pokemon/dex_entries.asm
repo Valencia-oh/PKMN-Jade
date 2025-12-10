@@ -270,6 +270,7 @@ TogekissPokedexEntry::   INCLUDE "data/pokemon/dex_entries/togekiss.asm"
 
 SECTION "Pokedex Entries 257-320", ROMX
 MamoswinePokedexEntry::  INCLUDE "data/pokemon/dex_entries/mamoswine.asm"
+VolcaronaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/volcarona.asm"
 ApplinPokedexEntry::     INCLUDE "data/pokemon/dex_entries/applin.asm"
 AppletunPokedexEntry::   INCLUDE "data/pokemon/dex_entries/appletun.asm"
 FlapplePokedexEntry::    INCLUDE "data/pokemon/dex_entries/flapple.asm"
