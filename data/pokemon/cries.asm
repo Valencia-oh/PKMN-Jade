@@ -264,6 +264,7 @@ PokemonCries::
 	mon_cry CRY_PIDGEOTTO,    48,   22 ; WINGULL
 	mon_cry CRY_PIDGEOTTO,    93,   35 ; PELIPPER
 	mon_cry CRY_MAGCARGO,   -265,  256 ; MAMOSWINE
+	mon_cry CRY_METAPOD,      90,  256 ; LARVESTA
 	mon_cry CRY_BLASTOISE,   245,  179 ; VOLCARONA
 	mon_cry CRY_TOGETIC,      70,   80 ; TOGEKISS
 	mon_cry CRY_MARILL,      -64,  394 ; HONCHKROW
