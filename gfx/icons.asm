@@ -260,13 +260,14 @@ SECTION "Mon Icons 3", ROMX
 
 WingullIcon::    INCBIN "gfx/icons/skarmory.2bpp"
 PelipperIcon::   INCBIN "gfx/icons/skarmory.2bpp"
-HonchkrowIcon::   INCBIN "gfx/icons/honchkrow.2bpp"
+HonchkrowIcon::  INCBIN "gfx/icons/honchkrow.2bpp"
 TogekissIcon::   INCBIN "gfx/icons/togekiss.2bpp"
 MamoswineIcon::  INCBIN "gfx/icons/mamoswine.2bpp"
+VolcaronaIcon::  INCBIN "gfx/icons/volcarona.2bpp"
 ApplinIcon::     INCBIN "gfx/icons/swinub.2bpp"
 AppletunIcon::   INCBIN "gfx/icons/piloswine.2bpp"
 FlappleIcon::    INCBIN "gfx/icons/flapple.2bpp"
 FalinksIcon::    INCBIN "gfx/icons/falinks.2bpp"
-ErsrheadbbyIcon:: INCBIN "gfx/icons/ersrheadbby.2bpp"
+ErsrheadbbyIcon::INCBIN "gfx/icons/ersrheadbby.2bpp"
 EggIcon::        INCBIN "gfx/icons/egg.2bpp"
 
