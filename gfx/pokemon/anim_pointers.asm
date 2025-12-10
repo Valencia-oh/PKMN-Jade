@@ -256,6 +256,8 @@ AnimationPointers:
 	dw HonchkrowAnimation
 	dw TogekissAnimation
 	dw MamoswineAnimation
+	dw LarvestaAnimation
+	dw VolcaronaAnimation
 	dw ApplinAnimation
 	dw AppletunAnimation
 	dw FlappleAnimation
