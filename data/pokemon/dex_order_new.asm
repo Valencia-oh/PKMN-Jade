@@ -258,6 +258,7 @@ NewPokedexOrder:
 	dw CELEBI
 	dw WINGULL
 	dw PELIPPER
+	dw VOLCARONA
 	dw APPLIN
 	dw APPLETUN
 	dw FLAPPLE
