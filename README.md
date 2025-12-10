@@ -25,4 +25,4 @@ Jade is in development romhack based off the CSE engine for Pokecrystal.
 - The majority of systems would not work without the use of the CSE engine, so shout out to all the devs on there
 - Falinks, Volcarona, and Applin line Sprites are from Sage Deoxys
 - nuukiie made the Togekiss, Mamoswine, Honchkrow and Wingull lines
-- Pokecrystal devs for makeing the code so easy to use and providing numerous incredibly helpful tutorials
+- Pokecrystal devs for making the code so easy to use and providing numerous incredibly helpful tutorials
