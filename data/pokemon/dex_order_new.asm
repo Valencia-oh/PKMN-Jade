@@ -261,6 +261,8 @@ NewPokedexOrder:
 	dw CELEBI
 	dw WINGULL
 	dw PELIPPER
+	dw ELECTRIKE
+	dw MANECTRIC
 	dw JOLTIK
 	dw GALVANTULA
 	dw LARVESTA
