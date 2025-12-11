@@ -737,8 +737,12 @@ FlappleFrontpic:     INCBIN "gfx/pokemon/flapple/front.animated.2bpp.lz"
 FlappleBackpic:      INCBIN "gfx/pokemon/flapple/back.2bpp.lz"
 FalinksFrontpic:     INCBIN "gfx/pokemon/falinks/front.animated.2bpp.lz"
 FalinksBackpic:      INCBIN "gfx/pokemon/falinks/back.2bpp.lz"
+MaschiffFrontpic:    INCBIN "gfx/pokemon/maschiff/front.animated.2bpp.lz"
+MaschiffBackpic:     INCBIN "gfx/pokemon/maschiff/back.2bpp.lz"
+MabosstiffFrontpic:  INCBIN "gfx/pokemon/mabosstiff/front.animated.2bpp.lz"
+MabosstiffBackpic:   INCBIN "gfx/pokemon/mabosstiff/back.2bpp.lz"
 ErsrheadbbyFrontpic: INCBIN "gfx/pokemon/ersrheadbby/front.animated.2bpp.lz"
-ErsrheadbbyBackpic: INCBIN "gfx/pokemon/ersrheadbby/back.2bpp.lz"
+ErsrheadbbyBackpic:  INCBIN "gfx/pokemon/ersrheadbby/back.2bpp.lz"
 
 SECTION "Pics 20", ROMX
 
