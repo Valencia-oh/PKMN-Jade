@@ -266,5 +266,7 @@ Pokered_MonIndices:
 	db GALVANTULA
 	db VOLCARONA
 	db LARVESTA
+	db MASCHIFF
+	db MABOSSTIFF
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
