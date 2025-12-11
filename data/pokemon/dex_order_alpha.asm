@@ -124,6 +124,7 @@ AlphabeticalPokedexOrder:
 	dw LEDYBA
 	dw LICKITUNG
 	dw LUGIA
+	dw MABOSSTIFF
 	dw MACHAMP
 	dw MACHOKE
 	dw MACHOP
@@ -139,6 +140,7 @@ AlphabeticalPokedexOrder:
 	dw MAREEP
 	dw MARILL
 	dw MAROWAK
+	dw MASCHIFF
 	dw MEGANIUM
 	dw MEOWTH
 	dw METAPOD
