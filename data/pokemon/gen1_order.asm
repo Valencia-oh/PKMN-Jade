@@ -268,5 +268,7 @@ Pokered_MonIndices:
 	db LARVESTA
 	db MASCHIFF
 	db MABOSSTIFF
+	db ELECTRIKE
+	db MANECTRIC
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
