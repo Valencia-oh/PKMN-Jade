@@ -254,6 +254,8 @@ PokedexDataPointerTable:
 	dba CelebiPokedexEntry
 	dba WingullPokedexEntry
 	dba PelipperPokedexEntry
+	dba ElectrikePokedexEntry
+	dba ManectricPokedexEntry
 	dba HonchkrowPokedexEntry
 	dba TogekissPokedexEntry
 	dba MamoswinePokedexEntry
