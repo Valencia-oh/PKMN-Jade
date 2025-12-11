@@ -1,6 +1,6 @@
 # Pokemon Labradorite
 
-Jade is in development romhack based off the CSE engine for Pokecrystal.
+Labradorite is in development romhack based off the CSE engine for Pokecrystal with the goal of creating a johto with greateer pokemon variety through adding many pokemon from future generations to the game.
 
 ## Implemented Features
 - ***ERASERHEAD BABY!!*** really just a joke mon, but I wanted to release a version with it usable
