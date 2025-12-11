@@ -263,13 +263,15 @@ TyranitarPokedexEntry::  INCLUDE "data/pokemon/dex_entries/tyranitar.asm"
 LugiaPokedexEntry::      INCLUDE "data/pokemon/dex_entries/lugia.asm"
 HoOhPokedexEntry::       INCLUDE "data/pokemon/dex_entries/ho_oh.asm"
 CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
+PoochyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/poochyena.asm"
+MightyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mightyena.asm"
 WingullPokedexEntry::    INCLUDE "data/pokemon/dex_entries/wingull.asm"
 PelipperPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pelipper.asm"
-ElectrikePokedexEntry::  INCLUDE "data/pokemon/dex_entries/electrike.asm"
-ManectricPokedexEntry::  INCLUDE "data/pokemon/dex_entries/manectric.asm"
 
 SECTION "Pokedex Entries 257-320", ROMX
 
+ElectrikePokedexEntry::  INCLUDE "data/pokemon/dex_entries/electrike.asm"
+ManectricPokedexEntry::  INCLUDE "data/pokemon/dex_entries/manectric.asm"
 HonchkrowPokedexEntry::  INCLUDE "data/pokemon/dex_entries/honchkrow.asm"
 TogekissPokedexEntry::   INCLUDE "data/pokemon/dex_entries/togekiss.asm"
 MamoswinePokedexEntry::  INCLUDE "data/pokemon/dex_entries/mamoswine.asm"
