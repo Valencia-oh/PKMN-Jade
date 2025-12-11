@@ -251,6 +251,8 @@ FramesPointers:
 	dba LugiaFrames
 	dba HoOhFrames
 	dba CelebiFrames
+	dba PoochyenaFrames
+	dba MightyenaFrames
 	dba WingullFrames
 	dba PelipperFrames
 	dba ElectrikeFrames
