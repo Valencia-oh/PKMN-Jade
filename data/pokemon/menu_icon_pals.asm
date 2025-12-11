@@ -261,6 +261,8 @@ MonMenuIconPals:
 	icon_pals BLUE,   TEAL   ; LUGIA
 	icon_pals RED,    BROWN  ; HO_OH
 	icon_pals GREEN,  PINK   ; CELEBI
+	icon_pals GRAY,   BROWN  ; POOCHYENA
+	icon_pals GRAY,   BROWN  ; MIGHTYENA
 	icon_pals BLUE,   GREEN  ; WINGULL
 	icon_pals BLUE,   GREEN  ; PELIPPER
 	icon_pals GREEN,  BLUE   ; ELECTRIKE
