@@ -259,6 +259,8 @@ NewPokedexOrder:
 	dw MEWTWO
 	dw MEW
 	dw CELEBI
+	dw POOCHYENA
+	dw MIGHTYENA
 	dw WINGULL
 	dw PELIPPER
 	dw ELECTRIKE
