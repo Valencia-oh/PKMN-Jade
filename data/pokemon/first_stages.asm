@@ -265,5 +265,7 @@ FirstEvoStages::
 	dw APPLIN
 	dw APPLIN
 	dw FALINKS
+	dw MASCHIFF
+	dw MASCHIFF
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
