@@ -256,6 +256,8 @@ AnimationPointers:
 	dw HonchkrowAnimation
 	dw TogekissAnimation
 	dw MamoswineAnimation
+	dw JoltikAnimation
+	dw GalvantulaAnimation
 	dw LarvestaAnimation
 	dw VolcaronaAnimation
 	dw ApplinAnimation
