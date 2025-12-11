@@ -626,7 +626,7 @@ JohtoGrassWildMons:
 	dbw 15, MACHOP
 	dbw 14, RATICATE
 	dbw 15, ZUBAT
-	dbw 15, GOLBAT
+	dbw 15, LARVESTA
 	dbw 15, GOLBAT
 	; day
 	dbw 13, GEODUDE
@@ -634,7 +634,7 @@ JohtoGrassWildMons:
 	dbw 15, MACHOP
 	dbw 14, RATICATE
 	dbw 15, ZUBAT
-	dbw 15, GOLBAT
+	dbw 15, LARVESTA
 	dbw 15, GOLBAT
 	; nite
 	dbw 13, GEODUDE
@@ -642,7 +642,7 @@ JohtoGrassWildMons:
 	dbw 15, RATICATE
 	dbw 14, ZUBAT
 	dbw 15, MARILL
-	dbw 15, GOLBAT
+	dbw 15, LARVESTA
 	dbw 15, GOLBAT
 	end_grass_wildmons
 
@@ -654,7 +654,7 @@ JohtoGrassWildMons:
 	dbw 31, GEODUDE
 	dbw 30, RATICATE
 	dbw 28, MACHOP
-	dbw 30, GOLBAT
+	dbw 30, LARVESTA
 	dbw 30, GOLBAT
 	; day
 	dbw 31, GRAVELER
@@ -662,7 +662,7 @@ JohtoGrassWildMons:
 	dbw 31, GEODUDE
 	dbw 30, RATICATE
 	dbw 28, MACHOP
-	dbw 30, GOLBAT
+	dbw 30, LARVESTA
 	dbw 30, GOLBAT
 	; nite
 	dbw 31, GRAVELER
@@ -670,7 +670,7 @@ JohtoGrassWildMons:
 	dbw 30, RATICATE
 	dbw 30, GOLBAT
 	dbw 28, MARILL
-	dbw 32, GOLBAT
+	dbw 32, LARVESTA
 	dbw 32, GOLBAT
 	end_grass_wildmons
 
@@ -678,7 +678,7 @@ JohtoGrassWildMons:
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 15, ZUBAT
-	dbw 17, ZUBAT
+	dbw 17, LARVESTA
 	dbw 17, GOLBAT
 	dbw 16, MACHOP
 	dbw 16, GEODUDE
@@ -686,7 +686,7 @@ JohtoGrassWildMons:
 	dbw 18, RATICATE
 	; day
 	dbw 15, ZUBAT
-	dbw 17, ZUBAT
+	dbw 17, LARVESTA
 	dbw 17, GOLBAT
 	dbw 16, MACHOP
 	dbw 16, GEODUDE
@@ -694,7 +694,7 @@ JohtoGrassWildMons:
 	dbw 18, RATICATE
 	; nite
 	dbw 15, ZUBAT
-	dbw 17, ZUBAT
+	dbw 17, LARVESTA
 	dbw 17, GOLBAT
 	dbw 16, MARILL
 	dbw 16, GEODUDE
