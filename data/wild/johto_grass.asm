@@ -1237,10 +1237,10 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, MASCHIFF
-	dbw 2, MASCHIFF
-	dbw 3, MASCHIFF
-	dbw 3, MABOSSTIFF
+	dbw 2, MANECTRIC
+	dbw 2, ELECTRIKE
+	dbw 3, MANECTRIC
+	dbw 3, ELECTRIKE
 	dbw 2, MABOSSTIFF
 	dbw 3, MABOSSTIFF
 	dbw 3, MABOSSTIFF
