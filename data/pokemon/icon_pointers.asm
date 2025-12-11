@@ -261,6 +261,8 @@ IconPointers:
 	dw HonchkrowIcon
 	dw TogekissIcon
 	dw MamoswineIcon
+	dw JoltikIcon
+	dw GalvantulaIcon
 	dw LarvestaIcon
 	dw VolcaronaIcon
 	dw ApplinIcon
