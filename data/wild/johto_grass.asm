@@ -8,18 +8,18 @@ JohtoGrassWildMons:
 	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
-	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 3, BELLSPROUT
+	dbw 6, ODDISH
+	dbw 5, BELLSPROUT
+	dbw 5, ODDISH
 	; day
 	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
-	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 3, BELLSPROUT
+	dbw 6, ODDISH
+	dbw 5, BELLSPROUT
+	dbw 5, ODDISH
 	; nite
 	dbw 3, GASTLY
 	dbw 4, GASTLY
@@ -36,18 +36,18 @@ JohtoGrassWildMons:
 	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
-	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 3, BELLSPROUT
+	dbw 6, ODDISH
+	dbw 5, BELLSPROUT
+	dbw 5, ODDISH
 	; day
 	dbw 3, RATTATA
 	dbw 4, RATTATA
 	dbw 5, RATTATA
-	dbw 3, RATTATA
-	dbw 6, RATTATA
-	dbw 5, RATTATA
-	dbw 5, RATTATA
+	dbw 3, BELLSPROUT
+	dbw 6, ODDISH
+	dbw 5, BELLSPROUT
+	dbw 5, ODDISH
 	; nite
 	dbw 3, GASTLY
 	dbw 4, GASTLY
@@ -1184,26 +1184,26 @@ JohtoGrassWildMons:
 	dbw 3, GEODUDE
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
-	dbw 4, GEODUDE
+	dbw 4, DUNSPARCE
 	dbw 2, TEDDIURSA
 	dbw 4, ZUBAT
-	dbw 4, DUNSPARCE
+	dbw 4, LARVITAR
 	; day
 	dbw 3, GEODUDE
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
-	dbw 4, GEODUDE
+	dbw 4, DUNSPARCE
 	dbw 2, ZUBAT
 	dbw 4, ZUBAT
-	dbw 4, DUNSPARCE
+	dbw 4, LARVITAR
 	; nite
 	dbw 3, GEODUDE
 	dbw 2, ZUBAT
 	dbw 2, GEODUDE
-	dbw 4, GEODUDE
+	dbw 4, DUNSPARCE
 	dbw 2, ZUBAT
 	dbw 4, ZUBAT
-	dbw 4, DUNSPARCE
+	dbw 4, LARVITAR
 	end_grass_wildmons
 
 	def_grass_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
@@ -1214,7 +1214,7 @@ JohtoGrassWildMons:
 	dbw 25, GRAVELER
 	dbw 25, URSARING
 	dbw 20, TEDDIURSA
-	dbw 23, GOLBAT
+	dbw 23, LARVITAR
 	dbw 23, GOLBAT
 	; day
 	dbw 23, GEODUDE
@@ -1222,7 +1222,7 @@ JohtoGrassWildMons:
 	dbw 25, GRAVELER
 	dbw 25, URSARING
 	dbw 30, URSARING
-	dbw 23, GOLBAT
+	dbw 23, LARVITAR
 	dbw 23, GOLBAT
 	; nite
 	dbw 23, GEODUDE
@@ -1230,7 +1230,7 @@ JohtoGrassWildMons:
 	dbw 25, GRAVELER
 	dbw 20, WOBBUFFET
 	dbw 25, WOBBUFFET
-	dbw 23, GOLBAT
+	dbw 23, LARVITAR
 	dbw 23, GOLBAT
 	end_grass_wildmons
 
