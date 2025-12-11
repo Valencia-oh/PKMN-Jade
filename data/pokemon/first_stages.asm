@@ -257,6 +257,8 @@ FirstEvoStages::
 	dw MURKROW
 	dw TOGEPI
 	dw SWINUB
+	dw JOLTIK
+	dw JOLTIK
 	dw LARVESTA
 	dw LARVESTA
 	dw APPLIN	  ;ff
