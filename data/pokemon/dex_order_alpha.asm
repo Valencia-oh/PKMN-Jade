@@ -55,6 +55,7 @@ AlphabeticalPokedexOrder:
 	dw EEVEE
 	dw EKANS
 	dw ELECTABUZZ
+	dw ELECTRIKE
 	dw ELECTRODE
 	dw ELEKID
 	dw ENTEI
@@ -132,6 +133,7 @@ AlphabeticalPokedexOrder:
 	dw MAGCARGO
 	dw MAGIKARP
 	dw MAGMAR
+	dw MANECTRIC
 	dw MAGNEMITE
 	dw MAGNETON
 	dw MAMOSWINE
