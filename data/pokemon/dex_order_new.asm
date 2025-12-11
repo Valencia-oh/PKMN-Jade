@@ -266,5 +266,7 @@ NewPokedexOrder:
 	dw LARVESTA
 	dw VOLCARONA
 	dw FALINKS
+	dw MASCHIFF
+	dw MABOSSTIFF
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
