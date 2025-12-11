@@ -1505,13 +1505,13 @@ JohtoGrassWildMons:
 	dbw 13, MILTANK
 	dbw 13, MILTANK
 	; nite
-	dbw 16, GHASTLY
+	dbw 16, GASTLY
 	dbw 16, MISDREAVUS
 	dbw 16, MAGNEMITE
 	dbw 16, NOCTOWL
 	dbw 16, MEOWTH
 	dbw 16, MURKROW
-	dbw 16, ERSRHEDBBY
+	dbw 16, ERSRHEADBBY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_39
