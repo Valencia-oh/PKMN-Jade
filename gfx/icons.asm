@@ -258,6 +258,8 @@ CelebiIcon::     INCBIN "gfx/icons/celebi.2bpp"
 
 SECTION "Mon Icons 3", ROMX
 
+ElectrikeIcon::  INCBIN "gfx/icons/houndour.2bpp"
+ManectricIcon::  INCBIN "gfx/icons/houndoom.2bpp"
 WingullIcon::    INCBIN "gfx/icons/skarmory.2bpp"
 PelipperIcon::   INCBIN "gfx/icons/skarmory.2bpp"
 HonchkrowIcon::  INCBIN "gfx/icons/honchkrow.2bpp"
