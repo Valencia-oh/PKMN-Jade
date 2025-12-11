@@ -256,10 +256,14 @@ IconPointers:
 	dw LugiaIcon
 	dw HoOhIcon
 	dw CelebiIcon
+; Added Mons
+
 	dw PoochyenaIcon
 	dw MightyenaIcon
 	dw WingullIcon
 	dw PelipperIcon
+	dw ShroomishIcon
+	dw BreloomIcon
 	dw ElectrikeIcon
 	dw ManectricIcon
 	dw HonchkrowIcon
