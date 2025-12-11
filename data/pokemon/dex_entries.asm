@@ -278,5 +278,7 @@ ApplinPokedexEntry::     INCLUDE "data/pokemon/dex_entries/applin.asm"
 AppletunPokedexEntry::   INCLUDE "data/pokemon/dex_entries/appletun.asm"
 FlapplePokedexEntry::    INCLUDE "data/pokemon/dex_entries/flapple.asm"
 FalinksPokedexEntry::    INCLUDE "data/pokemon/dex_entries/falinks.asm"
+MaschiffPokedexEntry::   INCLUDE "data/pokemon/dex_entries/maschiff.asm"
+MabosstiffPokedexEntry:: INCLUDE "data/pokemon/dex_entries/mabosstiff.asm"
 ErsrheadbbyPokedexEntry::INCLUDE "data/pokemon/dex_entries/ersrheadbby.asm"
 
