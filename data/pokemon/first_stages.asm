@@ -252,20 +252,24 @@ FirstEvoStages::
 	dw LUGIA
 	dw HO_OH
 	dw CELEBI
+;Added Mons
+
 	dw POOCHYENA
 	dw POOCHYENA
-	dw WINGULL
-	dw WINGULL	
+	dw WINGULL	   
+	dw WINGULL		;ff
+	dw SHROOMISH
+	dw SHROOMISH
 	dw ELECTRIKE
 	dw ELECTRIKE	
 	dw MURKROW
 	dw TOGEPI
-	dw SWINUB
+	dw SWINUB	 	
 	dw JOLTIK
 	dw JOLTIK
 	dw LARVESTA
 	dw LARVESTA
-	dw APPLIN	  ;ff
+	dw APPLIN	  
 	dw APPLIN
 	dw APPLIN
 	dw FALINKS
