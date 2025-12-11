@@ -273,4 +273,6 @@ PokemonCries::
 	mon_cry CRY_CYNDAQUIL,    57,  320 ; MASCHIFF
 	mon_cry CRY_TOTODILE,   -266,  256 ; MABOSSTIFF
 	mon_cry CRY_TOGEPI,      256,  256 ; ERSRHEADBBY
+	mon_cry CRY_TOTODILE,   -266,  256 ; ELECTRIKE
+	mon_cry CRY_TOTODILE,     78,  256 ; MANECTRIC
 	assert_table_length NUM_POKEMON
