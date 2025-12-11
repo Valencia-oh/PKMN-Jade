@@ -89,7 +89,7 @@ ShroomishEvosAttacks:
 	dbw 7, STUN_SPORE
 	dbw 10, MEGA_DRAIN
 	dbw 13, POISONPOWDER
-	dbw 15; HEADBUTT
+	dbw 15, HEADBUTT
 	dbw 19, LEECH_LIFE
 	dbw 25, SPORE
 	dbw 29, GROWTH
@@ -108,7 +108,7 @@ BreloomEvosAttacks:
 	dbw 7, STUN_SPORE
 	dbw 10, MEGA_DRAIN
 	dbw 13, POISONPOWDER
-	dbw 15; HEADBUTT
+	dbw 15, HEADBUTT
 	dbw 19, LEECH_LIFE
 	dbw 25, SPORE
 	dbw 27, LOWKICK
