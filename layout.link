@@ -52,7 +52,6 @@ ROMX $05
 ROMX $06
 	"Tileset Data 1"
 	"Prism tilemap copy functions"
-	"Pics 20"
 ROMX $07
 	"Roofs"
 	"Tileset Data 2"
@@ -74,7 +73,7 @@ ROMX $0c
 	"Tileset Data 4"
 ROMX $0d
 	"Effect Commands"
-	"Base Stats"
+	
 ROMX $0e
 	"Enemy Trainers"
 ROMX $0f
@@ -154,6 +153,7 @@ ROMX $2e
 	"bank2E"
 ROMX $2f
 	"Phone Scripts 2"
+	"Pics 20"
 ROMX $30
 	"Sprites 1"
 ROMX $31
@@ -202,6 +202,7 @@ ROMX $41
 ROMX $42
 	"Intro Logo"
 	"Credits"
+	"Base Stats"
 ROMX $43
 	"Title"
 	"Mon Icons 3"
