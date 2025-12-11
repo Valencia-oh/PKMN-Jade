@@ -1,6 +1,8 @@
 SECTION "Evolutions and Attacks 3", ROMX
 
 EvosAttacksPointers3::
+	dw PoochyenaEvosAttacks
+	dw MightyenaEvosAttacks
 	dw WingullEvosAttacks
 	dw PelipperEvosAttacks
 	dw ElectrikeEvosAttacks
