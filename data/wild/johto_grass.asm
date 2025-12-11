@@ -1301,7 +1301,7 @@ JohtoGrassWildMons:
 	dbw 5, HOPPIP
 	dbw 5, HOPPIP
 	; day
-	dbw 4, SHROOMISHF
+	dbw 4, SHROOMISH
 	dbw 4, CATERPIE
 	dbw 5, BELLSPROUT
 	dbw 5, PIDGEY
@@ -1378,7 +1378,7 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 10, SNUBBULL
-	dbw 11, MASCHIEFF
+	dbw 11, MASCHIFF
 	dbw 12, ELECTRIKE
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
@@ -1386,7 +1386,7 @@ JohtoGrassWildMons:
 	dbw 10, DITTO
 	; day
 	dbw 10, SNUBBULL
-	dbw 11, MASCHIEFF
+	dbw 11, MASCHIFF
 	dbw 12, ELECTRIKE
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
@@ -1394,7 +1394,7 @@ JohtoGrassWildMons:
 	dbw 10, DITTO
 	; nite
 	dbw 12, DROWZEE
-	dbw 11, MASCHIEFF
+	dbw 11, MASCHIFF
 	dbw 12, HOOTHOOT
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
