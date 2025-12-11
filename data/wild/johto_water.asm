@@ -166,13 +166,13 @@ JohtoWaterWildMons:
 	def_water_wildmons ROUTE_40
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
-	dbw 15, TENTACOOL
+	dbw 15, WINGULL
 	dbw 20, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_41
 	db 6 percent ; encounter rate
-	dbw 20, TENTACOOL
+	dbw 20, WINGULL
 	dbw 20, TENTACRUEL
 	dbw 20, MANTINE
 	end_water_wildmons
@@ -228,7 +228,7 @@ JohtoWaterWildMons:
 
 	def_water_wildmons CIANWOOD_CITY
 	db 6 percent ; encounter rate
-	dbw 20, TENTACOOL
+	dbw 20, PELIPPER
 	dbw 15, TENTACOOL
 	dbw 20, TENTACRUEL
 	end_water_wildmons
@@ -237,7 +237,7 @@ JohtoWaterWildMons:
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
 	dbw 15, TENTACOOL
-	dbw 20, TENTACRUEL
+	dbw 20, WINGULL
 	end_water_wildmons
 
 	def_water_wildmons ECRUTEAK_CITY
