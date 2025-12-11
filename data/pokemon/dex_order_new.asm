@@ -1,4 +1,4 @@
-; Every Pokémon sorted in New Pokédex Order.
+; Every Pokémon sorted in New Pokédex Order. (where they are found in Johto roughly)
 
 NewPokedexOrder:
 	table_width 2
