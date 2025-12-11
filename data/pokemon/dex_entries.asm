@@ -265,10 +265,13 @@ HoOhPokedexEntry::       INCLUDE "data/pokemon/dex_entries/ho_oh.asm"
 CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 WingullPokedexEntry::    INCLUDE "data/pokemon/dex_entries/wingull.asm"
 PelipperPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pelipper.asm"
-HonchkrowPokedexEntry::  INCLUDE "data/pokemon/dex_entries/honchkrow.asm"
-TogekissPokedexEntry::   INCLUDE "data/pokemon/dex_entries/togekiss.asm"
+ElectrikePokedexEntry::  INCLUDE "data/pokemon/dex_entries/electrike.asm"
+ManectricPokedexEntry::  INCLUDE "data/pokemon/dex_entries/manectric.asm"
 
 SECTION "Pokedex Entries 257-320", ROMX
+
+HonchkrowPokedexEntry::  INCLUDE "data/pokemon/dex_entries/honchkrow.asm"
+TogekissPokedexEntry::   INCLUDE "data/pokemon/dex_entries/togekiss.asm"
 MamoswinePokedexEntry::  INCLUDE "data/pokemon/dex_entries/mamoswine.asm"
 JoltikPokedexEntry::     INCLUDE "data/pokemon/dex_entries/joltik.asm"
 GalvantulaPokedexEntry:: INCLUDE "data/pokemon/dex_entries/galvantula.asm"
