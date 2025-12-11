@@ -50,17 +50,17 @@ PelipperEvosAttacks:
 ElectrikeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 26, MANECTRIC
 	db 0 ; no more evolutions
-	dbw 1, POISON_STING
-	dbw 1, STRING_SHOT
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, LEER
 	dbw 1, THUNDERSHOCK
 	dbw 8, THUNDER_WAVE
-	dbw 11, CONSTRICT
-	dbw 17, NIGHT_SHADE
-	dbw 23, LEECH_LIFE
-	dbw 30, FURY_SWIPES
-	dbw 37, SPIDER_WEB
-	dbw 45, AGILITY
-	dbw 53, PSYCHIC_M
+	dbw 11, QUICK_ATTACK
+	dbw 15, DOUBLE_TEAM
+	dbw 20, SLAM
+	dbw 26, THUNDERBOLT
+	dbw 34, FURY_SWIPES
+	dbw 53, THUNDER
 	db 0 ; no more level-up moves
 
 ManectricEvosAttacks:
@@ -70,13 +70,13 @@ ManectricEvosAttacks:
 	dbw 1, LEER
 	dbw 1, THUNDERSHOCK
 	dbw 8, THUNDER_WAVE
-	dbw 11, CONSTRICT
-	dbw 17, NIGHT_SHADE
-	dbw 25, LEECH_LIFE
+	dbw 11, QUICK_ATTACK
+	dbw 15, DOUBLE_TEAM
+	dbw 20, SLAM
+	dbw 26, THUNDERBOLT
 	dbw 34, FURY_SWIPES
-	dbw 43, SPIDER_WEB
 	dbw 53, AGILITY
-	dbw 63, PSYCHIC_M
+	dbw 63, THUNDER
 	db 0 ; no more level-up moves
 
 HonchkrowEvosAttacks:
