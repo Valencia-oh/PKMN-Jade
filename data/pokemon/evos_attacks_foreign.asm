@@ -3,6 +3,8 @@ SECTION "Evolutions and Attacks 3", ROMX
 EvosAttacksPointers3::
 	dw WingullEvosAttacks
 	dw PelipperEvosAttacks
+	dw ElectrikeEvosAttacks
+	dw ManectricEvosAttacks
 	dw HonchkrowEvosAttacks
 	dw TogekissEvosAttacks
 	dw MamoswineEvosAttacks
@@ -42,6 +44,39 @@ PelipperEvosAttacks:
 	dbw 16, HYPNOSIS
 	dbw 25, HYDRO_PUMP
 	dbw 33, TAKE_DOWN
+	db 0 ; no more level-up moves
+
+
+ElectrikeEvosAttacks:
+	dbbw EVOLVE_LEVEL, 26, MANECTRIC
+	db 0 ; no more evolutions
+	dbw 1, POISON_STING
+	dbw 1, STRING_SHOT
+	dbw 1, THUNDERSHOCK
+	dbw 8, THUNDER_WAVE
+	dbw 11, CONSTRICT
+	dbw 17, NIGHT_SHADE
+	dbw 23, LEECH_LIFE
+	dbw 30, FURY_SWIPES
+	dbw 37, SPIDER_WEB
+	dbw 45, AGILITY
+	dbw 53, PSYCHIC_M
+	db 0 ; no more level-up moves
+
+ManectricEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, LEER
+	dbw 1, THUNDERSHOCK
+	dbw 8, THUNDER_WAVE
+	dbw 11, CONSTRICT
+	dbw 17, NIGHT_SHADE
+	dbw 25, LEECH_LIFE
+	dbw 34, FURY_SWIPES
+	dbw 43, SPIDER_WEB
+	dbw 53, AGILITY
+	dbw 63, PSYCHIC_M
 	db 0 ; no more level-up moves
 
 HonchkrowEvosAttacks:
@@ -86,7 +121,7 @@ MamoswineEvosAttacks:
 	db 0 ; no more level-up moves
 
 JoltikEvosAttacks:
-	dbbw EVOLVE_LEVEL, 22, ARIADOS
+	dbbw EVOLVE_LEVEL, 22, GALVANTULA
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
 	dbw 1, STRING_SHOT
