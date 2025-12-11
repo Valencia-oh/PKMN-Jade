@@ -258,6 +258,8 @@ FramesPointers:
 	dba MamoswineFrames
 	dba LarvestaFrames
 	dba VolcaronaFrames
+	dba JoltikFrames
+	dba GalvantulaFrames
 	dba ApplinFrames
 	dba AppletunFrames
 	dba FlappleFrames
