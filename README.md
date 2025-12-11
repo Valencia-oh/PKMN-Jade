@@ -3,14 +3,15 @@
 Labradorite is in development romhack based off the CSE engine for Pokecrystal with the goal of creating a johto with greateer pokemon variety through adding many pokemon from future generations to the game.
 
 ## Implemented Features
-- ***ERASERHEAD BABY!!*** really just a joke mon, but I wanted to release a version with it usable
 - Removed Trade+Item Evos, now just use the item
 - 21 new real pokemon, bringing the total to 272 (Applin, Wingull, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, and Falinks lines + Mamoswine, Honchkrow and Togekiss)
 - HMs done through party not attacks (added with CSE)
 - overhauled PC (added with CSE)
 - Fairy Type
+- A surprise near
   
 ## New Pokemon Locations:
+#### Future Pokemon Locations
 - Applin -- Ilex Forest
 - Lartvesta -- Mt. Mortar
 - Poochyena -- Routes 29, 30, and 32 at night
@@ -20,8 +21,15 @@ Labradorite is in development romhack based off the CSE engine for Pokecrystal w
 - Joltik -- Union Cave Floor 1 and B1
 - Wingull/Pelipper -- Surf on Routes 40 and 41 as well as Olivine and Cyanwood Cities
 - Falinks -- Route 43
-- Murkrow -- Route 33 and 34 at night
-- Togepi -- Route 34 day and Morning
+#### Old Pokemon, New Locations
+- Murkrow -- added to Route 33, 34, and 38 at night
+- Togepi -- added to Route 34 day and Morning
+- Gastly -- added to Route 38 at night
+- Misdrevous -- added to route 38 at night
+- Bellsprout and Oddish -- Added to the Sprout Tower in the Morning and Day
+- Meowth -- moved to daytime on route 38
+- Larvitar -- added to both sides of Dark Cave
+
 
 Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) and the Apples for Applin are sold in the Goldenrod Department Store,
 
