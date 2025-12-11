@@ -274,24 +274,26 @@ DEF JOHTO_POKEMON EQU const_value
 	const CELEBI     ; fb
 DEF NUM_JOHTO_POKEMON EQU const_value - 1
 DEF FOREIGN_POKEMON EQU const_value
-	const WINGULL    ; fc
-	const PELIPPER   ; fd
-	const ELECTRIKE  ; fe
-	const MANECTRIC  ; ff
-	const HONCHKROW  ; 100
-	const TOGEKISS   ; 101
-	const MAMOSWINE  ; 102
-	const JOLTIK     ; 103
-	const GALVANTULA ; 104
-	const LARVESTA   ; 105
-	const VOLCARONA  ; 106
-	const APPLIN     ; 107
-	const APPLETUN   ; 108
-	const FLAPPLE    ; 109
-	const FALINKS    ; 10a
-	const MASCHIFF 	 ; 10b 
-	const MABOSSTIFF ; 10c 
-	const ERSRHEADBBY; 10d
+	const POOCHYENA  ; fc
+	const MIGHTYENA  ; fd
+	const WINGULL    ; fe
+	const PELIPPER   ; ff
+	const ELECTRIKE  ; 100
+	const MANECTRIC  ; 101
+	const HONCHKROW  ; 102
+	const TOGEKISS   ; 103
+	const MAMOSWINE  ; 104
+	const JOLTIK     ; 105
+	const GALVANTULA ; 106
+	const LARVESTA   ; 107
+	const VOLCARONA  ; 108
+	const APPLIN     ; 109
+	const APPLETUN   ; 10a
+	const FLAPPLE    ; 10b
+	const FALINKS    ; 10c
+	const MASCHIFF 	 ; 10d 
+	const MABOSSTIFF ; 10e 
+	const ERSRHEADBBY; 10f
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
