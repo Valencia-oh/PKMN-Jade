@@ -429,7 +429,7 @@ JohtoGrassWildMons:
 	dbw 6, SANDSHREW
 	dbw 5, ZUBAT
 	dbw 4, RATTATA
-	dbw 7, ZUBAT
+	dbw 7, JOLTIK
 	dbw 6, ONIX
 	dbw 6, ONIX
 	; day
@@ -437,7 +437,7 @@ JohtoGrassWildMons:
 	dbw 6, SANDSHREW
 	dbw 5, ZUBAT
 	dbw 4, RATTATA
-	dbw 7, ZUBAT
+	dbw 7, JOLTIK
 	dbw 6, ONIX
 	dbw 6, ONIX
 	; nite
@@ -445,7 +445,7 @@ JohtoGrassWildMons:
 	dbw 6, RATTATA
 	dbw 5, WOOPER
 	dbw 4, RATTATA
-	dbw 7, ZUBAT
+	dbw 7, JOLTIK
 	dbw 6, ONIX
 	dbw 6, ONIX
 	end_grass_wildmons
@@ -457,7 +457,7 @@ JohtoGrassWildMons:
 	dbw 6, ZUBAT
 	dbw 8, ZUBAT
 	dbw 8, ONIX
-	dbw 6, RATTATA
+	dbw 6, JOLTIK
 	dbw 8, RATTATA
 	dbw 8, RATTATA
 	; day
@@ -465,7 +465,7 @@ JohtoGrassWildMons:
 	dbw 6, ZUBAT
 	dbw 8, ZUBAT
 	dbw 8, ONIX
-	dbw 6, RATTATA
+	dbw 6, JOLTIK
 	dbw 8, RATTATA
 	dbw 8, RATTATA
 	; nite
@@ -473,7 +473,7 @@ JohtoGrassWildMons:
 	dbw 6, ZUBAT
 	dbw 8, WOOPER
 	dbw 8, ONIX
-	dbw 6, RATTATA
+	dbw 6, JOLTIK
 	dbw 8, RATTATA
 	dbw 8, RATTATA
 	end_grass_wildmons
@@ -1237,13 +1237,13 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, BRELOOM
-	dbw 2, SHROOMISH
-	dbw 3, BRELOOM
-	dbw 3, SHROOMISH
-	dbw 2, SHROOMISH
-	dbw 3, SHROOMISH
-	dbw 3, SHROOMISH
+	db 2, PIDGEY
+	db 2, SENTRET
+	db 3, PIDGEY
+	db 3, SENTRET
+	db 2, RATTATA
+	db 3, HOPPIP
+	db 3, HOPPIP
 	; day
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
@@ -1267,7 +1267,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 3, LEDYBA
 	dbw 3, CATERPIE
-	dbw 4, CATERPIE
+	dbw 4, SHROOMISH
 	dbw 4, PIDGEY
 	dbw 3, WEEDLE
 	dbw 4, HOPPIP
@@ -1275,7 +1275,7 @@ JohtoGrassWildMons:
 	; day
 	dbw 3, PIDGEY
 	dbw 3, CATERPIE
-	dbw 4, CATERPIE
+	dbw 4, SHROOMISH
 	dbw 4, PIDGEY
 	dbw 3, WEEDLE
 	dbw 4, HOPPIP
@@ -1299,7 +1299,7 @@ JohtoGrassWildMons:
 	dbw 5, PIDGEY
 	dbw 4, WEEDLE
 	dbw 5, HOPPIP
-	dbw 5, HOPPIP
+	dbw 5, SHROOMISH
 	; day
 	dbw 4, SHROOMISH
 	dbw 4, CATERPIE
@@ -1333,8 +1333,8 @@ JohtoGrassWildMons:
 	dbw 5, RATTATA
 	dbw 7, BELLSPROUT
 	dbw 6, HOPPIP
-	dbw 7, PIDGEY
-	dbw 7, HOPPIP
+	dbw 7, WOOPER
+	dbw 7, WOOPER
 	dbw 7, HOPPIP
 	; nite
 	dbw 4, WOOPER
@@ -1342,7 +1342,7 @@ JohtoGrassWildMons:
 	dbw 7, BELLSPROUT
 	dbw 6, ZUBAT
 	dbw 7, HOOTHOOT
-	dbw 7, GASTLY
+	dbw 7, POOCHYENA
 	dbw 7, GASTLY
 	end_grass_wildmons
 
@@ -1369,8 +1369,8 @@ JohtoGrassWildMons:
 	dbw 6, ZUBAT
 	dbw 6, GEODUDE
 	dbw 6, ZUBAT
-	dbw 7, RATTATA
-	dbw 7, RATTATA
+	dbw 7, MURKROW
+	dbw 7, MURKROW
 	dbw 7, RATTATA
 	end_grass_wildmons
 
@@ -1383,7 +1383,7 @@ JohtoGrassWildMons:
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 10, DITTO
+	dbw 10, TOGEPI
 	; day
 	dbw 10, SNUBBULL
 	dbw 11, MASCHIFF
@@ -1391,7 +1391,7 @@ JohtoGrassWildMons:
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 10, DITTO
+	dbw 10, TOGEPI
 	; nite
 	dbw 12, DROWZEE
 	dbw 11, MASCHIFF
@@ -1399,7 +1399,7 @@ JohtoGrassWildMons:
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
-	dbw 10, DITTO
+	dbw 10, MURKROW
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
@@ -1510,7 +1510,7 @@ JohtoGrassWildMons:
 	dbw 16, MAGNEMITE
 	dbw 16, NOCTOWL
 	dbw 16, MEOWTH
-	dbw 16, MEOWTH
+	dbw 16, MURKROW
 	dbw 16, MEOWTH
 	end_grass_wildmons
 
@@ -1576,25 +1576,25 @@ JohtoGrassWildMons:
 	dbw 15, SENTRET
 	dbw 16, PIDGEOTTO
 	dbw 16, FARFETCH_D
-	dbw 15, FURRET
+	dbw 15, FALINKS
 	dbw 17, RATICATE
 	dbw 17, FURRET
-	dbw 17, FURRET
+	dbw 17, FALINKS
 	; day
 	dbw 15, SENTRET
 	dbw 16, PIDGEOTTO
 	dbw 16, FARFETCH_D
-	dbw 15, FURRET
+	dbw 15, FALINKS
 	dbw 17, RATICATE
 	dbw 17, FURRET
-	dbw 17, FURRET
+	dbw 17, FALINKS
 	; nite
 	dbw 15, VENONAT
 	dbw 16, NOCTOWL
 	dbw 16, RATICATE
 	dbw 17, VENONAT
 	dbw 17, RATICATE
-	dbw 17, VENOMOTH
+	dbw 17, FALINKS
 	dbw 17, VENOMOTH
 	end_grass_wildmons
 
