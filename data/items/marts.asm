@@ -122,7 +122,7 @@ MartGoldenrod3F:
 	dw HP_UP
 
 MartGoldenrod4F:
-	db 8 ; # items
+	db 10 ; # items
 	dw SWEET_APPLE
 	dw TART_APPLE
 	dw FIRE_STONE
@@ -131,6 +131,8 @@ MartGoldenrod4F:
 	dw LEAF_STONE
 	dw SHINYSTONE
 	dw DUSK_STONE
+	dw MOON_STONE
+	dw SUN_STONE
 
 MartGoldenrod5F1:
 	db 3 ; # items
