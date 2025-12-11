@@ -237,7 +237,7 @@ INCLUDE "engine/pokemon/experience.asm"
 INCLUDE "engine/pokemon/switchpartymons.asm"
 INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "data/pokemon/base_stats.asm"
-INCLUDE "data/pokemon/names.asm"
+
 
 
 SECTION "Crystal Phone Text", ROMX
@@ -260,6 +260,7 @@ INCLUDE "data/phone/text/erin_caller.asm"
 
 SECTION "bank20", ROMX
 
+INCLUDE "data/pokemon/names.asm"
 INCLUDE "engine/overworld/player_movement.asm"
 INCLUDE "engine/events/engine_flags.asm"
 INCLUDE "engine/overworld/variables.asm"
