@@ -14,6 +14,8 @@ EvosAttacksPointers3::
 	dw AppletunEvosAttacks
 	dw FlappleEvosAttacks
 	dw FalinksEvosAttacks
+	dw MaschiffEvosAttacks
+	dw MabosstiffEvosAttacks
 	dw ErsrheadbbyEvosAttacks
 .IndirectEnd::
 
@@ -202,6 +204,31 @@ FalinksEvosAttacks:
 	dbw 30, COUNTER
 	dbw 40, MEGAHORN
 	dbw 50, COUNTER
+	db 0 ; no more level-up moves
+
+MaschiffEvosAttacks:
+	dbbw EVOLVE_LEVEL, 30, MABOSSTIFF
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, LICK
+	dbw 5, RAGE
+	dbw 7, SCARY_FACE
+	dbw 15, BITE
+	dbw 20, CRUNCH
+	dbw 28, TAKE_DOWN
+	db 0 ; no more level-up moves
+
+MabosstiffEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, LICK
+	dbw 5, RAGE
+	dbw 7, SCARY_FACE
+	dbw 15, BITE
+	dbw 20, CRUNCH
+	dbw 28, TAKE_DOWN
 	db 0 ; no more level-up moves
 
 ErsrheadbbyEvosAttacks:
