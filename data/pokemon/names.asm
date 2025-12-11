@@ -255,6 +255,8 @@ PokemonNames::
 	dname "LUGIA"
 	dname "HO-OH"
 	dname "CELEBI"
+	dname "POOCHYENA"
+	dname "MIGHTYENA"
 	dname "WINGULL"
 	dname "PELIPPER"
 	dname "ELECTRIKE"
