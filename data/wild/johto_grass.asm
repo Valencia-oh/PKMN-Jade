@@ -1237,13 +1237,13 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, FLAPPLE
-	dbw 2, GALVANTULA
-	dbw 3, FALINKS
-	dbw 3, TOGEKISS
 	dbw 2, JOLTIK
-	dbw 3, ERSRHEADBBY
-	dbw 3, ERSRHEADBBY
+	dbw 2, JOLTIK
+	dbw 3, JOLTIK
+	dbw 3, JOLTIK
+	dbw 2, JOLTIK
+	dbw 3, JOLTIK
+	dbw 3, JOLTIK
 	; day
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
