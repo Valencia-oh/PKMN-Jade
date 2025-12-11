@@ -6,6 +6,8 @@ EvosAttacksPointers3::
 	dw HonchkrowEvosAttacks
 	dw TogekissEvosAttacks
 	dw MamoswineEvosAttacks
+	dw JoltikEvosAttacks
+	dw GalvantulaEvosAttacks
 	dw LarvestaEvosAttacks
 	dw VolcaronaEvosAttacks
 	dw ApplinEvosAttacks
