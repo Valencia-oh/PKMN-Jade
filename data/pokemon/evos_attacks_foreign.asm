@@ -80,6 +80,44 @@ PelipperEvosAttacks:
 	dbw 33, TAKE_DOWN
 	db 0 ; no more level-up moves
 
+ShroomishEvosAttacks:
+	dbbw EVOLVE_LEVEL, 24, BRELOOM
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, ABSORB
+	dbw 3, LEECHSEED
+	dbw 7, STUN_SPORE
+	dbw 10, MEGA_DRAIN
+	dbw 13, POISONPOWDER
+	dbw 15; HEADBUTT
+	dbw 19, LEECH_LIFE
+	dbw 25, SPORE
+	dbw 29, GROWTH
+	dbw 33, TOXIC
+	dbw 37, GROWTH
+	dbw 43, GIGA_DRAIN
+	db 0 ; no more level-up moves
+
+BreloomEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, ABSORB
+	dbw 1, STUN_SPORE
+	dbw 1, POISONPOWDER
+	dbw 3, LEECHSEED
+	dbw 7, STUN_SPORE
+	dbw 10, MEGA_DRAIN
+	dbw 13, POISONPOWDER
+	dbw 15; HEADBUTT
+	dbw 19, LEECH_LIFE
+	dbw 25, SPORE
+	dbw 27, LOWKICK
+	dbw 29, GROWTH
+	dbw 33, TOXIC
+	dbw 25, DOUBLE_KICK
+	dbw 37, GROWTH
+	dbw 43, GIGA_DRAIN
+	db 0 ; no more level-up moves
 
 ElectrikeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 26, MANECTRIC
