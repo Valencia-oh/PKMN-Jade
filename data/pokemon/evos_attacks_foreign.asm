@@ -305,6 +305,7 @@ FalinksEvosAttacks:
 	dbw 1, PROTECT
 	dbw 5, ROCK_SMASH
 	dbw 10, FOCUS_ENERGY
+	dbw 13, FURY_CUTTER
 	dbw 15, HEADBUTT
     dbw 20, METAL_CLAW
 	dbw 25, ENDURE
