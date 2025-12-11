@@ -266,8 +266,10 @@ MonMenuIconPals:
 	icon_pals BLUE,   PINK   ; HONCHKROW
 	icon_pals RED,    BROWN  ; TOGEKISS
 	icon_pals BROWN,  GREEN  ; MAMOSWINE
-	icon_pals RED,    GREEN ; LARVESTA
-	icon_pals RED,    GREEN ; VOLCARONA
+	icon_pals GREEN,  BLUE  ; JOLTIK
+	icon_pals GREEN,  BLUE   ; GALVANTULA
+	icon_pals RED,    GREEN  ; LARVESTA
+	icon_pals RED,    GREEN  ; VOLCARONA
 	icon_pals RED,    GREEN  ; APPLIN
 	icon_pals RED,    GREEN  ; APPLETUN
 	icon_pals RED,    GREEN  ; FLAPPLE
