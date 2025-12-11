@@ -293,10 +293,10 @@ DEF FOREIGN_POKEMON EQU const_value
 	const APPLETUN   ; 10a
 	const FLAPPLE    ; 10b
 	const FALINKS    ; 10c
-	const WYRDEER    ; 10c
-	const MASCHIFF 	 ; 10d 
-	const MABOSSTIFF ; 10e 
-	const ERSRHEADBBY; 10f
+	const WYRDEER    ; 10d
+	const MASCHIFF 	 ; 10e 
+	const MABOSSTIFF ; 10f 
+	const ERSRHEADBBY; 110
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
