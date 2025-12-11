@@ -278,6 +278,8 @@ DEF FOREIGN_POKEMON EQU const_value
 	const MIGHTYENA  ; fd
 	const WINGULL    ; fe
 	const PELIPPER   ; ff
+	const SHROOMISH  ; fe
+	const BRELOOM    ; ff
 	const ELECTRIKE  ; 100
 	const MANECTRIC  ; 101
 	const HONCHKROW  ; 102
