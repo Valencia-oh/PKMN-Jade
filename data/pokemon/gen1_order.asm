@@ -262,6 +262,8 @@ Pokered_MonIndices:
 	db APPLETUN
 	db FLAPPLE
 	db FALINKS
+	db JOLTIK
+	db GALVANTULA
 	db VOLCARONA
 	db LARVESTA
 	db ERSRHEADBBY
