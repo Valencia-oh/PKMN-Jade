@@ -21,6 +21,36 @@ EvosAttacksPointers3::
 	dw ErsrheadbbyEvosAttacks
 .IndirectEnd::
 
+
+PoochyenaEvosAttacks:
+	dbbw EVOLVE_LEVEL, 18, MABOSSTIFF
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, THIEF
+	dbw 5, RAGE
+	dbw 7, SCARY_FACE
+	dbw 12, SANDATTACK
+	dbw 15, BITE
+	dbw 20, CRUNCH
+	dbw 28, TAKE_DOWN
+	db 0 ; no more level-up moves
+
+MightyenaEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, THIEF
+	dbw 1, SANDATTACK
+	dbw 1, CRUNCH
+	dbw 1, BITE
+	dbw 5, RAGE
+	dbw 7, SCARY_FACE
+	dbw 15, BITE
+	dbw 20, CRUNCH
+	dbw 28, TAKE_DOWN
+	db 0 ; no more level-up moves
+
 WingullEvosAttacks:
 	dbbw EVOLVE_LEVEL, 25, PELIPPER
 	db 0 ; no more evolutions
