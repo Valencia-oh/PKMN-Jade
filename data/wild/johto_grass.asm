@@ -1489,7 +1489,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_38
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 16, RATTATA
+	dbw 16, MEOWTH
 	dbw 16, RATICATE
 	dbw 16, MAGNEMITE
 	dbw 16, PIDGEOTTO
@@ -1497,7 +1497,7 @@ JohtoGrassWildMons:
 	dbw 13, MILTANK
 	dbw 13, MILTANK
 	; day
-	dbw 16, RATTATA
+	dbw 16, MEOWTH
 	dbw 16, RATICATE
 	dbw 16, MAGNEMITE
 	dbw 16, PIDGEOTTO
@@ -1505,13 +1505,13 @@ JohtoGrassWildMons:
 	dbw 13, MILTANK
 	dbw 13, MILTANK
 	; nite
-	dbw 16, MEOWTH
-	dbw 16, RATICATE
+	dbw 16, GHASTLY
+	dbw 16, MISDREAVUS
 	dbw 16, MAGNEMITE
 	dbw 16, NOCTOWL
 	dbw 16, MEOWTH
 	dbw 16, MURKROW
-	dbw 16, MEOWTH
+	dbw 16, ERSRHEDBBY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_39
