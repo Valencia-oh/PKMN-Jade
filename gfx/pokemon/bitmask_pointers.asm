@@ -253,6 +253,8 @@ BitmasksPointers:
 	dw CelebiBitmasks
 	dw WingullBitmasks
 	dw PelipperBitmasks
+	dw ElectrikeBitmasks
+	dw ManectricBitmasks
 	dw HonchkrowBitmasks
 	dw TogekissBitmasks
 	dw MamoswineBitmasks
