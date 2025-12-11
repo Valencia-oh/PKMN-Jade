@@ -1238,12 +1238,12 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 2, POOCHYENA
-	dbw 2, MIGHTYENA
-	dbw 3, MIGHTYENA
+	dbw 2, POOCHYENA
 	dbw 3, POOCHYENA
-	dbw 2, MABOSSTIFF
-	dbw 3, MABOSSTIFF
-	dbw 3, MABOSSTIFF
+	dbw 3, POOCHYENA
+	dbw 2, POOCHYENA
+	dbw 3, POOCHYENA
+	dbw 3, POOCHYENA
 	; day
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
