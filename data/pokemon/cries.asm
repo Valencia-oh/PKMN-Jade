@@ -257,24 +257,29 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,    0,  256 ; LUGIA
 	mon_cry CRY_AIPOM,         0,  384 ; HO_OH
 	mon_cry CRY_ENTEI,       330,  273 ; CELEBI
+; Added Mons
+
 	mon_cry CRY_CYNDAQUIL,    57,  320 ; POOCHYENA
 	mon_cry CRY_TOTODILE,   -266,  256 ; MIGHTYENA
-	mon_cry CRY_RHYDON,      -34,  124 ; FALINKS
-	mon_cry CRY_WOOPER,       43,   64 ; APPLIN
-	mon_cry CRY_ODDISH,       48,   48 ; APPLETUN
-	mon_cry CRY_PIDGEOTTO,    23,   78 ; FLAPPLE
 	mon_cry CRY_PIDGEOTTO,    48,   22 ; WINGULL
 	mon_cry CRY_PIDGEOTTO,    93,   35 ; PELIPPER
+	mon_cry CRY_PARAS,        32,  352 ; SHROOMISH
+	mon_cry CRY_PARAS,        66,  383 ; BRELOOM
+	mon_cry CRY_TOTODILE,   -266,  256 ; ELECTRIKE
+	mon_cry CRY_TOTODILE,     78,  256 ; MANECTRIC
 	mon_cry CRY_MAGCARGO,   -265,  256 ; MAMOSWINE
+	mon_cry CRY_TOGETIC,      70,   80 ; TOGEKISS
+	mon_cry CRY_MARILL,      -64,  394 ; HONCHKROW
 	mon_cry CRY_SPINARAK,     17,  512 ; JOLTIK
 	mon_cry CRY_SPINARAK,   -174,  482 ; GALVANTULA
 	mon_cry CRY_METAPOD,      90,  256 ; LARVESTA
 	mon_cry CRY_BLASTOISE,   245,  179 ; VOLCARONA
-	mon_cry CRY_TOGETIC,      70,   80 ; TOGEKISS
-	mon_cry CRY_MARILL,      -64,  394 ; HONCHKROW
+	mon_cry CRY_WOOPER,       43,   64 ; APPLIN
+	mon_cry CRY_ODDISH,       48,   48 ; APPLETUN
+	mon_cry CRY_PIDGEOTTO,    23,   78 ; FLAPPLE
+	mon_cry CRY_RHYDON,      -34,  124 ; FALINKS
 	mon_cry CRY_CYNDAQUIL,    57,  320 ; MASCHIFF
 	mon_cry CRY_TOTODILE,   -266,  256 ; MABOSSTIFF
 	mon_cry CRY_TOGEPI,      256,  256 ; ERSRHEADBBY
-	mon_cry CRY_TOTODILE,   -266,  256 ; ELECTRIKE
-	mon_cry CRY_TOTODILE,     78,  256 ; MANECTRIC
+
 	assert_table_length NUM_POKEMON
