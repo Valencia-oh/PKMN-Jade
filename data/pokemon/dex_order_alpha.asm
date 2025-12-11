@@ -20,6 +20,7 @@ AlphabeticalPokedexOrder:
 	dw BELLSPROUT
 	dw BLASTOISE
 	dw BLISSEY
+	dw BRELOOM
 	dw BULBASAUR
 	dw BUTTERFREE
 	dw CATERPIE
@@ -213,6 +214,7 @@ AlphabeticalPokedexOrder:
 	dw SEEL
 	dw SENTRET
 	dw SHELLDER
+	dw SHROOMISH
 	dw SHUCKLE
 	dw SKARMORY
 	dw SKIPLOOM
