@@ -261,6 +261,8 @@ NewPokedexOrder:
 	dw CELEBI
 	dw WINGULL
 	dw PELIPPER
+	dw JOLTIK
+	dw GALVANTULA
 	dw LARVESTA
 	dw VOLCARONA
 	dw FALINKS
