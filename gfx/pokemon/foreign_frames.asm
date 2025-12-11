@@ -1,5 +1,7 @@
 WingullFrames:   INCLUDE "gfx/pokemon/wingull/frames.asm"
 PelipperFrames: INCLUDE "gfx/pokemon/pelipper/frames.asm"
+ElectrikeFrames:   INCLUDE "gfx/pokemon/electrike/frames.asm"
+ManectricFrames: INCLUDE "gfx/pokemon/manectric/frames.asm"
 HonchkrowFrames: INCLUDE "gfx/pokemon/honchkrow/frames.asm"
 TogekissFrames: INCLUDE "gfx/pokemon/togekiss/frames.asm"
 MamoswineFrames: INCLUDE "gfx/pokemon/mamoswine/frames.asm"
