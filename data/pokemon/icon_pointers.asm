@@ -256,6 +256,8 @@ IconPointers:
 	dw LugiaIcon
 	dw HoOhIcon
 	dw CelebiIcon
+	dw PoochyenaIcon
+	dw MightyenaIcon
 	dw WingullIcon
 	dw PelipperIcon
 	dw ElectrikeIcon
