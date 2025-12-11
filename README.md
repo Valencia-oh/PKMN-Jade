@@ -4,7 +4,7 @@ Labradorite is in development romhack based off the CSE engine for Pokecrystal w
 
 ## Implemented Features
 - Removed Trade+Item Evos, now just use the item
-- 21 new real pokemon, bringing the total to 272 (Applin, Wingull, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, and Falinks lines + Mamoswine, Honchkrow and Togekiss)
+- 21 new pokemon, bringing the total to 272 (Applin, Wingull, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, and Falinks lines + Mamoswine, Honchkrow and Togekiss)
 - HMs done through party not attacks (added with CSE)
 - overhauled PC (added with CSE)
 - Fairy Type
