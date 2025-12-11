@@ -526,6 +526,10 @@ PokemonPicPointers::
 	dba WingullBackpic
 	dba PelipperFrontpic
 	dba PelipperBackpic
+	dba ShroomishFrontpic
+	dba ShroomishBackpic
+	dba BreloomFrontpic
+	dba BreloomBackpic
 	dba ElectrikeFrontpic
 	dba ElectrikeBackpic
 	dba ManectricFrontpic
