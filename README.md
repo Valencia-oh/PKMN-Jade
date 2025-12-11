@@ -1,4 +1,4 @@
-# Pokemon Jade
+# Pokemon Labradorite
 
 Jade is in development romhack based off the CSE engine for Pokecrystal.
 
