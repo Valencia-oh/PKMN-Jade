@@ -253,6 +253,8 @@ AnimationIdlePointers:
 	dw CelebiAnimationIdle
 	dw WingullAnimationIdle
 	dw PelipperAnimationIdle
+	dw ElectrikeAnimationIdle
+	dw ManectricAnimationIdle
 	dw HonchkrowAnimationIdle
 	dw TogekissAnimationIdle
 	dw MamoswineAnimationIdle
