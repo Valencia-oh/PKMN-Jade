@@ -5,6 +5,8 @@ EvosAttacksPointers3::
 	dw MightyenaEvosAttacks
 	dw WingullEvosAttacks
 	dw PelipperEvosAttacks
+	dw ShroomishEvosAttacks
+	dw BreloomEvosAttacks
 	dw ElectrikeEvosAttacks
 	dw ManectricEvosAttacks
 	dw HonchkrowEvosAttacks
