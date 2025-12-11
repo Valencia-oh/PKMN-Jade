@@ -1237,13 +1237,13 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 2, PIDGEY
-	db 2, SENTRET
-	db 3, PIDGEY
-	db 3, SENTRET
-	db 2, RATTATA
-	db 3, HOPPIP
-	db 3, HOPPIP
+	dbw 2, PIDGEY
+	dbw 2, SENTRET
+	dbw 3, PIDGEY
+	dbw 3, SENTRET
+	dbw 2, RATTATA
+	dbw 3, HOPPIP
+	dbw 3, HOPPIP
 	; day
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
@@ -1255,8 +1255,8 @@ JohtoGrassWildMons:
 	; nite
 	dbw 2, HOOTHOOT
 	dbw 2, RATTATA
-	dbw 3, HOOTHOOT
 	dbw 3, POOCHYENA
+	dbw 3, RATTATA
 	dbw 2, RATTATA
 	dbw 3, HOOTHOOT
 	dbw 3, POOCHYENA
