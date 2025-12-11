@@ -83,6 +83,37 @@ MamoswineEvosAttacks:
 	dbw 70, AMNESIA
 	db 0 ; no more level-up moves
 
+JoltikEvosAttacks:
+	dbbw EVOLVE_LEVEL, 22, ARIADOS
+	db 0 ; no more evolutions
+	dbw 1, POISON_STING
+	dbw 1, STRING_SHOT
+	dbw 6, SCARY_FACE
+	dbw 11, CONSTRICT
+	dbw 17, NIGHT_SHADE
+	dbw 23, LEECH_LIFE
+	dbw 30, FURY_SWIPES
+	dbw 37, SPIDER_WEB
+	dbw 45, AGILITY
+	dbw 53, PSYCHIC_M
+	db 0 ; no more level-up moves
+
+GalvantulaEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, POISON_STING
+	dbw 1, STRING_SHOT
+	dbw 1, SCARY_FACE
+	dbw 1, CONSTRICT
+	dbw 6, SCARY_FACE
+	dbw 11, CONSTRICT
+	dbw 17, NIGHT_SHADE
+	dbw 25, LEECH_LIFE
+	dbw 34, FURY_SWIPES
+	dbw 43, SPIDER_WEB
+	dbw 53, AGILITY
+	dbw 63, PSYCHIC_M
+	db 0 ; no more level-up moves
+
 LarvestaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 50, VOLCARONA
 	db 0 ; no more evolutions
