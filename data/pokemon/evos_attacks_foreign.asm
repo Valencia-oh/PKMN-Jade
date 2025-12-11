@@ -88,7 +88,8 @@ JoltikEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
 	dbw 1, STRING_SHOT
-	dbw 6, SCARY_FACE
+	dbw 1, THUNDERSHOCK
+	dbw 8, THUNDER_WAVE
 	dbw 11, CONSTRICT
 	dbw 17, NIGHT_SHADE
 	dbw 23, LEECH_LIFE
@@ -102,9 +103,9 @@ GalvantulaEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
 	dbw 1, STRING_SHOT
-	dbw 1, SCARY_FACE
 	dbw 1, CONSTRICT
-	dbw 6, SCARY_FACE
+	dbw 1, THUNDERSHOCK
+	dbw 8, THUNDER_WAVE
 	dbw 11, CONSTRICT
 	dbw 17, NIGHT_SHADE
 	dbw 25, LEECH_LIFE
