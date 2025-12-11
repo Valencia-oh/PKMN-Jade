@@ -254,6 +254,8 @@ FirstEvoStages::
 	dw CELEBI
 	dw WINGULL
 	dw WINGULL	
+	dw ELECTRIKE
+	dw ELECTRIKE	
 	dw MURKROW
 	dw TOGEPI
 	dw SWINUB
