@@ -270,5 +270,7 @@ PokemonCries::
 	mon_cry CRY_BLASTOISE,   245,  179 ; VOLCARONA
 	mon_cry CRY_TOGETIC,      70,   80 ; TOGEKISS
 	mon_cry CRY_MARILL,      -64,  394 ; HONCHKROW
+	mon_cry CRY_CYNDAQUIL,    57,  320 ; MASCHIFF
+	mon_cry CRY_TOTODILE,   -266,  256 ; MABOSSTIFF
 	mon_cry CRY_TOGEPI,      256,  256 ; ERSRHEADBBY
 	assert_table_length NUM_POKEMON
