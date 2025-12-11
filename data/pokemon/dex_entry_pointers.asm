@@ -252,10 +252,14 @@ PokedexDataPointerTable:
 	dba LugiaPokedexEntry
 	dba HoOhPokedexEntry
 	dba CelebiPokedexEntry
+; Added Mons
+
 	dba PoochyenaPokedexEntry
 	dba MightyenaPokedexEntry
 	dba WingullPokedexEntry
 	dba PelipperPokedexEntry
+	dba ShroomishPokedexEntry
+	dba BreloomPokedexEntry
 	dba ElectrikePokedexEntry
 	dba ManectricPokedexEntry
 	dba HonchkrowPokedexEntry
