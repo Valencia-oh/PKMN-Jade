@@ -251,6 +251,8 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
+	dw PoochyenaBitmasks
+	dw MightyenaBitmasks
 	dw WingullBitmasks
 	dw PelipperBitmasks
 	dw ElectrikeBitmasks
