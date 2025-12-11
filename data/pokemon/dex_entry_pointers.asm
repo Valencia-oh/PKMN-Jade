@@ -257,6 +257,8 @@ PokedexDataPointerTable:
 	dba HonchkrowPokedexEntry
 	dba TogekissPokedexEntry
 	dba MamoswinePokedexEntry
+	dba JoltikPokedexEntry
+	dba GalvantulaPokedexEntry
 	dba LarvestaPokedexEntry
 	dba VolcaronaPokedexEntry
 	dba ApplinPokedexEntry
