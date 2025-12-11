@@ -71,6 +71,7 @@ AlphabeticalPokedexOrder:
 	dw FLAREON
 	dw FORRETRESS
 	dw FURRET
+	dw GALVANTULA
 	dw GASTLY
 	dw GENGAR
 	dw GEODUDE
@@ -103,6 +104,7 @@ AlphabeticalPokedexOrder:
 	dw IVYSAUR
 	dw JIGGLYPUFF
 	dw JOLTEON
+	dw JOLTIK
 	dw JUMPLUFF
 	dw JYNX
 	dw KABUTO
