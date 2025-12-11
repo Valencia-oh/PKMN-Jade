@@ -257,6 +257,8 @@ PokemonCries::
 	mon_cry CRY_TYPHLOSION,    0,  256 ; LUGIA
 	mon_cry CRY_AIPOM,         0,  384 ; HO_OH
 	mon_cry CRY_ENTEI,       330,  273 ; CELEBI
+	mon_cry CRY_CYNDAQUIL,    57,  320 ; POOCHYENA
+	mon_cry CRY_TOTODILE,   -266,  256 ; MIGHTYENA
 	mon_cry CRY_RHYDON,      -34,  124 ; FALINKS
 	mon_cry CRY_WOOPER,       43,   64 ; APPLIN
 	mon_cry CRY_ODDISH,       48,   48 ; APPLETUN
