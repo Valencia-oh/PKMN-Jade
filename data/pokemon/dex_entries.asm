@@ -270,6 +270,8 @@ PelipperPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pelipper.asm"
 
 SECTION "Pokedex Entries 257-320", ROMX
 
+ShroomishPokedexEntry::  INCLUDE "data/pokemon/dex_entries/shroomish.asm"
+BreloomPokedexEntry::    INCLUDE "data/pokemon/dex_entries/breloom.asm"
 ElectrikePokedexEntry::  INCLUDE "data/pokemon/dex_entries/electrike.asm"
 ManectricPokedexEntry::  INCLUDE "data/pokemon/dex_entries/manectric.asm"
 HonchkrowPokedexEntry::  INCLUDE "data/pokemon/dex_entries/honchkrow.asm"
