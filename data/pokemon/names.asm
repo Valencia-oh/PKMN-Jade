@@ -257,6 +257,8 @@ PokemonNames::
 	dname "CELEBI"
 	dname "WINGULL"
 	dname "PELIPPER"
+	dname "ELECTRIKE"
+	dname "MANECTRIC"
 	dname "HONCHKROW"
 	dname "TOGEKISS"
 	dname "MAMOSWINE"
