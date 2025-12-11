@@ -85,7 +85,7 @@ ShroomishEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, ABSORB
-	dbw 3, LEECHSEED
+	dbw 3, LEECH_SEED
 	dbw 7, STUN_SPORE
 	dbw 10, MEGA_DRAIN
 	dbw 13, POISONPOWDER
@@ -104,14 +104,14 @@ BreloomEvosAttacks:
 	dbw 1, ABSORB
 	dbw 1, STUN_SPORE
 	dbw 1, POISONPOWDER
-	dbw 3, LEECHSEED
+	dbw 3, LEECH_SEED
 	dbw 7, STUN_SPORE
 	dbw 10, MEGA_DRAIN
 	dbw 13, POISONPOWDER
 	dbw 15, HEADBUTT
 	dbw 19, LEECH_LIFE
 	dbw 25, SPORE
-	dbw 27, LOWKICK
+	dbw 27, LOW_KICK
 	dbw 29, GROWTH
 	dbw 33, TOXIC
 	dbw 25, DOUBLE_KICK
