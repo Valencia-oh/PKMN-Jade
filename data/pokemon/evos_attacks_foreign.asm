@@ -32,7 +32,7 @@ PoochyenaEvosAttacks:
 	dbw 1, THIEF
 	dbw 5, RAGE
 	dbw 7, SCARY_FACE
-	dbw 12, SANDATTACK
+	dbw 12, SAND_ATTACK
 	dbw 15, BITE
 	dbw 20, CRUNCH
 	dbw 28, TAKE_DOWN
@@ -43,7 +43,7 @@ MightyenaEvosAttacks:
 	dbw 1, TACKLE
 	dbw 1, GROWL
 	dbw 1, THIEF
-	dbw 1, SANDATTACK
+	dbw 1, SAND_ATTACK
 	dbw 1, CRUNCH
 	dbw 1, BITE
 	dbw 5, RAGE
