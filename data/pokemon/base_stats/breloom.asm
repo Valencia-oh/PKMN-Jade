@@ -12,7 +12,7 @@
 	db 15 ; step cycles to hatch
 	INCBIN "gfx/pokemon/breloom/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)
-	db GROWTH_MEDIUM ; growth rate
+	db GROWTH_MEDIUM_FAST ; growth rate
 	dn EGG_FAIRY, EGG_PLANT ; egg groups
 
 	; tm/hm learnset
