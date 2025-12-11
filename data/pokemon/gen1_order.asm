@@ -272,5 +272,7 @@ Pokered_MonIndices:
 	db MANECTRIC
 	db POOCHYENA
 	db MIGHTYENA
+	db SHROOMISH
+	db BRELOOM
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
