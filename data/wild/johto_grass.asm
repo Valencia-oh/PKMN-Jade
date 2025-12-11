@@ -1237,13 +1237,13 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, POOCHYENA
-	dbw 2, POOCHYENA
-	dbw 3, POOCHYENA
-	dbw 3, POOCHYENA
-	dbw 2, POOCHYENA
-	dbw 3, POOCHYENA
-	dbw 3, POOCHYENA
+	dbw 2, BRELOOM
+	dbw 2, SHROOMISH
+	dbw 3, BRELOOM
+	dbw 3, SHROOMISH
+	dbw 2, SHROOMISH
+	dbw 3, SHROOMISH
+	dbw 3, SHROOMISH
 	; day
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
@@ -1256,10 +1256,10 @@ JohtoGrassWildMons:
 	dbw 2, HOOTHOOT
 	dbw 2, RATTATA
 	dbw 3, HOOTHOOT
-	dbw 3, RATTATA
+	dbw 3, POOCHYENA
 	dbw 2, RATTATA
 	dbw 3, HOOTHOOT
-	dbw 3, HOOTHOOT
+	dbw 3, POOCHYENA
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_30
@@ -1284,9 +1284,9 @@ JohtoGrassWildMons:
 	dbw 3, SPINARAK
 	dbw 3, HOOTHOOT
 	dbw 4, POLIWAG
-	dbw 4, HOOTHOOT
+	dbw 4, POOCHYENA
 	dbw 3, ZUBAT
-	dbw 4, HOOTHOOT
+	dbw 4, POOCHYENA
 	dbw 4, HOOTHOOT
 	end_grass_wildmons
 
@@ -1301,7 +1301,7 @@ JohtoGrassWildMons:
 	dbw 5, HOPPIP
 	dbw 5, HOPPIP
 	; day
-	dbw 4, PIDGEY
+	dbw 4, SHROOMISHF
 	dbw 4, CATERPIE
 	dbw 5, BELLSPROUT
 	dbw 5, PIDGEY
@@ -1378,23 +1378,23 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 10, SNUBBULL
-	dbw 11, RATTATA
-	dbw 12, PIDGEY
+	dbw 11, MASCHIEFF
+	dbw 12, ELECTRIKE
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
 	dbw 10, DITTO
 	; day
 	dbw 10, SNUBBULL
-	dbw 11, RATTATA
-	dbw 12, PIDGEY
+	dbw 11, MASCHIEFF
+	dbw 12, ELECTRIKE
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
 	dbw 10, DITTO
 	dbw 10, DITTO
 	; nite
 	dbw 12, DROWZEE
-	dbw 11, RATTATA
+	dbw 11, MASCHIEFF
 	dbw 12, HOOTHOOT
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
@@ -1406,7 +1406,7 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 12, SNUBBULL
-	dbw 14, PIDGEY
+	dbw 14, ELECTRIKE
 	dbw 13, GROWLITHE
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
@@ -1414,7 +1414,7 @@ JohtoGrassWildMons:
 	dbw 12, YANMA
 	; day
 	dbw 12, SNUBBULL
-	dbw 14, PIDGEY
+	dbw 14, ELECTRIKE
 	dbw 13, GROWLITHE
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
