@@ -252,6 +252,8 @@ FirstEvoStages::
 	dw LUGIA
 	dw HO_OH
 	dw CELEBI
+	dw POOCHYENA
+	dw POOCHYENA
 	dw WINGULL
 	dw WINGULL	
 	dw ELECTRIKE
