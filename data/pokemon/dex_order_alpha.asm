@@ -148,6 +148,7 @@ AlphabeticalPokedexOrder:
 	dw METAPOD
 	dw MEW
 	dw MEWTWO
+	dw MIGHTYENA
 	dw MILTANK
 	dw MISDREAVUS
 	dw MOLTRES
@@ -186,6 +187,7 @@ AlphabeticalPokedexOrder:
 	dw POLIWHIRL
 	dw POLIWRATH
 	dw PONYTA
+	dw POOCHYENA
 	dw PORYGON
 	dw PORYGON2
 	dw PRIMEAPE
