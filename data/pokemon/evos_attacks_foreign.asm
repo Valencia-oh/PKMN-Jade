@@ -23,7 +23,7 @@ EvosAttacksPointers3::
 
 
 PoochyenaEvosAttacks:
-	dbbw EVOLVE_LEVEL, 18, MABOSSTIFF
+	dbbw EVOLVE_LEVEL, 18, MIGHTYENA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, GROWL
