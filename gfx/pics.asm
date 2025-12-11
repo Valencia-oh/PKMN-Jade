@@ -32,6 +32,10 @@ VenusaurFrontpic:    INCBIN "gfx/pokemon/venusaur/front.animated.2bpp.lz"
 EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 TyphlosionFrontpic:  INCBIN "gfx/pokemon/typhlosion/front.animated.2bpp.lz"
+WingullFrontpic:     INCBIN "gfx/pokemon/wingull/front.animated.2bpp.lz"
+WingullBackpic:      INCBIN "gfx/pokemon/wingull/back.2bpp.lz"
+PelipperFrontpic:    INCBIN "gfx/pokemon/pelipper/front.animated.2bpp.lz"
+PelipperBackpic:     INCBIN "gfx/pokemon/pelipper/back.2bpp.lz"
 
 
 SECTION "Pics 2", ROMX
@@ -711,10 +715,6 @@ UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
-WingullFrontpic:     INCBIN "gfx/pokemon/wingull/front.animated.2bpp.lz"
-WingullBackpic:      INCBIN "gfx/pokemon/wingull/back.2bpp.lz"
-PelipperFrontpic:    INCBIN "gfx/pokemon/pelipper/front.animated.2bpp.lz"
-PelipperBackpic:     INCBIN "gfx/pokemon/pelipper/back.2bpp.lz"
 ElectrikeFrontpic:   INCBIN "gfx/pokemon/electrike/front.animated.2bpp.lz"
 ElectrikeBackpic:    INCBIN "gfx/pokemon/electrike/back.2bpp.lz"
 ManectricFrontpic:   INCBIN "gfx/pokemon/manectric/front.animated.2bpp.lz"
