@@ -202,7 +202,6 @@ ROMX $41
 ROMX $42
 	"Intro Logo"
 	"Credits"
-	"Base Stats"
 ROMX $43
 	"Title"
 	"Mon Icons 3"
@@ -269,6 +268,7 @@ ROMX $5e
 ROMX $5f
 	"mobile5F"
 	"Unused Egg Pic"
+	"Base Stats"
 ROMX $60
 	"Map Scripts 13"
 	"Pokedex Entries 001-064"
