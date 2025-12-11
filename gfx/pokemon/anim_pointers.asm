@@ -264,5 +264,7 @@ AnimationPointers:
 	dw AppletunAnimation
 	dw FlappleAnimation
 	dw FalinksAnimation
+	dw MaschiffAnimation
+	dw MabosstiffAnimation
 	dw ErsrheadbbyAnimation
 	assert_table_length NUM_POKEMON
