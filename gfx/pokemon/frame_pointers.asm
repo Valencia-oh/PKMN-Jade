@@ -255,6 +255,8 @@ FramesPointers:
 	dba MightyenaFrames
 	dba WingullFrames
 	dba PelipperFrames
+	dba ShroomishFrames
+	dba BreloomFrames
 	dba ElectrikeFrames
 	dba ManectricFrames
 	dba HonchkrowFrames
