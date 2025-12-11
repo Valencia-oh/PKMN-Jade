@@ -255,6 +255,8 @@ AnimationPointers:
 	dw MightyenaAnimation
 	dw WingullAnimation
 	dw PelipperAnimation
+	dw ShroomishAnimation
+	dw BreloomAnimation
 	dw ElectrikeAnimation
 	dw ManectricAnimation
 	dw HonchkrowAnimation
