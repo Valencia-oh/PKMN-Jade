@@ -259,6 +259,8 @@ PokemonNames::
 	dname "MIGHTYENA"
 	dname "WINGULL"
 	dname "PELIPPER"
+	dname "SHROOMISH"
+	dname "BRELOOM"
 	dname "ELECTRIKE"
 	dname "MANECTRIC"
 	dname "HONCHKROW"
