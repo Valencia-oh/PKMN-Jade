@@ -264,5 +264,7 @@ BitmasksPointers:
 	dw AppletunBitmasks
 	dw FlappleBitmasks
 	dw FalinksBitmasks
+	dw MaschiffBitmasks
+	dw MabosstiffBitmasks
 	dw ErsrheadbbyBitmasks
 	assert_table_length NUM_POKEMON
