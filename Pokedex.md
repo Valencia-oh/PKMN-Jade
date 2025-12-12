@@ -32,7 +32,7 @@ This is a guide to the locations for all pokemon that have either been added or 
   - Found in the Ice Path
 - #### Mamoswine
   - Ice/Ground Type
-  - Evolves from Piloswine at lvl 55
+  - Evolves from Piloswine at lvl 45
   - Found in the Ice Path
 - #### Poochyena
   - Dark type 
