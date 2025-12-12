@@ -63,6 +63,7 @@ AlphabeticalPokedexOrder:
 	dw ELEKID
 	dw ENTEI
 	dw ERSRHEADBBY
+	dw ESPATHRA
 	dw ESPEON
 	dw EXEGGCUTE
 	dw EXEGGUTOR
@@ -73,6 +74,7 @@ AlphabeticalPokedexOrder:
 	dw FLAAFFY
 	dw FLAPPLE
 	dw FLAREON
+	dw FLITTLE
 	dw FORRETRESS
 	dw FURRET
 	dw GALVANTULA
