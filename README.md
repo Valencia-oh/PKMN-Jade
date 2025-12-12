@@ -4,7 +4,7 @@ Labradorite is in development romhack based off the CSE engine for Pokecrystal w
 
 ## Implemented Features
 - Removed Trade+Item Evos, now just use the item
-- 21 new pokemon, bringing the total to 272 (Applin, Wingull, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, and Falinks lines + Mamoswine, Honchkrow and Togekiss)
+- 22 new pokemon, bringing the total to 272 (Applin, Wingull, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, and Falinks lines + Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
 - HMs done through party not attacks (added with CSE)
 - overhauled PC (added with CSE)
 - Fairy Type
@@ -39,8 +39,9 @@ Labradorite is in development romhack based off the CSE engine for Pokecrystal w
 - Bellsprout and Oddish -- Added to the Sprout Tower in the Morning and Day
 - Meowth -- moved to daytime on route 38
 - Larvitar -- added to both sides of Dark Cave
+- Xatu -- added on Route 42
 - Crobat --  added to Route 42 at Night and Ice Path
-- Girafarig -- added back to Route 43
+- Girafarig -- added back to Route 43 also route 42 during Morning and Day
 - Ampharos -- added to Route 43 in the Morning
 - Stantler -- added to Route 44 in Morning and Day
 - Poliwhirl -- added to Route 44 in Day
@@ -71,6 +72,6 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 ### Credits 
 - The majority of systems would not work without the use of the CSE engine, so shout out to all the devs on there
 - Falinks, Volcarona, and Applin line Sprites are from Sage Deoxys
-- nuukiie made the Togekiss, Mamoswine, and Honchkrow spites plus the Poochyena, Breloom, Galvantula, Manectric, and Wingull lines
+- nuukiie made the Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Poochyena, Breloom, Galvantula, Manectric, and Wingull lines
 - Maschiff and Mabosstiff use edited versions of Egg3ggEgg's sprites
 - Pokecrystal devs for making the code so easy to use and providing numerous incredibly helpful tutorials
