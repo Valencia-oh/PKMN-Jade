@@ -75,4 +75,5 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - nuukiie made the Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Poochyena, Breloom, Galvantula, Manectric, and Wingull lines
 - Maschiff and Mabosstiff use edited versions of Egg3ggEgg's sprites
 - Crystal Legacy Team for inspiration on some pokemon locations
+- Polished Crystal and Emerald Seaglass for giving me inspiration to start this project
 - Pokecrystal devs for making this posible, as well as the code so easy to use and providing numerous incredibly helpful tutorials
