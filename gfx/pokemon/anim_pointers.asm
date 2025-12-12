@@ -270,6 +270,7 @@ AnimationPointers:
 	dw AppletunAnimation
 	dw FlappleAnimation
 	dw FalinksAnimation
+	dw WyrdeerAnimation
 	dw MaschiffAnimation
 	dw MabosstiffAnimation
 	dw ErsrheadbbyAnimation
