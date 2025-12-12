@@ -49,7 +49,7 @@ Labradorite is in development romhack based off the CSE engine for Pokecrystal w
 - Houndoom -- added to Route 45 in the Day
 - UrsaRing -- added to Route 45 in the Day
 - Gligar -- Made available all times in Route 45
-- Primape -- Added to route 45 in the Day
+- Primeape -- Added to route 45 in the Day
 - Jynx, Sneasel, Delibird and Piloswine -- Ice Path Spawns Increased
 
 
