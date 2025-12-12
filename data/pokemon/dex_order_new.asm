@@ -66,6 +66,8 @@ NewPokedexOrder:
 	dw HAUNTER
 	dw GENGAR
 	dw UNOWN
+	dw BRONZOR
+	dw BRONZONG
 	dw ONIX
 	dw STEELIX
 	dw BELLSPROUT
