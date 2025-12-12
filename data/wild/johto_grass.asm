@@ -593,57 +593,57 @@ JohtoGrassWildMons:
 	def_grass_wildmons MOUNT_MORTAR_1F_OUTSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 14, RATTATA
-	dbw 13, ZUBAT
-	dbw 14, MACHOP
-	dbw 13, GOLBAT
-	dbw 14, GEODUDE
-	dbw 16, RATICATE
-	dbw 16, RATICATE
+	dbw 24, RATICATE
+	dbw 23, GOLBAT
+	dbw 24, MACHOP
+	dbw 23, GOLBAT
+	dbw 24, GRAVELLER
+	dbw 26, MAGMAR
+	dbw 26, PRIMEAPE
 	; day
-	dbw 14, RATTATA
-	dbw 13, ZUBAT
-	dbw 14, MACHOP
-	dbw 13, GOLBAT
-	dbw 14, GEODUDE
-	dbw 16, RATICATE
-	dbw 16, RATICATE
+	dbw 24, MAGMAR
+	dbw 23, GOLBAT
+	dbw 24, MACHOP
+	dbw 23, GOLBAT
+	dbw 24, GRAVELLER
+	dbw 26, RATICATE
+	dbw 26, RATICATE
 	; nite
-	dbw 14, RATTATA
-	dbw 13, ZUBAT
-	dbw 14, MARILL
-	dbw 13, GOLBAT
-	dbw 14, GEODUDE
-	dbw 16, RATICATE
-	dbw 16, RATICATE
+	dbw 24, HOUNDOUR
+	dbw 23, RATICATE
+	dbw 24, MARILL
+	dbw 23, GOLBAT
+	dbw 24, GRAVELLER
+	dbw 26, MAGMAR
+	dbw 26, HOUNDOUR
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_1F_INSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 13, GEODUDE
-	dbw 14, RATTATA
-	dbw 15, MACHOP
-	dbw 14, RATICATE
-	dbw 15, ZUBAT
-	dbw 15, LARVESTA
-	dbw 15, GOLBAT
+	dbw 23, GRAVELLER
+	dbw 24, MAGMAR
+	dbw 25, MACHOP
+	dbw 24, RATICATE
+	dbw 25, PRIMEAPE
+	dbw 25, LARVESTA
+	dbw 25, GOLBAT
 	; day
-	dbw 13, GEODUDE
-	dbw 14, RATTATA
-	dbw 15, MACHOP
-	dbw 14, RATICATE
-	dbw 15, ZUBAT
-	dbw 15, LARVESTA
-	dbw 15, GOLBAT
+	dbw 23, GRAVELLER
+	dbw 24, MAGMAR
+	dbw 25, MACHOP
+	dbw 24, RATICATE
+	dbw 25, ZUBAT
+	dbw 25, LARVESTA
+	dbw 25, GOLBAT
 	; nite
-	dbw 13, GEODUDE
-	dbw 14, RATTATA
-	dbw 15, RATICATE
-	dbw 14, ZUBAT
-	dbw 15, MARILL
-	dbw 15, LARVESTA
-	dbw 15, GOLBAT
+	dbw 23, GRAVELLER
+	dbw 24, RATICATE
+	dbw 25, MAGMAR
+	dbw 24, GLIGAR
+	dbw 25, AZUMARILL
+	dbw 25, LARVESTA
+	dbw 25, GOLBAT
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_2F_INSIDE
@@ -651,7 +651,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 31, GRAVELER
 	dbw 32, MACHOKE
-	dbw 31, GEODUDE
+	dbw 31, MAGMAR
 	dbw 30, RATICATE
 	dbw 28, MACHOP
 	dbw 30, LARVESTA
@@ -659,17 +659,17 @@ JohtoGrassWildMons:
 	; day
 	dbw 31, GRAVELER
 	dbw 32, MACHOKE
-	dbw 31, GEODUDE
+	dbw 31, MAGMAR
 	dbw 30, RATICATE
-	dbw 28, MACHOP
+	dbw 28, GLIGAR
 	dbw 30, LARVESTA
 	dbw 30, GOLBAT
 	; nite
 	dbw 31, GRAVELER
-	dbw 31, GEODUDE
+	dbw 31, MAGMAR
 	dbw 30, RATICATE
 	dbw 30, GOLBAT
-	dbw 28, MARILL
+	dbw 28, AZUMARILL
 	dbw 32, LARVESTA
 	dbw 32, GOLBAT
 	end_grass_wildmons
@@ -677,29 +677,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons MOUNT_MORTAR_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 15, ZUBAT
-	dbw 17, LARVESTA
-	dbw 17, GOLBAT
-	dbw 16, MACHOP
-	dbw 16, GEODUDE
-	dbw 18, RATICATE
-	dbw 18, RATICATE
+	dbw 25, GLIGAR
+	dbw 27, LARVESTA
+	dbw 27, GOLBAT
+	dbw 26, MACHOP
+	dbw 26, GEODUDE
+	dbw 28, PRIMEAPE
+	dbw 28, RATICATE
 	; day
-	dbw 15, ZUBAT
-	dbw 17, LARVESTA
-	dbw 17, GOLBAT
-	dbw 16, MACHOP
-	dbw 16, GEODUDE
-	dbw 18, RATICATE
-	dbw 18, RATICATE
+	dbw 25, ZUBAT
+	dbw 27, LARVESTA
+	dbw 27, GOLBAT
+	dbw 26, MACHOP
+	dbw 26, GEODUDE
+	dbw 28, RATICATE
+	dbw 28, RATICATE
 	; nite
-	dbw 15, ZUBAT
-	dbw 17, LARVESTA
-	dbw 17, GOLBAT
-	dbw 16, MARILL
-	dbw 16, GEODUDE
-	dbw 18, RATICATE
-	dbw 18, RATICATE
+	dbw 25, ZUBAT
+	dbw 27, LARVESTA
+	dbw 27, GOLBAT
+	dbw 26, AZUMARILL
+	dbw 26, GEODUDE
+	dbw 28, RATICATE
+	dbw 28, RATICATE
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_1F
@@ -1546,7 +1546,7 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 31, ARBOK
-	dbw 32, FEAROW
+	dbw 32, SANDSLASH
 	dbw 27, GIRAFARIG
 	dbw 27, RATICATE
 	dbw 35, ARBOK
@@ -1554,7 +1554,7 @@ JohtoGrassWildMons:
 	dbw 32, XATU
 	; day
 	dbw 31, ARBOK
-	dbw 32, FEAROW
+	dbw 32, SANDSLASH
 	dbw 27, GIRAFARIG
 	dbw 27, RATICATE
 	dbw 35, ARBOK
@@ -1676,8 +1676,8 @@ JohtoGrassWildMons:
 	dbw 2, GEODUDE
 	dbw 2, RATTATA
 	dbw 3, GEODUDE
-	dbw 3, RATTATA
-	dbw 2, RATTATA
+	dbw 3, POOCHYENA
+	dbw 2, POOCHYENA
 	dbw 2, RATTATA
 	dbw 2, RATTATA
 	end_grass_wildmons
