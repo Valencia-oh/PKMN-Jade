@@ -1,0 +1,27 @@
+#Pokedex for Johto
+New Pokemon:
+- #### Poochyena
+  - Found on routes 29, 30, 31, 32, 33, and 46 at Night
+- #### Mightyena
+  - Evolves from Poochyena at lvl 18
+  - Found on routes 42, 44, and 45 at Night
+- #### WINGULL
+- #### PELIPPER
+- #### SHROOMISH
+- #### BRELOOM
+- #### ELECTRIKE
+- #### MANECTRIC
+- #### HONCHKROW
+- #### TOGEKISS
+- #### MAMOSWINE
+- #### JOLTIK
+- #### GALVANTULA
+- #### LARVESTA
+- #### vVOLCARONA
+- #### APPLIN
+- #### APPLETUN
+- #### FLAPPLE
+- #### FALINKS
+- #### WYRDEER
+- #### MASCHIFF
+- #### MABOSSTIFF
