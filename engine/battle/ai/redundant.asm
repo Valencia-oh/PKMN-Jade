@@ -43,7 +43,6 @@ AI_Redundant:
 	dbw EFFECT_SYNTHESIS,    .Synthesis
 	dbw EFFECT_MOONLIGHT,    .Moonlight
 	dbw EFFECT_SWAGGER,      .Swagger
-	dbw EFFECT_ROOST,        .Roost
 	dbw EFFECT_FUTURE_SIGHT, .FutureSight
 	db -1
 
@@ -185,7 +184,6 @@ AI_Redundant:
 .MorningSun:
 .Synthesis:
 .Moonlight:
-.Roost:
 	farcall AICheckEnemyMaxHP
 	jr nc, .NotRedundant
 
