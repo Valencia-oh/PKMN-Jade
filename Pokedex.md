@@ -9,10 +9,10 @@
 - #### Togekiss
   - Fairy/Flying Type
   - Evolves from Togetic when given a Shiny Stone
-- #### STANTLER
+- #### Stantler
   - Normal/Psychic Type
   - Found on route 37 at Night and 44 in the Morning
-- #### WYRDEER
+- #### Wyrdeer
   - Ice/Psychic Type
   - Found on Mt. Silver
 - #### Swinub
@@ -70,7 +70,7 @@
   - Evolves from Applin when given a Sweet Apple 
 - #### FLAPPLE
   - Evolves from Applin when given a Tart Apple 
-- #### FALINKS
+- #### Falinks
   - Fighting/Steel Type
   - Does Not Evolve
   - Found on Route 43
