@@ -251,7 +251,7 @@ JohtoWaterWildMons:
 	db 6 percent ; encounter rate
 	dbw 33, GYARADOS
 	dbw 27, MAGIKARP
-	dbw 10, Totodile
+	dbw 10, TOTODILE
 	end_water_wildmons
 
 	def_water_wildmons BLACKTHORN_CITY
