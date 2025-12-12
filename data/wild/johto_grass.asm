@@ -571,7 +571,7 @@ JohtoGrassWildMons:
 	dbw 7, KAKUNA
 	dbw 8, PIDGEY
 	dbw 6, PARAS
-	dbw 7, CHICORITA
+	dbw 7, CHIKORITA
 	; day
 	dbw 8, APPLIN
 	dbw 7, SHROOMISH
@@ -579,7 +579,7 @@ JohtoGrassWildMons:
 	dbw 7, KAKUNA
 	dbw 8, PIDGEY
 	dbw 6, PARAS
-	dbw 7, BULBASUAR
+	dbw 7, BULBASAUR
 	; nite
 	dbw 8, ODDISH
 	dbw 9, VENONAT
