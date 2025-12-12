@@ -65,7 +65,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
   - sprites downloaded but are not yet implemented - Paldean Wooper, Clodsire, Pikipek, Trumbeak, Toucannon, Flittle, Espathra 
   - Need to get sprites for Dripplin and Hyrdapple
   - Requested Mons: Malamar, sigilyph, Lurantis (and all evos and pre-evos thereof)
-  - Future Evos still not added: Leafeon, Glaceon, Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile, Ursaluna, Wyrdeer
+  - Future Evos still not added: Leafeon, Glaceon, Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile, Ursaluna
     - Future Babies/Pre-evos are unlikely
   - Regional Varients Planned: Alolan Vulpix + Ninetails, Alolan Raichu, Hisuian Growelith + Arcanine
 - Link Cable
