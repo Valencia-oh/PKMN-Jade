@@ -210,7 +210,7 @@ Rival1Group:
 	dw MAGNEMITE
 	dw TACKLE, THUNDERSHOCK, SUPERSONIC, SONICBOOM
 	db 20
-	dw ZUBAT
+	dw GOLBAT
 	dw LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
 	db 22
 	dw BAYLEEF
@@ -226,7 +226,7 @@ Rival1Group:
 	dw MAGNEMITE
 	dw TACKLE, THUNDERSHOCK, SUPERSONIC, SONICBOOM
 	db 20
-	dw ZUBAT
+	dw GOLBAT
 	dw LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
 	db 22
 	dw QUILAVA
@@ -242,7 +242,7 @@ Rival1Group:
 	dw MAGNEMITE
 	dw TACKLE, THUNDERSHOCK, SUPERSONIC, SONICBOOM
 	db 20
-	dw ZUBAT
+	dw GOLBAT
 	dw LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
 	db 22
 	dw CROCONAW
@@ -1875,27 +1875,29 @@ PokemaniacGroup:
 
 	next_list_item ; POKEMANIAC (4)
 	db "SHANE@", TRAINERTYPE_NORMAL
-	db 16
+	db 22
 	dw NIDORINA
-	db 16
+	db 21
 	dw NIDORINO
+	db 24
+	dw FLAFFY
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (5)
 	db "BEN@", TRAINERTYPE_NORMAL
-	db 19
+	db 30
 	dw SLOWBRO
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (6)
 	db "BRENT@", TRAINERTYPE_NORMAL
-	db 19
+	db 32
 	dw LICKITUNG
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (7)
 	db "RON@", TRAINERTYPE_NORMAL
-	db 19
+	db 35
 	dw NIDOKING
 	db -1 ; end
 
@@ -2529,20 +2531,24 @@ FisherGroup:
 
 	next_list_item ; FISHER (6)
 	db "MARVIN@", TRAINERTYPE_NORMAL
-	db 10
-	dw MAGIKARP
-	db 10
+	db 27
+	dw LANTURN
+	db 35
 	dw GYARADOS
-	db 15
-	dw MAGIKARP
-	db 15
+	db 30
+	dw SEEL
+	db 25
 	dw GYARADOS
 	db -1 ; end
 
 	next_list_item ; FISHER (7)
 	db "TULLY@", TRAINERTYPE_NORMAL
-	db 18
+	db 28
 	dw QWILFISH
+	db 29
+	dw MANTINE
+	db 25
+	dw GOLDEEN
 	db -1 ; end
 
 	next_list_item ; FISHER (8)
@@ -3503,11 +3509,11 @@ HikerGroup:
 
 	next_list_item ; HIKER (6)
 	db "BENJAMIN@", TRAINERTYPE_NORMAL
-	db 14
-	dw DIGLETT
-	db 14
+	db 23
+	dw SANDSLASH
+	db 22
 	dw GEODUDE
-	db 16
+	db 21
 	dw DUGTRIO
 	db -1 ; end
 
@@ -4340,9 +4346,13 @@ PicnickerGroup:
 
 	next_list_item ; PICNICKER (20)
 	db "TIFFANY@", TRAINERTYPE_MOVES
-	db 20
+	db 30
 	dw CLEFAIRY
 	dw ENCORE, SING, DOUBLESLAP, MINIMIZE
+	db 30
+	dw MANECTRIC
+	db 30
+	dw HOUNDOUR
 	db -1 ; end
 
 	next_list_item ; PICNICKER (21)
@@ -4568,12 +4578,12 @@ CamperGroup:
 
 	next_list_item ; CAMPER (19)
 	db "SPENCER@", TRAINERTYPE_NORMAL
-	db 17
-	dw SANDSHREW
-	db 17
+	db 29
+	dw MIGHTYENA
+	db 31
 	dw SANDSLASH
-	db 19
-	dw ZUBAT
+	db 25
+	dw GOLBAT
 	db -1 ; end
 
 	next_list_item ; CAMPER (20)
