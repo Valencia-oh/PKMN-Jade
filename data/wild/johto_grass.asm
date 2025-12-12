@@ -1604,7 +1604,7 @@ JohtoGrassWildMons:
 	dbw 33, TANGELA
 	dbw 38, LICKITUNG
 	dbw 37, WEEPINBELL
-	dbw 39, WEEPINBELL
+	dbw 39, BRELOOM
 	dbw 36, LICKITUNG
 	dbw 35, MANECTRIC
 	dbw 36, STANTLER
@@ -1614,7 +1614,7 @@ JohtoGrassWildMons:
 	dbw 37, POLIWHIRL
 	dbw 39, WEEPINBELL
 	dbw 36, LICKITUNG
-	dbw 35, LICKITUNG
+	dbw 35, BRELOOM
 	dbw 36, LICKITUNG
 	; nite
 	dbw 33, TANGELA
