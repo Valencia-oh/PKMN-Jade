@@ -1,4 +1,4 @@
-# Pokedex for Johto
+# Pokedex for Johto (only Johto locations will be shown)
 ## New Pokemon (And their pre-evos):
 - #### Murkrow
   - Dark/Flying Type
@@ -66,9 +66,9 @@
   - Evolves from Larvesta at lvl 50 
 - #### Applin
   - Found in Ilex forest in the Morning and Day 
-- #### APPLETUN
+- #### Appletun
   - Evolves from Applin when given a Sweet Apple 
-- #### FLAPPLE
+- #### Flapple
   - Evolves from Applin when given a Tart Apple 
 - #### Falinks
   - Fighting/Steel Type
