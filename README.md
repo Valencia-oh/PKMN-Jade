@@ -1,6 +1,6 @@
 # Pokemon Labradorite
 
-Labradorite is in development romhack based off the CSE engine for Pokecrystal with the goal of creating a johto with greateer pokemon variety through adding many pokemon from future generations to the game.
+Labradorite is an in development romhack based off the CSE engine for Pokecrystal with the goal of creating a johto with greateer pokemon variety through adding many pokemon from future generations to the game, reworking existing route spawns, and eventually adding in several new locations.
 
 ## Implemented Features
 - Removed Trade+Item Evos, now just use the item
