@@ -322,7 +322,7 @@ WyrdeerEvosAttacks:
 	dbw 1, HYPNOSIS
 	dbw 1, STOMP
 	dbw 1, SAND_ATTACK
-	dbw 36, PSYCHIC
+	dbw 36, PSYCHIC_M
 	dbw 38, BLIZZARD
 	dbw 40, TAKE_DOWN
 	dbw 49, CONFUSE_RAY
