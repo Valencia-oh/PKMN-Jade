@@ -270,6 +270,8 @@ MonMenuIconPals:
 	icon_pals GREEN,  BLUE   ; ELECTRIKE
 	icon_pals BLUE,   GREEN  ; MANECTRIC
 	icon_pals BLUE,   PINK   ; HONCHKROW
+	icon_pals TEAL,  GREEN  ; BRONZOR
+	icon_pals TEAL,   GREEN  ; BRONZONG
 	icon_pals RED,    BROWN  ; TOGEKISS
 	icon_pals BROWN,  GREEN  ; MAMOSWINE
 	icon_pals GREEN,  BLUE   ; JOLTIK
@@ -283,5 +285,7 @@ MonMenuIconPals:
 	icon_pals GRAY,   GREEN  ; WYRDEER
 	icon_pals BROWN,  GREEN  ; MASCHIFF
 	icon_pals GRAY,   GREEN  ; MABOSSTIFF
+	icon_pals BROWN,  GREEN  ; FLITTLE
+	icon_pals BROWN,  GREEN  ; ESPATHRA
 	icon_pals GRAY,   BROWN  ; ERSRHEADBBY
 	assert_table_length NUM_POKEMON
