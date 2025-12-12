@@ -638,7 +638,7 @@ JohtoGrassWildMons:
 	dbw 25, GOLBAT
 	; nite
 	dbw 23, GRAVELER
-	dbw 24, RATICATE
+	dbw 24, SLUGMA
 	dbw 25, MAGMAR
 	dbw 24, GLIGAR
 	dbw 25, AZUMARILL
@@ -667,7 +667,7 @@ JohtoGrassWildMons:
 	; nite
 	dbw 31, GRAVELER
 	dbw 31, MAGMAR
-	dbw 30, RATICATE
+	dbw 30, SLUGMA
 	dbw 30, GOLBAT
 	dbw 28, AZUMARILL
 	dbw 32, LARVESTA
@@ -698,8 +698,8 @@ JohtoGrassWildMons:
 	dbw 27, GOLBAT
 	dbw 26, AZUMARILL
 	dbw 26, GEODUDE
-	dbw 28, RATICATE
-	dbw 28, RATICATE
+	dbw 28, SLUGMA
+	dbw 28, SLUGMA
 	end_grass_wildmons
 
 	def_grass_wildmons ICE_PATH_1F
