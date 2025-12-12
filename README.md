@@ -10,7 +10,8 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 - Fairy Type
 - Expanded Gym teams to feature new pokemon for Falkner, Bugsy, Morty, and Pryce (with Whitney also getting a snubbull)
 - A surprise near Ecruteak City
-  
+
+- Pokemon Locations in Johto can be found here: in the (Pokedex tab) [https://github.com/Valencia-oh/PKMN-Labradorite/blob/core/Pokedex.md]
 ## New Pokemon Locations:
 #### Future Pokemon Locations
 (v0.1-)
