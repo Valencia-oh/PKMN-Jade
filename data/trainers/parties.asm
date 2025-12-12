@@ -1001,7 +1001,7 @@ BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (1)
 	db "ROD@", TRAINERTYPE_NORMAL
 	db 10
-	dw HOOT-HOOT
+	dw HOOTHOOT
 	db 11
 	dw PIDGEY
 	db -1 ; end
