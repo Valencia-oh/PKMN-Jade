@@ -263,6 +263,8 @@ PokedexDataPointerTable:
 	dba ElectrikePokedexEntry
 	dba ManectricPokedexEntry
 	dba HonchkrowPokedexEntry
+	dba BronzorPokedexEntry
+	dba BronzongPokedexEntry
 	dba TogekissPokedexEntry
 	dba MamoswinePokedexEntry
 	dba JoltikPokedexEntry
@@ -276,5 +278,7 @@ PokedexDataPointerTable:
 	dba WyrdeerPokedexEntry
 	dba MaschiffPokedexEntry
 	dba MabosstiffPokedexEntry
+	dba FlittlePokedexEntry
+	dba EspathraPokedexEntry
 	dba ErsrheadbbyPokedexEntry
 	assert_table_length NUM_POKEMON
