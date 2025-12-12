@@ -270,6 +270,7 @@ BitmasksPointers:
 	dw AppletunBitmasks
 	dw FlappleBitmasks
 	dw FalinksBitmasks
+	dw WyrdeerBitmasks
 	dw MaschiffBitmasks
 	dw MabosstiffBitmasks
 	dw ErsrheadbbyBitmasks
