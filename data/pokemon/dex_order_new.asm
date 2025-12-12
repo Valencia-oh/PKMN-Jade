@@ -24,6 +24,8 @@ NewPokedexOrder:
 	dw RATICATE
 	dw SENTRET
 	dw FURRET
+	dw PHANPY
+	dw DONPHAN
 	dw PICHU
 	dw PIKACHU
 	dw RAICHU
@@ -43,6 +45,8 @@ NewPokedexOrder:
 	dw ZUBAT
 	dw GOLBAT
 	dw CROBAT
+	dw JOLTIK
+	dw GALVANTULA
 	dw CLEFFA
 	dw CLEFAIRY
 	dw CLEFABLE
@@ -57,6 +61,11 @@ NewPokedexOrder:
 	dw EKANS
 	dw ARBOK
 	dw DUNSPARCE
+	dw TEDDIURSA
+	dw URSARING
+	dw LARVITAR
+	dw PUPITAR
+	dw TYRANITAR
 	dw MAREEP
 	dw FLAAFFY
 	dw AMPHAROS
@@ -86,6 +95,7 @@ NewPokedexOrder:
 	dw POLITOED
 	dw MAGIKARP
 	dw GYARADOS
+	dw FALINKS
 	dw GOLDEEN
 	dw SEAKING
 	dw SLOWPOKE
@@ -142,12 +152,16 @@ NewPokedexOrder:
 	dw NINETALES
 	dw GROWLITHE
 	dw ARCANINE
+	dw MASCHIFF
+	dw MABOSSTIFF
 	dw STANTLER
 	dw WYRDEER
 	dw MARILL
 	dw AZUMARILL
 	dw DIGLETT
 	dw DUGTRIO
+	dw LARVESTA
+	dw VOLCARONA
 	dw MANKEY
 	dw PRIMEAPE
 	dw MEOWTH
@@ -178,6 +192,8 @@ NewPokedexOrder:
 	dw QWILFISH
 	dw TENTACOOL
 	dw TENTACRUEL
+	dw WINGULL
+	dw PELIPPER
 	dw KRABBY
 	dw KINGLER
 	dw SHUCKLE
@@ -208,10 +224,6 @@ NewPokedexOrder:
 	dw SWINUB
 	dw PILOSWINE
 	dw MAMOSWINE
-	dw TEDDIURSA
-	dw URSARING
-	dw PHANPY
-	dw DONPHAN
 	dw MANTINE
 	dw SKARMORY
 	dw DODUO
@@ -260,22 +272,12 @@ NewPokedexOrder:
 	dw DRATINI
 	dw DRAGONAIR
 	dw DRAGONITE
-	dw LARVITAR
-	dw PUPITAR
-	dw TYRANITAR
 	dw LUGIA
 	dw HO_OH
 	dw MEWTWO
 	dw MEW
 	dw CELEBI
-	dw WINGULL
-	dw PELIPPER
-	dw JOLTIK
-	dw GALVANTULA
-	dw LARVESTA
-	dw VOLCARONA
-	dw FALINKS
-	dw MASCHIFF
-	dw MABOSSTIFF
+	dw FLITTLE
+	dw ESPATHRA
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
