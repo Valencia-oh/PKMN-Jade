@@ -1589,7 +1589,7 @@ CooltrainerFGroup:
 	db 36
 	dw DRAGONAIR
 	db 36
-	dw VICTREEBELL
+	dw VICTREEBEL
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (5)
