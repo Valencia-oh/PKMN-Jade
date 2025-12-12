@@ -273,6 +273,7 @@ FirstEvoStages::
 	dw APPLIN
 	dw APPLIN
 	dw FALINKS
+	dw STANTLER
 	dw MASCHIFF
 	dw MASCHIFF
 	dw ERSRHEADBBY
