@@ -1418,12 +1418,14 @@ CooltrainerMGroup:
 
 	next_list_item ; COOLTRAINERM (8)
 	db "RYAN@", TRAINERTYPE_MOVES
-	db 25
+	db 35
 	dw PIDGEOT
 	dw SAND_ATTACK, QUICK_ATTACK, WHIRLWIND, WING_ATTACK
-	db 27
+	db 37
 	dw ELECTABUZZ
 	dw THUNDERPUNCH, LIGHT_SCREEN, SWIFT, SCREECH
+	db 37
+	dw MAGMAR
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (9)
@@ -1608,12 +1610,12 @@ CooltrainerFGroup:
 
 	next_list_item ; COOLTRAINERF (7)
 	db "KELLY@", TRAINERTYPE_NORMAL
-	db 27
-	dw MARILL
-	db 24
+	db 30
+	dw AZUMARILL
+	db 34
 	dw WARTORTLE
-	db 24
-	dw WARTORTLE
+	db 36
+	dw BLASTOISE
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (8)
@@ -3570,12 +3572,14 @@ HikerGroup:
 
 	next_list_item ; HIKER (7)
 	db "ERIK@", TRAINERTYPE_NORMAL
-	db 24
-	dw MACHOP
-	db 27
-	dw GRAVELER
-	db 27
-	dw MACHOP
+	db 44
+	dw MACHOKE
+	db 47
+	dw GOLEM
+	db 37
+	dw MACHAMP
+	db 37
+	dw SANDSLASH
 	db -1 ; end
 
 	next_list_item ; HIKER (8)
@@ -3592,8 +3596,10 @@ HikerGroup:
 	db "PARRY@", TRAINERTYPE_NORMAL
 	db 35
 	dw ONIX
+	db 45
+	dw MAMOSWINE
 	db 33
-	dw SWINUB
+	dw STEELIX
 	db -1 ; end
 
 	next_list_item ; HIKER (10)
