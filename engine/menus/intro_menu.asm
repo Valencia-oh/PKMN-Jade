@@ -564,7 +564,7 @@ if !DEF(_DEBUG)
 	call FadeToWhite
 	call ClearTilemap
 
-	ld hl, WOOPER
+	ld hl, POOCHYENA
 	call GetPokemonIDFromIndex
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
@@ -626,7 +626,7 @@ OakText1:
 OakText2:
 	text_far _OakText2
 	text_asm
-	ld hl, WOOPER
+	ld hl, POOCHYENA
 	call GetPokemonIDFromIndex
 	call PlayMonCry
 	call WaitSFX
