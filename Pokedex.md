@@ -5,7 +5,13 @@
   - Found on routes 33, 34 and 38 at Night
 - #### Honchkrow
   - Dark/Flying Type
-  - Evolves from Murkrow when given a Dusk Stone 
+  - Evolves from Murkrow when given a Dusk Stone
+- #### Togepi
+  - Fairy Type
+  - Found on Route 34 in the day and Morning
+- #### Togetic
+  - Fairy/Flying Type
+  - Evolves from Togepi with high friendship
 - #### Togekiss
   - Fairy/Flying Type
   - Evolves from Togetic when given a Shiny Stone
@@ -14,6 +20,7 @@
   - Found on route 37 at Night and 44 in the Morning
 - #### Wyrdeer
   - Ice/Psychic Type
+  - Evolves from STantler at lvl 37
   - Found on Mt. Silver
 - #### Swinub
   - Ice/Ground Type
@@ -28,7 +35,7 @@
   - Found in the Ice Path
 - #### Poochyena
   - Dark type 
-  - Found on routes 29, 30, 31, 32, 33, and 46 at Night
+  - Found on routes 29, 30, 31, 32, 33, and (v0.2-) 46 at Night
 - #### Mightyena
   - Dark type 
   - Evolves from Poochyena at lvl 18
@@ -81,3 +88,67 @@
   - Dark Type
   - Evolves from Maschiff at lvl 30
   - Found on Route 42 at night
+
+(v0.3-) - unimplemented as of current
+Flittle, and Pikipek Lines
+
+## Old Pokemon with new locations:
+- #### Phanphy
+  - Found on route 46 during the Morning and Day
+- #### Mareep
+  - Found on Route 32 
+- #### Wooper
+  - Found outside the ruins of Alph and in Union Cave at Night as well as on Route 32 in the Day and at Night
+  - Found outside the ruins of Alph and in Union Cave while surfing all the time
+- #### Gastly
+  - Found on Routes 31, 32, 36, 38 and the Sprout and Tin Towers at night
+- #### Misdrevous
+  - Found on route 38 at night
+- #### Bellsprout
+  - Found on Routes 31, 32, 36 and the Sprout Tower in the Morning and Day
+- #### Oddish
+  - Found in Sprout Tower in the Morning and Day and Ilex forest at Night
+- #### Meowth
+  - Found all day on route 38 and at night on route 39
+- #### Larvitar
+  -Found in Silver and Dark Caves
+- #### Xatu
+  - Found on Route 42 in the Morning and Day 
+- #### Crobat
+  - evolves from Golbat with High Friendship
+  - Found on Route 42 at Night and the Ice Path
+- #### Girafarig
+  - Found on Routes 42 and 43 in the Morning and Day
+- #### Ampharos
+  - Found on Route 43 in the Morning
+- #### Poliwhirl
+  - Found outside the silver cave and on Route 44 in the Day and at Night
+- #### Politoed
+  - Found on Route 44 at Night 
+- #### Golem
+  - Found on Route 45 at Night
+- #### Houndoom
+  - Found on Route 45 in the Day
+- #### Ursaring
+  - Found in Silver and Dark Caves all the time and on Route 45 in the Day
+- #### Gligar
+  - Route 45 and (v0.2-) Mt. Mortar
+- #### Primeape
+  - Route 45  in the dayband (v0.2-) Mt. Mortar in the morning
+- #### Jynx, Sneasel, and Delibird
+  - Found on Ice Path
+
+(v0.2-)
+
+  - Sandslash
+    - Found on Route 42 in Morning and Day
+  - Totodile
+    - Starter and Surfing on The Lake of Rage  
+  - Magmar
+    - Found on Mount Mortar
+  - Houndour
+    - Found on Mt.Mortar Outside at Night
+
+(v0.3-) - unimplemented as of current
+  - Magcargo
+    - Found on Mount Mortar
