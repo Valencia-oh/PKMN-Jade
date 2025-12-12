@@ -1313,7 +1313,7 @@ JohtoGrassWildMons:
 	dbw 4, POLIWAG
 	dbw 5, BELLSPROUT
 	dbw 5, HOOTHOOT
-	dbw 4, ZUBAT
+	dbw 4, POOCHYENA
 	dbw 5, GASTLY
 	dbw 5, GASTLY
 	end_grass_wildmons
@@ -1366,7 +1366,7 @@ JohtoGrassWildMons:
 	dbw 7, HOPPIP
 	; nite
 	dbw 6, RATTATA
-	dbw 6, ZUBAT
+	dbw 6, POOCHYENA
 	dbw 6, GEODUDE
 	dbw 6, ZUBAT
 	dbw 7, MURKROW
@@ -1621,7 +1621,7 @@ JohtoGrassWildMons:
 	dbw 38, POLIWHIRL
 	dbw 37, BELLSPROUT
 	dbw 39, WEEPINBELL
-	dbw 36, POLIWHIRL
+	dbw 36, MIGHTYENA
 	dbw 35, POLIWHIRL
 	dbw 36, POLITOED
 	end_grass_wildmons
