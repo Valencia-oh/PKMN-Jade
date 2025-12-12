@@ -1165,12 +1165,14 @@ Porygon2EvosAttacks:
 	db 0 ; no more level-up moves
 
 StantlerEvosAttacks:
+	dbbw EVOLVE_LEVEL, 37, WYRDEER
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 8, LEER
 	dbw 15, HYPNOSIS
 	dbw 23, STOMP
 	dbw 31, SAND_ATTACK
+	dbw 36, PSYCHIC
 	dbw 40, TAKE_DOWN
 	dbw 49, CONFUSE_RAY
 	db 0 ; no more level-up moves
