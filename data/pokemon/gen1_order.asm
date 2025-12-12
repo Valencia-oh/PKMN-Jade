@@ -275,5 +275,9 @@ Pokered_MonIndices:
 	db SHROOMISH
 	db WYRDEER
 	db BRELOOM
+	db BRONZONG
+	db BRONZOR
+	db FLITTLE
+	db ESPATHRA
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
