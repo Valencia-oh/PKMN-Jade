@@ -1364,16 +1364,16 @@ CooltrainerMGroup:
 	db 34
 	dw DRATINI
 	db 34
-	dw DRATINI
+	dw FLAPPLE
 	db 34
-	dw DRATINI
+	dw APPLETUN
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (4)
 	db "CODY@", TRAINERTYPE_NORMAL
-	db 34
-	dw HORSEA
-	db 36
+	db 39
+	dw DRAGONAIR
+	db 39
 	dw SEADRA
 	db -1 ; end
 
@@ -1381,6 +1381,8 @@ CooltrainerMGroup:
 	db "MIKE@", TRAINERTYPE_NORMAL
 	db 37
 	dw DRAGONAIR
+	db 37
+	dw APPLETUN
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (6)
@@ -1572,14 +1574,18 @@ CooltrainerFGroup:
 	db "FRAN@", TRAINERTYPE_NORMAL
 	db 37
 	dw SEADRA
+	db 42
+	dw LARVESTA
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (4)
 	db "LOLA@", TRAINERTYPE_NORMAL
-	db 34
-	dw DRATINI
+	db 38
+	dw KINGDRA
 	db 36
 	dw DRAGONAIR
+	db 36
+	dw VICTREEBELL
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (5)
@@ -2290,14 +2296,20 @@ GentlemanGroup:
 SkierGroup:
 	next_list_item ; SKIER (1)
 	db "ROXANNE@", TRAINERTYPE_NORMAL
-	db 28
+	db 38
 	dw JYNX
+	db 38
+	dw WYRDEER
 	db -1 ; end
 
 	next_list_item ; SKIER (2)
 	db "CLARISSA@", TRAINERTYPE_NORMAL
-	db 28
+	db 38
 	dw DEWGONG
+	db 38
+	dw WYRDEER
+	db 38
+	dw PILOSWINE
 	db -1 ; end
 
 	end_list_items
@@ -4863,29 +4875,29 @@ MediumGroup:
 BoarderGroup:
 	next_list_item ; BOARDER (1)
 	db "RONALD@", TRAINERTYPE_NORMAL
-	db 24
-	dw SEEL
-	db 25
+	db 34
+	dw LAPRAS
+	db 35
 	dw DEWGONG
-	db 24
-	dw SEEL
+	db 34
+	dw PILOSWINE
 	db -1 ; end
 
 	next_list_item ; BOARDER (2)
 	db "BRAD@", TRAINERTYPE_NORMAL
-	db 26
-	dw SWINUB
-	db 26
-	dw SWINUB
+	db 35
+	dw CLOYSTER
+	db 36
+	dw PILOSWINE
 	db -1 ; end
 
 	next_list_item ; BOARDER (3)
 	db "DOUGLAS@", TRAINERTYPE_NORMAL
-	db 24
+	db 34
 	dw SHELLDER
-	db 25
+	db 35
 	dw CLOYSTER
-	db 24
+	db 34
 	dw SHELLDER
 	db -1 ; end
 
