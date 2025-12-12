@@ -267,6 +267,8 @@ IconPointers:
 	dw ElectrikeIcon
 	dw ManectricIcon
 	dw HonchkrowIcon
+	dw BronzorIcon
+	dw BronzongIcon
 	dw TogekissIcon
 	dw MamoswineIcon
 	dw JoltikIcon
@@ -280,5 +282,7 @@ IconPointers:
 	dw WyrdeerIcon
 	dw MaschiffIcon
 	dw MabosstiffIcon
+	dw FlittleIcon
+	dw EspathraIcon
 	dw ErsrheadbbyIcon
 	assert_table_length NUM_POKEMON + 1
