@@ -1377,29 +1377,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_34
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 10, SNUBBULL
-	dbw 11, MASCHIFF
-	dbw 12, ELECTRIKE
-	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
-	dbw 10, TOGEPI
+	dbw 13, SNUBBULL
+	dbw 14, MASCHIFF
+	dbw 15, ELECTRIKE
+	dbw 13, ABRA
+	dbw 15, JIGGLYPUFF
+	dbw 13, DITTO
+	dbw 13, TOGEPI
 	; day
-	dbw 10, SNUBBULL
-	dbw 11, MASCHIFF
-	dbw 12, ELECTRIKE
-	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
-	dbw 10, TOGEPI
+	dbw 13, SNUBBULL
+	dbw 14, MASCHIFF
+	dbw 15, ELECTRIKE
+	dbw 13, ABRA
+	dbw 15, JIGGLYPUFF
+	dbw 13, DITTO
+	dbw 13, TOGEPI
 	; nite
-	dbw 12, DROWZEE
-	dbw 11, MASCHIFF
-	dbw 12, HOOTHOOT
-	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
-	dbw 10, MURKROW
+	dbw 13, DROWZEE
+	dbw 14, MASCHIFF
+	dbw 15, HOOTHOOT
+	dbw 13, ABRA
+	dbw 15, JIGGLYPUFF
+	dbw 13, DITTO
+	dbw 13, MURKROW
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_35
