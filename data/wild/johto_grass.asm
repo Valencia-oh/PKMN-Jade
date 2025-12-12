@@ -565,29 +565,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ILEX_FOREST
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 8, APPLIN
-	dbw 7, SHROOMISH
-	dbw 7, METAPOD
-	dbw 7, KAKUNA
-	dbw 8, PIDGEY
-	dbw 6, PARAS
-	dbw 7, CHIKORITA
+	dbw 12, APPLIN
+	dbw 13, SHROOMISH
+	dbw 14, BEEDRILL
+	dbw 13, PSYDUCK
+	dbw 12, PARAS
+	dbw 11, PARAS
+	dbw 10, CHIKORITA
 	; day
-	dbw 8, APPLIN
-	dbw 7, SHROOMISH
-	dbw 7, METAPOD
-	dbw 7, KAKUNA
-	dbw 8, PIDGEY
-	dbw 6, PARAS
-	dbw 7, BULBASAUR
+	dbw 12, APPLIN
+	dbw 13, SHROOMISH
+	dbw 14, PSYDUCK
+	dbw 13, BUTTERFREE
+	dbw 12, NATU
+	dbw 11, PARAS
+	dbw 10, BULBASAUR
 	; nite
-	dbw 8, ODDISH
-	dbw 9, VENONAT
-	dbw 7, ODDISH
-	dbw 7, PSYDUCK
-	dbw 8, HOOTHOOT
-	dbw 7, PARAS
-	dbw 6, PARAS
+	dbw 11, ODDISH
+	dbw 12, VENONAT
+	dbw 13, ODDISH
+	dbw 12, PSYDUCK
+	dbw 11, HOOTHOOT
+	dbw 12, PARAS
+	dbw 12, PARAS
 	end_grass_wildmons
 
 	def_grass_wildmons MOUNT_MORTAR_1F_OUTSIDE
