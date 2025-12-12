@@ -157,5 +157,4 @@
 	const EFFECT_BEAT_UP
 	const EFFECT_FLY
 	const EFFECT_DEFENSE_CURL
-	const ROOST
 DEF NUM_MOVE_EFFECTS EQU const_value
