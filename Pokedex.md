@@ -15,10 +15,10 @@
 - #### WYRDEER
   - Ice/Psychic Type
   - Found on Mt. Silver
-#### Swinub
+- #### Swinub
   - Ice/Ground Type
   - Found in the Ice Path
-#### Piloswine
+- #### Piloswine
   - Ice/Ground Type
   - Evolves from Swinub at lvl 33
   - Found in the Ice Path
