@@ -95,13 +95,13 @@ This is a guide to the locations for all pokemon that have either been added or 
   - Found outside the ruins of Alph and on Route 36 during the Day and Morning
 - #### Espathra
   - Pyschic Type
-  - Evolves from Larvesta at lvl 50 
+  - Evolves from Larvesta at lvl 35
 - #### Bronzor
   - Psychic/Steel Type
   - Found outside the ruins of Alph and on Route 36 at Night
 - #### Bronzong
   - Psychic/Steel Type
-  - Evolves from Bronzor at lvl 50 
+  - Evolves from Bronzor at lvl 33 
 
 (v0.4-) - unimplemented as of current
 Pikipek Line
