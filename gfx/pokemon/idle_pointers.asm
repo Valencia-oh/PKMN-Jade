@@ -270,6 +270,7 @@ AnimationIdlePointers:
 	dw AppletunAnimationIdle
 	dw FlappleAnimationIdle
 	dw FalinksAnimationIdle
+	dw WyrdeerAnimationIdle
 	dw MaschiffAnimationIdle
 	dw MabosstiffAnimationIdle
 	dw ErsrheadbbyAnimationIdle
