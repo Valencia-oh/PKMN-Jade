@@ -566,7 +566,7 @@ JohtoGrassWildMons:
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 8, APPLIN
-	dbw 7, APPLIN
+	dbw 7, SHROOMISH
 	dbw 7, METAPOD
 	dbw 7, KAKUNA
 	dbw 8, PIDGEY
@@ -574,7 +574,7 @@ JohtoGrassWildMons:
 	dbw 7, PARAS
 	; day
 	dbw 8, APPLIN
-	dbw 7, APPLIN
+	dbw 7, SHROOMISH
 	dbw 7, METAPOD
 	dbw 7, KAKUNA
 	dbw 8, PIDGEY
