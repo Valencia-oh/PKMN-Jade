@@ -263,6 +263,8 @@ FirstEvoStages::
 	dw ELECTRIKE
 	dw ELECTRIKE	
 	dw MURKROW
+	dw BRONZOR
+	dw BRONZOR
 	dw TOGEPI
 	dw SWINUB	 	
 	dw JOLTIK
@@ -276,5 +278,7 @@ FirstEvoStages::
 	dw STANTLER
 	dw MASCHIFF
 	dw MASCHIFF
+	dw FLITTLE
+	dw FLITTLE
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
