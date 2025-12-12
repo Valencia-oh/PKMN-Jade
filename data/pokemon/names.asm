@@ -276,6 +276,7 @@ PokemonNames::
 	dname "APPLETUN"
 	dname "FLAPPLE"
 	dname "FALINKS"
+	dname "WYRDEER"
 	dname "MASCHIFF"
 	dname "MABOSSTIFF"
 	dname "ERSRHEDBBY"
