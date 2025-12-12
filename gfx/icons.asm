@@ -284,6 +284,6 @@ MaschiffIcon::   INCBIN "gfx/icons/houndour.2bpp"
 MabosstiffIcon:: INCBIN "gfx/icons/houndoom.2bpp"
 ErsrheadbbyIcon::INCBIN "gfx/icons/ersrheadbby.2bpp"
 FlittleIcon::    INCBIN "gfx/icons/flittle.2bpp"
-EspathraIcon::   INCBIN "gfx/icons/dodou.2bpp"
+EspathraIcon::   INCBIN "gfx/icons/doduo.2bpp"
 EggIcon::        INCBIN "gfx/icons/egg.2bpp"
 
