@@ -371,24 +371,24 @@ JohtoGrassWildMons:
 	; morn
 	dbw 20, NATU
 	dbw 22, NATU
-	dbw 18, NATU
-	dbw 24, NATU
-	dbw 20, SMEARGLE
+	dbw 18, FLITTLE
+	dbw 24, BRONZOR
+	dbw 20, BRONZOR
 	dbw 22, SMEARGLE
 	dbw 22, SMEARGLE
 	; day
 	dbw 20, NATU
 	dbw 22, NATU
-	dbw 18, NATU
-	dbw 24, NATU
-	dbw 20, SMEARGLE
+	dbw 18, FLITTLE
+	dbw 24, BRONZOR
+	dbw 20, BRONZOR
 	dbw 22, SMEARGLE
 	dbw 22, SMEARGLE
 	; nite
 	dbw 20, NATU
 	dbw 22, NATU
-	dbw 18, NATU
-	dbw 24, NATU
+	dbw 18, FLITTLE
+	dbw 24, BRONZOR
 	dbw 22, WOOPER
 	dbw 22, QUAGSIRE
 	dbw 22, QUAGSIRE
@@ -1237,10 +1237,10 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, PIDGEY
-	dbw 2, SENTRET
-	dbw 3, PIDGEY
-	dbw 3, SENTRET
+	dbw 2, FLITTLE
+	dbw 2, BRONZOR
+	dbw 3, ESPATHRA
+	dbw 3, BRONZONG
 	dbw 2, RATTATA
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
@@ -1434,18 +1434,18 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 4, LEDYBA
-	dbw 4, PIDGEY
+	dbw 4, BRONZOR
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
-	dbw 5, PIDGEY
+	dbw 5, FLITTLE
 	dbw 6, PIDGEY
 	dbw 6, PIDGEY
 	; day
 	dbw 4, PIDGEY
-	dbw 4, PIDGEY
+	dbw 4, BRONZOR
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
-	dbw 5, PIDGEY
+	dbw 5, FLITTLE
 	dbw 6, PIDGEY
 	dbw 6, PIDGEY
 	; nite
@@ -1453,7 +1453,7 @@ JohtoGrassWildMons:
 	dbw 4, HOOTHOOT
 	dbw 5, BELLSPROUT
 	dbw 5, HOOTHOOT
-	dbw 5, HOOTHOOT
+	dbw 5, BRONZOR
 	dbw 5, GASTLY
 	dbw 5, GASTLY
 	end_grass_wildmons
