@@ -88,11 +88,25 @@
   - Dark Type
   - Evolves from Maschiff at lvl 30
   - Found on Route 42 at night
+  (v0.3-)
+- #### Flittle
+  - Pyschic Type
+  - Found outside the ruins of Alph and on Route 36 during the Day and Morning
+- #### Espathra
+  - Pyschic Type
+  - Evolves from Larvesta at lvl 50 
+- #### Bronzor
+  - Psychic/Steel Type
+  - Found outside the ruins of Alph and on Route 36 at Night
+- #### Bronzong
+  - Psychic/Steel Type
+  - Evolves from Bronzor at lvl 50 
 
-(v0.3-) - unimplemented as of current
-Flittle, Bronzor, and Pikipek Lines
+(v0.4-) - unimplemented as of current
+Pikipek Line
 
 ## Old Pokemon with new locations:
+pokemon only get mentioned once their location is changed from base crystal
 - #### Phanphy
   - Found on route 46 during the Morning and Day
 - #### Mareep
@@ -135,20 +149,31 @@ Flittle, Bronzor, and Pikipek Lines
   - Route 45 and (v0.2-) Mt. Mortar
 - #### Primeape
   - Route 45  in the dayband (v0.2-) Mt. Mortar in the morning
-- #### Jynx, Sneasel, and Delibird
-  - Found on Ice Path
 
 (v0.2-)
 
-  - Sandslash
+  - #### Sandslash
     - Found on Route 42 in Morning and Day
-  - Totodile
+  - #### Totodile
     - Starter and Surfing on The Lake of Rage  
-  - Magmar
+  - #### Magmar
     - Found on Mount Mortar
-  - Houndour
+  - #### Houndour
     - Found on Mt.Mortar Outside at Night
 
-(v0.3-) - unimplemented as of current
-  - Magcargo
-    - Found on Mount Mortar
+(v0.3-)
+- #### Slugma
+  - Found in Mt.Mortar at Night
+- #### Chikorita
+  - Found in Ilex Forest in the Mornings
+- #### Beedrill
+  - Found in Ilex Forest in the Mornings
+- #### Bulbasaur
+  - Found in Ilex Forest in the Day
+- #### Butterfree
+  - Found in Ilex Forest in the Mornings
+- #### Natu
+  - Found in Ilex Forest in the Day and on Route 36 in the Morning and day
+- #### Psyduck
+  - Found in grass in Ilex forest all day, on Route 35 at Night and in the National Park at Night
+  - Found surfing in Ilex Forest and on Route 35 all day
