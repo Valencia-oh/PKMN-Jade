@@ -39,20 +39,20 @@
 - #### Mightyena
   - Dark type 
   - Evolves from Poochyena at lvl 18
-  - Found on routes 42, 44, and 45 at Night
+  - Found on routes 42, and 45 at Night (v0.3-) Route 44
 - #### Wingull
   - Water/Flying Type
   - Found on Routes 40 and 41 and Olivine City while surfing
 - #### Pelipper
   - Water/Flying Type
   - Evolves from Wingull at lvl 25
-  - Found Cianwood City while surfing
+  - Found in Cianwood City while surfing
 - #### Shroomish
-  - Found on routes 30, 32 and Ilex forest in the Morning and Day
+  - Found on routes 30, 32 and (v0.3-) Ilex forest in the Morning and Day
 - #### Breloom
   - Grass/Fighting Type
   - Evolves from Shroomish at lvl 24
-  - Found on route 44 in the Morning and Day
+  - (v0.3-) Found on route 44 in the Morning and Day
 - #### Electrike
   - Electric Type
   - Found on routes 34 and 35 in the Morning and Day
