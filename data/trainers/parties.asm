@@ -1895,7 +1895,7 @@ PokemaniacGroup:
 	db 21
 	dw NIDORINO
 	db 24
-	dw FLAFFY
+	dw FLAAFFY
 	db -1 ; end
 
 	next_list_item ; POKEMANIAC (5)
@@ -1967,10 +1967,14 @@ PokemaniacGroup:
 
 	next_list_item ; POKEMANIAC (15)
 	db "MILLER@", TRAINERTYPE_NORMAL
-	db 17
+	db 27
 	dw NIDOKING
-	db 17
+	db 27
 	dw NIDOQUEEN
+	db 27
+	dw MIGHTYENA
+	db 27
+	dw HERACROSS
 	db -1 ; end
 
 	end_list_items
@@ -3293,7 +3297,7 @@ SuperNerdGroup:
 	db 27
 	dw MAGNEMITE
 	db 27
-	dw MAGNEMITE
+	dw MAGNETON
 	db 27
 	dw MAGNEMITE
 	db -1 ; end
@@ -3310,13 +3314,17 @@ SuperNerdGroup:
 	db 39
 	dw SEADRA
 	dw SMOKESCREEN, TWISTER, SURF, WATERFALL
+	db 40
+	dw WYRDEER
+	db 43
+	dw LARVESTA
 	db -1 ; end
 
 	next_list_item ; SUPER_NERD (14)
 	db "MARKUS@", TRAINERTYPE_MOVES
-	db 19
-	dw SLOWPOKE
-	dw CURSE, WATER_GUN, GROWL, STRENGTH
+	db 27
+	dw SLOWKING
+	dw CURSE, WATER_GUN, PSYCHIC_M, STRENGTH
 	db -1 ; end
 
 	end_list_items
@@ -4023,6 +4031,10 @@ BlackbeltGroup:
 	dw HITMONLEE
 	db 34
 	dw HITMONCHAN
+	db 34
+	dw HITMONTOP
+	db 34
+	dw PRIMEAPE
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (7)
