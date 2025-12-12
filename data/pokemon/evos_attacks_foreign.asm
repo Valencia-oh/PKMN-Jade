@@ -168,6 +168,31 @@ HonchkrowEvosAttacks:
 	dbw 41, MEAN_LOOK
 	db 0 ; no more level-up moves
 
+BronzorEvosAttacks:
+	dbbw EVOLVE_LEVEL, 33, BRONZONG
+	db 0 ; no more evolutions
+	dbw 1, CURSE
+	dbw 1, TACKLE
+	dbw 6, GROWL
+	dbw 15, STEELWING
+	dbw 20, CONFUSION
+	dbw 29, DISABLE
+	dbw 34, HEADBUTT
+	dbw 43, AMNESIA
+	dbw 48, PSYCHIC_M
+
+BronzongEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, CURSE
+	dbw 1, TACKLE
+	dbw 6, GROWL
+	dbw 15, STEELWING
+	dbw 20, CONFUSION
+	dbw 29, DISABLE
+	dbw 34, HEADBUTT
+	dbw 43, AMNESIA
+	dbw 48, PSYCHIC_M
+
 TogekissEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, GROWL
