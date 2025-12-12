@@ -20,6 +20,7 @@ EvosAttacksPointers3::
 	dw AppletunEvosAttacks
 	dw FlappleEvosAttacks
 	dw FalinksEvosAttacks
+	dw WyrdeerEvosAttacks
 	dw MaschiffEvosAttacks
 	dw MabosstiffEvosAttacks
 	dw ErsrheadbbyEvosAttacks
@@ -320,7 +321,8 @@ WyrdeerEvosAttacks:
 	dbw 1, LEER
 	dbw 1, HYPNOSIS
 	dbw 1, STOMP
-	dbw 31, SAND_ATTACK
+	dbw 1, SAND_ATTACK
+	dbw 36, PSYCHIC
 	dbw 40, TAKE_DOWN
 	dbw 49, CONFUSE_RAY
 	db 0 ; no more level-up moves
