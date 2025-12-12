@@ -10,6 +10,8 @@ EvosAttacksPointers3::
 	dw ElectrikeEvosAttacks
 	dw ManectricEvosAttacks
 	dw HonchkrowEvosAttacks
+	dw BronzorEvosAttacks
+	dw BronzongEvosAttacks
 	dw TogekissEvosAttacks
 	dw MamoswineEvosAttacks
 	dw JoltikEvosAttacks
@@ -23,6 +25,8 @@ EvosAttacksPointers3::
 	dw WyrdeerEvosAttacks
 	dw MaschiffEvosAttacks
 	dw MabosstiffEvosAttacks
+	dw FlittleEvosAttacks
+	dw EspathraEvosAttacks
 	dw ErsrheadbbyEvosAttacks
 .IndirectEnd::
 
