@@ -252,6 +252,8 @@ INCBIN "gfx/footprints/tyranitar.1bpp"
 INCBIN "gfx/footprints/lugia.1bpp"
 INCBIN "gfx/footprints/ho_oh.1bpp"
 INCBIN "gfx/footprints/celebi.1bpp"
+; Added Mons
+
 INCBIN "gfx/footprints/poochyena.1bpp"
 INCBIN "gfx/footprints/mightyena.1bpp"
 INCBIN "gfx/footprints/wingull.1bpp"
