@@ -2074,3 +2074,12 @@ DefenseCurl:
 	statupmessage
 	statupfailtext
 	endmove
+
+Roost:
+	checkobedience
+	usedmovetext
+	doturn
+	roost
+	heal
+	endmove
+
