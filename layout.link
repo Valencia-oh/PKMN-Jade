@@ -188,7 +188,6 @@ ROMX $3c
 	"Cries"
 ROMX $3d
 	"Songs 4"
-	"Pics 20"
 ROMX $3e
 	"bank3E"
 ROMX $3f
@@ -267,7 +266,6 @@ ROMX $5e
 	"Crystal Sound Effects"
 ROMX $5f
 	"mobile5F"
-	"Unused Egg Pic"
 	"Base Stats"
 ROMX $60
 	"Map Scripts 13"
@@ -313,6 +311,7 @@ ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
 	"Pokedex Entries 193-256"
+	"Pics 20"
 ROMX $75
 	"16-bit ID stuff"
 ROMX $77
