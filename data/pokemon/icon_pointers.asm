@@ -277,6 +277,7 @@ IconPointers:
 	dw AppletunIcon
 	dw FlappleIcon
 	dw FalinksIcon
+	dw WyrdeerIcon
 	dw MaschiffIcon
 	dw MabosstiffIcon
 	dw ErsrheadbbyIcon
