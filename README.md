@@ -22,6 +22,8 @@ Labradorite is in development romhack based off the CSE engine for Pokecrystal w
 - Joltik -- Union Cave Floor 1 and B1
 - Wingull/Pelipper -- Surf on Routes 40 and 41 as well as Olivine and Cyanwood Cities
 - Falinks -- Route 43
+- Wyrdeer -- Mount Silver Outside
+
 #### Old Pokemon, New Locations
 - Murkrow -- added to Route 33, 34, and 38 at night
 - Togepi -- added to Route 34 day and Morning
