@@ -153,7 +153,6 @@ ROMX $2e
 	"bank2E"
 ROMX $2f
 	"Phone Scripts 2"
-	"Pics 20"
 ROMX $30
 	"Sprites 1"
 ROMX $31
@@ -189,6 +188,7 @@ ROMX $3c
 	"Cries"
 ROMX $3d
 	"Songs 4"
+	"Pics 20"
 ROMX $3e
 	"bank3E"
 ROMX $3f
