@@ -90,7 +90,7 @@
   - Found on Route 42 at night
 
 (v0.3-) - unimplemented as of current
-Flittle, and Pikipek Lines
+Flittle, Bronzor, and Pikipek Lines
 
 ## Old Pokemon with new locations:
 - #### Phanphy
