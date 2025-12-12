@@ -314,6 +314,17 @@ FalinksEvosAttacks:
 	dbw 50, COUNTER
 	db 0 ; no more level-up moves
 
+WyrdeerEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, LEER
+	dbw 1, HYPNOSIS
+	dbw 1, STOMP
+	dbw 31, SAND_ATTACK
+	dbw 40, TAKE_DOWN
+	dbw 49, CONFUSE_RAY
+	db 0 ; no more level-up moves
+
 MaschiffEvosAttacks:
 	dbbw EVOLVE_LEVEL, 30, MABOSSTIFF
 	db 0 ; no more evolutions
