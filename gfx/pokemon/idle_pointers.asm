@@ -260,6 +260,8 @@ AnimationIdlePointers:
 	dw ElectrikeAnimationIdle
 	dw ManectricAnimationIdle
 	dw HonchkrowAnimationIdle
+	dw BronzorAnimationIdle
+	dw BronzongAnimationIdle
 	dw TogekissAnimationIdle
 	dw MamoswineAnimationIdle
 	dw JoltikAnimationIdle
@@ -273,5 +275,7 @@ AnimationIdlePointers:
 	dw WyrdeerAnimationIdle
 	dw MaschiffAnimationIdle
 	dw MabosstiffAnimationIdle
+	dw FlittleAnimationIdle
+	dw EspathraAnimationIdle
 	dw ErsrheadbbyAnimationIdle
 	assert_table_length NUM_POKEMON
