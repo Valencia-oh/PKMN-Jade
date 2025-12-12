@@ -174,7 +174,7 @@ BronzorEvosAttacks:
 	dbw 1, CURSE
 	dbw 1, TACKLE
 	dbw 6, GROWL
-	dbw 15, STEELWING
+	dbw 15, STEEL_WING
 	dbw 20, CONFUSION
 	dbw 29, DISABLE
 	dbw 34, HEADBUTT
@@ -186,7 +186,7 @@ BronzongEvosAttacks:
 	dbw 1, CURSE
 	dbw 1, TACKLE
 	dbw 6, GROWL
-	dbw 15, STEELWING
+	dbw 15, STEEL_WING
 	dbw 20, CONFUSION
 	dbw 29, DISABLE
 	dbw 34, HEADBUTT
@@ -391,7 +391,7 @@ FlittleEvosAttacks:
 	dbw 1, NIGHT_SHADE
 	dbw 10, PSYBEAM
 	dbw 20, TELEPORT
-	dbw 25, PLUCK
+	dbw 25, THIEF
 	dbw 30, AGILITY
 	dbw 35, FUTURE_SIGHT
 	dbw 50, CONFUSE_RAY
@@ -404,7 +404,7 @@ EspathraEvosAttacks:
 	dbw 1, NIGHT_SHADE
 	dbw 10, PSYBEAM
 	dbw 20, TELEPORT
-	dbw 25, PLUCK
+	dbw 25, THIEF
 	dbw 30, AGILITY
 	dbw 35, FUTURE_SIGHT
 	dbw 50, CONFUSE_RAY
