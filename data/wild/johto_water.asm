@@ -249,9 +249,9 @@ JohtoWaterWildMons:
 
 	def_water_wildmons LAKE_OF_RAGE
 	db 6 percent ; encounter rate
-	dbw 15, MAGIKARP
-	dbw 10, MAGIKARP
-	dbw 15, GYARADOS
+	dbw 33, GYARADOS
+	dbw 27, MAGIKARP
+	dbw 10, Totodile
 	end_water_wildmons
 
 	def_water_wildmons BLACKTHORN_CITY
