@@ -63,7 +63,6 @@ ROMX $08
 	"Egg Moves 1"
 ROMX $09
 	"bank9"
-	"Tileset Data 9"
 ROMX $0a
 	"bankA"
 	"Trainer Backpics"
@@ -97,7 +96,7 @@ ROMX $13
 	"bank13_2"
 ROMX $14
 	"bank14"
-	
+	"Tileset Data 9"
 ROMX $15
 	"Map Scripts 1"
 ROMX $16
