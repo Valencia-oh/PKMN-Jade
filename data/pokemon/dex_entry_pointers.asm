@@ -273,6 +273,7 @@ PokedexDataPointerTable:
 	dba AppletunPokedexEntry
 	dba FlapplePokedexEntry
 	dba FalinksPokedexEntry
+	dba WyrdeerPokedexEntry
 	dba MaschiffPokedexEntry
 	dba MabosstiffPokedexEntry
 	dba ErsrheadbbyPokedexEntry
