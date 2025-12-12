@@ -266,6 +266,8 @@ PokemonNames::
 	dname "ELECTRIKE"
 	dname "MANECTRIC"
 	dname "HONCHKROW"
+	dname "BRONZOR"
+	dname "BRONZONG"
 	dname "TOGEKISS"
 	dname "MAMOSWINE"
 	dname "JOLTIK"
@@ -279,5 +281,7 @@ PokemonNames::
 	dname "WYRDEER"
 	dname "MASCHIFF"
 	dname "MABOSSTIFF"
+	dname "FLITTLE"
+	dname "ESPATHRA"
 	dname "ERSRHEDBBY"
 	assert_table_length NUM_POKEMON
