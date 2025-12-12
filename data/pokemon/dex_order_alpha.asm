@@ -21,6 +21,8 @@ AlphabeticalPokedexOrder:
 	dw BLASTOISE
 	dw BLISSEY
 	dw BRELOOM
+	dw BRONZOR
+	dw BRONZONG
 	dw BULBASAUR
 	dw BUTTERFREE
 	dw CATERPIE
