@@ -16,15 +16,22 @@ Labradorite is in development romhack based off the CSE engine for Pokecrystal w
 - Applin -- Ilex Forest
 - Lartvesta -- Mt. Mortar
 - Poochyena -- Routes 29, 30, and 32 at night
+- Mightyena -- Routes 42 and 45 at Night
 - Maschiff -- Route 34 all day
+- Mabosstiff -- Route 42 at Night
 - Electrike -- Routes 34 and 35 Morning and Day
 - Shroomish -- Routes 31 and 30 Morning and Day
+- Breloom -- Route 42 during Day
+- Mamoswine -- Ice Path Day and Morning
 - Joltik -- Union Cave Floor 1 and B1
 - Wingull/Pelipper -- Surf on Routes 40 and 41 as well as Olivine and Cyanwood Cities
 - Falinks -- Route 43
 - Wyrdeer -- Mount Silver Outside
 
 #### Old Pokemon, New Locations
+- Phanphy -- available in route 46 during Day as well
+- Mareep -- added back to Route 32
+- Wooper -- added to Day Route 32
 - Murkrow -- added to Route 33, 34, and 38 at night
 - Togepi -- added to Route 34 day and Morning
 - Gastly -- added to Route 38 at night
@@ -32,6 +39,18 @@ Labradorite is in development romhack based off the CSE engine for Pokecrystal w
 - Bellsprout and Oddish -- Added to the Sprout Tower in the Morning and Day
 - Meowth -- moved to daytime on route 38
 - Larvitar -- added to both sides of Dark Cave
+- Crobat --  added to Route 42 at Night and Ice Path
+- Girafarig -- added back to Route 43
+- Ampharos -- added to Route 43 in the Morning
+- Stantler -- added to Route 44 in Morning and Day
+- Poliwhirl -- added to Route 44 in Day
+- Golem -- added to Route 45 at Night
+- Houndoom -- added to Route 45 in the Day
+- UrsaRing -- added to Route 45 in the Day
+- Gligar -- Made available all times in Route 45
+- Primape -- Added to route 45 in the Day
+- Jynx, Sneasel, Delibird and Piloswine -- Ice Path Spawns Increased
+
 
 
 Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) and the Apples for Applin are sold in the Goldenrod Department Store,
