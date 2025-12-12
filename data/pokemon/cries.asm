@@ -267,9 +267,11 @@ PokemonCries::
 	mon_cry CRY_PARAS,        66,  383 ; BRELOOM
 	mon_cry CRY_TOTODILE,   -266,  256 ; ELECTRIKE
 	mon_cry CRY_TOTODILE,     78,  256 ; MANECTRIC
+	mon_cry CRY_MARILL,      -64,  394 ; HONCHKROW
+	mon_cry CRY_METAPOD,     128,  224 ; BRONZOR
+	mon_cry CRY_METAPOD,      32,  320 ; BRONZONG
 	mon_cry CRY_MAGCARGO,   -265,  256 ; MAMOSWINE
 	mon_cry CRY_TOGETIC,      70,   80 ; TOGEKISS
-	mon_cry CRY_MARILL,      -64,  394 ; HONCHKROW
 	mon_cry CRY_SPINARAK,     17,  512 ; JOLTIK
 	mon_cry CRY_SPINARAK,   -174,  482 ; GALVANTULA
 	mon_cry CRY_METAPOD,      90,  256 ; LARVESTA
@@ -281,6 +283,8 @@ PokemonCries::
 	mon_cry CRY_AIPOM,      -352,  384 ; WYRDEER
 	mon_cry CRY_CYNDAQUIL,    57,  320 ; MASCHIFF
 	mon_cry CRY_TOTODILE,   -266,  256 ; MABOSSTIFF
+	mon_cry CRY_DIGLETT,     187,  129 ; FLITTLE
+	mon_cry CRY_DIGLETT,     153,  160 ; ESPATHRA
 	mon_cry CRY_TOGEPI,      256,  256 ; ERSRHEADBBY
 
 	assert_table_length NUM_POKEMON
