@@ -354,6 +354,33 @@ MabosstiffEvosAttacks:
 	dbw 28, TAKE_DOWN
 	db 0 ; no more level-up moves
 
+FlittleEvosAttacks:
+	dbbw EVOLVE_LEVEL, 35, ESPATHRA
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, LEER
+	dbw 1, NIGHT_SHADE
+	dbw 10, PSYBEAM
+	dbw 20, TELEPORT
+	dbw 25, PLUCK
+	dbw 30, AGILITY
+	dbw 35, FUTURE_SIGHT
+	dbw 50, CONFUSE_RAY
+	dbw 65, PSYCHIC_M
+
+EspathraEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, LEER
+	dbw 1, NIGHT_SHADE
+	dbw 10, PSYBEAM
+	dbw 20, TELEPORT
+	dbw 25, PLUCK
+	dbw 30, AGILITY
+	dbw 35, FUTURE_SIGHT
+	dbw 50, CONFUSE_RAY
+	dbw 65, PSYCHIC_M
+
 ErsrheadbbyEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
