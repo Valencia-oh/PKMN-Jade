@@ -13,8 +13,8 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
   
 ## New Pokemon Locations:
 #### Future Pokemon Locations
-- Applin -- Ilex Forest
-- Lartvesta -- Mt. Mortar
+- Applin -- Ilex Forest in the Morning and Day
+- Larvesta -- Mt. Mortar
 - Poochyena -- Routes 29, 30, and 32 at night
 - Mightyena -- Routes 42 and 45 at Night
 - Maschiff -- Route 34 all day
