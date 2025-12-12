@@ -1,10 +1,10 @@
 	db 0 ; species ID placeholder
 
 	db  57,  24,  86,  23,  24,  86
-	evs  0,   0,   0,   1,   0,   0
+	evs  0,   0,   1,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
-	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
+	db PSYCHIC_TYPE, STEEL ; type
 	db 255 ; catch rate
 	db 72 ; base exp
 	dw NO_ITEM, NO_ITEM ; items
