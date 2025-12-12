@@ -1551,7 +1551,7 @@ JohtoGrassWildMons:
 	dbw 27, RATICATE
 	dbw 35, ARBOK
 	dbw 33, FEAROW
-	dbw 32, FEAROW
+	dbw 32, XATU
 	; day
 	dbw 31, ARBOK
 	dbw 32, FEAROW
@@ -1559,7 +1559,7 @@ JohtoGrassWildMons:
 	dbw 27, RATICATE
 	dbw 35, ARBOK
 	dbw 33, FEAROW
-	dbw 32, FEAROW
+	dbw 32, XATU
 	; nite
 	dbw 31, RATTATA
 	dbw 32, MABOSSTIFF
@@ -1637,7 +1637,7 @@ JohtoGrassWildMons:
 	dbw 43, SKARMORY
 	dbw 44, SKARMORY
 	; day
-	dbw 43, PRIMAPE
+	dbw 43, PRIMEAPE
 	dbw 45, GRAVELER
 	dbw 46, GLIGAR
 	dbw 47, DONPHAN
