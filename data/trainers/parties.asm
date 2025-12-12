@@ -1000,16 +1000,18 @@ SchoolboyGroup:
 BirdKeeperGroup:
 	next_list_item ; BIRD_KEEPER (1)
 	db "ROD@", TRAINERTYPE_NORMAL
-	db 7
-	dw PIDGEY
-	db 7
+	db 10
+	dw HOOT-HOOT
+	db 11
 	dw PIDGEY
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (2)
 	db "ABE@", TRAINERTYPE_NORMAL
-	db 9
+	db 12
 	dw SPEAROW
+	db 12
+	dw LEDYBA
 	db -1 ; end
 
 	next_list_item ; BIRD_KEEPER (3)
