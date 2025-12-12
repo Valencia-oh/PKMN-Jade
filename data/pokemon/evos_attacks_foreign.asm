@@ -176,6 +176,7 @@ BronzorEvosAttacks:
 	dbw 6, GROWL
 	dbw 15, STEEL_WING
 	dbw 20, CONFUSION
+	dbw 24, SCREECH
 	dbw 29, DISABLE
 	dbw 34, HEADBUTT
 	dbw 43, AMNESIA
@@ -188,6 +189,7 @@ BronzongEvosAttacks:
 	dbw 6, GROWL
 	dbw 15, STEEL_WING
 	dbw 20, CONFUSION
+	dbw 24, SCREECH
 	dbw 29, DISABLE
 	dbw 34, HEADBUTT
 	dbw 43, AMNESIA
