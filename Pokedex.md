@@ -1,4 +1,5 @@
-# Pokedex for Johto (only Johto locations will be shown)
+# Pokedex for Johto 
+This is a guide to the locations for all pokemon that have either been added or given new locations within Labradorite
 ## New Pokemon (And their pre-evos):
 - #### Murkrow
   - Dark/Flying Type
