@@ -13,6 +13,7 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
   
 ## New Pokemon Locations:
 #### Future Pokemon Locations
+(v0.1-)
 - Applin -- Ilex Forest in the Morning and Day
 - Larvesta -- Mt. Mortar
 - Poochyena -- Routes 29, 30, and 32 at night
@@ -27,8 +28,11 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 - Wingull/Pelipper -- Surf on Routes 40 and 41 as well as Olivine and Cyanwood Cities
 - Falinks -- Route 43
 - Wyrdeer -- Mount Silver Outside
+- (v0.2-)
+- Poochyena -- Also on Route 46 at Night
 
 #### Old Pokemon, New Locations
+(v0.1-)
 - Phanphy -- available in route 46 during Day as well
 - Mareep -- added back to Route 32
 - Wooper -- added to Day Route 32
@@ -51,8 +55,14 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 - Gligar -- Made available all times in Route 45
 - Primeape -- Added to route 45 in the Day
 - Jynx, Sneasel, Delibird and Piloswine -- Ice Path Spawns Increased
-
-
+(v0.2-)
+- Sandslash -- added to Route 42 in Morning and Day
+- Totodile -- added to Lake of Rage
+- Magmar, Graveller - Added to Mt. Mortar
+- Houndour -- added to mt.mortar outside at Night
+- Gligar -- Added to Mt. Mortar as well
+- Azumarill -- replaces Mt.Mortar Marill
+- Primeape -- Added to Mt.Mortar in Mornings
 
 Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) and the Apples for Applin are sold in the Goldenrod Department Store,
 
