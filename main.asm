@@ -416,10 +416,6 @@ INCLUDE "data/battle_anims/object_gfx.asm"
 SECTION "Pic Animations 1", ROMX
 
 INCLUDE "engine/gfx/pic_animation.asm"
-INCLUDE "gfx/pokemon/anim_pointers.asm"
-INCLUDE "gfx/pokemon/anims.asm"
-INCLUDE "gfx/pokemon/idle_pointers.asm"
-INCLUDE "gfx/pokemon/idles.asm"
 INCLUDE "gfx/pokemon/unown_anim_pointers.asm"
 INCLUDE "gfx/pokemon/unown_anims.asm"
 INCLUDE "gfx/pokemon/unown_idle_pointers.asm"
@@ -432,6 +428,10 @@ INCLUDE "gfx/pokemon/unown_bitmasks.asm"
 
 SECTION "Pic Animations 2", ROMX
 
+INCLUDE "gfx/pokemon/anim_pointers.asm"
+INCLUDE "gfx/pokemon/anims.asm"
+INCLUDE "gfx/pokemon/idle_pointers.asm"
+INCLUDE "gfx/pokemon/idles.asm"
 INCLUDE "gfx/pokemon/frame_pointers.asm"
 INCLUDE "gfx/pokemon/kanto_frames.asm"
 INCLUDE "gfx/pokemon/foreign_frames.asm"
