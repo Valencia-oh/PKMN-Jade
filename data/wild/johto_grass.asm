@@ -1237,8 +1237,8 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, PIDGEY
-	dbw 2, SENTRET
+	dbw 2, WYRDEER
+	dbw 2, WYRDEER
 	dbw 3, PIDGEY
 	dbw 3, SENTRET
 	dbw 2, RATTATA
@@ -1690,7 +1690,7 @@ JohtoGrassWildMons:
 	dbw 42, ARBOK
 	dbw 44, RAPIDASH
 	dbw 41, DODUO
-	dbw 43, DODRIO
+	dbw 43, WYRDEER
 	dbw 43, DODRIO
 	; day
 	dbw 41, TANGELA
@@ -1698,7 +1698,7 @@ JohtoGrassWildMons:
 	dbw 42, ARBOK
 	dbw 44, RAPIDASH
 	dbw 41, DODUO
-	dbw 43, DODRIO
+	dbw 43, WYRDEER
 	dbw 43, DODRIO
 	; nite
 	dbw 41, TANGELA
@@ -1706,8 +1706,8 @@ JohtoGrassWildMons:
 	dbw 42, GOLBAT
 	dbw 44, POLIWHIRL
 	dbw 40, GOLBAT
-	dbw 44, GOLBAT
-	dbw 44, GOLBAT
+	dbw 44, WYRDEER
+	dbw 44, WYRDEER
 	end_grass_wildmons
 
 	db -1 ; end
