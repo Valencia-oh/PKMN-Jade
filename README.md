@@ -4,7 +4,7 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 
 ## Implemented Features
 - Removed Trade+Item Evos, now just use the item
-- 22 new pokemon, bringing the total to 273 (Applin, Wingull, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, and Falinks lines + Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
+- 22 new pokemon, bringing the total to 273 (Applin, Espathra, Bronzong, Pelipper, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, and Falinks lines + Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
 - HMs done through party not attacks (added with CSE)
 - overhauled PC (added with CSE)
 - Fairy Type
@@ -21,18 +21,20 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - Overhaulled Level Curve
 - Expanded Johto
 - **350 pokemon** There will eventually be around 350 pokemon (all gens 1+2) and ~100 selected from later generations thanks to the Extended 16-bit Indexes featured in CSE
-  - sprites downloaded but are not yet implemented - Paldean Wooper, Clodsire, Pikipek, Trumbeak, Toucannon, Flittle, Espathra 
+  - sprites downloaded but are not yet implemented - Paldean Wooper, Clodsire, Pikipek, Trumbeak, Toucannon
   - Need to get sprites for Dripplin and Hyrdapple
   - Requested Mons: Malamar, sigilyph, Lurantis (and all evos and pre-evos thereof)
   - Future Evos still not added: Leafeon, Glaceon, Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile, Ursaluna
     - Future Babies/Pre-evos are unlikely
   - Regional Varients Planned: Alolan Vulpix + Ninetails, Alolan Raichu, Hisuian Growelith + Arcanine
 - Link Cable
+
 ### Credits 
 - The majority of systems would not work without the use of the CSE engine, so shout out to all the devs on there
 - Falinks, Volcarona, and Applin line Sprites are from Sage Deoxys
-- nuukiie made the Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Poochyena, Breloom, Galvantula, Manectric, and Wingull lines
+- nuukiie made the Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Mightyena, Bronzong, Breloom, Galvantula, Manectric, and Pelipper lines
 - Maschiff and Mabosstiff use edited versions of Egg3ggEgg's sprites
+- Bronzor and Bronzong sprites are from Pokemon Prism
 - Crystal Legacy Team for inspiration on some pokemon locations
 - Polished Crystal and Emerald Seaglass for giving me inspiration to start this project
 - Pokecrystal devs for making this posible, as well as the code so easy to use and providing numerous incredibly helpful tutorials
