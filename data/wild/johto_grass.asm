@@ -597,7 +597,7 @@ JohtoGrassWildMons:
 	dbw 23, GOLBAT
 	dbw 24, MACHOP
 	dbw 23, GOLBAT
-	dbw 24, GRAVELLER
+	dbw 24, GRAVELER
 	dbw 26, MAGMAR
 	dbw 26, PRIMEAPE
 	; day
@@ -605,7 +605,7 @@ JohtoGrassWildMons:
 	dbw 23, GOLBAT
 	dbw 24, MACHOP
 	dbw 23, GOLBAT
-	dbw 24, GRAVELLER
+	dbw 24, GRAVELER
 	dbw 26, RATICATE
 	dbw 26, RATICATE
 	; nite
@@ -613,7 +613,7 @@ JohtoGrassWildMons:
 	dbw 23, RATICATE
 	dbw 24, MARILL
 	dbw 23, GOLBAT
-	dbw 24, GRAVELLER
+	dbw 24, GRAVELER
 	dbw 26, MAGMAR
 	dbw 26, HOUNDOUR
 	end_grass_wildmons
@@ -621,7 +621,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons MOUNT_MORTAR_1F_INSIDE
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 23, GRAVELLER
+	dbw 23, GRAVELER
 	dbw 24, MAGMAR
 	dbw 25, MACHOP
 	dbw 24, RATICATE
@@ -629,7 +629,7 @@ JohtoGrassWildMons:
 	dbw 25, LARVESTA
 	dbw 25, GOLBAT
 	; day
-	dbw 23, GRAVELLER
+	dbw 23, GRAVELER
 	dbw 24, MAGMAR
 	dbw 25, MACHOP
 	dbw 24, RATICATE
@@ -637,7 +637,7 @@ JohtoGrassWildMons:
 	dbw 25, LARVESTA
 	dbw 25, GOLBAT
 	; nite
-	dbw 23, GRAVELLER
+	dbw 23, GRAVELER
 	dbw 24, RATICATE
 	dbw 25, MAGMAR
 	dbw 24, GLIGAR
