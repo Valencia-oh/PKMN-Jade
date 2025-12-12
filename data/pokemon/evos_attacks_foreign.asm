@@ -298,6 +298,7 @@ FlappleEvosAttacks:
 	dbw 29, WING_ATTACK
 	dbw 30, SOLARBEAM
 	dbw 35, TWISTER
+	dbw 40, DRAGONBREATH
 	db 0 ; no more level-up moves
 
 FalinksEvosAttacks:
