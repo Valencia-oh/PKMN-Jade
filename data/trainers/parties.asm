@@ -39,7 +39,7 @@ WhitneyGroup:
 	dw BITE, ATTRACT, TACKLE, SHADOW_BALL
 	db 22
 	dw FLITTLE
-	dw TOXIC, PYSCHIC_M, PSYCH_UP, PSYBEAM
+	dw TOXIC, PSYBEAM, PSYCH_UP, PSYBEAM
 	db -1 ; end
 
 	end_list_items
