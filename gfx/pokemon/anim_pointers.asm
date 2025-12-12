@@ -260,6 +260,8 @@ AnimationPointers:
 	dw ElectrikeAnimation
 	dw ManectricAnimation
 	dw HonchkrowAnimation
+	dw BronzorAnimation
+	dw BronzongAnimation
 	dw TogekissAnimation
 	dw MamoswineAnimation
 	dw JoltikAnimation
@@ -273,5 +275,7 @@ AnimationPointers:
 	dw WyrdeerAnimation
 	dw MaschiffAnimation
 	dw MabosstiffAnimation
+	dw FlittleAnimation
+	dw EspathraAnimation
 	dw ErsrheadbbyAnimation
 	assert_table_length NUM_POKEMON
