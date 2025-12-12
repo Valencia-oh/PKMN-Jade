@@ -260,6 +260,8 @@ BitmasksPointers:
 	dw ElectrikeBitmasks
 	dw ManectricBitmasks
 	dw HonchkrowBitmasks
+	dw BronzorBitmasks
+	dw BronzongBitmasks
 	dw TogekissBitmasks
 	dw MamoswineBitmasks
 	dw JoltikBitmasks
@@ -273,5 +275,7 @@ BitmasksPointers:
 	dw WyrdeerBitmasks
 	dw MaschiffBitmasks
 	dw MabosstiffBitmasks
+	dw FlittleBitmasks
+	dw EspathraBitmasks
 	dw ErsrheadbbyBitmasks
 	assert_table_length NUM_POKEMON
