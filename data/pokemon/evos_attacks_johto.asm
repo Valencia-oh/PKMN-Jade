@@ -1172,7 +1172,7 @@ StantlerEvosAttacks:
 	dbw 15, HYPNOSIS
 	dbw 23, STOMP
 	dbw 31, SAND_ATTACK
-	dbw 36, PSYCHIC
+	dbw 36, PSYCHIC_M
 	dbw 40, TAKE_DOWN
 	dbw 49, CONFUSE_RAY
 	db 0 ; no more level-up moves
