@@ -1,27 +1,83 @@
 # Pokedex for Johto
-## New Pokemon:
+## New Pokemon (And their pre-evos):
+- #### Murkrow
+  - Dark/Flying Type
+  - Found on routes 33, 34 and 38 at Night
+- #### Honchkrow
+  - Dark/Flying Type
+  - Evolves from Murkrow when given a Dusk Stone 
+- #### Togekiss
+  - Fairy/Flying Type
+  - Evolves from Togetic when given a Shiny Stone
+- #### STANTLER
+  - Normal/Psychic Type
+  - Found on route 37 at Night and 44 in the Morning
+- #### WYRDEER
+  - Ice/Psychic Type
+  - Found on Mt. Silver
+#### Swinub
+  - Ice/Ground Type
+  - Found in the Ice Path
+#### Piloswine
+  - Ice/Ground Type
+  - Evolves from Swinub at lvl 33
+  - Found in the Ice Path
+- #### Mamoswine
+  - Ice/Ground Type
+  - Evolves from Piloswine at lvl 55
+  - Found in the Ice Path
 - #### Poochyena
+  - Dark type 
   - Found on routes 29, 30, 31, 32, 33, and 46 at Night
 - #### Mightyena
+  - Dark type 
   - Evolves from Poochyena at lvl 18
   - Found on routes 42, 44, and 45 at Night
-- #### WINGULL
-- #### PELIPPER
-- #### SHROOMISH
-- #### BRELOOM
-- #### ELECTRIKE
-- #### MANECTRIC
-- #### HONCHKROW
-- #### TOGEKISS
-- #### MAMOSWINE
-- #### JOLTIK
-- #### GALVANTULA
-- #### LARVESTA
-- #### vVOLCARONA
-- #### APPLIN
+- #### Wingull
+  - Water/Flying Type
+  - Found on Routes 40 and 41 and Olivine City while surfing
+- #### Pelipper
+  - Water/Flying Type
+  - Evolves from Wingull at lvl 25
+  - Found Cianwood City while surfing
+- #### Shroomish
+  - Found on routes 30, 32 and Ilex forest in the Morning and Day
+- #### Breloom
+  - Grass/Fighting Type
+  - Evolves from Shroomish at lvl 24
+  - Found on route 44 in the Morning and Day
+- #### Electrike
+  - Electric Type
+  - Found on routes 34 and 35 in the Morning and Day
+- #### Manectric
+  - Electric Type
+  - Evolves from Electrike at lvl 26
+- #### Joltik
+  - Electric/Bug Type
+  - Found in Union Cave 
+- #### Galvantula
+  - Electric/Bug Type
+  - Evolves from Joltik at lvl 22 
+- #### Larvesta
+  - Bug/Fire Type
+  - Found on Mt.Mortar
+- #### Volcarona
+  - Bug/Fire Type
+  - Evolves from Larvesta at lvl 50 
+- #### Applin
+  - Found in Ilex forest in the Morning and Day 
 - #### APPLETUN
+  - Evolves from Applin when given a Sweet Apple 
 - #### FLAPPLE
+  - Evolves from Applin when given a Tart Apple 
 - #### FALINKS
-- #### WYRDEER
-- #### MASCHIFF
-- #### MABOSSTIFF
+  - Fighting/Steel Type
+  - Does Not Evolve
+  - Found on Route 43
+- #### Maschiff
+  - Dark Type
+  - Found on Route 34
+- #### Mabosschiff
+  - Dark Type
+  - Evolves from Maschiff at lvl 30
+  - Found on Route 42 at night
