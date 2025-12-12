@@ -278,6 +278,7 @@ PokemonCries::
 	mon_cry CRY_ODDISH,       48,   48 ; APPLETUN
 	mon_cry CRY_PIDGEOTTO,    23,   78 ; FLAPPLE
 	mon_cry CRY_RHYDON,      -34,  124 ; FALINKS
+	mon_cry CRY_AIPOM,      -352,  384 ; WYRDEER
 	mon_cry CRY_CYNDAQUIL,    57,  320 ; MASCHIFF
 	mon_cry CRY_TOTODILE,   -266,  256 ; MABOSSTIFF
 	mon_cry CRY_TOGEPI,      256,  256 ; ERSRHEADBBY
