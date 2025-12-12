@@ -9,7 +9,7 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 - overhauled PC (added with CSE)
 - Fairy Type
 - Expanded Gym teams to feature new pokemon for Falkner, Bugsy, Morty, and Pryce (with Whitney also getting a snubbull)
-- A surprise near Ecretek City
+- A surprise near Ecruteak City
   
 ## New Pokemon Locations:
 #### Future Pokemon Locations
