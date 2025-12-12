@@ -260,6 +260,8 @@ FramesPointers:
 	dba ElectrikeFrames
 	dba ManectricFrames
 	dba HonchkrowFrames
+	dba BronzorFrames
+	dba BronzongFrames
 	dba TogekissFrames
 	dba MamoswineFrames
 	dba JoltikFrames
@@ -273,5 +275,7 @@ FramesPointers:
 	dba WyrdeerFrames
 	dba MaschiffFrames
 	dba MabosstiffFrames
+	dba FlittleFrames
+	dba EspathraFrames
 	dba ErsrheadbbyFrames
 	assert_table_length NUM_POKEMON
