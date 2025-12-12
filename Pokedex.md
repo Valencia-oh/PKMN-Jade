@@ -1,5 +1,5 @@
-#Pokedex for Johto
-New Pokemon:
+# Pokedex for Johto
+## New Pokemon:
 - #### Poochyena
   - Found on routes 29, 30, 31, 32, 33, and 46 at Night
 - #### Mightyena
