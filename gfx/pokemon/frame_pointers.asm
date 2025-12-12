@@ -270,6 +270,7 @@ FramesPointers:
 	dba AppletunFrames
 	dba FlappleFrames
 	dba FalinksFrames
+	dba WyrdeerFrames
 	dba MaschiffFrames
 	dba MabosstiffFrames
 	dba ErsrheadbbyFrames
