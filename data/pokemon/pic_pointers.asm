@@ -538,6 +538,10 @@ PokemonPicPointers::
 	dba ManectricBackpic
 	dba HonchkrowFrontpic
 	dba HonchkrowBackpic
+	dba BronzorFrontpic
+	dba BronzorBackpic
+	dba BronzongFrontpic
+	dba BronzongBackpic
 	dba TogekissFrontpic
 	dba TogekissBackpic
 	dba MamoswineFrontpic
@@ -564,6 +568,10 @@ PokemonPicPointers::
 	dba MaschiffBackpic
 	dba MabosstiffFrontpic
 	dba MabosstiffBackpic
+	dba FlittleFrontpic
+	dba FlittleBackpic
+	dba EspathraFrontpic
+	dba EspathraBackpic
 	dba ErsrheadbbyFrontpic
 	dba ErsrheadbbyBackpic
 	assert_table_length NUM_POKEMON + 1
