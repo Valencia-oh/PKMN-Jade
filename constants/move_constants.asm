@@ -258,6 +258,7 @@ DEF GEN1_MOVES EQU const_value - 1
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
 	const BEAT_UP      ; fb
+	const ROOST        ; fc
 DEF GEN2_MOVES EQU const_value - 1
 
 DEF NUM_ATTACKS EQU const_value - 1
@@ -269,7 +270,7 @@ DEF CANNOT_MOVE EQU $ff
 	endc
 
 ; Battle animations use the same constants as the moves
-	const ANIM_SWEET_SCENT_2     ; fc
+	const ANIM_SWEET_SCENT_2     ; fd
 ; Animations with negative IDs will play even when animations are disabled
 	const_def -1, -1
 	const ANIM_HIT_CONFUSION     ;  -1 (ffff)
