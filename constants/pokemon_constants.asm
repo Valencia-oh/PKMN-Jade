@@ -286,21 +286,25 @@ DEF FOREIGN_POKEMON EQU const_value
 	const BRONZOR 	 ; 103 
 	const BRONZONG	 ; 104 
 	const TOGEKISS   ; 105
-	const MAMOSWINE  ; 106
-	const JOLTIK     ; 107
-	const GALVANTULA ; 108
-	const LARVESTA   ; 109
-	const VOLCARONA  ; 10a
-	const APPLIN     ; 10b
-	const APPLETUN   ; 10c
-	const FLAPPLE    ; 10d
-	const FALINKS    ; 10e
-	const WYRDEER    ; 10f
-	const MASCHIFF 	 ; 110 
-	const MABOSSTIFF ; 111 
-	const FLITTLE 	 ; 112 
-	const ESPATHRA	 ; 113 
-	const ERSRHEADBBY; 114
+	const LEAFEON  	 ; 106
+	const GLACEON 	 ; 107
+	const MAMOSWINE  ; 108
+	const JOLTIK     ; 109
+	const GALVANTULA ; 10a
+	const LARVESTA   ; 10b
+	const VOLCARONA  ; 10c
+	const INKAY  	 ; 10d
+	const MALMAR 	 ; 10e
+	const APPLIN     ; 10f
+	const APPLETUN   ; 110
+	const FLAPPLE    ; 111
+	const FALINKS    ; 112
+	const WYRDEER    ; 113
+	const MASCHIFF 	 ; 114 
+	const MABOSSTIFF ; 115 
+	const FLITTLE 	 ; 116 
+	const ESPATHRA	 ; 117 
+	const ERSRHEADBBY; 118
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
