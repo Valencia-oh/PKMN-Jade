@@ -3584,12 +3584,14 @@ HikerGroup:
 
 	next_list_item ; HIKER (8)
 	db "MICHAEL@", TRAINERTYPE_NORMAL
-	db 25
-	dw GEODUDE
-	db 25
+	db 35
+	dw MANECTRIC
+	db 37
 	dw GRAVELER
-	db 25
+	db 40
 	dw GOLEM
+	db 40
+	dw WINGULL
 	db -1 ; end
 
 	next_list_item ; HIKER (9)
@@ -3604,12 +3606,13 @@ HikerGroup:
 
 	next_list_item ; HIKER (10)
 	db "TIMOTHY@", TRAINERTYPE_MOVES
-	db 27
-	dw DIGLETT
-	dw MAGNITUDE, DIG, SAND_ATTACK, SLASH
-	db 27
+	db 34
+	dw SANDSLASH
+	db 37
 	dw DUGTRIO
 	dw MAGNITUDE, DIG, SAND_ATTACK, SLASH
+	db 37
+	dw BRELOOM
 	db -1 ; end
 
 	next_list_item ; HIKER (11)
@@ -4009,13 +4012,13 @@ JugglerGroup:
 BlackbeltGroup:
 	next_list_item ; BLACKBELT_T (1)
 	db "KENJI@", TRAINERTYPE_NORMAL
-	db 27
+	db 37
 	dw ONIX
-	db 30
+	db 35
 	dw HITMONLEE
-	db 27
-	dw ONIX
-	db 32
+	db 37
+	dw STEELIX
+	db 40
 	dw MACHOKE
 	db -1 ; end
 
@@ -4083,8 +4086,10 @@ BlackbeltGroup:
 
 	next_list_item ; BLACKBELT_T (8)
 	db "KENJI@", TRAINERTYPE_NORMAL
-	db 28
-	dw MACHOKE
+	db 34
+	dw ONIX
+	db 35
+	dw HITMONLEE
 	db -1 ; end
 
 	next_list_item ; BLACKBELT_T (9)
@@ -4679,12 +4684,14 @@ CamperGroup:
 
 	next_list_item ; CAMPER (22)
 	db "QUENTIN@", TRAINERTYPE_NORMAL
-	db 30
+	db 37
 	dw FEAROW
-	db 30
+	db 35
 	dw PRIMEAPE
-	db 30
+	db 38
 	dw TAUROS
+	db 30
+	dw MIGHTYENA
 	db -1 ; end
 
 	end_list_items
