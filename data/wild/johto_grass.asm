@@ -1619,8 +1619,8 @@ JohtoGrassWildMons:
 	; nite
 	dbw 33, TANGELA
 	dbw 38, POLIWHIRL
-	dbw 37, BELLSPROUT
-	dbw 39, WEEPINBELL
+	dbw 37, WEEPINBELL
+	dbw 39, VICTEEBEL
 	dbw 36, MIGHTYENA
 	dbw 35, POLIWHIRL
 	dbw 36, POLITOED
