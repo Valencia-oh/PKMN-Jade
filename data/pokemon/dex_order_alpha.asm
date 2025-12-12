@@ -271,6 +271,7 @@ AlphabeticalPokedexOrder:
 	dw WINGULL
 	dw WOBBUFFET
 	dw WOOPER
+	dw WYRDEER
 	dw XATU
 	dw YANMA
 	dw ZAPDOS
