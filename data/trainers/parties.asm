@@ -18,7 +18,7 @@ FalknerGroup:
 	db 17
 	dw PIDGEOTTO
 	dw PECK, MUD_SLAP, GUST, QUICK_ATTACK
-	db 15
+	db 13
 	dw WINGULL
 	dw WATER_GUN, WING_ATTACK, GUST, SUPERSONIC
 	db -1 ; end
@@ -28,13 +28,13 @@ FalknerGroup:
 WhitneyGroup:
 	next_list_item ; WHITNEY (1)
 	db "WHITNEY@", TRAINERTYPE_MOVES
-	db 18
+	db 21
 	dw CLEFAIRY
 	dw DOUBLESLAP, MIMIC, ENCORE, METRONOME
-	db 20
+	db 27
 	dw MILTANK
 	dw ROLLOUT, ATTRACT, STOMP, MILK_DRINK
-	db 17
+	db 22
 	dw SNUBBULL
 	dw BITE, ATTRACT, TACKLE, SHADOW_BALL
 	db -1 ; end
@@ -44,18 +44,18 @@ WhitneyGroup:
 BugsyGroup:
 	next_list_item ; BUGSY (1)
 	db "BUGSY@", TRAINERTYPE_MOVES
-	db 14
+	db 16
 	dw BUTTERFREE
 	dw TACKLE, STRING_SHOT, SLEEP_POWDER, CONFUSION
-	db 15
+	db 17
 	dw BEEDRILL
 	dw POISON_STING, STRING_SHOT, HARDEN, FURY_ATTACK
-	db 16
+	db 18
 	dw SCYTHER
 	dw QUICK_ATTACK, LEER, FURY_CUTTER, NO_MOVE
-	db 16
-	dw FALINKS
-	dw PROTECT, ROCK_SMASH, FURY_CUTTER, HEADBUTT
+	db 19
+	dw HERACROSS
+	dw FURY_ATTACK, ROCK_SMASH, HORN_ATTACK, HEADBUTT
 	db -1 ; end
 
 	end_list_items
