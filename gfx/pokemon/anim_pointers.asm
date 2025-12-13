@@ -251,6 +251,8 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
+; Added Mons
+
 	dw PoochyenaAnimation
 	dw MightyenaAnimation
 	dw WingullAnimation
@@ -263,11 +265,15 @@ AnimationPointers:
 	dw BronzorAnimation
 	dw BronzongAnimation
 	dw TogekissAnimation
+	dw GlaceonAnimation
+	dw LeafeonAnimation
 	dw MamoswineAnimation
 	dw JoltikAnimation
 	dw GalvantulaAnimation
 	dw LarvestaAnimation
 	dw VolcaronaAnimation
+	dw InkayAnimation
+	dw MalamarAnimation
 	dw ApplinAnimation
 	dw AppletunAnimation
 	dw FlappleAnimation
