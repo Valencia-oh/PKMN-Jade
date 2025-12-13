@@ -260,6 +260,8 @@ SECTION "Mon Icons 3", ROMX
 
 PoochyenaIcon::  INCBIN "gfx/icons/houndour.2bpp"
 MightyenaIcon::  INCBIN "gfx/icons/houndoom.2bpp"
+ZigzagoonIcon::  INCBIN "gfx/icons/zigzagoon.2bpp"
+LinooneIcon::    INCBIN "gfx/icons/linoone.2bpp"
 WingullIcon::    INCBIN "gfx/icons/skarmory.2bpp"
 PelipperIcon::   INCBIN "gfx/icons/skarmory.2bpp"
 ShroomishIcon::  INCBIN "gfx/icons/piloswine.2bpp"
