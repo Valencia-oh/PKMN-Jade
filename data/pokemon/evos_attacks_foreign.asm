@@ -13,11 +13,15 @@ EvosAttacksPointers3::
 	dw BronzorEvosAttacks
 	dw BronzongEvosAttacks
 	dw TogekissEvosAttacks
+	dw LeafeonEvosAttacks
+	dw GlaceonEvosAttacks
 	dw MamoswineEvosAttacks
 	dw JoltikEvosAttacks
 	dw GalvantulaEvosAttacks
 	dw LarvestaEvosAttacks
 	dw VolcaronaEvosAttacks
+	dw InkayEvosAttacks
+	dw MalamarEvosAttacks
 	dw ApplinEvosAttacks
 	dw AppletunEvosAttacks
 	dw FlappleEvosAttacks
