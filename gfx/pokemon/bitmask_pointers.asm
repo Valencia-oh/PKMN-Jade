@@ -251,6 +251,8 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
+; Added Mons
+
 	dw PoochyenaBitmasks
 	dw MightyenaBitmasks
 	dw WingullBitmasks
@@ -263,11 +265,15 @@ BitmasksPointers:
 	dw BronzorBitmasks
 	dw BronzongBitmasks
 	dw TogekissBitmasks
+	dw LeafeonBitmasks
+	dw GlaceonBitmasks
 	dw MamoswineBitmasks
 	dw JoltikBitmasks
 	dw GalvantulaBitmasks
 	dw LarvestaBitmasks
 	dw VolcaronaBitmasks
+	dw InkayBitmasks
+	dw MalamarBitmasks
 	dw ApplinBitmasks
 	dw AppletunBitmasks
 	dw FlappleBitmasks
