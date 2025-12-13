@@ -24,6 +24,8 @@ NewPokedexOrder:
 	dw RATICATE
 	dw SENTRET
 	dw FURRET
+	dw ZIGZAGOON
+	dw LINOONE
 	dw PHANPY
 	dw DONPHAN
 	dw PICHU
