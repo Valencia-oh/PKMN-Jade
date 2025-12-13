@@ -4,7 +4,7 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 
 ## Implemented Features
 - Removed Trade+Item Evos, now just use the item
-- 26 new pokemon, bringing the total to 277 (Applin, Espathra, Bronzong, Pelipper, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, and Falinks lines + Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
+- 26 new pokemon, bringing the total to 277 (Applin, Espathra, Bronzong, Pelipper, Malamar, Linoone, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, and Falinks lines + Glaceon, LEafeon, Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
 - HMs done through party not attacks (added with CSE)
 - overhauled PC (added with CSE)
 - Fairy Type
@@ -23,8 +23,8 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - **350 pokemon** There will eventually be around 350 pokemon (all gens 1+2) and ~100 selected from later generations thanks to the Extended 16-bit Indexes featured in CSE
   - sprites downloaded but are not yet implemented - Paldean Wooper, Clodsire, Pikipek, Trumbeak, Toucannon
   - Need to get sprites for Dripplin and Hyrdapple
-  - Requested Mons: Malamar, sigilyph, Lurantis (and all evos and pre-evos thereof)
-  - Future Evos still not added: Leafeon, Glaceon, Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile, Ursaluna
+  - Requested Mons: sigilyph, Lurantis (and all evos and pre-evos thereof)
+  - Future Evos still not added: Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile, Ursaluna
     - Future Babies/Pre-evos are unlikely
   - Regional Varients Planned: Alolan Vulpix + Ninetails, Alolan Raichu, Hisuian Growelith + Arcanine
 - Link Cable
@@ -42,20 +42,14 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 ## Timeline
 Currently focusing on adding pokemon, but after the next pokemon addition update, I will begin working on new Routes and Locations
 ### V.0.4 goals
-- Inkay (Sage Deoxys)                       ✔️,
-- Malamar (Sage Deoxys)                     ✔️,
-- Leafeon (Nuukiie)                        ✔️,
-- Glaceon (Nuukiie)                        ✔️,
-- Zigzagoon (Nuukiie)                      ✖️,
-- Linoone (Nuukiie)                        ✖️,
-- Ursaluna                                 ✖️,
-- Link Cable                               ✔️
+Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link Cable
 
 ### v.0.5 goals
 - Paldean Wooper                           ✖️,
 - Clodsire                                 ✖️,
 - Hisuian Growelithe                       ✖️,
 - Hisuian Arcanine                         ✖️,
+- Ursaluna ✖️
 - Rebalance Levels South of Goldenrod      ✖️,
 - Locations near Cianwood with Alola Mons  ✖️
 
