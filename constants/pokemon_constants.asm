@@ -294,7 +294,7 @@ DEF FOREIGN_POKEMON EQU const_value
 	const LARVESTA   ; 10b
 	const VOLCARONA  ; 10c
 	const INKAY  	 ; 10d
-	const MALMAR 	 ; 10e
+	const MALAMAR 	 ; 10e
 	const APPLIN     ; 10f
 	const APPLETUN   ; 110
 	const FLAPPLE    ; 111
