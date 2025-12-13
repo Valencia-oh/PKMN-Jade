@@ -764,6 +764,8 @@ PoochyenaBackpic:    INCBIN "gfx/pokemon/poochyena/back.2bpp.lz"
 MightyenaFrontpic:   INCBIN "gfx/pokemon/mightyena/front.animated.2bpp.lz"
 MightyenaBackpic:    INCBIN "gfx/pokemon/mightyena/back.2bpp.lz"
 KrisTrainerPic:      INCBIN "gfx/trainers/kris.2bpp.lz"
+LinooneFrontpic:     INCBIN "gfx/pokemon/linoone/front.animated.2bpp.lz"
+LinooneBackpic:      INCBIN "gfx/pokemon/linoone/back.2bpp.lz"
 
 SECTION "Pics 21", ROMX
 ShroomishFrontpic:   INCBIN "gfx/pokemon/shroomish/front.animated.2bpp.lz"
@@ -778,3 +780,6 @@ BronzorFrontpic:     INCBIN "gfx/pokemon/bronzor/front.animated.2bpp.lz"
 BronzorBackpic:      INCBIN "gfx/pokemon/bronzor/back.2bpp.lz"
 BronzongFrontpic:    INCBIN "gfx/pokemon/bronzong/front.animated.2bpp.lz"
 BronzongBackpic:     INCBIN "gfx/pokemon/bronzong/back.2bpp.lz"
+ZigzagoonFrontpic:   INCBIN "gfx/pokemon/zigzagoon/front.animated.2bpp.lz"
+ZigzagoonBackpic:    INCBIN "gfx/pokemon/zigzagoon/back.2bpp.lz"
+
