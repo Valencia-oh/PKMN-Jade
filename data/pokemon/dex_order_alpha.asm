@@ -132,6 +132,7 @@ AlphabeticalPokedexOrder:
 	dw LEDIAN
 	dw LEDYBA
 	dw LICKITUNG
+	dw LINOONE
 	dw LUGIA
 	dw MABOSSTIFF
 	dw MACHAMP
@@ -283,5 +284,6 @@ AlphabeticalPokedexOrder:
 	dw XATU
 	dw YANMA
 	dw ZAPDOS
+	dw ZIGZAGOON
 	dw ZUBAT
 	assert_table_length NUM_POKEMON
