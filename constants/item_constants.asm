@@ -79,7 +79,7 @@
 	const BIG_MUSHROOM ; 0047
 	const SILVERPOWDER ; 0048
 	const BLU_APRICORN ; 0049
-	const ITEM_5A      ; 004A
+	const LINK_CABLE   ; 004A
 	const AMULET_COIN  ; 004B
 	const YLW_APRICORN ; 004C
 	const GRN_APRICORN ; 004D
