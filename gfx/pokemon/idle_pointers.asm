@@ -255,6 +255,8 @@ AnimationIdlePointers:
 
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle
+	dw ZigzagoonAnimationIdle
+	dw LinooneAnimationIdle
 	dw WingullAnimationIdle
 	dw PelipperAnimationIdle
 	dw ShroomishAnimationIdle
