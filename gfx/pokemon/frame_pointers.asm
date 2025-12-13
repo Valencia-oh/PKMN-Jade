@@ -251,6 +251,8 @@ FramesPointers:
 	dba LugiaFrames
 	dba HoOhFrames
 	dba CelebiFrames
+; Added Mons
+
 	dba PoochyenaFrames
 	dba MightyenaFrames
 	dba WingullFrames
@@ -263,11 +265,15 @@ FramesPointers:
 	dba BronzorFrames
 	dba BronzongFrames
 	dba TogekissFrames
+	dba LeafeonFrames
+	dba GlaceonFrames
 	dba MamoswineFrames
 	dba JoltikFrames
 	dba GalvantulaFrames
 	dba LarvestaFrames
 	dba VolcaronaFrames
+	dba InkayFrames
+	dba MalamarFrames
 	dba ApplinFrames
 	dba AppletunFrames
 	dba FlappleFrames
