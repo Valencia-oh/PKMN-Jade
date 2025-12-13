@@ -261,6 +261,8 @@ PokemonCries::
 
 	mon_cry CRY_CYNDAQUIL,    57,  320 ; POOCHYENA
 	mon_cry CRY_TOTODILE,   -266,  256 ; MIGHTYENA
+	mon_cry CRY_SENTRET,     138,  184 ; ZIGZAGOON
+	mon_cry CRY_SENTRET,     107,  258 ; LINOONE
 	mon_cry CRY_PIDGEOTTO,    48,   22 ; WINGULL
 	mon_cry CRY_PIDGEOTTO,    93,   35 ; PELIPPER
 	mon_cry CRY_PARAS,        32,  352 ; SHROOMISH
