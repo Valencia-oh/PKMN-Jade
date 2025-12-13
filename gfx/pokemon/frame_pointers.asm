@@ -256,7 +256,7 @@ FramesPointers:
 	dba PoochyenaFrames
 	dba MightyenaFrames
 	dba ZigzagoonFrames
-	dba LineooneFrames
+	dba LinooneFrames
 	dba WingullFrames
 	dba PelipperFrames
 	dba ShroomishFrames
