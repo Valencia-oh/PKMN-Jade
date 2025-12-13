@@ -82,7 +82,7 @@ ItemDescriptions1:
 	dw BigMushroomDesc  ; 0047
 	dw SilverPowderDesc ; 0048
 	dw BluApricornDesc  ; 0049
-	dw QuestionMarkDesc ; 004A
+	dw LinkCableDesc    ; 004A
 	dw AmuletCoinDesc   ; 004B
 	dw YlwApricornDesc  ; 004C
 	dw GrnApricornDesc  ; 004D
@@ -884,5 +884,9 @@ ShinyStoneDesc:
 	next "kinds of #MON.@"
 
 DuskStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
+
+LinkCableDesc
 	db   "Evolves certain"
 	next "kinds of #MON.@"
