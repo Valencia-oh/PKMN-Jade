@@ -887,6 +887,6 @@ DuskStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-LinkCableDesc
+LinkCableDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
