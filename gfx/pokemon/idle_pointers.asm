@@ -251,6 +251,8 @@ AnimationIdlePointers:
 	dw LugiaAnimationIdle
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
+;Added Mons
+
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle
 	dw WingullAnimationIdle
@@ -263,11 +265,15 @@ AnimationIdlePointers:
 	dw BronzorAnimationIdle
 	dw BronzongAnimationIdle
 	dw TogekissAnimationIdle
+	dw LeafeonAnimationIdle
+	dw GlaceonAnimationIdle
 	dw MamoswineAnimationIdle
 	dw JoltikAnimationIdle
 	dw GalvantulaAnimationIdle
 	dw LarvestaAnimationIdle
 	dw VolcaronaAnimationIdle
+	dw InkayAnimationIdle
+	dw MalamarAnimationIdle
 	dw ApplinAnimationIdle
 	dw AppletunAnimationIdle
 	dw FlappleAnimationIdle
