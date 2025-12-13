@@ -276,35 +276,37 @@ DEF NUM_JOHTO_POKEMON EQU const_value - 1
 DEF FOREIGN_POKEMON EQU const_value
 	const POOCHYENA  ; fc
 	const MIGHTYENA  ; fd
-	const WINGULL    ; fe
-	const PELIPPER   ; ff
-	const SHROOMISH  ; fe
-	const BRELOOM    ; ff
-	const ELECTRIKE  ; 100
-	const MANECTRIC  ; 101
-	const HONCHKROW  ; 102
-	const BRONZOR 	 ; 103 
-	const BRONZONG	 ; 104 
-	const TOGEKISS   ; 105
-	const LEAFEON  	 ; 106
-	const GLACEON 	 ; 107
-	const MAMOSWINE  ; 108
-	const JOLTIK     ; 109
-	const GALVANTULA ; 10a
-	const LARVESTA   ; 10b
-	const VOLCARONA  ; 10c
-	const INKAY  	 ; 10d
-	const MALAMAR 	 ; 10e
-	const APPLIN     ; 10f
-	const APPLETUN   ; 110
-	const FLAPPLE    ; 111
-	const FALINKS    ; 112
-	const WYRDEER    ; 113
-	const MASCHIFF 	 ; 114 
-	const MABOSSTIFF ; 115 
-	const FLITTLE 	 ; 116 
-	const ESPATHRA	 ; 117 
-	const ERSRHEADBBY; 118
+	const ZIGZAGOON  ; fe
+	const LINOONE    ; ff
+	const WINGULL    ; 100
+	const PELIPPER   ; 101
+	const SHROOMISH  ; 102
+	const BRELOOM    ; 103
+	const ELECTRIKE  ; 104
+	const MANECTRIC  ; 105
+	const HONCHKROW  ; 106
+	const BRONZOR 	 ; 107 
+	const BRONZONG	 ; 108 
+	const TOGEKISS   ; 109
+	const LEAFEON  	 ; 10a
+	const GLACEON 	 ; 10b
+	const MAMOSWINE  ; 10c
+	const JOLTIK     ; 10d
+	const GALVANTULA ; 10e
+	const LARVESTA   ; 10f
+	const VOLCARONA  ; 110
+	const INKAY  	 ; 111
+	const MALAMAR 	 ; 112
+	const APPLIN     ; 113
+	const APPLETUN   ; 114
+	const FLAPPLE    ; 115
+	const FALINKS    ; 116
+	const WYRDEER    ; 117
+	const MASCHIFF 	 ; 118 
+	const MABOSSTIFF ; 119 
+	const FLITTLE 	 ; 11a 
+	const ESPATHRA	 ; 11b 
+	const ERSRHEADBBY; 11c
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
