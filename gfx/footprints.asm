@@ -256,6 +256,8 @@ INCBIN "gfx/footprints/celebi.1bpp"
 
 INCBIN "gfx/footprints/poochyena.1bpp"
 INCBIN "gfx/footprints/mightyena.1bpp"
+INCBIN "gfx/footprints/zigzagoon.1bpp"
+INCBIN "gfx/footprints/linoone.1bpp"
 INCBIN "gfx/footprints/wingull.1bpp"
 INCBIN "gfx/footprints/pelipper.1bpp"
 INCBIN "gfx/footprints/shroomish.1bpp"
