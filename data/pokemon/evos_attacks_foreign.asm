@@ -380,6 +380,7 @@ AppletunEvosAttacks:
 	dbw 1, GROWTH
 	dbw 2, HEADBUTT
 	dbw 4, CURSE
+	dbw 5, ABSORB
 	dbw 8, STOMP
 	dbw 12, LEECH_SEED
 	dbw 16, PROTECT
@@ -394,9 +395,11 @@ FlappleEvosAttacks:
 	dbw 1, NIGHT_SHADE
 	dbw 1, SWEET_SCENT
 	dbw 1, GROWTH
+	dbw 5, ABSORB
 	dbw 9, GUST
 	dbw 15, QUICK_ATTACK
 	dbw 21, WHIRLWIND
+	dbw 24, RAZOR_LEAF
 	dbw 29, WING_ATTACK
 	dbw 30, SOLARBEAM
 	dbw 35, TWISTER
@@ -465,7 +468,6 @@ FlittleEvosAttacks:
 	dbw 10, PSYBEAM
 	dbw 20, TELEPORT
 	dbw 25, THIEF
-	dbw 27, RAZOR_LEAF
 	dbw 30, AGILITY
 	dbw 35, FUTURE_SIGHT
 	dbw 50, CONFUSE_RAY
