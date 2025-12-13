@@ -133,6 +133,7 @@ MartGoldenrod4F:
 	dw DUSK_STONE
 	dw MOON_STONE
 	dw SUN_STONE
+	dw LINK_CABLE
 
 MartGoldenrod5F1:
 	db 3 ; # items
