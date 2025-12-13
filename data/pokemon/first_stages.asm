@@ -256,8 +256,10 @@ FirstEvoStages::
 
 	dw POOCHYENA
 	dw POOCHYENA
+	dw ZIGZAGOON
+	dw ZIGZAGOON	;ff
 	dw WINGULL	   
-	dw WINGULL		;ff
+	dw WINGULL		
 	dw SHROOMISH
 	dw SHROOMISH
 	dw ELECTRIKE
