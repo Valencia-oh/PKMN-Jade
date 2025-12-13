@@ -270,11 +270,15 @@ IconPointers:
 	dw BronzorIcon
 	dw BronzongIcon
 	dw TogekissIcon
+	dw LeafeonIcon
+	dw GlaceonIcon
 	dw MamoswineIcon
 	dw JoltikIcon
 	dw GalvantulaIcon
 	dw LarvestaIcon
 	dw VolcaronaIcon
+	dw InkayIcon
+	dw MalamarIcon
 	dw ApplinIcon
 	dw AppletunIcon
 	dw FlappleIcon
