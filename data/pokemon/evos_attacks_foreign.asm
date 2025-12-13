@@ -211,7 +211,7 @@ TogekissEvosAttacks:
 	dbw 38, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
-LeafeonEvosAttacks
+LeafeonEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, TAIL_WHIP
