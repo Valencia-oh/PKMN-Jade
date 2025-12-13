@@ -41,7 +41,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 
 ## Timeline
 Currently focusing on adding pokemon, but after the next pokemon addition update, I will begin working on new Routes and Locations
-### V.0.4 goals
+### V.0.4 goals - DONE
 Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link Cable
 
 ### v.0.5 goals
