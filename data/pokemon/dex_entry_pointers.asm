@@ -266,11 +266,15 @@ PokedexDataPointerTable:
 	dba BronzorPokedexEntry
 	dba BronzongPokedexEntry
 	dba TogekissPokedexEntry
+	dba LeafeonPokedexEntry
+	dba GlaceonPokedexEntry
 	dba MamoswinePokedexEntry
 	dba JoltikPokedexEntry
 	dba GalvantulaPokedexEntry
 	dba LarvestaPokedexEntry
 	dba VolcaronaPokedexEntry
+	dba InkayPokedexEntry
+	dba MalamarPokedexEntry
 	dba ApplinPokedexEntry
 	dba AppletunPokedexEntry
 	dba FlapplePokedexEntry
