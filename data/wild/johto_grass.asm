@@ -1438,7 +1438,7 @@ JohtoGrassWildMons:
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
 	dbw 5, FLITTLE
-	dbw 6, PIDGEY
+	dbw 6, EEVEE
 	dbw 6, PIDGEY
 	; day
 	dbw 4, PIDGEY
@@ -1446,7 +1446,7 @@ JohtoGrassWildMons:
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
 	dbw 5, FLITTLE
-	dbw 6, PIDGEY
+	dbw 6, EEVEE
 	dbw 6, PIDGEY
 	; nite
 	dbw 4, SPINARAK
