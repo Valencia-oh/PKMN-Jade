@@ -73,7 +73,8 @@ ZigzagoonEvosAttacks:
 	dbw 5, DEFENSE_CURL
 	dbw 7, MUD_SLAP
 	dbw 11, QUICK_ATTACK
-	dbw 17, FURY_SWIPES
+	dbw 17, DIG
+	dbw 18, FURY_SWIPES
 	dbw 25, SLAM
 	dbw 33, REST
 	dbw 41, AMNESIA
@@ -84,9 +85,10 @@ LinooneEvosAttacks:
 	dbw 1, SCRATCH
 	dbw 1, DEFENSE_CURL
 	dbw 1, QUICK_ATTACK
-	dbw 5, DEFENSE_CURL
-	dbw 7, MUD_SLAP
+	dbw 1, DEFENSE_CURL
+	dbw 1, MUD_SLAP
 	dbw 11, QUICK_ATTACK
+	dbw 17, DIG
 	dbw 18, FURY_SWIPES
 	dbw 28, SLAM
 	dbw 34, EARTHQUAKE
