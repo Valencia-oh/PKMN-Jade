@@ -266,11 +266,15 @@ FirstEvoStages::
 	dw BRONZOR
 	dw BRONZOR
 	dw TOGEPI
+	dw EEVEE
+	dw EEVEE
 	dw SWINUB	 	
 	dw JOLTIK
 	dw JOLTIK
 	dw LARVESTA
 	dw LARVESTA
+	dw INKAY
+	dw INKAY
 	dw APPLIN	  
 	dw APPLIN
 	dw APPLIN
