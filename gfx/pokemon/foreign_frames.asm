@@ -1,5 +1,7 @@
 PoochyenaFrames:   INCLUDE "gfx/pokemon/poochyena/frames.asm"
 MightyenaFrames: INCLUDE "gfx/pokemon/mightyena/frames.asm"
+ZigzagoonFrames:   INCLUDE "gfx/pokemon/zigzagoon/frames.asm"
+LinooneFrames: INCLUDE "gfx/pokemon/linoone/frames.asm"
 WingullFrames:   INCLUDE "gfx/pokemon/wingull/frames.asm"
 PelipperFrames: INCLUDE "gfx/pokemon/pelipper/frames.asm"
 ShroomishFrames:   INCLUDE "gfx/pokemon/shroomish/frames.asm"
