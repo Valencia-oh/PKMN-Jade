@@ -207,6 +207,40 @@ TogekissEvosAttacks:
 	dbw 38, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
+LeafeonEvosAttacks
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, TAIL_WHIP
+	dbw 1, ABSORB
+	dbw 8, SAND_ATTACK
+	dbw 16, GROWL
+	dbw 18, LEECH_SEED
+	dbw 23, QUICK_ATTACK
+	dbw 25, RAZORLEAF
+	dbw 27, GIGA_DRAIN
+	dbw 30, BITE
+	dbw 27, SYNTHESIS
+	dbw 36, BATON_PASS
+	dbw 42, TAKE_DOWN
+	db 0 ; no more level-up moves
+
+GlaceonEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, TAIL_WHIP
+	dbw 1, ICY_WIND
+	dbw 8, SAND_ATTACK
+	dbw 16, GROWL
+	dbw 18, MIST
+	dbw 23, QUICK_ATTACK
+	dbw 25, AURORA_BEAM
+	dbw 27, POWDER_SNOW
+	dbw 30, BITE
+	dbw 33, BLIZZARD
+	dbw 36, BATON_PASS
+	dbw 42, TAKE_DOWN
+	db 0 ; no more level-up moves
+
 MamoswineEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, HORN_ATTACK
@@ -292,6 +326,39 @@ VolcaronaEvosAttacks:
 	dbw 49, CONFUSE_RAY
 	dbw 57, FIRE_BLAST
 db 0 ; no more level-up moves
+
+InkayEvosAttacks:
+	dbbw EVOLVE_LEVEL, 35, MALAMAR
+	db 0 ; no more evolutions
+	dbw 1, PROTECT
+	dbw 1, PECK
+	dbw 5, BITE
+	dbw 10, FOCUS_ENERGY
+	dbw 12, THIEF
+	dbw 16, CONFUSION
+	dbw 18, DISABLE
+	dbw 21, PSYBEAM
+	dbw 26, RECOVER
+	dbw 25, ENDURE
+	dbw 30, COUNTER
+	dbw 50, PSYCHIC_M
+	db 0 ; no more level-up moves
+
+MalamarEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PROTECT
+	dbw 1, PECK
+	dbw 5, BITE
+	dbw 10, FOCUS_ENERGY
+	dbw 12, THIEF
+	dbw 16, CONFUSION
+	dbw 18, DISABLE
+	dbw 21, PSYBEAM
+	dbw 26, RECOVER
+	dbw 25, ENDURE
+	dbw 30, COUNTER
+	dbw 50, PSYCHIC_M
+	db 0 ; no more level-up moves
 
 ApplinEvosAttacks:
 	dbww EVOLVE_ITEM, SWEET_APPLE, APPLETUN
