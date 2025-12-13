@@ -1525,7 +1525,7 @@ JohtoGrassWildMons:
 	dbw 15, TAUROS
 	dbw 15, TAUROS
 	; day
-	dbw 16, RATTATA
+	dbw 16, MEOWTH
 	dbw 16, RATICATE
 	dbw 16, MAGNEMITE
 	dbw 16, PIDGEOTTO
@@ -1533,11 +1533,11 @@ JohtoGrassWildMons:
 	dbw 15, TAUROS
 	dbw 15, TAUROS
 	; nite
-	dbw 16, MEOWTH
+	dbw 16, INKAY
 	dbw 16, RATICATE
 	dbw 16, MAGNEMITE
 	dbw 16, NOCTOWL
-	dbw 18, MEOWTH
+	dbw 18, INKAY
 	dbw 18, MEOWTH
 	dbw 18, MEOWTH
 	end_grass_wildmons
