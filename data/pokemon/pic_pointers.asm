@@ -524,6 +524,10 @@ PokemonPicPointers::
 	dba PoochyenaBackpic
 	dba MightyenaFrontpic
 	dba MightyenaBackpic
+	dba ZigzagoonFrontpic
+	dba ZigzagoonBackpic
+	dba LinooneFrontpic
+	dba LinooneBackpic
 	dba WingullFrontpic
 	dba WingullBackpic
 	dba PelipperFrontpic
