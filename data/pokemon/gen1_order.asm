@@ -279,5 +279,9 @@ Pokered_MonIndices:
 	db BRONZOR
 	db FLITTLE
 	db ESPATHRA
+	db INKAY
+	db MALAMAR
+	db GLACEON
+	db LEAFEON
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
