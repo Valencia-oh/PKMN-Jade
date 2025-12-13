@@ -42,12 +42,12 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 ## Timeline
 Currently focusing on adding pokemon, but after the next pokemon addition update, I will begin working on new Routes and Locations
 ### V.0.4 goals
-- Inkay                                    ✔️,
-- Malamar                                  ✔️,
-- Leafeon                                  ✔️,
-- Glaceon                                  ✔️,
-- Mudbray                                  ✖️,
-- Mudsdale                                 ✖️,
+- Inkay (Prism Team)                       ✔️,
+- Malamar (Prism Team)                     ✔️,
+- Leafeon (Nuukiie)                        ✔️,
+- Glaceon (Nuukiie)                        ✔️,
+- Zigzagoon (Nuukiie)                      ✖️,
+- Linoone (Nuukiie)                        ✖️,
 - Ursaluna                                 ✖️,
 - Link Cable                               ✔️
 
