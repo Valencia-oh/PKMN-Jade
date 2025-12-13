@@ -290,6 +290,8 @@ INCLUDE "data/pokemon/base_stats/celebi.asm"
 
 INCLUDE "data/pokemon/base_stats/poochyena.asm"
 INCLUDE "data/pokemon/base_stats/mightyena.asm"
+INCLUDE "data/pokemon/base_stats/zigzagoon.asm"
+INCLUDE "data/pokemon/base_stats/linoone.asm"
 INCLUDE "data/pokemon/base_stats/wingull.asm"
 INCLUDE "data/pokemon/base_stats/pelipper.asm"
 INCLUDE "data/pokemon/base_stats/shroomish.asm"
