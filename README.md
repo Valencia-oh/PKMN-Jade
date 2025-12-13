@@ -40,6 +40,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - Pokecrystal devs for making this posible, as well as the code so easy to use and providing numerous incredibly helpful tutorials
 
 ## Timeline
+Currently focusing on adding pokemon, but after the enxt new pokemon updat, I will begin working on new Routes and Locations
 ### V.0.4 goals
 - Inkay                                    ✔️
 - Malamar                                  ✔️
