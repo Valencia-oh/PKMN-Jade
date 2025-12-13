@@ -253,7 +253,7 @@ CelebiBitmasks:     INCLUDE "gfx/pokemon/celebi/bitmask.asm"
 
 PoochyenaBitmasks:  INCLUDE "gfx/pokemon/poochyena/bitmask.asm"
 MightyenaBitmasks:  INCLUDE "gfx/pokemon/mightyena/bitmask.asm"
-ZigzagoonBitmasks:  INCLUDE "gfx/pokemon/zizagoon/bitmask.asm"
+ZigzagoonBitmasks:  INCLUDE "gfx/pokemon/zigzagoon/bitmask.asm"
 LinooneBitmasks:    INCLUDE "gfx/pokemon/linoone/bitmask.asm"
 WingullBitmasks:    INCLUDE "gfx/pokemon/wingull/bitmask.asm"
 PelipperBitmasks:   INCLUDE "gfx/pokemon/pelipper/bitmask.asm"
