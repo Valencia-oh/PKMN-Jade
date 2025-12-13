@@ -1409,8 +1409,8 @@ JohtoGrassWildMons:
 	dbw 14, ELECTRIKE
 	dbw 13, GROWLITHE
 	dbw 10, ABRA
-	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
+	dbw 12, EEVEE
+	dbw 10, EEVEE
 	dbw 12, YANMA
 	; day
 	dbw 12, SNUBBULL
@@ -1418,7 +1418,7 @@ JohtoGrassWildMons:
 	dbw 13, GROWLITHE
 	dbw 10, ABRA
 	dbw 12, JIGGLYPUFF
-	dbw 10, DITTO
+	dbw 10, EEVEE
 	dbw 12, YANMA
 	; nite
 	dbw 12, DROWZEE
@@ -1438,7 +1438,7 @@ JohtoGrassWildMons:
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
 	dbw 5, FLITTLE
-	dbw 6, EEVEE
+	dbw 6, PIDGEY
 	dbw 6, PIDGEY
 	; day
 	dbw 4, PIDGEY
@@ -1446,7 +1446,7 @@ JohtoGrassWildMons:
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
 	dbw 5, FLITTLE
-	dbw 6, EEVEE
+	dbw 6, PIDGEY
 	dbw 6, PIDGEY
 	; nite
 	dbw 4, SPINARAK
