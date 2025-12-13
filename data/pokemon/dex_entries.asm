@@ -265,11 +265,13 @@ HoOhPokedexEntry::       INCLUDE "data/pokemon/dex_entries/ho_oh.asm"
 CelebiPokedexEntry::     INCLUDE "data/pokemon/dex_entries/celebi.asm"
 PoochyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/poochyena.asm"
 MightyenaPokedexEntry::  INCLUDE "data/pokemon/dex_entries/mightyena.asm"
-WingullPokedexEntry::    INCLUDE "data/pokemon/dex_entries/wingull.asm"
-PelipperPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pelipper.asm"
+ZigzagoonPokedexEntry::  INCLUDE "data/pokemon/dex_entries/zigzagoon.asm"
+LinoonePokedexEntry::    INCLUDE "data/pokemon/dex_entries/linoone.asm"
 
 SECTION "Pokedex Entries 257-320", ROMX
 
+WingullPokedexEntry::    INCLUDE "data/pokemon/dex_entries/wingull.asm"
+PelipperPokedexEntry::   INCLUDE "data/pokemon/dex_entries/pelipper.asm"
 ShroomishPokedexEntry::  INCLUDE "data/pokemon/dex_entries/shroomish.asm"
 BreloomPokedexEntry::    INCLUDE "data/pokemon/dex_entries/breloom.asm"
 ElectrikePokedexEntry::  INCLUDE "data/pokemon/dex_entries/electrike.asm"
