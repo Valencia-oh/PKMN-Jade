@@ -259,6 +259,8 @@ PokemonNames::
 
 	dname "POOCHYENA"
 	dname "MIGHTYENA"
+	dname "ZIGZAGOON"
+	dname "LINOONE"
 	dname "WINGULL"
 	dname "PELIPPER"
 	dname "SHROOMISH"
