@@ -7,7 +7,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 3, RATTATA
 	dbw 4, RATTATA
-	dbw 5, RATTATA
+	dbw 5, ZIGZAGOON
 	dbw 3, BELLSPROUT
 	dbw 6, ODDISH
 	dbw 5, BELLSPROUT
@@ -1237,18 +1237,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, PIDGEY
-	dbw 2, SENTRET
-	dbw 3, PIDGEY
-	dbw 3, SENTRET
-	dbw 2, RATTATA
-	dbw 3, HOPPIP
+	dbw 2, ZIGZAGOON
+	dbw 2, LINOONE
+	dbw 3, INKAY
+	dbw 3, MALAMAR
+	dbw 2, LEAFEON
+	dbw 3, GLACEON
 	dbw 3, HOPPIP
 	; day
 	dbw 2, PIDGEY
 	dbw 2, SENTRET
-	dbw 3, PIDGEY
-	dbw 3, SENTRET
+	dbw 3, ZIGZAGOON
+	dbw 3, ZIGZAGOON
 	dbw 2, RATTATA
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
@@ -1268,7 +1268,7 @@ JohtoGrassWildMons:
 	dbw 3, LEDYBA
 	dbw 3, CATERPIE
 	dbw 4, SHROOMISH
-	dbw 4, PIDGEY
+	dbw 4, ZIGZAGOON
 	dbw 3, WEEDLE
 	dbw 4, HOPPIP
 	dbw 4, HOPPIP
@@ -1276,7 +1276,7 @@ JohtoGrassWildMons:
 	dbw 3, PIDGEY
 	dbw 3, CATERPIE
 	dbw 4, SHROOMISH
-	dbw 4, PIDGEY
+	dbw 4, ZIGZAGOON
 	dbw 3, WEEDLE
 	dbw 4, HOPPIP
 	dbw 4, HOPPIP
@@ -1349,29 +1349,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_33
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 6, RATTATA
-	dbw 6, SPEAROW
-	dbw 6, GEODUDE
-	dbw 6, HOPPIP
-	dbw 7, EKANS
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 9, RATTATA
+	dbw 9, SPEAROW
+	dbw 9, GEODUDE
+	dbw 9, HOPPIP
+	dbw 10, EKANS
+	dbw 10, HOPPIP
+	dbw 10, HOPPIP
 	; day
-	dbw 6, RATTATA
-	dbw 6, SPEAROW
-	dbw 6, GEODUDE
-	dbw 6, HOPPIP
-	dbw 7, EKANS
-	dbw 7, HOPPIP
-	dbw 7, HOPPIP
+	dbw 9, RATTATA
+	dbw 9, SPEAROW
+	dbw 9, GEODUDE
+	dbw 9, HOPPIP
+	dbw 10, EKANS
+	dbw 10, HOPPIP
+	dbw 10, HOPPIP
 	; nite
-	dbw 6, RATTATA
-	dbw 6, POOCHYENA
-	dbw 6, GEODUDE
-	dbw 6, ZUBAT
-	dbw 7, MURKROW
-	dbw 7, MURKROW
-	dbw 7, RATTATA
+	dbw 9, RATTATA
+	dbw 9, POOCHYENA
+	dbw 9, GEODUDE
+	dbw 9, ZUBAT
+	dbw 10, MURKROW
+	dbw 10, MURKROW
+	dbw 10, RATTATA
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_34
@@ -1581,7 +1581,7 @@ JohtoGrassWildMons:
 	dbw 38, FURRET
 	dbw 31, FALINKS
 	; day
-	dbw 35, SENTRET
+	dbw 35, ESPATHRA
 	dbw 37, PIDGEOT
 	dbw 34, FARFETCH_D
 	dbw 33, FALINKS
