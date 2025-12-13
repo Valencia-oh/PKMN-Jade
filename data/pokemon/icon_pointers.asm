@@ -260,6 +260,8 @@ IconPointers:
 
 	dw PoochyenaIcon
 	dw MightyenaIcon
+	dw ZigzagoonIcon
+	dw LinooneIcon
 	dw WingullIcon
 	dw PelipperIcon
 	dw ShroomishIcon
