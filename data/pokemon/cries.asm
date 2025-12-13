@@ -270,12 +270,16 @@ PokemonCries::
 	mon_cry CRY_MARILL,      -64,  394 ; HONCHKROW
 	mon_cry CRY_METAPOD,     128,  224 ; BRONZOR
 	mon_cry CRY_METAPOD,      32,  320 ; BRONZONG
-	mon_cry CRY_MAGCARGO,   -265,  256 ; MAMOSWINE
 	mon_cry CRY_TOGETIC,      70,   80 ; TOGEKISS
+	mon_cry CRY_AIPOM,       162,  320 ; LEAFEON
+	mon_cry CRY_VENONAT,    -233,  240 ; GLACEON
+	mon_cry CRY_MAGCARGO,   -265,  256 ; MAMOSWINE
 	mon_cry CRY_SPINARAK,     17,  512 ; JOLTIK
 	mon_cry CRY_SPINARAK,   -174,  482 ; GALVANTULA
 	mon_cry CRY_METAPOD,      90,  256 ; LARVESTA
 	mon_cry CRY_BLASTOISE,   245,  179 ; VOLCARONA
+	mon_cry CRY_TOTODILE,      0,  384 ; INKAY
+	mon_cry CRY_TOTODILE,      0,  384 ; MALAMAR
 	mon_cry CRY_WOOPER,       43,   64 ; APPLIN
 	mon_cry CRY_ODDISH,       48,   48 ; APPLETUN
 	mon_cry CRY_PIDGEOTTO,    23,   78 ; FLAPPLE
