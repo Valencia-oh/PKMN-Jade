@@ -37,9 +37,9 @@ WhitneyGroup:
 	db 22
 	dw SNUBBULL
 	dw BITE, ATTRACT, TACKLE, SHADOW_BALL
-	db 22
-	dw FLITTLE
-	dw TOXIC, PSYBEAM, PSYCH_UP, PSYBEAM
+	db 23
+	dw LINOONE
+	dw DIG, METAL_CLAW, FURY_SWIPES, DEFENSE_CURL
 	db -1 ; end
 
 	end_list_items
