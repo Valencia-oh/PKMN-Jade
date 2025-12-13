@@ -90,6 +90,7 @@ LinooneEvosAttacks:
 	dbw 11, QUICK_ATTACK
 	dbw 17, DIG
 	dbw 18, FURY_SWIPES
+	dbw 21, METAL_CLAW
 	dbw 28, SLAM
 	dbw 34, EARTHQUAKE
 	dbw 38, REST
