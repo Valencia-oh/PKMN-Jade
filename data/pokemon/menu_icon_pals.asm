@@ -270,14 +270,18 @@ MonMenuIconPals:
 	icon_pals GREEN,  BLUE   ; ELECTRIKE
 	icon_pals BLUE,   GREEN  ; MANECTRIC
 	icon_pals BLUE,   PINK   ; HONCHKROW
-	icon_pals TEAL,  GREEN  ; BRONZOR
+	icon_pals TEAL,   GREEN  ; BRONZOR
 	icon_pals TEAL,   GREEN  ; BRONZONG
 	icon_pals RED,    BROWN  ; TOGEKISS
+	icon_pals GREEN,  GREEN  ; LEAFEON
+	icon_pals TEAL,   TEAL   ; GLACEON
 	icon_pals BROWN,  GREEN  ; MAMOSWINE
 	icon_pals GREEN,  BLUE   ; JOLTIK
 	icon_pals GREEN,  BLUE   ; GALVANTULA
 	icon_pals RED,    GREEN  ; LARVESTA
 	icon_pals RED,    GREEN  ; VOLCARONA
+	icon_pals BLUE,   BROWN  ; INKAY
+	icon_pals BLUE,   BROWN  ; MALAMAR
 	icon_pals RED,    GREEN  ; APPLIN
 	icon_pals RED,    GREEN  ; APPLETUN
 	icon_pals RED,    GREEN  ; FLAPPLE
