@@ -3,6 +3,8 @@ SECTION "Evolutions and Attacks 3", ROMX
 EvosAttacksPointers3::
 	dw PoochyenaEvosAttacks
 	dw MightyenaEvosAttacks
+	dw ZigzagoonEvosAttacks
+	dw LinooneEvosAttacks
 	dw WingullEvosAttacks
 	dw PelipperEvosAttacks
 	dw ShroomishEvosAttacks
@@ -62,6 +64,34 @@ MightyenaEvosAttacks:
 	dbw 15, BITE
 	dbw 20, CRUNCH
 	dbw 28, TAKE_DOWN
+	db 0 ; no more level-up moves
+
+ZigzagoonEvosAttacks:
+	dbbw EVOLVE_LEVEL, 20, LINOONE
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 5, DEFENSE_CURL
+	dbw 7, MUD_SLAP
+	dbw 11, QUICK_ATTACK
+	dbw 17, FURY_SWIPES
+	dbw 25, SLAM
+	dbw 33, REST
+	dbw 41, AMNESIA
+	db 0 ; no more level-up moves
+
+LinooneEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, DEFENSE_CURL
+	dbw 1, QUICK_ATTACK
+	dbw 5, DEFENSE_CURL
+	dbw 7, MUD_SLAP
+	dbw 11, QUICK_ATTACK
+	dbw 18, FURY_SWIPES
+	dbw 28, SLAM
+	dbw 34, EARTHQUAKE
+	dbw 38, REST
+	dbw 48, AMNESIA
 	db 0 ; no more level-up moves
 
 WingullEvosAttacks:
