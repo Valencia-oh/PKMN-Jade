@@ -1,5 +1,5 @@
 	db "REVOLVING@" ; species name
-	dw 211, 430 ; height, weight
+	dw 104, 077 ; height, weight
 
 	db   "It draws prey near"
 	next "with its blinking"
