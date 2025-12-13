@@ -1,5 +1,5 @@
 	db "OVERTURNING@" ; species name
-	dw 211, 430 ; height, weight
+	dw 411, 1036 ; height, weight
 
 	db   "It wields the most"
 	next "compelling hypnotic"
