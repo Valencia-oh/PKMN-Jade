@@ -255,6 +255,8 @@ BitmasksPointers:
 
 	dw PoochyenaBitmasks
 	dw MightyenaBitmasks
+	dw ZigzagoonBitmasks
+	dw LinooneBitmasks
 	dw WingullBitmasks
 	dw PelipperBitmasks
 	dw ShroomishBitmasks
