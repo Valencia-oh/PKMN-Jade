@@ -82,6 +82,7 @@ AlphabeticalPokedexOrder:
 	dw GENGAR
 	dw GEODUDE
 	dw GIRAFARIG
+	dw GLACEON
 	dw GLIGAR
 	dw GLOOM
 	dw GOLBAT
@@ -107,6 +108,7 @@ AlphabeticalPokedexOrder:
 	dw HOUNDOUR
 	dw HYPNO
 	dw IGGLYBUFF
+	dw INKAY
 	dw IVYSAUR
 	dw JIGGLYPUFF
 	dw JOLTEON
@@ -126,6 +128,7 @@ AlphabeticalPokedexOrder:
 	dw LAPRAS
 	dw LARVESTA
 	dw LARVITAR
+	dw LEAFEON
 	dw LEDIAN
 	dw LEDYBA
 	dw LICKITUNG
@@ -138,6 +141,7 @@ AlphabeticalPokedexOrder:
 	dw MAGCARGO
 	dw MAGIKARP
 	dw MAGMAR
+	dw MALAMAR
 	dw MANECTRIC
 	dw MAGNEMITE
 	dw MAGNETON
