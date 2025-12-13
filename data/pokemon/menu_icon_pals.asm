@@ -263,9 +263,11 @@ MonMenuIconPals:
 	icon_pals GREEN,  PINK   ; CELEBI
 	icon_pals GRAY,   BROWN  ; POOCHYENA
 	icon_pals GRAY,   BROWN  ; MIGHTYENA
+	icon_pals BROWN,  RED    ; ZIGZAGOON
+	icon_pals BROWN,  RED    ; LINOONE
 	icon_pals BLUE,   GREEN  ; WINGULL
 	icon_pals BLUE,   GREEN  ; PELIPPER
-	icon_pals GREEN,  RED   ; SHROOMISH
+	icon_pals GREEN,  RED    ; SHROOMISH
 	icon_pals GREEN,  BROWN  ; BRELOOM
 	icon_pals GREEN,  BLUE   ; ELECTRIKE
 	icon_pals BLUE,   GREEN  ; MANECTRIC
