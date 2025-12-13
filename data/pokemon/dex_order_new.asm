@@ -189,6 +189,8 @@ NewPokedexOrder:
 	dw FARFETCH_D
 	dw NATU
 	dw XATU
+	dw FLITTLE
+	dw ESPATHRA
 	dw QWILFISH
 	dw TENTACOOL
 	dw TENTACRUEL
@@ -216,6 +218,8 @@ NewPokedexOrder:
 	dw FLAREON
 	dw ESPEON
 	dw UMBREON
+	dw LEAFEON
+	dw GLACEON
 	dw HORSEA
 	dw SEADRA
 	dw KINGDRA
@@ -277,7 +281,7 @@ NewPokedexOrder:
 	dw MEWTWO
 	dw MEW
 	dw CELEBI
-	dw FLITTLE
-	dw ESPATHRA
+	dw INKAY
+	dw MALAMAR
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
