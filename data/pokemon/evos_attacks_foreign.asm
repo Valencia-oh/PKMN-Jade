@@ -220,7 +220,7 @@ LeafeonEvosAttacks:
 	dbw 16, GROWL
 	dbw 18, LEECH_SEED
 	dbw 23, QUICK_ATTACK
-	dbw 25, RAZORLEAF
+	dbw 25, RAZOR_LEAF
 	dbw 27, GIGA_DRAIN
 	dbw 30, BITE
 	dbw 27, SYNTHESIS
@@ -465,6 +465,7 @@ FlittleEvosAttacks:
 	dbw 10, PSYBEAM
 	dbw 20, TELEPORT
 	dbw 25, THIEF
+	dbw 27, RAZOR_LEAF
 	dbw 30, AGILITY
 	dbw 35, FUTURE_SIGHT
 	dbw 50, CONFUSE_RAY
