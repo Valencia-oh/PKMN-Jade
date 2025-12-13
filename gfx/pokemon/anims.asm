@@ -250,15 +250,18 @@ LugiaAnimation:      INCLUDE "gfx/pokemon/lugia/anim.asm"
 HoOhAnimation:       INCLUDE "gfx/pokemon/ho_oh/anim.asm"
 CelebiAnimation:     INCLUDE "gfx/pokemon/celebi/anim.asm"
 ;Added Mons
-
+;gen3
 PoochyenaAnimation:  INCLUDE "gfx/pokemon/poochyena/anim.asm"
 MightyenaAnimation:  INCLUDE "gfx/pokemon/mightyena/anim.asm"
+ZigzagoonAnimation:  INCLUDE "gfx/pokemon/zigzagoon/anim.asm"
+LinooneAnimation:    INCLUDE "gfx/pokemon/linoone/anim.asm"
 WingullAnimation:    INCLUDE "gfx/pokemon/wingull/anim.asm"
 PelipperAnimation:   INCLUDE "gfx/pokemon/pelipper/anim.asm"
 ShroomishAnimation:  INCLUDE "gfx/pokemon/shroomish/anim.asm"
 BreloomAnimation:    INCLUDE "gfx/pokemon/breloom/anim.asm"
 ElectrikeAnimation:  INCLUDE "gfx/pokemon/electrike/anim.asm"
 ManectricAnimation:  INCLUDE "gfx/pokemon/manectric/anim.asm"
+;gen4
 HonchkrowAnimation:  INCLUDE "gfx/pokemon/honchkrow/anim.asm"
 BronzorAnimation:    INCLUDE "gfx/pokemon/bronzor/anim.asm"
 BronzongAnimation:   INCLUDE "gfx/pokemon/bronzong/anim.asm"
@@ -266,17 +269,21 @@ TogekissAnimation:   INCLUDE "gfx/pokemon/togekiss/anim.asm"
 LeafeonAnimation:    INCLUDE "gfx/pokemon/leafeon/anim.asm"
 GlaceonAnimation:    INCLUDE "gfx/pokemon/glaceon/anim.asm"
 MamoswineAnimation:  INCLUDE "gfx/pokemon/mamoswine/anim.asm"
+;gen5
 JoltikAnimation:     INCLUDE "gfx/pokemon/joltik/anim.asm"
 GalvantulaAnimation: INCLUDE "gfx/pokemon/galvantula/anim.asm"
 LarvestaAnimation:   INCLUDE "gfx/pokemon/larvesta/anim.asm"
 VolcaronaAnimation:  INCLUDE "gfx/pokemon/volcarona/anim.asm"
+;gen6
 InkayAnimation:      INCLUDE "gfx/pokemon/inkay/anim.asm"
 MalamarAnimation:    INCLUDE "gfx/pokemon/malamar/anim.asm"
+;gen8
 ApplinAnimation:     INCLUDE "gfx/pokemon/applin/anim.asm"
 AppletunAnimation:   INCLUDE "gfx/pokemon/appletun/anim.asm"
 FlappleAnimation:    INCLUDE "gfx/pokemon/flapple/anim.asm"
 FalinksAnimation:    INCLUDE "gfx/pokemon/falinks/anim.asm"
 WyrdeerAnimation:    INCLUDE "gfx/pokemon/wyrdeer/anim.asm"
+;gen9
 MaschiffAnimation:   INCLUDE "gfx/pokemon/maschiff/anim.asm"
 MabosstiffAnimation: INCLUDE "gfx/pokemon/mabosstiff/anim.asm"
 FlittleAnimation:    INCLUDE "gfx/pokemon/flittle/anim.asm"
