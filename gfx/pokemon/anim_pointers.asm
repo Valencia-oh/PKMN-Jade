@@ -252,15 +252,18 @@ AnimationPointers:
 	dw HoOhAnimation
 	dw CelebiAnimation
 ; Added Mons
-
+;gen3
 	dw PoochyenaAnimation
 	dw MightyenaAnimation
+	dw ZigzagoonAnimation
+	dw LinooneAnimation
 	dw WingullAnimation
 	dw PelipperAnimation
 	dw ShroomishAnimation
 	dw BreloomAnimation
 	dw ElectrikeAnimation
 	dw ManectricAnimation
+;gen4
 	dw HonchkrowAnimation
 	dw BronzorAnimation
 	dw BronzongAnimation
@@ -268,17 +271,21 @@ AnimationPointers:
 	dw GlaceonAnimation
 	dw LeafeonAnimation
 	dw MamoswineAnimation
+;gen5
 	dw JoltikAnimation
 	dw GalvantulaAnimation
 	dw LarvestaAnimation
 	dw VolcaronaAnimation
+;gen6
 	dw InkayAnimation
 	dw MalamarAnimation
+;gen8
 	dw ApplinAnimation
 	dw AppletunAnimation
 	dw FlappleAnimation
 	dw FalinksAnimation
 	dw WyrdeerAnimation
+;gen9
 	dw MaschiffAnimation
 	dw MabosstiffAnimation
 	dw FlittleAnimation
