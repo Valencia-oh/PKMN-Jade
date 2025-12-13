@@ -41,13 +41,12 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 
 ## Timeline
 ### V.0.4 goals
-- Inkay                                     ✔️
+- Inkay                                    ✔️
 - Malamar                                  ✔️
 - Leafeon                                  ✔️
 - Glaceon                                  ✔️
-- Pikipek                                  ✖️
-- Trumbeak                                 ✖️
-- Toucannnon                               ✖️
+- Mudbray                                  ✖️
+- Mudsdale                                 ✖️
 - Ursaluna                                 ✖️
 - Link Cable                               ✖️
 
@@ -65,6 +64,9 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - Flygon                                   ✖️
 - Dripplin                                 ✖️
 - Hydrapple                                ✖️
+- Pikipek                                  ✖️
+- Trumbeak                                 ✖️
+- Toucannnon                               ✖️
 - Olivine + Cyanwood Reblanace             ✖️
 - Cherrygrove to Route 36 connection       ✖️
 - Olivine Woods + Creek                    ✖️
