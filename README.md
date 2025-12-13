@@ -42,33 +42,33 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 ## Timeline
 Currently focusing on adding pokemon, but after the enxt new pokemon updat, I will begin working on new Routes and Locations
 ### V.0.4 goals
-- Inkay                                    ✔️
-- Malamar                                  ✔️
-- Leafeon                                  ✔️
-- Glaceon                                  ✔️
-- Mudbray                                  ✖️
-- Mudsdale                                 ✖️
-- Ursaluna                                 ✖️
-- Link Cable                               ✖️
+- Inkay                                    ✔️,
+- Malamar                                  ✔️,
+- Leafeon                                  ✔️,
+- Glaceon                                  ✔️,
+- Mudbray                                  ✖️,
+- Mudsdale                                 ✖️,
+- Ursaluna                                 ✖️,
+- Link Cable                               ✔️
 
 ### v.0.5 goals
-- Paldean Wooper                           ✖️
-- Clodsire                                 ✖️
-- Hisuian Growelithe                       ✖️
-- Hisuian Arcanine                         ✖️
-- Rebalance Levels South of Goldenrod      ✖️
+- Paldean Wooper                           ✖️,
+- Clodsire                                 ✖️,
+- Hisuian Growelithe                       ✖️,
+- Hisuian Arcanine                         ✖️,
+- Rebalance Levels South of Goldenrod      ✖️,
 - Locations near Cianwood with Alola Mons  ✖️
 
 ### v.0.6 goals
-- Trapinch                                 ✖️
-- Vibrava                                  ✖️
-- Flygon                                   ✖️
-- Dripplin                                 ✖️
-- Hydrapple                                ✖️
-- Pikipek                                  ✖️
-- Trumbeak                                 ✖️
-- Toucannnon                               ✖️
-- Olivine + Cyanwood Reblanace             ✖️
-- Cherrygrove to Route 36 connection       ✖️
-- Olivine Woods + Creek                    ✖️
+- Trapinch                                 ✖️,
+- Vibrava                                  ✖️,
+- Flygon                                   ✖️,
+- Dripplin                                 ✖️,
+- Hydrapple                                ✖️,
+- Pikipek                                  ✖️,
+- Trumbeak                                 ✖️,
+- Toucannnon                               ✖️,
+- Olivine + Cyanwood Reblanace             ✖️,
+- Cherrygrove to Route 36 connection       ✖️,
+- Olivine Woods + Creek                    ✖️,
 - Ecruteak Woods                           ✖️
