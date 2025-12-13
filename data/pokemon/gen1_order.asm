@@ -283,5 +283,7 @@ Pokered_MonIndices:
 	db MALAMAR
 	db GLACEON
 	db LEAFEON
+	db ZIGZAGOON
+	db LINOONE
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
