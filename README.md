@@ -38,3 +38,33 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - Crystal Legacy Team for inspiration on some pokemon locations
 - Polished Crystal and Emerald Seaglass for giving me inspiration to start this project
 - Pokecrystal devs for making this posible, as well as the code so easy to use and providing numerous incredibly helpful tutorials
+
+## Timeline
+### V.0.4 goals
+Inkay                                     ✔️
+Malamar                                  ✔️
+Leafeon                                  ✔️
+Glaceon                                  ✔️
+Pikipek                                  ✖️
+Trumbeak                                 ✖️
+Toucannnon                               ✖️
+Ursaluna                                 ✖️
+Link Cable                               ✖️
+
+### v.0.5 goals
+Paldean Wooper                           ✖️
+Clodsire                                 ✖️
+Hisuian Growelithe                       ✖️
+Hisuian Arcanine                         ✖️
+Rebalance Levels South of Goldenrod      ✖️
+Locations near Cianwood with Alola Mons  ✖️
+
+### v.0.6 goals
+Trapinch                                 ✖️
+Vibrava                                  ✖️
+Flygon                                   ✖️
+Dripplin                                 ✖️
+Hydrapple                                ✖️
+Cherrygrove to Route 36 connection       ✖️
+Olivine Woods + Creek                    ✖️
+Ecruteak Woods                           ✖️
