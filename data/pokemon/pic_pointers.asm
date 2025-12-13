@@ -544,6 +544,10 @@ PokemonPicPointers::
 	dba BronzongBackpic
 	dba TogekissFrontpic
 	dba TogekissBackpic
+	dba LeafeonFrontpic
+	dba LeafeonBackpic
+	dba GlaceonFrontpic
+	dba GlaceonBackpic
 	dba MamoswineFrontpic
 	dba MamoswineBackpic
 	dba JoltikFrontpic
@@ -554,6 +558,10 @@ PokemonPicPointers::
 	dba LarvestaBackpic
 	dba VolcaronaFrontpic
 	dba VolcaronaBackpic
+	dba InkayFrontpic
+	dba InkayBackpic
+	dba MalamarFrontpic
+	dba MalamarBackpic
 	dba ApplinFrontpic
 	dba ApplinBackpic
 	dba AppletunFrontpic
