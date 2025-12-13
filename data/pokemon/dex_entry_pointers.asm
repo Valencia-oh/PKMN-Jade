@@ -256,6 +256,8 @@ PokedexDataPointerTable:
 
 	dba PoochyenaPokedexEntry
 	dba MightyenaPokedexEntry
+	dba ZigzagoonPokedexEntry
+	dba LinoonePokedexEntry
 	dba WingullPokedexEntry
 	dba PelipperPokedexEntry
 	dba ShroomishPokedexEntry
