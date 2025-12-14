@@ -1,4 +1,4 @@
-db "TWIN_TUSK@" ; species name
+db "TWIN TUSK@" ; species name
 	dw 802, 6415 ; height, weight
 
 	db   "It is like an"
