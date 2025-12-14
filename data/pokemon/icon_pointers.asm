@@ -286,6 +286,7 @@ IconPointers:
 	dw FlappleIcon
 	dw FalinksIcon
 	dw WyrdeerIcon
+	dw UrsalunaIcon
 	dw MaschiffIcon
 	dw MabosstiffIcon
 	dw FlittleIcon
