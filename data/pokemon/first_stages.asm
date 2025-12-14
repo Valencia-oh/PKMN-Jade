@@ -282,6 +282,7 @@ FirstEvoStages::
 	dw APPLIN
 	dw FALINKS
 	dw STANTLER
+	dw TEDDIURSA
 	dw MASCHIFF
 	dw MASCHIFF
 	dw FLITTLE
