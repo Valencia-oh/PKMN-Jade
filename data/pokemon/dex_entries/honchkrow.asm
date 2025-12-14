@@ -1,4 +1,4 @@
-db "BIG_BOSS@" ; species name
+db "BIG BOSS@" ; species name
 	dw 211, 60 ; height, weight
 
 	db   "Becoming active at "
