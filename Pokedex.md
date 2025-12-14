@@ -104,6 +104,7 @@ This is a guide to the locations for all pokemon that have either been added or 
 - #### Bronzong
   - Psychic/Steel Type
   - Evolves from Bronzor at lvl 33
+
  (v0.4-)
 - #### Eevee
   - Normal type
