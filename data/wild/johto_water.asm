@@ -234,6 +234,14 @@ JohtoWaterWildMons:
 	dbw 5, MAGIKARP
 	end_water_wildmons
 
+	def_water_wildmons ROUTE_47
+	db 6 percent ; encounter rate
+	dbw 35, QWILFISH
+	dbw 26, QUAGSIRE
+	dbw 24, TENTACRUEL
+	dbw 34, CLOYSTER
+	end_water_wildmons
+
 	def_water_wildmons NEW_BARK_TOWN
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
