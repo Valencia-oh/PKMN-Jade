@@ -281,6 +281,7 @@ BitmasksPointers:
 	dw FlappleBitmasks
 	dw FalinksBitmasks
 	dw WyrdeerBitmasks
+	dw UrsalunaBitmasks
 	dw MaschiffBitmasks
 	dw MabosstiffBitmasks
 	dw FlittleBitmasks
