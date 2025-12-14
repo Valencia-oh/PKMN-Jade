@@ -263,6 +263,7 @@ AlphabeticalPokedexOrder:
 	dw UMBREON
 	dw UNOWN
 	dw URSARING
+	dw URSALUNA
 	dw VAPOREON
 	dw VENOMOTH
 	dw VENONAT
