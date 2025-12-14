@@ -1710,4 +1710,31 @@ JohtoGrassWildMons:
 	dbw 44, WYRDEER
 	end_grass_wildmons
 
+	def_grass_wildmons CIANWOOD_CAVE
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 25, GEODUDE
+	dbw 26, SANDSHREW
+	dbw 25, ZUBAT
+	dbw 24, RATTATA
+	dbw 27, JOLTIK
+	dbw 26, ONIX
+	dbw 26, ONIX
+	; day
+	dbw 26, GEODUDE
+	dbw 26, SANDSHREW
+	dbw 25, ZUBAT
+	dbw 24, RATTATA
+	dbw 27, JOLTIK
+	dbw 26, ONIX
+	dbw 26, ONIX
+	; nite
+	dbw 26, GEODUDE
+	dbw 26, RATTATA
+	dbw 25, WOOPER
+	dbw 24, RATTATA
+	dbw 27, JOLTIK
+	dbw 26, ONIX
+	dbw 26, ONIX
+	end_grass_wildmons
 	db -1 ; end
