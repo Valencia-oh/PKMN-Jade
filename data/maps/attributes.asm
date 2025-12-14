@@ -101,10 +101,11 @@ ENDM
 	connection west, Route29, ROUTE_29, 0
 	connection east, Route27, ROUTE_27, 0
 
-	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, NORTH | EAST
+	map_attributes CherrygroveCity, CHERRYGROVE_CITY, $35, WEST | NORTH | EAST
+	connection west, Route47, ROUTE_47, 5
 	connection north, Route30, ROUTE_30, 5
 	connection east, Route29, ROUTE_29, 0
-	connection west, Route47, ROUTE_47, 5
+
 
 	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
 	connection south, Route32, ROUTE_32, 0
@@ -377,9 +378,10 @@ ENDM
 	connection north, Route10North, ROUTE_10_NORTH, 0
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
-	map_attributes Route47, ROUTE_47, $2c, EAST | WEST
-	connection east, CherrygroveCity, CHERRYGROVE_CITY, 0
+	map_attributes Route47, ROUTE_47, $2c, WEST | EAST
 	connection west, Route32, ROUTE_32, 0
+	connection east, CherrygroveCity, CHERRYGROVE_CITY, -5
+
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
