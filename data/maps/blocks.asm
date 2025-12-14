@@ -6,6 +6,9 @@ Route32_Blocks:
 Route40_Blocks:
 	INCBIN "maps/Route40.ablk"
 
+Route47_Blocks:
+	INCBIN "maps/Route47.ablk"
+
 Route36_Blocks:
 	INCBIN "maps/Route36.ablk"
 
