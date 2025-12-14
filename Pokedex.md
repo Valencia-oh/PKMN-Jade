@@ -114,10 +114,10 @@ This is a guide to the locations for all pokemon that have either been added or 
   - Found on route 35
 - #### Leafeon
   - Grass type
-  - Found on route 35
+  - Evolves from Eevee when given a Leaf Stone
 - #### Glaceon
   - Ice type
-  - Found on route 35
+  - Evolves from Eevee when given a Shiny Stone
 - #### Zigzagoon
   - Normal/Ground type
   - found in Sprout tower, and on Routes 29 and 30 in the Morning and day
