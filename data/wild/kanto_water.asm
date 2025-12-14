@@ -7,6 +7,7 @@ KantoWaterWildMons:
 	dbw 20, GOLDEEN
 	dbw 20, SLOWPOKE
 	dbw 20, SEAKING
+	dbw 27, SLOWBRO
 	end_water_wildmons
 
 	def_water_wildmons VERMILION_PORT
@@ -14,12 +15,14 @@ KantoWaterWildMons:
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
 	dbw 35, TENTACRUEL
+	dbw 40, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_4
 	db 4 percent ; encounter rate
 	dbw 10, GOLDEEN
 	dbw 5, GOLDEEN
+	dbw 10, SEAKING
 	dbw 10, SEAKING
 	end_water_wildmons
 
@@ -28,12 +31,14 @@ KantoWaterWildMons:
 	dbw 10, PSYDUCK
 	dbw 5, PSYDUCK
 	dbw 10, GOLDUCK
+	dbw 10, GOLDUCK
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_9
 	db 4 percent ; encounter rate
 	dbw 15, GOLDEEN
 	dbw 10, GOLDEEN
+	dbw 15, SEAKING
 	dbw 15, SEAKING
 	end_water_wildmons
 
@@ -42,12 +47,14 @@ KantoWaterWildMons:
 	dbw 15, GOLDEEN
 	dbw 10, GOLDEEN
 	dbw 15, SEAKING
+	dbw 15, SEAKING
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_12
 	db 6 percent ; encounter rate
 	dbw 25, TENTACOOL
 	dbw 25, QUAGSIRE
+	dbw 25, TENTACRUEL
 	dbw 25, TENTACRUEL
 	end_water_wildmons
 
@@ -56,12 +63,14 @@ KantoWaterWildMons:
 	dbw 25, TENTACOOL
 	dbw 25, QUAGSIRE
 	dbw 25, TENTACRUEL
+	dbw 25, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_19
 	db 6 percent ; encounter rate
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
+	dbw 35, TENTACRUEL
 	dbw 35, TENTACRUEL
 	end_water_wildmons
 
@@ -70,12 +79,14 @@ KantoWaterWildMons:
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
 	dbw 35, TENTACRUEL
+	dbw 35, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_21
 	db 6 percent ; encounter rate
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
+	dbw 35, TENTACRUEL
 	dbw 35, TENTACRUEL
 	end_water_wildmons
 
@@ -91,12 +102,14 @@ KantoWaterWildMons:
 	dbw 10, GOLDEEN
 	dbw 5, GOLDEEN
 	dbw 10, SEAKING
+	dbw 10, SEAKING
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_25
 	db 4 percent ; encounter rate
 	dbw 10, GOLDEEN
 	dbw 5, GOLDEEN
+	dbw 10, SEAKING
 	dbw 10, SEAKING
 	end_water_wildmons
 
@@ -105,12 +118,14 @@ KantoWaterWildMons:
 	dbw 30, TENTACOOL
 	dbw 25, TENTACOOL
 	dbw 30, TENTACRUEL
+	dbw 30, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_27
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
 	dbw 15, TENTACOOL
+	dbw 20, TENTACRUEL
 	dbw 20, TENTACRUEL
 	end_water_wildmons
 
@@ -119,12 +134,14 @@ KantoWaterWildMons:
 	dbw 40, POLIWAG
 	dbw 35, POLIWAG
 	dbw 40, POLIWHIRL
+	dbw 40, POLIWRATH
 	end_water_wildmons
 
 	def_water_wildmons PALLET_TOWN
 	db 6 percent ; encounter rate
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
+	dbw 35, TENTACRUEL
 	dbw 35, TENTACRUEL
 	end_water_wildmons
 
@@ -140,12 +157,14 @@ KantoWaterWildMons:
 	dbw 10, GOLDEEN
 	dbw 5, GOLDEEN
 	dbw 10, SEAKING
+	dbw 10, SEAKING
 	end_water_wildmons
 
 	def_water_wildmons VERMILION_CITY
 	db 6 percent ; encounter rate
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
+	dbw 35, TENTACRUEL
 	dbw 35, TENTACRUEL
 	end_water_wildmons
 
@@ -154,6 +173,7 @@ KantoWaterWildMons:
 	dbw 20, GRIMER
 	dbw 15, GRIMER
 	dbw 15, MUK
+	dbw 25, MUK
 	end_water_wildmons
 
 	def_water_wildmons FUCHSIA_CITY
@@ -161,12 +181,14 @@ KantoWaterWildMons:
 	dbw 20, MAGIKARP
 	dbw 15, MAGIKARP
 	dbw 10, MAGIKARP
+	dbw 25, MAGIKARP
 	end_water_wildmons
 
 	def_water_wildmons CINNABAR_ISLAND
 	db 6 percent ; encounter rate
 	dbw 35, TENTACOOL
 	dbw 30, TENTACOOL
+	dbw 35, TENTACRUEL
 	dbw 35, TENTACRUEL
 	end_water_wildmons
 
