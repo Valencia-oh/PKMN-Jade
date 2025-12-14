@@ -285,6 +285,7 @@ PokemonNames::
 	dname "FLAPPLE"
 	dname "FALINKS"
 	dname "WYRDEER"
+	dname "URSALUNA"
 	dname "MASCHIFF"
 	dname "MABOSSTIFF"
 	dname "FLITTLE"
