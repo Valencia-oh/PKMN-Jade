@@ -469,6 +469,23 @@ WyrdeerEvosAttacks:
 	dbw 49, CONFUSE_RAY
 	db 0 ; no more level-up moves
 
+UrsalunaEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 1, LEER
+	dbw 1, LICK
+	dbw 1, FURY_SWIPES
+	dbw 8, LICK
+	dbw 15, FURY_SWIPES
+	dbw 22, FAINT_ATTACK
+	dbw 25, DIG
+	dbw 29, REST
+	dbw 35, EARTHQUAKE
+	dbw 39, SLASH
+	dbw 49, SNORE
+	dbw 59, THRASH
+	db 0 ; no more level-up moves
+
 MaschiffEvosAttacks:
 	dbbw EVOLVE_LEVEL, 30, MABOSSTIFF
 	db 0 ; no more evolutions
