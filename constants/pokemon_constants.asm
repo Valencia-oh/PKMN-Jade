@@ -302,11 +302,12 @@ DEF FOREIGN_POKEMON EQU const_value
 	const FLAPPLE    ; 115
 	const FALINKS    ; 116
 	const WYRDEER    ; 117
-	const MASCHIFF 	 ; 118 
-	const MABOSSTIFF ; 119 
-	const FLITTLE 	 ; 11a 
-	const ESPATHRA	 ; 11b 
-	const ERSRHEADBBY; 11c
+	const URSALUNA   ; 118
+	const MASCHIFF 	 ; 119 
+	const MABOSSTIFF ; 11a 
+	const FLITTLE 	 ; 11b 
+	const ESPATHRA	 ; 11c 
+	const ERSRHEADBBY; 11d
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
