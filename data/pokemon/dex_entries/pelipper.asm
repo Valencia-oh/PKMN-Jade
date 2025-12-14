@@ -1,4 +1,4 @@
-db "WATER_BIRD@" ; species name
+db "WATER BIRD@" ; species name
 	dw 311, 0607 ; height, weight
 
 	db   "Ahhhhhhh"
