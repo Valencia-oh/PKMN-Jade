@@ -1,4 +1,4 @@
-db "APPLE_CORE@" ; species name
+db "APPLE CORE@" ; species name
 	dw 008, 0011 ; height, weight
 
 	db   "It spends its life"
