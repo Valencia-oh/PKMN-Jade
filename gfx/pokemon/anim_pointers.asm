@@ -285,6 +285,7 @@ AnimationPointers:
 	dw FlappleAnimation
 	dw FalinksAnimation
 	dw WyrdeerAnimation
+	dw UrsalunaAnimation
 ;gen9
 	dw MaschiffAnimation
 	dw MabosstiffAnimation
