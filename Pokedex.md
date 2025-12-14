@@ -97,6 +97,7 @@ This is a guide to the locations for all pokemon that have either been added or 
 - #### Espathra
   - Pyschic Type
   - Evolves from Larvesta at lvl 35
+  - (V0.4-) Found on Route 43
 - #### Bronzor
   - Psychic/Steel Type
   - Found outside the ruins of Alph and on Route 36 at Night
