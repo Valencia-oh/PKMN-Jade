@@ -1,6 +1,7 @@
 # Pokedex for Johto 
 This is a guide to the locations for all pokemon that have either been added or given new locations within Labradorite, if it says (v-x.x-) in front of a location or pokemon that means that location was added in that update, if one of the og 251 pokemon is grouped under a heading of a version number, then it should just be in Base locations
 ## New Pokemon (And their pre-evos):
+
 - #### Murkrow
   - Dark/Flying Type
   - Found on routes 33, 34 and 38 at Night
@@ -101,9 +102,30 @@ This is a guide to the locations for all pokemon that have either been added or 
   - Found outside the ruins of Alph and on Route 36 at Night
 - #### Bronzong
   - Psychic/Steel Type
-  - Evolves from Bronzor at lvl 33 
-
-(v0.4-) - unimplemented as of current
+  - Evolves from Bronzor at lvl 33
+ (v0.4-)
+- #### Eevee
+  - Normal type
+  - Found on route 35
+- #### Leafeon
+  - Grass type
+  - Found on route 35
+- #### Glaceon
+  - Ice type
+  - Found on route 35
+- #### Zigzagoon
+  - Normal/Ground type
+  - found in Sprout tower, and on Routes 29 and 30 in the Morning and day
+- #### Linoone
+  - Normal/Ground type
+  - elvolves from Zigzagoon at level 20
+- #### Inkay
+  - Dark/Psychic Type
+  - Found on Route 38 at Night
+- #### Malamar
+  -  Dark/Psychic Type
+  -  elvolves from Inkay at level 35
+(v0.5-) - unimplemented as of current
 Pikipek Line
 
 ## Old Pokemon with new locations:
@@ -124,7 +146,7 @@ pokemon only get mentioned once their location is changed from base crystal
 - #### Oddish
   - Found in Sprout Tower in the Morning and Day and Ilex forest at Night
 - #### Meowth
-  - Found all day on route 38 and at night on route 39
+  - Found all day on route 38 and at night on route 39, (v0.4-) Also during day on 39
 - #### Larvitar
   -Found in Silver and Dark Caves
 - #### Xatu
