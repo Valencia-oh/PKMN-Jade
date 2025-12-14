@@ -1,4 +1,4 @@
-	db "FRESH_SNOW@" ; species name
+	db "FRESH SNOW@" ; species name
 	dw 207, 571 ; height, weight
 
 	db   "As a protective"
