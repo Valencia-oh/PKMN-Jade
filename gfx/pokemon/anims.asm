@@ -283,6 +283,7 @@ AppletunAnimation:   INCLUDE "gfx/pokemon/appletun/anim.asm"
 FlappleAnimation:    INCLUDE "gfx/pokemon/flapple/anim.asm"
 FalinksAnimation:    INCLUDE "gfx/pokemon/falinks/anim.asm"
 WyrdeerAnimation:    INCLUDE "gfx/pokemon/wyrdeer/anim.asm"
+UrsalunaAnimation:   INCLUDE "gfx/pokemon/ursaluna/anim.asm"
 ;gen9
 MaschiffAnimation:   INCLUDE "gfx/pokemon/maschiff/anim.asm"
 MabosstiffAnimation: INCLUDE "gfx/pokemon/mabosstiff/anim.asm"
