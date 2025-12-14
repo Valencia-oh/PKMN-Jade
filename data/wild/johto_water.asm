@@ -54,7 +54,7 @@ JohtoWaterWildMons:
 	db 2 percent ; encounter rate
 	dbw 15, PSYDUCK
 	dbw 10, PSYDUCK
-	dbw 24, QwILFISH
+	dbw 24, QWILFISH
 	dbw 33, GOLDUCK
 	end_water_wildmons
 
@@ -151,7 +151,7 @@ JohtoWaterWildMons:
 	dbw 20, POLIWAG
 	dbw 15, POLIWAG
 	dbw 20, POLIWHIRL
-	dbw 15, SHELDER
+	dbw 15, SHELLDER
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_31
@@ -167,7 +167,7 @@ JohtoWaterWildMons:
 	dbw 15, QWILFISH
 	dbw 20, QUAGSIRE
 	dbw 20, TENTACRUEL
-	dbw 15, SHELDER
+	dbw 15, SHELLDER
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_34
@@ -238,7 +238,7 @@ JohtoWaterWildMons:
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
 	dbw 15, CORSOLA
-	dbw 25, TENTACRUEL
+	dbw 25, SHELLDER
 	dbw 25, QWILFISH
 	end_water_wildmons
 
