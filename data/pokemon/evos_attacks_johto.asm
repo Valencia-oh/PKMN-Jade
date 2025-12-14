@@ -951,6 +951,7 @@ TeddiursaEvosAttacks:
 	db 0 ; no more level-up moves
 
 UrsaringEvosAttacks:
+dbww EVOLVE_ITEM, DUSKSTONE, URSARING
 	db 0 ; no more evolutions
 	dbw 1, SCRATCH
 	dbw 1, LEER
