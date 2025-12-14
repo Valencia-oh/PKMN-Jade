@@ -281,6 +281,7 @@ AnimationIdlePointers:
 	dw FlappleAnimationIdle
 	dw FalinksAnimationIdle
 	dw WyrdeerAnimationIdle
+	dw UrsalunaAnimationIdle
 	dw MaschiffAnimationIdle
 	dw MabosstiffAnimationIdle
 	dw FlittleAnimationIdle
