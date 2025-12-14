@@ -1,4 +1,4 @@
-	db "BRONZE_BELL@" ; species name
+	db "BRONZE BELL@" ; species name
 	dw 403, 4123 ; height, weight
 
 	db   "Ancient people"
