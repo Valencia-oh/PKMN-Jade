@@ -10,7 +10,7 @@ CianwoodCave_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 35, 18, CIANWOOD_CITY, 2
+	warp_event 35, 19, CIANWOOD_CITY, 2
 
 	def_coord_events
 
@@ -19,6 +19,7 @@ CianwoodCave_MapEvents:
 	def_object_events
 
 	
+
 
 
 
