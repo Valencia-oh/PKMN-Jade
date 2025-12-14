@@ -283,6 +283,7 @@ AppletunAnimationIdle:   INCLUDE "gfx/pokemon/appletun/anim_idle.asm"
 FlappleAnimationIdle:    INCLUDE "gfx/pokemon/flapple/anim_idle.asm"
 FalinksAnimationIdle:    INCLUDE "gfx/pokemon/falinks/anim_idle.asm"
 WyrdeerAnimationIdle:    INCLUDE "gfx/pokemon/wyrdeer/anim_idle.asm"
+UrsalunaAnimationIdle:   INCLUDE "gfx/pokemon/ursaluna/anim_idle.asm"
 ;gen9
 MaschiffAnimationIdle:   INCLUDE "gfx/pokemon/maschiff/anim_idle.asm"
 MabosstiffAnimationIdle: INCLUDE "gfx/pokemon/mabosstiff/anim_idle.asm"
