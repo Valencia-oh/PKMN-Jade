@@ -285,5 +285,6 @@ Pokered_MonIndices:
 	db LEAFEON
 	db ZIGZAGOON
 	db LINOONE
+	db URSALUNA
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
