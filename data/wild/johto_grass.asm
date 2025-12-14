@@ -1682,6 +1682,34 @@ JohtoGrassWildMons:
 	dbw 2, RATTATA
 	end_grass_wildmons
 
+def_grass_wildmons ROUTE_47
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 34, ARBOK
+	dbw 35, RATTICATE
+	dbw 37, WEEPINBELL
+	dbw 36, LINOONE
+	dbw 37, EXEGGUTOR
+	dbw 37, MUK
+	dbw 37, JUMPLUFF
+	; day
+	dbw 34, QUAGSIRE
+	dbw 35, RATTICATE
+	dbw 37, WEEPINBELL
+	dbw 36, EXEGGUTOR
+	dbw 37, LINOONE
+	dbw 37, MUK
+	dbw 37, JUMPLUFF
+	; nite
+	dbw 34, QUAGSIRE
+	dbw 35, RATTICATE
+	dbw 37, WEEPINBELL
+	dbw 36, HAUNTER
+	dbw 37, NOCTOWL
+	dbw 37, MUK
+	dbw 37, GENGAR
+	end_grass_wildmons
+
 	def_grass_wildmons SILVER_CAVE_OUTSIDE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
