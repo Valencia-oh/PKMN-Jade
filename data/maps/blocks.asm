@@ -897,4 +897,7 @@ BattleTowerOutside_Blocks:
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.ablk"
 
+CianwoodCave_Blocks:
+	INCBIN "maps/CianwoodCave.ablk"
+
 ENDSECTION
