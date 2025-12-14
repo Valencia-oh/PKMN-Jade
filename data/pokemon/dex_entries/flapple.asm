@@ -1,4 +1,4 @@
-db "APPLE_WING@" ; species name
+db "APPLE WING@" ; species name
 	dw 100, 022 ; height, weight
 
 	db   "fly Apple"
