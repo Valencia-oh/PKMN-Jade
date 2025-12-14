@@ -65,6 +65,7 @@ NewPokedexOrder:
 	dw DUNSPARCE
 	dw TEDDIURSA
 	dw URSARING
+	dw URSALUNA
 	dw LARVITAR
 	dw PUPITAR
 	dw TYRANITAR
