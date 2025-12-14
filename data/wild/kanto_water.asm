@@ -94,6 +94,7 @@ KantoWaterWildMons:
 	db 2 percent ; encounter rate
 	dbw 10, POLIWAG
 	dbw 5, POLIWAG
+	dbw 5, POLIWAG
 	dbw 10, POLIWHIRL
 	end_water_wildmons
 
@@ -148,6 +149,7 @@ KantoWaterWildMons:
 	def_water_wildmons VIRIDIAN_CITY
 	db 2 percent ; encounter rate
 	dbw 10, POLIWAG
+	dbw 5, POLIWAG
 	dbw 5, POLIWAG
 	dbw 10, POLIWHIRL
 	end_water_wildmons
