@@ -29,6 +29,7 @@ EvosAttacksPointers3::
 	dw FlappleEvosAttacks
 	dw FalinksEvosAttacks
 	dw WyrdeerEvosAttacks
+	dw UrsalunaEvosAttacks
 	dw MaschiffEvosAttacks
 	dw MabosstiffEvosAttacks
 	dw FlittleEvosAttacks
