@@ -174,7 +174,7 @@ ENDM
 	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH | EAST
 	connection north, VioletCity, VIOLET_CITY, 0
 	connection south, Route33, ROUTE_33, 0
-	connection east, Route47, ROUTE_47, 0
+	connection east, Route47, ROUTE_47, 20
 
 	map_attributes Route33, ROUTE_33, $05, NORTH | WEST
 	connection north, Route32, ROUTE_32, 0
@@ -380,7 +380,7 @@ ENDM
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
 	map_attributes Route47, ROUTE_47, $2c, WEST | EAST
-	connection west, Route32, ROUTE_32, 0
+	connection west, Route32, ROUTE_32, -20
 	connection east, CherrygroveCity, CHERRYGROVE_CITY, 7
 
 
