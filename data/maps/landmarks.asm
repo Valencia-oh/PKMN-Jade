@@ -18,6 +18,7 @@ Landmarks:
 	landmark  84,  92, Route32Name
 	landmark  76,  76, RuinsOfAlphName
 	landmark  84, 124, UnionCaveName
+	landmark  90, 100, Route47Name
 	landmark  82, 124, Route33Name
 	landmark  68, 124, AzaleaTownName
 	landmark  70, 122, SlowpokeWellName
