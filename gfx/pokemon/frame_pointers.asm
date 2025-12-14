@@ -281,6 +281,7 @@ FramesPointers:
 	dba FlappleFrames
 	dba FalinksFrames
 	dba WyrdeerFrames
+	dba UrsalunaFrames
 	dba MaschiffFrames
 	dba MabosstiffFrames
 	dba FlittleFrames
