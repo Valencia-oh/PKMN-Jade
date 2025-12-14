@@ -373,6 +373,7 @@ InkayEvosAttacks:
 	dbw 10, FOCUS_ENERGY
 	dbw 12, THIEF
 	dbw 16, CONFUSION
+	dbw 17, HYPNOSIS
 	dbw 18, DISABLE
 	dbw 21, PSYBEAM
 	dbw 26, RECOVER
@@ -389,6 +390,7 @@ MalamarEvosAttacks:
 	dbw 10, FOCUS_ENERGY
 	dbw 12, THIEF
 	dbw 16, CONFUSION
+	dbw 17, HYPNOSIS
 	dbw 18, DISABLE
 	dbw 21, PSYBEAM
 	dbw 26, RECOVER
