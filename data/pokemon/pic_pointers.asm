@@ -576,6 +576,8 @@ PokemonPicPointers::
 	dba FalinksBackpic
 	dba WyrdeerFrontpic
 	dba WyrdeerBackpic
+	dba UrsalunaFrontpic
+	dba UrsalunaBackpic
 	dba MaschiffFrontpic
 	dba MaschiffBackpic
 	dba MabosstiffFrontpic
