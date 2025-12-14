@@ -54,7 +54,7 @@ JohtoWaterWildMons:
 	db 2 percent ; encounter rate
 	dbw 15, PSYDUCK
 	dbw 10, PSYDUCK
-	dbw 24, QUILFISH
+	dbw 24, QwILFISH
 	dbw 33, GOLDUCK
 	end_water_wildmons
 
@@ -111,6 +111,7 @@ JohtoWaterWildMons:
 	dbw 35, SEAKING
 	dbw 35, GOLDUCK
 	dbw 35, GOLDEEN
+	dbw 35, SLOWBRO
 	end_water_wildmons
 
 	def_water_wildmons DARK_CAVE_VIOLET_ENTRANCE
@@ -163,7 +164,7 @@ JohtoWaterWildMons:
 
 	def_water_wildmons ROUTE_32
 	db 6 percent ; encounter rate
-	dbw 15, QUILFISH
+	dbw 15, QWILFISH
 	dbw 20, QUAGSIRE
 	dbw 20, TENTACRUEL
 	dbw 15, SHELDER
@@ -181,7 +182,8 @@ JohtoWaterWildMons:
 	db 4 percent ; encounter rate
 	dbw 20, PSYDUCK
 	dbw 15, PSYDUCK
-	dbw 20, GOLDUCK
+	dbw 33, GOLDUCK
+	dbw 33, GOLDUCK
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_40
@@ -189,6 +191,7 @@ JohtoWaterWildMons:
 	dbw 20, TENTACOOL
 	dbw 15, WINGULL
 	dbw 20, TENTACRUEL
+	dbw 15, PELIPPER
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_41
@@ -196,6 +199,7 @@ JohtoWaterWildMons:
 	dbw 20, WINGULL
 	dbw 20, TENTACRUEL
 	dbw 20, MANTINE
+	dbw 20, PELIPPER
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_42
@@ -203,46 +207,53 @@ JohtoWaterWildMons:
 	dbw 20, GOLDEEN
 	dbw 15, GOLDEEN
 	dbw 20, SEAKING
+	dbw 25, QUAGSIRE
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_43
 	db 2 percent ; encounter rate
 	dbw 20, MAGIKARP
-	dbw 15, MAGIKARP
-	dbw 10, MAGIKARP
+	dbw 15, WOOPER
+	dbw 10, GOLDEEN
+	dbw 10, SEEL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_44
 	db 2 percent ; encounter rate
 	dbw 25, POLIWAG
-	dbw 20, POLIWAG
-	dbw 25, POLIWHIRL
+	dbw 20, POLIWHIRL
+	dbw 25, SEEL
+	dbw 25, DEWGONG
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_45
 	db 2 percent ; encounter rate
 	dbw 20, MAGIKARP
 	dbw 15, MAGIKARP
+	dbw 10, MAGIKARP
 	dbw 5, MAGIKARP
 	end_water_wildmons
 
 	def_water_wildmons NEW_BARK_TOWN
 	db 6 percent ; encounter rate
 	dbw 20, TENTACOOL
-	dbw 15, TENTACOOL
-	dbw 20, TENTACRUEL
+	dbw 15, CORSOLA
+	dbw 25, TENTACRUEL
+	dbw 25, QWILFISH
 	end_water_wildmons
 
 	def_water_wildmons CHERRYGROVE_CITY
 	db 6 percent ; encounter rate
-	dbw 20, TENTACOOL
+	dbw 20, STARYU
 	dbw 15, TENTACOOL
+	dbw 15, CORSOLA
 	dbw 20, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons VIOLET_CITY
 	db 2 percent ; encounter rate
 	dbw 20, POLIWAG
+	dbw 15, POLIWAG
 	dbw 15, POLIWAG
 	dbw 20, POLIWHIRL
 	end_water_wildmons
