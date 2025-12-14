@@ -289,6 +289,7 @@ MonMenuIconPals:
 	icon_pals RED,    GREEN  ; FLAPPLE
 	icon_pals RED,    BROWN  ; FALINKS
 	icon_pals GRAY,   GREEN  ; WYRDEER
+	icon_pals GRAY,   GREEN  ; WYRDEER
 	icon_pals BROWN,  GREEN  ; MASCHIFF
 	icon_pals GRAY,   GREEN  ; MABOSSTIFF
 	icon_pals BROWN,  GREEN  ; FLITTLE
