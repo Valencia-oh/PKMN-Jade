@@ -1686,7 +1686,7 @@ def_grass_wildmons ROUTE_47
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 34, ARBOK
-	dbw 35, RATTICATE
+	dbw 35, RATICATE
 	dbw 37, WEEPINBELL
 	dbw 36, LINOONE
 	dbw 37, EXEGGUTOR
@@ -1694,7 +1694,7 @@ def_grass_wildmons ROUTE_47
 	dbw 37, JUMPLUFF
 	; day
 	dbw 34, QUAGSIRE
-	dbw 35, RATTICATE
+	dbw 35, RATICATE
 	dbw 37, WEEPINBELL
 	dbw 36, EXEGGUTOR
 	dbw 37, LINOONE
@@ -1702,7 +1702,7 @@ def_grass_wildmons ROUTE_47
 	dbw 37, JUMPLUFF
 	; nite
 	dbw 34, QUAGSIRE
-	dbw 35, RATTICATE
+	dbw 35, RATICATE
 	dbw 37, WEEPINBELL
 	dbw 36, HAUNTER
 	dbw 37, NOCTOWL
