@@ -32,7 +32,6 @@ VenusaurFrontpic:    INCBIN "gfx/pokemon/venusaur/front.animated.2bpp.lz"
 EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 TyphlosionFrontpic:  INCBIN "gfx/pokemon/typhlosion/front.animated.2bpp.lz"
-UrsalunaFrontpic:    INCBIN "gfx/pokemon/ursaluna/front.animated.2bpp.lz"
 
 
 
@@ -784,5 +783,6 @@ BronzongFrontpic:    INCBIN "gfx/pokemon/bronzong/front.animated.2bpp.lz"
 BronzongBackpic:     INCBIN "gfx/pokemon/bronzong/back.2bpp.lz"
 ZigzagoonFrontpic:   INCBIN "gfx/pokemon/zigzagoon/front.animated.2bpp.lz"
 ZigzagoonBackpic:    INCBIN "gfx/pokemon/zigzagoon/back.2bpp.lz"
+UrsalunaFrontpic:    INCBIN "gfx/pokemon/ursaluna/front.animated.2bpp.lz"
 UrsalunaBackpic:     INCBIN "gfx/pokemon/ursaluna/back.2bpp.lz"
 
