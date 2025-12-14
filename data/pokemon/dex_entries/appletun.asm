@@ -1,4 +1,4 @@
-db "APPLE_NECTAR@" ; species name
+db "APPLE NECTAR@" ; species name
 	dw 104, 0287 ; height, weight
 
 	db   "Big Apple"
