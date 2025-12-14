@@ -33,7 +33,7 @@ EnteiFrontpic:       INCBIN "gfx/pokemon/entei/front.animated.2bpp.lz"
 SuicuneFrontpic:     INCBIN "gfx/pokemon/suicune/front.animated.2bpp.lz"
 TyphlosionFrontpic:  INCBIN "gfx/pokemon/typhlosion/front.animated.2bpp.lz"
 UrsalunaFrontpic:    INCBIN "gfx/pokemon/ursaluna/front.animated.2bpp.lz"
-UrsalunaBackpic:     INCBIN "gfx/pokemon/ursaluna/back.animated.2bpp.lz"
+UrsalunaBackpic:     INCBIN "gfx/pokemon/ursaluna/back.2bpp.lz"
 
 
 SECTION "Pics 2", ROMX
