@@ -90,7 +90,9 @@ This is a guide to the locations for all pokemon that have either been added or 
   - Dark Type
   - Evolves from Maschiff at lvl 30
   - Found on Route 42 at night
-  (v0.3-)
+
+   (v0.3-)
+  
 - #### Flittle
   - Pyschic Type
   - Found outside the ruins of Alph and on Route 36 during the Day and Morning
@@ -106,6 +108,7 @@ This is a guide to the locations for all pokemon that have either been added or 
   - Evolves from Bronzor at lvl 33
 
  (v0.4-)
+ 
 - #### Eevee
   - Normal type
   - Found on route 35
@@ -127,6 +130,7 @@ This is a guide to the locations for all pokemon that have either been added or 
 - #### Malamar
   -  Dark/Psychic Type
   -  elvolves from Inkay at level 35
+
 (v0.5-) - unimplemented as of current
 Pikipek Line
 
@@ -187,6 +191,7 @@ pokemon only get mentioned once their location is changed from base crystal
     - Found on Mt.Mortar Outside at Night
 
 (v0.3-)
+
 - #### Slugma
   - Found in Mt.Mortar at Night
 - #### Chikorita
