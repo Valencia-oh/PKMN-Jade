@@ -703,3 +703,10 @@ ENDM
 	map_attributes Route30BerryHouse, ROUTE_30_BERRY_HOUSE, $00, 0
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
+	map_attributes CherryCave, CHERRY_CAVE, $00, 0
+	map_attributes CherryTowerF1, CHERRY_TOWER_F1, $00, 0
+	map_attributes CherryTowerF2, CHERRY_TOWER_F2, $00, 0
+	map_attributes CherryTowerF3, CHERRY_TOWER_F3, $00, 0
+	map_attributes CherryTowerF4, CHERRY_TOWER_F4, $00, 0
+	map_attributes CherryTowerF5, CHERRY_TOWER_F5, $00, 0
+	map_attributes CherryTowerRoof, CHERRY_TOWER_ROOF, $00, 0
