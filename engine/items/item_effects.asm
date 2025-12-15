@@ -214,6 +214,7 @@ ItemEffectsKeyItems:
 	dw SquirtbottleEffect ; SQUIRTBOTTLE
 	dw NoEffect           ; RAINBOW_WING
 	dw NoEffect           ; MEW_DNA
+	dw PocketPCEffect     ; POCKET_PC
 .IndirectEnd:
 
 ItemEffectsBalls:
@@ -2994,4 +2995,8 @@ GetMthMoveOfCurrentMon:
 	ld c, a
 	ld b, 0
 	add hl, bc
+	ret
+
+PocketPCEffect:
+	farcall PocketPCFunction
 	ret
