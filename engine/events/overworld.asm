@@ -1605,14 +1605,6 @@ PocketPCFunction:
 	call QueueScript
 	ld a, TRUE
 	ret
-	
-.CheckIfRegistered:
-	ld a, [wUsingItemWithSelect]
-	and a
-	ret z
-	ld h, d
-	ld l, e
-	ret
 
 BikeFunction:
 	call .TryBike
@@ -1629,16 +1621,6 @@ BikeFunction:
 	cp PLAYER_BIKE
 	jr z, .GetOffBike
 	jr .CannotUseBike
-
-Script_LoadPocketPC:
-	reloadmappart
-	special UpdateTimePals
-Script_LoadPocketPC_Register:
-	opentext
-	special PokemonCenterPC
-	closetext
-	reloadmappart
-	end
 
 .GetOnBike:
 	ld hl, Script_GetOnBike
@@ -1675,6 +1657,16 @@ Script_LoadPocketPC_Register:
 .CannotUseBike:
 	xor a
 	ret
+
+Script_LoadPocketPC:
+	reloadmappart
+	special UpdateTimePals
+Script_LoadPocketPC_Register:
+	opentext
+	special PokemonCenterPC
+	closetext
+	reloadmappart
+	end
 
 .done
 	call QueueScript
