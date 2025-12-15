@@ -45,15 +45,16 @@ Currently focusing on adding pokemon, but after the next pokemon addition update
 Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link Cable
 
 ### v.0.5 goals
+- Cherrygrove to Route 32 connection       ✔️,
+- Ursaluna ✔️
+
+- Locations near Cianwood with Alola Mons  --
+
+### v.0.6 goals
 - Paldean Wooper                           ✖️,
 - Clodsire                                 ✖️,
 - Hisuian Growelithe                       ✖️,
 - Hisuian Arcanine                         ✖️,
-- Ursaluna ✖️
-- Rebalance Levels South of Goldenrod      ✖️,
-- Locations near Cianwood with Alola Mons  ✖️
-
-### v.0.6 goals
 - Trapinch                                 ✖️,
 - Vibrava                                  ✖️,
 - Flygon                                   ✖️,
@@ -62,7 +63,8 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Pikipek                                  ✖️,
 - Trumbeak                                 ✖️,
 - Toucannnon                               ✖️,
+- Rebalance Levels South of Goldenrod      ✖️,
 - Olivine + Cyanwood Reblanace             ✖️,
-- Cherrygrove to Route 36 connection       ✖️,
+- Cherrygrove to Route 32 connection       ✖️,
 - Olivine Woods + Creek                    ✖️,
 - Ecruteak Woods                           ✖️
