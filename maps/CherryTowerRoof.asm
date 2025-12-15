@@ -31,7 +31,7 @@ CherryTowerMew:
 	closetext
 	setevent EVENT_FOUGHT_MEW
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon Mew, 60
+	loadwildmon MEW, 60
 	startbattle
 	disappear CHERRYTOWERROOF_MEW
 	reloadmapafterbattle
@@ -54,4 +54,5 @@ CherryTowerRoof_MapEvents:
 
 	def_object_events
 object_event  9,  5, SPRITE_MEW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_CHERRY_TOWER_ROOF_MEW
+
 
