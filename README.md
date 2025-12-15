@@ -39,6 +39,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - nuukiie made the Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Mightyena, Bronzong, Breloom, Galvantula, Manectric, and Pelipper lines
 - Maschiff and Mabosstiff use edited versions of Egg3ggEgg's sprites
 - Bronzor and Bronzong sprites are from Pokemon Prism
+- Ursaluna Sprites by Me, free to use
 - Crystal Legacy Team for inspiration on some pokemon locations
 - Polished Crystal and Emerald Seaglass for giving me inspiration to start this project
 - Pokecrystal devs for making this posible, as well as the code so easy to use and providing numerous incredibly helpful tutorials
