@@ -10,9 +10,9 @@ CherryTowerF1_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11, 5, CHERRY_TOWER_F2, 2
-	warp_event 10, 17, ROUTE_47, 1
-	warp_event 9,  17, ROUTE_47, 1
+	warp_event 11, 5, CHERRY_TOWER_F2, 1
+	warp_event 10, 17, ROUTE_47, 2
+	warp_event 9,  17, ROUTE_47, 2
 	def_coord_events
 
 	def_bg_events
