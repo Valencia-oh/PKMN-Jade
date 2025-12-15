@@ -10,7 +10,7 @@ def_scene_scripts
 CherryTowerRoofMewCallback:
 	checkevent EVENT_FOUGHT_MEW
 	iftrue .NoAppear
-	checkitem RAINBOW_WING
+	checkitem MEW_DNA
 	iftrue .Appear
 	sjump .NoAppear
 
@@ -26,7 +26,7 @@ CherryTowerMew:
 	faceplayer
 	opentext
 	writetext MewText
-	cry HO_OH
+	cry MEW
 	pause 15
 	closetext
 	setevent EVENT_FOUGHT_MEW
@@ -54,5 +54,6 @@ CherryTowerRoof_MapEvents:
 
 	def_object_events
 object_event  9,  5, SPRITE_MEW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_CHERRY_TOWER_ROOF_MEW
+
 
 
