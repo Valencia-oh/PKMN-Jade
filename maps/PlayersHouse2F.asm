@@ -62,6 +62,7 @@ if DEF(_DEBUG)
 	giveitem MAX_REPEL, 99
 	giveitem MASTER_BALL, 99
 	giveitem BICYCLE
+	giveitem MEW_DNA
 	giveitem GOOD_ROD
 	giveitem THUNDERSTONE, 10
 	giveitem FIRE_STONE, 10
@@ -69,6 +70,10 @@ if DEF(_DEBUG)
 	giveitem LEAF_STONE, 10
 	giveitem MOON_STONE, 10
 	giveitem SUN_STONE, 10
+	giveitem SHINY_STONE, 10
+	giveitem DUSK_STONE, 10
+	giveitem TART_APPLE, 10
+	giveitem SWEET_APPLE, 10
 	giveitem BERRY, 10
 	giveitem GOLD_BERRY, 10
 	giveitem MINT_BERRY, 10
