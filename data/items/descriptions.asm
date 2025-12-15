@@ -193,6 +193,7 @@ ItemDescriptionsKeyItems:
 	dw PassDesc         ; 0113
 	dw SquirtBottleDesc ; 0114
 	dw RainbowWingDesc  ; 0115
+	dw MewDNADesc       ; 0116
 .IndirectEnd:
 
 ItemDescriptionsBalls:
@@ -890,3 +891,7 @@ DuskStoneDesc:
 LinkCableDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
+
+MewDNADesc:
+db   "A strange stand of"
+	next "pink Goop.@"
