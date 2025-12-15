@@ -262,7 +262,7 @@ BlackthornGymClairText_DescribeTM24:
 	cont "to take it."
 	done
 
-BlackthornGymClairText_DescribeTM24:
+BlackthornGymClairText_DescribeMEW_DNA:
 	text "Oh I guess you"
 	line "also need this thing."
 
