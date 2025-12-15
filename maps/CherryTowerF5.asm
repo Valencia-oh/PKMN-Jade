@@ -11,7 +11,7 @@ CherryTowerF5_MapEvents:
 
 	def_warp_events
 	warp_event 2, 2, CHERRY_TOWER_ROOF, 1
-	warp_event 2, 16, CHERRY_TOWER_F4, 1
+	warp_event 2, 16, CHERRY_TOWER_F4, 2
 	def_coord_events
 
 	def_bg_events
