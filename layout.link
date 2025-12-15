@@ -223,7 +223,7 @@ ROMX $4a
 	"Trainer Pic Pointers"
 	"Pics 3"
 ROMX $4b
-	"Map Attributes"
+	"Pics 4"
 ROMX $4c
 	"Pics 5"
 ROMX $4d
@@ -295,7 +295,6 @@ ROMX $6b
 ROMX $6c
 	"Phone Text 2"
 	"Map Scripts 25"
-	"Pics 4"
 ROMX $6d
 	"Special Phone Text"
 ROMX $6e
@@ -308,6 +307,7 @@ ROMX $71
 	"Text 3"
 ROMX $72
 	"Miscellaneous Text"
+	"Map Attributes"
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
