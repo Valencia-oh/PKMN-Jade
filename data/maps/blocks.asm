@@ -920,4 +920,7 @@ CherryTowerF5_Blocks:
 
 CherryTowerRoof_Blocks:
 	INCBIN "maps/CherryTowerRoof.ablk"
+
+CherryCave_Blocks:
+	INCBIN "maps/CherryCave.ablk"
 ENDSECTION
