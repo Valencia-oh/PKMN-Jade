@@ -2628,6 +2628,10 @@ PPRestoredText:
 SquirtbottleEffect:
 	farjp _Squirtbottle
 
+PocketPCEffect:
+	farcall PocketPCFunction
+	ret
+
 CardKeyEffect:
 	farjp _CardKey
 
@@ -2997,6 +3001,3 @@ GetMthMoveOfCurrentMon:
 	add hl, bc
 	ret
 
-PocketPCEffect:
-	farcall PocketPCFunction
-	ret
