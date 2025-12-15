@@ -903,4 +903,21 @@ GoldenrodDeptStoreRoof_Blocks:
 CianwoodCave_Blocks:
 	INCBIN "maps/CianwoodCave.ablk"
 
+CherryTowerF1_Blocks:
+	INCBIN "maps/CherryTowerF1.ablk"
+
+CherryTowerF2_Blocks:
+	INCBIN "maps/CherryTowerF2.ablk"
+
+CherryTowerF3_Blocks:
+	INCBIN "maps/CherryTowerF3.ablk"
+
+CherryTowerF4_Blocks:
+	INCBIN "maps/CherryTowerF4.ablk"
+
+CherryTowerF5_Blocks:
+	INCBIN "maps/CherryTowerF5.ablk"
+
+CherryTowerRoof_Blocks:
+	INCBIN "maps/CherryTowerRoof.ablk"
 ENDSECTION
