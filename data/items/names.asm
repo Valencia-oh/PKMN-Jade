@@ -185,7 +185,8 @@ KeyItemNames::
 	li "PASS"         ; 0113
 	li "SQUIRTBOTTLE" ; 0114
 	li "RAINBOW WING" ; 0115
-	li "MEW DNA" ; 0116
+	li "MEW DNA"      ; 0116
+	li "POCKET PC"	  ; 0117
 	assert_list_length NUM_KEY_ITEM_POCKET
 
 BallNames::
