@@ -1,4 +1,4 @@
-object_const_def
+	object_const_def
 
 CherryTowerF1_MapScripts:
 	def_scene_scripts
