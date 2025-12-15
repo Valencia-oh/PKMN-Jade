@@ -51,6 +51,8 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 
 ### v.0.5 goals - In Progress
 - Cherrygrove to Route 32 connection       ✔️,
+- Cherry Tower and Cave ✔️
+- Mew Event       ✔️
 - Ursaluna ✔️
 
 - Locations near Cianwood with Alola Mons  --
@@ -70,6 +72,5 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Toucannnon                               ✖️,
 - Rebalance Levels South of Goldenrod      ✖️,
 - Olivine + Cyanwood Reblanace             ✖️,
-- Cherrygrove to Route 32 connection       ✖️,
 - Olivine Woods + Creek                    ✖️,
 - Ecruteak Woods                           ✖️
