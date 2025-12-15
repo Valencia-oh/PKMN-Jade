@@ -66,7 +66,7 @@ ROMX $09
 ROMX $0a
 	"bankA"
 	"Trainer Backpics"
-	"Pics 4"
+	
 ROMX $0b
 	"bankB"
 ROMX $0c
@@ -295,6 +295,7 @@ ROMX $6b
 ROMX $6c
 	"Phone Text 2"
 	"Map Scripts 25"
+	"Pics 4"
 ROMX $6d
 	"Special Phone Text"
 ROMX $6e
