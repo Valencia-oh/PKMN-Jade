@@ -1794,3 +1794,143 @@ def_grass_wildmons ROUTE_47
 	dbw 35, DITTO
 	dbw 35, MUK 
 	end_grass_wildmons
+
+def_grass_wildmons CHERRY_TOWER_F1
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 37, MUK
+	dbw 38, DITTO
+	dbw 39, WHEEZING
+	dbw 37, NIDORINO
+	dbw 40, HONCHKROW
+	dbw 39, ARIADOS
+	dbw 39, MUK
+	; day
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINO
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	; nite
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINA
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	end_grass_wildmons
+
+def_grass_wildmons CHERRY_TOWER_F2
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 37, MUK
+	dbw 38, DITTO
+	dbw 39, WHEEZING
+	dbw 37, NIDORINO
+	dbw 40, HONCHKROW
+	dbw 39, ARIADOS
+	dbw 39, MUK
+	; day
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINO
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	; nite
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINA
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	end_grass_wildmons
+
+def_grass_wildmons CHERRY_TOWER_F3
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 37, MUK
+	dbw 38, DITTO
+	dbw 39, WHEEZING
+	dbw 37, NIDORINO
+	dbw 40, HONCHKROW
+	dbw 39, ARIADOS
+	dbw 39, MUK
+	; day
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINO
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	; nite
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINA
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	end_grass_wildmons
+
+def_grass_wildmons CHERRY_TOWER_F4
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 37, MUK
+	dbw 38, DITTO
+	dbw 39, WHEEZING
+	dbw 37, NIDORINO
+	dbw 40, HONCHKROW
+	dbw 39, ARIADOS
+	dbw 39, MUK
+	; day
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINO
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	; nite
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINA
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	end_grass_wildmons
+
+def_grass_wildmons CHERRY_TOWER_F5
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 37, MUK
+	dbw 38, DITTO
+	dbw 39, WHEEZING
+	dbw 37, NIDORINO
+	dbw 40, HONCHKROW
+	dbw 39, ARIADOS
+	dbw 39, MUK
+	; day
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINO
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	; nite
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINA
+	dbw 36, HONCHKROW
+	dbw 35, ARIADOS
+	dbw 35, MUK 
+	end_grass_wildmons
