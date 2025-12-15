@@ -191,7 +191,8 @@ DEF FIRST_KEY_ITEM EQU const_value
 	const PASS         ; 0113
 	const SQUIRTBOTTLE ; 0114
 	const RAINBOW_WING ; 0115
-	const MEW_DNA ; 0116
+	const MEW_DNA 	   ; 0116
+	const POCKET_PC	   ; 0117
 DEF NUM_KEY_ITEM_POCKET EQU const_value - FIRST_KEY_ITEM
 assert NUM_KEY_ITEM_POCKET <= $ff
 
