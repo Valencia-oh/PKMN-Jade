@@ -9,7 +9,7 @@ Route47_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 11, 1, CHERRY_TOWER_F1, 1
+	warp_event 11, 1, CHERRY_TOWER_F1, 3
 	warp_event 11,  5, CHERRY_CAVE, 1
 	warp_event 11, 17, CHERRY_CAVE, 2
 	def_coord_events
