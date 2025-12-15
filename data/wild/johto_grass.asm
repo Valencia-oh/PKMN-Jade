@@ -1766,3 +1766,31 @@ def_grass_wildmons ROUTE_47
 	dbw 10, CYNDAQUIL
 	end_grass_wildmons
 	db -1 ; end
+
+	def_grass_wildmons CHERRY_CAVE
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINO
+	dbw 36, WHEEZING
+	dbw 35, DITTO
+	dbw 35, MUK
+	; day
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINO
+	dbw 36, WHEEZING
+	dbw 35, DITTO
+	dbw 35, MUK 
+	; nite
+	dbw 33, MUK
+	dbw 34, DITTO
+	dbw 35, WHEEZING
+	dbw 33, NIDORINO
+	dbw 36, WHEEZING
+	dbw 35, DITTO
+	dbw 35, MUK 
+	end_grass_wildmons
