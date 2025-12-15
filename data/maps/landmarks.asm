@@ -17,8 +17,9 @@ Landmarks:
 	landmark  85,  58, SproutTowerName
 	landmark  84,  92, Route32Name
 	landmark  76,  76, RuinsOfAlphName
-	landmark  84, 124, UnionCaveName
 	landmark  90, 100, Route47Name
+	landmark  95,  95, CherryTowerName
+	landmark  84, 124, UnionCaveName
 	landmark  82, 124, Route33Name
 	landmark  68, 124, AzaleaTownName
 	landmark  70, 122, SlowpokeWellName
@@ -205,4 +206,5 @@ TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE<BSP>TOWER@"
 SpecialMapName:      db "SPECIAL@"
-CianwoodCaveName:    db "CIANWOOD CAVE@"
+CherryTowerName:         db "CHERRY<BSP>TOWER@"
+CianwoodCaveName:    db "CIANWOOD<BSP>CAVE@"
