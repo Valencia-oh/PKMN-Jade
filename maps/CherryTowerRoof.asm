@@ -53,7 +53,7 @@ CherryTowerRoof_MapEvents:
 	def_bg_events
 
 	def_object_events
-object_event  9,  5, SPRITE_MEW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TinTowerHoOh, EVENT_CHERRY_TOWER_ROOF_MEW
+object_event  5,  6, SPRITE_MEW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherryTowerMew, EVENT_CHERRY_TOWER_ROOF_MEW
 
 
 
