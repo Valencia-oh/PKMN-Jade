@@ -489,6 +489,7 @@ AideScript_WalkBalls1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
 	turnobject PLAYER, DOWN
 	scall AideScript_GiveYouBalls
+	scall AideScript_GivePocketPC
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
 	end
 
@@ -496,6 +497,7 @@ AideScript_WalkBalls2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight2
 	turnobject PLAYER, DOWN
 	scall AideScript_GiveYouBalls
+	scall AideScript_GivePocketPC
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
@@ -509,6 +511,16 @@ AideScript_GiveYouBalls:
 	writetext AideText_ExplainBalls
 	promptbutton
 	itemnotify
+	closetext
+	end
+
+AideScript_GivePocketPC:
+	opentext
+	writetext AideText_GetPocketPCText
+	promptbutton
+	giveitem POCKET_PC
+	writetext AideText_PocketPCInfoText
+	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_NOOP
 	end
@@ -1365,6 +1377,18 @@ ElmsLabPCText:
 
 	para "…It says on the"
 	line "screen…"
+	done
+
+AideText_GetPocketPCText:
+	text "Oh, I have this"
+	line "for you too."
+
+	para "It's a Pocket PC!"
+	done
+	
+AideText_PocketPCInfoText:
+	text "Use this to manage"
+	line "your party."
 	done
 
 ElmsLab_MapEvents:
