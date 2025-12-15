@@ -11,6 +11,7 @@ Floor5Sign:
 
 Floor5SignText:
 	text "Teleport to Route 47"
+	done
 
 
 CherryTowerF5_MapEvents:
