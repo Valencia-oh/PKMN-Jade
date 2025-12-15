@@ -1658,15 +1658,6 @@ PocketPCFunction:
 	ld a, TRUE
 	ret
 
-Script_LoadPocketPC:
-	reloadmappart
-	special UpdateTimePals
-Script_LoadPocketPC_Register:
-	opentext
-	special PokemonCenterPC
-	closetext
-	reloadmappart
-	end
 
 .done
 	call QueueScript
@@ -1700,6 +1691,16 @@ Script_LoadPocketPC_Register:
 .nope
 	scf
 	ret
+
+Script_LoadPocketPC:
+	reloadmappart
+	special UpdateTimePals
+Script_LoadPocketPC_Register:
+	opentext
+	special PokemonCenterPC
+	closetext
+	reloadmappart
+	end
 
 Script_GetOnBike:
 	refreshmap
