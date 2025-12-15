@@ -70,7 +70,7 @@ if DEF(_DEBUG)
 	giveitem LEAF_STONE, 10
 	giveitem MOON_STONE, 10
 	giveitem SUN_STONE, 10
-	giveitem SHINY_STONE, 10
+	giveitem SHINYSTONE, 10
 	giveitem DUSK_STONE, 10
 	giveitem TART_APPLE, 10
 	giveitem SWEET_APPLE, 10
