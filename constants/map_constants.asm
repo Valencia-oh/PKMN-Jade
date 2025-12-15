@@ -154,7 +154,14 @@ ENDM
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89
 	map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	map_const VICTORY_ROAD,                                10, 36 ; 91
-	map_const CIANWOOD_CAVE,                                20, 10 ; 92
+	map_const CIANWOOD_CAVE,                               20, 10 ; 92
+	map_const CHERRY_TOWER_F1,                             10, 10 ; 42
+	map_const CHERRY_TOWER_F2,                             10, 10 ; 43
+	map_const CHERRY_TOWER_F3,                             10, 10 ; 44
+	map_const CHERRY_TOWER_F4,                             10, 10 ; 45
+	map_const CHERRY_TOWER_F5,                             10, 10 ; 46
+	map_const CHERRY_TOWER_ROOF,                           10, 10 ; 47
+	map_const CHERRY_CAVE,                                 20, 12 ; 48
 	endgroup
 
 	newgroup ECRUTEAK                                             ;  4
