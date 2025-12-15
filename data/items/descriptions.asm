@@ -194,6 +194,7 @@ ItemDescriptionsKeyItems:
 	dw SquirtBottleDesc ; 0114
 	dw RainbowWingDesc  ; 0115
 	dw MewDNADesc       ; 0116
+	dw PocketPCDesc		; 0117
 .IndirectEnd:
 
 ItemDescriptionsBalls:
@@ -895,3 +896,7 @@ LinkCableDesc:
 MewDNADesc:
 db   "A strange stand of"
 	next "pink Goop.@"
+
+PocketPCDesc:
+	db   "Access the PC"
+	next "right here!@
