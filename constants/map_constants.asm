@@ -160,7 +160,7 @@ ENDM
 	map_const CHERRY_TOWER_F3,                             10, 10 ; 95
 	map_const CHERRY_TOWER_F4,                             10, 10 ; 96
 	map_const CHERRY_TOWER_F5,                             10, 10 ; 97
-	map_const CHERRY_TOWER_ROOF,                           10, 10 ; 98
+	map_const CHERRY_TOWER_ROOF,                            8,  8 ; 98
 	map_const CHERRY_CAVE,                                 20, 12 ; 99
 	endgroup
 
