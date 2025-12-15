@@ -66,14 +66,13 @@ ROMX $09
 ROMX $0a
 	"bankA"
 	"Trainer Backpics"
-	"Map Attributes"
+	"Pics 4"
 ROMX $0b
 	"bankB"
 ROMX $0c
 	"Tileset Data 4"
 ROMX $0d
 	"Effect Commands"
-	
 ROMX $0e
 	"Enemy Trainers"
 ROMX $0f
@@ -224,7 +223,7 @@ ROMX $4a
 	"Trainer Pic Pointers"
 	"Pics 3"
 ROMX $4b
-	"Pics 4"
+	"Map Attributes"
 ROMX $4c
 	"Pics 5"
 ROMX $4d
