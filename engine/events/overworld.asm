@@ -1591,21 +1591,6 @@ RodNothingText:
 	text_far _RodNothingText
 	text_end
 
-PocketPCFunction:
-	call .LoadPocketPC
-	and $7f
-	ld [wFieldMoveSucceeded], a
-	ret
-	
-.LoadPocketPC:
-	ld a, [wPlayerState]
-	ld hl, Script_LoadPocketPC
-	ld de, Script_LoadPocketPC_Register
-	call .CheckIfRegistered
-	call QueueScript
-	ld a, TRUE
-	ret
-
 BikeFunction:
 	call .TryBike
 	and JUMPTABLE_INDEX_MASK
@@ -1656,6 +1641,21 @@ BikeFunction:
 
 .CannotUseBike:
 	xor a
+	ret
+
+PocketPCFunction:
+	call .LoadPocketPC
+	and $7f
+	ld [wFieldMoveSucceeded], a
+	ret
+	
+.LoadPocketPC:
+	ld a, [wPlayerState]
+	ld hl, Script_LoadPocketPC
+	ld de, Script_LoadPocketPC_Register
+	call .CheckIfRegistered
+	call QueueScript
+	ld a, TRUE
 	ret
 
 Script_LoadPocketPC:
