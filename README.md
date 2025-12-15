@@ -15,6 +15,8 @@ All new Pokemon, with evolutions or locations in Johto changed, will be found he
 
 (currently on v.0.4, v.05 will be input soon)
 
+
+
 Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) and the Apples for Applin are sold in the Goldenrod Department Store,
 
 ## Planned Features
