@@ -10,8 +10,8 @@ CherryTowerF4_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 35, 17, CHERRY_TOWER_F5, 1
-	warp_event 35, 18, CHERRY_TOWER_F3, 1
+	warp_event 2, 16, CHERRY_TOWER_F5, 1
+	warp_event 17, 3, CHERRY_TOWER_F3, 1
 	def_coord_events
 
 	def_bg_events
