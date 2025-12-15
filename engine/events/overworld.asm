@@ -1606,6 +1606,14 @@ PocketPCFunction:
 	ld a, TRUE
 	ret
 
+.CheckIfRegistered:
+	ld a, [wUsingItemWithSelect]
+	and a
+	ret z
+	ld h, d
+	ld l, e
+	ret
+
 BikeFunction:
 	call .TryBike
 	and JUMPTABLE_INDEX_MASK
