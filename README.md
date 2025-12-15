@@ -11,7 +11,9 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 - Expanded Gym teams to feature new pokemon for Falkner, Bugsy, Morty, and Pryce (with Whitney also getting a snubbull)
 - A surprise near Ecruteak City
 
-All new Pokemon, their evolutions and with locations in Johto changed, can be found here: in the [Pokedex tab](https://github.com/Valencia-oh/PKMN-Labradorite/blob/core/Pokedex.md)
+All new Pokemon, with evolutions or locations in Johto changed, will be found here: in the [Pokedex tab](https://github.com/Valencia-oh/PKMN-Labradorite/blob/core/Pokedex.md)
+
+(currently on v.0.4, v.05 will be input soon)
 
 Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) and the Apples for Applin are sold in the Goldenrod Department Store,
 
@@ -44,7 +46,7 @@ Currently focusing on adding pokemon, but after the next pokemon addition update
 ### V.0.4 goals - DONE
 Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link Cable
 
-### v.0.5 goals
+### v.0.5 goals - In Progress
 - Cherrygrove to Route 32 connection       ✔️,
 - Ursaluna ✔️
 
