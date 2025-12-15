@@ -484,5 +484,12 @@ SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/CherryTowerF1.asm"
+INCLUDE "maps/CherryTowerF2.asm"
+INCLUDE "maps/CherryTowerF3.asm"
+INCLUDE "maps/CherryTowerF4.asm"
+INCLUDE "maps/CherryTowerF5.asm"
+INCLUDE "maps/CherryTowerRoof.asm"
+INCLUDE "maps/CherryCave.asm"
 
 ENDSECTION
