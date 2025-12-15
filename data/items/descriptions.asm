@@ -899,4 +899,4 @@ db   "A strange stand of"
 
 PocketPCDesc:
 	db   "Access the PC"
-	next "right here!@
+	next "right here!@"
