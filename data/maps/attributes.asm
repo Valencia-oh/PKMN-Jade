@@ -384,10 +384,10 @@ ENDM
 	connection east, CherrygroveCity, CHERRYGROVE_CITY, 7
 
 	map_attributes CianwoodPalace, CIANWOOD_PALACE, $2c, SOUTH
-	connection south, Route48, ROUTE_48, -6
+	connection south, Route48, ROUTE_48, -3
 
 	map_attributes Route48, ROUTE_48, $2c, NORTH
-	connection north, CianwoodPalace, CIANWOOD_PALACE, 6
+	connection north, CianwoodPalace, CIANWOOD_PALACE, 3
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
