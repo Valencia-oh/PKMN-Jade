@@ -270,6 +270,7 @@ ROMX $60
 	"Pokedex Entries 001-064"
 ROMX $61
 	"Map Scripts 14"
+	"Enemy Trainer Parties 2"
 ROMX $62
 	"Map Scripts 15"
 ROMX $63
@@ -318,7 +319,6 @@ ROMX $77
 	"bank77"
 	"Pokégear GFX"
 	"European Mail"
-	"Enemy Trainer Parties 2"
 ROMX $78
 	"Tileset Data 8"
 	"Pics 20"
