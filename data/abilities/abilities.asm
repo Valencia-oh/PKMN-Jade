@@ -16,7 +16,6 @@ AbilitySandStreamMons::
 	dw RHYPERIOR
 	dw DUNSPARCE
 	dw TYRANITAR
-	dw TYRANITARX
 	dw -1
 
 AbilitySnowWarningMons::
@@ -32,7 +31,6 @@ AbilityIntimidateMons::
 	dw GYARADOS
 	dw GRANBULL
 	dw MIGHTYENA
-	dw MASQUERAIN
 	dw MANECTRIC
 	dw -1
 
@@ -43,7 +41,6 @@ AbilityMystifyMons::
 	dw NOCTOWL
 	dw SLOWKING
 	dw MISDREAVUS
-	dw MISMAGIUS
 	dw UNOWN
 	dw -1
 
@@ -57,7 +54,6 @@ AbilitySnareMons::
 AbilityHasteMons::
 	dw PONYTA
 	dw RAPIDASH
-	dw RAPIDASH2
 	dw DODRIO	
 	dw -1
 
@@ -128,7 +124,6 @@ AbilityElementalFistMons::
 	dw PRIMEAPE
 	dw KADABRA
 	dw ALAKAZAM
-	dw ALAKAZAMX
 	dw HITMONCHAN
 	dw LEDYBA
 	dw LEDIAN
@@ -159,7 +154,6 @@ AbilityStabilityMons::
 	dw PIKACHU
 	dw RAICHU
 	dw LICKITUNG
-	dw LICKILICKY
 	dw EEVEE
 	dw VAPOREON
 	dw JOLTEON
