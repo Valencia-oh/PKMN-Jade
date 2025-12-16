@@ -13,7 +13,6 @@ AbilityDroughtMons::
 
 AbilitySandStreamMons::
 	dw RHYDON
-	dw RHYPERIOR
 	dw DUNSPARCE
 	dw TYRANITAR
 	dw -1
@@ -105,7 +104,6 @@ AbilityLevitateMons::
 	dw GASTLY
 	dw HAUNTER
 	dw GENGAR
-	dw GENGARX
 	dw KOFFING
 	dw WEEZING
 	dw -1
