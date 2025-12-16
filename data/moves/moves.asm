@@ -281,6 +281,22 @@ MovesGen2:
 	move EFFECT_TRAP_TARGET,        75, WATER,          SPECIAL,		100, 15,   0      ;WHIRLPOOL
 	move EFFECT_FLINCH_HIT,        100, DARK,           PHYSICAL,		 90, 10,  10      ;BEAT_UP
 	move EFFECT_HAIL,		         0, ICE,            STATUS,			100, 10,   0      ;HAIL 
+	move EFFECT_PARALYZE_HIT,       70, ELECTRIC,       PHYSICAL,		100, 20,  20      ;THUNDER_FANG
+	move EFFECT_FREEZE_HIT,         70, ICE,            PHYSICAL,		100, 20,  20      ;ICE_FANG
+	move EFFECT_BURN_HIT,           70, FIRE,           PHYSICAL,		100, 20,  20      ;FIRE_FANG
+	move EFFECT_LEECH_HIT,          55, FAIRY,          SPECIAL,		100, 15,   0      ;DRAININGKISS
+	move EFFECT_SP_ATK_DOWN_HIT,    85, FAIRY,          SPECIAL,		100, 15,  25      ;MOONBLAST
+	move EFFECT_ATTACK_DOWN_HIT,    85, FAIRY,          PHYSICAL,		100, 15,  25      ;PLAY_ROUGH
+	move EFFECT_ALWAYS_HIT,         80, FIGHTING,       SPECIAL,		100, 20,   0      ;AURA_SPHERE
+	move EFFECT_NORMAL_HIT,         70, GHOST,          PHYSICAL,		100, 20,   0      ;SHADOW_CLAW
+	move EFFECT_FLINCH_HIT,         80, ICE,            PHYSICAL,		 95, 20,  20      ;ICICLE_CRASH
+	move EFFECT_POISON_HIT,         80, POISON,         PHYSICAL,		100, 20,  30      ;POISON_JAB
+	move EFFECT_NORMAL_HIT,         80, ROCK,           SPECIAL,		100, 20,   0      ;POWER_GEM
+	move EFFECT_NORMAL_HIT,         70, PSYCHIC_TYPE,   PHYSICAL,		100, 20,  20      ;PSYCHO_CUT
+	move EFFECT_FLINCH_HIT,         80, PSYCHIC_TYPE,   PHYSICAL,		 95, 20,  20      ;ZEN_HEADBUTT
+	move EFFECT_SP_DEF_DOWN_HIT,    80, STEEL,          SPECIAL,		100, 20,  20      ;FLASHCANNON
+	move EFFECT_PRIORITY_HIT,       40, WATER,          PHYSICAL,		100, 20,   0      ;AQUA_JET
+	move EFFECT_FLINCH_HIT,         80, DARK,           SPECIAL,		100, 20,  20      ;DARK_PULSE
 .IndirectEnd::
 
 POPS
