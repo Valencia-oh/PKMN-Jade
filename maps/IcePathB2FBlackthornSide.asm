@@ -9,7 +9,7 @@ IcePathB2FBlackthornSide_MapScripts:
 IcePathB2FBlackthornSideTMRest:
 	itemball TM_REST
 
-IcePathB2FBlackthornSideBeads
+IcePathB2FBlackthornSideBeads:
 	itemball RUINED_BEADS
 	
 IcePathB2FBlackthornSideHiddenIceHeal:
