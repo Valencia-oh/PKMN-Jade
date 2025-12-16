@@ -927,4 +927,7 @@ CherryCave_Blocks:
 Route48_Blocks:
 	INCBIN "maps/Route48.ablk"
 
+CianwoodPalace_Blocks:
+	INCBIN "maps/cianwoodpalace.ablk"
+
 ENDSECTION
