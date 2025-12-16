@@ -1539,7 +1539,7 @@ wBGP:: db
 wOBP0:: db
 wOBP1:: db
 
-wBattleAfterAnim:: db
+wNumHits:: db
 
 	ds 1
 
