@@ -259,13 +259,14 @@ INCLUDE "data/phone/text/wilton_caller.asm"
 INCLUDE "data/phone/text/kenji_caller.asm"
 INCLUDE "data/phone/text/parry_caller.asm"
 INCLUDE "data/phone/text/erin_caller.asm"
+INCLUDE "data/text/battle.asm"
 
 
 SECTION "bank20", ROMX
 
 INCLUDE "engine/overworld/player_movement.asm"
 INCLUDE "engine/events/engine_flags.asm"
-INCLUDE "data/text/battle.asm"
+
 
 
 SECTION "bank21", ROMX
