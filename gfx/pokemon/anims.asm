@@ -277,6 +277,10 @@ VolcaronaAnimation:  INCLUDE "gfx/pokemon/volcarona/anim.asm"
 ;gen6
 InkayAnimation:      INCLUDE "gfx/pokemon/inkay/anim.asm"
 MalamarAnimation:    INCLUDE "gfx/pokemon/malamar/anim.asm"
+;gen7
+PikipekAnimation:    INCLUDE "gfx/pokemon/pikipek/anim.asm"
+TrumbeakAnimation:   INCLUDE "gfx/pokemon/trumbeak/anim.asm"
+ToucannonAnimation:  INCLUDE "gfx/pokemon/toucannon/anim.asm"
 ;gen8
 ApplinAnimation:     INCLUDE "gfx/pokemon/applin/anim.asm"
 AppletunAnimation:   INCLUDE "gfx/pokemon/appletun/anim.asm"
@@ -291,5 +295,6 @@ FlittleAnimation:    INCLUDE "gfx/pokemon/flittle/anim.asm"
 EspathraAnimation:   INCLUDE "gfx/pokemon/espathra/anim.asm"
 PwooperAnimation:    INCLUDE "gfx/pokemon/pwooper/anim.asm"
 ClodsireAnimation:   INCLUDE "gfx/pokemon/clodsire/anim.asm"
+ChiyuAnimation:      INCLUDE "gfx/pokemon/chi_yu/anim.asm"
 ErsrheadbbyAnimation:INCLUDE "gfx/pokemon/ersrheadbby/anim.asm"
 EggAnimation:        INCLUDE "gfx/pokemon/egg/anim.asm"
