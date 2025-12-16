@@ -321,5 +321,7 @@ INCLUDE "data/pokemon/base_stats/maschiff.asm"
 INCLUDE "data/pokemon/base_stats/mabosstiff.asm"
 INCLUDE "data/pokemon/base_stats/flittle.asm"
 INCLUDE "data/pokemon/base_stats/espathra.asm"
+INCLUDE "data/pokemon/base_stats/pwooper.asm"
+INCLUDE "data/pokemon/base_stats/clodsire.asm"
 INCLUDE "data/pokemon/base_stats/ersrheadbby.asm"
 .IndirectEnd::
