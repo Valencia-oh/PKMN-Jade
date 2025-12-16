@@ -442,7 +442,7 @@ ENDM
 	map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
 	map_const ROUTE_40_BATTLE_TOWER_GATE,                   5,  4 ; 15
 	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
-	map_const CIANWOOD_PALACE,                             13, 13 ;  1
+	map_const CIANWOOD_PALACE,                             19, 16 ;  1
 	endgroup
 
 	newgroup VIRIDIAN                                             ; 23
