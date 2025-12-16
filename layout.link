@@ -166,7 +166,7 @@ ROMX $35
 ROMX $36
 	"Font Inversed"
 	"Pic Animations 3"
-	"Enemy Trainer Parties 2"
+	
 ROMX $37
 	"Tileset Data 6"
 ROMX $38
@@ -318,6 +318,7 @@ ROMX $77
 	"bank77"
 	"Pokégear GFX"
 	"European Mail"
+	"Enemy Trainer Parties 2"
 ROMX $78
 	"Tileset Data 8"
 	"Pics 20"
