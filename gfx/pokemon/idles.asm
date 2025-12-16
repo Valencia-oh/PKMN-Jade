@@ -277,6 +277,10 @@ VolcaronaAnimationIdle:  INCLUDE "gfx/pokemon/volcarona/anim_idle.asm"
 ;gen6
 InkayAnimationIdle:      INCLUDE "gfx/pokemon/inkay/anim_idle.asm"
 MalamarAnimationIdle:    INCLUDE "gfx/pokemon/malamar/anim_idle.asm"
+;gen6
+PikipekAnimationIdle:    INCLUDE "gfx/pokemon/pikipek/anim_idle.asm"
+TrumbeakAnimationIdle:   INCLUDE "gfx/pokemon/trumbeak/anim_idle.asm"
+ToucannonAnimationIdle:  INCLUDE "gfx/pokemon/toucannon/anim_idle.asm"
 ;gen8
 ApplinAnimationIdle:     INCLUDE "gfx/pokemon/applin/anim_idle.asm"
 AppletunAnimationIdle:   INCLUDE "gfx/pokemon/appletun/anim_idle.asm"
@@ -291,5 +295,6 @@ FlittleAnimationIdle:    INCLUDE "gfx/pokemon/flittle/anim_idle.asm"
 EspathraAnimationIdle:   INCLUDE "gfx/pokemon/espathra/anim_idle.asm"
 PwooperAnimationIdle:    INCLUDE "gfx/pokemon/pwooper/anim_idle.asm"
 ClodsireAnimationIdle:   INCLUDE "gfx/pokemon/clodsire/anim_idle.asm"
+ChiyuAnimationIdle:      INCLUDE "gfx/pokemon/chi_yu/anim_idle.asm"
 ErsrheadbbyAnimationIdle:INCLUDE "gfx/pokemon/ersrheadbby/anim_idle.asm"
 EggAnimationIdle:        INCLUDE "gfx/pokemon/egg/anim_idle.asm"
