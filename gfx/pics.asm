@@ -785,4 +785,7 @@ ZigzagoonFrontpic:   INCBIN "gfx/pokemon/zigzagoon/front.animated.2bpp.lz"
 ZigzagoonBackpic:    INCBIN "gfx/pokemon/zigzagoon/back.2bpp.lz"
 UrsalunaFrontpic:    INCBIN "gfx/pokemon/ursaluna/front.animated.2bpp.lz"
 UrsalunaBackpic:     INCBIN "gfx/pokemon/ursaluna/back.2bpp.lz"
-
+PwooperFrontpic:     INCBIN "gfx/pokemon/pwooper/front.animated.2bpp.lz"
+PwooperBackpic:      INCBIN "gfx/pokemon/pwooper/back.2bpp.lz"
+ClodsireFrontpic:    INCBIN "gfx/pokemon/clodsire/front.animated.2bpp.lz"
+ClodsireBackpic:     INCBIN "gfx/pokemon/clodsire/back.2bpp.lz"
