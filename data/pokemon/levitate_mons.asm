@@ -25,9 +25,4 @@ WaterproofMons::
 	dw QUAGSIRE
 	dw SLUGMA
 	dw MAGCARGO
-	dw NUMEL
-	dw CAMERUPT
-	dw BARBOACH
-	dw WHISCASH
-	dw CAMERUPTX
 	dw -1
