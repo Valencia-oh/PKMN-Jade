@@ -13,7 +13,6 @@ DroughtMons::
 
 SandStreamMons::
 	dw RHYDON
-	dw RHYPERIOR
 	dw DUNSPARCE
 	dw TYRANITAR
 	dw -1
@@ -41,7 +40,6 @@ MystifyMons::
 	dw NOCTOWL
 	dw SLOWKING
 	dw MISDREAVUS
-	dw MISMAGIUS
 	dw UNOWN
 	dw -1
 
