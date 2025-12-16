@@ -195,10 +195,10 @@ ROMX $40
 ROMX $41
 	"bank41"
 	"Enemy Trainer Parties 1"
-	"Enemy Trainer Parties 2"
 ROMX $42
 	"Intro Logo"
 	"Credits"
+	"Enemy Trainer Parties 2"
 ROMX $43
 	"Title"
 	"Mon Icons 3"
