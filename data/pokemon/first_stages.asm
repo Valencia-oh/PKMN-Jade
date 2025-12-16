@@ -287,5 +287,7 @@ FirstEvoStages::
 	dw MASCHIFF
 	dw FLITTLE
 	dw FLITTLE
+	dw PWOOPER
+	dw PWOOPER
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
