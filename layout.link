@@ -121,7 +121,6 @@ ROMX $20
 	"bank20"
 ROMX $21
 	"bank21"
-	"Enemy Trainer Parties 2"
 ROMX $22
 	"Crystal Features 2"
 ROMX $23
@@ -139,6 +138,7 @@ ROMX $28
 	"Phone Scripts 1"
 ROMX $29
 	"Phone Text"
+	"Enemy Trainer Parties 2"
 ROMX $2a
 	"Map Blocks 1"
 ROMX $2b
