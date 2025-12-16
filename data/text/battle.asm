@@ -919,6 +919,16 @@ ProtectedByText:
 	text "!"
 	prompt
 
+AlreadyBurnedText:
+	text "<TARGET>'s"
+	line "already burned!"
+	prompt
+	
+AlreadyFrozenText:
+	text "<TARGET>'s"
+	line "already frozen!"
+	prompt
+
 MirrorMoveFailedText:
 	text "The MIRROR MOVE"
 	next "failed!"
