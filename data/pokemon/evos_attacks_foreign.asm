@@ -34,6 +34,8 @@ EvosAttacksPointers3::
 	dw MabosstiffEvosAttacks
 	dw FlittleEvosAttacks
 	dw EspathraEvosAttacks
+	dw PwooperEvosAttacks
+	dw ClodsireEvosAttacks
 	dw ErsrheadbbyEvosAttacks
 .IndirectEnd::
 
@@ -538,6 +540,32 @@ EspathraEvosAttacks:
 	dbw 35, FUTURE_SIGHT
 	dbw 50, CONFUSE_RAY
 	dbw 65, PSYCHIC_M
+
+PwooperEvosAttacks:
+	dbbw EVOLVE_LEVEL, 20, CLODSIRE
+	db 0 ; no more evolutions
+	dbw 1, MUD_SLAP
+	dbw 1, TAIL_WHIP
+	dbw 11, SLAM
+	dbw 21, TOXIC
+	dbw 31, EARTHQUAKE
+	dbw 41, DIG
+	dbw 51, MIST
+	dbw 51, HAZE
+	db 0 ; no more level-up moves
+
+ClodsireEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, MUD_SLAP
+	dbw 1, TAIL_WHIP
+	dbw 11, SLAM
+	dbw 23, SLUDGE_BOMB
+	dbw 35, EARTHQUAKE
+	dbw 47, DIG
+	dbw 59, MIST
+	dbw 59, HAZE
+	db 0 ; no more level-up moves
+
 
 ErsrheadbbyEvosAttacks:
 	db 0 ; no more evolutions
