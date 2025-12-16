@@ -24,6 +24,9 @@ EvosAttacksPointers3::
 	dw VolcaronaEvosAttacks
 	dw InkayEvosAttacks
 	dw MalamarEvosAttacks
+	dw PikipekEvosAttacks
+	dw TrumbeakEvosAttacks
+	dw ToucannonEvosAttacks
 	dw ApplinEvosAttacks
 	dw AppletunEvosAttacks
 	dw FlappleEvosAttacks
@@ -36,6 +39,7 @@ EvosAttacksPointers3::
 	dw EspathraEvosAttacks
 	dw PwooperEvosAttacks
 	dw ClodsireEvosAttacks
+	dw ChiyuEvosAttacks
 	dw ErsrheadbbyEvosAttacks
 .IndirectEnd::
 
