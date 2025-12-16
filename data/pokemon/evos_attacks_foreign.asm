@@ -402,6 +402,55 @@ MalamarEvosAttacks:
 	dbw 50, PSYCHIC_M
 	db 0 ; no more level-up moves
 
+PikipekEvosAttacks:
+	dbbw EVOLVE_LEVEL, 14, TRUMBEAK
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 5, SAND_ATTACK
+	dbw 9, GUST
+	dbw 10, ROCK_SMASH
+	dbw 15, QUICK_ATTACK
+	dbw 21, WHIRLWIND
+	dbw 29, WING_ATTACK
+	dbw 37, AGILITY
+	dbw 47, MIRROR_MOVE
+	db 0 ; no more level-up moves
+
+TrumbeakEvosAttacks:
+	dbbw EVOLVE_LEVEL, 28, TOUCANNON
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, SAND_ATTACK
+	dbw 1, GUST
+	dbw 1, ROCK_SMASH
+	dbw 5, SAND_ATTACK
+	dbw 9, GUST
+	dbw 15, QUICK_ATTACK
+	dbw 23, WHIRLWIND
+	dbw 33, WING_ATTACK
+	dbw 43, AGILITY
+	dbw 55, MIRROR_MOVE
+	db 0 ; no more level-up moves
+
+ToucannonEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, SAND_ATTACK
+	dbw 1, GUST
+	dbw 1, EMBER
+	dbw 1, ROCK_SMASH
+	dbw 1, QUICK_ATTACK
+	dbw 5, SAND_ATTACK
+	dbw 9, GUST
+	dbw 15, QUICK_ATTACK
+	dbw 23, WHIRLWIND
+	dbw 33, WING_ATTACK
+	dbw 35, FLAMETHROWER
+	dbw 40, FIRESPIN
+	dbw 46, AGILITY
+	dbw 61, MIRROR_MOVE
+	db 0 ; no more level-up moves
+
 ApplinEvosAttacks:
 	dbww EVOLVE_ITEM, SWEET_APPLE, APPLETUN
 	dbww EVOLVE_ITEM, TART_APPLE, FLAPPLE
