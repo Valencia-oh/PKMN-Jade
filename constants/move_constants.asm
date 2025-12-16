@@ -258,6 +258,24 @@ DEF GEN1_MOVES EQU const_value - 1
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
 	const BEAT_UP      ; fb
+	const HAIL         ; fc
+	const THUNDER_FANG
+	const ICE_FANG
+	const FIRE_FANG
+	const DRAININGKISS
+	const MOONBLAST
+	const PLAY_ROUGH
+	const AURA_SPHERE
+	const SHADOW_CLAW
+	const ICICLE_CRASH
+	const POISON_JAB
+	const POWER_GEM
+	const PSYCHO_CUT
+	const ZEN_HEADBUTT
+	const FLASHCANNON
+	const AQUA_JET
+	const DARK_PULSE
+
 DEF GEN2_MOVES EQU const_value - 1
 
 DEF NUM_ATTACKS EQU const_value - 1
