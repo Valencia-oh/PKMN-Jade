@@ -282,6 +282,9 @@ PokemonCries::
 	mon_cry CRY_BLASTOISE,   245,  179 ; VOLCARONA
 	mon_cry CRY_TOTODILE,      0,  384 ; INKAY
 	mon_cry CRY_TOTODILE,      0,  384 ; MALAMAR
+	mon_cry CRY_PIDGEY,      223,  132 ; PIKIPEK
+	mon_cry CRY_PIDGEOTTO,    40,  320 ; TRUMBEAK
+	mon_cry CRY_PIDGEOTTO,    17,  383 ; TOUCANNON
 	mon_cry CRY_WOOPER,       43,   64 ; APPLIN
 	mon_cry CRY_ODDISH,       48,   48 ; APPLETUN
 	mon_cry CRY_PIDGEOTTO,    23,   78 ; FLAPPLE
@@ -294,6 +297,7 @@ PokemonCries::
 	mon_cry CRY_DIGLETT,     153,  160 ; ESPATHRA
 	mon_cry CRY_WOOPER,      147,  175 ; PWOOPER
 	mon_cry CRY_WOOPER,     -198,  320 ; CLODSIRE
+	mon_cry CRY_WOOPER,     -198,  320 ; CHI_YU
 	mon_cry CRY_TOGEPI,      256,  256 ; ERSRHEADBBY
 
 	assert_table_length NUM_POKEMON
