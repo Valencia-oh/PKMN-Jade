@@ -11,8 +11,6 @@ SwiftSwimMons::
 ChlorophyllMons::
 	dw VILEPLUME
 	dw EXEGGUTOR
-	dw EXEGGUTOR2
 	dw BELLOSSOM
 	dw SHIFTRY
-	dw TROPIUS
 	dw -1
