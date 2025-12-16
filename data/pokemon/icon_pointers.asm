@@ -281,6 +281,9 @@ IconPointers:
 	dw VolcaronaIcon
 	dw InkayIcon
 	dw MalamarIcon
+	dw PikipekIcon
+	dw TrumbeakIcon
+	dw ToucannonIcon
 	dw ApplinIcon
 	dw AppletunIcon
 	dw FlappleIcon
@@ -293,5 +296,6 @@ IconPointers:
 	dw EspathraIcon
 	dw PwooperIcon
 	dw ClodsireIcon
+	dw ChiyuIcon
 	dw ErsrheadbbyIcon
 	assert_table_length NUM_POKEMON + 1
