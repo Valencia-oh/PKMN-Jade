@@ -11,6 +11,7 @@ CianwoodCave_MapEvents:
 
 	def_warp_events
 	warp_event 35, 17, CIANWOOD_CITY, 1
+	warp_event 11, 9, ROUTE_48, 2
 
 	def_coord_events
 
