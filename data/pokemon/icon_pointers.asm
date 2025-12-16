@@ -291,5 +291,7 @@ IconPointers:
 	dw MabosstiffIcon
 	dw FlittleIcon
 	dw EspathraIcon
+	dw PwooperIcon
+	dw ClodsireIcon
 	dw ErsrheadbbyIcon
 	assert_table_length NUM_POKEMON + 1
