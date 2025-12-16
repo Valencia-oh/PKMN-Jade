@@ -299,5 +299,7 @@ MaschiffPokedexEntry::   INCLUDE "data/pokemon/dex_entries/maschiff.asm"
 MabosstiffPokedexEntry:: INCLUDE "data/pokemon/dex_entries/mabosstiff.asm"
 FlittlePokedexEntry::    INCLUDE "data/pokemon/dex_entries/flittle.asm"
 EspathraPokedexEntry::   INCLUDE "data/pokemon/dex_entries/espathra.asm"
+PwooperPokedexEntry::    INCLUDE "data/pokemon/dex_entries/pwooper.asm"
+ClodsirePokedexEntry::   INCLUDE "data/pokemon/dex_entries/clodsire.asm"
 ErsrheadbbyPokedexEntry::INCLUDE "data/pokemon/dex_entries/ersrheadbby.asm"
 
