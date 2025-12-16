@@ -1703,14 +1703,14 @@ Script_LoadPocketPC:
 	reloadmappart
 	special UpdateTimePals
 	opentext
-	special PokemonCenterPC
+	special PokeCenterPC
 	closetext
 	reloadmappart
 	end
 
 Script_LoadPocketPC_Register:
 	opentext
-	special PokemonCenterPC
+	special PokeCenterPC
 	closetext
 	reloadmappart
 	end
