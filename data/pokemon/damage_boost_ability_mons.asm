@@ -5,7 +5,6 @@ ElementalFistMons::
 	dw PRIMEAPE
 	dw KADABRA
 	dw ALAKAZAM
-	dw ALAKAZAMX
 	dw HITMONCHAN
 	dw BRELOOM
 	dw -1
@@ -34,7 +33,6 @@ StabilityMons::
 	dw PIKACHU
 	dw RAICHU
 	dw LICKITUNG
-	dw LICKILICKY
 	dw EEVEE
 	dw VAPOREON
 	dw JOLTEON
