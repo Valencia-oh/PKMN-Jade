@@ -1593,10 +1593,18 @@ RodNothingText:
 
 PocketPCFunction:
 	call .LoadPocketPC
+	ld a, [wEnvironment]
+    cp INDOOR 
+    jr z, .noSignal
 	and $7f
 	ld [wFieldMoveSucceeded], a
 	ret
-	
+
+	.noSignal
+    ld hl, .PocketPCNoSignal
+    call CallScript
+    ret
+
 .LoadPocketPC:
 	ld a, [wPlayerState]
 	ld hl, Script_LoadPocketPC
@@ -1613,6 +1621,17 @@ PocketPCFunction:
 	ld h, d
 	ld l, e
 	ret
+
+	.PocketPCNoSignal
+    opentext
+    writetext NoSignalText
+    waitbutton
+    closetext
+    end
+
+	NoSignalText:
+    text_far _PocketPCNoSignalText
+    text_end
 
 BikeFunction:
 	call .TryBike
