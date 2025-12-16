@@ -1,12 +1,12 @@
 	object_const_def
 
-CianwoodCave_MapScripts:
+Route48_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
 
-CianwoodCave_MapEvents:
+Route48_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
