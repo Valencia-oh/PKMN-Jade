@@ -116,10 +116,6 @@ BattleAnim_Sketch:
 	anim_wait 1
 	anim_ret
 
-BattleAnim_DrainingKiss:
-BattleAnim_SweetKiss:
-	anim_2gfx BATTLE_ANIM_GFX_OBJECTS, BATTLE_ANIM_GFX_ANGELS
-	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
 
 BattleAnim_TripleKick:
 	anim_1gfx BATTLE_ANIM_GFX_HIT
@@ -451,6 +447,7 @@ BattleAnim_FaintAttack:
 	anim_wait 4
 	anim_ret
 
+BattleAnim_DrainingKiss:
 BattleAnim_SweetKiss:
 	anim_2gfx BATTLE_ANIM_GFX_OBJECTS, BATTLE_ANIM_GFX_ANGELS
 	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_MID_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
