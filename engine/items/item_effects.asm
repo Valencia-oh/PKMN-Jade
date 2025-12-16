@@ -441,7 +441,7 @@ PokeBallEffect:
 	xor a
 	ldh [hBattleTurn], a
 	ld [wThrownBallWobbleCount], a
-	ld [wBattleAfterAnim], a
+	ld [wNumHits], a
 	predef PlayBattleAnim
 
 	ld a, [wWildMon]
@@ -1148,8 +1148,8 @@ AskGiveNicknameText:
 	text_far _AskGiveNicknameText
 	text_end
 
-ReturnToBattle_UseBall:
-	farjp _ReturnToBattle_UseBall
+ReturnToBattle_:
+	farjp _ReturnToBattle_
 
 TownMapEffect:
 	farjp PokegearMap
@@ -2692,7 +2692,7 @@ UseBallInTrainerBattle:
 	xor a
 	ld [wBattleAnimParam], a
 	ldh [hBattleTurn], a
-	ld [wBattleAfterAnim], a
+	ld [wNumHits], a
 	predef PlayBattleAnim
 	ld hl, BallBlockedText
 	call PrintText
