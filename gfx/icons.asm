@@ -297,9 +297,6 @@ EspathraIcon::   INCBIN "gfx/icons/doduo.2bpp"
 PwooperIcon::    INCBIN "gfx/icons/pwooper.2bpp"
 ClodsireIcon::   INCBIN "gfx/icons/clodsire.2bpp"
 ChiyuIcon::      INCBIN "gfx/icons/chi_yu.2bpp"
-
-SECTION "Mon Icons 4", ROMX
-
 ErsrheadbbyIcon::INCBIN "gfx/icons/ersrheadbby.2bpp"
 EggIcon::        INCBIN "gfx/icons/egg.2bpp"
 
