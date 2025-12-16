@@ -38,8 +38,6 @@ MystifyMons::
 	dw CLEFABLE
 	dw WIGGLYTUFF
 	dw DRAGONITE
-	dw DRAGONITEX
-	dw DRAGONITEY
 	dw NOCTOWL
 	dw SLOWKING
 	dw MISDREAVUS
@@ -49,7 +47,6 @@ MystifyMons::
 
 SnareMons::
 	dw VICTREEBEL
-	dw VICTREEBELX
 	dw TENTACRUEL
 	dw TANGELA
 	dw ARIADOS
