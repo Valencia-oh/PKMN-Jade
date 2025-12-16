@@ -9,6 +9,9 @@ IcePathB2FBlackthornSide_MapScripts:
 IcePathB2FBlackthornSideTMRest:
 	itemball TM_REST
 
+IcePathB2FBlackthornSideBeads
+	itemball RUINED_BEADS
+	
 IcePathB2FBlackthornSideHiddenIceHeal:
 	hiddenitem ICE_HEAL, EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_HIDDEN_ICE_HEAL
 
@@ -26,3 +29,5 @@ IcePathB2FBlackthornSide_MapEvents:
 
 	def_object_events
 	object_event  8, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathB2FBlackthornSideTMRest, EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_TM_REST
+	object_event  4, 6, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathB2FBlackthornSideBeads, EVENT_ICE_PATH_B2F_BLACKTHORN_SIDE_BEADS
+
