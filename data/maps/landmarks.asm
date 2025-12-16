@@ -44,7 +44,7 @@ Landmarks:
 	landmark  28, 100, Route41Name
 	landmark  20, 100, CianwoodCityName
 	landmark  15, 100, CianwoodCaveName
-	landmark  15, 100, Route48Name
+	landmark  15, 90, Route48Name
 	landmark  92,  44, Route42Name
 	landmark  84,  44, MtMortarName
 	landmark 108,  44, MahoganyTownName
