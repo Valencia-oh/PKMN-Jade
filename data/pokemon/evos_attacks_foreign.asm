@@ -615,6 +615,16 @@ ClodsireEvosAttacks:
 	dbw 59, HAZE
 	db 0 ; no more level-up moves
 
+ChiyuEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, EMBER
+	dbw 1, SPITE
+	dbw 1, MEAN_LOOK
+	dbw 5, FLAMEWHEEL
+	dbw 10, THIEF
+	dbw 15, FIRE_SPIN
+	dbw 20, CONFUSE_RAY
+	db 0 ; no more level-up moves
 
 ErsrheadbbyEvosAttacks:
 	db 0 ; no more evolutions
