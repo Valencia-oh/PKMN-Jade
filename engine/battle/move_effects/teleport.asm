@@ -79,7 +79,7 @@ BattleCommand_Teleport:
 .run_away
 	call UpdateBattleMonInParty
 	xor a
-	ld [wBattleAfterAnim], a
+	ld [wNumHits], a
 	inc a
 	ld [wForcedSwitch], a
 	ld [wBattleAnimParam], a
