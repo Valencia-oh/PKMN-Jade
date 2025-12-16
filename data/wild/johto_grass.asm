@@ -1245,10 +1245,10 @@ JohtoGrassWildMons:
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
 	; day
-	dbw 2, PIDGEY
-	dbw 2, SENTRET
-	dbw 3, ZIGZAGOON
-	dbw 3, ZIGZAGOON
+	dbw 2, CLODSIRE
+	dbw 2, CLODSIRE
+	dbw 3, PWOOPER
+	dbw 3, PWOOPER
 	dbw 2, RATTATA
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
