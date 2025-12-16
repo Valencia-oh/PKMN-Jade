@@ -1,5 +1,5 @@
 	object_const_def
-const PALACE_CHI_YU
+	const PALACE_CHI_YU
 
 CianwoodPalace_MapScripts:
 	def_scene_scripts
