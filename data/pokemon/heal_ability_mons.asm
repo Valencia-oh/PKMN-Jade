@@ -31,21 +31,10 @@ SandBodyMons::
 	dw SANDSLASH
 	dw MAROWAK
 	dw GLIGAR
-	dw GLISCOR
 	dw STEELIX
-	dw STEELIXX
 	dw -1
 
 IceBodyMons::
 	dw SEEL
 	dw DEWGONG
-	dw SPHEAL
-	dw SEALEO
-	dw WALREIN
-	dw SNORUNT
-	dw GLALIE
-	dw GLALIEX
-	dw FROSLASS
-	dw ASANDSHREW
-	dw ASANDSLASH
 	dw -1
