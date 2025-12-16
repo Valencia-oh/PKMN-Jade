@@ -427,7 +427,7 @@ ENDM
 	newgroup CIANWOOD                                             ; 22
 	map_const ROUTE_40,                                    10, 18 ;  1
 	map_const ROUTE_41,                                    25, 27 ;  2
-	map_const ROUTE_48,                                    10, 25 ;  2
+	map_const ROUTE_48,                                    15, 25 ;  2
 	map_const CIANWOOD_CITY,                               15, 27 ;  3
 	map_const MANIAS_HOUSE,                                 4,  4 ;  4
 	map_const CIANWOOD_GYM,                                 5,  9 ;  5
@@ -442,6 +442,7 @@ ENDM
 	map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
 	map_const ROUTE_40_BATTLE_TOWER_GATE,                   5,  4 ; 15
 	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
+	map_const CIANWOOD_PALACE,                             13, 13 ;  1
 	endgroup
 
 	newgroup VIRIDIAN                                             ; 23
