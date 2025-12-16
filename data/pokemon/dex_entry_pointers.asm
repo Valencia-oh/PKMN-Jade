@@ -277,6 +277,9 @@ PokedexDataPointerTable:
 	dba VolcaronaPokedexEntry
 	dba InkayPokedexEntry
 	dba MalamarPokedexEntry
+	dba PikipekPokedexEntry
+	dba TrumbeakPokedexEntry
+	dba ToucannonPokedexEntry
 	dba ApplinPokedexEntry
 	dba AppletunPokedexEntry
 	dba FlapplePokedexEntry
@@ -289,5 +292,6 @@ PokedexDataPointerTable:
 	dba EspathraPokedexEntry
 	dba PwooperPokedexEntry
 	dba ClodsirePokedexEntry
+	dba ChiyuPokedexEntry
 	dba ErsrheadbbyPokedexEntry
 	assert_table_length NUM_POKEMON
