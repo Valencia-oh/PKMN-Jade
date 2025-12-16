@@ -57,6 +57,7 @@ INCLUDE "maps/RadioTower1F.asm"
 INCLUDE "maps/RadioTower2F.asm"
 INCLUDE "maps/RadioTower3F.asm"
 INCLUDE "maps/RadioTower4F.asm"
+INCLUDE "maps/CianwoodPalace.asm"
 
 
 SECTION "Map Scripts 4", ROMX
