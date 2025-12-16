@@ -33,10 +33,12 @@ PalaceChiYu:
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon CHI_YU, 60
 	startbattle
-	disappear EVENT_PALACE_CHI_YU
+	disappear PALACE_CHI_YU
 	reloadmapafterbattle
 	setevent EVENT_SET_WHEN_FOUGHT_CHI_YU
 	end
+
+
 
 ChiyuText:
 	text "Ch- Ch- CHI-YUUUU!"
