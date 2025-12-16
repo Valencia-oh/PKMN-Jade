@@ -136,7 +136,6 @@ ROMX $28
 	"Phone Scripts 1"
 ROMX $29
 	"Phone Text"
-	"Enemy Trainer Parties 2"
 ROMX $2a
 	"Map Blocks 1"
 ROMX $2b
@@ -167,6 +166,7 @@ ROMX $35
 ROMX $36
 	"Font Inversed"
 	"Pic Animations 3"
+	"Enemy Trainer Parties 2"
 ROMX $37
 	"Tileset Data 6"
 ROMX $38
