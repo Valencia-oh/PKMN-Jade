@@ -1,7 +1,7 @@
 	db 0 ; species ID placeholder
 
 	db  50,  85,  50,  75,  40,  50
-	evs  0,   0,   0,   2,   0,   0
+	evs  0,   2,   0,   0,   0,   0
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FLYING ; type
