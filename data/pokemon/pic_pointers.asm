@@ -586,6 +586,10 @@ PokemonPicPointers::
 	dba FlittleBackpic
 	dba EspathraFrontpic
 	dba EspathraBackpic
+	dba PwooperFrontpic
+	dba PwooperBackpic
+	dba ClodsireFrontpic
+	dba ClodsireBackpic
 	dba ErsrheadbbyFrontpic
 	dba ErsrheadbbyBackpic
 	assert_table_length NUM_POKEMON + 1
