@@ -567,6 +567,12 @@ PokemonPicPointers::
 	dba MalamarFrontpic
 	dba MalamarBackpic
 	dba ApplinFrontpic
+	dba PikipekFrontpic
+	dba PikipekBackpic
+	dba TrumbeakFrontpic
+	dba TrumbeakBackpic
+	dba ToucannonFrontpic
+	dba ToucannonBackpic
 	dba ApplinBackpic
 	dba AppletunFrontpic
 	dba AppletunBackpic
@@ -590,6 +596,8 @@ PokemonPicPointers::
 	dba PwooperBackpic
 	dba ClodsireFrontpic
 	dba ClodsireBackpic
+	dba ChiyuFrontpic
+	dba ChiyuBackpic
 	dba ErsrheadbbyFrontpic
 	dba ErsrheadbbyBackpic
 	assert_table_length NUM_POKEMON + 1
