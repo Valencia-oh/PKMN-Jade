@@ -143,3 +143,14 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 8e
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 8f
 	tilecoll WALL, WALL, WALL, WALL ; 90
+	tilecoll WALL, WALL, WALL, WALL ; 91
+	tilecoll WALL, WALL, WALL, WALL ; 92
+	tilecoll WALL, WALL, WALL, WALL ; 93
+	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; 94
+	tilecoll WALL, WALL, WALL, WALL ; 95
+	tilecoll FLOOR, FLOOR, TALL_GRASS, TALL_GRASS ; 96
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 97
+	tilecoll WALL, HOP_DOWN, WALL, WALL ; 98
+	tilecoll HOP_DOWN, WALL, WALL, WALL ; 99
+	tilecoll FLOOR, TALL_GRASS, FLOOR, FLOOR ; 9a
+	tilecoll TALL_GRASS, FLOOR, FLOOR, FLOOR ; 9b
