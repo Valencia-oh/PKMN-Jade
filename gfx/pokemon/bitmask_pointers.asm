@@ -276,6 +276,9 @@ BitmasksPointers:
 	dw VolcaronaBitmasks
 	dw InkayBitmasks
 	dw MalamarBitmasks
+	dw PikipekBitmasks
+	dw TrumbeakBitmasks
+	dw ToucannonBitmasks
 	dw ApplinBitmasks
 	dw AppletunBitmasks
 	dw FlappleBitmasks
@@ -288,5 +291,6 @@ BitmasksPointers:
 	dw EspathraBitmasks
 	dw PwooperBitmasks
 	dw ClodsireBitmasks
+	dw ChiyuBitmasks
 	dw ErsrheadbbyBitmasks
 	assert_table_length NUM_POKEMON
