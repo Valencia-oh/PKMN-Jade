@@ -117,6 +117,7 @@ ROMX $1f
 	"Map Scripts 10"
 ROMX $20
 	"bank20"
+	"Enemy Trainer Parties 2"
 ROMX $21
 	"bank21"
 ROMX $22
@@ -198,7 +199,7 @@ ROMX $41
 ROMX $42
 	"Intro Logo"
 	"Credits"
-	"Enemy Trainer Parties 2"
+
 ROMX $43
 	"Title"
 	"Mon Icons 3"
