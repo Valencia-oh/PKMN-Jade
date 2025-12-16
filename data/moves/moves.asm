@@ -4,10 +4,10 @@ MACRO move
 	; the animation byte will be filled when the move is loaded
 	db \1 ; effect
 	db \2 ; power
-	db \3 ; type
-	db \4 percent ; accuracy
-	db \5 ; pp
-	db \6 percent ; effect chance
+	db \3 | \4 ; type  
+	db \5 percent ; accuracy
+	db \6 ; pp
+	db \7 percent ; effect chance
 	assert \5 <= 40, "PP must be 40 or less"
 ENDM
 
