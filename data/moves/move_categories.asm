@@ -1,0 +1,36 @@
+;Moves with additional categories
+
+PunchMoves::
+	dw COMET_PUNCH
+	dw MEGA_PUNCH
+	dw FIRE_PUNCH
+	dw ICE_PUNCH
+	dw THUNDERPUNCH
+	dw DIZZY_PUNCH
+	dw MACH_PUNCH
+	dw DYNAMICPUNCH
+	dw FOCUS_PUNCH
+	dw SHADOW_PUNCH
+	dw -1
+
+FangMoves::
+	dw BITE
+	dw HYPER_FANG
+	dw CRUNCH
+	dw POISON_FANG
+	dw THUNDER_FANG
+	dw ICE_FANG
+	dw FIRE_FANG
+	dw -1
+
+SharpMoves::
+	dw CUT
+	dw SLASH
+	dw FALSE_SWIPE
+	dw FURY_CUTTER
+	dw LEAF_BLADE
+	dw PSYCHO_CUT
+	dw RAZORSHELL
+	dw AIR_CUTTER
+	dw AERIAL_ACE
+	dw -1
