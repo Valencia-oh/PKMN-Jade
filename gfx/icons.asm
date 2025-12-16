@@ -256,12 +256,12 @@ LugiaIcon::      INCBIN "gfx/icons/lugia.2bpp"
 HoOhIcon::       INCBIN "gfx/icons/ho_oh.2bpp"
 CelebiIcon::     INCBIN "gfx/icons/celebi.2bpp"
 PoochyenaIcon::  INCBIN "gfx/icons/houndour.2bpp"
-
-SECTION "Mon Icons 3", ROMX
-
 MightyenaIcon::  INCBIN "gfx/icons/houndoom.2bpp"
 ZigzagoonIcon::  INCBIN "gfx/icons/zigzagoon.2bpp"
 LinooneIcon::    INCBIN "gfx/icons/linoone.2bpp"
+
+SECTION "Mon Icons 3", ROMX
+
 WingullIcon::    INCBIN "gfx/icons/skarmory.2bpp"
 PelipperIcon::   INCBIN "gfx/icons/skarmory.2bpp"
 ShroomishIcon::  INCBIN "gfx/icons/piloswine.2bpp"
