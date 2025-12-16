@@ -1706,7 +1706,7 @@ Script_LoadPocketPC:
 	special PokemonCenterPC
 	closetext
 	reloadmappart
-end
+	end
 
 Script_LoadPocketPC_Register:
 	opentext
