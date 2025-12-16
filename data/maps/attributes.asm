@@ -384,7 +384,7 @@ ENDM
 	connection east, CherrygroveCity, CHERRYGROVE_CITY, 7
 
 	map_attributes CianwoodPalace, CIANWOOD_PALACE, $2c, SOUTH
-	connection south, Route48, ROUTE48, 0
+	connection south, Route48, ROUTE_48, 0
 
 	map_attributes Route48, ROUTE_48, $2c, North
 	connection north, CianwoodPalace, CIANWOOD_PALACE, 0
