@@ -499,13 +499,13 @@ GetIconBank:
 	lb bc, BANK("Mon Icons 1"), 8 ; Default Bank
 	ld a, h
 	cp HIGH(POOCHYENA) ; first species in "Mon Icons 3"
-	jr c, .check_2
+	jr c, .check
 	ld a, l
 	cp LOW(POOCHYENA)
-	jr c, .check_2
+	jr c, .check
 	ld b, BANK("Mon Icons 3")
 	jr .return
-.check_2
+.check
 	ld a, h
 	cp HIGH(MAGIKARP) ; first species in "Mon Icons 2"
 	jr c, .return
