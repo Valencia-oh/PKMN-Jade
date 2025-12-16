@@ -18,6 +18,7 @@ INCLUDE "maps/GoldenrodDeptStoreElevator.asm"
 INCLUDE "maps/GoldenrodDeptStoreRoof.asm"
 INCLUDE "maps/GoldenrodGameCorner.asm"
 INCLUDE "maps/Route47.asm"
+INCLUDE "maps/Route48.asm"
 
 
 SECTION "Map Scripts 2", ROMX
