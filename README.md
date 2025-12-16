@@ -55,11 +55,11 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Mew Event       ✔️
 - Ursaluna ✔️
 
-- Locations near Cianwood with Alola Mons  --
+- Locations near Cianwood with Alola Mons  ✔️
 
 ### v.0.6 goals
-- Paldean Wooper                           ✖️,
-- Clodsire                                 ✖️,
+- Paldean Wooper                           ✔️
+- Clodsire                                 ✔️
 - Hisuian Growelithe                       ✖️,
 - Hisuian Arcanine                         ✖️,
 - Trapinch                                 ✖️,
@@ -67,10 +67,10 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Flygon                                   ✖️,
 - Dripplin                                 ✖️,
 - Hydrapple                                ✖️,
-- Pikipek                                  ✖️,
-- Trumbeak                                 ✖️,
-- Toucannnon                               ✖️,
+- Pikipek                                  ✔️
+- Trumbeak                                 ✔️
+- Toucannnon                               ✔️
 - Rebalance Levels South of Goldenrod      ✖️,
-- Olivine + Cyanwood Reblanace             ✖️,
+- Olivine + Cianwood Reblanace             ✖️,
 - Olivine Woods + Creek                    ✖️,
 - Ecruteak Woods                           ✖️
