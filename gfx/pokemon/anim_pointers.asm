@@ -279,6 +279,10 @@ AnimationPointers:
 ;gen6
 	dw InkayAnimation
 	dw MalamarAnimation
+;gen7
+	dw PikipekAnimation
+	dw TrumbeakAnimation
+	dw ToucannonAnimation
 ;gen8
 	dw ApplinAnimation
 	dw AppletunAnimation
@@ -293,5 +297,6 @@ AnimationPointers:
 	dw EspathraAnimation
 	dw PwooperAnimation
 	dw ClodsireAnimation
+	dw ChiyuAnimation
 	dw ErsrheadbbyAnimation
 	assert_table_length NUM_POKEMON
