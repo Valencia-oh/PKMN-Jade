@@ -815,8 +815,6 @@ SchoolboyGroup:
 
 	next_list_item ; SCHOOLBOY (4)
 	db "JOHNNY@", TRAINERTYPE_NORMAL
-	db 29
-	dw BELLSPROUT
 	db 31
 	dw WEEPINBELL
 	db 33
