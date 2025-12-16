@@ -496,20 +496,18 @@ GetIconBank:
 	push hl
 	ld a, [wCurIcon]
 	call GetPokemonIndexFromID
-	lb bc, BANK("Mon Icons 1"), 8 ; Default Bank
 	ld a, h
-	cp HIGH(POOCHYENA) ; first species in "Mon Icons 3"
-	ld a, l
-	cp LOW(POOCHYENA)
-	ld b, BANK("Mon Icons 3")
-	jr .return
-	ld a, h 
 	cp HIGH(MAGIKARP) ; first species in "Mon Icons 2"
+	lb bc, BANK("Mon Icons 1"), 8
 	jr c, .return
 	ld a, l
 	cp LOW(MAGIKARP)
-	jr c, .return
 	ld b, BANK("Mon Icons 2")
+	jr c, .return
+	ld a, l
+	cp LOW(POOCHYENA)
+	ld b, BANK("Mon Icons 3")
+	jr c, .return
 .return
 	pop hl
 	ret
