@@ -287,5 +287,7 @@ PokedexDataPointerTable:
 	dba MabosstiffPokedexEntry
 	dba FlittlePokedexEntry
 	dba EspathraPokedexEntry
+	dba PwooperPokedexEntry
+	dba ClodsirePokedexEntry
 	dba ErsrheadbbyPokedexEntry
 	assert_table_length NUM_POKEMON
