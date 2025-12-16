@@ -603,6 +603,10 @@ INCBIN "gfx/pokemon/flittle/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/flittle/shiny.pal"
 INCBIN "gfx/pokemon/espathra/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/espathra/shiny.pal"
+INCBIN "gfx/pokemon/pwooper/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/pwooper/shiny.pal"
+INCBIN "gfx/pokemon/clodsire/normal.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/clodsire/shiny.pal"
 INCBIN "gfx/pokemon/ersrheadbby/normal.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/ersrheadbby/shiny.pal"
 
