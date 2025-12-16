@@ -276,6 +276,9 @@ FramesPointers:
 	dba VolcaronaFrames
 	dba InkayFrames
 	dba MalamarFrames
+	dba PikipekFrames
+	dba TrumbeakFrames
+	dba ToucannonFrames
 	dba ApplinFrames
 	dba AppletunFrames
 	dba FlappleFrames
@@ -288,5 +291,6 @@ FramesPointers:
 	dba EspathraFrames
 	dba PwooperFrames
 	dba ClodsireFrames
+	dba ChiyuFrames
 	dba ErsrheadbbyFrames
 	assert_table_length NUM_POKEMON
