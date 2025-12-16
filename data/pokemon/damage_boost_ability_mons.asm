@@ -7,11 +7,7 @@ ElementalFistMons::
 	dw ALAKAZAM
 	dw ALAKAZAMX
 	dw HITMONCHAN
-	dw LEDYBA
-	dw LEDIAN
 	dw BRELOOM
-	dw MEDICHAM
-	dw ANNIHILAPE
 	dw -1
 
 ElementalFangMons::
@@ -22,16 +18,6 @@ ElementalFangMons::
 	dw FERALIGATR
 	dw FURRET
 	dw LINOONE
-	dw CARVANHA
-	dw SHARPEDO
-	dw HUNTAIL
-	dw EXEGGUTOR2
-	dw FURRET2
-	dw TOTODILE2 
-	dw CROCONAW2 
-	dw FERALIGATR2
-	dw KOTORA
-	dw RAITORA
 	dw -1
 
 ElementalBladeMons::	
@@ -41,17 +27,6 @@ ElementalBladeMons::
 	dw SCIZOR
 	dw KABUTOPS
 	dw SNEASEL
-	dw TREECKO
-	dw GROVYLE
-	dw SCEPTILE
-	dw ABSOL
-	dw ABSOLX
-	dw GALLADE
-	dw WEAVILE
-	dw KLEAVOR
-	dw SCYTHER2
-	dw SCIZOR2
-	dw SCIZORX
 	dw -1
 
 StabilityMons::
@@ -67,7 +42,6 @@ StabilityMons::
 	dw PORYGON
 	dw ESPEON
 	dw UMBREON
-	dw SYLVEON
 	dw LEAFEON
 	dw GLACEON
 	dw CHIKORITA
@@ -78,9 +52,4 @@ StabilityMons::
 	dw TYPHLOSION
 	dw HITMONTOP
 	dw PORYGON2
-	dw PORYGONZ
-	dw KURUSU
-	dw AKUA
-	dw AKUERIA
-	dw ASHIBOMB
 	dw -1
