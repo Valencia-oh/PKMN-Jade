@@ -214,6 +214,7 @@ ItemEffectsKeyItems:
 	dw SquirtbottleEffect ; SQUIRTBOTTLE
 	dw NoEffect           ; RAINBOW_WING
 	dw NoEffect           ; MEW_DNA
+	dw NoEffect           ; RUINED_BEADS
 	dw PocketPCEffect     ; POCKET_PC
 .IndirectEnd:
 
