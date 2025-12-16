@@ -45,6 +45,7 @@ Landmarks:
 	landmark  20, 100, CianwoodCityName
 	landmark  15, 100, CianwoodCaveName
 	landmark  15, 90, Route48Name
+	landmark  15, 70, CianwoodPalaceName
 	landmark  92,  44, Route42Name
 	landmark  84,  44, MtMortarName
 	landmark 108,  44, MahoganyTownName
@@ -210,3 +211,4 @@ BattleTowerName:     db "BATTLE<BSP>TOWER@"
 SpecialMapName:      db "SPECIAL@"
 CherryTowerName:     db "CHERRY<BSP>TOWER@"
 CianwoodCaveName:    db "CIANWOOD<BSP>CAVE@"
+CianwoodPalaceName:    db "CIANWOOD<BSP>PALACE@"
