@@ -1701,7 +1701,6 @@ BikeFunction:
 
 Script_LoadPocketPC:
 	reloadmappart
-	special UpdateTimePals
 	special PokemonCenterPC
 	reloadmappart
 	end
