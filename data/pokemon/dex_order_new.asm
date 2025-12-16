@@ -183,6 +183,8 @@ NewPokedexOrder:
 	dw GIRAFARIG
 	dw TAUROS
 	dw MILTANK
+	dw INKAY
+	dw MALAMAR
 	dw MAGBY
 	dw MAGMAR
 	dw SMOOCHUM
@@ -254,6 +256,9 @@ NewPokedexOrder:
 	dw MISDREAVUS
 	dw PORYGON
 	dw PORYGON2
+	dw PIKIPEK
+	dw TRUMBEAK
+	dw TOUCANNON
 	dw CHANSEY
 	dw BLISSEY
 	dw LAPRAS
@@ -286,7 +291,6 @@ NewPokedexOrder:
 	dw MEWTWO
 	dw MEW
 	dw CELEBI
-	dw INKAY
-	dw MALAMAR
+	dw CHI_YU
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
