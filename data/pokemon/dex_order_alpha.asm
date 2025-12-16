@@ -36,6 +36,7 @@ AlphabeticalPokedexOrder:
 	dw CLEFABLE
 	dw CLEFAIRY
 	dw CLEFFA
+	dw CLODSIRE
 	dw CLOYSTER
 	dw CORSOLA
 	dw CROBAT
@@ -280,6 +281,7 @@ AlphabeticalPokedexOrder:
 	dw WIGGLYTUFF
 	dw WINGULL
 	dw WOBBUFFET
+	dw PWOOPER
 	dw WOOPER
 	dw WYRDEER
 	dw XATU
