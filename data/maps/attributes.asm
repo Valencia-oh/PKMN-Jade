@@ -386,7 +386,7 @@ ENDM
 	map_attributes CianwoodPalace, CIANWOOD_PALACE, $2c, SOUTH
 	connection south, Route48, ROUTE_48, 0
 
-	map_attributes Route48, ROUTE_48, $2c, North
+	map_attributes Route48, ROUTE_48, $2c, NORTH
 	connection north, CianwoodPalace, CIANWOOD_PALACE, 0
 
 	map_attributes Route23, ROUTE_23, $0f, 0
