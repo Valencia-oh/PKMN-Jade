@@ -180,7 +180,9 @@ ENDM
 	command supereffectivelooptext  ; ad
 	command startloop               ; ae
 	command curl                    ; af
-	command starthail				; b0
+	command burn                    ; b0
+	command freeze                  ; b1
+	command starthail				; b2
 DEF NUM_EFFECT_COMMANDS EQU const_value - 1
 
 	const_def -1, -1
