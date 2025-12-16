@@ -501,13 +501,15 @@ GetIconBank:
 	lb bc, BANK("Mon Icons 1"), 8
 	jr c, .return
 	ld a, l
-	cp LOW(MAGIKARP)
+	cp HIGH(POOCHYENA)
 	ld b, BANK("Mon Icons 2")
 	jr c, .return
 	ld a, l
-	cp LOW(POOCHYENA)
-	ld b, BANK("Mon Icons 3")
+	cp LOW(POOCHYENA) ; first species in "Mon Icons 2"
+	lb bc, BANK("Mon Icons 3"), 8
 	jr c, .return
+	ld a, l
+	cp LOW(POOCHYENA)
 .return
 	pop hl
 	ret
