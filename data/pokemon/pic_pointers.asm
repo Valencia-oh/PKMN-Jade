@@ -566,13 +566,13 @@ PokemonPicPointers::
 	dba InkayBackpic
 	dba MalamarFrontpic
 	dba MalamarBackpic
-	dba ApplinFrontpic
 	dba PikipekFrontpic
 	dba PikipekBackpic
 	dba TrumbeakFrontpic
 	dba TrumbeakBackpic
 	dba ToucannonFrontpic
 	dba ToucannonBackpic
+	dba ApplinFrontpic
 	dba ApplinBackpic
 	dba AppletunFrontpic
 	dba AppletunBackpic
