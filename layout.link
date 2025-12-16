@@ -36,8 +36,6 @@ ROMX $01
 	"Tileset Data 10"
 ROMX $02
 	"bank2"
-
-
 ROMX $03
 	"bank3"
 	"VWF"
