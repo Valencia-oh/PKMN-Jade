@@ -291,5 +291,7 @@ AnimationPointers:
 	dw MabosstiffAnimation
 	dw FlittleAnimation
 	dw EspathraAnimation
+	dw PwooperAnimation
+	dw ClodsireAnimation
 	dw ErsrheadbbyAnimation
 	assert_table_length NUM_POKEMON
