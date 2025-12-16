@@ -174,6 +174,8 @@ INCLUDE "engine/events/fruit_trees.asm"
 INCLUDE "engine/battle/ai/move.asm"
 INCLUDE "engine/pokedex/pokedex_2.asm"
 INCLUDE "engine/pokemon/mail.asm"
+INCLUDE "data/text/battle.asm"
+
 
 
 SECTION "Crystal Features 1", ROMX
@@ -259,7 +261,6 @@ INCLUDE "data/phone/text/wilton_caller.asm"
 INCLUDE "data/phone/text/kenji_caller.asm"
 INCLUDE "data/phone/text/parry_caller.asm"
 INCLUDE "data/phone/text/erin_caller.asm"
-INCLUDE "data/text/battle.asm"
 
 
 SECTION "bank20", ROMX
