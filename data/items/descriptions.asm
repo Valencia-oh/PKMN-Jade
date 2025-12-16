@@ -195,6 +195,7 @@ ItemDescriptionsKeyItems:
 	dw RainbowWingDesc  ; 0115
 	dw MewDNADesc       ; 0116
 	dw PocketPCDesc		; 0117
+	dw RuinedBeadsdesc	; 0117
 .IndirectEnd:
 
 ItemDescriptionsBalls:
@@ -900,3 +901,8 @@ db   "A strange stand of"
 PocketPCDesc:
 	db   "Access the PC"
 	next "right here!@"
+
+RuinedBeadsdesc
+	db   "A pair of broken"
+	next "prayer beads...@"
+
