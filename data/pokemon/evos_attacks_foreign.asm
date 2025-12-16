@@ -446,7 +446,7 @@ ToucannonEvosAttacks:
 	dbw 23, WHIRLWIND
 	dbw 33, WING_ATTACK
 	dbw 35, FLAMETHROWER
-	dbw 40, FIRESPIN
+	dbw 40, FIRE_SPIN
 	dbw 46, AGILITY
 	dbw 61, MIRROR_MOVE
 	db 0 ; no more level-up moves
@@ -620,7 +620,7 @@ ChiyuEvosAttacks:
 	dbw 1, EMBER
 	dbw 1, SPITE
 	dbw 1, MEAN_LOOK
-	dbw 5, FLAMEWHEEL
+	dbw 5, FLAME_WHEEL
 	dbw 10, THIEF
 	dbw 15, FIRE_SPIN
 	dbw 20, CONFUSE_RAY
