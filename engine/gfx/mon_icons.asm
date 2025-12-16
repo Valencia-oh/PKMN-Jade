@@ -502,7 +502,6 @@ GetIconBank:
 	jr c, .check_2
 	ld a, l
 	cp LOW(POOCHYENA)
-	jr c, .check_2
 	ld b, BANK("Mon Icons 3")
 	jr .return
 .check_2
