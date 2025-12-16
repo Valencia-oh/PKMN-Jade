@@ -503,7 +503,7 @@ GetIconBank:
 	ld a, l
 	cp LOW(POOCHYENA)
 	jr c, .check1
-	ld b, BANK("Mon Icons 3"), 8 ; Default Bank
+	ld b, BANK("Mon Icons 3"), 9 ; diff Bank
 	jr .return
 .check1
 	ld a, h
@@ -512,7 +512,7 @@ GetIconBank:
 	ld a, l
 	cp LOW(MAGIKARP)
 	jr c, .return
-	ld b, BANK("Mon Icons 2"), 8 ; Default Bank
+	ld b, BANK("Mon Icons 2")
 .return
 	pop hl
 	ret
