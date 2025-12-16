@@ -1,8 +1,9 @@
-	const_def 1
-	const PINK_PAGE  ; 1
-	const GREEN_PAGE ; 2
-	const BLUE_PAGE  ; 3
-DEF NUM_STAT_PAGES EQU const_value - 1
+	const_def
+	const PINK_PAGE   ; 0
+	const GREEN_PAGE  ; 1
+	const BLUE_PAGE   ; 2
+	const ORANGE_PAGE ; 3
+DEF NUM_STAT_PAGES EQU const_value
 
 DEF STAT_PAGE_MASK EQU %00000011
 	const_def 4
@@ -47,12 +48,7 @@ StatsScreenInit:
 	ret
 
 StatsScreenMain:
-	xor a
-	ld [wJumptableIndex], a
-	ld [wStatsScreenFlags], a
-	and ~STAT_PAGE_MASK
-	or PINK_PAGE ; first_page
-	ld [wStatsScreenFlags], a
+ld [wStatsScreenFlags], a ; PINK_PAGE
 
 .loop
 	ld a, [wJumptableIndex]
@@ -311,20 +307,22 @@ StatsScreen_JoypadAction:
 
 .a_button
 	ld a, c
-	cp BLUE_PAGE ; last page
+	cp ORANGE_PAGE ; last page
 	jr z, .b_button
 .d_right
 	inc c
-	ld a, BLUE_PAGE ; last page
+		ld a, ORANGE_PAGE ; last page
 	cp c
 	jr nc, .set_page
 	ld c, PINK_PAGE ; first page
 	jr .set_page
 
 .d_left
+	ld a, c	
 	dec c
+	and a ; cp PINK_PAGE ; first page
 	jr nz, .set_page
-	ld c, BLUE_PAGE ; last page
+	ld c, ORANGE_PAGE ; last page
 	jr .set_page
 
 .prev_storage
@@ -447,6 +445,16 @@ StatsScreen_PlaceVerticalDivider: ; unreferenced
 
 StatsScreen_PlaceHorizontalDivider:
 	hlcoord 0, 7
+	ld b, SCREEN_WIDTH
+	ld a, $62 ; horizontal divider (empty HP/exp bar)
+.loop
+	ld [hli], a
+	dec b
+	jr nz, .loop
+	ret
+
+StatsScreen_PlaceAbilityHorizontalDivider:
+	hlcoord 0, 12
 	ld b, SCREEN_WIDTH
 	ld a, $62 ; horizontal divider (empty HP/exp bar)
 .loop
