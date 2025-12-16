@@ -710,6 +710,16 @@ WasFrozenText:
 	line "was frozen solid!"
 	prompt
 
+GotAFrostbiteText:
+	text "<TARGET>"
+	line "got frostbite!"
+	prompt
+
+HurtByFrostbiteText:
+	text "<USER>'s"
+	line "hurt by frostbite!"
+	prompt
+
 WontRiseAnymoreText:
 	text "<USER>'s"
 	line "@"
