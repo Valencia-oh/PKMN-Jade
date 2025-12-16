@@ -1702,10 +1702,12 @@ BikeFunction:
 Script_LoadPocketPC:
 	reloadmappart
 	special UpdateTimePals
-Script_LoadPocketPC_Register:
-	opentext
 	special PokemonCenterPC
-	closetext
+	reloadmappart
+	end
+
+Script_LoadPocketPC_Register:
+	special PokemonCenterPC
 	reloadmappart
 	end
 
