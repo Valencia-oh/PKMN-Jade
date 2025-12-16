@@ -307,7 +307,9 @@ DEF FOREIGN_POKEMON EQU const_value
 	const MABOSSTIFF ; 11a 
 	const FLITTLE 	 ; 11b 
 	const ESPATHRA	 ; 11c 
-	const ERSRHEADBBY; 11d
+	const PWOOPER 	 ; 11d 
+	const CLODSIRE	 ; 11e
+	const ERSRHEADBBY; 11f
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
