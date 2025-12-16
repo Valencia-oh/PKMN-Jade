@@ -902,7 +902,7 @@ PocketPCDesc:
 	db   "Access the PC"
 	next "right here!@"
 
-RuinedBeadsdesc
+RuinedBeadsdesc:
 	db   "A pair of broken"
 	next "prayer beads...@"
 
