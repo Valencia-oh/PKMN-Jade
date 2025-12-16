@@ -2,7 +2,7 @@
 const PALACE_CHI_YU
 
 CianwoodPalace_MapScripts:
-	def_scene_scripts
+def_scene_scripts
 
 	def_callbacks
 	callback MAPCALLBACK_OBJECTS, PalaceChiYuCallback
