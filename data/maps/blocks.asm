@@ -923,4 +923,8 @@ CherryTowerRoof_Blocks:
 
 CherryCave_Blocks:
 	INCBIN "maps/CherryCave.ablk"
+
+Route48_Blocks:
+	INCBIN "maps/Route48.ablk"
+
 ENDSECTION
