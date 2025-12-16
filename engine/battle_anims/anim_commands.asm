@@ -70,13 +70,13 @@ BattleAnimRunScript:
 	call BattleAnimRestoreHuds
 
 .disabled
-	ld a, [wBattleAfterAnim]
+	ld a, [wNumHits]
 	and a
 	jr z, .done
 
 	ld l, a
 	ld h, 0
-	ld de, BATTLE_AFTERANIMS
+	ld de, ANIM_MISS
 	add hl, de
 	ld a, l
 	ld [wFXAnimID], a
@@ -1348,10 +1348,10 @@ endr
 	dw $0000, $0000
 
 PlayHitSound:
-	ld a, [wBattleAfterAnim]
-	cp ANIM_ENEMY_DAMAGE - BATTLE_AFTERANIMS
+	ld a, [wNumHits]
+	cp BATTLEANIM_ENEMY_DAMAGE
 	jr z, .okay
-	cp ANIM_PLAYER_DAMAGE - BATTLE_AFTERANIMS
+	cp BATTLEANIM_PLAYER_DAMAGE
 	ret nz
 
 .okay
