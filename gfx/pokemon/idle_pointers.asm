@@ -286,5 +286,7 @@ AnimationIdlePointers:
 	dw MabosstiffAnimationIdle
 	dw FlittleAnimationIdle
 	dw EspathraAnimationIdle
+	dw PwooperAnimationIdle
+	dw ClodsireAnimationIdle
 	dw ErsrheadbbyAnimationIdle
 	assert_table_length NUM_POKEMON
