@@ -2075,6 +2075,70 @@ DefenseCurl:
 	statupfailtext
 	endmove
 
+DoBurn:
+	checkobedience
+	usedmovetext
+	doturn
+	stab
+	checkhit
+	checksafeguard
+	burn
+	endmove
+
+DoFreeze:
+	checkobedience
+	usedmovetext
+	doturn
+	stab
+	checkhit
+	checksafeguard
+	freeze
+	endmove
+
+SpecialAttackUpHit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	specialattackup
+	statupmessage
+	endmove
+
+SpeedUpHit:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	moveanim
+	failuretext
+	applydamage
+	criticaltext
+	supereffectivetext
+	checkfaint
+	buildopponentrage
+	speedup
+	statupmessage
+	endmove
+
 Hail:
 	checkobedience
 	usedmovetext
