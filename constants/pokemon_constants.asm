@@ -297,6 +297,9 @@ DEF FOREIGN_POKEMON EQU const_value
 	const VOLCARONA  ; 110
 	const INKAY  	 ; 111
 	const MALAMAR 	 ; 112
+	const PIKIPEK
+	const TRUMBEAK
+	const TOUCANNON
 	const APPLIN     ; 113
 	const APPLETUN   ; 114
 	const FLAPPLE    ; 115
@@ -309,6 +312,7 @@ DEF FOREIGN_POKEMON EQU const_value
 	const ESPATHRA	 ; 11c 
 	const PWOOPER 	 ; 11d 
 	const CLODSIRE	 ; 11e
+	const CHI_YU
 	const ERSRHEADBBY; 11f
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
