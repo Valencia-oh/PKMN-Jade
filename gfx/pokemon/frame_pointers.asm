@@ -286,5 +286,7 @@ FramesPointers:
 	dba MabosstiffFrames
 	dba FlittleFrames
 	dba EspathraFrames
+	dba PwooperFrames
+	dba ClodsireFrames
 	dba ErsrheadbbyFrames
 	assert_table_length NUM_POKEMON
