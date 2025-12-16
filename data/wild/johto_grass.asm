@@ -1237,18 +1237,18 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, CHI_YU
-	dbw 2, TOUCANNON
-	dbw 3, TRUMBEAK
-	dbw 3, PIKIPEK
+	dbw 2, PIDGEY
+	dbw 2, SENRET
+	dbw 3, ZIGZAGOON
+	dbw 3, ZIGZAGOON
 	dbw 2, RATTATA
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
 	; day
-	dbw 2, CLODSIRE
-	dbw 2, CLODSIRE
-	dbw 3, PWOOPER
-	dbw 3, PWOOPER
+	dbw 2, PIDGEY
+	dbw 2, SENRET
+	dbw 3, ZIGZAGOON
+	dbw 3, ZIGZAGOON
 	dbw 2, RATTATA
 	dbw 3, HOPPIP
 	dbw 3, HOPPIP
