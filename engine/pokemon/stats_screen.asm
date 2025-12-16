@@ -464,7 +464,7 @@ StatsScreen_PlaceAbilityHorizontalDivider:
 	ret
 
 StatsScreen_PlacePageSwitchArrows:
-	hlcoord 12, 6
+	hlcoord 10, 6
 	ld [hl], '◀'
 	hlcoord 19, 6
 	ld [hl], '▶'
@@ -514,7 +514,6 @@ StatsScreen_LoadGFX:
 .PageTilemap:
 	ld a, [wStatsScreenFlags]
 	maskbits NUM_STAT_PAGES
-	dec a
 	ld hl, .Jumptable
 	jmp JumpTable
 
@@ -524,7 +523,27 @@ StatsScreen_LoadGFX:
 	dw LoadPinkPage
 	dw LoadGreenPage
 	dw LoadBluePage
+	dw LoadOrangePage
 	assert_table_length NUM_STAT_PAGES
+
+INCLUDE "engine/pokemon/print_abilities.asm"
+
+LoadOrangePage:
+	ld a, [wCurSpecies]
+	ld [wTempAbilityMon], a
+
+	ld de, AbilityNameString
+	hlcoord 1, 9
+	call PlaceString
+
+	call PrintAbility
+
+	call StatsScreen_PlaceAbilityHorizontalDivider
+
+	ret
+
+AbilityNameString:
+	db "ABILITY:@"
 
 LoadPinkPage:
 	hlcoord 0, 9
@@ -1037,6 +1056,9 @@ StatsScreen_AnimateEgg:
 	ret
 
 StatsScreen_LoadPageIndicators:
+	hlcoord 11, 5
+	ld a, $36 ; " " " "
+	call .load_square
 	hlcoord 13, 5
 	ld a, $36 ; first of 4 small square tiles
 	call .load_square
@@ -1048,12 +1070,20 @@ StatsScreen_LoadPageIndicators:
 	call .load_square
 	ld a, c
 	cp GREEN_PAGE
+cp PINK_PAGE
+	hlcoord 11, 5
+	jr z, .load_highlighted_square
+	cp GREEN_PAGE
+	hlcoord 13, 5
+	jr z, .load_highlighted_square
+	cp BLUE_PAGE
+	hlcoord 15, 5
+	jr z, .load_highlighted_square
+	; must be ORANGE_PAGE
+	hlcoord 17, 5
+.load_highlighted_square
 	ld a, $3a ; first of 4 large square tiles
-	hlcoord 13, 5 ; PINK_PAGE (< GREEN_PAGE)
-	jr c, .load_square
-	hlcoord 15, 5 ; GREEN_PAGE (= GREEN_PAGE)
-	jr z, .load_square
-	hlcoord 17, 5 ; BLUE_PAGE (> GREEN_PAGE)
+
 .load_square
 	push bc
 	ld [hli], a
