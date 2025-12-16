@@ -39,6 +39,7 @@ BattleCommand_Conversion2:
 	push hl
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
+	and TYPE_MASK
 	push af
 	push hl
 	ld a, d
