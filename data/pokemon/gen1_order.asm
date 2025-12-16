@@ -288,5 +288,9 @@ Pokered_MonIndices:
 	db ZIGZAGOON
 	db LINOONE
 	db URSALUNA
+	db CHI_YU
+	db PIKIPEK
+	db TRUMBEAK
+	db TOUCANNON
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
