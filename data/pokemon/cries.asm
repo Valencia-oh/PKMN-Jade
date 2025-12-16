@@ -292,6 +292,8 @@ PokemonCries::
 	mon_cry CRY_TOTODILE,   -266,  256 ; MABOSSTIFF
 	mon_cry CRY_DIGLETT,     187,  129 ; FLITTLE
 	mon_cry CRY_DIGLETT,     153,  160 ; ESPATHRA
+	mon_cry CRY_WOOPER,      147,  175 ; PWOOPER
+	mon_cry CRY_WOOPER,     -198,  320 ; CLODSIRE
 	mon_cry CRY_TOGEPI,      256,  256 ; ERSRHEADBBY
 
 	assert_table_length NUM_POKEMON
