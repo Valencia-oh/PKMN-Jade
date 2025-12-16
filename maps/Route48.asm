@@ -10,7 +10,7 @@ Route48_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event 35, 17, CIANWOOD_CAVE, 1
+	warp_event 18, 43, CIANWOOD_CAVE, 1
 
 	def_coord_events
 
