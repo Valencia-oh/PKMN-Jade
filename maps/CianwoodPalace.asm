@@ -34,7 +34,6 @@ PalaceChiYu:
 	loadwildmon CHI_YU, 60
 	startbattle
 	disappear EVENT_PALACE_CHI_YU
-	reloadmapafterbattle
 	setevent EVENT_SET_WHEN_FOUGHT_CHI_YU
 	end
 
