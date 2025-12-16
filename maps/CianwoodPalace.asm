@@ -52,5 +52,5 @@ CianwoodPalace_MapEvents:
 	def_bg_events
 
 	def_object_events
-object_event  18,  17, SPRITE_CHI_YU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PalaceChiYU, EVENT_PALACE_CHI_YU
+object_event  18,  17, SPRITE_CHI_YU, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PalaceChiYu, EVENT_PALACE_CHI_YU
 
