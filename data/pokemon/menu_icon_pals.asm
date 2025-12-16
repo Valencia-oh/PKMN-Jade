@@ -294,5 +294,7 @@ MonMenuIconPals:
 	icon_pals GRAY,   GREEN  ; MABOSSTIFF
 	icon_pals BROWN,  GREEN  ; FLITTLE
 	icon_pals BROWN,  GREEN  ; ESPATHRA
+	icon_pals BROWN,  PURPLE ; PWOOPER
+	icon_pals BROWN,  PURPLE ; CLODSIRE
 	icon_pals GRAY,   BROWN  ; ERSRHEADBBY
 	assert_table_length NUM_POKEMON
