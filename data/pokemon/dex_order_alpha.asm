@@ -33,6 +33,7 @@ AlphabeticalPokedexOrder:
 	dw CHARMELEON
 	dw CHIKORITA
 	dw CHINCHOU
+	dw CHI_YU
 	dw CLEFABLE
 	dw CLEFAIRY
 	dw CLEFFA
@@ -190,6 +191,7 @@ AlphabeticalPokedexOrder:
 	dw PIDGEOTTO
 	dw PIDGEY
 	dw PIKACHU
+	dw PIKIPEK
 	dw PILOSWINE
 	dw PINECO
 	dw PINSIR
@@ -258,6 +260,8 @@ AlphabeticalPokedexOrder:
 	dw TOGEPI
 	dw TOGETIC
 	dw TOTODILE
+	dw TOUCANNON
+	dw TRUMBEAK
 	dw TYPHLOSION
 	dw TYRANITAR
 	dw TYROGUE
