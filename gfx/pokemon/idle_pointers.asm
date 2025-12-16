@@ -276,6 +276,9 @@ AnimationIdlePointers:
 	dw VolcaronaAnimationIdle
 	dw InkayAnimationIdle
 	dw MalamarAnimationIdle
+	dw PikipekAnimationIdle
+	dw TrumbeakAnimationIdle
+	dw ToucannonAnimationIdle
 	dw ApplinAnimationIdle
 	dw AppletunAnimationIdle
 	dw FlappleAnimationIdle
@@ -288,5 +291,6 @@ AnimationIdlePointers:
 	dw EspathraAnimationIdle
 	dw PwooperAnimationIdle
 	dw ClodsireAnimationIdle
+	dw ChiyuAnimationIdle
 	dw ErsrheadbbyAnimationIdle
 	assert_table_length NUM_POKEMON
