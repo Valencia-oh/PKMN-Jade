@@ -284,6 +284,9 @@ MonMenuIconPals:
 	icon_pals RED,    GREEN  ; VOLCARONA
 	icon_pals BLUE,   BROWN  ; INKAY
 	icon_pals BLUE,   BROWN  ; MALAMAR
+	icon_pals RED,    PURPLE ; PIKIPEK
+	icon_pals RED,    BLUE   ; TRUMBEAK
+	icon_pals RED,    BLUE   ; TOUCANNON
 	icon_pals RED,    GREEN  ; APPLIN
 	icon_pals RED,    GREEN  ; APPLETUN
 	icon_pals RED,    GREEN  ; FLAPPLE
@@ -296,5 +299,6 @@ MonMenuIconPals:
 	icon_pals BROWN,  GREEN  ; ESPATHRA
 	icon_pals BROWN,  PURPLE ; PWOOPER
 	icon_pals BROWN,  PURPLE ; CLODSIRE
+	icon_pals RED,    BLUE   ; CHIYU
 	icon_pals GRAY,   BROWN  ; ERSRHEADBBY
 	assert_table_length NUM_POKEMON
