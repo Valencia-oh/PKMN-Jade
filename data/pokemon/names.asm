@@ -280,6 +280,9 @@ PokemonNames::
 	dname "VOLCARONA"
 	dname "INKAY"
 	dname "MALAMAR"
+	dname "PIKIPEK"
+	dname "TRUMBEAK"
+	dname "TOUCANNON"
 	dname "APPLIN"
 	dname "APPLETUN"
 	dname "FLAPPLE"
@@ -292,5 +295,6 @@ PokemonNames::
 	dname "ESPATHRA"
 	dname "WOOPER"
 	dname "CLODSIRE"
+	dname "CHI-YU"
 	dname "ERSRHEDBBY"
 	assert_table_length NUM_POKEMON
