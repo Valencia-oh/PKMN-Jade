@@ -290,5 +290,7 @@ PokemonNames::
 	dname "MABOSSTIFF"
 	dname "FLITTLE"
 	dname "ESPATHRA"
+	dname "WOOPER"
+	dname "CLODSIRE"
 	dname "ERSRHEDBBY"
 	assert_table_length NUM_POKEMON
