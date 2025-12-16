@@ -73,7 +73,9 @@ NewPokedexOrder:
 	dw FLAAFFY
 	dw AMPHAROS
 	dw WOOPER
+	dw PWOOPER
 	dw QUAGSIRE
+	dw CLODSIRE
 	dw GASTLY
 	dw HAUNTER
 	dw GENGAR
