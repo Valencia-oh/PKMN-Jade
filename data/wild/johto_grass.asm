@@ -1934,3 +1934,31 @@ def_grass_wildmons CHERRY_TOWER_F5
 	dbw 35, ARIADOS
 	dbw 35, MUK 
 	end_grass_wildmons
+
+	def_grass_wildmons ROUTE_48
+	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 26, CLODSIRE
+	dbw 24, BRONZONG
+	dbw 25, LINOONE
+	dbw 23, ESPATHRA
+	dbw 26, BELLOSSOM
+	dbw 19, PWOOPER
+	dbw 19, PWOOPER
+	; day
+	dbw 26, CLODSIRE
+	dbw 24, BRONZONG
+	dbw 25, LINOONE
+	dbw 23, ESPATHRA
+	dbw 26, BELLOSSOM
+	dbw 19, PWOOPER
+	dbw 19, PWOOPER
+	; nite
+	dbw 26, CLODSIRE
+	dbw 24, BRONZONG
+	dbw 25, HONCHKROW
+	dbw 23, MABOSSTIFF
+	dbw 26, MIGHTYENA
+	dbw 19, PWOOPER
+	dbw 19, PWOOPER
+	end_grass_wildmons
