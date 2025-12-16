@@ -43,6 +43,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - Crystal Legacy Team for inspiration on some pokemon locations
 - Polished Crystal and Emerald Seaglass for giving me inspiration to start this project
 - Pokecrystal devs for making this posible, as well as the code so easy to use and providing numerous incredibly helpful tutorials
+- RaJa239 on the pret discord for the script to make the pocket pc only work outdoors
 
 ## Timeline
 Currently focusing on adding pokemon, but after the next pokemon addition update, I will begin working on new Routes and Locations
