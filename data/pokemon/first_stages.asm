@@ -277,6 +277,9 @@ FirstEvoStages::
 	dw LARVESTA
 	dw INKAY
 	dw INKAY
+	dw PIKIPEK
+	dw PIKIPEK
+	dw PIKIPEK
 	dw APPLIN	  
 	dw APPLIN
 	dw APPLIN
@@ -289,5 +292,6 @@ FirstEvoStages::
 	dw FLITTLE
 	dw PWOOPER
 	dw PWOOPER
+	dw CHI_YU
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
