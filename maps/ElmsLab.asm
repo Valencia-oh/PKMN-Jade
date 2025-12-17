@@ -404,18 +404,6 @@ ElmGiveMasterBallScript:
 	writetext ElmGiveMasterBallText1
 	promptbutton
 	verbosegiveitem MASTER_BALL
-	iffalse .notdone
-	setevent EVENT_GOT_MASTER_BALL_FROM_ELM
-	verbosegiveitem MEW_DNA
-	writetext ElmGiveMasterBallText2
-	waitbutton
-.notdone
-	closetext
-	end
-
-ElmGiveMasterBallScript:
-	writetext ElmGiveMasterBallText1
-	promptbutton
 	verbosegiveitem MEW_DNA
 	iffalse .notdone
 	setevent EVENT_GOT_MASTER_BALL_FROM_ELM
