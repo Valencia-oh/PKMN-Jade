@@ -251,6 +251,7 @@ MoveNames::
 	li "ROCK SMASH"
 	li "WHIRLPOOL"
 	li "BEAT UP"
+	li "HAIL"
 ;Gen4+
 	li "THUNDER FANG"
 	li "ICE FANG"
