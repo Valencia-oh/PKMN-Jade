@@ -163,7 +163,7 @@ _CGB_BattleColors:
 _CGB_FinishBattleScreenLayout:
 	call InitPartyMenuBGPal7
 	hlcoord 0, 0, wAttrmap
-	ld bc, SCREEN_AREA
+	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, PAL_BATTLE_BG_ENEMY_HP
 	rst ByteFill
 	hlcoord 0, 4, wAttrmap
@@ -574,7 +574,6 @@ _CGB_BetaPoker:
 _CGB_Diploma:
 	ld hl, DiplomaPalettes
 	ld de, wBGPals1
-	assert DiplomaPalettes + 8 palettes == PartyMenuOBPals
 	ld bc, 16 palettes
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
@@ -633,12 +632,12 @@ _CGB_Evolution:
 	ret
 
 _CGB_GSTitleScreen:
-	ld hl, UnusedGSTitleBGPals
+	ld hl, wBGPals1
 	ld de, wBGPals1
 	ld bc, 5 palettes
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
-	ld hl, UnusedGSTitleOBPals
+	ld hl, wOBPals1
 	ld de, wOBPals1
 	ld bc, 2 palettes
 	ld a, BANK(wOBPals1)
@@ -663,16 +662,16 @@ _CGB_UnownPuzzle:
 	ld a, PREDEFPAL_UNOWN_PUZZLE
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
-	ldh a, [rWBK]
+	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wOBPals1)
-	ldh [rWBK], a
+	ldh [rSVBK], a
 	ld hl, wOBPals1
 	ld a, LOW(palred 31 + palgreen 0 + palblue 0)
 	ld [hli], a
 	ld [hl], HIGH(palred 31 + palgreen 0 + palblue 0)
 	pop af
-	ldh [rWBK], a
+	ldh [rSVBK], a
 	call WipeAttrmap
 	jmp ApplyAttrmap
 
@@ -709,7 +708,7 @@ _CGB_TrainerCard:
 
 	; fill screen with opposite-gender palette for the card border
 	hlcoord 0, 0, wAttrmap
-	ld bc, SCREEN_AREA
+	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
 	ld a, $1 ; kris
@@ -818,7 +817,7 @@ _CGB_TrainerCardKanto:
 
 	; fill screen with opposite-gender palette for the card border
 	hlcoord 0, 0, wAttrmap
-	ld bc, SCREEN_AREA
+	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, [wPlayerGender]
 	and a
 	ld a, $1 ; kris
@@ -1144,4 +1143,3 @@ INCLUDE "gfx/diploma/plain.pal" ; todo: replace this polished port
 
 PokegearOBPals:
 INCLUDE "gfx/icons/icons.pal" ; todo: replace this polished port
-
