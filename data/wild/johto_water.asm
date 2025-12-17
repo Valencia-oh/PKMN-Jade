@@ -221,7 +221,7 @@ JohtoWaterWildMons:
 	def_water_wildmons ROUTE_44
 	db 2 percent ; encounter rate
 	dbw 25, POLIWAG
-	dbw 20, POLIWHIRL
+	dbw 20, REMORAID
 	dbw 25, SEEL
 	dbw 25, DEWGONG
 	end_water_wildmons
