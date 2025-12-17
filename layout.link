@@ -86,6 +86,7 @@ ROMX $12
 	"Crystal Features 1"
 	"Egg Moves 2"
 	"Evolutions and Attacks 2"
+	"Pic Animations 4"
 ROMX $13
 	"bank13"
 	"Shrink Pics"
@@ -153,7 +154,6 @@ ROMX $30
 	"Sprites 1"
 ROMX $31
 	"Sprites 2"
-	"Pic Animations 4"
 ROMX $32
 	"bank32"
 	"Map Attributes"
