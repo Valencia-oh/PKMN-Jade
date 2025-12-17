@@ -25,7 +25,7 @@ TrainerCard:
 	bit JUMPTABLE_EXIT_F, a
 	jr nz, .quit
 	ldh a, [hJoyLast]
-	and PAD_B
+	and B_BUTTON
 	jr nz, .quit
 	call .RunJumptable
 	call DelayFrame
@@ -120,9 +120,10 @@ TrainerCard_Page1_LoadGFX:
 
 TrainerCard_Page1_Joypad:
 	call TrainerCard_Page1_PrintGameTime
+	call TrainerCard_Page1_PrintLevelCap
 	ld hl, hJoyLast
 	ld a, [hl]
-	and PAD_RIGHT | PAD_A
+	and D_RIGHT | A_BUTTON
 	ret z
 	ld a, TRAINERCARDSTATE_PAGE2_LOADGFX
 	ld [wJumptableIndex], a
@@ -148,25 +149,25 @@ TrainerCard_Page2_LoadGFX:
 	call Request2bpp
 	ld hl, TrainerCard_JohtoBadgesOAM
 	call TrainerCard_Page2_3_InitObjectsAndStrings
-	jr TrainerCard_IncrementJumptable
+	jp TrainerCard_IncrementJumptable
 
 TrainerCard_Page2_Joypad:
 	ld hl, TrainerCard_JohtoBadgesOAM
 	call TrainerCard_Page2_3_AnimateBadges
 	ld hl, hJoyLast
 	ld a, [hl]
-	and PAD_LEFT
+	and D_LEFT
 	jr nz, .pressed_left
 	ld a, [wKantoBadges]
 	and a
 	jr nz, .has_kanto_badges
 	ld a, [hl]
-	and PAD_A
+	and A_BUTTON
 	jr nz, .Quit
 	ret
 .has_kanto_badges
 	ld a, [hl]
-	and PAD_RIGHT | PAD_A
+	and D_RIGHT | A_BUTTON
 	jr nz, .pressed_right_a
 	ret
 
@@ -212,10 +213,10 @@ TrainerCard_Page3_Joypad:
 	call TrainerCard_Page2_3_AnimateBadges
 	ld hl, hJoyLast
 	ld a, [hl]
-	and PAD_LEFT
+	and D_LEFT
 	jr nz, .pressed_left
 	ld a, [hl]
-	and PAD_A
+	and A_BUTTON
 	jr nz, .pressed_a
 	ret
 
@@ -273,10 +274,7 @@ TrainerCard_PrintTopHalfOfCard:
 TrainerCard_Page1_PrintDexCaught_GameTime:
 	hlcoord 2, 10
 	ld de, .Dex_PlayTime
-	rst PlaceString
-	hlcoord 10, 15
-	ld de, .Badges
-	rst PlaceString
+	rst PlaceString	
 	ld hl, wPokedexCaught
 	ld bc, wEndPokedexCaught - wPokedexCaught
 	call CountSetBits16
@@ -304,10 +302,9 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 
 .Dex_PlayTime:
 	db   "#DEX"
-	next "PLAY TIME@"
-
-.Badges:
-	db "  BADGES▶@"
+	next "PLAY TIME"
+	next "LEVEL CAP"
+	next "HARD MODE@"
 
 .StatusTilemap:
 	db $29, $2a, $2b, $2c, $2d, -1
@@ -366,7 +363,7 @@ TrainerCard_InitBorder:
 	ld [hli], a
 
 	ld e, SCREEN_WIDTH - 3
-	ld a, ' '
+	ld a, " "
 .loop2
 	ld [hli], a
 	dec e
@@ -382,7 +379,7 @@ TrainerCard_InitBorder:
 	ld [hli], a
 
 	ld e, SCREEN_WIDTH - 2
-	ld a, ' '
+	ld a, " "
 .loop4
 	ld [hli], a
 	dec e
@@ -400,7 +397,7 @@ TrainerCard_InitBorder:
 	ld [hli], a
 
 	ld e, SCREEN_WIDTH - 3
-	ld a, ' '
+	ld a, " "
 .loop5
 	ld [hli], a
 	dec e
@@ -462,9 +459,44 @@ TrainerCard_Page1_PrintGameTime:
 	ret nz
 	hlcoord 15, 12
 	ld a, [hl]
-	xor ' ' ^ $2e ; alternate between space and small colon ($2e) tiles
+	xor " " ^ $2e ; alternate between space and small colon ($2e) tiles
 	ld [hl], a
 	ret
+
+TrainerCard_Page1_PrintLevelCap:
+	hlcoord 15, 14
+	ld de, wLevelCap
+	lb bc, 1, 3
+	call PrintNum	
+	ret
+
+TrainerCard_Page1_PrintHardMode:
+	ld a, [wHardMode]
+	cp 1
+	jr z, .HardModeOff
+	jp .HardModeOn
+	.HardModePrinted
+	ret	
+
+.HardModeOff:
+	hlcoord 15, 16
+	ld de, .OffString
+	rst PlaceString
+	jp .HardModePrinted
+
+.HardModeOn:
+	hlcoord 15, 16
+	ld de, .OnString
+	rst PlaceString
+	jp .HardModePrinted
+
+
+.OnString:
+	db   "ON@"
+
+.OffString:
+	db	 "OFF@"
+
 
 TrainerCard_Page2_3_AnimateBadges:
 	ldh a, [hVBlankCounter]
@@ -559,10 +591,10 @@ TrainerCard_Page2_3_OAMUpdate:
 	db -1
 
 .facing2
-	dbsprite  0,  0,  0,  0, $01, 0 | OAM_XFLIP
-	dbsprite  1,  0,  0,  0, $00, 0 | OAM_XFLIP
-	dbsprite  0,  1,  0,  0, $03, 0 | OAM_XFLIP
-	dbsprite  1,  1,  0,  0, $02, 0 | OAM_XFLIP
+	dbsprite  0,  0,  0,  0, $01, 0 | X_FLIP
+	dbsprite  1,  0,  0,  0, $00, 0 | X_FLIP
+	dbsprite  0,  1,  0,  0, $03, 0 | X_FLIP
+	dbsprite  1,  1,  0,  0, $02, 0 | X_FLIP
 	db -1
 
 TrainerCard_JohtoBadgesOAM:
