@@ -1632,7 +1632,7 @@ JohtoGrassWildMons:
 	dbw 3, GEODUDE
 	dbw 5, GEODUDE
 	dbw 6, GLIGAR
-	dbw 4, DONPHAN
+	dbw 4, PHANPY
 	dbw 3, PHANPY
 	dbw 3, SKARMORY
 	dbw 4, SKARMORY
@@ -1640,7 +1640,7 @@ JohtoGrassWildMons:
 	dbw 3, MANKEY
 	dbw 5, GRAVELER
 	dbw 6, GLIGAR
-	dbw 4, PHANPHY
+	dbw 4, PHANPY
 	dbw 3, TEDDIURSA
 	dbw 3, HOUNDOUR
 	dbw 4, SKARMORY
@@ -1686,24 +1686,24 @@ def_grass_wildmons ROUTE_47
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 4, EKANS
-	dbw 5, RATTATTA
-	dbw 7, BELLSPROTE
+	dbw 5, RATTATA
+	dbw 7, BELLSPROUT
 	dbw 6, ZIGZAGOON
 	dbw 7, EXEGGCUTE
 	dbw 7, GRIMER
 	dbw 7, HOPPIP
 	; day
 	dbw 4, EKANS
-	dbw 5, RATTATTA
-	dbw 7, BELLSPROTE
+	dbw 5, RATTATA
+	dbw 7, BELLSPROUT
 	dbw 6, ZIGZAGOON
 	dbw 7, EXEGGCUTE
 	dbw 7, GRIMER
 	dbw 7, HOPPIP
 	; nite
 	dbw 4, WOOPER
-	dbw 5, RATTATTA
-	dbw 7, HOOT_HOOT
+	dbw 5, RATTATA
+	dbw 7, HOOTHOOT
 	dbw 6, ZIGZAGOON
 	dbw 7, GASTLY
 	dbw 7, GRIMER
