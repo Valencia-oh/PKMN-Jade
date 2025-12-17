@@ -72,3 +72,16 @@ TrainerGroups:
 	dba MysticalmanGroup
 	dba KrisGroup
 	assert_table_length NUM_TRAINER_CLASSES
+
+TrainerGroupsHard:
+; entries correspond to trainer classes (see constants/trainer_constants.asm)
+	table_width 3
+	dba FalknerGroupHard
+	dba WhitneyGroupHard
+	dba BugsyGroupHard
+	dba MortyGroupHard
+	dba PryceGroupHard
+	dba JasmineGroupHard
+	dba ChuckGroupHard
+	dba ClairGroupHard
+assert_table_length NUM_TRAINER_CLASSES
