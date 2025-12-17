@@ -196,7 +196,7 @@ EvolveAfterBattle_MasterLoop:
 	ld hl, EvolvingText
 	call PrintText
 
-	ld c, 15
+	ld c, 50
 	call DelayFrames
 
 	xor a
@@ -234,8 +234,9 @@ EvolveAfterBattle_MasterLoop:
 	call PlayMusic
 	ld de, SFX_CAUGHT_MON
 	call PlaySFX
+	call WaitSFX
 
-	ld c, 15
+	ld c, 40
 	call DelayFrames
 
 	call ClearTilemap
@@ -361,7 +362,7 @@ UpdateSpeciesNameIfNotNicknamed:
 	cp [hl]
 	inc hl
 	ret nz
-	cp '@'
+	cp "@"
 	jr nz, .loop
 
 	ld a, [wCurPartyMon]
