@@ -932,7 +932,6 @@ SneaselEvosAttacks:
 	dbw 33, FURY_SWIPES
 	dbw 41, AGILITY
 	dbw 49, SLASH
-	dbw 57, BEAT_UP
 	dbw 65, METAL_CLAW
 	db 0 ; no more level-up moves
 
