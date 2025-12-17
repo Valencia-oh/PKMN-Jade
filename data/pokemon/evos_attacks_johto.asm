@@ -152,7 +152,7 @@ MeganiumEvosAttacks:
 	db 0 ; no more level-up moves
 
 CyndaquilEvosAttacks:
-	dbbw EVOLVE_LEVEL, 14, QUILAVA
+	dbbw EVOLVE_LEVEL, 6, QUILAVA
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, LEER
