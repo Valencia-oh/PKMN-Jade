@@ -101,6 +101,7 @@ ElmCheckMasterBall:
 	iftrue ElmCheckEverstone
 	checkflag ENGINE_RISINGBADGE
 	iftrue ElmGiveMasterBallScript
+	iftrue ElmGiveMewDNAScript
 ElmCheckEverstone:
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue ElmScript_CallYou
@@ -407,6 +408,19 @@ ElmGiveMasterBallScript:
 	iffalse .notdone
 	setevent EVENT_GOT_MASTER_BALL_FROM_ELM
 	writetext ElmGiveMasterBallText2
+	waitbutton
+.notdone
+	closetext
+	end
+
+ElmGiveMasterBallScript:
+	writetext ElmGiveMasterBallText1
+	promptbutton
+	verbosegiveitem MEW_DNA
+	iffalse .notdone
+	setevent EVENT_GOT_MASTER_BALL_FROM_ELM
+	writetext ElmGiveMasterBallText2
+	writetext ElmGiveMewDNAText
 	waitbutton
 .notdone
 	closetext
@@ -1194,6 +1208,24 @@ ElmGiveMasterBallText2:
 
 	para "use of it than I"
 	line "can, <PLAY_G>!"
+	done
+
+ElmGiveMewDNAText:
+	text "And that pink"
+	line "goop is from a!"
+
+	para "rare #MON, you've"
+	line "shown yourself"
+
+	para "to be a great"
+	line "trainer, so"
+
+	para "you should go"
+	line "out and look"
+	cont "for it."
+
+	para "I hear it lives"
+	line "by the sea"
 	done
 
 ElmGiveTicketText1:
