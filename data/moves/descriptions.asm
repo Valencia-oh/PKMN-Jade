@@ -1285,10 +1285,6 @@ WhirlpoolDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
-BeatUpDescription:
-	db   "Party #MON join"
-	next "in the attack.@"
-
 HailDescription:
 	db   "Inflicts damage"
 	next "every turn.@"
