@@ -234,7 +234,6 @@ EvolveAfterBattle_MasterLoop:
 	call PlayMusic
 	ld de, SFX_CAUGHT_MON
 	call PlaySFX
-	call WaitSFX
 
 	ld c, 15
 	call DelayFrames
