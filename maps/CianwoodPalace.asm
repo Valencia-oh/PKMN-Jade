@@ -31,7 +31,7 @@ PalaceChiYu:
 	closetext
 	setevent EVENT_SET_WHEN_FOUGHT_CHI_YU
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon CHI_YU, 60
+	loadwildmon CHI_YU, 15
 	startbattle
 	disappear PALACE_CHI_YU
 	reloadmapafterbattle
