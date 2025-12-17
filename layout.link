@@ -153,6 +153,7 @@ ROMX $30
 	"Sprites 1"
 ROMX $31
 	"Sprites 2"
+	"Pic Animations 4"
 ROMX $32
 	"bank32"
 	"Map Attributes"
@@ -174,7 +175,6 @@ ROMX $38
 	"bank38"
 ROMX $39
 	"Copyright"
-	"Pic Animations 4"
 	"bank39"
 ROMX $3a
 	"Audio"
