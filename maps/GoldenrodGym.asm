@@ -27,8 +27,22 @@ GoldenrodGymWhitneyScript:
 	writetext WhitneyBeforeText
 	waitbutton
 	closetext
+
+	readvar VAR_BADGES
+	ifgreater 3, .Hard
+	sjump .Easy
+
+.Hard
+	winlosstext WhitneyShouldntBeSoSeriousText, 0
+	loadtrainer WHITNEY, WHITNEY2
+	sjump .Fight
+
+.Easy
 	winlosstext WhitneyShouldntBeSoSeriousText, 0
 	loadtrainer WHITNEY, WHITNEY1
+	sjump .Fight
+
+.Fight	
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_WHITNEY
