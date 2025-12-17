@@ -130,7 +130,7 @@ MortyGroup:
 	db "MORTY@", TRAINERTYPE_MOVES
 	db 7
 	dw VULPIX
-	dw LICK, HYPNOSIS, EMBER, WILLOWISP
+	dw LICK, HYPNOSIS, EMBER, ASTONISH
 	db 7
 	dw HAUNTER
 	dw LICK, SPITE, MEAN_LOOK, CURSE
@@ -303,7 +303,7 @@ Rival1Group:
 	db 2
 	dw GASTLY
 	db 1
-	dw ZUBATBAT
+	dw ZUBAT
 	db 4
 	dw CHIKORITA
 	db -1 ; end
@@ -313,7 +313,7 @@ Rival1Group:
 	db 2
 	dw GASTLY
 	db 1
-	dw ZUBATBAT
+	dw ZUBAT
 	db 4
 	dw CYNDAQUIL
 	db -1 ; end
@@ -323,7 +323,7 @@ Rival1Group:
 	db 2
 	dw GASTLY
 	db 1
-	dw ZUBATBAT
+	dw ZUBAT
 	db 4
 	dw TOTODILE
 	db -1 ; end
@@ -337,7 +337,7 @@ Rival1Group:
 	dw MAGNEMITE
 	dw TACKLE, THUNDERSHOCK, SUPERSONIC, SONICBOOM
 	db 4
-	dw ZUBATBAT
+	dw ZUBAT
 	dw LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
 	db 5
 	dw CHIKORITA
@@ -353,7 +353,7 @@ Rival1Group:
 	dw MAGNEMITE
 	dw TACKLE, THUNDERSHOCK, SUPERSONIC, SONICBOOM
 	db 4
-	dw ZUBATBAT
+	dw ZUBAT
 	dw LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
 	db 5
 	dw CYNDAQUIL
@@ -369,7 +369,7 @@ Rival1Group:
 	dw MAGNEMITE
 	dw TACKLE, THUNDERSHOCK, SUPERSONIC, SONICBOOM
 	db 4
-	dw ZUBATBAT
+	dw ZUBAT
 	dw LEECH_LIFE, SUPERSONIC, BITE, CONFUSE_RAY
 	db 5
 	dw TOTODILE
@@ -379,7 +379,7 @@ Rival1Group:
 	next_list_item ; RIVAL1 (10)
 	db "?@", TRAINERTYPE_MOVES
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	dw LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
 	db 2
 	dw MAGNEMITE
@@ -398,7 +398,7 @@ Rival1Group:
 	next_list_item ; RIVAL1 (11)
 	db "?@", TRAINERTYPE_MOVES
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	dw LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
 	db 2
 	dw MAGNEMITE
@@ -417,7 +417,7 @@ Rival1Group:
 	next_list_item ; RIVAL1 (12)
 	db "?@", TRAINERTYPE_MOVES
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	dw LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
 	db 2
 	dw MAGNEMITE
@@ -439,7 +439,7 @@ Rival1Group:
 	dw SNEASEL
 	dw QUICK_ATTACK, SCREECH, FAINT_ATTACK, FURY_CUTTER
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	dw LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
 	db 2
 	dw MAGNEMITE
@@ -461,7 +461,7 @@ Rival1Group:
 	dw SNEASEL
 	dw QUICK_ATTACK, SCREECH, FAINT_ATTACK, FURY_CUTTER
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	dw LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
 	db 2
 	dw MAGNEMITE
@@ -483,7 +483,7 @@ Rival1Group:
 	dw SNEASEL
 	dw QUICK_ATTACK, SCREECH, FAINT_ATTACK, FURY_CUTTER
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	dw LEECH_LIFE, BITE, CONFUSE_RAY, WING_ATTACK
 	db 2
 	dw MAGNEMITE
@@ -775,7 +775,7 @@ YoungsterGroup:
 	db 1
 	dw RATTATA
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db -1 ; end
 
 	next_list_item ; YOUNGSTER (4)
@@ -1734,7 +1734,7 @@ CooltrainerFGroup:
 	dw BULBASAUR
 	dw GROWL, LEECH_SEED, POISONPOWDER, RAZOR_LEAF
 	db 2
-	dw CHIKRITA
+	dw CHIKORITA
 	dw BODY_SLAM, SLEEP_POWDER, RAZOR_LEAF, SWEET_SCENT
 	db -1 ; end
 
@@ -2090,9 +2090,9 @@ GruntMGroup:
 	db 2
 	dw RATTATA
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (3)
@@ -2130,7 +2130,7 @@ GruntMGroup:
 	next_list_item ; GRUNTM (6)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	db 4
 	dw POOCHYENA
 	db -1 ; end
@@ -2142,7 +2142,7 @@ GruntMGroup:
 	db 3
 	dw GRIMER
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	db 2
 	dw RATTATA
 	db -1 ; end
@@ -2164,7 +2164,7 @@ GruntMGroup:
 	next_list_item ; GRUNTM (10)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db 4
 	dw GOLBAT
 	db 2
@@ -2198,7 +2198,7 @@ GruntMGroup:
 	db 4
 	dw RATTATA
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (15)
@@ -2232,7 +2232,7 @@ GruntMGroup:
 	db 3
 	dw POOCHYENA
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db 3
 	dw RATTATA
 	db -1 ; end
@@ -2250,13 +2250,13 @@ GruntMGroup:
 	db 3
 	dw DROWZEE
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (21)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db 3
 	dw GRIMER
 	db 2
@@ -2302,7 +2302,7 @@ GruntMGroup:
 	next_list_item ; GRUNTM (27)
 	db "EXECUTIVE@", TRAINERTYPE_NORMAL
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db -1 ; end
 
 	next_list_item ; GRUNTM (28)
@@ -2322,9 +2322,9 @@ GruntMGroup:
 	next_list_item ; GRUNTM (30)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db 3
 	dw ARBOK
 	db -1 ; end
@@ -4224,7 +4224,7 @@ ExecutiveMGroup:
 	next_list_item ; EXECUTIVEM (4)
 	db "EXECUTIVE@", TRAINERTYPE_NORMAL
 	db 22
-	dw ZUBATBAT
+	dw ZUBAT
 	db 24
 	dw RATICATE
 	db 22
@@ -4583,7 +4583,7 @@ CamperGroup:
 	db 2
 	dw DIGLETT
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	db 4
 	dw DIGLETT
 	db -1 ; end
@@ -4671,7 +4671,7 @@ CamperGroup:
 	db 3
 	dw SCYTHER
 	db 4
-	dw ZUBATBAT
+	dw ZUBAT
 	db 4
 	dw PSYDUCK
 	db -1 ; end
@@ -4683,7 +4683,7 @@ CamperGroup:
 	db 2
 	dw PINSIR
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	db 2
 	dw PSYDUCK
 	db -1 ; end
@@ -4707,7 +4707,7 @@ CamperGroup:
 	db 36
 	dw SHROOMISH
 	db 40
-	dw ZUBATBAT
+	dw ZUBAT
 	db 2
 	dw PSYDUCK
 	db -1 ; end
@@ -4725,7 +4725,7 @@ CamperGroup:
 	db 3
 	dw SANDSHREW
 	db 2
-	dw ZUBATBAT
+	dw ZUBAT
 	db -1 ; end
 
 	next_list_item ; CAMPER (20)
@@ -5381,7 +5381,7 @@ GruntFGroup:
 	next_list_item ; GRUNTF (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 3
-	dw ZUBATBAT
+	dw ZUBAT
 	db 2
 	dw EKANS
 	db -1 ; end
