@@ -1151,3 +1151,8 @@ _MomLostGearBookletText::
 	para "Come back again in"
 	line "a while."
 	prompt
+
+_OakLevelCapText::
+	text "Do you want to"
+	line "enable Level Caps?"
+	prompt
