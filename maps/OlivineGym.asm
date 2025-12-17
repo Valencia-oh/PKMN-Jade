@@ -15,8 +15,21 @@ OlivineGymJasmineScript:
 	writetext Jasmine_SteelTypeIntro
 	waitbutton
 	closetext
+	readvar VAR_BADGES
+	ifgreater 3, .Hard
+	sjump .Easy
+
+.Hard
+	winlosstext Jasmine_BetterTrainer, 0
+	loadtrainer JASMINE, JASMINE2
+	sjump .Fight
+
+.Easy
 	winlosstext Jasmine_BetterTrainer, 0
 	loadtrainer JASMINE, JASMINE1
+	sjump .Fight
+
+.Fight	
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_JASMINE
