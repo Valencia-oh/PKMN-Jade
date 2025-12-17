@@ -168,7 +168,6 @@ CharmanderEggMoves:
 	dw ROCK_SLIDE
 	dw BITE
 	dw OUTRAGE
-	dw BEAT_UP
 	dw -1 ; end
 
 SquirtleEggMoves:
@@ -207,7 +206,6 @@ EkansEggMoves:
 	dw PURSUIT
 	dw SLAM
 	dw SPITE
-	dw BEAT_UP
 	dw CRUNCH
 	dw -1 ; end
 
@@ -226,7 +224,6 @@ NidoranFEggMoves:
 	dw FOCUS_ENERGY
 	dw CHARM
 	dw COUNTER
-	dw BEAT_UP
 	dw -1 ; end
 
 NidoranMEggMoves:
@@ -236,7 +233,6 @@ NidoranMEggMoves:
 	dw CONFUSION
 	dw AMNESIA
 	dw COUNTER
-	dw BEAT_UP
 	dw -1 ; end
 
 VulpixEggMoves:
@@ -283,7 +279,6 @@ DiglettEggMoves:
 	dw SCREECH
 	dw ANCIENTPOWER
 	dw PURSUIT
-	dw BEAT_UP
 	dw -1 ; end
 
 MeowthEggMoves:
@@ -310,7 +305,6 @@ MankeyEggMoves:
 	dw MEDITATE
 	dw COUNTER
 	dw REVERSAL
-	dw BEAT_UP
 	dw -1 ; end
 
 GrowlitheEggMoves:
