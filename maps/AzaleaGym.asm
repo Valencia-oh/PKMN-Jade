@@ -35,7 +35,7 @@ AzaleaGymBugsyScript:
 	loadtrainer BUGSY, BUGSY1
 	sjump .Fight
 
-.fight
+.Fight
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BUGSY
