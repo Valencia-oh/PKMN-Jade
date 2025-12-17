@@ -75,16 +75,6 @@ BlackthornGymClairScript:
 	itemnotify
 	setevent EVENT_GOT_TM24_DRAGONBREATH
 	writetext BlackthornGymClairText_DescribeTM24
-	writetext BlackthornGymClairText_DescribeMEW_DNA
-	promptbutton
-	giveitem MEW_DNA
-	iffalse .BagFull
-	getitemname STRING_BUFFER_3, MEW_DNA
-	writetext BlackthornGymText_ReceivedMEW_DNA
-	playsound SFX_ITEM
-	waitsfx
-	itemnotify
-	giveitem MEW_DNA
 	promptbutton
 	sjump .GotTM24
 
@@ -244,11 +234,6 @@ BlackthornGymText_ReceivedTM24:
 	line "TM24."
 	done
 
-BlackthornGymText_ReceivedMEW_DNA:
-	text "<PLAYER> received"
-	line "MEW DNA."
-	done
-
 BlackthornGymClairText_DescribeTM24:
 	text "That contains"
 	line "DRAGONBREATH."
@@ -260,19 +245,6 @@ BlackthornGymClairText_DescribeTM24:
 	para "If you don't want"
 	line "it, you don't have"
 	cont "to take it."
-	done
-
-BlackthornGymClairText_DescribeMEW_DNA:
-	text "Oh I guess you"
-	line "also need this thing."
-
-	para "It's some goop that"
-	line "lance found an is"
-	cont "having me hand out."
-
-	para "to see if any of the"
-	line "challengers want it, so"
-	cont " ake it, I don't want it."
 	done
 
 BlackthornGymClairText_BagFull:
