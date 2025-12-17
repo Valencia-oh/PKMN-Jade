@@ -2089,7 +2089,7 @@ SpecialAttackUpHit:
 	specialattackup
 	statupmessage
 	endmove
-
+	
 SpeedUpHit:
 	checkobedience
 	usedmovetext
@@ -2112,13 +2112,6 @@ SpeedUpHit:
 	statupmessage
 	endmove
 
-Hail:
-	checkobedience
-	usedmovetext
-	doturn
-	starthail
-	endmove
-
 Growth:
 	checkobedience
 	usedmovetext
@@ -2131,4 +2124,11 @@ Growth:
 	statupmessage
 	raisesub	
 	statupfailtext
+	endmove
+
+Hail:
+	checkobedience
+	usedmovetext
+	doturn
+	starthail
 	endmove
