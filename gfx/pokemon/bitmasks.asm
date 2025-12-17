@@ -249,7 +249,6 @@ TyranitarBitmasks:  INCLUDE "gfx/pokemon/tyranitar/bitmask.asm"
 LugiaBitmasks:      INCLUDE "gfx/pokemon/lugia/bitmask.asm"
 HoOhBitmasks:       INCLUDE "gfx/pokemon/ho_oh/bitmask.asm"
 CelebiBitmasks:     INCLUDE "gfx/pokemon/celebi/bitmask.asm"
-EggBitmasks:        INCLUDE "gfx/pokemon/egg/bitmask.asm"
 ; Added Mons
 
 PoochyenaBitmasks:  INCLUDE "gfx/pokemon/poochyena/bitmask.asm"
@@ -292,4 +291,4 @@ PwooperBitmasks:    INCLUDE "gfx/pokemon/pwooper/bitmask.asm"
 ClodsireBitmasks:   INCLUDE "gfx/pokemon/clodsire/bitmask.asm"
 ChiyuBitmasks:      INCLUDE "gfx/pokemon/chi_yu/bitmask.asm"
 ErsrheadbbyBitmasks:INCLUDE "gfx/pokemon/ersrheadbby/bitmask.asm"
-
+EggBitmasks:        INCLUDE "gfx/pokemon/egg/bitmask.asm"
