@@ -45,6 +45,18 @@ MahoganyGymPryceScript:
 	verbosegiveitem TM_ICY_WIND
 	iffalse MahoganyGym_NoRoomForIcyWind
 	setevent EVENT_GOT_TM16_ICY_WIND
+	readmem wBaseLevel
+	addval 5
+	writemem wBaseLevel
+	checkevent EVENT_LEVELCAPS_ENABLED
+	iffalse .SkipLevelCaps 
+	readmem wLevelCap
+	addval 5
+	writemem wLevelCap
+.SkipLevelCaps:
+	readmem wWildLevel
+	addval 5
+	writemem wWildLevel
 	writetext PryceText_IcyWindSpeech
 	waitbutton
 	closetext
