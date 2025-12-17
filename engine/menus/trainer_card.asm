@@ -275,9 +275,6 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 	hlcoord 2, 10
 	ld de, .Dex_PlayTime
 	rst PlaceString
-	hlcoord 10, 15
-	ld de, .Badges
-	rst PlaceString
 	ld hl, wPokedexCaught
 	ld bc, wEndPokedexCaught - wPokedexCaught
 	call CountSetBits16
