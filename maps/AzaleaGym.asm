@@ -12,6 +12,26 @@ AzaleaGym_MapScripts:
 
 	def_callbacks
 
+AzaleaGymBugsyScript:
+	faceplayer
+	opentext
+	checkevent EVENT_BEAT_BUGSY
+	iftrue .FightDone
+	writetext BugsyText_INeverLose
+	waitbutton
+	closetext
+	winlosstext BugsyText_ResearchIncomplete, 0
+	loadtrainer BUGSY, BUGSY1
+	startbattle
+	reloadmapafterbattle
+	setevent EVENT_BEAT_BUGSY
+	opentext
+	writetext Text_ReceivedHiveBadge
+	playsound SFX_GET_BADGE
+	waitsfx
+	setflag ENGINE_HIVEBADGE
+	readvar VAR_BADGES
+	scall AzaleaGymActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
