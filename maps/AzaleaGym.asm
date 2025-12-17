@@ -12,29 +12,21 @@ AzaleaGym_MapScripts:
 
 	def_callbacks
 
-AzaleaGymBugsyScript:
-	faceplayer
-	opentext
-	checkevent EVENT_BEAT_BUGSY
-	iftrue .FightDone
-	writetext BugsyText_INeverLose
-	waitbutton
-	closetext
-	winlosstext BugsyText_ResearchIncomplete, 0
-	loadtrainer BUGSY, BUGSY1
-	startbattle
-	reloadmapafterbattle
-	setevent EVENT_BEAT_BUGSY
-	opentext
-	writetext Text_ReceivedHiveBadge
-	playsound SFX_GET_BADGE
-	waitsfx
-	setflag ENGINE_HIVEBADGE
-	readvar VAR_BADGES
-	scall AzaleaGymActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
+	readmem wBaseLevel
+	addval 5
+	writemem wBaseLevel
+	checkevent EVENT_LEVELCAPS_ENABLED
+	iffalse .SkipLevelCaps 
+	readmem wLevelCap
+	addval 5
+	writemem wLevelCap
+.SkipLevelCaps:
+	readmem wWildLevel
+	addval 5
+	writemem wWildLevel
 	setevent EVENT_BEAT_TWINS_AMY_AND_MAY
 	setevent EVENT_BEAT_BUG_CATCHER_BENNY
 	setevent EVENT_BEAT_BUG_CATCHER_AL
