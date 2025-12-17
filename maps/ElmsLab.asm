@@ -408,7 +408,6 @@ ElmGiveMasterBallScript:
 	iffalse .notdone
 	setevent EVENT_GOT_MASTER_BALL_FROM_ELM
 	writetext ElmGiveMasterBallText2
-	writetext ElmGiveMewDNAText
 	waitbutton
 .notdone
 	closetext
@@ -1211,24 +1210,6 @@ ElmGiveMasterBallText2:
 
 	para "place near the"
 	line "southern seas!"
-	done
-
-ElmGiveMewDNAText:
-	text "And that pink"
-	line "goop is from a!"
-
-	para "rare #MON, you've"
-	line "shown yourself"
-
-	para "to be a great"
-	line "trainer, so"
-
-	para "you should go"
-	line "out and look"
-	cont "for it."
-
-	para "I hear it lives"
-	line "by the sea"
 	done
 
 ElmGiveTicketText1:
