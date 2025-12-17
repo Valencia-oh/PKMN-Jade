@@ -84,10 +84,9 @@ BattleAnimationsGen2::
 	dw BattleAnim_FutureSight
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
-	dw BattleAnim_BeatUp
 	dw BattleAnim_Hail
 	dw BattleAnim_Astonish
-	dw BattleAnim_Poisontail
+	dw BattleAnim_PoisonTail
 	dw BattleAnim_ThunderFang	;Poison Fang (copy of bite)
 	dw BattleAnim_IceFang		;Poison Fang (copy of bite)
 	dw BattleAnim_FireFang		;Poison Fang (copy of bite)
