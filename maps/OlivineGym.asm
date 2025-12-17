@@ -15,6 +15,7 @@ OlivineGymJasmineScript:
 	writetext Jasmine_SteelTypeIntro
 	waitbutton
 	closetext
+
 	readvar VAR_BADGES
 	ifgreater 3, .Hard
 	sjump .Easy
