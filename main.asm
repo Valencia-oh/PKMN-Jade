@@ -703,4 +703,3 @@ INCLUDE "engine/16/table_functions.asm"
 
 ; own section
 INCLUDE "data/trainers/parties.asm"
-INCLUDE "data/trainers/hard_parties.asm"
