@@ -4,7 +4,6 @@
 	const BLUE_PAGE   ; 2
 	const ORANGE_PAGE ; 3
 DEF NUM_STAT_PAGES EQU const_value
-
 DEF STAT_PAGE_MASK EQU %00000011
 	const_def 4
 	const STATS_SCREEN_PLACE_FRONTPIC ; 4
@@ -48,8 +47,9 @@ StatsScreenInit:
 	ret
 
 StatsScreenMain:
-ld [wStatsScreenFlags], a ; PINK_PAGE
-
+	xor a
+	ld [wJumptableIndex], a
+	ld [wStatsScreenFlags], a ; PINK_PAGE
 .loop
 	ld a, [wJumptableIndex]
 	and ~(1 << 7)
@@ -129,13 +129,13 @@ EggStatsInit:
 
 EggStatsJoypad:
 	call StatsScreen_GetJoypad
-	bit B_PAD_A, a
+	bit A_BUTTON_F, a
 	jr nz, .quit
 if DEF(_DEBUG)
-	cp PAD_START
+	cp START
 	jr z, .hatch
 endc
-	and PAD_DOWN | PAD_UP | PAD_A | PAD_B
+	and D_DOWN | D_UP | A_BUTTON | B_BUTTON
 if DEF(_DEBUG)
 	jmp StatsScreen_JoypadAction
 else
@@ -202,7 +202,7 @@ else
 endc
 
 .next
-	and PAD_CTRL_PAD | PAD_A | PAD_B
+	and D_DOWN | D_UP | D_LEFT | D_RIGHT | A_BUTTON | B_BUTTON
 	jr StatsScreen_JoypadAction
 
 StatsScreenWaitCry:
@@ -250,17 +250,17 @@ StatsScreen_JoypadAction:
 	maskbits NUM_STAT_PAGES
 	ld c, a
 	pop af
-	bit B_PAD_B, a
+	bit B_BUTTON_F, a
 	jmp nz, .b_button
-	bit B_PAD_LEFT, a
+	bit D_LEFT_F, a
 	jr nz, .d_left
-	bit B_PAD_RIGHT, a
+	bit D_RIGHT_F, a
 	jr nz, .d_right
-	bit B_PAD_A, a
+	bit A_BUTTON_F, a
 	jr nz, .a_button
-	bit B_PAD_UP, a
+	bit D_UP_F, a
 	jr nz, .d_up
-	bit B_PAD_DOWN, a
+	bit D_DOWN_F, a
 	ret z
 	ld a, [wMonType]
 	cp BUFFERMON
@@ -311,14 +311,14 @@ StatsScreen_JoypadAction:
 	jr z, .b_button
 .d_right
 	inc c
-		ld a, ORANGE_PAGE ; last page
+	ld a, ORANGE_PAGE ; last page
 	cp c
 	jr nc, .set_page
 	ld c, PINK_PAGE ; first page
 	jr .set_page
 
 .d_left
-	ld a, c	
+	ld a, c
 	dec c
 	and a ; cp PINK_PAGE ; first page
 	jr nz, .set_page
@@ -368,9 +368,9 @@ StatsScreen_InitUpperHalf:
 	ld d, h
 	ld e, l
 	hlcoord 8, 0
-	ld a, '№'
+	ld a, "№"
 	ld [hli], a
-	ld a, '.'
+	ld a, "."
 	ld [hli], a
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 3
 	call PrintNum
@@ -385,7 +385,7 @@ StatsScreen_InitUpperHalf:
 	hlcoord 18, 0
 	call .PlaceGenderChar
 	hlcoord 9, 4
-	ld a, '/'
+	ld a, "/"
 	ld [hli], a
 	ld a, [wBaseSpecies]
 	ld [wNamedObjectIndex], a
@@ -416,9 +416,9 @@ StatsScreen_InitUpperHalf:
 	farcall GetGender
 	pop hl
 	ret c
-	ld a, '♂'
+	ld a, "♂"
 	jr nz, .got_gender
-	ld a, '♀'
+	ld a, "♀"
 .got_gender
 	ld [hl], a
 	ret
@@ -465,9 +465,9 @@ StatsScreen_PlaceAbilityHorizontalDivider:
 
 StatsScreen_PlacePageSwitchArrows:
 	hlcoord 10, 6
-	ld [hl], '◀'
+	ld [hl], "◀"
 	hlcoord 19, 6
-	ld [hl], '▶'
+	ld [hl], "▶"
 	ret
 
 StatsScreen_PlaceShinyIcon:
@@ -475,7 +475,7 @@ StatsScreen_PlaceShinyIcon:
 	farcall CheckShininess
 	ret nc
 	hlcoord 19, 0
-	ld [hl], '⁂'
+	ld [hl], "⁂"
 	ret
 
 StatsScreen_LoadGFX:
@@ -562,7 +562,7 @@ LoadPinkPage:
 	and $f0
 	jr z, .NotImmuneToPkrs
 	hlcoord 8, 8
-	ld [hl], '.' ; Pokérus immunity dot
+	ld [hl], "." ; Pokérus immunity dot
 .NotImmuneToPkrs:
 	ld a, [wMonType]
 	cp BOXMON
@@ -764,9 +764,9 @@ LoadBluePage:
 	cp $7f
 	ret z
 	and CAUGHT_GENDER_MASK
-	ld a, '♂'
+	ld a, "♂"
 	jr z, .got_gender
-	ld a, '♀'
+	ld a, "♀"
 .got_gender
 	hlcoord 9, 13
 	ld [hl], a
@@ -934,7 +934,7 @@ StatsScreen_LoadTextboxSpaceGFX:
 	ldh [rVBK], a
 	ld de, TextboxSpaceGFX
 	lb bc, BANK(TextboxSpaceGFX), 1
-	ld hl, vTiles2 tile ' '
+	ld hl, vTiles2 tile " "
 	call Get2bpp
 	pop af
 	ldh [rVBK], a
@@ -1069,8 +1069,7 @@ StatsScreen_LoadPageIndicators:
 	ld a, $36 ; " " " "
 	call .load_square
 	ld a, c
-	cp GREEN_PAGE
-cp PINK_PAGE
+	cp PINK_PAGE
 	hlcoord 11, 5
 	jr z, .load_highlighted_square
 	cp GREEN_PAGE
@@ -1083,7 +1082,6 @@ cp PINK_PAGE
 	hlcoord 17, 5
 .load_highlighted_square
 	ld a, $3a ; first of 4 large square tiles
-
 .load_square
 	push bc
 	ld [hli], a
@@ -1130,7 +1128,7 @@ CheckFaintedFrzSlp:
 	ld hl, MON_STATUS
 	add hl, bc
 	ld a, [hl]
-	and 1 << FRZ | SLP_MASK
+	and SLP_MASK
 	jr nz, .fainted_frz_slp
 	and a
 	ret
