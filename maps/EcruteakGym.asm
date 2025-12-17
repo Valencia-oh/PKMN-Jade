@@ -30,7 +30,7 @@ EcruteakGymMortyScript:
 	waitbutton
 	closetext
 
-readvar VAR_BADGES
+	readvar VAR_BADGES
 	ifgreater 3, .Hard
 	sjump .Easy
 
