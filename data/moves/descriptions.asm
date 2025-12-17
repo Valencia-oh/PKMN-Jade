@@ -260,6 +260,12 @@ MoveDescriptionsGen2:
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
+;Ported Moves
+	dw HailDescription
+	dw AstonishDescription
+	dw PoisontailDescription
+	dw IceFangDescription
+	dw FireFangDescription	
 	dw ThunderFangDescription
 	dw IceFangDescription
 	dw FireFangDescription	
@@ -1286,6 +1292,16 @@ BeatUpDescription:
 	next "in the attack.@"
 
 HailDescription:
+	db   "Inflicts damage"
+	next "every turn.@"
+
+AstonishDescription:
+	db   "An attack that may"
+	next "cause flinching.@"
+
+PoisonTailDescription:
+	db   "High critical hit."
+	next "May poison foe.@"
 
 ThunderFangDescription:
 	db   "An attack that may"
