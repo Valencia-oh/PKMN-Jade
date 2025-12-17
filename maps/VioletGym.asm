@@ -32,7 +32,7 @@ readvar VAR_BADGES
 	loadtrainer FALKNER, FALKNER1
 	sjump .Fight
 
-.fight
+.Fight
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER
