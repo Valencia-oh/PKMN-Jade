@@ -249,7 +249,6 @@ TyranitarAnimation:  INCLUDE "gfx/pokemon/tyranitar/anim.asm"
 LugiaAnimation:      INCLUDE "gfx/pokemon/lugia/anim.asm"
 HoOhAnimation:       INCLUDE "gfx/pokemon/ho_oh/anim.asm"
 CelebiAnimation:     INCLUDE "gfx/pokemon/celebi/anim.asm"
-EggAnimation:        INCLUDE "gfx/pokemon/egg/anim.asm"
 ;Added Mons
 ;gen3
 PoochyenaAnimation:  INCLUDE "gfx/pokemon/poochyena/anim.asm"
@@ -298,3 +297,4 @@ PwooperAnimation:    INCLUDE "gfx/pokemon/pwooper/anim.asm"
 ClodsireAnimation:   INCLUDE "gfx/pokemon/clodsire/anim.asm"
 ChiyuAnimation:      INCLUDE "gfx/pokemon/chi_yu/anim.asm"
 ErsrheadbbyAnimation:INCLUDE "gfx/pokemon/ersrheadbby/anim.asm"
+EggAnimation:        INCLUDE "gfx/pokemon/egg/anim.asm"
