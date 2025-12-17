@@ -20,8 +20,22 @@ AzaleaGymBugsyScript:
 	writetext BugsyText_INeverLose
 	waitbutton
 	closetext
+
+	readvar VAR_BADGES
+	ifgreater 3, .Hard
+	sjump .Easy
+
+.Hard
+	winlosstext BugsyText_ResearchIncomplete, 0
+	loadtrainer BUGSY, BUGSY2
+	sjump .Fight
+
+.Easy
 	winlosstext BugsyText_ResearchIncomplete, 0
 	loadtrainer BUGSY, BUGSY1
+	sjump .Fight
+
+.fight
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BUGSY
