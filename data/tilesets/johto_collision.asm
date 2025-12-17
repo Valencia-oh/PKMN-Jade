@@ -163,6 +163,3 @@
 	tilecoll FLOOR, TALL_GRASS, FLOOR, TALL_GRASS ; a2
 	tilecoll TALL_GRASS, TALL_GRASS, FLOOR, FLOOR ; a3
 	tilecoll WATER, FLOOR, WATER, FLOOR ; a4
-	tilecoll , , ,  ; a5
-	tilecoll , , ,  ; a6
-	tilecoll , , ,  ; a7
