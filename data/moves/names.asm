@@ -252,8 +252,9 @@ MoveNames::
 	li "WHIRLPOOL"
 	li "BEAT UP"
 	li "HAIL"
-	li "POISON TAIL"
 	li "ASTONISH"
+	li "POISON TAIL"
+
 ;Gen4+
 	li "THUNDER FANG"
 	li "ICE FANG"
