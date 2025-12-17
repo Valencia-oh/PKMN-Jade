@@ -281,6 +281,8 @@ MovesGen2:
 	move EFFECT_TRAP_TARGET,        75, WATER,          SPECIAL,		100, 15,   0      ;WHIRLPOOL
 	move EFFECT_FLINCH_HIT,        100, DARK,           PHYSICAL,		 90, 10,  10      ;BEAT_UP
 	move EFFECT_HAIL,		         0, ICE,            STATUS,			100, 10,   0      ;HAIL 
+	move EFFECT_FLINCH_HIT,         30, GHOST,          PHYSICAL,		100, 15,  30      ;ASTONISH
+	move EFFECT_POISON_HIT,         50, POISON,         PHYSICAL,		100, 25,  10      ;POISON_TAIL
 	move EFFECT_PARALYZE_HIT,       70, ELECTRIC,       PHYSICAL,		100, 20,  20      ;THUNDER_FANG
 	move EFFECT_FREEZE_HIT,         70, ICE,            PHYSICAL,		100, 20,  20      ;ICE_FANG
 	move EFFECT_BURN_HIT,           70, FIRE,           PHYSICAL,		100, 20,  20      ;FIRE_FANG
