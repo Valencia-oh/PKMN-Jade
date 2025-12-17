@@ -99,8 +99,8 @@ ProfElmScript:
 ElmCheckMasterBall:
 	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
 	iftrue ElmCheckEverstone
-	checkflag ENGINE_RISINGBADGE
-	iftrue ElmGiveMasterBallScript
+	readvar VAR_BADGES
+	ifgreater 7, ElmGiveMasterBallScript
 ElmCheckEverstone:
 	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
 	iftrue ElmScript_CallYou
