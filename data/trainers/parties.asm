@@ -15,7 +15,7 @@ FalknerGroup:
 	db 10
 	dw NATU
 	dw TOXIC, NIGHT_SHADE, PECK, LEER
-	db 17
+	db 14
 	dw PIDGEOTTO
 	dw PECK, MUD_SLAP, GUST, QUICK_ATTACK
 	db 13
