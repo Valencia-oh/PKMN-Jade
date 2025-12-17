@@ -196,7 +196,7 @@ EvolveAfterBattle_MasterLoop:
 	ld hl, EvolvingText
 	call PrintText
 
-	ld c, 50
+	ld c, 25
 	call DelayFrames
 
 	xor a
