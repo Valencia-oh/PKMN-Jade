@@ -15,9 +15,10 @@ GoldenrodPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
 GoldenrodPokecenter1F_GSBallSceneLeft:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .gsball
-	end
+	setval BATTLETOWERACTION_CHECKMOBILEEVENT
+	special BattleTowerAction
+	ifequal MOBILE_EVENT_OBJECT_GS_BALL, .gsball
+        end
 
 .gsball
 	checkevent EVENT_GOT_GS_BALL_FROM_GOLDENROD_POKEMON_CENTER
@@ -46,9 +47,10 @@ GoldenrodPokecenter1F_GSBallSceneLeft:
 	end
 
 GoldenrodPokecenter1F_GSBallSceneRight:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue .gsball
-	end
+	setval BATTLETOWERACTION_CHECKMOBILEEVENT
+	special BattleTowerAction
+	ifequal MOBILE_EVENT_OBJECT_GS_BALL, .gsball
+        end
 
 .gsball
 	checkevent EVENT_GOT_GS_BALL_FROM_GOLDENROD_POKEMON_CENTER
