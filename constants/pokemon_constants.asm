@@ -317,7 +317,7 @@ DEF FOREIGN_POKEMON EQU const_value
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
 DEF NUM_POKEMON EQU const_value - 1
 
-DEF EGG EQU -3
+DEF EGG EQU -39
 
 ; limits:
 ; 999: everything that prints dex counts
