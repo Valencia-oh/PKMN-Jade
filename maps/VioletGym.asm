@@ -17,8 +17,22 @@ VioletGymFalknerScript:
 	writetext FalknerIntroText
 	waitbutton
 	closetext
+
+readvar VAR_BADGES
+	ifgreater 3, .Hard
+	sjump .Easy
+
+.Hard
+	winlosstext FalknerWinLossText, 0
+	loadtrainer FALKNER, FALKNER2
+	sjump .Fight
+
+.Easy
 	winlosstext FalknerWinLossText, 0
 	loadtrainer FALKNER, FALKNER1
+	sjump .Fight
+
+.fight
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_FALKNER
