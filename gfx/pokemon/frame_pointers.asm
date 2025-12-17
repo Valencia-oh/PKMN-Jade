@@ -251,8 +251,6 @@ FramesPointers:
 	dba LugiaFrames
 	dba HoOhFrames
 	dba CelebiFrames
-; Added Mons
-
 	dba PoochyenaFrames
 	dba MightyenaFrames
 	dba ZigzagoonFrames
