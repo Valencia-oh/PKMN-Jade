@@ -56,6 +56,18 @@ EcruteakGymMortyScript:
 	verbosegiveitem TM_SHADOW_BALL
 	iffalse .NoRoomForShadowBall
 	setevent EVENT_GOT_TM30_SHADOW_BALL
+	readmem wBaseLevel
+	addval 5
+	writemem wBaseLevel
+	checkevent EVENT_LEVELCAPS_ENABLED
+	iffalse .SkipLevelCaps 
+	readmem wLevelCap
+	addval 5
+	writemem wLevelCap
+.SkipLevelCaps:
+	readmem wWildLevel
+	addval 5
+	writemem wWildLevel
 	writetext MortyText_ShadowBallSpeech
 	waitbutton
 	closetext
