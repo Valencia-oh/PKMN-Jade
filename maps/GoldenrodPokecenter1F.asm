@@ -15,7 +15,7 @@ GoldenrodPokecenter1FNurseScript:
 	jumpstd PokecenterNurseScript
 
 GoldenrodPokecenter1F_GSBallSceneLeft:
-	setvalsetval SUICUNE
+	setval SUICUNE
 	special FindPartyMonThatSpecies
 	iftrue .gsball
         end
@@ -47,7 +47,7 @@ GoldenrodPokecenter1F_GSBallSceneLeft:
 	end
 
 GoldenrodPokecenter1F_GSBallSceneRight:
-	setvalsetval SUICUNE
+	setval SUICUNE
 	special FindPartyMonThatSpecies
 	iftrue .gsball
 		end
