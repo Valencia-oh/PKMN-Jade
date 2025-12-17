@@ -196,7 +196,7 @@ EvolveAfterBattle_MasterLoop:
 	ld hl, EvolvingText
 	call PrintText
 
-	ld c, 25
+	ld c, 15
 	call DelayFrames
 
 	xor a
@@ -236,7 +236,7 @@ EvolveAfterBattle_MasterLoop:
 	call PlaySFX
 	call WaitSFX
 
-	ld c, 40
+	ld c, 15
 	call DelayFrames
 
 	call ClearTilemap
