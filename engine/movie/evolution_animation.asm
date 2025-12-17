@@ -88,7 +88,7 @@ EvolutionAnimation:
 	ld de, MUSIC_EVOLUTION
 	call PlayMusic
 
-	ld c, 5
+	ld c, 80
 	call DelayFrames
 
 	ld c, TRUE
