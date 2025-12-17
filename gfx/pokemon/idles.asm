@@ -249,7 +249,6 @@ TyranitarAnimationIdle:  INCLUDE "gfx/pokemon/tyranitar/anim_idle.asm"
 LugiaAnimationIdle:      INCLUDE "gfx/pokemon/lugia/anim_idle.asm"
 HoOhAnimationIdle:       INCLUDE "gfx/pokemon/ho_oh/anim_idle.asm"
 CelebiAnimationIdle:     INCLUDE "gfx/pokemon/celebi/anim_idle.asm"
-EggAnimationIdle:        INCLUDE "gfx/pokemon/egg/anim_idle.asm"
 ;Added Mons
 ;gen3
 PoochyenaAnimationIdle:  INCLUDE "gfx/pokemon/poochyena/anim_idle.asm"
@@ -298,3 +297,5 @@ PwooperAnimationIdle:    INCLUDE "gfx/pokemon/pwooper/anim_idle.asm"
 ClodsireAnimationIdle:   INCLUDE "gfx/pokemon/clodsire/anim_idle.asm"
 ChiyuAnimationIdle:      INCLUDE "gfx/pokemon/chi_yu/anim_idle.asm"
 ErsrheadbbyAnimationIdle:INCLUDE "gfx/pokemon/ersrheadbby/anim_idle.asm"
+;egg
+EggAnimationIdle:        INCLUDE "gfx/pokemon/egg/anim_idle.asm"
