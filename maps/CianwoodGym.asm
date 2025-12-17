@@ -61,6 +61,18 @@ CianwoodGymChuckScript:
 	verbosegiveitem TM_DYNAMICPUNCH
 	iffalse .BagFull
 	setevent EVENT_GOT_TM01_DYNAMICPUNCH
+	readmem wBaseLevel
+	addval 5
+	writemem wBaseLevel
+	checkevent EVENT_LEVELCAPS_ENABLED
+	iffalse .SkipLevelCaps 
+	readmem wLevelCap
+	addval 5
+	writemem wLevelCap
+.SkipLevelCaps:
+	readmem wWildLevel
+	addval 5
+	writemem wWildLevel
 	writetext ChuckExplainTMText
 	waitbutton
 	closetext
