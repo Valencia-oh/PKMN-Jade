@@ -22,6 +22,8 @@ FalknerGroupHard:
 	db 7
 	dw NOCTOWL
 	dw TACKLE, MUD_SLAP, GUST, CONFUSE_RAY
+	db 7
+	dw PELIPPER
 	db -1 ; end
 	end_list_items
 
@@ -38,6 +40,10 @@ WhitneyGroupHard:
 	db 10
 	dw MILTANK
 	dw ROLLOUT, ATTRACT, STOMP, MILK_DRINK
+	db 6
+	dw ZIGZAGOON
+	db 10
+	dw SNUBULL
 	db -1 ; end
 	end_list_items
 
@@ -54,6 +60,9 @@ BugsyGroupHard:
 	db 10
 	dw SCYTHER
 	dw QUICK_ATTACK, LEER, FURY_CUTTER, BITE
+	dw CATERPIE
+	db 10
+	dw HERACROSS
 	db -1 ; end
 	end_list_items
 
@@ -68,11 +77,11 @@ MortyGroupHard:
 	dw HAUNTER
 	dw LICK, SPITE, MEAN_LOOK, CURSE
 	db 8
-	dw MAROWAK
-	dw BONEMERANG, HEADBUTT, LICK, FOCUS_ENERGY	
+	dw MURKROW
+	db 8
+	dw POOCHYENA
 	db 10
 	dw MISDREAVUS
-	dw LICK, WILLOWISP, CONFUSE_RAY, NIGHT_SHADE
 	db -1 ; end
 	end_list_items
 
@@ -89,6 +98,10 @@ PryceGroupHard:
 	db 10
 	dw SNEASEL
 	dw ICE_PUNCH, SLASH, AURORA_BEAM, PURSUIT
+	db 9
+	dw WYRDEER
+	db 10
+	dw SNEASEL
 	db -1 ; end
 	end_list_items
 
@@ -105,6 +118,12 @@ JasmineGroupHard:
 	db 10
 	dw SKARMORY
 	dw SLASH, STEEL_WING, AGILITY, WING_ATTACK
+	db 6
+	dw SCIZOR
+	db 7
+	dw STEELIX
+	db 7
+	dw AMPHAROS
 	db -1 ; end
 	end_list_items
 
@@ -121,6 +140,10 @@ ChuckGroupHard:
 	db 8
 	dw HITMONTOP
 	dw ROLLING_KICK, SLAM, MACH_PUNCH, FAINT_ATTACK
+	db 8
+	dw BRELOOM
+	db 8
+	dw FALINKS
 	db -1 ; end
 	end_list_items
 
@@ -140,6 +163,10 @@ ClairGroupHard:
 	db 10
 	dw KINGDRA
 	dw AGILITY, HYDRO_PUMP, THUNDER, OUTRAGE
+	db 7
+	dw FLAPPLE
+	db 7
+	dw VOLCARONA
 	db -1 ; end
 
 	end_list_items
