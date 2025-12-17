@@ -18,7 +18,7 @@ FalknerGroup:
 	db 14
 	dw PIDGEOTTO
 	dw PECK, MUD_SLAP, GUST, QUICK_ATTACK
-	db 13
+	db 12
 	dw WINGULL
 	dw WATER_GUN, WING_ATTACK, GUST, SUPERSONIC
 	db -1 ; end
