@@ -259,7 +259,6 @@ MoveDescriptionsGen2:
 	dw FutureSightDescription
 	dw RockSmashDescription
 	dw WhirlpoolDescription
-	dw BeatUpDescription
 	dw HailDescription
 	dw AstonishDescription
 	dw PoisontailDescription
