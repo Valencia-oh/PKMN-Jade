@@ -279,7 +279,6 @@ MovesGen2:
 	move EFFECT_FUTURE_SIGHT,      200, PSYCHIC_TYPE,   SPECIAL,		100, 15,   0      ;FUTURE_SIGHT
 	move EFFECT_DEFENSE_DOWN_HIT,   55, FIGHTING,       PHYSICAL,		100, 15, 100      ;ROCK_SMASH
 	move EFFECT_TRAP_TARGET,        75, WATER,          SPECIAL,		100, 15,   0      ;WHIRLPOOL
-	move EFFECT_FLINCH_HIT,        100, DARK,           PHYSICAL,		 90, 10,  10      ;BEAT_UP
 	move EFFECT_HAIL,		         0, ICE,            STATUS,			100, 10,   0      ;HAIL 
 	move EFFECT_FLINCH_HIT,         30, GHOST,          PHYSICAL,		100, 15,  30      ;ASTONISH
 	move EFFECT_POISON_HIT,         50, POISON,         PHYSICAL,		100, 25,  10      ;POISON_TAIL
