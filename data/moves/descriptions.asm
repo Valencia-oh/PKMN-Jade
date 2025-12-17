@@ -260,7 +260,6 @@ MoveDescriptionsGen2:
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-;Ported Moves
 	dw HailDescription
 	dw AstonishDescription
 	dw PoisontailDescription
@@ -1299,7 +1298,7 @@ AstonishDescription:
 	db   "An attack that may"
 	next "cause flinching.@"
 
-PoisonTailDescription:
+PoisontailDescription:
 	db   "High critical hit."
 	next "May poison foe.@"
 
