@@ -1149,7 +1149,7 @@ AskGiveNicknameText:
 	text_end
 
 ReturnToBattle_UseBall:
-	farjp ReturnToBattle_UseBall
+	farjp _ReturnToBattle_UseBall
 
 TownMapEffect:
 	farjp PokegearMap
