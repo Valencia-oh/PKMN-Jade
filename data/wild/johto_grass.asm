@@ -1803,7 +1803,7 @@ def_grass_wildmons CHERRY_TOWER_F1
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; day
 	dbw 3, MUK
@@ -1811,7 +1811,7 @@ def_grass_wildmons CHERRY_TOWER_F1
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; nite
 	dbw 3, MUK
@@ -1819,7 +1819,7 @@ def_grass_wildmons CHERRY_TOWER_F1
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	end_grass_wildmons
 
@@ -1831,7 +1831,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; day
 	dbw 3, MUK
@@ -1839,7 +1839,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; nite
 	dbw 3, MUK
@@ -1847,7 +1847,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	end_grass_wildmons
 
@@ -1859,7 +1859,7 @@ def_grass_wildmons CHERRY_TOWER_F3
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; day
 	dbw 3, MUK
@@ -1867,7 +1867,7 @@ def_grass_wildmons CHERRY_TOWER_F3
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; nite
 	dbw 3, MUK
@@ -1875,7 +1875,7 @@ def_grass_wildmons CHERRY_TOWER_F3
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	end_grass_wildmons
 
@@ -1887,7 +1887,7 @@ def_grass_wildmons CHERRY_TOWER_F4
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; day
 	dbw 3, MUK
@@ -1895,7 +1895,7 @@ def_grass_wildmons CHERRY_TOWER_F4
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; nite
 	dbw 3, MUK
@@ -1903,7 +1903,7 @@ def_grass_wildmons CHERRY_TOWER_F4
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	end_grass_wildmons
 
@@ -1915,7 +1915,7 @@ def_grass_wildmons CHERRY_TOWER_F5
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; day
 	dbw 3, MUK
@@ -1923,7 +1923,7 @@ def_grass_wildmons CHERRY_TOWER_F5
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	; nite
 	dbw 3, MUK
@@ -1931,7 +1931,7 @@ def_grass_wildmons CHERRY_TOWER_F5
 	dbw 5, WEEZING
 	dbw 3, NIDORINO
 	dbw 6, MURKROW
-	dbw 5, SPINARK
+	dbw 5, SPINARAK
 	dbw 5, MUK 
 	end_grass_wildmons
 
@@ -1956,7 +1956,7 @@ def_grass_wildmons CHERRY_TOWER_F5
 	; nite
 	dbw 6, PWOOPER
 	dbw 4, BRONZOR
-	dbw 5, MASHIFF
+	dbw 5, MASCHIFF
 	dbw 3, MURKROW
 	dbw 6, POOCHYENA
 	dbw 4, PWOOPER
@@ -1984,7 +1984,7 @@ def_grass_wildmons CIANWOOD_PALACE
 	; nite
 	dbw 6, PWOOPER
 	dbw 4, BRONZOR
-	dbw 5, MASHIFF
+	dbw 5, MASCHIFF
 	dbw 3, MURKROW
 	dbw 6, POOCHYENA
 	dbw 4, PWOOPER
