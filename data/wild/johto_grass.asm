@@ -1438,7 +1438,7 @@ JohtoGrassWildMons:
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
 	dbw 5, FLITTLE
-	dbw 6, PIDGEY
+	dbw 6, VULPIX
 	dbw 6, PIDGEY
 	; day
 	dbw 4, PIDGEY
@@ -1446,13 +1446,13 @@ JohtoGrassWildMons:
 	dbw 5, BELLSPROUT
 	dbw 5, GROWLITHE
 	dbw 5, FLITTLE
-	dbw 6, PIDGEY
+	dbw 6, VULPIX
 	dbw 6, PIDGEY
 	; nite
 	dbw 4, SPINARAK
 	dbw 4, HOOTHOOT
 	dbw 5, BELLSPROUT
-	dbw 5, HOOTHOOT
+	dbw 5, VULPIX
 	dbw 5, BRONZOR
 	dbw 5, GASTLY
 	dbw 5, GASTLY
@@ -1467,14 +1467,14 @@ JohtoGrassWildMons:
 	dbw 16, GROWLITHE
 	dbw 15, PIDGEOTTO
 	dbw 15, LEDIAN
-	dbw 15, LEDIAN
+	dbw 15, VULPIX
 	; day
 	dbw 13, PIDGEY
 	dbw 14, GROWLITHE
 	dbw 15, PIDGEY
 	dbw 16, GROWLITHE
 	dbw 15, PIDGEOTTO
-	dbw 15, PIDGEY
+	dbw 15, VULPIX
 	dbw 15, PIDGEY
 	; nite
 	dbw 13, SPINARAK
