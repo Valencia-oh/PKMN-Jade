@@ -248,7 +248,6 @@ AipomEggMoves:
 	dw SPITE
 	dw SLAM
 	dw DOUBLESLAP
-	dw BEAT_UP
 	dw -1 ; end
 
 YanmaEggMoves:
@@ -282,7 +281,6 @@ GirafarigEggMoves:
 	dw AMNESIA
 	dw FORESIGHT
 	dw FUTURE_SIGHT
-	dw BEAT_UP
 	dw -1 ; end
 
 PinecoEggMoves:
@@ -409,7 +407,6 @@ HoundourEggMoves:
 	dw COUNTER
 	dw SPITE
 	dw REVERSAL
-	dw BEAT_UP
 	dw -1 ; end
 
 PhanpyEggMoves:
