@@ -36,8 +36,22 @@ BlackthornGymClairScript:
 	writetext ClairIntroText
 	waitbutton
 	closetext
+
+	readvar VAR_BADGES
+	ifgreater 3, .Hard
+	sjump .Easy
+
+.Hard
+	winlosstext ClairWinText, 0
+	loadtrainer CLAIR, CLAIR2
+	sjump .Fight
+
+.Easy
 	winlosstext ClairWinText, 0
 	loadtrainer CLAIR, CLAIR1
+	sjump .Fight
+
+.Fight	
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_CLAIR
