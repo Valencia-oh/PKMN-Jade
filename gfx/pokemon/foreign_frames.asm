@@ -1,3 +1,4 @@
+;gen3
 PoochyenaFrames:   INCLUDE "gfx/pokemon/poochyena/frames.asm"
 MightyenaFrames: INCLUDE "gfx/pokemon/mightyena/frames.asm"
 ZigzagoonFrames:   INCLUDE "gfx/pokemon/zigzagoon/frames.asm"
@@ -8,6 +9,7 @@ ShroomishFrames:   INCLUDE "gfx/pokemon/shroomish/frames.asm"
 BreloomFrames: INCLUDE "gfx/pokemon/breloom/frames.asm"
 ElectrikeFrames:   INCLUDE "gfx/pokemon/electrike/frames.asm"
 ManectricFrames: INCLUDE "gfx/pokemon/manectric/frames.asm"
+;gen4
 HonchkrowFrames: INCLUDE "gfx/pokemon/honchkrow/frames.asm"
 BronzorFrames: INCLUDE "gfx/pokemon/bronzor/frames.asm"
 BronzongFrames:  INCLUDE "gfx/pokemon/bronzong/frames.asm"
@@ -15,21 +17,26 @@ TogekissFrames: INCLUDE "gfx/pokemon/togekiss/frames.asm"
 LeafeonFrames:   INCLUDE "gfx/pokemon/leafeon/frames.asm"
 GlaceonFrames: INCLUDE "gfx/pokemon/glaceon/frames.asm"
 MamoswineFrames: INCLUDE "gfx/pokemon/mamoswine/frames.asm"
+;gen5
 JoltikFrames: INCLUDE "gfx/pokemon/joltik/frames.asm"
 GalvantulaFrames: INCLUDE "gfx/pokemon/galvantula/frames.asm"
 LarvestaFrames: INCLUDE "gfx/pokemon/larvesta/frames.asm"
 VolcaronaFrames: INCLUDE "gfx/pokemon/volcarona/frames.asm"
+;gen6
 InkayFrames:   INCLUDE "gfx/pokemon/inkay/frames.asm"
 MalamarFrames: INCLUDE "gfx/pokemon/malamar/frames.asm"
+;gen7
 PikipekFrames:   INCLUDE "gfx/pokemon/pikipek/frames.asm"
 TrumbeakFrames: INCLUDE "gfx/pokemon/trumbeak/frames.asm"
 ToucannonFrames: INCLUDE "gfx/pokemon/toucannon/frames.asm"
+;gen8
 ApplinFrames:   INCLUDE "gfx/pokemon/applin/frames.asm"
 AppletunFrames: INCLUDE "gfx/pokemon/appletun/frames.asm"
 FlappleFrames: INCLUDE "gfx/pokemon/flapple/frames.asm"
 FalinksFrames:  INCLUDE "gfx/pokemon/falinks/frames.asm"
 WyrdeerFrames:  INCLUDE "gfx/pokemon/wyrdeer/frames.asm"
 UrsalunaFrames:  INCLUDE "gfx/pokemon/ursaluna/frames.asm"
+;gen9
 MaschiffFrames: INCLUDE "gfx/pokemon/maschiff/frames.asm"
 MabosstiffFrames:  INCLUDE "gfx/pokemon/mabosstiff/frames.asm"
 FlittleFrames: INCLUDE "gfx/pokemon/flittle/frames.asm"
