@@ -31,6 +31,7 @@ VioletGymFalknerScript:
 	scall VioletGymActivateRockets
 .FightDone:
 	checkevent EVENT_GOT_TM31_MUD_SLAP
+	iftrue .SpeechAfterTM
 	readmem wBaseLevel
 	addval 4
 	writemem wBaseLevel
