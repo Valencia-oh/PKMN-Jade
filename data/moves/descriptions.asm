@@ -262,8 +262,6 @@ MoveDescriptionsGen2:
 	dw HailDescription
 	dw AstonishDescription
 	dw PoisontailDescription
-	dw IceFangDescription
-	dw FireFangDescription	
 	dw ThunderFangDescription
 	dw IceFangDescription
 	dw FireFangDescription	
