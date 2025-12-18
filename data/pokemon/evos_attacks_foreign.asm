@@ -99,6 +99,7 @@ LinooneEvosAttacks:
 	dbw 18, FURY_SWIPES
 	dbw 21, METAL_CLAW
 	dbw 28, SLAM
+	dbw 30, SHADOW_CLAW
 	dbw 34, EARTHQUAKE
 	dbw 38, REST
 	dbw 48, AMNESIA
@@ -281,7 +282,9 @@ GlaceonEvosAttacks:
 	dbw 27, POWDER_SNOW
 	dbw 30, BITE
 	dbw 33, BLIZZARD
+	dbw 36, HAIL
 	dbw 36, BATON_PASS
+	dbw 39, ICE_FANG
 	dbw 42, TAKE_DOWN
 	db 0 ; no more level-up moves
 
@@ -295,6 +298,7 @@ MamoswineEvosAttacks:
 	dbw 1, TAKE_DOWN
 	dbw 1, FURY_ATTACK
 	dbw 1, MIST
+	dbw 1, HAIL
 	dbw 1, ANCIENTPOWER
 	dbw 45, EARTHQUAKE
 	dbw 50, ICY_WIND
@@ -520,6 +524,7 @@ WyrdeerEvosAttacks:
 	dbw 1, STOMP
 	dbw 1, SAND_ATTACK
 	dbw 36, PSYCHIC_M
+	dbw 37, HAIL
 	dbw 38, BLIZZARD
 	dbw 40, TAKE_DOWN
 	dbw 49, CONFUSE_RAY
