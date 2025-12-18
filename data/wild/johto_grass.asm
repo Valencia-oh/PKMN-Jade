@@ -1970,7 +1970,7 @@ def_grass_wildmons CIANWOOD_PALACE
 	dbw 4, BRONZOR
 	dbw 5, ZIGZAGOON
 	dbw 5, PIKIPEK
-	dbw 3, TRAPPINCH
+	dbw 3, TRAPINCH
 	dbw 5, PWOOPER
 	dbw 5, PWOOPER
 	; day
@@ -1978,7 +1978,7 @@ def_grass_wildmons CIANWOOD_PALACE
 	dbw 4, BRONZOR
 	dbw 5, ZIGZAGOON
 	dbw 5, PIKIPEK
-	dbw 3, TRAPPINCH
+	dbw 3, TRAPINCH
 	dbw 5, PWOOPER
 	dbw 5, PWOOPER
 	; nite
