@@ -259,6 +259,9 @@ ComeHomeForDSTText:
 	done
 
 KnowTheInstructionsText:
+	text "Phone numbers are"
+	line "stored in memory."
+
 	text "Don't you just"
 	line "turn the #GEAR"
 
