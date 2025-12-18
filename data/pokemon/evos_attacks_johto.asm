@@ -558,6 +558,7 @@ SudowoodoEvosAttacks:
 	dbw 10, FLAIL
 	dbw 19, LOW_KICK
 	dbw 28, ROCK_SLIDE
+	dbw 32, POWER_GEM
 	dbw 37, FAINT_ATTACK
 	dbw 46, SLAM
 	db 0 ; no more level-up moves
