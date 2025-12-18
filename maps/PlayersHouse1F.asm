@@ -36,15 +36,15 @@ MeetMomScript:
 	opentext
 	writetext ElmsLookingForYouText
 	promptbutton
-	getstring STRING_BUFFER_4, rName
+	getstring STRING_BUFFER_4, PokegearName
 	scall PlayersHouse1FReceiveItemStd
-	setflag ENGINE_R
+	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
 	addcellnum PHONE_MOM
 	setscene SCENE_PLAYERSHOUSE1F_NOOP
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
 	clearevent EVENT_PLAYERS_HOUSE_MOM_2
-	writetext MomGivesrText
+	writetext MomGivesPokegearText
 	promptbutton
 	special SetDayOfWeek
 .SetDayOfWeek:
@@ -100,7 +100,7 @@ MeetMomTalkedScript:
 	playmusic MUSIC_MOM
 	sjump MeetMomScript
 
-rName:
+PokegearName:
 	db "#GEAR@"
 
 PlayersHouse1FReceiveItemStd:
@@ -171,6 +171,7 @@ NeighborScript:
 	writetext NeighborNiteIntroText
 	promptbutton
 ; fallthrough
+
 .Main:
 	writetext NeighborText
 	waitbutton
