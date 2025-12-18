@@ -251,6 +251,7 @@ AnimationIdlePointers:
 	dw LugiaAnimationIdle
 	dw HoOhAnimationIdle
 	dw CelebiAnimationIdle
+;Added Mons
 	dw PoochyenaAnimationIdle
 	dw MightyenaAnimationIdle
 	dw ZigzagoonAnimationIdle
@@ -261,6 +262,9 @@ AnimationIdlePointers:
 	dw BreloomAnimationIdle
 	dw ElectrikeAnimationIdle
 	dw ManectricAnimationIdle
+	dw TrapinchAnimationIdle
+	dw VibravaAnimationIdle
+	dw FlygonAnimationIdle
 	dw HonchkrowAnimationIdle
 	dw BronzorAnimationIdle
 	dw BronzongAnimationIdle
