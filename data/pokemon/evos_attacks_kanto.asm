@@ -1503,6 +1503,7 @@ KinglerEvosAttacks:
 	dbw 16, HARDEN
 	dbw 23, STOMP
 	dbw 27, GUILLOTINE
+	dbw 30, METAL_CLAW
 	dbw 38, PROTECT
 	dbw 49, CRABHAMMER
 	db 0 ; no more level-up moves
