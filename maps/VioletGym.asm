@@ -50,13 +50,6 @@ readvar VAR_BADGES
 	addval 5
 	writemem wBaseLevel
 
-	checkevent EVENT_LEVELCAPS_ENABLED
-	iffalse .SkipLevelCaps 
-	readmem wLevelCap
-	addval 5
-	writemem wLevelCap
-.SkipLevelCaps:
-
 	readmem wWildLevel
 	addval 4
 	writemem wWildLevel
