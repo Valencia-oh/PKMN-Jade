@@ -15,6 +15,9 @@ FangMoves::
 	dw BITE
 	dw HYPER_FANG
 	dw CRUNCH
+	dw THUNDER_FANG
+	dw ICE_FANG
+	dw FIRE_FANG
 	dw -1
 
 SharpMoves::
@@ -22,4 +25,8 @@ SharpMoves::
 	dw SLASH
 	dw FALSE_SWIPE
 	dw FURY_CUTTER
+	dw PSYCHO_CUT
+	dw RAZORSHELL
+	dw AIR_CUTTER
+	dw AERIAL_ACE
 	dw -1
