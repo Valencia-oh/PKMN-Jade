@@ -949,7 +949,9 @@ SneaselEvosAttacks:
 	dbw 17, SCREECH
 	dbw 25, FAINT_ATTACK
 	dbw 33, FURY_SWIPES
+	dbw 37, SHADOW_CLAW
 	dbw 41, AGILITY
+	dbw 45, ICICLE_CRASH
 	dbw 49, SLASH
 	dbw 65, METAL_CLAW
 	db 0 ; no more level-up moves
@@ -980,6 +982,7 @@ dbww EVOLVE_ITEM, DUSK_STONE, URSALUNA
 	dbw 22, FAINT_ATTACK
 	dbw 29, REST
 	dbw 39, SLASH
+	dbw 43, SHADOW_CLAW
 	dbw 49, SNORE
 	dbw 59, THRASH
 	db 0 ; no more level-up moves
