@@ -47,13 +47,13 @@ readvar VAR_BADGES
 	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
 	readmem wBaseLevel
-	addval 4
+	addval 5
 	writemem wBaseLevel
 
 	checkevent EVENT_LEVELCAPS_ENABLED
 	iffalse .SkipLevelCaps 
 	readmem wLevelCap
-	addval 4
+	addval 5
 	writemem wLevelCap
 .SkipLevelCaps:
 
