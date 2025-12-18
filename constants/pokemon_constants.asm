@@ -284,6 +284,9 @@ DEF FOREIGN_POKEMON EQU const_value
 	const BRELOOM    ; 103
 	const ELECTRIKE  ; 104
 	const MANECTRIC  ; 105
+	const TRAPINCH
+	const VIBRAVA
+	const FLYGON
 	const HONCHKROW  ; 106
 	const BRONZOR 	 ; 107 
 	const BRONZONG	 ; 108 
