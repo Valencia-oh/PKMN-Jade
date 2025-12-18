@@ -851,6 +851,7 @@ SteelixEvosAttacks:
 	dbw 14, ROCK_THROW
 	dbw 23, HARDEN
 	dbw 27, RAGE
+	dbw 28, FIRE_FANG
 	dbw 36, SANDSTORM
 	dbw 40, SLAM
 	dbw 49, CRUNCH
@@ -867,6 +868,7 @@ SnubbullEvosAttacks:
 	dbw 13, BITE
 	dbw 19, LICK
 	dbw 26, ROAR
+	dbw 28, FIRE_FANG
 	dbw 32, ZEN_HEADBUTT
 	dbw 34, RAGE
 	dbw 43, TAKE_DOWN
@@ -881,7 +883,8 @@ GranbullEvosAttacks:
 	dbw 8, CHARM
 	dbw 13, BITE
 	dbw 19, LICK
-	dbw 28, ROAR
+	dbw 26, ROAR
+	dbw 28, FIRE_FANG
 	dbw 35, ZEN_HEADBUTT
 	dbw 38, RAGE
 	dbw 51, TAKE_DOWN
@@ -1112,6 +1115,7 @@ HoundourEvosAttacks:
 	dbw 13, SMOG
 	dbw 20, BITE
 	dbw 27, FAINT_ATTACK
+	dbw 30, FIRE_FANG
 	dbw 35, FLAMETHROWER
 	dbw 43, CRUNCH
 	db 0 ; no more level-up moves
@@ -1124,6 +1128,7 @@ HoundoomEvosAttacks:
 	dbw 13, SMOG
 	dbw 20, BITE
 	dbw 30, FAINT_ATTACK
+	dbw 32, FIRE_FANG
 	dbw 41, FLAMETHROWER
 	dbw 52, CRUNCH
 	db 0 ; no more level-up moves
@@ -1150,6 +1155,7 @@ PhanpyEvosAttacks:
 	dbw 9, DEFENSE_CURL
 	dbw 17, FLAIL
 	dbw 25, TAKE_DOWN
+	dbw 28, FIRE_FANG
 	dbw 33, ROLLOUT
 	dbw 41, ENDURE
 	dbw 49, DOUBLE_EDGE
@@ -1322,6 +1328,7 @@ EnteiEvosAttacks:
 	dbw 21, ROAR
 	dbw 31, FIRE_SPIN
 	dbw 41, STOMP
+	dbw 50, FIRE_FANG
 	dbw 51, FLAMETHROWER
 	dbw 61, SWAGGER
 	dbw 71, FIRE_BLAST
@@ -1383,6 +1390,7 @@ TyranitarEvosAttacks:
 	dbw 22, ROCK_SLIDE
 	dbw 29, THRASH
 	dbw 38, SCARY_FACE
+	dbw 41, FIRE_FANG
 	dbw 47, CRUNCH
 	dbw 61, EARTHQUAKE
 	dbw 75, HYPER_BEAM
