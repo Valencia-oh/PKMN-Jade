@@ -184,9 +184,9 @@ ROMX $3b
 ROMX $3c
 	"Songs 3"
 	"Sound Effects"
-	"Cries"
 ROMX $3d
 	"Songs 4"
+	"Cries"
 ROMX $3e
 	"bank3E"
 ROMX $3f
