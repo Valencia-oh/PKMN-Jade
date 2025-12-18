@@ -556,6 +556,7 @@ MaschiffEvosAttacks:
 	dbw 5, RAGE
 	dbw 7, SCARY_FACE
 	dbw 15, BITE
+	dbw 18, ZEN_HEADBUTT
 	dbw 20, CRUNCH
 	dbw 28, TAKE_DOWN
 	db 0 ; no more level-up moves
@@ -568,8 +569,10 @@ MabosstiffEvosAttacks:
 	dbw 5, RAGE
 	dbw 7, SCARY_FACE
 	dbw 15, BITE
+	dbw 18, ZEN_HEADBUTT
 	dbw 20, CRUNCH
 	dbw 28, TAKE_DOWN
+	dbw 35, DARK_PULSE
 	db 0 ; no more level-up moves
 
 FlittleEvosAttacks:
@@ -579,6 +582,7 @@ FlittleEvosAttacks:
 	dbw 1, LEER
 	dbw 1, NIGHT_SHADE
 	dbw 10, PSYBEAM
+	dbw 16, PSYCHO_CUT
 	dbw 20, TELEPORT
 	dbw 25, THIEF
 	dbw 30, AGILITY
@@ -592,6 +596,7 @@ EspathraEvosAttacks:
 	dbw 1, LEER
 	dbw 1, NIGHT_SHADE
 	dbw 10, PSYBEAM
+	dbw 16, PSYCHO_CUT
 	dbw 20, TELEPORT
 	dbw 25, THIEF
 	dbw 30, AGILITY
@@ -618,6 +623,7 @@ ClodsireEvosAttacks:
 	dbw 1, TAIL_WHIP
 	dbw 11, SLAM
 	dbw 23, SLUDGE_BOMB
+	dbw 28, ZEN_HEADBUTT
 	dbw 35, EARTHQUAKE
 	dbw 47, DIG
 	dbw 59, MIST
