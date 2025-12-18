@@ -263,6 +263,9 @@ BitmasksPointers:
 	dw BreloomBitmasks
 	dw ElectrikeBitmasks
 	dw ManectricBitmasks
+	dw TrapinchBitmasks
+	dw VibravaBitmasks
+	dw FlygonBitmasks
 	dw HonchkrowBitmasks
 	dw BronzorBitmasks
 	dw BronzongBitmasks
