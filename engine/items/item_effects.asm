@@ -2630,7 +2630,7 @@ SquirtbottleEffect:
 	farjp _Squirtbottle
 
 PocketPCEffect:
-	farcall PocketPCFunction
+	farjp _PocketPCFunction
 	ret
 
 CardKeyEffect:
