@@ -691,6 +691,8 @@ SetLevelCap:
 
 .LevelCapOn:
     ld de, EVENT_LEVELCAPS_ENABLED
+    ld b, SET_FLAG
+	call EventFlagAction
 	ld a, 16
 	ld [wLevelCap], a
 	ret
