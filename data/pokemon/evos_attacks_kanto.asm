@@ -848,6 +848,7 @@ PersianEvosAttacks:
 	dbw 11, BITE
 	dbw 20, PAY_DAY
 	dbw 29, FAINT_ATTACK
+	dbw 32, POWER_GEM
 	dbw 38, SCREECH
 	dbw 46, FURY_SWIPES
 	dbw 53, SLASH
@@ -1787,6 +1788,7 @@ StaryuEvosAttacks:
 	dbw 19, RECOVER
 	dbw 25, SWIFT
 	dbw 31, BUBBLEBEAM
+	dbw 36, POWER_GEM
 	dbw 37, MINIMIZE
 	dbw 43, LIGHT_SCREEN
 	dbw 50, HYDRO_PUMP
@@ -1798,6 +1800,7 @@ StarmieEvosAttacks:
 	dbw 1, RAPID_SPIN
 	dbw 1, RECOVER
 	dbw 1, BUBBLEBEAM
+	dbw 36, POWER_GEM
 	dbw 37, CONFUSE_RAY
 	db 0 ; no more level-up moves
 
