@@ -631,9 +631,13 @@ VulpixEvosAttacks:
 	dbw 1, EMBER
 	dbw 1, TAIL_WHIP
 	dbw 7, QUICK_ATTACK
+	dbw 9, ASTONISH
 	dbw 13, ROAR
 	dbw 19, CONFUSE_RAY
 	dbw 25, SAFEGUARD
+	dbw 28, FIRE_FANG
+	dbw 28, THUNDER_FANG
+	dbw 28, ICE_FANG
 	dbw 31, FLAMETHROWER
 	dbw 37, FIRE_SPIN
 	db 0 ; no more level-up moves
@@ -644,6 +648,7 @@ NinetalesEvosAttacks:
 	dbw 1, QUICK_ATTACK
 	dbw 1, CONFUSE_RAY
 	dbw 1, SAFEGUARD
+	dbw 1, ASTONISH
 	dbw 43, FIRE_SPIN
 	db 0 ; no more level-up moves
 
@@ -655,8 +660,10 @@ JigglypuffEvosAttacks:
 	dbw 9, POUND
 	dbw 14, DISABLE
 	dbw 19, ROLLOUT
+	dbw 22, DRAININGKISS
 	dbw 24, DOUBLESLAP
 	dbw 29, REST
+	dbw 32, MOONBLAST
 	dbw 34, BODY_SLAM
 	dbw 39, DOUBLE_EDGE
 	db 0 ; no more level-up moves
