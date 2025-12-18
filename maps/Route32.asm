@@ -16,7 +16,6 @@
 
 Route32_MapScripts:
 	def_scene_scripts
-	scene_script Route32Noop1Scene, SCENE_ROUTE32_COOLTRAINER_M_BLOCKS
 	scene_script Route32Noop2Scene, SCENE_ROUTE32_OFFER_SLOWPOKETAIL
 	scene_script Route32Noop3Scene, SCENE_ROUTE32_NOOP
 
@@ -48,8 +47,6 @@ Route32CooltrainerMContinueScene:
 	opentext
 	checkevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	iftrue .GotMiracleSeed
-	checkflag ENGINE_ZEPHYRBADGE
-	iffalse .DontHaveZephyrBadge
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue .GiveMiracleSeed
 	writetext Route32CooltrainerMText_AideIsWaiting
@@ -64,12 +61,6 @@ Route32CooltrainerMContinueScene:
 	iffalse .BagFull
 	setevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	sjump .GotMiracleSeed
-
-.DontHaveZephyrBadge:
-	writetext Route32CooltrainerMText_VioletGym
-	waitbutton
-	closetext
-	end
 
 .GotMiracleSeed:
 	writetext Route32CooltrainerMText_ExperiencesShouldBeUseful
@@ -503,11 +494,6 @@ Route32HiddenGreatBall:
 Route32HiddenSuperPotion:
 	hiddenitem SUPER_POTION, EVENT_ROUTE_32_HIDDEN_SUPER_POTION
 
-Movement_Route32CooltrainerMPushesYouBackToViolet:
-	step UP
-	step UP
-	step_end
-
 Movement_Route32CooltrainerMReset1:
 	step DOWN
 	step_end
@@ -533,19 +519,6 @@ Route32CooltrainerMText_AideIsWaiting:
 
 	para "you at the #MON"
 	line "CENTER."
-	done
-
-Route32CooltrainerMText_VioletGym:
-	text "Have you gone to"
-	line "the #MON GYM?"
-
-	para "You can test your"
-	line "#MON and your-"
-	cont "self there."
-
-	para "It's a rite of"
-	line "passage for all"
-	cont "trainers!"
 	done
 
 Route32CooltrainerMText_HaveThisSeed:
