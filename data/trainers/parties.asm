@@ -4405,7 +4405,7 @@ PicnickerGroup:
 	db 6
 	dw HOPPIP
 	db 4
-	dw BULBASUAR
+	dw BULBASAUR
 	db -1 ; end
 
 	next_list_item ; PICNICKER (10)
