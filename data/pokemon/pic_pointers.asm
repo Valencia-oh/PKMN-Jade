@@ -540,6 +540,13 @@ PokemonPicPointers::
 	dba ElectrikeBackpic
 	dba ManectricFrontpic
 	dba ManectricBackpic
+	dba TrapinchFrontpic
+	dba TrapinchBackpic
+	dba VibravaFrontpic
+	dba VibravaBackpic
+	dba FlygonFrontpic
+	dba FlygonBackpic
+;gen4
 	dba HonchkrowFrontpic
 	dba HonchkrowBackpic
 	dba BronzorFrontpic
