@@ -198,7 +198,6 @@ EspeonFrontpic:      INCBIN "gfx/pokemon/espeon/front.animated.2bpp.lz"
 XatuFrontpic:        INCBIN "gfx/pokemon/xatu/front.animated.2bpp.lz"
 MewFrontpic:         INCBIN "gfx/pokemon/mew/front.animated.2bpp.lz"
 OctilleryFrontpic:   INCBIN "gfx/pokemon/octillery/front.animated.2bpp.lz"
-JynxFrontpic:        INCBIN "gfx/pokemon/jynx/front.animated.2bpp.lz"
 WobbuffetFrontpic:   INCBIN "gfx/pokemon/wobbuffet/front.animated.2bpp.lz"
 DelibirdFrontpic:    INCBIN "gfx/pokemon/delibird/front.animated.2bpp.lz"
 LedianFrontpic:      INCBIN "gfx/pokemon/ledian/front.animated.2bpp.lz"
@@ -327,6 +326,7 @@ CelebiBackpic:       INCBIN "gfx/pokemon/celebi/back.2bpp.lz"
 KrabbyBackpic:       INCBIN "gfx/pokemon/krabby/back.2bpp.lz"
 BugCatcherPic:       INCBIN "gfx/trainers/bug_catcher.2bpp.lz"
 SnorlaxBackpic:      INCBIN "gfx/pokemon/snorlax/back.2bpp.lz"
+JynxFrontpic:        INCBIN "gfx/pokemon/jynx/front.animated.2bpp.lz"
 
 
 SECTION "Pics 12", ROMX
