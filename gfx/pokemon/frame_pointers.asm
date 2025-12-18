@@ -251,6 +251,7 @@ FramesPointers:
 	dba LugiaFrames
 	dba HoOhFrames
 	dba CelebiFrames
+;added mons
 	dba PoochyenaFrames
 	dba MightyenaFrames
 	dba ZigzagoonFrames
@@ -261,6 +262,9 @@ FramesPointers:
 	dba BreloomFrames
 	dba ElectrikeFrames
 	dba ManectricFrames
+	dba TrapinchFrames
+	dba VibravaFrames
+	dba FlygonFrames
 	dba HonchkrowFrames
 	dba BronzorFrames
 	dba BronzongFrames
