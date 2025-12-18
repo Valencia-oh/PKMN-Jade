@@ -210,7 +210,6 @@ HitmonchanFrontpic:  INCBIN "gfx/pokemon/hitmonchan/front.animated.2bpp.lz"
 QuagsireFrontpic:    INCBIN "gfx/pokemon/quagsire/front.animated.2bpp.lz"
 CrobatFrontpic:      INCBIN "gfx/pokemon/crobat/front.animated.2bpp.lz"
 TangelaFrontpic:     INCBIN "gfx/pokemon/tangela/front.animated.2bpp.lz"
-MachampFrontpic:     INCBIN "gfx/pokemon/machamp/front.animated.2bpp.lz"
 
 
 SECTION "Pics 9", ROMX
@@ -225,6 +224,7 @@ TotodileFrontpic:    INCBIN "gfx/pokemon/totodile/front.animated.2bpp.lz"
 CorsolaFrontpic:     INCBIN "gfx/pokemon/corsola/front.animated.2bpp.lz"
 FirebreatherPic:     INCBIN "gfx/trainers/firebreather.2bpp.lz"
 MachopFrontpic:      INCBIN "gfx/pokemon/machop/front.animated.2bpp.lz"
+MachampFrontpic:     INCBIN "gfx/pokemon/machamp/front.animated.2bpp.lz"
 ChinchouFrontpic:    INCBIN "gfx/pokemon/chinchou/front.animated.2bpp.lz"
 RattataFrontpic:     INCBIN "gfx/pokemon/rattata/front.animated.2bpp.lz"
 ChampionPic:         INCBIN "gfx/trainers/champion.2bpp.lz"
@@ -372,7 +372,6 @@ FlareonBackpic:      INCBIN "gfx/pokemon/flareon/back.2bpp.lz"
 GoldeenBackpic:      INCBIN "gfx/pokemon/goldeen/back.2bpp.lz"
 BulbasaurFrontpic:   INCBIN "gfx/pokemon/bulbasaur/front.animated.2bpp.lz"
 StarmieBackpic:      INCBIN "gfx/pokemon/starmie/back.2bpp.lz"
-JynxFrontpic:        INCBIN "gfx/pokemon/jynx/front.animated.2bpp.lz"
 
 
 SECTION "Pics 13", ROMX
@@ -419,6 +418,7 @@ NidorinoBackpic:     INCBIN "gfx/pokemon/nidorino/back.2bpp.lz"
 MysticalmanPic:      INCBIN "gfx/trainers/mysticalman.2bpp.lz"
 CooltrainerfPic:     INCBIN "gfx/trainers/cooltrainer_f.2bpp.lz"
 ElectrodeFrontpic:   INCBIN "gfx/pokemon/electrode/front.animated.2bpp.lz"
+JynxFrontpic:        INCBIN "gfx/pokemon/jynx/front.animated.2bpp.lz"
 
 
 SECTION "Pics 14", ROMX
