@@ -571,7 +571,7 @@ if !DEF(_DEBUG)
 	call FadeToWhite
 	call ClearTilemap
 
-	ld hl, DELIBIRD
+	ld hl, POOCHYENA
 	call GetPokemonIDFromIndex
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
@@ -623,9 +623,7 @@ endc
 	ld hl, OakText6
 	call PrintText
 	call NamePlayer
-	call SetRegion
 	call SetLevelCap
-
 	ld hl, OakText7
 	jmp PrintText
 
