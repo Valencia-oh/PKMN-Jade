@@ -812,7 +812,8 @@ ElmText_GotAnEmail:
 	line "Hm… Uh-huh…"
 
 ElmText_MissionFromMrPokemon:
-	text "Hey, listen."
+	text "<……><……><……>"
+	line "Hey, listen."
 
 	para "I have an acquain-"
 	line "tance called MR."
