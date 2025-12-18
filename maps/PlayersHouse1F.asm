@@ -171,7 +171,6 @@ NeighborScript:
 	writetext NeighborNiteIntroText
 	promptbutton
 ; fallthrough
-
 .Main:
 	writetext NeighborText
 	waitbutton
@@ -234,6 +233,7 @@ MomGivesPokegearText:
 	para "It's essential if"
 	line "you want to be a"
 	cont "good trainer."
+
 	para "Oh, the day of the"
 	line "week isn't set."
 
@@ -259,9 +259,6 @@ ComeHomeForDSTText:
 	done
 
 KnowTheInstructionsText:
-	text "Phone numbers are"
-	line "stored in memory."
-
 	text "Don't you just"
 	line "turn the #GEAR"
 
@@ -279,6 +276,9 @@ DontKnowTheInstructionsText:
 	done
 
 InstructionsNextText:
+	text "Phone numbers are"
+	line "stored in memory."
+
 	para "Just choose a name"
 	line "you want to call."
 
