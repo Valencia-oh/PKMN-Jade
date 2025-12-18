@@ -74,6 +74,7 @@ MightyenaEvosAttacks:
 	dbw 28, TAKE_DOWN
 	dbw 30, THUNDER_FANG
 	dbw 32, ICE_FANG
+	dbw 35, DARK_PULSE
 	db 0 ; no more level-up moves
 
 ZigzagoonEvosAttacks:
@@ -81,6 +82,7 @@ ZigzagoonEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 5, DEFENSE_CURL
+	dbw 7, PLAY_ROUGH
 	dbw 7, MUD_SLAP
 	dbw 11, QUICK_ATTACK
 	dbw 17, DIG
@@ -199,6 +201,7 @@ ManectricEvosAttacks:
 	dbw 15, DOUBLE_TEAM
 	dbw 20, SLAM
 	dbw 26, THUNDERBOLT
+	dbw 29, FIRE_FANG
 	dbw 34, FURY_SWIPES
 	dbw 53, AGILITY
 	dbw 63, THUNDER
