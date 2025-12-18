@@ -268,6 +268,9 @@ IconPointers:
 	dw BreloomIcon
 	dw ElectrikeIcon
 	dw ManectricIcon
+	dw TrapinchIcon
+	dw VibravaIcon
+	dw FlygonIcon
 	dw HonchkrowIcon
 	dw BronzorIcon
 	dw BronzongIcon
