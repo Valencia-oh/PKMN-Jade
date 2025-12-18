@@ -129,6 +129,7 @@ BayleefEvosAttacks:
 	dbw 12, REFLECT
 	dbw 15, POISONPOWDER
 	dbw 23, SYNTHESIS
+	dbw 35, PLAY_ROUGH
 	dbw 31, BODY_SLAM
 	dbw 39, LIGHT_SCREEN
 	dbw 47, SAFEGUARD
@@ -146,6 +147,7 @@ MeganiumEvosAttacks:
 	dbw 15, POISONPOWDER
 	dbw 23, SYNTHESIS
 	dbw 31, BODY_SLAM
+	dbw 33, MOONBLAST
 	dbw 41, LIGHT_SCREEN
 	dbw 51, SAFEGUARD
 	dbw 61, SOLARBEAM
@@ -158,6 +160,7 @@ CyndaquilEvosAttacks:
 	dbw 1, LEER
 	dbw 6, SMOKESCREEN
 	dbw 8, EMBER
+	dbw 11, MUD_SLAP
 	dbw 19, QUICK_ATTACK
 	dbw 27, FLAME_WHEEL
 	dbw 36, SWIFT
@@ -171,7 +174,8 @@ QuilavaEvosAttacks:
 	dbw 1, LEER
 	dbw 1, SMOKESCREEN
 	dbw 6, SMOKESCREEN
-	dbw 12, EMBER
+	dbw 8, EMBER
+	dbw 11, MUD_SLAP
 	dbw 21, QUICK_ATTACK
 	dbw 31, FLAME_WHEEL
 	dbw 42, SWIFT
@@ -188,6 +192,7 @@ TyphlosionEvosAttacks:
 	dbw 12, EMBER
 	dbw 21, QUICK_ATTACK
 	dbw 31, FLAME_WHEEL
+	dbw 37, EARTHQUAKE
 	dbw 45, SWIFT
 	dbw 60, FLAMETHROWER
 	db 0 ; no more level-up moves
@@ -231,6 +236,7 @@ FeraligatrEvosAttacks:
 	dbw 13, WATER_GUN
 	dbw 21, BITE
 	dbw 28, SCARY_FACE
+	dbw 32, CRUNCH
 	dbw 38, SLASH
 	dbw 47, SCREECH
 	dbw 58, HYDRO_PUMP
