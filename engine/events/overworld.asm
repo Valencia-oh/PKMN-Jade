@@ -1526,7 +1526,7 @@ RodNothingText:
 	text_far _RodNothingText
 	text_end
 
-PocketPCFunction:
+_PocketPCFunction:
 	call .LoadPocketPC
 	ld a, [wEnvironment]
     cp INDOOR 
@@ -1655,6 +1655,7 @@ BikeFunction:
 
 Script_LoadPocketPC:
 	reloadmappart
+	special UpdateTimePals
 	special PokemonCenterPC
 	reloadmappart
 	end
