@@ -550,6 +550,7 @@ UrsalunaEvosAttacks:
 	dbw 29, REST
 	dbw 35, EARTHQUAKE
 	dbw 39, SLASH
+	dbw 43, SHADOW_CLAW
 	dbw 49, SNORE
 	dbw 59, THRASH
 	db 0 ; no more level-up moves
