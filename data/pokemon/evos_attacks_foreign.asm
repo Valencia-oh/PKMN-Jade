@@ -523,6 +523,7 @@ WyrdeerEvosAttacks:
 	dbw 1, HYPNOSIS
 	dbw 1, STOMP
 	dbw 1, SAND_ATTACK
+	dbw 1, ZEN_HEADBUTT
 	dbw 36, PSYCHIC_M
 	dbw 37, HAIL
 	dbw 38, BLIZZARD
