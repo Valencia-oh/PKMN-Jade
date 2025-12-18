@@ -6906,7 +6906,8 @@ GiveExperiencePoints:
 	ld a, [wInBattleTowerBattle]
 	bit IN_BATTLE_TOWER_BATTLE_F, a
 	ret nz
-	
+
+	call .EvenlyDivideExpAmongParticipants
 	xor a
 	ld [wCurPartyMon], a
 	ld bc, wPartyMon1Species
@@ -6992,7 +6993,12 @@ GiveExperiencePoints:
 	sub c
 	ld b, a
 	ld e, d
-.decrease_evs_gained	
+.decrease_evs_gained
+	call IsEvsGreaterThan510
+	jr nc, .check_ev_overflow
+	dec e
+	dec bc
+	jr .decrease_evs_gained
 .check_ev_overflow
 	pop hl
 	pop bc
@@ -7066,7 +7072,7 @@ GiveExperiencePoints:
 	ld hl, wPartyMonNicknames
 	call GetNickname
 	ld hl, Text_MonGainedExpPoint
-	;call BattleTextbox
+	call BattleTextbox
 	ld a, [wStringBuffer2 + 1]
 	ldh [hQuotient + 3], a
 	ld a, [wStringBuffer2]
@@ -7106,7 +7112,6 @@ GiveExperiencePoints:
 	call GetBaseData
 	push bc
 	ld d, MAX_LEVEL
-
 	farcall CalcExpAtLevel
 	pop bc
 	ld hl, MON_EXP + 2
@@ -7141,12 +7146,8 @@ GiveExperiencePoints:
 	pop bc
 	ld hl, MON_LEVEL
 	add hl, bc
-
-
-
 	ld a, [hl]
 	cp MAX_LEVEL
-
 	jmp nc, .next_mon
 	cp d
 	jmp z, .next_mon
@@ -7229,6 +7230,7 @@ GiveExperiencePoints:
 	ld [wApplyStatLevelMultipliersToEnemy], a
 	call ApplyStatLevelMultiplierOnAllStats
 	call ApplyStatusEffectOnPlayerStats
+	call BadgeStatBoosts
 	call UpdatePlayerHUD
 	call EmptyBattleTextbox
 	call LoadTilemapToTempTilemap
@@ -7306,9 +7308,38 @@ GiveExperiencePoints:
 	ld b, h
 	ld c, l
 	jmp .loop
-
 .done
 	jmp ResetBattleParticipants
+
+.EvenlyDivideExpAmongParticipants:
+; count number of battle participants
+	ld a, [wBattleParticipantsNotFainted]
+	ld b, a
+	ld c, PARTY_LENGTH
+	ld d, 0
+.count_loop
+	xor a
+	srl b
+	adc d
+	ld d, a
+	dec c
+	jr nz, .count_loop
+	cp 2
+	ret c
+
+	ld [wTempByteValue], a
+	ld hl, wEnemyMonBaseExp
+	xor a
+	ldh [hDividend + 0], a
+	ld a, [hl]
+	ldh [hDividend + 1], a
+	ld a, [wTempByteValue]
+	ldh [hDivisor], a
+	ld b, 2
+	call Divide
+	ldh a, [hQuotient + 3]
+	ld [hl], a
+	ret
 
 IsEvsGreaterThan510:
 ; Total EVs in bc. Set Carry flag if bc > 510.
@@ -7360,13 +7391,16 @@ ExpPointsText:
 
 AnimateExpBar:
 	push bc
+
 	ld hl, wCurPartyMon
 	ld a, [wCurBattleMon]
 	cp [hl]
 	jmp nz, .finish
+
 	ld a, [wBattleMonLevel]
 	cp MAX_LEVEL
 	jmp nc, .finish
+
 	ldh a, [hProduct + 3]
 	ld [wExperienceGained + 2], a
 	push af
@@ -7438,140 +7472,6 @@ AnimateExpBar:
 .LoopLevels:
 	ld a, e
 	cp MAX_LEVEL
-	jr nc, .FinishExpBar
-	cp d
-	jr z, .FinishExpBar
-	inc a
-	ld [wTempMonLevel], a
-	ld [wCurPartyLevel], a
-	ld [wBattleMonLevel], a
-	push de
-	call .PlayExpBarSound
-	ld c, $40
-	call .LoopBarAnimation
-	call PrintPlayerHUD
-	ld hl, wBattleMonNickname
-	ld de, wStringBuffer1
-	ld bc, MON_NAME_LENGTH
-	rst CopyBytes
-	call TerminateExpBarSound
-	ld de, SFX_HIT_END_OF_EXP_BAR
-	call PlaySFX
-	farcall AnimateEndOfExpBar
-	call WaitSFX
-	ld hl, BattleText_StringBuffer1GrewToLevel
-	call StdBattleTextbox
-	pop de
-	inc e
-	ld b, $0
-	jr .LoopLevels
-
-.FinishExpBar:
-	push bc
-	ld b, d
-	ld de, wTempMonExp + 2
-	call CalcExpBar
-	ld a, b
-	pop bc
-	ld c, a
-	call .PlayExpBarSound
-	call .LoopBarAnimation
-	call TerminateExpBarSound
-	pop af
-	ldh [hProduct + 2], a
-	pop af
-	ldh [hProduct + 3], a
-
-
-AnimateExpBar:
-	push bc
-	ld hl, wCurPartyMon
-	ld a, [wCurBattleMon]
-	cp [hl]
-	jmp nz, .finish
-	ld a, [wLevelCap]
-	push bc
-	ld b, a
-	ld a, [wBattleMonLevel]
-	cp b
-	pop bc
-	jmp nc, .finish
-	ldh a, [hProduct + 3]
-	ld [wExperienceGained + 2], a
-	push af
-	ldh a, [hProduct + 2]
-	ld [wExperienceGained + 1], a
-	push af
-	xor a
-	ld [wExperienceGained], a
-	xor a ; PARTYMON
-	ld [wMonType], a
-	predef CopyMonToTempMon
-	ld a, [wTempMonLevel]
-	ld b, a
-	ld e, a
-	push de
-	ld de, wTempMonExp + 2
-	call CalcExpBar
-	push bc
-	ld hl, wTempMonExp + 2
-	ld a, [wExperienceGained + 2]
-	add [hl]
-	ld [hld], a
-	ld a, [wExperienceGained + 1]
-	adc [hl]
-	ld [hld], a
-	jr nc, .NoOverflow
-	inc [hl]
-	jr nz, .NoOverflow
-	ld a, $ff
-	ld [hli], a
-	ld [hli], a
-	ld [hl], a
-
-.NoOverflow:
-	ld a, [wLevelCap]
-	ld d, a
-	farcall CalcExpAtLevel
-	ldh a, [hProduct + 1]
-	ld b, a
-	ldh a, [hProduct + 2]
-	ld c, a
-	ldh a, [hProduct + 3]
-	ld d, a
-	ld hl, wTempMonExp + 2
-	ld a, [hld]
-	sub d
-	ld a, [hld]
-	sbc c
-	ld a, [hl]
-	sbc b
-	jr c, .AlreadyAtMaxExp
-	ld a, b
-	ld [hli], a
-	ld a, c
-	ld [hli], a
-	ld a, d
-	ld [hld], a
-
-.AlreadyAtMaxExp:
-	farcall CalcLevel
-	ld a, d
-	pop bc
-	pop de
-	ld d, a
-	cp e
-	jr nc, .LoopLevels
-	ld a, e
-	ld d, a
-
-.LoopLevels:
-	ld a, [wLevelCap]
-	push bc
-	ld b, a
-	ld a, e
-	cp b
-	pop bc
 	jr nc, .FinishExpBar
 	cp d
 	jr z, .FinishExpBar
@@ -7674,6 +7574,7 @@ AnimateExpBar:
 	ld a, $1
 	ldh [hBGMapMode], a
 	ret
+
 
 SendOutMonText:
 	ld a, [wLinkMode]
