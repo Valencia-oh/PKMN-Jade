@@ -6,6 +6,8 @@ LevitateMons::
 	dw GENGAR
 	dw KOFFING
 	dw WEEZING
+	dw VIBRAVA
+	dw FLYGON
 	dw -1
 
 WaterproofMons::
