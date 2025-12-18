@@ -480,6 +480,7 @@ MareepEvosAttacks:
 	dbw 23, COTTON_SPORE
 	dbw 30, LIGHT_SCREEN
 	dbw 37, THUNDER
+	dbw 42, POWER_GEM
 	db 0 ; no more level-up moves
 
 FlaaffyEvosAttacks:
@@ -492,6 +493,8 @@ FlaaffyEvosAttacks:
 	dbw 18, THUNDER_WAVE
 	dbw 27, COTTON_SPORE
 	dbw 36, LIGHT_SCREEN
+	dbw 40, FLASHCANNON
+	dbw 42, POWER_GEM
 	dbw 45, THUNDER
 	db 0 ; no more level-up moves
 
@@ -505,7 +508,9 @@ AmpharosEvosAttacks:
 	dbw 18, THUNDER_WAVE
 	dbw 27, COTTON_SPORE
 	dbw 30, THUNDERPUNCH
+	dbw 37, FLASHCANNON
 	dbw 42, LIGHT_SCREEN
+	dbw 44, POWER_GEM
 	dbw 57, THUNDER
 	db 0 ; no more level-up moves
 
@@ -732,6 +737,7 @@ SlowkingEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, CURSE
 	dbw 1, TACKLE
+	dbw 1, POWER_GEM
 	dbw 6, GROWL
 	dbw 15, WATER_GUN
 	dbw 20, CONFUSION
@@ -749,6 +755,7 @@ MisdreavusEvosAttacks:
 	dbw 12, CONFUSE_RAY
 	dbw 19, MEAN_LOOK
 	dbw 27, PSYBEAM
+	dbw 34, POWER_GEM
 	dbw 36, PAIN_SPLIT
 	dbw 46, PERISH_SONG
 	db 0 ; no more level-up moves
@@ -1032,6 +1039,7 @@ CorsolaEvosAttacks:
 	dbw 31, SPIKE_CANNON
 	dbw 37, MIRROR_COAT
 	dbw 43, ANCIENTPOWER
+	dbw 44, POWER_GEM
 	db 0 ; no more level-up moves
 
 RemoraidEvosAttacks:
