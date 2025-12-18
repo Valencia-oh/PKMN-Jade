@@ -48,6 +48,8 @@ Route32CooltrainerMContinueScene:
 	opentext
 	checkevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	iftrue .GotMiracleSeed
+	checkflag ENGINE_ZEPHYRBADGE
+	iffalse .DontHaveZephyrBadge
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue .GiveMiracleSeed
 	writetext Route32CooltrainerMText_AideIsWaiting
@@ -62,6 +64,12 @@ Route32CooltrainerMContinueScene:
 	iffalse .BagFull
 	setevent EVENT_GOT_MIRACLE_SEED_IN_ROUTE_32
 	sjump .GotMiracleSeed
+
+.DontHaveZephyrBadge:
+	writetext Route32CooltrainerMText_VioletGym
+	waitbutton
+	closetext
+	end
 
 .GotMiracleSeed:
 	writetext Route32CooltrainerMText_ExperiencesShouldBeUseful
@@ -527,6 +535,19 @@ Route32CooltrainerMText_AideIsWaiting:
 	line "CENTER."
 	done
 
+Route32CooltrainerMText_VioletGym:
+	text "Have you gone to"
+	line "the #MON GYM?"
+
+	para "You can test your"
+	line "#MON and your-"
+	cont "self there."
+
+	para "It's a rite of"
+	line "passage for all"
+	cont "trainers!"
+	done
+
 Route32CooltrainerMText_HaveThisSeed:
 	text "You have some good"
 	line "#MON there."
@@ -843,6 +864,7 @@ Route32_MapEvents:
 	warp_event  6, 79, UNION_CAVE_1F, 4
 
 	def_coord_events
+	coord_event 18,  8, SCENE_ROUTE32_COOLTRAINER_M_BLOCKS, Route32CooltrainerMStopsYouScene
 	coord_event  7, 71, SCENE_ROUTE32_OFFER_SLOWPOKETAIL, Route32WannaBuyASlowpokeTailScript
 
 	def_bg_events
