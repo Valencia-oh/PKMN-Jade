@@ -202,7 +202,7 @@ endc
 	ld [hli], a
 	ld [hl], LOW(MOM_MONEY)	
 
-	ld a, 16
+	ld a, 15
 	ld [wBaseLevel], a
 
 	ld a, 5
@@ -696,7 +696,7 @@ SetLevelCap:
     ld de, EVENT_LEVELCAPS_ENABLED
     ld b, SET_FLAG
 	call EventFlagAction
-	ld a, 16
+	ld a, 15
 	ld [wLevelCap], a
 	ret
 
