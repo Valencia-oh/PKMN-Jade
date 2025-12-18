@@ -120,7 +120,6 @@ TrainerCard_Page1_LoadGFX:
 
 TrainerCard_Page1_Joypad:
 	call TrainerCard_Page1_PrintGameTime
-	call TrainerCard_Page1_PrintLevelCap
 	ld hl, hJoyLast
 	ld a, [hl]
 	and PAD_RIGHT | PAD_A
@@ -303,7 +302,6 @@ TrainerCard_Page1_PrintDexCaught_GameTime:
 .Dex_PlayTime:
 	db   "#DEX"
 	next "PLAY TIME@"
-	next "LEVEL CAP@"
 
 .StatusTilemap:
 	db $29, $2a, $2b, $2c, $2d, -1
@@ -460,13 +458,6 @@ TrainerCard_Page1_PrintGameTime:
 	ld a, [hl]
 	xor ' ' ^ $2e ; alternate between space and small colon ($2e) tiles
 	ld [hl], a
-	ret
-
-TrainerCard_Page1_PrintLevelCap:
-	hlcoord 15, 14
-	ld de, wLevelCap
-	lb bc, 1, 3
-	call PrintNum	
 	ret
 
 TrainerCard_Page2_3_AnimateBadges:
