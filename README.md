@@ -25,10 +25,9 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - Overhaulled Level Curve
 - Expanded Johto
 - **350 pokemon** There will eventually be around 350 pokemon (all gens 1+2) and ~100 selected from later generations thanks to the Extended 16-bit Indexes featured in CSE
-  - sprites downloaded but are not yet implemented - Paldean Wooper, Clodsire, Pikipek, Trumbeak, Toucannon
   - Need to get sprites for Dripplin and Hyrdapple
   - Requested Mons: sigilyph, Lurantis (and all evos and pre-evos thereof)
-  - Future Evos still not added: Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile, Ursaluna
+  - Future Evos still not added: Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile
     - Future Babies/Pre-evos are unlikely
   - Regional Varients Planned: Alolan Vulpix + Ninetails, Alolan Raichu, Hisuian Growelith + Arcanine
 - Link Cable
