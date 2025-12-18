@@ -135,7 +135,7 @@ wPalFlags:: db
 wPrinterConnectionOpen:: db
 wPrinterOpcode:: db
 
-	ds 1
+wBuffer1
 
 wDisableTextAcceleration:: db
 wPrevLandmark:: db
