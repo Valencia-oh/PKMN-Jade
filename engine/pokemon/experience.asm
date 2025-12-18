@@ -5,7 +5,7 @@ CalcLevel:
 	ld d, 1
 .next_level
 	inc d
-ld a, [wLevelCap]
+	ld a, [wLevelCap]
 	inc a
 	push bc
 	ld b, a
