@@ -26,6 +26,4 @@ SharpMoves::
 	dw FALSE_SWIPE
 	dw FURY_CUTTER
 	dw PSYCHO_CUT
-	dw RAZORSHELL
-	dw AIR_CUTTER
 	dw -1
