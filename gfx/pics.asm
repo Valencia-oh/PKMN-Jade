@@ -708,7 +708,12 @@ UnownYBackpic:       INCBIN "gfx/pokemon/unown_y/back.2bpp.lz"
 UnownPBackpic:       INCBIN "gfx/pokemon/unown_p/back.2bpp.lz"
 UnownIBackpic:       INCBIN "gfx/pokemon/unown_i/back.2bpp.lz"
 UnownRBackpic:       INCBIN "gfx/pokemon/unown_r/back.2bpp.lz"
-
+TrapinchFrontpic:    INCBIN "gfx/pokemon/trapinch/front.animated.2bpp.lz"
+TrapinchBackpic:     INCBIN "gfx/pokemon/trapinch/back.2bpp.lz"
+VibravaFrontpic:     INCBIN "gfx/pokemon/vibrava/front.animated.2bpp.lz"
+VibravaBackpic:      INCBIN "gfx/pokemon/vibrava/back.2bpp.lz"
+FlygonFrontpic:      INCBIN "gfx/pokemon/flygon/front.animated.2bpp.lz"
+FlygonBackpic:       INCBIN "gfx/pokemon/flygon/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
@@ -797,9 +802,3 @@ ToucannonFrontpic:   INCBIN "gfx/pokemon/toucannon/front.animated.2bpp.lz"
 ToucannonBackpic:    INCBIN "gfx/pokemon/toucannon/back.2bpp.lz"
 ChiyuFrontpic:       INCBIN "gfx/pokemon/chi_yu/front.animated.2bpp.lz"
 ChiyuBackpic:        INCBIN "gfx/pokemon/chi_yu/back.2bpp.lz"
-TrapinchFrontpic:    INCBIN "gfx/pokemon/trapinch/front.animated.2bpp.lz"
-TrapinchBackpic:     INCBIN "gfx/pokemon/trapinch/back.2bpp.lz"
-VibravaFrontpic:     INCBIN "gfx/pokemon/vibrava/front.animated.2bpp.lz"
-VibravaBackpic:      INCBIN "gfx/pokemon/vibrava/back.2bpp.lz"
-FlygonFrontpic:      INCBIN "gfx/pokemon/flygon/front.animated.2bpp.lz"
-FlygonBackpic:       INCBIN "gfx/pokemon/flygon/back.2bpp.lz"
