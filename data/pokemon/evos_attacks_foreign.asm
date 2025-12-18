@@ -11,6 +11,9 @@ EvosAttacksPointers3::
 	dw BreloomEvosAttacks
 	dw ElectrikeEvosAttacks
 	dw ManectricEvosAttacks
+	dw TrapinchEvosAttacks
+	dw VibravaEvosAttacks
+	dw FlygonEvosAttacks
 	dw HonchkrowEvosAttacks
 	dw BronzorEvosAttacks
 	dw BronzongEvosAttacks
@@ -205,6 +208,58 @@ ManectricEvosAttacks:
 	dbw 34, FURY_SWIPES
 	dbw 53, AGILITY
 	dbw 63, THUNDER
+	db 0 ; no more level-up moves
+
+TrapinchEvosAttacks:
+	dbbw EVOLVE_LEVEL, 26, VIBRAVA
+	db 0 ; no more evolutions
+	dbw 1, SCRATCH
+	dbw 5, GROWL
+	dbw 7, BITE
+	dbw 9, MAGNITUDE
+	dbw 11, CRUNCH
+	dbw 17, DIG
+	dbw 25, SAND_ATTACK
+	dbw 33, SLASH
+	dbw 41, EARTHQUAKE
+	dbw 49, FISSURE
+	db 0 ; no more level-up moves
+
+VibravaEvosAttacks:
+dbbw EVOLVE_LEVEL, 35, FLYGON
+	db 0 ; no more evolutions
+	dbw 1, TRI_ATTACK
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 1, MAGNITUDE
+	dbw 5, GROWL
+	dbw 7, BITE
+	dbw 9, MAGNITUDE
+	dbw 11, CRUNCH
+	dbw 17, DIG
+	dbw 25, SAND_ATTACK
+	dbw 37, SLASH
+	dbw 41, TWISTER
+	dbw 49, EARTHQUAKE
+	dbw 61, FISSURE
+	db 0 ; no more level-up moves
+
+FlygonEvosAttacks:
+dbbw EVOLVE_LEVEL, 26, FLYGON
+	db 0 ; no more evolutions
+	dbw 1, TRI_ATTACK
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 1, TWISTER
+	dbw 1, MAGNITUDE
+	dbw 5, GROWL
+	dbw 7, BITE
+	dbw 9, MAGNITUDE
+	dbw 17, DIG
+	dbw 25, SAND_ATTACK
+	dbw 37, SLASH
+	dbw 49, EARTHQUAKE
+	dbw 61, FISSURE
 	db 0 ; no more level-up moves
 
 HonchkrowEvosAttacks:
