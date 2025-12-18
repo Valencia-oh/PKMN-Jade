@@ -253,6 +253,9 @@ INCLUDE "data/collision/field_move_blocks.asm"
 
 FlashFunction:
 	call .CheckUseFlash
+	and JUMPTABLE_INDEX_MASK
+	ld [wFieldMoveSucceeded], a
+	ret
 
 .CheckUseFlash:
 
@@ -654,6 +657,7 @@ Script_UsedWaterfall:
 TryWaterfallOW::
 	ld hl, WATERFALL
 	call CheckPartyMoveIndex
+	jr c, .failed
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld a, BANK(Script_AskWaterfall)
