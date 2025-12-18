@@ -202,9 +202,6 @@ endc
 	ld [hli], a
 	ld [hl], LOW(MOM_MONEY)	
 
-	ld a, 15
-	ld [wLevelCap], a
-
 	ld a, 5
 	ld [wBaseLevel], a
 	
@@ -625,7 +622,6 @@ endc
 	ld hl, OakText6
 	call PrintText
 	call NamePlayer
-	call SetLevelCap
 	ld hl, OakText7
 	jmp PrintText
 
@@ -661,10 +657,6 @@ OakText6:
 
 OakText7:
 	text_far _OakText7
-	text_end
-
-OakTextLevelCap:
-	text_far _OakLevelCapText
 	text_end
 
 NamePlayer:
@@ -719,45 +711,6 @@ StorePlayerName:
 	ld hl, wPlayerName
 	ld de, wStringBuffer2
 	jmp CopyName2
-
-
-SetLevelCap:
-	ld hl, OakTextLevelCap
-	call PrintText
-	ld hl, .LevelCapMenuHeader
-	call LoadMenuHeader
-	call VerticalMenu
-	call CloseWindow	
-	ld a, [wMenuCursorY]
-	cp $1
-	jr z, .LevelCapOff
-	cp $2
-	jr z, .LevelCapOn
-
-.LevelCapMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 15, TEXTBOX_Y - 3
-	dw .LevelCapMenuData
-	db 1 ; default option
-
-.LevelCapMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 2 ; items
-	db "LevelCaps OFF@"
-	db "LevelCaps ON@"
-
-.LevelCapOn:
-    ld de, EVENT_LEVELCAPS_ENABLED
-    ld b, SET_FLAG
-	Call EventFlagAction
-	ld a, 15
-	ld [wLevelCap], a
-	ret
-
-.LevelCapOff:
-	ld a, 100
-	ld [wLevelCap], a
-	ret
 
 ShrinkPlayer:
 	ldh a, [hROMBank]
