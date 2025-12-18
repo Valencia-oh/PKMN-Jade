@@ -215,6 +215,7 @@ CharmanderEvosAttacks:
 	dbw 13, SMOKESCREEN
 	dbw 19, RAGE
 	dbw 25, SCARY_FACE
+	dbw 25, FIRE_FANG
 	dbw 31, FLAMETHROWER
 	dbw 37, SLASH
 	dbw 43, DRAGON_RAGE
@@ -231,6 +232,7 @@ CharmeleonEvosAttacks:
 	dbw 13, SMOKESCREEN
 	dbw 20, RAGE
 	dbw 27, SCARY_FACE
+	dbw 29, FIRE_FANG
 	dbw 34, FLAMETHROWER
 	dbw 41, SLASH
 	dbw 48, DRAGON_RAGE
@@ -247,6 +249,7 @@ CharizardEvosAttacks:
 	dbw 13, SMOKESCREEN
 	dbw 20, RAGE
 	dbw 27, SCARY_FACE
+	dbw 29, FIRE_FANG
 	dbw 34, FLAMETHROWER
 	dbw 36, WING_ATTACK
 	dbw 44, SLASH
@@ -461,6 +464,9 @@ EkansEvosAttacks:
 	dbw 1, LEER
 	dbw 9, POISON_STING
 	dbw 15, BITE
+	dbw 18, FIRE_FANG
+	dbw 18, ICE_FANG
+	dbw 18, THUNDER_FANG
 	dbw 23, GLARE
 	dbw 29, SCREECH
 	dbw 37, ACID
@@ -475,6 +481,9 @@ ArbokEvosAttacks:
 	dbw 1, BITE
 	dbw 9, POISON_STING
 	dbw 15, BITE
+	dbw 18, FIRE_FANG
+	dbw 18, ICE_FANG
+	dbw 18, THUNDER_FANG
 	dbw 25, GLARE
 	dbw 33, SCREECH
 	dbw 43, ACID
@@ -922,6 +931,7 @@ GrowlitheEvosAttacks:
 	dbw 9, EMBER
 	dbw 18, LEER
 	dbw 26, TAKE_DOWN
+	dbw 28, FIRE_FANG
 	dbw 34, FLAME_WHEEL
 	dbw 42, AGILITY
 	dbw 50, FLAMETHROWER
@@ -931,6 +941,7 @@ ArcanineEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, ROAR
 	dbw 1, LEER
+	dbw 1, FIRE_FANG
 	dbw 1, TAKE_DOWN
 	dbw 1, FLAME_WHEEL
 	dbw 50, EXTREMESPEED
@@ -2002,6 +2013,7 @@ FlareonEvosAttacks:
 	dbw 30, BITE
 	dbw 36, FIRE_SPIN
 	dbw 42, SMOG
+	dbw 44, FIRE_FANG
 	dbw 47, LEER
 	dbw 52, FLAMETHROWER
 	db 0 ; no more level-up moves
@@ -2080,6 +2092,7 @@ AerodactylEvosAttacks:
 	dbw 1, WING_ATTACK
 	dbw 8, AGILITY
 	dbw 15, BITE
+	dbw 18, FIRE_FANG
 	dbw 22, SUPERSONIC
 	dbw 29, ANCIENTPOWER
 	dbw 36, SCARY_FACE
