@@ -62,6 +62,20 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 ### v.0.6 goals
 - Paldean Wooper                           ✔️
 - Clodsire                                 ✔️
+- Pikipek                                  ✔️
+- Trumbeak                                 ✔️
+- Toucannnon                               ✔️
+### v.0.7 goals
+- add Flygon ✖️
+- More attacks ✔️
+- Abilities ✔️
+- Physical/Special Split ✔️
+- Rebalance Levels South of Goldenrod      -- (suspended)
+- Olivine + Cianwood Reblanace             -- (suspended)
+- Level Scaling ✔️
+### v.0.8 goals
+- Olivine Woods + Creek                    ✖️,
+- Ecruteak Woods                           ✖️
 - Hisuian Growelithe                       ✖️,
 - Hisuian Arcanine                         ✖️,
 - Trapinch                                 ✖️,
@@ -69,10 +83,3 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Flygon                                   ✖️,
 - Dripplin                                 ✖️,
 - Hydrapple                                ✖️,
-- Pikipek                                  ✔️
-- Trumbeak                                 ✔️
-- Toucannnon                               ✔️
-- Rebalance Levels South of Goldenrod      ✖️,
-- Olivine + Cianwood Reblanace             ✖️,
-- Olivine Woods + Creek                    ✖️,
-- Ecruteak Woods                           ✖️
