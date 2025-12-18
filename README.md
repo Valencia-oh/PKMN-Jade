@@ -51,21 +51,21 @@ Currently focusing on adding pokemon, but after the next pokemon addition update
 ### V.0.4 goals - DONE
 Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link Cable
 
-### v.0.5 goals - In Progress
+### v.0.5 goals - DONE
 - Cherrygrove to Route 32 connection       ✔️,
 - Cherry Tower and Cave ✔️
 - Mew Event       ✔️
 - Ursaluna ✔️
 
-- Locations near Cianwood with Alola Mons  ✔️
-
-### v.0.6 goals
+### v.0.6 goals - MOSTLY DONE
 - Paldean Wooper                           ✔️
 - Clodsire                                 ✔️
 - Pikipek                                  ✔️
 - Trumbeak                                 ✔️
 - Toucannnon                               ✔️
-### v.0.7 goals
+- Locations near Cianwood with Alola Mons  -- (Locations Done, Alola Mons not added yet)
+- 
+### v.0.7 goals  - In Progress
 - add Flygon ✖️
 - More attacks ✔️
 - Abilities ✔️
