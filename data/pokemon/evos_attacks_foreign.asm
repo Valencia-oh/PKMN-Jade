@@ -70,7 +70,10 @@ MightyenaEvosAttacks:
 	dbw 7, SCARY_FACE
 	dbw 15, BITE
 	dbw 20, CRUNCH
+	dbw 25, FIRE_FANG
 	dbw 28, TAKE_DOWN
+	dbw 30, THUNDER_FANG
+	dbw 32, ICE_FANG
 	db 0 ; no more level-up moves
 
 ZigzagoonEvosAttacks:
