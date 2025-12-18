@@ -227,12 +227,6 @@ ElmsLookingForYouText:
 	done
 
 MomGivesPokegearText:
-	text "#MON GEAR, or"
-	line "just #GEAR."
-
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
 
 	para "Oh, the day of the"
 	line "week isn't set."
@@ -276,9 +270,6 @@ DontKnowTheInstructionsText:
 	done
 
 InstructionsNextText:
-	text "Phone numbers are"
-	line "stored in memory."
-
 	para "Just choose a name"
 	line "you want to call."
 
