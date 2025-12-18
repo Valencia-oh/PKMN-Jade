@@ -259,6 +259,9 @@ NewPokedexOrder:
 	dw PIKIPEK
 	dw TRUMBEAK
 	dw TOUCANNON
+	dw TRAPINCH
+	dw VIBRAVA
+	dw FLYGON
 	dw CHANSEY
 	dw BLISSEY
 	dw LAPRAS
