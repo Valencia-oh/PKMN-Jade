@@ -185,9 +185,7 @@ KangaskhanBackpic:   INCBIN "gfx/pokemon/kangaskhan/back.2bpp.lz"
 SECTION "Pics 8", ROMX
 
 SeelFrontpic:        INCBIN "gfx/pokemon/seel/front.animated.2bpp.lz"
-CrobatFrontpic:      INCBIN "gfx/pokemon/crobat/front.animated.2bpp.lz"
 ChanseyFrontpic:     INCBIN "gfx/pokemon/chansey/front.animated.2bpp.lz"
-TangelaFrontpic:     INCBIN "gfx/pokemon/tangela/front.animated.2bpp.lz"
 SnubbullFrontpic:    INCBIN "gfx/pokemon/snubbull/front.animated.2bpp.lz"
 GranbullFrontpic:    INCBIN "gfx/pokemon/granbull/front.animated.2bpp.lz"
 MiltankFrontpic:     INCBIN "gfx/pokemon/miltank/front.animated.2bpp.lz"
@@ -211,6 +209,8 @@ FurretFrontpic:      INCBIN "gfx/pokemon/furret/front.animated.2bpp.lz"
 CyndaquilFrontpic:   INCBIN "gfx/pokemon/cyndaquil/front.animated.2bpp.lz"
 HitmonchanFrontpic:  INCBIN "gfx/pokemon/hitmonchan/front.animated.2bpp.lz"
 QuagsireFrontpic:    INCBIN "gfx/pokemon/quagsire/front.animated.2bpp.lz"
+CrobatFrontpic:      INCBIN "gfx/pokemon/crobat/front.animated.2bpp.lz"
+TangelaFrontpic:     INCBIN "gfx/pokemon/tangela/front.animated.2bpp.lz"
 MachampFrontpic:     INCBIN "gfx/pokemon/machamp/front.animated.2bpp.lz"
 
 
