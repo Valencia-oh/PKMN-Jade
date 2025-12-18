@@ -263,6 +263,9 @@ AnimationPointers:
 	dw BreloomAnimation
 	dw ElectrikeAnimation
 	dw ManectricAnimation
+	dw TrapinchAnimation
+	dw VibravaAnimation
+	dw FlygonAnimation
 ;gen4
 	dw HonchkrowAnimation
 	dw BronzorAnimation
