@@ -77,6 +77,7 @@ AlphabeticalPokedexOrder:
 	dw FLAPPLE
 	dw FLAREON
 	dw FLITTLE
+	dw FLYGON
 	dw FORRETRESS
 	dw FURRET
 	dw GALVANTULA
@@ -261,6 +262,7 @@ AlphabeticalPokedexOrder:
 	dw TOGETIC
 	dw TOTODILE
 	dw TOUCANNON
+	dw TRAPINCH
 	dw TRUMBEAK
 	dw TYPHLOSION
 	dw TYRANITAR
@@ -273,6 +275,7 @@ AlphabeticalPokedexOrder:
 	dw VENOMOTH
 	dw VENONAT
 	dw VENUSAUR
+	dw VIBRAVA
 	dw VICTREEBEL
 	dw VILEPLUME
 	dw VOLCARONA
