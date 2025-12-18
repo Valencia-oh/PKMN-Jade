@@ -117,11 +117,10 @@ CutFunction:
 	dw .DoCut
 	dw .FailCut
 
-.CheckAble:
-
-
-.nohivebadge
-	ld a, JUMPTABLE_EXIT
+.CheckAble:	
+	call CheckMapForSomethingToCut
+	jr c, .nothingtocut
+	ld a, $1
 	ret
 
 .nothingtocut
@@ -316,8 +315,7 @@ SurfFunction:
 	dw .FailSurf
 	dw .AlreadySurfing
 
-.TrySurf:
-	ld de, ENGINE_FOGBADGE
+.TrySurf:	
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
 	jr nz, .cannotsurf
@@ -335,9 +333,6 @@ SurfFunction:
 	farcall CheckFacingObject
 	jr c, .cannotsurf
 	ld a, $1
-	ret
-.nofogbadge
-	ld a, JUMPTABLE_EXIT
 	ret
 .alreadyfail
 	ld a, $3
@@ -469,10 +464,6 @@ TrySurfOW::
 	call CheckDirection
 	jr c, .quit
 
-	ld de, ENGINE_FOGBADGE
-	call CheckEngineFlag
-	jr c, .quit
-
 	ld hl, SURF
 	call CheckPartyMoveIndex
 	jr c, .quit
@@ -541,10 +532,6 @@ FlyFunction:
 	ld [wDefaultSpawnpoint], a
 	call CloseWindow
 	ld a, $1
-	ret
-
-.nostormbadge
-	ld a, JUMPTABLE_EXIT | $2
 	ret
 
 .indoors
@@ -1042,10 +1029,6 @@ WhirlpoolFunction:
 
 .failed
 	ld a, $2
-	ret
-
-.noglacierbadge
-	ld a, JUMPTABLE_EXIT
 	ret
 
 .DoWhirlpool:
@@ -1731,10 +1714,6 @@ GotOffBikeText:
 TryCutOW::
 	ld hl, CUT
 	call CheckPartyMoveIndex
-	jr c, .cant_cut
-
-	ld de, ENGINE_HIVEBADGE
-	call CheckEngineFlag
 	jr c, .cant_cut
 
 	ld a, BANK(AskCutScript)
