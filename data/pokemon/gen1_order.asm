@@ -292,5 +292,8 @@ Pokered_MonIndices:
 	db PIKIPEK
 	db TRUMBEAK
 	db TOUCANNON
+	db TRAPINCH
+	db VIBRAVA
+	db FLYGON
 	db ERSRHEADBBY
 	assert_table_length NUM_POKEMON + 1
