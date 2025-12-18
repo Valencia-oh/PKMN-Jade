@@ -1195,7 +1195,7 @@ StantlerEvosAttacks:
 	dbw 15, HYPNOSIS
 	dbw 23, STOMP
 	dbw 31, SAND_ATTACK
-	dbe 33, ZEN_HEADBUTT
+	dbw 33, ZEN_HEADBUTT
 	dbw 36, PSYCHIC_M
 	dbw 40, TAKE_DOWN
 	dbw 49, CONFUSE_RAY
