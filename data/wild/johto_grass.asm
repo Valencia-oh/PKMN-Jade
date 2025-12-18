@@ -567,7 +567,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 6, APPLIN
 	dbw 2, SHROOMISH
-	dbw 3, BEEDRILL
+	dbw 3, WEEDLE
 	dbw 4, PSYDUCK
 	dbw 1, PARAS
 	dbw 2, PARAS
@@ -576,7 +576,7 @@ JohtoGrassWildMons:
 	dbw 6, APPLIN
 	dbw 2, SHROOMISH
 	dbw 3, PSYDUCK
-	dbw 4, BUTTERFREE
+	dbw 4, CATERPIE
 	dbw 1, NATU
 	dbw 2, PARAS
 	dbw 3, BULBASAUR
@@ -1970,7 +1970,7 @@ def_grass_wildmons CIANWOOD_PALACE
 	dbw 4, BRONZOR
 	dbw 5, ZIGZAGOON
 	dbw 5, PIKIPEK
-	dbw 3, PIKIPEK
+	dbw 3, TRAPPINCH
 	dbw 5, PWOOPER
 	dbw 5, PWOOPER
 	; day
@@ -1978,7 +1978,7 @@ def_grass_wildmons CIANWOOD_PALACE
 	dbw 4, BRONZOR
 	dbw 5, ZIGZAGOON
 	dbw 5, PIKIPEK
-	dbw 3, PIKIPEK
+	dbw 3, TRAPPINCH
 	dbw 5, PWOOPER
 	dbw 5, PWOOPER
 	; nite
