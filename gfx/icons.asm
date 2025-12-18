@@ -264,8 +264,8 @@ SECTION "Mon Icons 3", ROMX
 
 WingullIcon::    INCBIN "gfx/icons/skarmory.2bpp"
 PelipperIcon::   INCBIN "gfx/icons/skarmory.2bpp"
-ShroomishIcon::  INCBIN "gfx/icons/piloswine.2bpp"
-BreloomIcon::    INCBIN "gfx/icons/bellsprout.2bpp"
+ShroomishIcon::  INCBIN "gfx/icons/shroomish.2bpp"
+BreloomIcon::    INCBIN "gfx/icons/breloom.2bpp"
 ElectrikeIcon::  INCBIN "gfx/icons/houndour.2bpp"
 ManectricIcon::  INCBIN "gfx/icons/houndoom.2bpp"
 HonchkrowIcon::  INCBIN "gfx/icons/honchkrow.2bpp"
