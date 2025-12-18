@@ -271,6 +271,7 @@ HoothootEvosAttacks:
 	dbw 16, HYPNOSIS
 	dbw 22, REFLECT
 	dbw 28, TAKE_DOWN
+	dbw 33, ZEN_HEADBUTT
 	dbw 34, CONFUSION
 	dbw 48, DREAM_EATER
 	db 0 ; no more level-up moves
@@ -286,6 +287,7 @@ NoctowlEvosAttacks:
 	dbw 16, HYPNOSIS
 	dbw 25, REFLECT
 	dbw 33, TAKE_DOWN
+	dbw 37, ZEN_HEADBUTT
 	dbw 41, CONFUSION
 	dbw 57, DREAM_EATER
 	db 0 ; no more level-up moves
@@ -744,6 +746,7 @@ SlowkingEvosAttacks:
 	dbw 20, CONFUSION
 	dbw 29, DISABLE
 	dbw 34, HEADBUTT
+	dbw 35, ZEN_HEADBUTT
 	dbw 43, SWAGGER
 	dbw 48, PSYCHIC_M
 	db 0 ; no more level-up moves
@@ -784,6 +787,7 @@ GirafarigEvosAttacks:
 	dbw 13, STOMP
 	dbw 20, AGILITY
 	dbw 30, BATON_PASS
+	dbw 35, ZEN_HEADBUTT
 	dbw 41, PSYBEAM
 	dbw 54, CRUNCH
 	db 0 ; no more level-up moves
@@ -863,6 +867,7 @@ SnubbullEvosAttacks:
 	dbw 13, BITE
 	dbw 19, LICK
 	dbw 26, ROAR
+	dbw 32, ZEN_HEADBUTT
 	dbw 34, RAGE
 	dbw 43, TAKE_DOWN
 	db 0 ; no more level-up moves
@@ -877,6 +882,7 @@ GranbullEvosAttacks:
 	dbw 13, BITE
 	dbw 19, LICK
 	dbw 28, ROAR
+	dbw 35, ZEN_HEADBUTT
 	dbw 38, RAGE
 	dbw 51, TAKE_DOWN
 	db 0 ; no more level-up moves
@@ -1183,6 +1189,7 @@ StantlerEvosAttacks:
 	dbw 15, HYPNOSIS
 	dbw 23, STOMP
 	dbw 31, SAND_ATTACK
+	dbe 33, ZEN_HEADBUTT
 	dbw 36, PSYCHIC_M
 	dbw 40, TAKE_DOWN
 	dbw 49, CONFUSE_RAY
@@ -1273,6 +1280,7 @@ MiltankEvosAttacks:
 	dbw 13, STOMP
 	dbw 19, MILK_DRINK
 	dbw 26, BIDE
+	dbw 27, ZEN_HEADBUTT
 	dbw 34, ROLLOUT
 	dbw 43, BODY_SLAM
 	dbw 53, HEAL_BELL
