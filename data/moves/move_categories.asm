@@ -28,5 +28,4 @@ SharpMoves::
 	dw PSYCHO_CUT
 	dw RAZORSHELL
 	dw AIR_CUTTER
-	dw AERIAL_ACE
 	dw -1
