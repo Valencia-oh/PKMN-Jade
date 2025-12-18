@@ -849,6 +849,7 @@ SnubbullEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, SCARY_FACE
+	dbw 1, PLAY_ROUGH
 	dbw 4, TAIL_WHIP
 	dbw 8, CHARM
 	dbw 13, BITE
@@ -862,6 +863,7 @@ GranbullEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
 	dbw 1, SCARY_FACE
+	dbw 1, PLAY_ROUGH
 	dbw 4, TAIL_WHIP
 	dbw 8, CHARM
 	dbw 13, BITE
