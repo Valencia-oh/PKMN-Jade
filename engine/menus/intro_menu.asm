@@ -203,7 +203,7 @@ endc
 	ld [hl], LOW(MOM_MONEY)	
 
 	ld a, 15
-	ld [wBaseLevel], a
+	ld [wLevelCap], a
 
 	ld a, 5
 	ld [wBaseLevel], a
