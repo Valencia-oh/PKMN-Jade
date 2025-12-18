@@ -171,7 +171,6 @@ ROMX $36
 	
 ROMX $37
 	"Tileset Data 6"
-	"Cries"
 ROMX $38
 	"bank38"
 ROMX $39
@@ -306,6 +305,7 @@ ROMX $70
 	"Text 2"
 ROMX $71
 	"Text 3"
+	"Cries"
 ROMX $72
 	"Miscellaneous Text"
 ROMX $73
