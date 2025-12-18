@@ -52,7 +52,7 @@ wMusicID:: dw
 wMusicBank:: db
 wNoiseSampleAddress:: dw
 wNoiseSampleDelay:: db
-wFlyingWithHMItem:: db
+	ds 1
 wMusicNoiseSampleSet:: db
 wSFXNoiseSampleSet:: db
 
