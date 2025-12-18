@@ -201,7 +201,10 @@ endc
 	ld a, HIGH(MOM_MONEY) ; mid
 	ld [hli], a
 	ld [hl], LOW(MOM_MONEY)	
-	
+
+	ld a, 16
+	ld [wBaseLevel], a
+
 	ld a, 5
 	ld [wBaseLevel], a
 	
