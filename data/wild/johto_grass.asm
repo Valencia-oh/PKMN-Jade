@@ -1237,9 +1237,9 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, TRAPINCH
-	dbw 2, VIBRAVA
-	dbw 1, FLYGON
+	dbw 2, PIDGEY
+	dbw 2, SENTRET
+	dbw 1, ZIGZAGOON
 	dbw 3, ZIGZAGOON
 	dbw 2, RATTATA
 	dbw 3, HOPPIP
