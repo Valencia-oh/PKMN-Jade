@@ -811,9 +811,6 @@ ElmText_GotAnEmail:
 	para "<……><……><……>"
 	line "Hm… Uh-huh…"
 
-	para "Okay…"
-	done
-
 ElmText_MissionFromMrPokemon:
 	text "Hey, listen."
 
@@ -824,27 +821,18 @@ ElmText_MissionFromMrPokemon:
 	para "He keeps finding"
 	line "weird things and"
 
-	para "raving about his"
-	line "discoveries."
-
 	para "Anyway, I just got"
 	line "an e-mail from him"
 
 	para "saying that this"
 	line "time it's real."
 
-	para "It is intriguing,"
-	line "but we're busy"
-
-	para "with our #MON"
-	line "research…"
-
 	para "Wait!"
 
 	para "I know!"
 
 	para "<PLAY_G>, can you"
-	line "go in our place?"
+	line "go see what it is?"
 	done
 
 ElmText_ChooseAPokemon:
@@ -853,10 +841,6 @@ ElmText_ChooseAPokemon:
 
 	para "#MON contained"
 	line "in these BALLS."
-
-	para "You'll be that"
-	line "#MON's first"
-	cont "partner, <PLAY_G>!"
 
 	para "Go on. Pick one!"
 	done
