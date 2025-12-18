@@ -179,6 +179,7 @@ _ResetWRAM:
 
 	ld [wJohtoBadges], a
 	ld [wKantoBadges], a
+	ld [wHoennBadges], a
 
 	ld [wCoins], a
 	ld [wCoins + 1], a
@@ -200,12 +201,11 @@ endc
 	ld [hli], a
 	ld a, HIGH(MOM_MONEY) ; mid
 	ld [hli], a
-	ld [hl], LOW(MOM_MONEY)
-
-
+	ld [hl], LOW(MOM_MONEY)	
+	
 	ld a, 5
 	ld [wBaseLevel], a
-
+	
 	ld a, 1
 	ld [wWildLevel], a	
 
@@ -353,9 +353,9 @@ ConfirmContinue:
 	call DelayFrame
 	call GetJoypad
 	ld hl, hJoyPressed
-	bit B_PAD_A, [hl]
+	bit A_BUTTON_F, [hl]
 	ret nz
-	bit B_PAD_B, [hl]
+	bit B_BUTTON_F, [hl]
 	jr z, .loop
 	scf
 	ret
@@ -502,7 +502,7 @@ Continue_UnknownGameTime:
 Continue_DisplayBadgeCount:
 	push hl
 	ld hl, wJohtoBadges
-	ld b, 2
+	ld b, 3
 	call CountSetBits
 	pop hl
 	ld de, wNumSetBits
@@ -536,7 +536,7 @@ Continue_DisplayGameTime:
 	ld de, wGameTimeHours
 	lb bc, 2, 3
 	call PrintNum
-	ld a, '<COLON>'
+	ld a, "<COLON>"
 	ld [hli], a
 	ld de, wGameTimeMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
@@ -571,7 +571,7 @@ if !DEF(_DEBUG)
 	call FadeToWhite
 	call ClearTilemap
 
-	ld hl, POOCHYENA
+	ld hl, DELIBIRD
 	call GetPokemonIDFromIndex
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
@@ -623,7 +623,9 @@ endc
 	ld hl, OakText6
 	call PrintText
 	call NamePlayer
+	call SetRegion
 	call SetLevelCap
+
 	ld hl, OakText7
 	jmp PrintText
 
@@ -743,12 +745,12 @@ NamePlayer:
 	jmp InitName
 
 .Chris:
-	dname "CHRIS", NAME_LENGTH
+	db "CHRIS@@@@@@"
 .Kris:
-	dname "KRIS", NAME_LENGTH
+	db "KRIS@@@@@@@"
 
 StorePlayerName:
-	ld a, '@'
+	ld a, "@"
 	ld bc, NAME_LENGTH
 	ld hl, wPlayerName
 	rst ByteFill
@@ -921,10 +923,10 @@ IntroSequence:
 	; fallthrough
 
 StartTitleScreen:
-	ldh a, [rWBK]
+	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wLYOverrides)
-	ldh [rWBK], a
+	ldh [rSVBK], a
 
 	call .TitleScreen
 	call DelayFrame
@@ -936,14 +938,14 @@ StartTitleScreen:
 	call ClearBGPalettes
 
 	pop af
-	ldh [rWBK], a
+	ldh [rSVBK], a
 
 	ld hl, rLCDC
-	res B_LCDC_OBJ_SIZE, [hl] ; 8x8
+	res rLCDC_SPRITE_SIZE, [hl] ; 8x8
 	call ClearScreen
 	call WaitBGMap2
 	ld hl, rIE
-	res B_IE_STAT, [hl]
+	res LCD_STAT, [hl]
 	xor a
 	ldh [hLCDCPointer], a
 	ldh [hSCX], a
@@ -1047,7 +1049,7 @@ TitleScreenEntrance:
 	ld hl, wJumptableIndex
 	inc [hl]
 	ld hl, rIE
-	res B_IE_STAT, [hl]
+	res LCD_STAT, [hl]
 	xor a
 	ldh [hLCDCPointer], a
 
@@ -1090,7 +1092,7 @@ TitleScreenMain:
 	call GetJoypad
 	ld hl, hJoyDown
 	ld a, [hl]
-	or ~(PAD_UP + PAD_B + PAD_SELECT)
+	or ~(D_UP + B_BUTTON + SELECT)
 	inc a
 	jr z, .delete_save_data
 
@@ -1102,7 +1104,7 @@ TitleScreenMain:
 	jr z, .check_clock_reset
 
 	ld a, [hl]
-	or ~(PAD_DOWN + PAD_B + PAD_SELECT)
+	or ~(D_DOWN + B_BUTTON + SELECT)
 	inc a
 	jr nz, .check_start
 
@@ -1113,21 +1115,21 @@ TitleScreenMain:
 ; Keep Select pressed, and hold Left + Up.
 ; Then let go of Select.
 .check_clock_reset
-	bit B_PAD_SELECT, [hl]
+	bit SELECT_F, [hl]
 	jr nz, .check_start
 
 	xor a
 	ldh [hClockResetTrigger], a
 
 	ld a, [hl]
-	or ~(PAD_LEFT + PAD_UP)
+	or ~(D_LEFT + D_UP)
 	inc a
 	jr z, .reset_clock
 
 ; Press Start or A to start the game.
 .check_start
 	ld a, [hl]
-	and PAD_START | PAD_A
+	and START | A_BUTTON
 	ret z
 	ld a, TITLESCREENOPTION_MAIN_MENU
 	jr .done
