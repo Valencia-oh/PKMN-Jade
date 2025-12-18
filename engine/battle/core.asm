@@ -7360,10 +7360,12 @@ ExpPointsText:
 
 AnimateExpBar:
 	push bc
+
 	ld hl, wCurPartyMon
 	ld a, [wCurBattleMon]
 	cp [hl]
 	jmp nz, .finish
+
 	ld a, [wLevelCap]
 	push bc
 	ld b, a
@@ -7371,6 +7373,7 @@ AnimateExpBar:
 	cp b
 	pop bc
 	jmp nc, .finish
+
 	ldh a, [hProduct + 3]
 	ld [wExperienceGained + 2], a
 	push af
@@ -7393,7 +7396,15 @@ AnimateExpBar:
 	ld a, [wExperienceGained + 2]
 	add [hl]
 	ld [hld], a
-@@ -7378,7 +7387,8 @@
+	ld a, [wExperienceGained + 1]
+	adc [hl]
+	ld [hld], a
+	jr nc, .NoOverflow
+	inc [hl]
+	jr nz, .NoOverflow
+	ld a, $ff
+	ld [hli], a
+	ld [hli], a
 	ld [hl], a
 
 .NoOverflow:
@@ -7402,19 +7413,24 @@ AnimateExpBar:
 	farcall CalcExpAtLevel
 	ldh a, [hProduct + 1]
 	ld b, a
-@@ -7413,8 +7423,12 @@
+	ldh a, [hProduct + 2]
+	ld c, a
+	ldh a, [hProduct + 3]
 	ld d, a
-
-.LoopLevels:
-	ld a, [wLevelCap]
-	push bc
-	ld b, a
-	ld a, e
-	cp b
-	pop bc
-	jr nc, .FinishExpBar
-	cp d
-	jr z, .FinishExpBar
+	ld hl, wTempMonExp + 2
+	ld a, [hld]
+	sub d
+	ld a, [hld]
+	sbc c
+	ld a, [hl]
+	sbc b
+	jr c, .AlreadyAtMaxExp
+	ld a, b
+	ld [hli], a
+	ld a, c
+	ld [hli], a
+	ld a, d
+	ld [hld], a
 
 .AlreadyAtMaxExp:
 	farcall CalcLevel
