@@ -546,7 +546,6 @@ PokemonPicPointers::
 	dba VibravaBackpic
 	dba FlygonFrontpic
 	dba FlygonBackpic
-;gen4
 	dba HonchkrowFrontpic
 	dba HonchkrowBackpic
 	dba BronzorFrontpic
