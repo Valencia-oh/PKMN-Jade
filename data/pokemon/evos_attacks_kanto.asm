@@ -1923,6 +1923,7 @@ LaprasEvosAttacks:
 	dbw 15, BODY_SLAM
 	dbw 22, CONFUSE_RAY
 	dbw 29, PERISH_SONG
+	dbw 31, ICICLE_CRASH
 	dbw 36, ICE_BEAM
 	dbw 43, RAIN_DANCE
 	dbw 50, SAFEGUARD
