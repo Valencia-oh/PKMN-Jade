@@ -52,15 +52,11 @@ AzaleaGymBugsyScript:
 	readmem wBaseLevel
 	addval 5
 	writemem wBaseLevel
-	checkevent EVENT_LEVELCAPS_ENABLED
-	iffalse .SkipLevelCaps 
-	readmem wLevelCap
-	addval 5
-	writemem wLevelCap
-.SkipLevelCaps:
+
 	readmem wWildLevel
 	addval 5
 	writemem wWildLevel
+
 	setevent EVENT_BEAT_TWINS_AMY_AND_MAY
 	setevent EVENT_BEAT_BUG_CATCHER_BENNY
 	setevent EVENT_BEAT_BUG_CATCHER_AL
