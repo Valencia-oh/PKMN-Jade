@@ -40,7 +40,6 @@ INCLUDE "engine/items/item_effects.asm"
 INCLUDE "engine/battle_anims/pokeball_wobble.asm"
 INCLUDE "engine/pokemon/knows_move.asm"
 
-
 SECTION "Load Map Part", ROMX
 
 INCLUDE "engine/overworld/player_step.asm"
@@ -265,7 +264,6 @@ INCLUDE "data/phone/text/wilton_caller.asm"
 INCLUDE "data/phone/text/kenji_caller.asm"
 INCLUDE "data/phone/text/parry_caller.asm"
 INCLUDE "data/phone/text/erin_caller.asm"
-
 
 SECTION "bank20", ROMX
 
