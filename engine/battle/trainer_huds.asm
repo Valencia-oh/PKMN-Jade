@@ -41,7 +41,7 @@ ShowOTTrainerMonsRemaining:
 	ld [hl], 4 * TILE_WIDTH
 	ld a, -TILE_WIDTH
 	ld [wPlaceBallsDirection], a
-	ld hl, wShadowOAMSprite00 + PARTY_LENGTH * OBJ_SIZE
+	ld hl, wShadowOAMSprite00 + PARTY_LENGTH * SPRITEOAMSTRUCT_LENGTH
 	jmp LoadTrainerHudOAM
 
 StageBallTilesData:
@@ -196,7 +196,7 @@ LinkBattle_TrainerHuds:
 	ld a, 10 * TILE_WIDTH
 	ld [hli], a
 	ld [hl], 13 * TILE_WIDTH
-	ld hl, wShadowOAMSprite00 + PARTY_LENGTH * OBJ_SIZE
+	ld hl, wShadowOAMSprite00 + PARTY_LENGTH * SPRITEOAMSTRUCT_LENGTH
 ; fallthrough
 LoadTrainerHudOAM:
 	ld de, wBattleHUDTiles
@@ -242,9 +242,9 @@ _ShowLinkBattleParticipants:
 	ld de, wOTPlayerName
 	rst PlaceString
 	hlcoord 9, 8
-	ld a, '<BOLD_V>'
+	ld a, "<BOLD_V>"
 	ld [hli], a
-	ld [hl], '<BOLD_S>'
+	ld [hl], "<BOLD_S>"
 	call LinkBattle_TrainerHuds
 	ld b, SCGB_DIPLOMA
 	call GetSGBLayout
