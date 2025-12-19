@@ -238,12 +238,13 @@ INCLUDE "engine/pokemon/experience.asm"
 INCLUDE "engine/pokemon/switchpartymons.asm"
 INCLUDE "engine/gfx/load_pics.asm"
 
+
 SECTION "bank14.2", ROMX
 
 INCLUDE "data/pokemon/base_stats.asm"
 
 
-SECTION "bank14.3", ROMX
+SECTION "bank 14.3", ROMX
 
 INCLUDE "data/pokemon/names.asm"
 
@@ -264,6 +265,7 @@ INCLUDE "data/phone/text/wilton_caller.asm"
 INCLUDE "data/phone/text/kenji_caller.asm"
 INCLUDE "data/phone/text/parry_caller.asm"
 INCLUDE "data/phone/text/erin_caller.asm"
+
 
 SECTION "bank20", ROMX
 
@@ -478,16 +480,29 @@ INCLUDE "engine/movie/intro.asm"
 
 SECTION "bank3E", ROMX
 
-INCLUDE "engine/gfx/load_font.asm"
-INCLUDE "engine/link/time_capsule.asm"
-INCLUDE "engine/events/name_rater.asm"
 INCLUDE "engine/events/play_slow_cry.asm"
+INCLUDE "engine/battle/misc.asm"
+
+
+SECTION "bank3E.2", ROMX
+
 INCLUDE "engine/pokedex/new_pokedex_entry.asm"
-INCLUDE "engine/link/time_capsule_2.asm"
 INCLUDE "engine/pokedex/unown_dex.asm"
+INCLUDE "engine/events/name_rater.asm"
 INCLUDE "engine/events/magikarp.asm"
 INCLUDE "engine/battle/hidden_power.asm"
-INCLUDE "engine/battle/misc.asm"
+INCLUDE "engine/link/time_capsule_2.asm"
+INCLUDE "engine/link/time_capsule.asm"
+
+
+SECTION "bank3E.3", ROMX
+
+INCLUDE "engine/gfx/load_font.asm"
+
+
+SECTION "bank3E.4", ROMX
+
+INCLUDE "gfx/footprints.asm"
 
 
 SECTION "bank3F", ROMX
