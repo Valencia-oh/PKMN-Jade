@@ -235,8 +235,6 @@ Pokered_MonIndices:
 	db YANMA
 	db WOOPER
 	db QUAGSIRE
-	db PWOOPER
-	db CLODSIRE
 	db ESPEON
 	db UMBREON
 	db MURKROW
