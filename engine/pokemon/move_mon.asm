@@ -1052,7 +1052,7 @@ CalcMonStatC:
 	push hl
 	push de
 	push bc
-	ld a, b
+	ld a, [wHardMode] ;Contains 0 if hardmode is on, 1 otherwise
 	ld d, a
 	push hl
 	ld hl, wBaseStats - 1 ; has to be decreased, because 'c' begins with 1
@@ -1320,7 +1320,7 @@ GivePoke::
 	ld [de], a
 	inc hl
 	inc de
-	cp '@'
+	cp "@"
 	jr nz, .otnameloop
 	ld a, [wScriptBank]
 	call GetFarByte
@@ -1345,7 +1345,7 @@ GivePoke::
 	ld [de], a
 	inc hl
 	inc de
-	cp '@'
+	cp "@"
 	jr nz, .loop
 	ld a, [wScriptBank]
 	call GetFarByte
