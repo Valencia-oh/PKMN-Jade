@@ -535,7 +535,7 @@ Continue_DisplayGameTime:
 	ld de, wGameTimeHours
 	lb bc, 2, 3
 	call PrintNum
-	ld a, "<COLON>"
+	ld a, ':'
 	ld [hli], a
 	ld de, wGameTimeMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
@@ -748,7 +748,7 @@ NamePlayer:
 	db "KRIS@@@@@@@"
 
 StorePlayerName:
-	ld a, "@"
+	ld a, '@'
 	ld bc, NAME_LENGTH
 	ld hl, wPlayerName
 	rst ByteFill
