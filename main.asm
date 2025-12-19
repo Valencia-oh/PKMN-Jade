@@ -499,12 +499,6 @@ SECTION "bank3E.3", ROMX
 
 INCLUDE "engine/gfx/load_font.asm"
 
-
-SECTION "bank3E.4", ROMX
-
-INCLUDE "gfx/footprints.asm"
-
-
 SECTION "bank3F", ROMX
 
 INCLUDE "engine/tilesets/tileset_anims.asm"
