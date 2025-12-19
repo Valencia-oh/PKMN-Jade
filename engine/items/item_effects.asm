@@ -233,6 +233,7 @@ ItemEffectsBalls:
 	dw PokeBallEffect ; PARK_BALL
 .IndirectEnd:
 
+
 PokeBallEffect:
 	ld a, [wBattleMode]
 	dec a
@@ -376,11 +377,11 @@ PokeBallEffect:
 	ld b, a
 	ld a, [wEnemyMonStatus]
 	and 1 << FRZ | SLP_MASK
-	ld c, 10
+	ld c, 20
 	jr nz, .addstatus
 	ld a, [wEnemyMonStatus]
 	and a
-	ld c, 5
+	ld c, 20
 	jr nz, .addstatus
 	ld c, 0
 .addstatus
