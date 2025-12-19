@@ -6973,8 +6973,7 @@ GiveExperiencePoints:
 	ld [wCurSpecies], a
 	call GetBaseData
 	push bc
-	ld a, [wLevelCap]
-	ld d, a
+	ld d, MAX_LEVEL
 	farcall CalcExpAtLevel
 	pop bc
 	ld hl, MON_EXP + 2
@@ -7276,8 +7275,7 @@ AnimateExpBar:
 	ld [hl], a
 
 .NoOverflow:
-	ld a, [wLevelCap]
-	ld d, a
+	ld d, MAX_LEVEL
 	farcall CalcExpAtLevel
 	ldh a, [hProduct + 1]
 	ld b, a
