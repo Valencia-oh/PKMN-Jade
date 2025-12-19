@@ -1052,7 +1052,7 @@ CalcMonStatC:
 	push hl
 	push de
 	push bc
-	ld a
+	ld a, b
 	ld d, a
 	push hl
 	ld hl, wBaseStats - 1 ; has to be decreased, because 'c' begins with 1
