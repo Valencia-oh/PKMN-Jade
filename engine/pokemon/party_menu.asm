@@ -237,7 +237,7 @@ PlacePartyMonLevel:
 	ld a, [de]
 	cp 100 ; This is distinct from MAX_LEVEL.
 	jr nc, .ThreeDigits
-	ld a, "<LV>"
+	ld a, '<LV>'
 	ld [hli], a
 	lb bc, PRINTNUM_LEFTALIGN | 1, 2
 	jr .okay
