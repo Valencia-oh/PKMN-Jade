@@ -1,4 +1,4 @@
-db WINGULL ; 257
+	db 0 ; species ID placeholder
 
 	db 40,  30,  30,   85,  55,  30
 	evs  2,   0,   0,   0,   0,   0
