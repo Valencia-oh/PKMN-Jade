@@ -673,6 +673,8 @@ MonMenu_Cut:
 	ret
 
 MonMenu_Fly:
+	xor a
+	ld [wFlyingWithHMItem], a
 	farcall FlyFunction
 	ld a, [wFieldMoveSucceeded]
 	cp $2
@@ -1290,6 +1292,7 @@ PlaceMoveData:
 	ld l, a
 	ld a, MOVE_ACC
 	call GetMoveAttribute
+	Call ConvertPercentages
 	ld [wBuffer1], a
 	ld de, wBuffer1
 	lb bc, 1, 3
@@ -1303,6 +1306,7 @@ PlaceMoveData:
 	call GetMoveAttribute
 	cp 1
 	jr c, .if_null_chance
+	Call ConvertPercentages
 	ld [wBuffer1], a
 	ld de, wBuffer1
 	lb bc, 1, 3
@@ -1345,6 +1349,55 @@ String_MoveAcc:
 	db "ACC/@"
 String_MoveEff:
 	db "EFF/@"
+
+; This converts values out of 256 into a value
+; out of 100. It achieves this by multiplying
+; the value by 100 and dividing it by 256.
+ConvertPercentages:
+
+	; Overwrite the "hl" register.
+	ld l, a
+	ld h, 0
+	push af
+
+	; Multiplies the value of the "hl" register by 3.
+	add hl, hl
+	add a, l
+	ld l, a
+	adc h
+	sub l
+	ld h, a
+
+	; Multiplies the value of the "hl" register
+	; by 8. The value of the "hl" register
+	; is now 24 times its original value.
+	add hl, hl
+	add hl, hl
+	add hl, hl
+
+	; Add the original value of the "hl" value to itself,
+	; making it 25 times its original value.
+	pop af
+	add a, l
+	ld l, a
+	adc h
+	sbc l
+	ld h, a
+
+	; Multiply the value of the "hl" register by
+	; 4, making it 100 times its original value.
+	add hl, hl
+	add hl, hl
+
+	; Set the "l" register to 0.5, otherwise the rounded
+	; value may be lower than expected. Round the
+	; high byte to nearest and drop the low byte.
+	ld l, 0.5
+	sla l
+	sbc a
+	and 1
+	add a, h
+	ret
 
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow
