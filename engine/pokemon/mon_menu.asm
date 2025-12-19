@@ -1397,6 +1397,7 @@ ConvertPercentages:
 	add a, h
 	ret
 
+
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow
 	jr PlaceMoveScreenRightArrow
@@ -1425,7 +1426,7 @@ PlaceMoveScreenLeftArrow:
 
 .legal
 	hlcoord 16, 0
-	ld [hl], "◀"
+	ld [hl], '◀'
 	ret
 
 PlaceMoveScreenRightArrow:
@@ -1454,5 +1455,5 @@ PlaceMoveScreenRightArrow:
 
 .legal
 	hlcoord 18, 0
-	ld [hl], "▶"
+	ld [hl], '▶'
 	ret
