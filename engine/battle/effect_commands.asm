@@ -3986,7 +3986,7 @@ SapHealth:
 
 BattleCommand_BurnTarget:
 	xor a
-	ld [wBattleAfterAnim], a
+	ld [wNumHits], a
 	call CheckSubstituteOpp
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -4049,7 +4049,7 @@ Defrost:
 
 BattleCommand_FreezeTarget:
 	xor a
-	ld [wBattleAfterAnim], a
+	ld [wNumHits], a
 	call CheckSubstituteOpp
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -4077,25 +4077,16 @@ BattleCommand_FreezeTarget:
 	call GetBattleVarAddr
 	set FRZ, [hl]
 	call UpdateOpponentInParty
+	ld hl, ApplyFrbEffectOnSpclAttack
+	call CallBattleCore
 	ld de, ANIM_FRZ
 	call PlayOpponentBattleAnim
 	call RefreshBattleHuds
 
-	ld hl, WasFrozenText
+	ld hl, GotAFrostbiteText
 	call StdBattleTextbox
 
-	farcall UseHeldStatusHealingItem
-	ret nz
-
-	call OpponentCantMove
-	call EndRechargeOpp
-	ld hl, wEnemyJustGotFrozen
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .finish
-	ld hl, wPlayerJustGotFrozen
-.finish
-	ld [hl], $1
+	farcall UseHeldStatusHealingItem	
 	ret
 
 BattleCommand_ParalyzeTarget:
