@@ -893,7 +893,7 @@ ApplyObjectFacing:
 .DisableTextTiles:
 	call LoadOverworldTilemap
 	hlcoord 0, 0
-	ld bc, SCREEN_AREA
+	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 .loop
 	res 7, [hl]
 	inc hl
@@ -1619,7 +1619,7 @@ Script_getnum:
 ResetStringBuffer1:
 	ld hl, wStringBuffer1
 	ld bc, NAME_LENGTH
-	ld a, '@'
+	ld a, "@"
 	jmp ByteFill
 
 Script_getstring:
