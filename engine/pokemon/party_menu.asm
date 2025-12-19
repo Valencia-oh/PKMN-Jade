@@ -45,7 +45,7 @@ WritePartyMenuTilemap:
 	ldh [hBGMapMode], a
 	hlcoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
-	ld a, " "
+	ld a, ' '
 	rst ByteFill ; blank the tilemap
 	call GetPartyMenuQualityIndexes
 .loop
@@ -197,7 +197,7 @@ PlacePartyMenuHPDigits:
 	lb bc, 2, 3
 	call PrintNum
 	pop de
-	ld a, "/"
+	ld a, '/'
 	ld [hli], a
 	inc de
 	inc de
