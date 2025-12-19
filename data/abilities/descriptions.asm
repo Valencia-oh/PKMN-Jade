@@ -54,26 +54,6 @@ StabilityDesc:
 	db    "Boosts same-type"
 	next  "Attack moves.@"
 
-RegenerationDesc:
-	db    "Heals a little"
-	next  "each turn.@"
-
-RainDishDesc:
-	db    "Heals during"
-	next  "RAIN.@"
-
-SunbaskDesc:
-	db    "Heals during"
-	next  "SUN.@"
-
-SandBodyDesc:
-	db    "Heals during"
-	next  "SANDSTORM.@"
-
-IceBodyDesc:
-	db    "Heals during"
-	next  "HAIL.@"
-
 HasteDesc:
 	db    "Boosts speed"
 	next  "upon entrance.@"
