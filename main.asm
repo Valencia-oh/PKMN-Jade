@@ -241,7 +241,7 @@ INCLUDE "engine/pokemon/switchpartymons.asm"
 INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "data/pokemon/names.asm"
 
-SECTION "Base Stats", ROMX
+SECTION "Bank14.2", ROMX
 
 INCLUDE "data/pokemon/base_stats.asm"
 
