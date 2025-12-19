@@ -267,7 +267,7 @@ SECTION "bank20", ROMX
 
 INCLUDE "engine/overworld/player_movement.asm"
 INCLUDE "engine/events/engine_flags.asm"
-
+INCLUDE "engine/overworld/variables.asm"
 
 
 SECTION "bank21", ROMX
@@ -276,7 +276,7 @@ INCLUDE "engine/printer/printer_serial.asm"
 INCLUDE "engine/printer/printer.asm"
 INCLUDE "gfx/battle_anims.asm"
 INCLUDE "engine/events/halloffame.asm"
-INCLUDE "engine/overworld/variables.asm"
+
 
 
 SECTION "Crystal Features 2", ROMX
