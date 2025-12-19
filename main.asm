@@ -30,7 +30,9 @@ INCLUDE "engine/events/specials.asm"
 INCLUDE "engine/math/print_num.asm"
 INCLUDE "engine/events/overworld.asm"
 INCLUDE "engine/items/items.asm"
+INCLUDE "engine/pokemon/health.asm"
 INCLUDE "engine/battle/anim_hp_bar.asm"
+INCLUDE "engine/pokemon/move_mon.asm"
 INCLUDE "engine/pokemon/breedmon_level_growth.asm"
 INCLUDE "engine/events/bug_contest/caught_mon.asm"
 INCLUDE "engine/events/bug_contest/display_stats.asm"
@@ -38,10 +40,6 @@ INCLUDE "engine/items/item_effects.asm"
 INCLUDE "engine/battle_anims/pokeball_wobble.asm"
 INCLUDE "engine/pokemon/knows_move.asm"
 
-
-SECTION "bank3.2", ROMX
-INCLUDE "engine/pokemon/health.asm"
-INCLUDE "engine/pokemon/move_mon.asm"
 
 SECTION "Load Map Part", ROMX
 
