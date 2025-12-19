@@ -1,4 +1,4 @@
-db 0 ; species ID placeholder
+	db 0 ; species ID placeholder
 
 	db 40,  40,  80,   20,  40,  40
 	evs  0,   0,   1,   0,   0,   0
