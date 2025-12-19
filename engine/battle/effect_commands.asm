@@ -156,7 +156,7 @@ BattleCommand_CheckTurn:
 	jr z, .woke_up
 
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	ld de, ANIM_SLP
 	call FarPlayBattleAnimation
 	jr .fast_asleep
@@ -263,7 +263,7 @@ BattleCommand_CheckTurn:
 	ld hl, IsConfusedText
 	call StdBattleTextbox
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	ld de, ANIM_CONFUSED
 	call FarPlayBattleAnimation
 
@@ -291,7 +291,7 @@ BattleCommand_CheckTurn:
 	ld hl, InLoveWithText
 	call StdBattleTextbox
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	ld de, ANIM_IN_LOVE
 	call FarPlayBattleAnimation
 
@@ -398,7 +398,7 @@ CheckEnemyTurn:
 	ld hl, FastAsleepText
 	call StdBattleTextbox
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	ld de, ANIM_SLP
 	call FarPlayBattleAnimation
 	jr .fast_asleep
@@ -504,7 +504,7 @@ CheckEnemyTurn:
 	call StdBattleTextbox
 
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	ld de, ANIM_CONFUSED
 	call FarPlayBattleAnimation
 
@@ -527,7 +527,7 @@ CheckEnemyTurn:
 	call BattleCommand_LowerSub
 
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 
 	; Flicker the monster pic unless flying or underground.
 	ld de, ANIM_HIT_CONFUSION
@@ -551,7 +551,7 @@ CheckEnemyTurn:
 	ld hl, InLoveWithText
 	call StdBattleTextbox
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	ld de, ANIM_IN_LOVE
 	call FarPlayBattleAnimation
 
@@ -630,7 +630,7 @@ HitConfusion:
 	call BattleCommand_LowerSub
 
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 
 	; Flicker the monster pic unless flying or underground.
 	ld de, ANIM_HIT_CONFUSION
@@ -1309,6 +1309,12 @@ BattleCommand_Stab:
 	pop de
 	pop hl
 
+	push de
+	push bc
+	farcall DoBadgeTypeBoosts
+	pop bc
+	pop de
+
 	ld a, [wCurType]
 	cp b
 	jr z, .stab
@@ -1939,7 +1945,7 @@ BattleCommand_LowerSub:
 	jr c, .mimic_anims
 
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	inc a
 	ld [wBattleAnimParam], a
 	ld hl, SUBSTITUTE
@@ -1988,7 +1994,7 @@ BattleCommand_MoveAnimNoSub:
 	ld a, ANIM_PLAYER_DAMAGE - BATTLE_AFTERANIMS
 
 .got_rollout_count
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 	cp EFFECT_MULTI_HIT
@@ -2036,7 +2042,7 @@ BattleCommand_MoveAnimNoSub:
 	pop af
 	jr z, .play_anim
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 .play_anim
 	jmp PlaySelectedFXAnim
 
@@ -2062,7 +2068,7 @@ BattleCommand_StatDownAnim:
 	; fallthrough
 
 BattleCommand_StatUpDownAnim:
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	xor a
 	ld [wBattleAnimParam], a
 	ld a, BATTLE_VARS_MOVE_ANIM
@@ -2086,7 +2092,7 @@ BattleCommand_RaiseSub:
 	jmp c, BattleCommand_RaiseSubNoAnim
 
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	ld a, $2
 	ld [wBattleAnimParam], a
 	ld hl, SUBSTITUTE
@@ -2121,6 +2127,7 @@ BattleCommand_FailureText:
 	jr z, .multihit
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .multihit
+	cp EFFECT_BEAT_UP
 	jmp nz, EndMoveEffect
 ; fallthrough
 .multihit
@@ -2425,7 +2432,7 @@ BattleCommand_CheckFaint:
 
 	call BattleCommand_SwitchTurn
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	inc a
 	ld [wBattleAnimParam], a
 	ld hl, DESTINY_BOND
@@ -2446,6 +2453,7 @@ BattleCommand_CheckFaint:
 	jr z, .multiple_hit_raise_sub
 	cp EFFECT_TRIPLE_KICK
 	jr z, .multiple_hit_raise_sub
+	cp EFFECT_BEAT_UP
 	jr nz, EndMoveEffect
 
 .multiple_hit_raise_sub
@@ -2926,6 +2934,8 @@ EnemyAttackDamage:
 	ld a, 1
 	and a
 	ret
+
+INCLUDE "engine/battle/move_effects/beat_up.asm"
 
 BattleCommand_ClearMissDamage:
 	ld a, [wAttackMissed]
@@ -3607,6 +3617,8 @@ DoSubstituteDamage:
 	jr z, .ok
 	cp EFFECT_TRIPLE_KICK
 	jr z, .ok
+	cp EFFECT_BEAT_UP
+	jr z, .ok
 	xor a
 	ld [hl], a
 .ok
@@ -3988,7 +4000,7 @@ SapHealth:
 
 BattleCommand_BurnTarget:
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	call CheckSubstituteOpp
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -4051,7 +4063,7 @@ Defrost:
 
 BattleCommand_FreezeTarget:
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	call CheckSubstituteOpp
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -4102,7 +4114,7 @@ BattleCommand_FreezeTarget:
 
 BattleCommand_ParalyzeTarget:
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	call CheckSubstituteOpp
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -4840,6 +4852,9 @@ CalcPlayerStats:
 	ld a, NUM_BATTLE_STATS
 	call CalcBattleStats
 
+	ld hl, BadgeStatBoosts
+	call CallBattleCore
+
 	call BattleCommand_SwitchTurn
 
 	ld hl, ApplyPrzEffectOnSpeed
@@ -5049,7 +5064,7 @@ BattleCommand_ForceSwitch:
 .wild_force_flee
 	call UpdateBattleMonInParty
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	inc a ; TRUE
 	ld [wForcedSwitch], a
 	call SetBattleDraw
@@ -5139,7 +5154,7 @@ BattleCommand_ForceSwitch:
 .wild_succeed_playeristarget
 	call UpdateBattleMonInParty
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	inc a ; TRUE
 	ld [wForcedSwitch], a
 	call SetBattleDraw
@@ -5278,6 +5293,8 @@ BattleCommand_EndLoop:
 	ld a, 1
 	jr z, .double_hit
 	ld a, [hl]
+	cp EFFECT_BEAT_UP
+	jr z, .beat_up
 	cp EFFECT_TRIPLE_KICK
 	jr nz, .not_triple_kick
 .reject_triple_kick_sample
@@ -5289,6 +5306,32 @@ BattleCommand_EndLoop:
 	ld a, 1
 	ld [bc], a
 	jr .done_loop
+
+.beat_up
+	ldh a, [hBattleTurn]
+	and a
+	jr nz, .check_ot_beat_up
+	ld a, [wPartyCount]
+	cp 1
+	jr z, .only_one_beatup
+	dec a
+	jr .double_hit
+
+.check_ot_beat_up
+	ld a, [wBattleMode]
+	cp WILD_BATTLE
+	jr z, .only_one_beatup
+	ld a, [wOTPartyCount]
+	cp 1
+	jr z, .only_one_beatup
+	dec a
+	jr .double_hit
+
+.only_one_beatup
+	ld a, BATTLE_VARS_SUBSTATUS3
+	call GetBattleVarAddr
+	res SUBSTATUS_IN_LOOP, [hl]
+	ret
 
 .not_triple_kick
 	call BattleRandom
@@ -5329,6 +5372,7 @@ BattleCommand_EndLoop:
 	push bc
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
+	cp EFFECT_BEAT_UP
 	call nz, StdBattleTextbox
 
 	pop bc
@@ -5515,7 +5559,7 @@ BattleCommand_Charge:
 
 	call BattleCommand_LowerSub
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	inc a
 	ld [wBattleAnimParam], a
 	call LoadMoveAnim
@@ -6668,13 +6712,13 @@ PlayDamageAnim:
 	ld a, ANIM_PLAYER_DAMAGE - BATTLE_AFTERANIMS
 
 .player
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 
 	jr PlayUserBattleAnim
 
 LoadMoveAnim:
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
@@ -6710,7 +6754,7 @@ PlayOpponentBattleAnim:
 	ld a, d
 	ld [wFXAnimID + 1], a
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 
 	push hl
 	push de
