@@ -42,21 +42,6 @@ PrintAbility:
 	jp .Stability
 	.NotStability
 
-	jp .Regeneration
-	.NotRegeneration
-
-	jp .RainDish
-	.NotRainDish
-
-	jp .Sunbask
-	.NotSunbask
-
-	jp .SandBody
-	.NotSandBody
-
-	jp .IceBody
-	.NotIceBody	
-
 	jp .Haste
 	.NotHaste
 
