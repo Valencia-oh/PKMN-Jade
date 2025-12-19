@@ -2173,7 +2173,6 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	ld [wBattleParticipantsNotFainted], a
 	ret
 
-
 StopDangerSound:
 	xor a
 	ld [wLowHealthAlarm], a
