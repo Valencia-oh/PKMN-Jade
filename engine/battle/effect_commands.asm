@@ -4000,7 +4000,7 @@ SapHealth:
 
 BattleCommand_BurnTarget:
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	call CheckSubstituteOpp
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -4063,7 +4063,7 @@ Defrost:
 
 BattleCommand_FreezeTarget:
 	xor a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	call CheckSubstituteOpp
 	ret nz
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -5932,6 +5932,98 @@ BattleCommand_Paralyze:
 .didnt_affect
 	call AnimateFailedMove
 	jmp PrintDoesntAffect
+
+BattleCommand_Burn:
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	bit BRN, a
+	jr nz, .burned
+	ld a, [wTypeModifier]
+	and $7f
+	jr z, .didnt_affect	
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	and a
+	jr nz, .failed
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .failed
+	call CheckSubstituteOpp
+	jr nz, .failed
+	ld c, 30
+	call DelayFrames
+	call AnimateCurrentMove
+	ld a, $1
+	ldh [hBGMapMode], a
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	set BRN, [hl]
+	call UpdateOpponentInParty
+	ld hl, ApplyBrnEffectOnAttack
+	call CallBattleCore
+	call UpdateBattleHuds
+	ld hl, WasBurnedText
+	call StdBattleTextbox
+	ld hl, UseHeldStatusHealingItem
+	jp CallBattleCore
+
+.burned
+	call AnimateFailedMove
+	ld hl, AlreadyBurnedText
+	jp StdBattleTextbox
+
+.failed
+	jp PrintDidntAffect2
+
+.didnt_affect
+	call AnimateFailedMove
+	jp PrintDoesntAffect
+	
+BattleCommand_Freeze:
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVar
+	bit FRZ, a
+	jr nz, .frozen
+	ld a, [wTypeModifier]
+	and $7f
+	jr z, .didnt_affect	
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	and a
+	jr nz, .failed
+	ld a, [wAttackMissed]
+	and a
+	jr nz, .failed
+	call CheckSubstituteOpp
+	jr nz, .failed
+	ld c, 30
+	call DelayFrames
+	call AnimateCurrentMove
+	ld a, $1
+	ldh [hBGMapMode], a
+	ld a, BATTLE_VARS_STATUS_OPP
+	call GetBattleVarAddr
+	set FRZ, [hl]
+	call UpdateOpponentInParty
+	ld hl, ApplyFrbEffectOnSpclAttack
+	call CallBattleCore
+	call UpdateBattleHuds
+	ld hl, GotAFrostbiteText
+	call StdBattleTextbox
+	ld hl, UseHeldStatusHealingItem
+	jp CallBattleCore
+
+.frozen
+	call AnimateFailedMove
+	ld hl, AlreadyFrozenText
+	jp StdBattleTextbox
+
+.failed
+	jp PrintDidntAffect2
+
+.didnt_affect
+	call AnimateFailedMove
+	jp PrintDoesntAffect
 
 CheckMoveTypeMatchesTarget:
 ; Compare move type to opponent type.
