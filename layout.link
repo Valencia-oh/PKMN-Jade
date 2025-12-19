@@ -190,7 +190,6 @@ ROMX $40
 ROMX $41
 	"bank41"
 	"Enemy Trainer Parties 1"
-	"Hard Trainer Parties 1"
 ROMX $42
 	"Intro Logo"
 	"Credits"
@@ -287,10 +286,8 @@ ROMX $6c
 	"Map Scripts 25"
 ROMX $6d
 	"Special Phone Text"
-	"Map Scripts 26"
 ROMX $6e
 	"Pokedex Entries 065-128"
-	"Map Scripts 27"
 ROMX $6f
 	"Text 1"
 ROMX $70
@@ -302,7 +299,7 @@ ROMX $72
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
-	"Pokedex Entries 193-251"
+	"Pokedex Entries 193-256"
 ROMX $75
 	"16-bit ID stuff"
 ROMX $77
@@ -319,7 +316,7 @@ ROMX $7b
 ROMX $7c
 	"Battle Tower Trainer Data"
 ROMX $7d	
-	"Hard Trainer Parties 2"
+
 ROMX $7e
 	"Crystal Events"
 ROMX $7f
