@@ -2300,6 +2300,17 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	srl [hl]
 .SkipHalfXp
 
+	ld a, [wBattleParticipantsNotFainted]
+	push af
+	ld a, d
+	xor %00111111
+	ld [wBattleParticipantsNotFainted], a	
+	call GiveExperiencePoints
+	pop af
+	ld [wBattleParticipantsNotFainted], a
+	ret
+
+
 StopDangerSound:
 	xor a
 	ld [wLowHealthAlarm], a
