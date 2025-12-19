@@ -673,8 +673,6 @@ MonMenu_Cut:
 	ret
 
 MonMenu_Fly:
-	xor a
-	ld [wFlyingWithHMItem], a
 	farcall FlyFunction
 	ld a, [wFieldMoveSucceeded]
 	cp $2
@@ -1292,7 +1290,6 @@ PlaceMoveData:
 	ld l, a
 	ld a, MOVE_ACC
 	call GetMoveAttribute
-	Call ConvertPercentages
 	ld [wBuffer1], a
 	ld de, wBuffer1
 	lb bc, 1, 3
@@ -1306,7 +1303,6 @@ PlaceMoveData:
 	call GetMoveAttribute
 	cp 1
 	jr c, .if_null_chance
-	Call ConvertPercentages
 	ld [wBuffer1], a
 	ld de, wBuffer1
 	lb bc, 1, 3
