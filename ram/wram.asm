@@ -2867,6 +2867,7 @@ wVanceFightCount::   db
 wWiltonFightCount::  db
 wParryFightCount::   db
 wErinFightCount::    db
+wLevelCap::          db 
 wBaseLevel::         db 
 wWildLevel::         db
 
