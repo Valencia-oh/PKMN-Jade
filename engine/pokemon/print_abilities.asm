@@ -641,21 +641,6 @@ ElementalBladeNameString:
 StabilityNameString:
 	db "Stability@"
 
-RegenerationNameString:
-	db "Regeneration@"
-
-RainDishNameString:
-	db "Rain Dish@"
-
-SunbaskNameString:
-	db "Sunbask@"
-
-SandBodyNameString:
-	db "Sand Body@"
-
-IceBodyNameString:
-	db "Ice Body@"
-
 HasteNameString:
 	db "Haste@"
 
