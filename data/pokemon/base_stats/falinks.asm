@@ -1,4 +1,4 @@
-	db FALINKS ; 252
+	db 0 ; species ID placeholder
 
 	db 65,  100,  100,   60,  70,  75
 	evs  0,   2,   0,   0,   0,   1
