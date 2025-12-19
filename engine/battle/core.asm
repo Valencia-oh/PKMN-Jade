@@ -815,7 +815,7 @@ TryEnemyFlee:
 	scf
 	ret
 
-INCLUDE 'data/wild/flee_mons.asm'
+INCLUDE "data/wild/flee_mons.asm"
 
 CompareMovePriority:
 ; Compare the priority of the player and enemy's moves.
@@ -867,7 +867,7 @@ GetMovePriority:
 	ld a, [hl]
 	ret
 
-INCLUDE 'data/moves/effects_priorities.asm'
+INCLUDE "data/moves/effects_priorities.asm"
 
 GetMoveEffect:
 	ld l, b
@@ -1339,7 +1339,7 @@ HandleLeftovers:
 	ld hl, BattleText_TargetRecoveredWithItem
 	jmp StdBattleTextbox
 
-INCLUDE 'engine/battle/check_heal_abilities.asm'
+INCLUDE "engine/battle/check_heal_abilities.asm"
 
 HandleHealAbilities:
 	ldh a, [hSerialConnectionStatus]
@@ -1756,9 +1756,9 @@ HandleScreens:
 	jmp CopyName2
 
 .Your:
-	db 'Your@'
+	db "Your@"
 .Enemy:
-	db 'Enemy@'
+	db "Enemy@"
 
 .LightScreenTick:
 	ld a, [de]
@@ -2653,7 +2653,7 @@ IsGymLeaderCommon:
 	pop de
 	ret
 
-INCLUDE 'data/trainers/leaders.asm'
+INCLUDE "data/trainers/leaders.asm"
 
 HandlePlayerMonFaint:
 	call FaintYourPokemon
@@ -3057,7 +3057,7 @@ MonFaintedAnimation:
 	ret
 
 .Spaces:
-	db '       @'
+	db "       @"
 
 SlideBattlePicOut:
 	ldh [hMapObjectIndex], a
@@ -4115,7 +4115,7 @@ SpikesDamage:
 
 	push bc
 
-	ld hl, BattleText_UserHurtBySpikes ; 'hurt by SPIKES!'
+	ld hl, BattleText_UserHurtBySpikes ; "hurt by SPIKES!"
 	call StdBattleTextbox
 
 	call GetEighthMaxHP
@@ -4408,7 +4408,7 @@ UseHeldStatusHealingItem:
 	and a
 	ret
 
-INCLUDE 'data/battle/held_heal_status.asm'
+INCLUDE "data/battle/held_heal_status.asm"
 
 UseConfusionHealingItem:
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
@@ -4517,7 +4517,7 @@ HandleStatBoostingHeldItems:
 	pop de
 	ret
 
-INCLUDE 'data/battle/held_stat_up.asm'
+INCLUDE "data/battle/held_stat_up.asm"
 
 GetPartymonItem:
 	ld hl, wPartyMon1Item
@@ -4652,11 +4652,11 @@ PrintPlayerHUD:
 	ld a, TEMPMON
 	ld [wMonType], a
 	farcall GetGender
-	ld a, ' '
+	ld a, " "
 	jr c, .got_gender_char
-	ld a, '♂'
+	ld a, "♂"
 	jr nz, .got_gender_char
-	ld a, '♀'
+	ld a, "♀"
 
 .got_gender_char
 	hlcoord 17, 8
@@ -4670,7 +4670,7 @@ PrintPlayerHUD:
 	pop bc
 	ret nz
 	ld a, b
-	cp ' '
+	cp " "
 	jr nz, .copy_level ; male or female
 	dec hl ; genderless
 
@@ -4724,11 +4724,11 @@ DrawEnemyHUD:
 	ld a, TEMPMON
 	ld [wMonType], a
 	farcall GetGender
-	ld a, ' '
+	ld a, " "
 	jr c, .got_gender
-	ld a, '♂'
+	ld a, "♂"
 	jr nz, .got_gender
-	ld a, '♀'
+	ld a, "♀"
 
 .got_gender
 	hlcoord 9, 1
@@ -4743,7 +4743,7 @@ DrawEnemyHUD:
 	pop bc
 	jr nz, .skip_level
 	ld a, b
-	cp ' '
+	cp " "
 	jr nz, .print_level
 	dec hl
 .print_level
@@ -4852,7 +4852,7 @@ BattleMenu:
 	jr .next
 .not_contest
 
-	; Auto input: choose 'ITEM'
+	; Auto input: choose "ITEM"
 	ld a, [wInputType]
 	or a
 	jr z, .skip_dude_pack_select
@@ -5344,7 +5344,7 @@ MoveSelectionScreen:
 	ld bc, SCREEN_WIDTH
 	dec a
 	rst AddNTimes
-	ld [hl], '▷'
+	ld [hl], "▷"
 
 .interpret_joypad
 	ld a, $1
@@ -5431,7 +5431,7 @@ MoveSelectionScreen:
 	jmp MoveSelectionScreen
 
 .empty_string
-	db '@'
+	db "@"
 
 .pressed_up
 	ld a, [wMenuCursorY]
@@ -5602,7 +5602,7 @@ MoveInfoBox:
 
 	ld h, b
 	ld l, c
-	ld [hl], '/'
+	ld [hl], "/"
 		
 	ld a, [wPlayerMoveStruct + MOVE_ANIM]
 	ld b, a
@@ -5610,7 +5610,7 @@ MoveInfoBox:
 	predef_jump PrintMoveType
 
 .Disabled:
-	db 'Disabled!@'
+	db "Disabled!@"
 
 .PrintPP:
 	hlcoord 5, 11
@@ -5621,7 +5621,7 @@ MoveInfoBox:
 	pop hl
 	inc hl
 	inc hl
-	ld a, '/'
+	ld a, "/"
 	ld [hli], a
 	ld de, wNamedObjectIndex
 	lb bc, 1, 2
@@ -6164,9 +6164,9 @@ LoadEnemyMon:
 ; but the value is in feet and inches (one byte each).
 
 ; The first filter is supposed to make very large Magikarp even rarer,
-; by targeting those 1600 mm (= 5'3') or larger.
+; by targeting those 1600 mm (= 5'3") or larger.
 ; After the conversion to feet, it is unable to target any,
-; since the largest possible Magikarp is 5'3', and $0503 = 1283 mm.
+; since the largest possible Magikarp is 5'3", and $0503 = 1283 mm.
 	ld a, l
 	sub LOW(MAGIKARP)
 	if HIGH(MAGIKARP) == 0
@@ -6452,7 +6452,7 @@ CheckSleepingTreeMon:
 	and a
 	ret
 
-INCLUDE 'data/wild/treemons_asleep.asm'
+INCLUDE "data/wild/treemons_asleep.asm"
 
 CheckUnownLetter:
 ; Return carry if the Unown letter hasn't been unlocked yet
@@ -6501,7 +6501,7 @@ CheckUnownLetter:
 	and a
 	ret
 
-INCLUDE 'data/wild/unlocked_unowns.asm'
+INCLUDE "data/wild/unlocked_unowns.asm"
 
 BattleWinSlideInEnemyTrainerFrontpic:
 	xor a
@@ -6784,7 +6784,7 @@ ApplyStatLevelMultiplier:
 	ret
 
 StatLevelMultipliers_Applied:
-INCLUDE 'data/battle/stat_multipliers.asm'
+INCLUDE "data/battle/stat_multipliers.asm"
 
 _LoadBattleFontsHPBar:
 	farjp LoadBattleFontsHPBar
@@ -6906,7 +6906,7 @@ GiveExperiencePoints:
 	ld a, [wInBattleTowerBattle]
 	bit IN_BATTLE_TOWER_BATTLE_F, a
 	ret nz
-
+	
 	xor a
 	ld [wCurPartyMon], a
 	ld bc, wPartyMon1Species
@@ -6992,12 +6992,7 @@ GiveExperiencePoints:
 	sub c
 	ld b, a
 	ld e, d
-.decrease_evs_gained
-	call IsEvsGreaterThan510
-	jr nc, .check_ev_overflow
-	dec e
-	dec bc
-	jr .decrease_evs_gained
+.decrease_evs_gained	
 .check_ev_overflow
 	pop hl
 	pop bc
@@ -7071,7 +7066,7 @@ GiveExperiencePoints:
 	ld hl, wPartyMonNicknames
 	call GetNickname
 	ld hl, Text_MonGainedExpPoint
-	call BattleTextbox
+	;call BattleTextbox
 	ld a, [wStringBuffer2 + 1]
 	ldh [hQuotient + 3], a
 	ld a, [wStringBuffer2]
@@ -7110,7 +7105,8 @@ GiveExperiencePoints:
 	ld [wCurSpecies], a
 	call GetBaseData
 	push bc
-	ld d, MAX_LEVEL
+	ld a, [wLevelCap]
+	ld d, a
 	farcall CalcExpAtLevel
 	pop bc
 	ld hl, MON_EXP + 2
@@ -7145,8 +7141,12 @@ GiveExperiencePoints:
 	pop bc
 	ld hl, MON_LEVEL
 	add hl, bc
+	ld a, [wLevelCap]
+	push bc
+	ld b, a
 	ld a, [hl]
-	cp MAX_LEVEL
+	cp b
+	pop bc
 	jmp nc, .next_mon
 	cp d
 	jmp z, .next_mon
@@ -7306,6 +7306,7 @@ GiveExperiencePoints:
 	ld b, h
 	ld c, l
 	jmp .loop
+
 .done
 	jmp ResetBattleParticipants
 
@@ -7365,8 +7366,12 @@ AnimateExpBar:
 	cp [hl]
 	jmp nz, .finish
 
+	ld a, [wLevelCap]
+	push bc
+	ld b, a
 	ld a, [wBattleMonLevel]
-	cp MAX_LEVEL
+	cp b
+	pop bc
 	jmp nc, .finish
 
 	ldh a, [hProduct + 3]
@@ -7403,7 +7408,8 @@ AnimateExpBar:
 	ld [hl], a
 
 .NoOverflow:
-	ld d, MAX_LEVEL
+	ld a, [wLevelCap]
+	ld d, a
 	farcall CalcExpAtLevel
 	ldh a, [hProduct + 1]
 	ld b, a
@@ -7438,8 +7444,12 @@ AnimateExpBar:
 	ld d, a
 
 .LoopLevels:
+	ld a, [wLevelCap]
+	push bc
+	ld b, a
 	ld a, e
-	cp MAX_LEVEL
+	cp b
+	pop bc
 	jr nc, .FinishExpBar
 	cp d
 	jr z, .FinishExpBar
@@ -7543,13 +7553,12 @@ AnimateExpBar:
 	ldh [hBGMapMode], a
 	ret
 
-
 SendOutMonText:
 	ld a, [wLinkMode]
 	and a
 	jr z, .not_linked
 
-; If we're in a LinkBattle print just 'Go <PlayerMon>'
+; If we're in a LinkBattle print just "Go <PlayerMon>"
 ; unless DoBattle already set [wBattleHasJustStarted]
 	ld hl, GoMonText
 	ld a, [wBattleHasJustStarted]
@@ -8254,11 +8263,11 @@ DisplayLinkBattleResult:
 	jmp ClearTilemap
 
 .YouWin:
-	db 'YOU WIN@'
+	db "YOU WIN@"
 .YouLose:
-	db 'YOU LOSE@'
+	db "YOU LOSE@"
 .Draw:
-	db '  DRAW@'
+	db "  DRAW@"
 
 _DisplayLinkRecord:
 	ld a, BANK(sLinkBattleStats)
@@ -8303,7 +8312,7 @@ ReadAndPrintLinkBattleRecord:
 	ld de, wLinkBattleRecordName
 	ld bc, NAME_LENGTH - 1
 	rst CopyBytes
-	ld a, '@'
+	ld a, "@"
 	ld [de], a
 	inc de ; wLinkBattleRecordWins
 	ld bc, 6
@@ -8395,17 +8404,17 @@ ReadAndPrintLinkBattleRecord:
 	ret
 
 .Scores:
-	db '   0    0    0@'
+	db "   0    0    0@"
 
 .Format:
-	db '  ---  <LF>'
-	db '         -    -    -@'
+	db "  ---  <LF>"
+	db "         -    -    -@"
 .Record:
-	db '<PLAYER>'s RECORD@'
+	db "<PLAYER>'s RECORD@"
 .Result:
-	db 'RESULT WIN LOSE DRAW@'
+	db "RESULT WIN LOSE DRAW@"
 .Total:
-	db 'TOTAL  WIN LOSE DRAW@'
+	db "TOTAL  WIN LOSE DRAW@"
 
 BattleEnd_HandleRoamMons:
 	ld a, [wBattleType]
@@ -8759,7 +8768,7 @@ InitBattleDisplay:
 
 	ld hl, wDecompressScratch
 	ld bc, BG_MAP_WIDTH * BG_MAP_HEIGHT
-	ld a, ' '
+	ld a, " "
 	rst ByteFill
 
 	ld de, wDecompressScratch
@@ -8983,4 +8992,4 @@ GetWeatherImage:
 	db $80, $14 ; y/x - top left
 
 
-include 'engine/battle/etb_abilities.asm'
+include "engine/battle/etb_abilities.asm"
