@@ -168,7 +168,7 @@ SwitchPartyMons:
 	ld a, [wSwitchMon]
 	dec a
 	rst AddNTimes
-	ld [hl], "▷"
+	ld [hl], '▷'
 	call WaitBGMap
 	call SetDefaultBGPAndOBP
 	call DelayFrame
@@ -969,7 +969,7 @@ MoveScreenLoop:
 	jr .joy_loop
 
 .moving_move
-	ld a, " "
+	ld a, ' '
 	hlcoord 1, 11
 	ld bc, 8
 	rst ByteFill
@@ -1268,7 +1268,7 @@ PlaceMoveData:
 	ld a, [wCurSpecies]
 	ld b, a
 	hlcoord 1, 12
-	ld [hl], "/"
+	ld [hl], '/'
 	inc hl
 	predef PrintMoveType
 
