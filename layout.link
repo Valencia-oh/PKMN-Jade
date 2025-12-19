@@ -36,7 +36,7 @@ ROMX $01
 	"Tileset Data 10"
 ROMX $02
 	"bank2"
-	"Tileset Data 9"
+	;"Tileset Data 9"
 	;"Battle Weather Images"
 ROMX $03
 	"bank3"
@@ -51,7 +51,7 @@ ROMX $05
 ROMX $06
 	"Tileset Data 1"
 	"Prism tilemap copy functions"
-	"Pics 20"
+	;"Pics 20"
 ROMX $07
 	"Roofs"
 	"Tileset Data 2"
