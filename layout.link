@@ -37,7 +37,7 @@ ROMX $01
 ROMX $02
 	"bank2"
 	"Tileset Data 9"
-	"Battle Weather Images"
+	;"Battle Weather Images"
 ROMX $03
 	"bank3"
 	"VWF"
@@ -66,7 +66,7 @@ ROMX $09
 ROMX $0a
 	"bankA"
 	"Trainer Backpics"
-	"Map Attributes"
+	;"Map Attributes"
 ROMX $0b
 	"bankB"
 ROMX $0c
@@ -120,7 +120,7 @@ ROMX $1f
 	"Map Scripts 10"
 ROMX $20
 	"bank20"
-	"Enemy Trainer Parties 2"
+	;"Enemy Trainer Parties 2"
 ROMX $21
 	"bank21"
 ROMX $22
@@ -184,7 +184,7 @@ ROMX $3b
 ROMX $3c
 	"Songs 3"
 	"Sound Effects"
-	"Cries"
+	;"Cries"
 ROMX $3d
 	"Songs 4"
 ROMX $3e
@@ -307,7 +307,7 @@ ROMX $72
 ROMX $73
 	"Pokedex Entries 129-192"
 ROMX $74
-	"Pokedex Entries 193-251"
+	"Pokedex Entries 193-257"
 ROMX $75
 	"16-bit ID stuff"
 ROMX $77
