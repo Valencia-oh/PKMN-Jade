@@ -249,6 +249,26 @@ PrintAbility:
 	call PlaceString
     jp .Done
 
+.Sturdy:
+	call GetAbilityMon	
+	ld b, h
+	ld c, l
+	ld de, 2
+	ld hl, AbilitySturdyMons
+	call IsInWordArray
+	jr c, .HasSturdy
+	jp .NotSturdy
+		
+.HasSunbask:
+	ld de, SturdyNameString
+	hlcoord 3, 11
+	call PlaceString
+
+	ld de, SturdyDesc
+	hlcoord 1, 14
+	call PlaceString
+    jp .Done
+
 .ElementalFist:
 	call GetAbilityMon	
 	ld b, h
@@ -631,3 +651,7 @@ ImpostorNameString:
 
 DebrisNameString:
 	db "Debris@"
+
+SturdyNameString:
+	db "Sturdy@"
+
