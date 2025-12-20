@@ -221,6 +221,7 @@ CroconawEvosAttacks:
 	dbw 13, WATER_GUN
 	dbw 21, BITE
 	dbw 28, SCARY_FACE
+	dbw 34, ICE_FANG
 	dbw 37, SLASH
 	dbw 45, SCREECH
 	dbw 55, HYDRO_PUMP
@@ -237,6 +238,9 @@ FeraligatrEvosAttacks:
 	dbw 21, BITE
 	dbw 28, SCARY_FACE
 	dbw 32, CRUNCH
+	dbw 36, ICE_FANG
+	dbw 22, THUNDER_FANG
+	dbw 22, FIRE_FANG
 	dbw 38, SLASH
 	dbw 47, SCREECH
 	dbw 58, HYDRO_PUMP
@@ -262,6 +266,9 @@ FurretEvosAttacks:
 	dbw 5, DEFENSE_CURL
 	dbw 11, QUICK_ATTACK
 	dbw 18, FURY_SWIPES
+	dbw 22, ICE_FANG
+	dbw 22, THUNDER_FANG
+	dbw 22, FIRE_FANG
 	dbw 28, SLAM
 	dbw 38, REST
 	dbw 48, AMNESIA
