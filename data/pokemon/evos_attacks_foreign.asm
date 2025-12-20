@@ -106,6 +106,9 @@ LinooneEvosAttacks:
 	dbw 17, DIG
 	dbw 18, FURY_SWIPES
 	dbw 21, METAL_CLAW
+	dbw 36, ICE_FANG
+	dbw 26, THUNDER_FANG
+	dbw 26, FIRE_FANG
 	dbw 28, SLAM
 	dbw 30, SHADOW_CLAW
 	dbw 34, EARTHQUAKE
