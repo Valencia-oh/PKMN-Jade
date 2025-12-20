@@ -323,21 +323,22 @@ ChooseWildEncounter:
 	ld a, [hli]
 	ld b, a
 ; Check if we buff the wild mon, and by how much.
-	call Random
-	cp 25 percent
-	jr c, .ok
-	inc b
-	cp 50 percent
-	jr c, .ok
-	inc b
-	cp 75 percent
-	jr c, .ok
-	inc b
-	cp 90 percent
-	jr c, .ok
-	inc b
+	;call Random
+	;cp 25 percent
+	;jr c, .ok
+	;inc b
+	;cp 50 percent
+	;jr c, .ok
+	;inc b
+	;cp 75 percent
+	;jr c, .ok
+	;inc b
+	;cp 90 percent
+	;jr c, .ok
+	;inc b
 ; Store the level
 .ok
+	ld a, b
 ;apply level scaling
 	;ld a, [wWildLevel]
 	;add a, b
