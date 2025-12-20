@@ -967,6 +967,7 @@ SneaselEvosAttacks:
 	dbw 9, QUICK_ATTACK
 	dbw 17, SCREECH
 	dbw 25, FAINT_ATTACK
+	dbw 27, PSYCHO_CUT
 	dbw 33, FURY_SWIPES
 	dbw 37, SHADOW_CLAW
 	dbw 41, AGILITY
