@@ -264,6 +264,7 @@ FirstEvoStages::
 	dw SHROOMISH
 	dw ELECTRIKE
 	dw ELECTRIKE	
+	dw TORKOAL
 	dw TRAPINCH
 	dw TRAPINCH
 	dw TRAPINCH	
