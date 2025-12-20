@@ -35,7 +35,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 ### Credits 
 - The majority of systems would not work without the use of the CSE engine, so shout out to all the devs on there
 - Falinks,  Chi-yu, Volcarona, and Applin line Sprites are from Sage Deoxys
-- nuukiie made the Glaceon, Leafeon, Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Linoon, Espathra, Clodsire, Toucannon, Mightyena, Breloom, Galvantula, Manectric, and Pelipper lines
+- nuukiie made the Glaceon, Leafeon, Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Linoon, Espathra, Clodsire, Flygon, Toucannon, Mightyena, Breloom, Galvantula, Manectric, and Pelipper lines
 - Maschiff and Mabosstiff use edited versions of Egg3ggEgg's sprites
 - Bronzor and Bronzong sprites are from BlueEmerald
 - Ursaluna Sprites by Me, free to use
