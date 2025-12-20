@@ -148,16 +148,6 @@ PrintAbility:
 	hlcoord 1, 14
 	call PlaceString
     jp .Done
-		
-.HasSnowWarning:
-	ld de, SnowWarningNameString
-	hlcoord 3, 11
-	call PlaceString
-
-	ld de, SnowWarningDesc
-	hlcoord 1, 14
-	call PlaceString
-    jp .Done
 
 .Intimidate:
 	call GetAbilityMon	
