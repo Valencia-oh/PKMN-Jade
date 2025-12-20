@@ -169,6 +169,9 @@ BreloomEvosAttacks:
 	dbw 15, HEADBUTT
 	dbw 19, LEECH_LIFE
 	dbw 25, SPORE
+	dbw 26, THUNDERPUNCH
+	dbw 26, ICE_PUNCH
+	dbw 26, FIRE_PUNCH
 	dbw 27, LOW_KICK
 	dbw 29, GROWTH
 	dbw 33, TOXIC
