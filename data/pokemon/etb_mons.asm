@@ -22,7 +22,6 @@ IntimidateMons::
 	dw ARCANINE
 	dw TAUROS
 	dw GYARADOS
-	dw GYARADOSX
 	dw GRANBULL
 	dw MIGHTYENA
 	dw MANECTRIC
