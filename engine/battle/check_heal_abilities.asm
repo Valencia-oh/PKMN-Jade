@@ -97,26 +97,6 @@ CheckSandBodyMon:
 	call IsInWordArray
 	ret	
 
-IceBody:
-	call CheckHail
-	jr nz, .NotHail
-
-	call CheckIceBodyMon
-	jr nc, .NotIceBodyMon
-	
-	.NotHail
-	.NotIceBodyMon
-	ret
-
-CheckIceBodyMon:	
-	call GetActiveMon
-	ld b, h
-	ld c, l
-	ld de, 2
-	ld hl, IceBodyMons
-	call IsInWordArray
-	ret	
-
 CheckRaining:
 	ld a, [wBattleWeather]
 	cp WEATHER_RAIN
