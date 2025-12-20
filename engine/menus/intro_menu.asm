@@ -205,8 +205,8 @@ endc
 	;ld a, 5
 	;ld [wBaseLevel], a
 	
-	ld a, 1
-	ld [wWildLevel], a	
+	;ld a, 1
+	;ld [wWildLevel], a	
 
 	call InitializeNPCNames
 
