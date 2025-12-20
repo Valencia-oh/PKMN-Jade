@@ -219,6 +219,7 @@ LoadStatsScreenPals:
 	ret z
 	ld hl, StatsScreenPals
 	ld b, 0
+	dec c
 	add hl, bc
 	dec c
 	add hl, bc
