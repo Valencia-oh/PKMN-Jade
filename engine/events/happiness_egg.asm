@@ -168,7 +168,7 @@ DayCareStep::
 	jr z, .check_egg
 
 	ld a, [wBreedMon2Level] ; level
-	cp b
+	cp MAX_LEVEL
 	jr nc, .check_egg
 	ld hl, wBreedMon2Exp + 2 ; exp
 	inc [hl]
