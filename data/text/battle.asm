@@ -1089,6 +1089,14 @@ WaterproofText:
 	line "is Waterproof!"
 	prompt
 
+SturdyText:
+	text "<USER>'s"
+    line "STURDY let's"
+
+    para "it hold on"
+    line "a little longer"
+	prompt
+
 DrizzleText:
 	text "It begins"
 	line "to rain!"
