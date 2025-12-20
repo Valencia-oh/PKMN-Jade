@@ -1254,9 +1254,9 @@ JohtoGrassWildMons:
 	dbw 3, HOPPIP
 	; nite
 	dbw 2, HOOTHOOT
-	dbw 2, TORKOAL
+	dbw 2, RATTATA
 	dbw 1, POOCHYENA
-	dbw 3, TORKOAL
+	dbw 3, RATTATA
 	dbw 2, RATTATA
 	dbw 3, HOOTHOOT
 	dbw 3, POOCHYENA
