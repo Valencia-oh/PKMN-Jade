@@ -49,9 +49,9 @@ AzaleaGymBugsyScript:
 .FightDone:
 	checkevent EVENT_GOT_TM49_FURY_CUTTER
 	iftrue .GotFuryCutter
-	;readmem wBaseLevel
-	;addval 5
-	;writemem wBaseLevel
+	readmem wBaseLevel
+	addval 5
+	writemem wBaseLevel
 
 	readmem wWildLevel
 	addval 5
