@@ -78,10 +78,10 @@ _CGB_BattleGrayscale:
 	jmp _CGB_FinishBattleScreenLayout
 
 	SetDefaultBattlePalette:
-	ldh a, [rSVBK]
+	ldh a, [rWBK]
 	push af
 	ld a, BANK(wTempBattleMonSpecies)
-	ldh [rSVBK], a
+	ldh [rWBK], a
 	ld a, b
 	and a ; PAL_BATTLE_BG_PLAYER
 	jr z, SetBattlePal_Player
@@ -110,7 +110,7 @@ _CGB_BattleGrayscale:
 	rst AddNTimes
 	call FarCopyWRAM
 	pop af
-	ldh [rSVBK], a
+	ldh [rWBK], a
 	ret
 
 SetBattlePal_Player:
@@ -662,16 +662,16 @@ _CGB_UnownPuzzle:
 	ld a, PREDEFPAL_UNOWN_PUZZLE
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
-	ldh a, [rSVBK]
+	ldh a, [rWBK]
 	push af
 	ld a, BANK(wOBPals1)
-	ldh [rSVBK], a
+	ldh [rWBK], a
 	ld hl, wOBPals1
 	ld a, LOW(palred 31 + palgreen 0 + palblue 0)
 	ld [hli], a
 	ld [hl], HIGH(palred 31 + palgreen 0 + palblue 0)
 	pop af
-	ldh [rSVBK], a
+	ldh [rWBK], a
 	call WipeAttrmap
 	jmp ApplyAttrmap
 
