@@ -28,6 +28,9 @@ PrintAbility:
 	jp .Waterproof
 	.NotWaterproof
 
+	jp .Sturdy
+	.NotSturdy
+
 	jp .ElementalFist
 	.NotElementalFist
 
@@ -259,7 +262,7 @@ PrintAbility:
 	jr c, .HasSturdy
 	jp .NotSturdy
 		
-.HasSunbask:
+.HasSturdy:
 	ld de, SturdyNameString
 	hlcoord 3, 11
 	call PlaceString
