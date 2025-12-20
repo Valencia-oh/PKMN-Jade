@@ -81,9 +81,9 @@ GoldenrodGymWhitneyScript:
 	verbosegiveitem TM_ATTRACT
 	iffalse .NoRoomForAttract
 	setevent EVENT_GOT_TM45_ATTRACT
-	;readmem wBaseLevel
-	;addval 5
-	;writemem wBaseLevel
+	readmem wBaseLevel
+	addval 5
+	writemem wBaseLevel
 	
 	readmem wWildLevel
 	addval 5
