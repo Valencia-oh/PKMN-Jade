@@ -1266,6 +1266,8 @@ INCLUDE "data/battle/critical_hit_chances.asm"
 
 INCLUDE "engine/battle/move_effects/triple_kick.asm"
 
+INCLUDE "engine/battle/check_damage_ability.asm"
+
 BattleCommand_Stab:
 ; STAB = Same Type Attack Bonus
 	ld a, BATTLE_VARS_MOVE_ANIM
@@ -1273,6 +1275,16 @@ BattleCommand_Stab:
 	ld bc, STRUGGLE
 	call CompareMove
 	ret z
+
+ld a, [wCurPartySpecies]
+	ld [wTempAbilityMon], a
+
+	push de
+	push bc
+	call CheckStabAbility
+	pop bc
+	pop de
+	jr c, .stab ;If we used a stab move+ability, skip to stab
 
 	ld hl, wBattleMonType1
 	ld a, [hli]
@@ -1310,19 +1322,44 @@ BattleCommand_Stab:
 	pop de
 	pop hl
 
-	push de
-	push bc
-	farcall DoBadgeTypeBoosts
-	pop bc
-	pop de
-
 	ld a, [wCurType]
 	cp b
 	jr z, .stab
 	cp c
 	jr nz, .SkipStab
 ; fallthrough
-.stab
+.stab	
+
+	push de
+	push bc
+	call CheckStabilityMon
+	pop bc
+	pop de
+	jr c, .doubleStab
+	jr .normalStab
+
+.doubleStab
+	ld hl, wCurDamage + 1
+	ld a, [hld]
+	ld h, [hl]
+	ld l, a
+
+	ld b, h
+	ld c, l
+	srl b
+	rr c
+	add hl, bc
+
+	ld a, h
+	ld [wCurDamage], a
+	ld a, l
+	ld [wCurDamage + 1], a
+
+	ld hl, wTypeModifier
+	set STAB_DAMAGE_F, [hl]
+
+.normalStab
+
 	ld hl, wCurDamage + 1
 	ld a, [hld]
 	ld h, [hl]
@@ -1596,7 +1633,15 @@ BattleCommand_DamageVariation:
 	ld [hl], a
 	ret
 
+INCLUDE "data/pokemon/levitate_mons.asm"
+
 BattleCommand_CheckHit:
+	call .Levitate
+	jr z, .Miss
+
+	call .Waterproof
+	jr z, .Miss
+
 	call .DreamEater
 	jr z, .Miss
 
@@ -1668,6 +1713,64 @@ BattleCommand_CheckHit:
 	ld a, 1
 	ld [wAttackMissed], a
 	ret
+
+.Levitate:
+; Return z if we're trying to hit a Levitate mon with a ground move	
+
+	;First, check if we're using a ground move
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	and TYPE_MASK
+	cp GROUND
+	ret nz	
+
+	;Then, we check if the target is in levitate_mons
+
+	call GetTargetSpecies
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld de, 2
+	ld hl, LevitateMons
+	call IsInWordArray
+	jr c, .Levitating
+
+	or 1
+	ret 
+
+.Levitating:
+	ld hl, LevitateText
+	jmp StdBattleTextbox
+	ret
+
+.Waterproof:
+; Return z if we're trying to hit a Waterproof mon with a water move	
+
+	;First, check if we're using a water move
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar
+	and TYPE_MASK
+	cp WATER
+	ret nz	
+
+	;Then, we check if the target is in WaterproofMons
+
+	call GetTargetSpecies
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld de, 2
+	ld hl, WaterproofMons
+	call IsInWordArray
+	jr c, .IsWaterproof
+
+	or 1
+	ret 
+
+.IsWaterproof:
+	ld hl, WaterproofText
+	jmp StdBattleTextbox
+	ret	
 
 .DreamEater:
 ; Return z if we're trying to eat the dream of
@@ -2061,7 +2164,7 @@ BattleCommand_StatDownAnim:
 	ld a, [wAttackMissed]
 	and a
 	jmp nz, BattleCommand_MoveDelay
-
+	.etb_ability_skip
 	ldh a, [hBattleTurn]
 	and a
 	ld a, ANIM_ENEMY_STAT_DOWN - BATTLE_AFTERANIMS
@@ -4850,9 +4953,6 @@ CalcPlayerStats:
 	ld a, NUM_BATTLE_STATS
 	call CalcBattleStats
 
-	ld hl, BadgeStatBoosts
-	call CallBattleCore
-
 	call BattleCommand_SwitchTurn
 
 	ld hl, ApplyPrzEffectOnSpeed
@@ -6817,3 +6917,24 @@ CheckMoveInList:
 	pop de
 	pop bc
 	ret
+
+GetTargetSpecies:
+	;Loads the species of the Pokemon being attacked
+	ld a, MON_SPECIES
+	call BattlePartyAttr
+	ldh a, [hBattleTurn]
+	and a
+	ld a, [hl]
+	ret nz 
+	ld a, [wTempEnemyMonSpecies]
+	ret
+
+GetCurrentMon:
+    ldh a, [hBattleTurn]
+	and a
+	ld a, [wBattleMonSpecies]
+	call GetPokemonIndexFromID
+	ret z
+	ld a, [wEnemyMonSpecies]
+	call GetPokemonIndexFromID
+    ret

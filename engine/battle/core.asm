@@ -54,9 +54,9 @@ DoBattle:
 	call SafeLoadTempTilemapToTilemap
 	ld a, [wBattleType]
 	cp BATTLETYPE_DEBUG
-	jr z, .tutorial_debug
+	jp z, .tutorial_debug
 	cp BATTLETYPE_TUTORIAL
-	jr z, .tutorial_debug
+	jp z, .tutorial_debug
 	xor a
 	ld [wCurPartyMon], a
 .loop2
@@ -91,9 +91,16 @@ DoBattle:
 	call BreakAttraction
 	call SendOutPlayerMon
 	call EmptyBattleTextbox
-	call LoadTilemapToTempTilemap
+	call LoadTilemapToTempTilemap	
+	call SetEnemyTurn
+
+	ld a, [wTempEnemyMonSpecies]
+	ld [wTempAbilityMon], a
+	call Check_Etb_Ability
+
 	call SetPlayerTurn
 	call SpikesDamage
+
 	ld a, [wLinkMode]
 	and a
 	jr z, BattleTurn
@@ -240,6 +247,8 @@ HandleBetweenTurnEffects:
 .NoMoreFaintingConditions:
 	call HandleLeftovers
 	call HandleMysteryberry
+	call HandleHealAbilities
+	call HandleWeatherHealAbilities
 	call HandleDefrost
 	call HandleSafeguard
 	call HandleScreens
@@ -1324,6 +1333,132 @@ HandleLeftovers:
 	ld hl, BattleText_TargetRecoveredWithItem
 	jmp StdBattleTextbox
 
+INCLUDE "engine/battle/check_heal_abilities.asm"
+
+HandleHealAbilities:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+	call SetPlayerTurn
+	call .do_it
+	call SetEnemyTurn
+	jr .do_it
+
+.DoEnemyFirst:
+	call SetEnemyTurn
+	call .do_it
+	call SetPlayerTurn
+.do_it	
+	push de
+	push bc
+	call CheckHealAbility
+	pop bc
+	pop de
+	ret nc
+
+	ld hl, wBattleMonHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_hp
+	ld hl, wEnemyMonHP
+
+.got_hp
+; Don't restore if we're already at max HP
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld c, a
+	ld a, [hli]
+	cp b
+	jr nz, .restore
+	ld a, [hl]
+	cp c
+	ret z
+
+.restore
+	call GetSixteenthMaxHP
+	call SwitchTurnCore
+	call RestoreHP
+	ld hl, HealAbilityText
+	jmp StdBattleTextbox
+	ret
+
+HandleWeatherHealAbilities:
+	ldh a, [hSerialConnectionStatus]
+	cp USING_EXTERNAL_CLOCK
+	jr z, .DoEnemyFirst
+	call SetPlayerTurn
+	call .do_it
+	call SetEnemyTurn
+	jr .do_it
+
+.DoEnemyFirst:
+	call SetEnemyTurn
+	call .do_it
+	call SetPlayerTurn
+.do_it	
+	push de
+	push bc
+	call CheckWeatherHealAbility
+	pop bc
+	pop de
+
+	ret nc
+	ret nz
+
+	ld hl, wBattleMonHP
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .got_hp
+	ld hl, wEnemyMonHP
+
+.got_hp
+; Don't restore if we're already at max HP
+	ld a, [hli]
+	ld b, a
+	ld a, [hli]
+	ld c, a
+	ld a, [hli]
+	cp b
+	jr nz, .restore
+	ld a, [hl]
+	cp c
+	ret z
+
+.restore
+	call GetEighthMaxHP
+	call SwitchTurnCore
+	call RestoreHP
+
+;print weather heal message
+
+	call CheckRaining
+	jr nz, .NotRaining
+	ld hl, RainDishHealsText
+	jmp StdBattleTextbox
+	jr .finish_restore
+
+.NotRaining
+
+	call CheckSun
+	jr nz, .NotSun
+	ld hl, SunbaskHealsText
+	jmp StdBattleTextbox
+	jr .finish_restore
+
+.NotSun
+
+call CheckSandstorm
+	jr nz, .NotSandstorm
+	ld hl, SandBodyHealsText
+	jmp StdBattleTextbox
+	jr .finish_restore
+
+.NotSandstorm
+
+.finish_restore
+	ret
+
 HandleMysteryberry:
 	ldh a, [hSerialConnectionStatus]
 	cp USING_EXTERNAL_CLOCK
@@ -2325,6 +2460,11 @@ EnemyPartyMonEntrance:
 	call ResetBattleParticipants
 	call SetEnemyTurn
 	call SpikesDamage
+
+	ld a, [wTempEnemyMonSpecies]
+	ld [wTempAbilityMon], a
+	call Check_Etb_Ability
+
 	xor a
 	ld [wEnemyMoveStruct + MOVE_ANIM], a
 	ld [wBattlePlayerAction], a
@@ -3797,7 +3937,6 @@ InitBattleMon:
 	ld bc, PARTYMON_STRUCT_LENGTH - MON_ATK
 	rst CopyBytes
 	call ApplyStatusEffectOnPlayerStats
-	jmp BadgeStatBoosts
 
 BattleCheckPlayerShininess:
 	call GetPartyMonDVs
@@ -3962,7 +4101,9 @@ SendOutPlayerMon:
 	ld a, $f0
 	ld [wCryTracks], a
 	ld a, [wCurPartySpecies]
-	call PlayStereoCry
+	ld [wTempAbilityMon], a
+	call PlayStereoCry	
+	call Check_Etb_Ability
 
 .statused
 	call UpdatePlayerHUD
@@ -4052,7 +4193,7 @@ PursuitSwitch:
 	call GetMoveEffect
 	ld a, b
 	cp EFFECT_PURSUIT
-	jr nz, .done
+	jp nz, .done
 
 	ld a, [wCurBattleMon]
 	push af
@@ -5916,13 +6057,14 @@ LoadEnemyMon:
 
 ; Failing that, it's all up to chance
 ;  Effective chances:
-;    75% None
-;    23% Item1
-;     2% Item2
+;    50% None
+;    37.5% Item1
+;    12.5% Item2
 
-; 25% chance of getting an item
+; 50% chance of getting an item
+
 	call BattleRandom
-	cp 75 percent + 1
+	cp 50 percent + 1
 	ld b, NO_ITEM
 	jr c, .UpdateItem
 
@@ -5932,7 +6074,7 @@ LoadEnemyMon:
 	call GetItemIDFromHL
 	ld b, a
 	call BattleRandom
-	cp 8 percent ; 8% of 25% = 2% Item2
+	cp 25 percent ; 25% of 50% = 12.5% Item2
 	jr nc, .UpdateItem
 ; item 2
 	ld hl, wBaseItem2
@@ -6673,95 +6815,6 @@ ApplyStatLevelMultiplier:
 StatLevelMultipliers_Applied:
 INCLUDE "data/battle/stat_multipliers.asm"
 
-BadgeStatBoosts:
-; Raise the stats of the battle mon in wBattleMon
-; depending on which badges have been obtained.
-
-; Every other badge boosts a stat, starting from the first.
-; GlacierBadge also boosts Special Defense, although the relevant code is buggy (see below).
-
-; 	ZephyrBadge:  Attack
-; 	PlainBadge:   Speed
-; 	MineralBadge: Defense
-; 	GlacierBadge: Special Attack and Special Defense
-
-; The boosted stats are in order, except PlainBadge and MineralBadge's boosts are swapped.
-
-	ld a, [wLinkMode]
-	and a
-	ret nz
-
-	ld a, [wInBattleTowerBattle]
-	and a
-	ret nz
-
-	ld a, [wJohtoBadges]
-
-; Swap badges 3 (PlainBadge) and 5 (MineralBadge).
-	ld d, a
-	and (1 << PLAINBADGE)
-	add a
-	add a
-	ld b, a
-	ld a, d
-	and (1 << MINERALBADGE)
-	rrca
-	rrca
-	ld c, a
-	ld a, d
-	and ((1 << ZEPHYRBADGE) | (1 << HIVEBADGE) | (1 << FOGBADGE) | (1 << STORMBADGE) | (1 << GLACIERBADGE) | (1 << RISINGBADGE))
-	or b
-	or c
-	ld b, a
-
-	ld hl, wBattleMonAttack
-	ld c, 4
-.CheckBadge:
-	ld a, b
-	srl b
-	push af
-	call c, BoostStat
-	pop af
-	inc hl
-	inc hl
-; Check every other badge.
-	srl b
-	dec c
-	jr nz, .CheckBadge
-	srl a
-	ret nc
-; fallthrough
-BoostStat:
-; Raise stat at hl by 1/8.
-
-	ld a, [hli]
-	ld d, a
-	ld e, [hl]
-	srl d
-	rr e
-	srl d
-	rr e
-	srl d
-	rr e
-	ld a, [hl]
-	add e
-	ld [hld], a
-	ld a, [hl]
-	adc d
-	ld [hli], a
-
-; Cap at 999.
-	ld a, [hld]
-	sub LOW(MAX_STAT_VALUE)
-	ld a, [hl]
-	sbc HIGH(MAX_STAT_VALUE)
-	ret c
-	ld a, HIGH(MAX_STAT_VALUE)
-	ld [hli], a
-	ld a, LOW(MAX_STAT_VALUE)
-	ld [hld], a
-	ret
-
 _LoadBattleFontsHPBar:
 	farjp LoadBattleFontsHPBar
 
@@ -7206,7 +7259,6 @@ GiveExperiencePoints:
 	ld [wApplyStatLevelMultipliersToEnemy], a
 	call ApplyStatLevelMultiplierOnAllStats
 	call ApplyStatusEffectOnPlayerStats
-	call BadgeStatBoosts
 	call UpdatePlayerHUD
 	call EmptyBattleTextbox
 	call LoadTilemapToTempTilemap
@@ -8989,3 +9041,5 @@ GetWeatherImage:
 	db $88, $14 ; y/x - bottom left
 	db $80, $1c ; y/x - top right
 	db $80, $14 ; y/x - top left
+
+include "engine/battle/etb_abilities.asm"

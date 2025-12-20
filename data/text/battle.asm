@@ -1078,3 +1078,82 @@ BattleText_LinkErrorBattleCanceled:
 	para "The battle has"
 	line "been canceled…"
 	prompt
+
+LevitateText:
+	text "<TARGET> "
+	line "is floating!"
+	prompt
+
+WaterproofText:
+	text "<TARGET> "
+	line "is Waterproof!"
+	prompt
+
+DrizzleText:
+	text "It begins"
+	line "to rain!"
+	prompt
+
+DroughtText:
+	text "The sunlight"
+	line "grows strong!"
+	prompt
+
+SandStreamText:
+	text "A sandstorm "
+	line "begins!"
+	prompt
+
+IntimidateCutsAttackText:
+	text "<USER>'s"
+    line "INTIMIDATE cuts"
+
+    para "<TARGET>'s"
+    line "ATTACK!"
+	prompt
+
+MystifyCutsSpecialAttackText:
+	text "<USER>'s"
+    line "MYSTIFY cuts"
+
+    para "<TARGET>'s"
+    line "SPCL.ATK!"
+	prompt
+
+SnareCutsSpeedText:
+	text "<USER>'s"
+    line "SNARE cuts"
+
+    para "<TARGET>'s"
+    line "Speed!"
+	prompt
+
+HasteBoostsSpeedText:
+	text "<USER>'s"
+    line "HASTE boosts SPD!"
+	prompt
+
+AimBoostsAccuracyText:
+	text "<USER>'s"
+    line "AIM boosts ACC!"
+	prompt
+
+HealAbilityText:
+	text "<TARGET>"
+	line "regenerated!"
+	prompt
+
+RainDishHealsText:
+	text "The rain heals"
+	line "<TARGET>!"
+	prompt
+
+SunbaskHealsText:
+	text "The sun heals"
+	line "<TARGET>!"
+	prompt
+
+SandBodyHealsText:
+	text "The sand heals"
+	line "<TARGET>!"
+	prompt
