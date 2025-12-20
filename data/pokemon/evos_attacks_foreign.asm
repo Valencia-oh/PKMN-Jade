@@ -11,6 +11,7 @@ EvosAttacksPointers3::
 	dw BreloomEvosAttacks
 	dw ElectrikeEvosAttacks
 	dw ManectricEvosAttacks
+	dw TorkoalEvosAttacks
 	dw TrapinchEvosAttacks
 	dw VibravaEvosAttacks
 	dw FlygonEvosAttacks
