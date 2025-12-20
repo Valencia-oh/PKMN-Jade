@@ -174,7 +174,7 @@ SwitchPartyMons:
 	call DelayFrame
 
 	farcall PartyMenuSelect
-	bit B_BUTTON_F, b
+	bit B_PAD_B, b
 	jr c, .DontSwitch
 
 	farcall _SwitchPartyMons
@@ -882,9 +882,9 @@ ChooseMoveToDelete:
 
 .loop
 	call ScrollingMenuJoypad
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jr nz, .b_button
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jr nz, .a_button
 
 .enter_loop
@@ -916,7 +916,7 @@ DeleteMoveScreen2DMenuData:
 	db _2DMENU_ENABLE_SPRITE_ANIMS ; flags 1
 	db 0 ; flags 2
 	dn 2, 0 ; cursor offset
-	db D_UP | D_DOWN | A_BUTTON | B_BUTTON ; accepted buttons
+	db PAD_UP | PAD_DOWN | PAD_A | PAD_B ; accepted buttons
 
 ManagePokemonMoves:
 	ld a, [wCurPartySpecies]
@@ -951,13 +951,13 @@ MoveScreenLoop:
 
 .joy_loop
 	call ScrollingMenuJoypad
-	bit B_BUTTON_F, a
+	bit B_PAD_B, a
 	jr nz, .b_button
-	bit A_BUTTON_F, a
+	bit B_PAD_A, a
 	jmp nz, .a_button
-	bit D_RIGHT_F, a
+	bit B_PAD_RIGHT, a
 	jr nz, .d_right
-	bit D_LEFT_F, a
+	bit B_PAD_LEFT, a
 	jr nz, .d_left
 
 .skip_joy
@@ -971,7 +971,7 @@ MoveScreenLoop:
 .moving_move
 	ld a, ' '
 	hlcoord 1, 11
-	ld bc, 8
+	ld bc, 5
 	rst ByteFill
 	hlcoord 1, 12
 	lb bc, 5, SCREEN_WIDTH - 2
@@ -1146,7 +1146,7 @@ MoveScreen2DMenuData:
 	db _2DMENU_ENABLE_SPRITE_ANIMS ; flags 1
 	db 0 ; flags 2
 	dn 2, 0 ; cursor offsets
-	db D_UP | D_DOWN | D_LEFT | D_RIGHT | A_BUTTON | B_BUTTON ; accepted buttons
+	db PAD_CTRL_PAD | PAD_A | PAD_B ; accepted buttons
 
 String_MoveWhere:
 	db "Where?@"
@@ -1240,93 +1240,36 @@ PrepareToPlaceMoveData:
 PlaceMoveData:
 	xor a
 	ldh [hBGMapMode], a
-
-	;Print UI elements
 	hlcoord 0, 10
 	ld de, String_MoveType_Top
 	rst PlaceString
 	hlcoord 0, 11
 	ld de, String_MoveType_Bottom
 	rst PlaceString
-	hlcoord 4, 13	
+	hlcoord 12, 12
 	ld de, String_MoveAtk
 	rst PlaceString
-	hlcoord 12, 13
-	ld de, String_MoveAcc
-	rst PlaceString
-	hlcoord 12, 12
-	ld de, String_MoveEff
-	rst PlaceString
-
-	;Place Move Type
 	ld a, [wCurSpecies]
 	ld b, a
-	farcall GetMoveCategoryName
-	hlcoord 1, 11
-	ld de, wStringBuffer1
-	rst PlaceString	
-	ld a, [wCurSpecies]
-	ld b, a
-	hlcoord 1, 12
-	ld [hl], '/'
-	inc hl
+	hlcoord 2, 12
 	predef PrintMoveType
-
-	;Print Move Power
 	ld a, [wCurSpecies]
 	ld l, a
 	ld a, MOVE_POWER
 	call GetMoveAttribute
-	hlcoord 8, 13	
+	hlcoord 16, 12
 	cp 2
-	;jr c, .no_power
+	jr c, .no_power
 	ld [wTextDecimalByte], a
 	ld de, wTextDecimalByte
 	lb bc, 1, 3
 	call PrintNum
-
-	; Print move accuracy
-	ld a, [wCurSpecies]
-	ld l, a
-	ld a, MOVE_ACC
-	call GetMoveAttribute
-	Call ConvertPercentages
-	ld [wBuffer1], a
-	ld de, wBuffer1
-	lb bc, 1, 3
-	hlcoord 16, 13
-	call PrintNum
-
-	; Print move effect chance
-	ld a, [wCurSpecies]
-	ld l, a
-	ld a, MOVE_CHANCE
-	call GetMoveAttribute
-	cp 1
-	jr c, .if_null_chance
-	Call ConvertPercentages
-	ld [wBuffer1], a
-	ld de, wBuffer1
-	lb bc, 1, 3
-	hlcoord 16, 12
-	call PrintNum
-	jr .skip_null_chance
-
-.if_null_chance
-	ld de, String_MoveNoPower
-	ld bc, 3
-	hlcoord 16, 12
-	call PlaceString
-
-.skip_null_chance
-
 	jr .description
 
 .no_power
 	ld de, String_MoveNoPower
 	rst PlaceString
 
-	;Print Move Description
 .description
 	hlcoord 1, 14
 	predef PrintMoveDescription
@@ -1334,69 +1277,14 @@ PlaceMoveData:
 	ldh [hBGMapMode], a
 	ret
 
-	;UI Elements
 String_MoveType_Top:
-	db "┌────────┐@"
+	db "┌─────┐@"
 String_MoveType_Bottom:
-	db "│        └@"
+	db "│TYPE/└@"
 String_MoveAtk:
 	db "ATK/@"
 String_MoveNoPower:
 	db "---@"
-String_MoveAcc:
-	db "ACC/@"
-String_MoveEff:
-	db "EFF/@"
-
-; This converts values out of 256 into a value
-; out of 100. It achieves this by multiplying
-; the value by 100 and dividing it by 256.
-ConvertPercentages:
-
-	; Overwrite the "hl" register.
-	ld l, a
-	ld h, 0
-	push af
-
-	; Multiplies the value of the "hl" register by 3.
-	add hl, hl
-	add a, l
-	ld l, a
-	adc h
-	sub l
-	ld h, a
-
-	; Multiplies the value of the "hl" register
-	; by 8. The value of the "hl" register
-	; is now 24 times its original value.
-	add hl, hl
-	add hl, hl
-	add hl, hl
-
-	; Add the original value of the "hl" value to itself,
-	; making it 25 times its original value.
-	pop af
-	add a, l
-	ld l, a
-	adc h
-	sbc l
-	ld h, a
-
-	; Multiply the value of the "hl" register by
-	; 4, making it 100 times its original value.
-	add hl, hl
-	add hl, hl
-
-	; Set the "l" register to 0.5, otherwise the rounded
-	; value may be lower than expected. Round the
-	; high byte to nearest and drop the low byte.
-	ld l, 0.5
-	sla l
-	sbc a
-	and 1
-	add a, h
-	ret
-
 
 PlaceMoveScreenArrows:
 	call PlaceMoveScreenLeftArrow
