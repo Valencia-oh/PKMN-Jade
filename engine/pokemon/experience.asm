@@ -1,218 +1,174 @@
-GetFirstPokemonHappiness:
-	ld hl, wPartyMon1Happiness
-	ld bc, PARTYMON_STRUCT_LENGTH
-	ld de, wPartySpecies
-.loop
-	ld a, [de]
-	cp EGG
-	jr nz, .done
-	inc de
-	add hl, bc
-	jr .loop
-
-.done
-	ld [wNamedObjectIndex], a
-	ld a, [hl]
-	ld [wScriptVar], a
-	call GetPokemonName
-	jmp CopyPokemonName_Buffer1_Buffer3
-
-CheckFirstMonIsEgg:
-	ld a, [wPartySpecies]
-	ld [wNamedObjectIndex], a
-	cp EGG
-	ld a, TRUE
-	jr z, .egg
-	xor a
-
-.egg
-	ld [wScriptVar], a
-	call GetPokemonName
-	jmp CopyPokemonName_Buffer1_Buffer3
-
-ChangeHappiness:
-; Perform happiness action c on wCurPartyMon
-
-	ld a, [wCurPartyMon]
-	inc a
-	ld e, a
-	ld d, 0
-	ld hl, wPartySpecies - 1
-	add hl, de
-	ld a, [hl]
-	cp EGG
-	ret z
-
-	push bc
-	ld hl, wPartyMon1Happiness
-	ld bc, PARTYMON_STRUCT_LENGTH
-	ld a, [wCurPartyMon]
-	rst AddNTimes
-	pop bc
-
-	ld d, h
-	ld e, l
-
-	push de
-	ld a, [de]
-	cp HAPPINESS_THRESHOLD_1
-	ld e, 0
-	jr c, .ok
-	inc e
-	cp HAPPINESS_THRESHOLD_2
-	jr c, .ok
-	inc e
-
-.ok
-	dec c
-	ld b, 0
-	ld hl, HappinessChanges
-	add hl, bc
-	add hl, bc
-	add hl, bc
-	ld d, 0
-	add hl, de
-	ld a, [hl]
-	cp $64 ; why not $80?
-	pop de
-
-	ld a, [de]
-	jr nc, .negative
-	add [hl]
-	jr nc, .done
-	ld a, -1
-	jr .done
-
-.negative
-	add [hl]
-	jr c, .done
-	xor a
-
-.done
-	ld [de], a
-	ld a, [wBattleMode]
-	and a
-	ret z
-	ld a, [wCurPartyMon]
-	ld b, a
-	ld a, [wPartyMenuCursor]
-	cp b
-	ret nz
-	ld a, [de]
-	ld [wBattleMonHappiness], a
-	ret
-
-INCLUDE "data/events/happiness_changes.asm"
-
-StepHappiness::
-; Raise the party's happiness by 1 point every other step cycle.
-
-	ld hl, wHappinessStepCount
-	ld a, [hl]
-	inc a
-	and 1
-	ld [hl], a
-	ret nz
-
-	ld de, wPartyCount
-	ld a, [de]
-	and a
-	ret z
-
+CalcLevel:
+	ld a, [wTempMonSpecies]
+	ld [wCurSpecies], a
+	call GetBaseData
+	ld d, 1
+.next_level
+	inc d
+	ld a, d
+	cp LOW(MAX_LEVEL + 1)
+	jr z, .got_level
+	call CalcExpAtLevel
+	push hl
+	ld hl, wTempMonExp + 2
+	ldh a, [hProduct + 3]
 	ld c, a
-	ld hl, wPartyMon1Happiness
-.loop
-	inc de
-	ld a, [de]
-	cp EGG
-	jr z, .next
-	inc [hl]
-	jr nz, .next
-	ld [hl], $ff
+	ld a, [hld]
+	sub c
+	ldh a, [hProduct + 2]
+	ld c, a
+	ld a, [hld]
+	sbc c
+	ldh a, [hProduct + 1]
+	ld c, a
+	ld a, [hl]
+	sbc c
+	pop hl
+	jr nc, .next_level
 
-.next
-	push de
-	ld de, PARTYMON_STRUCT_LENGTH
-	add hl, de
-	pop de
-	dec c
-	jr nz, .loop
+.got_level
+	dec d
 	ret
 
-DayCareStep::
-; Raise the experience of Day-Care Pokémon every step cycle.
-
-	ld a, [wDayCareMan]
-	bit DAYCAREMAN_HAS_MON_F, a
-	jr z, .day_care_lady
-
-	ld a, [wBreedMon1Level] ; level
-	cp MAX_LEVEL
-	jr nc, .day_care_lady
-	ld hl, wBreedMon1Exp + 2 ; exp
-	inc [hl]
-	jr nz, .day_care_lady
-	dec hl
-	inc [hl]
-	jr nz, .day_care_lady
-	dec hl
-	inc [hl]
-	ld a, [hl]
-	cp HIGH(MAX_DAY_CARE_EXP >> 8)
-	jr c, .day_care_lady
-	ld [hl], HIGH(MAX_DAY_CARE_EXP >> 8)
-
-.day_care_lady
-	ld a, [wDayCareLady]
-	bit DAYCARELADY_HAS_MON_F, a
-	jr z, .check_egg
-
-	ld a, [wBreedMon2Level] ; level
-	cp MAX_LEVEL
-	jr nc, .check_egg
-	ld hl, wBreedMon2Exp + 2 ; exp
-	inc [hl]
-	jr nz, .check_egg
-	dec hl
-	inc [hl]
-	jr nz, .check_egg
-	dec hl
-	inc [hl]
-	ld a, [hl]
-	cp HIGH(MAX_DAY_CARE_EXP >> 8)
-	jr c, .check_egg
-	ld [hl], HIGH(MAX_DAY_CARE_EXP >> 8)
-
-.check_egg
-	ld hl, wDayCareMan
-	bit DAYCAREMAN_MONS_COMPATIBLE_F, [hl]
-	ret z
-	ld hl, wStepsToEgg
-	dec [hl]
-	ret nz
-
-	call Random
+CalcExpAtLevel:
+; (a/b)*n**3 + c*n**2 + d*n - e
+	ld a, d
+	dec a
+	jr nz, .UseExpFormula
+; Pokémon have 0 experience at level 1
+	ld hl, hProduct
+	ld [hli], a
+	ld [hli], a
+	ld [hli], a
 	ld [hl], a
-	farcall CheckBreedmonCompatibility
-	ld a, [wBreedingCompatibility]
-	cp 230
-	ld b, 31 percent + 1
-	jr nc, .okay
-	ld a, [wBreedingCompatibility]
-	cp 170
-	ld b, 16 percent
-	jr nc, .okay
-	ld a, [wBreedingCompatibility]
-	cp 110
-	ld b, 12 percent
-	jr nc, .okay
-	ld b, 4 percent
-
-.okay
-	call Random
-	cp b
-	ret nc
-	ld hl, wDayCareMan
-	res DAYCAREMAN_MONS_COMPATIBLE_F, [hl]
-	set DAYCAREMAN_HAS_EGG_F, [hl]
 	ret
+
+.UseExpFormula
+	ld a, [wBaseGrowthRate]
+	add a
+	add a
+	ld c, a
+	ld b, 0
+	ld hl, GrowthRates
+	add hl, bc
+; Cube the level
+	call .LevelSquared
+	ld a, d
+	ldh [hMultiplier], a
+	call Multiply
+
+; Multiply by a
+	ld a, [hl]
+	and $f0
+	swap a
+	ldh [hMultiplier], a
+	call Multiply
+; Divide by b
+	ld a, [hli]
+	and $f
+	ldh [hDivisor], a
+	ld b, 4
+	call Divide
+; Push the cubic term to the stack
+	ldh a, [hQuotient + 1]
+	push af
+	ldh a, [hQuotient + 2]
+	push af
+	ldh a, [hQuotient + 3]
+	push af
+; Square the level and multiply by the lower 7 bits of c
+	call .LevelSquared
+	ld a, [hl]
+	and $7f
+	ldh [hMultiplier], a
+	call Multiply
+; Push the absolute value of the quadratic term to the stack
+	ldh a, [hProduct + 1]
+	push af
+	ldh a, [hProduct + 2]
+	push af
+	ldh a, [hProduct + 3]
+	push af
+	ld a, [hli]
+	push af
+; Multiply the level by d
+	xor a
+	ldh [hMultiplicand + 0], a
+	ldh [hMultiplicand + 1], a
+	ld a, d
+	ldh [hMultiplicand + 2], a
+	ld a, [hli]
+	ldh [hMultiplier], a
+	call Multiply
+; Subtract e
+	ld b, [hl]
+	ldh a, [hProduct + 3]
+	sub b
+	ldh [hMultiplicand + 2], a
+	ld b, 0
+	ldh a, [hProduct + 2]
+	sbc b
+	ldh [hMultiplicand + 1], a
+	ldh a, [hProduct + 1]
+	sbc b
+	ldh [hMultiplicand], a
+; If bit 7 of c is set, c is negative; otherwise, it's positive
+	pop af
+	and $80
+	jr nz, .subtract
+; Add c*n**2 to (d*n - e)
+	pop bc
+	ldh a, [hProduct + 3]
+	add b
+	ldh [hMultiplicand + 2], a
+	pop bc
+	ldh a, [hProduct + 2]
+	adc b
+	ldh [hMultiplicand + 1], a
+	pop bc
+	ldh a, [hProduct + 1]
+	adc b
+	ldh [hMultiplicand], a
+	jr .done_quadratic
+
+.subtract
+; Subtract c*n**2 from (d*n - e)
+	pop bc
+	ldh a, [hProduct + 3]
+	sub b
+	ldh [hMultiplicand + 2], a
+	pop bc
+	ldh a, [hProduct + 2]
+	sbc b
+	ldh [hMultiplicand + 1], a
+	pop bc
+	ldh a, [hProduct + 1]
+	sbc b
+	ldh [hMultiplicand], a
+
+.done_quadratic
+; Add (a/b)*n**3 to (d*n - e +/- c*n**2)
+	pop bc
+	ldh a, [hProduct + 3]
+	add b
+	ldh [hMultiplicand + 2], a
+	pop bc
+	ldh a, [hProduct + 2]
+	adc b
+	ldh [hMultiplicand + 1], a
+	pop bc
+	ldh a, [hProduct + 1]
+	adc b
+	ldh [hMultiplicand], a
+	ret
+
+.LevelSquared:
+	xor a
+	ldh [hMultiplicand + 0], a
+	ldh [hMultiplicand + 1], a
+	ld a, d
+	ldh [hMultiplicand + 2], a
+	ldh [hMultiplier], a
+	jmp Multiply
+
+INCLUDE "data/growth_rates.asm"
