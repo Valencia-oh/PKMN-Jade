@@ -26,7 +26,7 @@ FalknerGroup:
 	next_list_item ; FALKNER (2)
 	db "FALKNER@", TRAINERTYPE_MOVES
 	db 6
-	dw NXTU
+	dw XATU
 	db 5
 	dw PIDGEOT
 	db 7
@@ -34,7 +34,7 @@ FalknerGroup:
 	db 7
 	dw PELIPPER
 	db 8
-	dw SKARMARY
+	dw SKARMORY
 	db 8
 	dw ESPATHRA
 	db -1 ; end
@@ -128,7 +128,7 @@ MortyGroup:
 	next_list_item ; MORTY (2)
 	db "MORTY@", TRAINERTYPE_MOVES
 	db 7
-	dw NINETAILS
+	dw NINETALES
 	dw LICK, HYPNOSIS, EMBER, ASTONISH
 	db 7
 	dw GENGAR
