@@ -2279,6 +2279,25 @@ BattleCommand_ApplyDamage:
 	jr nc, .damage
 	ld b, 2
 
+.sturdy
+	call GetTargetSpecies
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld de, 2
+	ld hl, SturdyMons
+	ld b, 0
+	jr nz, .damage
+
+	call BattleRandom
+	cp c
+	jr nc, .damage
+	call BattleCommand_FalseSwipe
+	ld b, 0
+	jr nc, .damage
+	ld hl, SturdyText
+	ld b, 2
+
 .damage
 	push bc
 	call .update_damage_taken
