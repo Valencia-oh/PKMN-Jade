@@ -163,7 +163,7 @@ _CGB_BattleColors:
 _CGB_FinishBattleScreenLayout:
 	call InitPartyMenuBGPal7
 	hlcoord 0, 0, wAttrmap
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+	ld bc, SCREEN_AREA
 	ld a, PAL_BATTLE_BG_ENEMY_HP
 	rst ByteFill
 	hlcoord 0, 4, wAttrmap
@@ -446,27 +446,27 @@ _CGB_SlotMachine:
 	call WipeAttrmap
 	hlcoord 0, 2, wAttrmap
 	lb bc, 10, 3
-	ld a, $2 ; '3' palette
+	ld a, $2 ; "3" palette
 	call FillBoxCGB
 	hlcoord 17, 2, wAttrmap
 	lb bc, 10, 3
-	ld a, $2 ; '3' palette
+	ld a, $2 ; "3" palette
 	call FillBoxCGB
 	hlcoord 0, 4, wAttrmap
 	lb bc, 6, 3
-	ld a, $3 ; '2' palette
+	ld a, $3 ; "2" palette
 	call FillBoxCGB
 	hlcoord 17, 4, wAttrmap
 	lb bc, 6, 3
-	ld a, $3 ; '2' palette
+	ld a, $3 ; "2" palette
 	call FillBoxCGB
 	hlcoord 0, 6, wAttrmap
 	lb bc, 2, 3
-	ld a, $4 ; '1' palette
+	ld a, $4 ; "1" palette
 	call FillBoxCGB
 	hlcoord 17, 6, wAttrmap
 	lb bc, 2, 3
-	ld a, $4 ; '1' palette
+	ld a, $4 ; "1" palette
 	call FillBoxCGB
 	hlcoord 4, 2, wAttrmap
 	lb bc, 2, 12
