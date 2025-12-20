@@ -216,6 +216,24 @@ ManectricEvosAttacks:
 	dbw 63, THUNDER
 	db 0 ; no more level-up moves
 
+TorkoalEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, EMBER
+	dbw 1, LEER
+	dbw 1, SMOG
+	dbw 1, SUNNY_DAY
+	dbw 1, FIRE_FANG
+	dbw 7, LEER
+	dbw 9, SUNNY_DAY
+	dbw 13, SMOG
+	dbw 19, FIRE_FANG
+	dbw 25, SMOKESCREEN
+	dbw 33, POWER_GEM
+	dbw 41, FLAMETHROWER
+	dbw 49, CONFUSE_RAY
+	dbw 57, FIRE_BLAST
+	db 0 ; no more level-up moves
+
 TrapinchEvosAttacks:
 	dbbw EVOLVE_LEVEL, 26, VIBRAVA
 	db 0 ; no more evolutions
