@@ -267,6 +267,7 @@ PokemonNames::
 	dname "BRELOOM"
 	dname "ELECTRIKE"
 	dname "MANECTRIC"
+	dname "TORKOAL"
 	dname "TRAPINCH"
 	dname "VIBRAVA"
 	dname "FLYGON"
