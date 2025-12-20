@@ -263,6 +263,7 @@ AnimationPointers:
 	dw BreloomAnimation
 	dw ElectrikeAnimation
 	dw ManectricAnimation
+	dw TorkoalAnimation
 	dw TrapinchAnimation
 	dw VibravaAnimation
 	dw FlygonAnimation
