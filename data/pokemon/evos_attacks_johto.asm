@@ -270,6 +270,7 @@ FurretEvosAttacks:
 	dbw 22, THUNDER_FANG
 	dbw 22, FIRE_FANG
 	dbw 28, SLAM
+	dbw 33, BLIZZARD
 	dbw 38, REST
 	dbw 48, AMNESIA
 	db 0 ; no more level-up moves
