@@ -205,9 +205,6 @@ AbilitySunbaskMons::
 	dw -1
 
 AbilitySandBodyMons::
-	dw GEODUDE
-	dw GRAVELER
-	dw GOLEM
 	dw SANDSHREW
 	dw SANDSLASH
 	dw MAROWAK
