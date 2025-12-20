@@ -3,33 +3,18 @@
 DrizzleMons::
 	dw POLITOED
 	dw PELIPPER
-	dw LUVDISC
-	dw KYOGRE
 	dw -1
 
 DroughtMons::
 	dw NINETALES
 	dw MOLTRES
 	dw SUNFLORA
-	dw TORKOAL
-	dw GROUDON	
 	dw -1
 
 SandStreamMons::
 	dw RHYDON
-	dw RHYPERIOR
 	dw DUNSPARCE
 	dw TYRANITAR
-	dw TYRANITARX
-	dw REGIROCK
-	dw -1
-
-SnowWarningMons::
-	dw LAPRAS
-	dw ARTICUNO
-	dw DELIBIRD
-	dw REGICE
-	dw ANINETALES
 	dw -1
 
 IntimidateMons::
@@ -40,59 +25,31 @@ IntimidateMons::
 	dw GYARADOSX
 	dw GRANBULL
 	dw MIGHTYENA
-	dw MASQUERAIN
-	dw MAWILE
 	dw MANECTRIC
-	dw SALAMENCE
-	dw SALAMENCEX
-	dw TAUROS2
-	dw CYNDAQUIL2
-	dw QUILAVA2
-	dw TYPHLOSION2
 	dw -1
 
 MystifyMons::
 	dw CLEFABLE
 	dw WIGGLYTUFF
 	dw DRAGONITE
-	dw DRAGONITEX
-	dw DRAGONITEY
 	dw NOCTOWL
 	dw SLOWKING
 	dw MISDREAVUS
 	dw MISMAGIUS
 	dw UNOWN
-	dw SABLEYE
-	dw CHIMECHO
-	dw CHIMECHOX
-	dw MILOTIC
-	dw NOCTOWL2
-	dw NINETALES2
 	dw -1
 
 SnareMons::
 	dw VICTREEBEL
-	dw VICTREEBELX
 	dw TENTACRUEL
 	dw TANGELA
 	dw ARIADOS
-	dw CRADILY
-	dw TANGROWTH
-	dw TENTACRUEL2
-	dw YANMA2
 	dw -1
 
 HasteMons::
 	dw PONYTA
 	dw RAPIDASH
-	dw RAPIDASH2
 	dw DODRIO	
-	dw TORCHIC
-	dw COMBUSKEN
-	dw BLAZIKEN
-	dw NINJASK
-	dw SUNBOU
-	dw IKARI
 	dw -1
 
 AimMons::
@@ -100,12 +57,7 @@ AimMons::
 	dw PIDGEOTTO
 	dw PIDGEOT
 	dw ELECTABUZZ
-	dw ELECTIVIRE
 	dw MAGMAR
-	dw MAGMORTAR
-	dw AGEODUDE
-	dw AGRAVELER
-	dw AGOLEM
 	dw -1
 
 FocusMons::
@@ -121,9 +73,6 @@ VeiledMons::
 	dw TOGEPI
 	dw TOGETIC
 	dw TOGEKISS
-	dw GARDEVOIR
-	dw HANAMOLE
-	dw HANEEI
 	dw -1
 
 InvisibleWallMons::
@@ -141,5 +90,4 @@ DebrisMons::
 	dw FORRETRESS
 	dw QWILFISH
 	dw SKARMORY
-	dw SKARMORY2
 	dw -1
