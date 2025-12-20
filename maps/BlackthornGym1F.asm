@@ -73,9 +73,9 @@ BlackthornGymClairScript:
 	writetext ClairText_TooMuchToExpect
 	waitbutton
 	closetext
-	;readmem wBaseLevel
-	;addval 5
-	;writemem wBaseLevel
+	readmem wBaseLevel
+	addval 5
+	writemem wBaseLevel
 
 	readmem wWildLevel
 	addval 5
