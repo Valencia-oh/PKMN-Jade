@@ -4,7 +4,6 @@ LevitateMons::
 	dw GASTLY
 	dw HAUNTER
 	dw GENGAR
-	dw GENGARX
 	dw KOFFING
 	dw WEEZING
 	dw VIBRAVA
