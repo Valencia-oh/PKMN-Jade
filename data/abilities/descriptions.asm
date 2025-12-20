@@ -34,6 +34,10 @@ WaterproofDesc:
 	db    "Protects against"
 	next  "WATER moves.@"
 
+SturdyDesc:
+	db    "Can't be fainted"
+	next  "by 1 move.@"
+
 ElementalFistDesc:
 	db    "Boosts off-type"
 	next  "PUNCH moves.@"
