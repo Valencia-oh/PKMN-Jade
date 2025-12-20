@@ -16,3 +16,13 @@ WaterproofMons::
 	dw SLUGMA
 	dw MAGCARGO
 	dw -1
+
+SturdyMons::
+	dw GEODUDE
+	dw GRAVELER
+	dw GOLEM
+	dw ONIX
+	dw SUDOWOODO
+	dw SHUCKLE
+	dw DONPHAN
+	dw -1
