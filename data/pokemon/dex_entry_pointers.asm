@@ -264,6 +264,7 @@ PokedexDataPointerTable:
 	dba BreloomPokedexEntry
 	dba ElectrikePokedexEntry
 	dba ManectricPokedexEntry
+	dba TorkoalPokedexEntry
 	dba TrapinchPokedexEntry
 	dba VibravaPokedexEntry
 	dba FlygonPokedexEntry
