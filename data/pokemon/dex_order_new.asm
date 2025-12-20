@@ -176,6 +176,7 @@ NewPokedexOrder:
 	dw MACHOP
 	dw MACHOKE
 	dw MACHAMP
+	dw TORKOAL
 	dw TYROGUE
 	dw HITMONLEE
 	dw HITMONCHAN
