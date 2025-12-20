@@ -252,7 +252,7 @@ BitmasksPointers:
 	dw HoOhBitmasks
 	dw CelebiBitmasks
 ; Added Mons
-
+;gen3
 	dw PoochyenaBitmasks
 	dw MightyenaBitmasks
 	dw ZigzagoonBitmasks
@@ -263,9 +263,11 @@ BitmasksPointers:
 	dw BreloomBitmasks
 	dw ElectrikeBitmasks
 	dw ManectricBitmasks
+	dw TorkoalBitmasks
 	dw TrapinchBitmasks
 	dw VibravaBitmasks
 	dw FlygonBitmasks
+;gen4
 	dw HonchkrowBitmasks
 	dw BronzorBitmasks
 	dw BronzongBitmasks
@@ -273,21 +275,26 @@ BitmasksPointers:
 	dw LeafeonBitmasks
 	dw GlaceonBitmasks
 	dw MamoswineBitmasks
+;gen5
 	dw JoltikBitmasks
 	dw GalvantulaBitmasks
 	dw LarvestaBitmasks
 	dw VolcaronaBitmasks
+;gen6
 	dw InkayBitmasks
 	dw MalamarBitmasks
+;gen7
 	dw PikipekBitmasks
 	dw TrumbeakBitmasks
 	dw ToucannonBitmasks
+;gen8
 	dw ApplinBitmasks
 	dw AppletunBitmasks
 	dw FlappleBitmasks
 	dw FalinksBitmasks
 	dw WyrdeerBitmasks
 	dw UrsalunaBitmasks
+;gen9
 	dw MaschiffBitmasks
 	dw MabosstiffBitmasks
 	dw FlittleBitmasks
