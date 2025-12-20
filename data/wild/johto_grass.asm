@@ -597,7 +597,7 @@ JohtoGrassWildMons:
 	dbw 3, ZUBAT
 	dbw 4, MACHOP
 	dbw 3, ZUBAT
-	dbw 4, GEODUDE
+	dbw 4, TORKOAL
 	dbw 6, MAGMAR
 	dbw 6, PRIMEAPE
 	; day
@@ -605,7 +605,7 @@ JohtoGrassWildMons:
 	dbw 3, ZUBAT
 	dbw 4, MACHOP
 	dbw 3, ZUBAT
-	dbw 4, GEODUDE
+	dbw 4, TORKOAL
 	dbw 6, RATTATA
 	dbw 6, RATTATA
 	; nite
@@ -613,7 +613,7 @@ JohtoGrassWildMons:
 	dbw 3, RATTATA
 	dbw 4, MARILL
 	dbw 3, ZUBAT
-	dbw 4, GEODUDE
+	dbw 4, TORKOAL
 	dbw 6, MAGMAR
 	dbw 6, HOUNDOUR
 	end_grass_wildmons
