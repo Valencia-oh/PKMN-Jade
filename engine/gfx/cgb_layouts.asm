@@ -64,11 +64,11 @@ CGBLayoutJumptable:
 
 _CGB_BattleGrayscale:
 	ld hl, PalPacket_BattleGrayscale + 1
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld c, 4
 	call CopyPalettes
 	ld hl, PalPacket_BattleGrayscale + 1
-	ld de, wBGPals1 palette PAL_BATTLE_BG_EXP
+	ld de, UnusedGSTitleBGPals palette PAL_BATTLE_BG_EXP
 	ld c, 4
 	call CopyPalettes
 	ld hl, PalPacket_BattleGrayscale + 1
@@ -78,10 +78,10 @@ _CGB_BattleGrayscale:
 	jmp _CGB_FinishBattleScreenLayout
 
 	SetDefaultBattlePalette:
-	ldh a, [rSVBK]
+	ldh a, [rWBK]
 	push af
 	ld a, BANK(wTempBattleMonSpecies)
-	ldh [rSVBK], a
+	ldh [rWBK], a
 	ld a, b
 	and a ; PAL_BATTLE_BG_PLAYER
 	jr z, SetBattlePal_Player
@@ -110,7 +110,7 @@ _CGB_BattleGrayscale:
 	rst AddNTimes
 	call FarCopyWRAM
 	pop af
-	ldh [rSVBK], a
+	ldh [rWBK], a
 	ret
 
 SetBattlePal_Player:
@@ -144,11 +144,11 @@ SetBattlePal_Exp:
 SetBattlePal_Text:
 	ld hl, PartyMenuBGPalette
 	ld bc, 1 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	jmp FarCopyWRAM
 
 _CGB_BattleColors:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	call SetBattlePal_Player
 	call SetBattlePal_Enemy
 	call SetBattlePal_EnemyHP
@@ -199,16 +199,16 @@ _CGB_FinishBattleScreenLayout:
 
 InitPartyMenuBGPal7:
 	ld hl, PartyMenuBGPalette
-	ld de, wBGPals1 palette 7
+	ld de, UnusedGSTitleBGPals palette 7
 	ld bc, 1 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	jmp FarCopyWRAM
 
 InitPartyMenuBGPal0:
 	ld hl, PartyMenuBGPalette
-	ld de, wBGPals1 palette 0
+	ld de, UnusedGSTitleBGPals palette 0
 	ld bc, 1 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	jmp FarCopyWRAM
 
 _CGB_PokegearPals:
@@ -221,9 +221,9 @@ _CGB_PokegearPals:
 .male
 	ld hl, MalePokegearPals
 .got_pals
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld bc, 6 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	call FarCopyWRAM
 	ld hl, PokegearOBPals
 	ld de, wOBPals1
@@ -235,7 +235,7 @@ _CGB_PokegearPals:
 	ret
 
 _CGB_StatsScreenHPPals:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, [wCurHPPal]
 	ld l, a
 	ld h, 0
@@ -251,10 +251,10 @@ _CGB_StatsScreenHPPals:
 	ld hl, ExpBarPalette
 	call LoadPalette_White_Col1_Col2_Black ; exp palette
 	ld hl, StatsScreenPagePals
-	ld de, wBGPals1 palette 3
+	ld de, UnusedGSTitleBGPals palette 3
 	;ld bc, 3 palettes ; pink, green, and blue page palettes
 	ld bc, 4 palettes ; pink, green, blue, and orange page palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	call FarCopyWRAM
 	call WipeAttrmap
 
@@ -301,7 +301,7 @@ StatsScreenPals:
 INCLUDE "gfx/stats/stats.pal"
 
 _CGB_Pokedex:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, PREDEFPAL_POKEDEX
 	call GetPredefPal
 	call LoadHLPaletteIntoDE ; dex interface palette
@@ -351,7 +351,7 @@ BillsPC_PreviewTheme:
 	ld de, BillsPC_ThemePals
 	add hl, de
 	; Load palettes
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	push hl
 	ld c, 2 * 2
 	call LoadHLBytesIntoDE
@@ -359,7 +359,7 @@ BillsPC_PreviewTheme:
 	ld c, 2 * 2
 	call LoadHLBytesIntoDE
 	push hl
-	ld hl, wBGPals1 palette 0
+	ld hl, UnusedGSTitleBGPals palette 0
 	ld c, 1 * 2
 	call LoadHLBytesIntoDE
 	pop hl
@@ -367,8 +367,8 @@ BillsPC_PreviewTheme:
 	call LoadHLBytesIntoDE
 	ld hl, BillsPC_WhitePalette
 	call LoadHLPaletteIntoDE
-	ld hl, wBGPals1 palette 0
-	ld de, wBGPals1 palette 3
+	ld hl, UnusedGSTitleBGPals palette 0
+	ld de, UnusedGSTitleBGPals palette 3
 	ld c, 1 * 2
 	call LoadHLBytesIntoDE
 	ld a, [wBillsPC_ApplyThemePals]
@@ -418,7 +418,7 @@ BillsPC_PreviewTheme:
 	ret
 
 _CGB_PokedexUnownMode:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, PREDEFPAL_POKEDEX
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
@@ -439,9 +439,9 @@ _CGB_PokedexUnownMode:
 
 _CGB_SlotMachine:
 	ld hl, SlotMachinePals
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld bc, 16 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	call FarCopyWRAM
 	call WipeAttrmap
 	hlcoord 0, 2, wAttrmap
@@ -525,7 +525,7 @@ _CGB_GSIntro:
 
 .ShellderLaprasScene:
 	ld hl, .ShellderLaprasBGPalette
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	call LoadHLPaletteIntoDE
 	ld hl, .ShellderLaprasOBPals
 	ld de, wOBPals1
@@ -541,7 +541,7 @@ INCLUDE "gfx/intro/gs_shellder_lapras_bg.pal"
 INCLUDE "gfx/intro/gs_shellder_lapras_ob.pal"
 
 .JigglypuffPikachuScene:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, PREDEFPAL_GS_INTRO_JIGGLYPUFF_PIKACHU_BG
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
@@ -563,9 +563,9 @@ INCLUDE "gfx/intro/gs_shellder_lapras_ob.pal"
 
 _CGB_BetaPoker:
 	ld hl, BetaPokerPals
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld bc, 5 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	call FarCopyWRAM
 	call ApplyPals
 	call WipeAttrmap
@@ -573,9 +573,9 @@ _CGB_BetaPoker:
 
 _CGB_Diploma:
 	ld hl, DiplomaPalettes
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld bc, 16 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	call FarCopyWRAM
 
 	ld hl, PalPacket_Diploma + 1
@@ -598,7 +598,7 @@ _CGB_PartyMenu:
 	jmp ApplyAttrmap
 
 _CGB_Evolution:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, c
 	and a
 	jr z, .pokemon
@@ -632,10 +632,10 @@ _CGB_Evolution:
 	ret
 
 _CGB_GSTitleScreen:
-	ld hl, wBGPals1
-	ld de, wBGPals1
+	ld hl, UnusedGSTitleBGPals
+	ld de, UnusedGSTitleBGPals
 	ld bc, 5 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	call FarCopyWRAM
 	ld hl, wOBPals1
 	ld de, wOBPals1
@@ -662,21 +662,21 @@ _CGB_UnownPuzzle:
 	ld a, PREDEFPAL_UNOWN_PUZZLE
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
-	ldh a, [rSVBK]
+	ldh a, [rWBK]
 	push af
 	ld a, BANK(wOBPals1)
-	ldh [rSVBK], a
+	ldh [rWBK], a
 	ld hl, wOBPals1
 	ld a, LOW(palred 31 + palgreen 0 + palblue 0)
 	ld [hli], a
 	ld [hl], HIGH(palred 31 + palgreen 0 + palblue 0)
 	pop af
-	ldh [rSVBK], a
+	ldh [rWBK], a
 	call WipeAttrmap
 	jmp ApplyAttrmap
 
 _CGB_TrainerCard:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	xor a ; CHRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
@@ -785,7 +785,7 @@ _CGB_TrainerCard:
 INCLUDE "gfx/trainer_card/johto_badges.pal"
 
 _CGB_TrainerCardKanto:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	xor a ; CHRIS & MISTY
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
@@ -886,7 +886,7 @@ _CGB_TrainerCardKanto:
 INCLUDE "gfx/trainer_card/kanto_badges.pal"
 
 _CGB_MoveList:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, PREDEFPAL_GOLDENROD
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
@@ -920,7 +920,7 @@ _CGB_BetaPikachuMinigame:
 	ret
 
 _CGB_PokedexSearchOption:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, PREDEFPAL_POKEDEX
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
@@ -948,9 +948,9 @@ _CGB_PackPals:
 	ld hl, .ChrisPackPals
 
 .got_gender
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld bc, 6 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	call FarCopyWRAM
 	call WipeAttrmap
 	hlcoord 0, 0, wAttrmap
@@ -1029,7 +1029,7 @@ _CGB_MagnetTrain: ; unused
 	ret
 
 _CGB_GamefreakLogo:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, PREDEFPAL_GAMEFREAK_LOGO_BG
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
@@ -1047,7 +1047,7 @@ _CGB_GamefreakLogo:
 INCLUDE "gfx/splash/ditto.pal"
 
 _CGB_PlayerOrMonFrontpicPals:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
 	call GetPlayerOrMonPalettePointer
@@ -1057,7 +1057,7 @@ _CGB_PlayerOrMonFrontpicPals:
 	jmp ApplyPals
 
 _CGB_Unused1E:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, [wCurPartySpecies]
 	call GetMonPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
@@ -1079,7 +1079,7 @@ _CGB_TradeTube:
 	jmp WipeAttrmap
 
 _CGB_TrainerOrMonFrontpicPals:
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld a, [wCurPartySpecies]
 	ld bc, wTempMonDVs
 	call GetFrontpicPalettePointer
@@ -1090,9 +1090,9 @@ _CGB_TrainerOrMonFrontpicPals:
 
 _CGB_MysteryGift:
 	ld hl, .MysteryGiftPalettes
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 	ld bc, 2 palettes
-	ld a, BANK(wBGPals1)
+	ld a, BANK(UnusedGSTitleBGPals)
 	call FarCopyWRAM
 	call ApplyPals
 	call WipeAttrmap
@@ -1123,7 +1123,7 @@ INCLUDE "gfx/mystery_gift/mystery_gift.pal"
 
 _CGB_Plain:
 	ld b, 8
-	ld de, wBGPals1
+	ld de, UnusedGSTitleBGPals
 .loop
 	ld hl, Gen1DiplomaPalette
 	call LoadHLPaletteIntoDE
