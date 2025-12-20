@@ -2280,6 +2280,7 @@ BattleCommand_ApplyDamage:
 	ld b, 0
 	jr nc, .damage
 	ld b, 2
+	ret
 
 .sturdy
 	call GetTargetSpecies
