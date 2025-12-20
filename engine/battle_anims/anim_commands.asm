@@ -1349,9 +1349,9 @@ endr
 
 PlayHitSound:
 	ld a, [wBattleAfterAnim]
-	cp BATTLEANIM_ENEMY_DAMAGE
+	cp ANIM_ENEMY_DAMAGE - BATTLE_AFTERANIMS
 	jr z, .okay
-	cp BATTLEANIM_PLAYER_DAMAGE
+	cp ANIM_PLAYER_DAMAGE - BATTLE_AFTERANIMS
 	ret nz
 
 .okay
