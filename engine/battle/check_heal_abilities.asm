@@ -30,10 +30,6 @@ CheckWeatherHealAbility:
 	jr z, .Done
 	jr c, .Done
 
-	call IceBody
-	jr z, .Done
-	jr c, .Done
-
 	.Done
 	ret
 
