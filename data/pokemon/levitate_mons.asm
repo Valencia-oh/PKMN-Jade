@@ -1,0 +1,33 @@
+LevitateMons::
+	dw MAGNEMITE
+	dw MAGNETON
+	dw GASTLY
+	dw HAUNTER
+	dw GENGAR
+	dw GENGARX
+	dw KOFFING
+	dw WEEZING
+	dw VIBRAVA
+	dw FLYGON
+	dw LUNATONE
+	dw SOLROCK
+	dw BALTOY
+	dw CLAYDOL
+	dw DUSKULL
+	dw DUSCLOPS
+	dw MAGNEZONE
+	dw ARAICHU
+	dw FLYGONX
+	dw -1
+
+WaterproofMons::
+	dw WOOPER
+	dw QUAGSIRE
+	dw SLUGMA
+	dw MAGCARGO
+	dw NUMEL
+	dw CAMERUPT
+	dw BARBOACH
+	dw WHISCASH
+	dw CAMERUPTX
+	dw -1
