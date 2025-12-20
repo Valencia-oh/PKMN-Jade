@@ -1358,6 +1358,27 @@ ld a, [wCurPartySpecies]
 	ld hl, wTypeModifier
 	set STAB_DAMAGE_F, [hl]
 
+.normalStab
+
+	ld hl, wCurDamage + 1
+	ld a, [hld]
+	ld h, [hl]
+	ld l, a
+
+	ld b, h
+	ld c, l
+	srl b
+	rr c
+	add hl, bc
+
+	ld a, h
+	ld [wCurDamage], a
+	ld a, l
+	ld [wCurDamage + 1], a
+
+	ld hl, wTypeModifier
+	set STAB_DAMAGE_F, [hl]
+
 .SkipStab:
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
