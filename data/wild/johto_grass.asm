@@ -1435,7 +1435,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 4, LEDYBA
 	dbw 4, BRONZOR
-	dbw 5, BELLSPROUT
+	dbw 5, PICHU
 	dbw 5, GROWLITHE
 	dbw 5, FLITTLE
 	dbw 6, VULPIX
@@ -1447,7 +1447,7 @@ JohtoGrassWildMons:
 	dbw 5, GROWLITHE
 	dbw 5, FLITTLE
 	dbw 6, VULPIX
-	dbw 6, PIDGEY
+	dbw 6, PICHU
 	; nite
 	dbw 4, SPINARAK
 	dbw 4, HOOTHOOT
