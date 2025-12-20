@@ -1089,9 +1089,9 @@ Script_loadwildmon:
 	call LoadScriptPokemonID
 	ld [wTempWildMonSpecies], a
 	rst GetScriptByte
-	;ld b, a
-	;ld a, [wWildLevel]
-	;add a, b
+	ld b, a
+	ld a, [wWildLevel]
+	add a, b
 	ld [wCurPartyLevel], a
 	ret
 
