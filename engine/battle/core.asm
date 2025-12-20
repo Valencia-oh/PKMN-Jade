@@ -7083,8 +7083,7 @@ GiveExperiencePoints:
 	ld [wCurSpecies], a
 	call GetBaseData
 	push bc
-	ld a, [wLevelCap]
-	ld d, a
+	ld d, MAX_LEVEL
 	farcall CalcExpAtLevel
 	pop bc
 	ld hl, MON_EXP + 2
@@ -7119,11 +7118,8 @@ GiveExperiencePoints:
 	pop bc
 	ld hl, MON_LEVEL
 	add hl, bc
-	ld a, [wLevelCap]
-	push bc
-	ld b, a
 	ld a, [hl]
-	cp b
+	cp MAX_LEVEL
 	pop bc
 	jmp nc, .next_mon
 	cp d
@@ -7374,12 +7370,8 @@ AnimateExpBar:
 	ld a, [wCurBattleMon]
 	cp [hl]
 	jmp nz, .finish
-	ld a, [wLevelCap]
-	push bc
-	ld b, a
 	ld a, [wBattleMonLevel]
-	cp b
-	pop bc
+	cp MAX_LEVEL
 	jmp nc, .finish
 
 	ldh a, [hProduct + 3]
@@ -7416,8 +7408,7 @@ AnimateExpBar:
 	ld [hl], a
 
 .NoOverflow:
-	ld a, [wLevelCap]
-	ld d, a
+	cp MAX_LEVEL
 	farcall CalcExpAtLevel
 	ldh a, [hProduct + 1]
 	ld b, a
@@ -7452,12 +7443,8 @@ AnimateExpBar:
 	ld d, a
 
 .LoopLevels:
-	ld a, [wLevelCap]
-	push bc
-	ld b, a
 	ld a, e
-	cp b
-	pop bc
+	cp MAX_LEVEL
 	jr nc, .FinishExpBar
 	cp d
 	jr z, .FinishExpBar
