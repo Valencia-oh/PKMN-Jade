@@ -269,6 +269,7 @@ PokemonCries::
 	mon_cry CRY_PARAS,        66,  383 ; BRELOOM
 	mon_cry CRY_TOTODILE,   -266,  256 ; ELECTRIKE
 	mon_cry CRY_TOTODILE,     78,  256 ; MANECTRIC
+	mon_cry CRY_SQUIRTLE,     96,  192 ; TORKOAL
 	mon_cry CRY_DIGLETT,     170,  129 ; TRAPINCH
 	mon_cry CRY_DIGLETT,      42,  144 ; VIBRAVA
 	mon_cry CRY_DIGLETT,      42,  144 ; FLYGON
