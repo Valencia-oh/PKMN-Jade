@@ -260,6 +260,7 @@ AlphabeticalPokedexOrder:
 	dw TOGEKISS
 	dw TOGEPI
 	dw TOGETIC
+	dw TORKOAL
 	dw TOTODILE
 	dw TOUCANNON
 	dw TRAPINCH
