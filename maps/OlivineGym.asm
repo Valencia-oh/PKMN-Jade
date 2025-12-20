@@ -49,9 +49,9 @@ OlivineGymJasmineScript:
 	verbosegiveitem TM_IRON_TAIL
 	iffalse .NoRoomForIronTail
 	setevent EVENT_GOT_TM23_IRON_TAIL
-	readmem wBaseLevel
-	addval 5
-	writemem wBaseLevel
+	;readmem wBaseLevel
+	;addval 5
+	;writemem wBaseLevel
 
 	readmem wWildLevel
 	addval 5
