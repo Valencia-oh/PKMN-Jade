@@ -14,10 +14,6 @@ SandStreamDesc:
 	db    "Causes a sandstorm"
 	next  "upon entrance.@"
 
-SnowWarningDesc:
-	db    "Causes a hailstorm"
-	next  "upon entrance.@"
-
 IntimidateDesc:
 	db    "Cuts the foe's"
 	next  "ATTACK.@"
@@ -69,10 +65,6 @@ SunbaskDesc:
 SandBodyDesc:
 	db    "Heals during"
 	next  "SANDSTORM.@"
-
-IceBodyDesc:
-	db    "Heals during"
-	next  "HAIL.@"
 
 HasteDesc:
 	db    "Boosts speed"
