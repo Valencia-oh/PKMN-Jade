@@ -34,7 +34,6 @@ MystifyMons::
 	dw NOCTOWL
 	dw SLOWKING
 	dw MISDREAVUS
-	dw MISMAGIUS
 	dw UNOWN
 	dw -1
 
