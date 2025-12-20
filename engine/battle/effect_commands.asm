@@ -1322,12 +1322,6 @@ ld a, [wCurPartySpecies]
 	pop de
 	pop hl
 
-	push de
-	push bc
-	farcall DoBadgeTypeBoosts
-	pop bc
-	pop de
-
 	ld a, [wCurType]
 	cp b
 	jr z, .stab
@@ -4937,9 +4931,6 @@ CalcPlayerStats:
 
 	ld a, NUM_BATTLE_STATS
 	call CalcBattleStats
-
-	ld hl, BadgeStatBoosts
-	call CallBattleCore
 
 	call BattleCommand_SwitchTurn
 
