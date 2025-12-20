@@ -70,9 +70,9 @@ EcruteakGymMortyScript:
 	verbosegiveitem TM_SHADOW_BALL
 	iffalse .NoRoomForShadowBall
 	setevent EVENT_GOT_TM30_SHADOW_BALL
-	;readmem wBaseLevel
-	;addval 5
-	;writemem wBaseLevel
+	readmem wBaseLevel
+	addval 5
+	writemem wBaseLevel
 
 	readmem wWildLevel
 	addval 5
