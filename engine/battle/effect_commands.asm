@@ -2292,7 +2292,7 @@ BattleCommand_ApplyDamage:
 		
 .HasSturdy:
 	call BattleRandom
-	farcall CheckOpponentFullHP
+	cp c
 	jr nz, .damage
 	farcall BattleCommand_FalseSwipe
 	ld b, 0
