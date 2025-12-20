@@ -2133,8 +2133,6 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	ld a, [wBattleResult]
 	and BATTLERESULT_BITMASK
 	ld [wBattleResult], a ; WIN
-	; fallthrough
-	ApplyExperienceAfterEnemyCaught:
 	call IsAnyMonHoldingExpShare
 	jr z, .skip_exp
 	ld hl, wEnemyMonBaseStats
@@ -7120,7 +7118,6 @@ GiveExperiencePoints:
 	add hl, bc
 	ld a, [hl]
 	cp MAX_LEVEL
-	pop bc
 	jmp nc, .next_mon
 	cp d
 	jmp z, .next_mon
@@ -7370,6 +7367,7 @@ AnimateExpBar:
 	ld a, [wCurBattleMon]
 	cp [hl]
 	jmp nz, .finish
+
 	ld a, [wBattleMonLevel]
 	cp MAX_LEVEL
 	jmp nc, .finish
@@ -7408,7 +7406,7 @@ AnimateExpBar:
 	ld [hl], a
 
 .NoOverflow:
-	cp MAX_LEVEL
+	ld d, MAX_LEVEL
 	farcall CalcExpAtLevel
 	ldh a, [hProduct + 1]
 	ld b, a
