@@ -12,5 +12,4 @@ ChlorophyllMons::
 	dw VILEPLUME
 	dw EXEGGUTOR
 	dw BELLOSSOM
-	dw SHIFTRY
 	dw -1
