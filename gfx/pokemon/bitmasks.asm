@@ -250,7 +250,7 @@ LugiaBitmasks:      INCLUDE "gfx/pokemon/lugia/bitmask.asm"
 HoOhBitmasks:       INCLUDE "gfx/pokemon/ho_oh/bitmask.asm"
 CelebiBitmasks:     INCLUDE "gfx/pokemon/celebi/bitmask.asm"
 ; Added Mons
-
+;gen3
 PoochyenaBitmasks:  INCLUDE "gfx/pokemon/poochyena/bitmask.asm"
 MightyenaBitmasks:  INCLUDE "gfx/pokemon/mightyena/bitmask.asm"
 ZigzagoonBitmasks:  INCLUDE "gfx/pokemon/zigzagoon/bitmask.asm"
@@ -261,9 +261,11 @@ ShroomishBitmasks:  INCLUDE "gfx/pokemon/shroomish/bitmask.asm"
 BreloomBitmasks:    INCLUDE "gfx/pokemon/breloom/bitmask.asm"
 ElectrikeBitmasks:  INCLUDE "gfx/pokemon/electrike/bitmask.asm"
 ManectricBitmasks:  INCLUDE "gfx/pokemon/manectric/bitmask.asm"
+TorkoalBitmasks:  INCLUDE "gfx/pokemon/torkoal/bitmask.asm"
 TrapinchBitmasks:   INCLUDE "gfx/pokemon/trapinch/bitmask.asm"
 VibravaBitmasks:    INCLUDE "gfx/pokemon/vibrava/bitmask.asm"
 FlygonBitmasks:     INCLUDE "gfx/pokemon/flygon/bitmask.asm"
+;gen4
 HonchkrowBitmasks:  INCLUDE "gfx/pokemon/honchkrow/bitmask.asm"
 BronzorBitmasks:    INCLUDE "gfx/pokemon/bronzor/bitmask.asm"
 BronzongBitmasks:   INCLUDE "gfx/pokemon/bronzong/bitmask.asm"
@@ -271,6 +273,7 @@ TogekissBitmasks:   INCLUDE "gfx/pokemon/togekiss/bitmask.asm"
 LeafeonBitmasks:    INCLUDE "gfx/pokemon/leafeon/bitmask.asm"
 GlaceonBitmasks:    INCLUDE "gfx/pokemon/glaceon/bitmask.asm"
 MamoswineBitmasks:  INCLUDE "gfx/pokemon/mamoswine/bitmask.asm"
+;gen5
 JoltikBitmasks:     INCLUDE "gfx/pokemon/joltik/bitmask.asm"
 GalvantulaBitmasks: INCLUDE "gfx/pokemon/galvantula/bitmask.asm"
 LarvestaBitmasks:   INCLUDE "gfx/pokemon/larvesta/bitmask.asm"
