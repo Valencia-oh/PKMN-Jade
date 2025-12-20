@@ -2048,26 +2048,6 @@ DefenseCurl:
 	statupfailtext
 	endmove
 
-DoBurn:
-	checkobedience
-	usedmovetext
-	doturn
-	stab
-	checkhit
-	checksafeguard
-	burn
-	endmove
-
-DoFreeze:
-	checkobedience
-	usedmovetext
-	doturn
-	stab
-	checkhit
-	checksafeguard
-	freeze
-	endmove
-
 SpecialAttackUpHit:
 	checkobedience
 	usedmovetext
@@ -2124,11 +2104,4 @@ Growth:
 	statupmessage
 	raisesub	
 	statupfailtext
-	endmove
-
-Hail:
-	checkobedience
-	usedmovetext
-	doturn
-	starthail
 	endmove
