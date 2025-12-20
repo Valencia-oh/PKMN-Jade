@@ -75,9 +75,9 @@ CianwoodGymChuckScript:
 	verbosegiveitem TM_DYNAMICPUNCH
 	iffalse .BagFull
 	setevent EVENT_GOT_TM01_DYNAMICPUNCH
-	;readmem wBaseLevel
-	;addval 5
-	;writemem wBaseLevel
+	readmem wBaseLevel
+	addval 5
+	writemem wBaseLevel
 
 	readmem wWildLevel
 	addval 5
