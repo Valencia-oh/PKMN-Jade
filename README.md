@@ -4,7 +4,7 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 
 ## Implemented Features
 - Removed Trade+Item Evos, now just use the item
-- 39 new pokemon, bringing the total to 290 (Applin, Clodsire, Toucannon, Espathra, Bronzong, Pelipper, Malamar, Linoone, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, Chi-yu and Falinks lines + Glaceon, Leafeon, Ursaluna, Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
+- 39 new pokemon, bringing the total to 290 (Applin, Clodsire, Toucannon, Espathra, Bronzong, Pelipper, Malamar, Linoone, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, Flygon, Torkoal, Chi-yu and Falinks lines + Glaceon, Leafeon, Ursaluna, Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
 - HMs done through party not attacks (added with CSE)
 - overhauled PC (added with CSE)
 - Fairy Type
@@ -34,8 +34,8 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 
 ### Credits 
 - The majority of systems would not work without the use of the CSE engine, so shout out to all the devs on there
-- Falinks,  Chi-yu, Volcarona, and Applin line Sprites are from Sage Deoxys
-- nuukiie made the Glaceon, Leafeon, Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Linoon, Espathra, Clodsire, Toucannon, Mightyena, Breloom, Galvantula, Manectric, and Pelipper lines
+- Falinks, Chi-yu, Volcarona, and Applin line Sprites are from Sage Deoxys
+- nuukiie made the Glaceon, Leafeon, Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Linoon, Flygon, Torkoal, Espathra, Clodsire, Toucannon, Mightyena, Breloom, Galvantula, Manectric, and Pelipper lines
 - Maschiff and Mabosstiff use edited versions of Egg3ggEgg's sprites
 - Bronzor and Bronzong sprites are from BlueEmerald
 - Ursaluna Sprites by Me, free to use
@@ -64,21 +64,26 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Toucannnon                               ✔️
 - Locations near Cianwood with Alola Mons  -- (Locations Done, Alola Mons not added yet)
 - 
-### v.0.7 goals  - In Progress
-- add Flygon ✖️
+### v.0.7 goals  - DONEa
+- add Torkoal ✔️
 - More attacks ✔️
 - Abilities ✔️
 - Physical/Special Split ✔️
 - Rebalance Levels South of Goldenrod      -- (suspended)
 - Olivine + Cianwood Reblanace             -- (suspended)
 - Level Scaling ✔️
-### v.0.8 goals
-- Olivine Woods + Creek                    ✖️,
+- Trapinch                                 ✔️
+- Vibrava                                  ✔️
+- Flygon                                   ✔️
+### v.0.8 goals - IN PROGRESS
+- Olivine Woods + Creek                    ✖️
 - Ecruteak Woods                           ✖️
-- Hisuian Growelithe                       ✖️,
-- Hisuian Arcanine                         ✖️,
-- Trapinch                                 ✖️,
-- Vibrava                                  ✖️,
-- Flygon                                   ✖️,
-- Dripplin                                 ✖️,
-- Hydrapple                                ✖️,
+- Hisuian Growelithe                       ✖️
+- Hisuian Arcanine                         ✖️
+- Dripplin                                 ✖️
+- Hydrapple                                ✖️
+### v.0.9 goals - IN PROGRESS
+- Hoenn Legend Trio -- Sprites Obtained, Code Not Started ✖️
+- Spear Pillar ✖️
+- Legendary Bird Islands ✖️
+- Remove Team Rocket Story Line ✖️
