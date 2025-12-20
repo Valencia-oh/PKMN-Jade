@@ -307,6 +307,9 @@ LedybaEvosAttacks:
 	dbw 22, LIGHT_SCREEN
 	dbw 22, REFLECT
 	dbw 22, SAFEGUARD
+	dbw 26, THUNDERPUNCH
+	dbw 26, ICE_PUNCH
+	dbw 26, FIRE_PUNCH
 	dbw 29, BATON_PASS
 	dbw 36, SWIFT
 	dbw 43, AGILITY
@@ -322,6 +325,9 @@ LedianEvosAttacks:
 	dbw 24, LIGHT_SCREEN
 	dbw 24, REFLECT
 	dbw 24, SAFEGUARD
+	dbw 27, THUNDERPUNCH
+	dbw 27, ICE_PUNCH
+	dbw 27, FIRE_PUNCH
 	dbw 33, BATON_PASS
 	dbw 42, SWIFT
 	dbw 51, AGILITY
