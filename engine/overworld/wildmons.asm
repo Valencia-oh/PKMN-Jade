@@ -339,8 +339,8 @@ ChooseWildEncounter:
 ; Store the level
 .ok
 ;apply level scaling
-	ld a, [wWildLevel]
-	add a, b
+	;ld a, [wWildLevel]
+	;add a, b
 	ld [wCurPartyLevel], a
 
 	ld a, [hli]
