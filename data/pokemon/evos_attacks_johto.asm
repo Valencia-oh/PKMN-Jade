@@ -240,7 +240,6 @@ FeraligatrEvosAttacks:
 	dbw 32, CRUNCH
 	dbw 36, ICE_FANG
 	dbw 22, THUNDER_FANG
-	dbw 22, FIRE_FANG
 	dbw 38, SLASH
 	dbw 47, SCREECH
 	dbw 58, HYDRO_PUMP
@@ -1179,7 +1178,7 @@ PhanpyEvosAttacks:
 	dbw 9, DEFENSE_CURL
 	dbw 17, FLAIL
 	dbw 25, TAKE_DOWN
-	dbw 28, FIRE_FANG
+	dbw 28, ZEN_HEADBUTT
 	dbw 33, ROLLOUT
 	dbw 41, ENDURE
 	dbw 49, DOUBLE_EDGE
@@ -1192,6 +1191,7 @@ DonphanEvosAttacks:
 	dbw 9, DEFENSE_CURL
 	dbw 17, FLAIL
 	dbw 25, FURY_ATTACK
+	dbw 28, ZEN_HEADBUTT
 	dbw 33, ROLLOUT
 	dbw 41, RAPID_SPIN
 	dbw 49, EARTHQUAKE
