@@ -220,6 +220,7 @@ LoadStatsScreenPals:
 	ld hl, StatsScreenPals
 	ld b, 0
 	add hl, bc
+	dec c
 	add hl, bc
 	ldh a, [rWBK]
 	push af
