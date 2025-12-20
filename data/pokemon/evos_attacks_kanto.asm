@@ -845,6 +845,7 @@ MeowthEvosAttacks:
 	dbw 20, PAY_DAY
 	dbw 28, FAINT_ATTACK
 	dbw 35, SCREECH
+	dbw 37, PSYCHO_CUT
 	dbw 41, FURY_SWIPES
 	dbw 46, SLASH
 	db 0 ; no more level-up moves
@@ -1295,6 +1296,7 @@ FarfetchDEvosAttacks:
 	dbw 7, SAND_ATTACK
 	dbw 13, LEER
 	dbw 19, FURY_ATTACK
+	dbw 22, PSYCHO_CUT
 	dbw 25, SWORDS_DANCE
 	dbw 31, AGILITY
 	dbw 37, SLASH
@@ -1853,6 +1855,7 @@ ScytherEvosAttacks:
 	dbw 18, FALSE_SWIPE
 	dbw 24, AGILITY
 	dbw 30, WING_ATTACK
+	dbw 33, PSYCHO_CUT
 	dbw 36, SLASH
 	dbw 42, SWORDS_DANCE
 	dbw 48, DOUBLE_TEAM
@@ -2096,6 +2099,7 @@ KabutopsEvosAttacks:
 	dbw 28, SAND_ATTACK
 	dbw 37, ENDURE
 	dbw 40, SLASH
+	dbw 44, PSYCHO_CUT
 	dbw 51, MEGA_DRAIN
 	dbw 65, ANCIENTPOWER
 	db 0 ; no more level-up moves
