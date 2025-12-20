@@ -296,6 +296,7 @@ HonchkrowEvosAttacks:
 	dbw 28, THIEF
 	dbw 31, FAINT_ATTACK
 	dbw 36, AEROBLAST
+	dbw 37, DARK_PULSE
 	dbw 41, MEAN_LOOK
 	db 0 ; no more level-up moves
 
@@ -310,6 +311,7 @@ BronzorEvosAttacks:
 	dbw 24, SCREECH
 	dbw 29, DISABLE
 	dbw 34, HEADBUTT
+	dbw 35, ZEN_HEADBUTT
 	dbw 43, AMNESIA
 	dbw 48, PSYCHIC_M
 
@@ -323,6 +325,7 @@ BronzongEvosAttacks:
 	dbw 24, SCREECH
 	dbw 29, DISABLE
 	dbw 34, HEADBUTT
+	dbw 35, ZEN_HEADBUTT
 	dbw 43, AMNESIA
 	dbw 48, PSYCHIC_M
 
@@ -710,6 +713,7 @@ ClodsireEvosAttacks:
 	dbw 23, SLUDGE_BOMB
 	dbw 28, ZEN_HEADBUTT
 	dbw 35, EARTHQUAKE
+	dbw 40, POISON_TAIL
 	dbw 47, DIG
 	dbw 59, MIST
 	dbw 59, HAZE
@@ -724,6 +728,7 @@ ChiyuEvosAttacks:
 	dbw 10, THIEF
 	dbw 15, FIRE_SPIN
 	dbw 20, CONFUSE_RAY
+	dbw 35, DARK_PULSE
 	db 0 ; no more level-up moves
 
 ErsrheadbbyEvosAttacks:
