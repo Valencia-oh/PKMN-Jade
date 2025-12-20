@@ -1309,6 +1309,12 @@ BattleCommand_Stab:
 	pop de
 	pop hl
 
+	push de
+	push bc
+	farcall DoBadgeTypeBoosts
+	pop bc
+	pop de
+
 	ld a, [wCurType]
 	cp b
 	jr z, .stab
@@ -1606,9 +1612,6 @@ BattleCommand_CheckHit:
 	call .ThunderRain
 	ret z
 
-	call .BlizzardHail
-	ret z
-
 	call .XAccuracy
 	ret nz
 
@@ -1777,17 +1780,6 @@ BattleCommand_CheckHit:
 
 	ld a, [wBattleWeather]
 	cp WEATHER_RAIN
-	ret
-
-.BlizzardHail:
-; Return z if the current move always hits in hail, and it is hailing.
-	ld a, BATTLE_VARS_MOVE_EFFECT
-	call GetBattleVar
-	cp EFFECT_BLIZZARD
-	ret nz
-
-	ld a, [wBattleWeather]
-	cp WEATHER_HAIL
 	ret
 
 .XAccuracy:
@@ -2135,6 +2127,8 @@ BattleCommand_FailureText:
 	jr z, .multihit
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .multihit
+	cp EFFECT_BEAT_UP
+	jmp nz, EndMoveEffect
 ; fallthrough
 .multihit
 	call BattleCommand_RaiseSub
@@ -2458,6 +2452,8 @@ BattleCommand_CheckFaint:
 	cp EFFECT_POISON_MULTI_HIT
 	jr z, .multiple_hit_raise_sub
 	cp EFFECT_TRIPLE_KICK
+	jr z, .multiple_hit_raise_sub
+	cp EFFECT_BEAT_UP
 	jr nz, EndMoveEffect
 
 .multiple_hit_raise_sub
@@ -2938,6 +2934,8 @@ EnemyAttackDamage:
 	ld a, 1
 	and a
 	ret
+
+INCLUDE "engine/battle/move_effects/beat_up.asm"
 
 BattleCommand_ClearMissDamage:
 	ld a, [wAttackMissed]
@@ -3619,6 +3617,8 @@ DoSubstituteDamage:
 	jr z, .ok
 	cp EFFECT_TRIPLE_KICK
 	jr z, .ok
+	cp EFFECT_BEAT_UP
+	jr z, .ok
 	xor a
 	ld [hl], a
 .ok
@@ -4091,16 +4091,25 @@ BattleCommand_FreezeTarget:
 	call GetBattleVarAddr
 	set FRZ, [hl]
 	call UpdateOpponentInParty
-	ld hl, ApplyFrbEffectOnSpclAttack
-	call CallBattleCore
 	ld de, ANIM_FRZ
 	call PlayOpponentBattleAnim
 	call RefreshBattleHuds
 
-	ld hl, GotAFrostbiteText
+	ld hl, WasFrozenText
 	call StdBattleTextbox
 
-	farcall UseHeldStatusHealingItem	
+	farcall UseHeldStatusHealingItem
+	ret nz
+
+	call OpponentCantMove
+	call EndRechargeOpp
+	ld hl, wEnemyJustGotFrozen
+	ldh a, [hBattleTurn]
+	and a
+	jr z, .finish
+	ld hl, wPlayerJustGotFrozen
+.finish
+	ld [hl], $1
 	ret
 
 BattleCommand_ParalyzeTarget:
@@ -4843,6 +4852,9 @@ CalcPlayerStats:
 	ld a, NUM_BATTLE_STATS
 	call CalcBattleStats
 
+	ld hl, BadgeStatBoosts
+	call CallBattleCore
+
 	call BattleCommand_SwitchTurn
 
 	ld hl, ApplyPrzEffectOnSpeed
@@ -5281,6 +5293,8 @@ BattleCommand_EndLoop:
 	ld a, 1
 	jr z, .double_hit
 	ld a, [hl]
+	cp EFFECT_BEAT_UP
+	jr z, .beat_up
 	cp EFFECT_TRIPLE_KICK
 	jr nz, .not_triple_kick
 .reject_triple_kick_sample
@@ -5292,6 +5306,32 @@ BattleCommand_EndLoop:
 	ld a, 1
 	ld [bc], a
 	jr .done_loop
+
+.beat_up
+	ldh a, [hBattleTurn]
+	and a
+	jr nz, .check_ot_beat_up
+	ld a, [wPartyCount]
+	cp 1
+	jr z, .only_one_beatup
+	dec a
+	jr .double_hit
+
+.check_ot_beat_up
+	ld a, [wBattleMode]
+	cp WILD_BATTLE
+	jr z, .only_one_beatup
+	ld a, [wOTPartyCount]
+	cp 1
+	jr z, .only_one_beatup
+	dec a
+	jr .double_hit
+
+.only_one_beatup
+	ld a, BATTLE_VARS_SUBSTATUS3
+	call GetBattleVarAddr
+	res SUBSTATUS_IN_LOOP, [hl]
+	ret
 
 .not_triple_kick
 	call BattleRandom
@@ -5332,6 +5372,7 @@ BattleCommand_EndLoop:
 	push bc
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
+	cp EFFECT_BEAT_UP
 	call nz, StdBattleTextbox
 
 	pop bc
@@ -5932,98 +5973,6 @@ BattleCommand_Paralyze:
 .didnt_affect
 	call AnimateFailedMove
 	jmp PrintDoesntAffect
-
-BattleCommand_Burn:
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVar
-	bit BRN, a
-	jr nz, .burned
-	ld a, [wTypeModifier]
-	and $7f
-	jr z, .didnt_affect	
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	and a
-	jr nz, .failed
-	ld a, [wAttackMissed]
-	and a
-	jr nz, .failed
-	call CheckSubstituteOpp
-	jr nz, .failed
-	ld c, 30
-	call DelayFrames
-	call AnimateCurrentMove
-	ld a, $1
-	ldh [hBGMapMode], a
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	set BRN, [hl]
-	call UpdateOpponentInParty
-	ld hl, ApplyBrnEffectOnAttack
-	call CallBattleCore
-	call UpdateBattleHuds
-	ld hl, WasBurnedText
-	call StdBattleTextbox
-	ld hl, UseHeldStatusHealingItem
-	jp CallBattleCore
-
-.burned
-	call AnimateFailedMove
-	ld hl, AlreadyBurnedText
-	jp StdBattleTextbox
-
-.failed
-	jp PrintDidntAffect2
-
-.didnt_affect
-	call AnimateFailedMove
-	jp PrintDoesntAffect
-	
-BattleCommand_Freeze:
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVar
-	bit FRZ, a
-	jr nz, .frozen
-	ld a, [wTypeModifier]
-	and $7f
-	jr z, .didnt_affect	
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	and a
-	jr nz, .failed
-	ld a, [wAttackMissed]
-	and a
-	jr nz, .failed
-	call CheckSubstituteOpp
-	jr nz, .failed
-	ld c, 30
-	call DelayFrames
-	call AnimateCurrentMove
-	ld a, $1
-	ldh [hBGMapMode], a
-	ld a, BATTLE_VARS_STATUS_OPP
-	call GetBattleVarAddr
-	set FRZ, [hl]
-	call UpdateOpponentInParty
-	ld hl, ApplyFrbEffectOnSpclAttack
-	call CallBattleCore
-	call UpdateBattleHuds
-	ld hl, GotAFrostbiteText
-	call StdBattleTextbox
-	ld hl, UseHeldStatusHealingItem
-	jp CallBattleCore
-
-.frozen
-	call AnimateFailedMove
-	ld hl, AlreadyFrozenText
-	jp StdBattleTextbox
-
-.failed
-	jp PrintDidntAffect2
-
-.didnt_affect
-	call AnimateFailedMove
-	jp PrintDoesntAffect
 
 CheckMoveTypeMatchesTarget:
 ; Compare move type to opponent type.
@@ -6658,8 +6607,6 @@ BattleCommand_SkipSunCharge:
 INCLUDE "engine/battle/move_effects/future_sight.asm"
 
 INCLUDE "engine/battle/move_effects/thunder.asm"
-
-INCLUDE "engine/battle/move_effects/hail.asm"
 
 CheckHiddenOpponent:
 	ld a, BATTLE_VARS_SUBSTATUS5_OPP

@@ -2133,29 +2133,98 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	ld a, [wBattleResult]
 	and BATTLERESULT_BITMASK
 	ld [wBattleResult], a ; WIN
-	; fallthrough
-	ApplyExperienceAfterEnemyCaught:
-	; Preserve bits of non-fainted participants
-	ld a, [wBattleParticipantsNotFainted]
-	ld d, a
-	push de
-	call GiveExperiencePoints
-	pop de
-	; give 50% EXP to non-participants	
-	ld hl, wEnemyMonBaseExp
-	;Right shift xp amount, roughly halving it
-	srl [hl]	
-	cp 0
-	jr nz, .SkipHalfXp
+	call IsAnyMonHoldingExpShare
+	jr z, .skip_exp
+	ld hl, wEnemyMonBaseStats
+	ld b, wEnemyMonEnd - wEnemyMonBaseStats
+.loop
 	srl [hl]
-.SkipHalfXp
+	inc hl
+	dec b
+	jr nz, .loop
+
+.skip_exp
+	ld hl, wEnemyMonBaseStats
+	ld de, wBackupEnemyMonBaseStats
+	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
+	rst CopyBytes
+	xor a
+	ld [wGivingExperienceToExpShareHolders], a
+	call GiveExperiencePoints
+	call IsAnyMonHoldingExpShare
+	ret z
+
 	ld a, [wBattleParticipantsNotFainted]
 	push af
 	ld a, d
 	ld [wBattleParticipantsNotFainted], a
+	ld hl, wBackupEnemyMonBaseStats
+	ld de, wEnemyMonBaseStats
+	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
+	rst CopyBytes
+	ld a, $1
+	ld [wGivingExperienceToExpShareHolders], a
 	call GiveExperiencePoints
 	pop af
 	ld [wBattleParticipantsNotFainted], a
+	ret
+
+IsAnyMonHoldingExpShare:
+	ld a, [wPartyCount]
+	ld b, a
+	ld hl, wPartyMon1
+	ld c, 1
+	ld d, 0
+.loop
+	push hl
+	push bc
+	ld bc, MON_HP
+	add hl, bc
+	ld a, [hli]
+	or [hl]
+	pop bc
+	pop hl
+	jr z, .next
+
+	push hl
+	push bc
+	ld bc, MON_ITEM
+	add hl, bc
+	pop bc
+	ld a, [hl]
+	pop hl
+
+	push hl
+	call GetItemIndexFromID
+	cphl16 EXP_SHARE
+	pop hl
+	jr nz, .next
+	ld a, d
+	or c
+	ld d, a
+
+.next
+	sla c
+	push de
+	ld de, PARTYMON_STRUCT_LENGTH
+	add hl, de
+	pop de
+	dec b
+	jr nz, .loop
+
+	ld a, d
+	ld e, 0
+	ld b, PARTY_LENGTH
+.loop2
+	srl a
+	jr nc, .okay
+	inc e
+
+.okay
+	dec b
+	jr nz, .loop2
+	ld a, e
+	and a
 	ret
 
 StopDangerSound:
@@ -2460,6 +2529,8 @@ PlayVictoryMusic:
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .trainer_victory
+	push de
+	call IsAnyMonHoldingExpShare
 	pop de
 	jr nz, .play_music
 	ld hl, wPayDayMoney
@@ -3724,6 +3795,7 @@ InitBattleMon:
 	ld bc, PARTYMON_STRUCT_LENGTH - MON_ATK
 	rst CopyBytes
 	call ApplyStatusEffectOnPlayerStats
+	jmp BadgeStatBoosts
 
 BattleCheckPlayerShininess:
 	call GetPartyMonDVs
@@ -6410,7 +6482,6 @@ ApplyStatusEffectOnEnemyStats:
 ApplyStatusEffectOnStats:
 	ldh [hBattleTurn], a
 	call ApplyPrzEffectOnSpeed
-	call ApplyFrbEffectOnSpclAttack
 	jr ApplyBrnEffectOnAttack
 
 ApplyPrzEffectOnSpeed:
@@ -6455,36 +6526,6 @@ ApplyPrzEffectOnSpeed:
 	ld b, $1 ; min speed
 
 .enemy_ok
-	ld [hl], b
-	ret
-
-ApplyFrbEffectOnSpclAttack:
-	ldh a, [hBattleTurn]
-	and a
-	jr z, .enemy
-	ld a, [wBattleMonStatus]
-	and 1 << FRZ
-	ret z
-	ld hl, wBattleMonSpclAtk + 1
-	jr .proceed
-
-.enemy
-	ld a, [wEnemyMonStatus]
-	and 1 << FRZ
-	ret z
-	ld hl, wEnemyMonSpclAtk + 1
-.proceed
-	ld a, [hld]
-	ld b, a
-	ld a, [hl]
-	srl a
-	rr b
-	ld [hli], a
-	or b
-	jr nz, .ok
-	ld b, $1 ; min special attack
-
-.ok
 	ld [hl], b
 	ret
 
@@ -6625,6 +6666,95 @@ ApplyStatLevelMultiplier:
 
 StatLevelMultipliers_Applied:
 INCLUDE "data/battle/stat_multipliers.asm"
+
+BadgeStatBoosts:
+; Raise the stats of the battle mon in wBattleMon
+; depending on which badges have been obtained.
+
+; Every other badge boosts a stat, starting from the first.
+; GlacierBadge also boosts Special Defense, although the relevant code is buggy (see below).
+
+; 	ZephyrBadge:  Attack
+; 	PlainBadge:   Speed
+; 	MineralBadge: Defense
+; 	GlacierBadge: Special Attack and Special Defense
+
+; The boosted stats are in order, except PlainBadge and MineralBadge's boosts are swapped.
+
+	ld a, [wLinkMode]
+	and a
+	ret nz
+
+	ld a, [wInBattleTowerBattle]
+	and a
+	ret nz
+
+	ld a, [wJohtoBadges]
+
+; Swap badges 3 (PlainBadge) and 5 (MineralBadge).
+	ld d, a
+	and (1 << PLAINBADGE)
+	add a
+	add a
+	ld b, a
+	ld a, d
+	and (1 << MINERALBADGE)
+	rrca
+	rrca
+	ld c, a
+	ld a, d
+	and ((1 << ZEPHYRBADGE) | (1 << HIVEBADGE) | (1 << FOGBADGE) | (1 << STORMBADGE) | (1 << GLACIERBADGE) | (1 << RISINGBADGE))
+	or b
+	or c
+	ld b, a
+
+	ld hl, wBattleMonAttack
+	ld c, 4
+.CheckBadge:
+	ld a, b
+	srl b
+	push af
+	call c, BoostStat
+	pop af
+	inc hl
+	inc hl
+; Check every other badge.
+	srl b
+	dec c
+	jr nz, .CheckBadge
+	srl a
+	ret nc
+; fallthrough
+BoostStat:
+; Raise stat at hl by 1/8.
+
+	ld a, [hli]
+	ld d, a
+	ld e, [hl]
+	srl d
+	rr e
+	srl d
+	rr e
+	srl d
+	rr e
+	ld a, [hl]
+	add e
+	ld [hld], a
+	ld a, [hl]
+	adc d
+	ld [hli], a
+
+; Cap at 999.
+	ld a, [hld]
+	sub LOW(MAX_STAT_VALUE)
+	ld a, [hl]
+	sbc HIGH(MAX_STAT_VALUE)
+	ret c
+	ld a, HIGH(MAX_STAT_VALUE)
+	ld [hli], a
+	ld a, LOW(MAX_STAT_VALUE)
+	ld [hld], a
+	ret
 
 _LoadBattleFontsHPBar:
 	farjp LoadBattleFontsHPBar
@@ -7070,6 +7200,7 @@ GiveExperiencePoints:
 	ld [wApplyStatLevelMultipliersToEnemy], a
 	call ApplyStatLevelMultiplierOnAllStats
 	call ApplyStatusEffectOnPlayerStats
+	call BadgeStatBoosts
 	call UpdatePlayerHUD
 	call EmptyBattleTextbox
 	call LoadTilemapToTempTilemap
