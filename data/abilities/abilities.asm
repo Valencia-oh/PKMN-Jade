@@ -111,6 +111,16 @@ AbilityWaterproofMons::
 	dw MAGCARGO
 	dw -1
 
+AbilitySturdyMons::
+	dw GEODUDE
+	dw GRAVELER
+	dw GOLEM
+	dw ONIX
+	dw SUDOWOODO
+	dw SHUCKLE
+	dw DONPHAN
+	dw -1
+
 ;Damage Boosting Ability Mons ----------------------------------------------
 
 AbilityElementalFistMons::
