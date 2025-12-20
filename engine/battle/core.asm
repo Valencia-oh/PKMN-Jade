@@ -9132,4 +9132,4 @@ GetWeatherImage:
 	db $80, $1c ; y/x - top right
 	db $80, $14 ; y/x - top left
 
-"engine/battle/etb_abilities.asm"
+include "engine/battle/etb_abilities.asm"
