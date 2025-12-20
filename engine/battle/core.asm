@@ -2145,26 +2145,10 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	ld hl, wEnemyMonBaseExp
 	;Right shift xp amount, roughly halving it
 	srl [hl]	
-	ld a, [wEliteFourXpBoost]
 	cp 0
 	jr nz, .SkipHalfXp
 	srl [hl]
 .SkipHalfXp
-	inc hl
-	dec b
-	jr nz, .loop
-
-.skip_exp
-	ld hl, wEnemyMonBaseStats
-	ld de, wBackupEnemyMonBaseStats
-	ld bc, wEnemyMonEnd - wEnemyMonBaseStats
-	rst CopyBytes
-	xor a
-	ld [wGivingExperienceToExpShareHolders], a
-	call GiveExperiencePoints
-	call IsAnyMonHoldingExpShare
-	ret z
-
 	ld a, [wBattleParticipantsNotFainted]
 	push af
 	ld a, d
@@ -2476,8 +2460,6 @@ PlayVictoryMusic:
 	ld a, [wBattleMode]
 	dec a
 	jr nz, .trainer_victory
-	push de
-	call IsAnyMonHoldingExpShare
 	pop de
 	jr nz, .play_music
 	ld hl, wPayDayMoney
