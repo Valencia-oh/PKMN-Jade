@@ -22,7 +22,6 @@ AbilityIntimidateMons::
 	dw ARCANINE
 	dw TAUROS
 	dw GYARADOS
-	dw GYARADOSX
 	dw GRANBULL
 	dw MIGHTYENA
 	dw MANECTRIC
@@ -32,8 +31,6 @@ AbilityMystifyMons::
 	dw CLEFABLE
 	dw WIGGLYTUFF
 	dw DRAGONITE
-	dw DRAGONITEX
-	dw DRAGONITEY
 	dw NOCTOWL
 	dw SLOWKING
 	dw MISDREAVUS
@@ -122,7 +119,6 @@ AbilityElementalFistMons::
 	dw PRIMEAPE
 	dw KADABRA
 	dw ALAKAZAM
-	dw ALAKAZAMX
 	dw HITMONCHAN
 	dw LEDYBA
 	dw LEDIAN
@@ -187,7 +183,6 @@ AbilityRainDishMons::
 	dw SQUIRTLE
 	dw WARTORTLE
 	dw BLASTOISE
-	dw BLASTOISEX
 	dw SLOWBRO
 	dw -1
 
