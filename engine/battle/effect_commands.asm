@@ -2257,6 +2257,7 @@ BattleCommand_ApplyDamage:
 	call GetBattleVar
 	bit SUBSTATUS_ENDURE, a
 	jr z, .focus_band
+	bit SUBSTATUS_STURDY, a
 	jr z, .sturdy
 
 	call BattleCommand_FalseSwipe
