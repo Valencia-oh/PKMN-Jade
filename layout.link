@@ -40,7 +40,6 @@ ROMX $03
 	"bank3"
 	"VWF"
 	"mobile5C"
-	"Battle Weather Images"
 ROMX $04
 	"bank4"
 	"Tileset Data 11"
@@ -64,6 +63,7 @@ ROMX $09
 ROMX $0a
 	"bankA"
 	"Trainer Backpics"
+	;"Map Attributes"
 ROMX $0b
 	"bankB"
 ROMX $0c
@@ -76,24 +76,21 @@ ROMX $0f
 	"Battle Core"
 ROMX $10
 	"bank10"
-	"Evolutions and Attacks Pointers"
-	"Evolutions and Attacks 1"
 ROMX $11
 	"bank11"
 	"Newbox"
 	"Bill's PC Graphics"
 ROMX $12
 	"Crystal Features 1"
-	"Egg Moves 2"
-	"Evolutions and Attacks 2"
-	"Pic Animations 4"
+	"Egg Moves 2"	
 ROMX $13
 	"bank13"
 	"Shrink Pics"
 	"bank13_2"
 ROMX $14
 	"bank14"
-	"Tileset Data 9"
+	"Unused Egg Pic"
+	"Evolutions and Attacks Pointers"
 ROMX $15
 	"Map Scripts 1"
 ROMX $16
@@ -117,8 +114,7 @@ ROMX $1e
 ROMX $1f
 	"Map Scripts 10"
 ROMX $20
-	"bank20"
-	"Enemy Trainer Parties 2"
+	"bank20"	
 ROMX $21
 	"bank21"
 ROMX $22
@@ -156,7 +152,6 @@ ROMX $31
 	"Sprites 2"
 ROMX $32
 	"bank32"
-	"Map Attributes"
 	"The End"
 ROMX $33
 	"Move Animations"
@@ -168,7 +163,6 @@ ROMX $35
 ROMX $36
 	"Font Inversed"
 	"Pic Animations 3"
-	
 ROMX $37
 	"Tileset Data 6"
 ROMX $38
@@ -199,10 +193,8 @@ ROMX $41
 ROMX $42
 	"Intro Logo"
 	"Credits"
-
 ROMX $43
 	"Title"
-	"Mon Icons 3"
 ROMX $44
 	"Mobile Adapter SDK"
 	"Mon Icons 2"
@@ -212,10 +204,8 @@ ROMX $46
 	"mobile46"
 ROMX $47
 	"Battle Tower"
-	"Pics 21"
 ROMX $48
 	"Pic Pointers"
-	"Pics 1"
 ROMX $49
 	"Unown Pic Pointers"
 	"Pics 2"
@@ -266,7 +256,6 @@ ROMX $5e
 	"Crystal Sound Effects"
 ROMX $5f
 	"mobile5F"
-	"Base Stats"
 ROMX $60
 	"Map Scripts 13"
 	"Pokedex Entries 001-064"
@@ -305,7 +294,6 @@ ROMX $70
 	"Text 2"
 ROMX $71
 	"Text 3"
-	"Cries"
 ROMX $72
 	"Miscellaneous Text"
 ROMX $73
@@ -323,13 +311,12 @@ ROMX $77
 	"European Mail"
 ROMX $78
 	"Tileset Data 8"
-	"Pics 20"
 ROMX $7b
 	"Battle Tower Text"
-	"Pokedex Entries 257-320"
 ROMX $7c
 	"Battle Tower Trainer Data"
-ROMX $7d
+ROMX $7d	
+
 ROMX $7e
 	"Crystal Events"
 ROMX $7f

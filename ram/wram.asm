@@ -1539,7 +1539,7 @@ wBGP:: db
 wOBP0:: db
 wOBP1:: db
 
-wNumHits:: db
+wBattleAfterAnim:: db
 
 	ds 1
 
@@ -2948,9 +2948,6 @@ wYanmaMapGroup:: db
 wYanmaMapNumber:: db
 wPlayerMonSelection:: ds 3
 	ds 2
-
-wTempAbilityMon::  db
-	ds 1
 
 wStepCount:: db
 wPoisonStepCount:: db

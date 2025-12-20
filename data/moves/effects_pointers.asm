@@ -44,7 +44,6 @@ MoveEffectsPointers:
 	dw SuperFang
 	dw StaticDamage
 	dw TrapTarget
-	dw Hail
 	dw MultiHit
 	dw NormalHit
 	dw Mist
@@ -157,8 +156,6 @@ MoveEffectsPointers:
 	dw Teleport
 	dw Fly
 	dw DefenseCurl
-	dw DoBurn
-	dw DoFreeze
 	dw SpecialAttackUpHit
 	dw SpeedUpHit
 	dw Growth

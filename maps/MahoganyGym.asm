@@ -59,11 +59,10 @@ MahoganyGymPryceScript:
 	verbosegiveitem TM_ICY_WIND
 	iffalse MahoganyGym_NoRoomForIcyWind
 	setevent EVENT_GOT_TM16_ICY_WIND
-	readmem wBaseLevel
-	addval 5
-	writemem wBaseLevel
+	;readmem wBaseLevel
+	;addval 5
+	;writemem wBaseLevel
 
-.SkipLevelCaps:
 	readmem wWildLevel
 	addval 5
 	writemem wWildLevel

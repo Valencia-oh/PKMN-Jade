@@ -1,4 +1,4 @@
-db FLAPPLE ; 254
+	db 0 ; species ID placeholder
 
 	db 70,  110,  80,   70,  95,  60
 	evs  0,   2,   0,   0,   0,   0

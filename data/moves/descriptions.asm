@@ -259,7 +259,6 @@ MoveDescriptionsGen2:
 	dw FutureSightDescription
 	dw RockSmashDescription
 	dw WhirlpoolDescription
-	dw HailDescription
 	dw AstonishDescription
 	dw PoisontailDescription
 	dw ThunderFangDescription
@@ -1282,10 +1281,6 @@ RockSmashDescription:
 WhirlpoolDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
-
-HailDescription:
-	db   "Inflicts damage"
-	next "every turn.@"
 
 AstonishDescription:
 	db   "An attack that may"

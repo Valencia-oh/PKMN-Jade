@@ -84,7 +84,6 @@ BattleAnimationsGen2::
 	dw BattleAnim_FutureSight
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
-	dw BattleAnim_Hail
 	dw BattleAnim_Astonish
 	dw BattleAnim_PoisonTail
 	dw BattleAnim_ThunderFang	;Poison Fang (copy of bite)
@@ -1812,21 +1811,6 @@ BattleAnimSub_Glimmer2:
 	anim_wait 5
 	anim_loop 2, .loop
 	anim_wait 16
-	anim_ret
-
-BattleAnim_Hail:
-	anim_1gfx BATTLE_ANIM_GFX_ICE
-	anim_bgeffect BATTLE_BG_EFFECT_WHITE_HUES, $0, $8, $0
-	anim_obj ANIM_OBJ_HAIL, 88, 0, $0
-	anim_wait 8
-	anim_obj ANIM_OBJ_HAIL, 72, 0, $1
-	anim_wait 8
-	anim_obj ANIM_OBJ_HAIL, 56, 0, $2
-.loop
-	anim_sound 0, 1, SFX_SHINE
-	anim_wait 8
-	anim_loop 8, .loop
-	anim_wait 8
 	anim_ret
 
 BattleAnim_ZenHeadbutt:

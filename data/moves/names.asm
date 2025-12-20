@@ -250,7 +250,6 @@ MoveNames::
 	li "FUTURE SIGHT"
 	li "ROCK SMASH"
 	li "WHIRLPOOL"
-	li "HAIL"
 	li "ASTONISH"
 	li "POISON TAIL"
 

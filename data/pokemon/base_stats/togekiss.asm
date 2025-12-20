@@ -1,4 +1,4 @@
-db TOGEKISS ; 258
+	db 0 ; species ID placeholder
 
 	db  85,  50,  95,  80,  120, 115
 	evs  0,   0,   0,   0,   2,   1

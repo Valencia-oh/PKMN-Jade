@@ -258,7 +258,6 @@ DEF GEN1_MOVES EQU const_value - 1
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
 ;ported over
-	const HAIL         ; fc
 	const POISON_TAIL  
 	const ASTONISH     
 	const THUNDER_FANG
@@ -316,16 +315,5 @@ DEF CANNOT_MOVE EQU $ff
 	const ANIM_RETURN_MON        ; -14 (ffec)
 	const ANIM_SEND_OUT_MON      ; -15 (ffeb)
 	const ANIM_THROW_POKE_BALL   ; -16 (ffea)
-	const ANIM_IN_HAIL
 DEF NUM_BATTLE_ANIMS EQU -const_value - 1
 
-; wNumHits uses offsets from ANIM_MISS
-	const_def
-	const BATTLEANIM_NONE
-	const BATTLEANIM_ENEMY_DAMAGE
-	const BATTLEANIM_ENEMY_STAT_DOWN
-	const BATTLEANIM_PLAYER_STAT_DOWN
-	const BATTLEANIM_PLAYER_DAMAGE
-	const BATTLEANIM_WOBBLE
-	const BATTLEANIM_SHAKE
-	const BATTLEANIM_HIT_CONFUSION

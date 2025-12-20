@@ -224,7 +224,7 @@ MovesGen2:
 	move EFFECT_FORESIGHT,           0, NORMAL,         STATUS,			100, 40,   0      ;FORESIGHT
 	move EFFECT_DESTINY_BOND,        0, GHOST,          STATUS,			100,  5,   0      ;DESTINY_BOND
 	move EFFECT_PERISH_SONG,         0, NORMAL,         STATUS,			100,  5,   0      ;PERISH_SONG
-	move EFFECT_FREEZE,              0, ICE,            STATUS,			 90, 15, 100      ;ICY_WIND
+	move EFFECT_SPEED_DOWN_HIT,     55, ICE,            STATUS,			 95, 15, 100      ;ICY_WIND
 	move EFFECT_PROTECT,             0, FIGHTING,       STATUS,			100,  5,   0      ;DETECT
 	move EFFECT_MULTI_HIT,          25, GROUND,         PHYSICAL,		100, 10,   0      ;BONE_RUSH
 	move EFFECT_LOCK_ON,             0, NORMAL,         STATUS,			100,  5,   0      ;LOCK_ON
@@ -279,7 +279,6 @@ MovesGen2:
 	move EFFECT_FUTURE_SIGHT,      200, PSYCHIC_TYPE,   SPECIAL,		100, 15,   0      ;FUTURE_SIGHT
 	move EFFECT_DEFENSE_DOWN_HIT,   55, FIGHTING,       PHYSICAL,		100, 15, 100      ;ROCK_SMASH
 	move EFFECT_TRAP_TARGET,        75, WATER,          SPECIAL,		100, 15,   0      ;WHIRLPOOL
-	move EFFECT_HAIL,		         0, ICE,            STATUS,			100, 10,   0      ;HAIL 
 	move EFFECT_FLINCH_HIT,         30, GHOST,          PHYSICAL,		100, 15,  30      ;ASTONISH
 	move EFFECT_POISON_HIT,         50, POISON,         PHYSICAL,		100, 25,  10      ;POISON_TAIL
 	move EFFECT_PARALYZE_HIT,       70, ELECTRIC,       PHYSICAL,		100, 20,  20      ;THUNDER_FANG

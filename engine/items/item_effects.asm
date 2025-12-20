@@ -233,6 +233,7 @@ ItemEffectsBalls:
 	dw PokeBallEffect ; PARK_BALL
 .IndirectEnd:
 
+
 PokeBallEffect:
 	ld a, [wBattleMode]
 	dec a
@@ -376,11 +377,11 @@ PokeBallEffect:
 	ld b, a
 	ld a, [wEnemyMonStatus]
 	and 1 << FRZ | SLP_MASK
-	ld c, 10
+	ld c, 20
 	jr nz, .addstatus
 	ld a, [wEnemyMonStatus]
 	and a
-	ld c, 5
+	ld c, 20
 	jr nz, .addstatus
 	ld c, 0
 .addstatus
@@ -441,7 +442,7 @@ PokeBallEffect:
 	xor a
 	ldh [hBattleTurn], a
 	ld [wThrownBallWobbleCount], a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	predef PlayBattleAnim
 
 	ld a, [wWildMon]
@@ -539,6 +540,19 @@ PokeBallEffect:
 	call PrintText
 
 	call ClearSprites
+
+	ld a, [wTempSpecies]
+	ld l, a
+	ld a, [wCurPartyLevel]
+	ld h, a
+	push hl
+	farcall ApplyExperienceAfterEnemyCaught
+	pop hl
+	ld a, l
+	ld [wCurPartySpecies], a
+	ld [wTempSpecies], a
+	ld a, h
+	ld [wCurPartyLevel], a
 
 	ld a, [wTempSpecies]
 	call CheckCaughtMon
@@ -2692,7 +2706,7 @@ UseBallInTrainerBattle:
 	xor a
 	ld [wBattleAnimParam], a
 	ldh [hBattleTurn], a
-	ld [wNumHits], a
+	ld [wBattleAfterAnim], a
 	predef PlayBattleAnim
 	ld hl, BallBlockedText
 	call PrintText

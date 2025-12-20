@@ -1,4 +1,4 @@
-	db MAMOSWINE ; 258
+	db 0 ; species ID placeholder
 
 	db 110, 130,  80,  70,  70,  60
 	evs  0,   3,   0,   0,   0,   0

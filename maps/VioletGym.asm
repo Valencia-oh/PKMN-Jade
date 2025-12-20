@@ -46,9 +46,9 @@ readvar VAR_BADGES
 .FightDone:
 	checkevent EVENT_GOT_TM31_MUD_SLAP
 	iftrue .SpeechAfterTM
-	readmem wBaseLevel
-	addval 5
-	writemem wBaseLevel
+	;readmem wBaseLevel
+	;addval 5
+	;writemem wBaseLevel
 
 	readmem wWildLevel
 	addval 4

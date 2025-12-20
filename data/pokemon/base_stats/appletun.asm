@@ -1,4 +1,4 @@
-db APPLETUN ; 253
+	db 0 ; species ID placeholder
 
 	db 110,  85,  80,   30,  80,  100
 	evs  2,   0,   0,   0,   0,   0
