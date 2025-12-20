@@ -12,8 +12,6 @@ PrintAbility:
 	jp .SandStream
 	.NotSandStream
 
-	jp .SnowWarning
-	.NotSnowWarning
 
 	jp .Intimidate
 	.NotIntimidate
@@ -53,9 +51,6 @@ PrintAbility:
 
 	jp .SandBody
 	.NotSandBody
-
-	jp .IceBody
-	.NotIceBody	
 
 	jp .Haste
 	.NotHaste
@@ -153,16 +148,6 @@ PrintAbility:
 	hlcoord 1, 14
 	call PlaceString
     jp .Done
-
-.SnowWarning:
-	call GetAbilityMon	
-	ld b, h
-	ld c, l
-	ld de, 2
-	ld hl, AbilitySnowWarningMons
-	call IsInWordArray
-	jr c, .HasSnowWarning
-	jp .NotSnowWarning
 		
 .HasSnowWarning:
 	ld de, SnowWarningNameString
@@ -430,26 +415,6 @@ PrintAbility:
 	call PlaceString
 
 	ld de, SandBodyDesc
-	hlcoord 1, 14
-	call PlaceString
-    jp .Done
-
-.IceBody:
-	call GetAbilityMon	
-	ld b, h
-	ld c, l
-	ld de, 2
-	ld hl, AbilityIceBodyMons
-	call IsInWordArray
-	jr c, .HasIceBody
-	jp .NotIceBody
-		
-.HasIceBody:
-	ld de, IceBodyNameString
-	hlcoord 3, 11
-	call PlaceString
-
-	ld de, IceBodyDesc
 	hlcoord 1, 14
 	call PlaceString
     jp .Done
