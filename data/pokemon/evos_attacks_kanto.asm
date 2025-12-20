@@ -902,6 +902,9 @@ MankeyEvosAttacks:
 	dbw 27, FOCUS_ENERGY
 	dbw 33, SEISMIC_TOSS
 	dbw 39, CROSS_CHOP
+	dbw 40, THUNDERPUNCH
+	dbw 40, ICE_PUNCH
+	dbw 40, FIRE_PUNCH
 	dbw 45, SCREECH
 	dbw 51, THRASH
 	db 0 ; no more level-up moves
@@ -918,6 +921,9 @@ PrimeapeEvosAttacks:
 	dbw 27, FOCUS_ENERGY
 	dbw 28, RAGE
 	dbw 36, SEISMIC_TOSS
+	dbw 40, THUNDERPUNCH
+	dbw 40, ICE_PUNCH
+	dbw 40, FIRE_PUNCH
 	dbw 45, CROSS_CHOP
 	dbw 54, SCREECH
 	dbw 63, THRASH
@@ -1004,6 +1010,9 @@ KadabraEvosAttacks:
 	dbw 21, PSYBEAM
 	dbw 26, RECOVER
 	dbw 31, FUTURE_SIGHT
+	dbw 33, THUNDERPUNCH
+	dbw 33, ICE_PUNCH
+	dbw 33, FIRE_PUNCH
 	dbw 38, PSYCHIC_M
 	dbw 45, REFLECT
 	db 0 ; no more level-up moves
@@ -1018,6 +1027,9 @@ AlakazamEvosAttacks:
 	dbw 21, PSYBEAM
 	dbw 26, RECOVER
 	dbw 31, FUTURE_SIGHT
+	dbw 33, THUNDERPUNCH
+	dbw 33, ICE_PUNCH
+	dbw 33, FIRE_PUNCH
 	dbw 38, PSYCHIC_M
 	dbw 45, REFLECT
 	db 0 ; no more level-up moves
