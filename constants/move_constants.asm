@@ -257,9 +257,7 @@ DEF GEN1_MOVES EQU const_value - 1
 	const FUTURE_SIGHT ; f8
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
-	const BEAT_UP      ; fb
 ;ported over
-	const HAIL         ; fc
 	const POISON_TAIL  
 	const ASTONISH     
 	const THUNDER_FANG
