@@ -893,7 +893,7 @@ ApplyObjectFacing:
 .DisableTextTiles:
 	call LoadOverworldTilemap
 	hlcoord 0, 0
-	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
+	ld bc, SCREEN_AREA
 .loop
 	res 7, [hl]
 	inc hl
@@ -1089,9 +1089,9 @@ Script_loadwildmon:
 	call LoadScriptPokemonID
 	ld [wTempWildMonSpecies], a
 	rst GetScriptByte
-	;ld b, a
-	;ld a, [wWildLevel]
-	;add a, b
+	ld b, a
+	ld a, [wWildLevel]
+	add a, b
 	ld [wCurPartyLevel], a
 	ret
 
@@ -1619,7 +1619,7 @@ Script_getnum:
 ResetStringBuffer1:
 	ld hl, wStringBuffer1
 	ld bc, NAME_LENGTH
-	ld a, "@"
+	ld a, '@'
 	jmp ByteFill
 
 Script_getstring:
