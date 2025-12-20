@@ -159,7 +159,7 @@ if DEF(_DEBUG)
 	; misc pokemon for testing
 	givepoke AMPHAROS, 50
 	givepoke GENGAR, 50
-	givepoke DITTO, 50
+	givepoke FLYGON, 50
 	; intro events
 	addcellnum PHONE_MOM
 	setmapscene PLAYERS_HOUSE_1F, $1
