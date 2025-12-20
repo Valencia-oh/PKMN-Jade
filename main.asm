@@ -231,7 +231,6 @@ INCLUDE "engine/events/basement_key.asm"
 INCLUDE "engine/events/sacred_ash.asm"
 INCLUDE "engine/pokemon/tempmon.asm"
 INCLUDE "engine/pokemon/types.asm"
-INCLUDE "engine/pokemon/categories.asm"
 INCLUDE "engine/pokemon/mon_stats.asm"
 INCLUDE "engine/link/init_list.asm"
 INCLUDE "engine/pokemon/experience.asm"
@@ -244,7 +243,7 @@ SECTION "bank14.2", ROMX
 INCLUDE "data/pokemon/base_stats.asm"
 
 
-SECTION "bank 14.3", ROMX
+SECTION "bank14.3", ROMX
 
 INCLUDE "data/pokemon/names.asm"
 
@@ -446,21 +445,19 @@ INCLUDE "gfx/pokemon/unown_frames.asm"
 INCLUDE "gfx/pokemon/unown_bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/unown_bitmasks.asm"
 
-
 SECTION "Pic Animations 4", ROMX
 
 INCLUDE "gfx/pokemon/bitmask_pointers.asm"
 INCLUDE "gfx/pokemon/bitmasks.asm"
 
-
 SECTION "Pic Animations 5", ROMX
 
-INCLUDE "gfx/pokemon/johto_frames.asm"
+INCLUDE "gfx/pokemon/foreign_frames.asm"
 
 
 SECTION "Pic Animations 6", ROMX
 
-INCLUDE "gfx/pokemon/foreign_frames.asm"
+INCLUDE "gfx/pokemon/johto_frames.asm"
 
 
 SECTION "bank38", ROMX
@@ -480,24 +477,17 @@ INCLUDE "engine/movie/intro.asm"
 
 SECTION "bank3E", ROMX
 
-INCLUDE "engine/events/play_slow_cry.asm"
-INCLUDE "engine/battle/misc.asm"
-
-
-SECTION "bank3E.2", ROMX
-
-INCLUDE "engine/pokedex/new_pokedex_entry.asm"
-INCLUDE "engine/pokedex/unown_dex.asm"
+INCLUDE "engine/gfx/load_font.asm"
+INCLUDE "engine/link/time_capsule.asm"
 INCLUDE "engine/events/name_rater.asm"
+INCLUDE "engine/events/play_slow_cry.asm"
+INCLUDE "engine/pokedex/new_pokedex_entry.asm"
+INCLUDE "engine/link/time_capsule_2.asm"
+INCLUDE "engine/pokedex/unown_dex.asm"
 INCLUDE "engine/events/magikarp.asm"
 INCLUDE "engine/battle/hidden_power.asm"
-INCLUDE "engine/link/time_capsule_2.asm"
-INCLUDE "engine/link/time_capsule.asm"
+INCLUDE "engine/battle/misc.asm"
 
-
-SECTION "bank3E.3", ROMX
-
-INCLUDE "engine/gfx/load_font.asm"
 
 SECTION "bank3F", ROMX
 
