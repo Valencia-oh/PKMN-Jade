@@ -1936,7 +1936,7 @@ def_grass_wildmons CHERRY_TOWER_F5
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_48
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 6, PWOOPER
 	dbw 4, BRONZOR
@@ -1964,7 +1964,7 @@ def_grass_wildmons CHERRY_TOWER_F5
 	end_grass_wildmons
 
 def_grass_wildmons CIANWOOD_PALACE
-	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 6, PWOOPER
 	dbw 4, BRONZOR
