@@ -1456,7 +1456,8 @@ call CheckSandstorm
 
 .NotSandstorm
 
-ret
+.finish_restore
+	ret
 
 HandleMysteryberry:
 	ldh a, [hSerialConnectionStatus]
