@@ -26,16 +26,17 @@ FalknerGroup:
 	next_list_item ; FALKNER (2)
 	db "FALKNER@", TRAINERTYPE_MOVES
 	db 6
-	dw NATU
-	dw TACKLE, CONFUSE_RAY, GUST, CONFUSION
+	dw NXTU
 	db 5
-	dw PIDGEY
-	dw TACKLE, MUD_SLAP, GUST, LEER
+	dw PIDGEOT
 	db 7
 	dw NOCTOWL
-	dw TACKLE, MUD_SLAP, GUST, CONFUSE_RAY
 	db 7
 	dw PELIPPER
+	db 8
+	dw SKARMARY
+	db 8
+	dw ESPATHRA
 	db -1 ; end
 
 	end_list_items
@@ -52,7 +53,7 @@ WhitneyGroup:
 	db 6
 	dw SNUBBULL
 	dw BITE, ATTRACT, TACKLE, SHADOW_BALL
-	db 4
+	db 6
 	dw ZIGZAGOON
 	dw DIG, METAL_CLAW, FURY_SWIPES, DEFENSE_CURL
 	db -1 ; end
@@ -63,15 +64,16 @@ WhitneyGroup:
 	dw CLEFAIRY
 	dw POUND, MIMIC, ENCORE, METRONOME
 	db 7
-	dw JIGGLYPUFF
-	dw POUND, SING, ENCORE, REST
+	dw WIGGLYTUFF
 	db 10
 	dw MILTANK
 	dw ROLLOUT, ATTRACT, STOMP, MILK_DRINK
-	db 6
-	dw ZIGZAGOON
+	db 8
+	dw LINOONE
 	db 10
 	dw SNUBBULL
+	db 10
+	dw FURRET
 	db -1 ; end
 
 	end_list_items
@@ -93,19 +95,17 @@ BugsyGroup:
 next_list_item ; BUGSY (2)
 	db "BUGSY@", TRAINERTYPE_MOVES
 	db 7
-	dw LEDYBA
-	dw MACH_PUNCH, STRING_SHOT, ICE_PUNCH, LEECH_LIFE
+	dw LEDIAN
 	db 7
-	dw SCYTHER
-	dw QUICK_ATTACK, LEER, FURY_CUTTER, NO_MOVE
+	dw ARIADOS
 	db 10
 	dw SCYTHER
 	dw QUICK_ATTACK, LEER, FURY_CUTTER, BITE
 	db 7
-	dw JOLTIK
+	dw GALVANTULA
 	dw THUNDERSHOCK, THUNDER_WAVE, STRING_SHOT, MUD_SLAP
 	db 7
-	dw CATERPIE
+	dw BUTTERFREE
 	db 8
 	dw HERACROSS
 	db -1 ; end
@@ -116,8 +116,7 @@ MortyGroup:
 	next_list_item ; MORTY (1)
 	db "MORTY@", TRAINERTYPE_MOVES
 	db 4
-	dw GASTLY
-	dw LICK, SPITE, MEAN_LOOK, CURSE
+	dw HAUNTER
 	db 5
 	dw MISDREAVUS
 	dw SPITE, MEAN_LOOK, MIMIC, NIGHT_SHADE
@@ -129,17 +128,19 @@ MortyGroup:
 	next_list_item ; MORTY (2)
 	db "MORTY@", TRAINERTYPE_MOVES
 	db 7
-	dw VULPIX
+	dw NINETAILS
 	dw LICK, HYPNOSIS, EMBER, ASTONISH
 	db 7
-	dw HAUNTER
+	dw GENGAR
 	dw LICK, SPITE, MEAN_LOOK, CURSE
 	db 8
-	dw MURKROW
+	dw HONCHKROW
 	db 8
-	dw POOCHYENA
+	dw MIGHTYENA
 	db 7
 	dw MISDREAVUS
+	db 8
+	dw HAUNTER
 	db -1 ; end
 
 	end_list_items
@@ -161,18 +162,18 @@ PryceGroup:
  next_list_item ; PRYCE (2)
 	db "PRYCE@", TRAINERTYPE_MOVES
 	db 7
-	dw DELIBIRD
-	dw ICY_WIND, GUST, AURORA_BEAM, SPIKES
+	dw SEEL
 	db 9
 	dw JYNX
 	dw PERISH_SONG, PSYBEAM, ICE_PUNCH, LOVELY_KISS
 	db 10
-	dw SNEASEL
-	dw ICE_PUNCH, SLASH, AURORA_BEAM, PURSUIT
-	db 9
 	dw WYRDEER
 	db 10
 	dw SNEASEL
+	db 9
+	dw MAMOSWINE
+	db 10
+	dw GLACEON
 	db -1 ; end
 
 	end_list_items
@@ -194,10 +195,10 @@ JasmineGroup:
 	next_list_item ; JASMINE (2)
 	db "JASMINE@", TRAINERTYPE_MOVES
 	db 7
-	dw MAGNEMITE
+	dw MAGNETON
 	dw METAL_CLAW, SUPERSONIC, THUNDER_WAVE, THUNDERSHOCK
 	db 7
-	dw KRABBY
+	dw KINGLER
 	dw BUBBLEBEAM, CUT, CRABHAMMER, HARDEN
 	db 10
 	dw SKARMORY
