@@ -271,6 +271,7 @@ MonMenuIconPals:
 	icon_pals GREEN,  BROWN  ; BRELOOM
 	icon_pals GREEN,  BLUE   ; ELECTRIKE
 	icon_pals BLUE,   GREEN  ; MANECTRIC
+	icon_pals RED,    BROWN  ; TORKOAL
 	icon_pals BROWN,  GREEN  ; TRAPINCH
 	icon_pals GREEN,  BROWN  ; VIBRAVA
 	icon_pals GREEN,  GREEN  ; FLYGON
