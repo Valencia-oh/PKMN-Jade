@@ -2274,14 +2274,9 @@ BattleCommand_ApplyDamage:
 	jr nz, .SkipSturdy
 .SkipSturdy
 	call GetOpponentItem
-	ld a, [hl]
-	ld [wNamedObjectIndexBuffer], a
-	call GetItemName
 	ld a, b
 	cp HELD_FOCUS_BAND
 	ld b, 0
-	jr z, .focus_band
-	cp HELD_FOCUS_SASH
 	jr nz, .damage
 
 	call BattleRandom
