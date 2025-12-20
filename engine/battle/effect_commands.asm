@@ -2287,10 +2287,9 @@ BattleCommand_ApplyDamage:
 	ld c, l
 	ld de, 2
 	ld hl, SturdyMons
-	jr c, .HasSturdy
-	ret
-		
-.HasSturdy:
+	ld b, 0
+	jr nz, .damage
+	
 	call BattleRandom
 	cp c
 	jr nz, .damage
