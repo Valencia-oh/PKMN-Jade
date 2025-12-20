@@ -108,11 +108,6 @@ CheckSandstorm:
 	cp WEATHER_SANDSTORM
 	ret
 
-CheckHail:
-	ld a, [wBattleWeather]
-	cp WEATHER_HAIL
-	ret
-
 GetActiveMon:
     ldh a, [hBattleTurn]
 	and a
