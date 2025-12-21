@@ -20,6 +20,8 @@ LoadSpecialMapPalette:
 	jr z, .radio_tower
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
+	cp TILESET_JOHTO
+	jr z, .johto
 	jr .do_nothing
 
 .darkness
@@ -58,6 +60,11 @@ LoadSpecialMapPalette:
 
 .mansion_mobile
 	call LoadMansionPalette
+	scf
+	ret
+
+.johto
+	call LoadJohtoPalette
 	scf
 	ret
 
@@ -124,6 +131,16 @@ LoadRadioTowerPalette:
 
 RadioTowerPalette:
 INCLUDE "gfx/tilesets/radio_tower.pal"
+
+LoadJohtoPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, JohtoPalette
+	ld bc, 8 palettes
+	jmp FarCopyWRAM
+
+JohtoPalette:
+INCLUDE "gfx/tilesets/EcruteakCity.pal"
 
 MansionPalette1:
 INCLUDE "gfx/tilesets/mansion_1.pal"
