@@ -64,6 +64,7 @@ LoadSpecialMapPalette:
 	ret
 
 .johto
+	ld a, [wEnvironment]
 	call LoadjohtoPalette
 	scf
 	ret
