@@ -444,7 +444,7 @@ ENDM
 	map_const ROUTE_40_BATTLE_TOWER_GATE,                   5,  4 ; 15
 	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
 	map_const CIANWOOD_PALACE,                             19, 16 ;  1
-	map_const GOLDENROD_ISLE,                               25, 13 ; 25
+	map_const GOLDENROD_ISLE,                              25, 18 ; 25
 	endgroup
 
 	newgroup VIRIDIAN                                             ; 23
