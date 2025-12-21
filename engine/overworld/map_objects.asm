@@ -2035,6 +2035,19 @@ ShakeGrass:
 	; vtile, palette, movement
 	db $80, PAL_OW_COPY_BG_GREEN, SPRITEMOVEDATA_GRASS
 
+SplashPuddle:
+	push bc
+	ld de, .PuddleObject
+	call CopyTempObjectData
+	call InitTempObject
+	pop bc
+	ld de, SFX_PUDDLE
+	jp PlaySFX
+
+.PuddleObject
+	; vtile, palette, movement
+	db $00, PAL_OW_BLUE, SPRITEMOVEDATA_PUDDLE
+
 ShakeScreen:
 	push bc
 	push af
