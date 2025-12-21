@@ -20,8 +20,8 @@ LoadSpecialMapPalette:
 	jr z, .radio_tower
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
-	cp TILESET_JOHTO
-	jr z, .johto
+	cp TILESET_ECRUTEAK
+	jr z, .ecruteak
 	jr .do_nothing
 
 .darkness
@@ -132,10 +132,10 @@ LoadRadioTowerPalette:
 RadioTowerPalette:
 INCLUDE "gfx/tilesets/radio_tower.pal"
 
-LoadJohtoPalette:
+LoadEcruteakPalette:
 	ld a, BANK(wBGPals1)
 	ld de, wBGPals1
-	ld hl, JohtoPalette
+	ld hl, EcruteakPalette
 	ld bc, 8 palettes
 	jmp FarCopyWRAM
 
