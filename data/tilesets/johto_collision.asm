@@ -185,4 +185,4 @@
 	tilecoll FLOOR, HEADBUTT_TREE, FLOOR, HEADBUTT_TREE ; b8
 	tilecoll HEADBUTT_TREE, FLOOR, HEADBUTT_TREE, FLOOR ; b9
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; ba
-	tilecoll , , ,  ; bb
+	tilecoll FLOOR, FLOOR, FLOOR, WALL ; bb
