@@ -64,13 +64,22 @@ LoadSpecialMapPalette:
 	ret
 
 .johto
-	call LoadjohtoPalette
+	ld hl, JohtoPalette
+	ld a, [wTimeOfDayPal]
+	maskbits NUM_DAYTIMES
+	ld bc, 8 palettes
+	call AddNTimes
+	ld de, wBGPals1
+	ld a, BANK(wBGPals1)
+	call FarCopyWRAM
 	scf
 	ret
 
 .do_nothing
 	and a
 	ret
+
+INCLUDE "gfx/tilesets/EcruteakCity.pal"
 
 LoadDarknessPalette:
 	ld a, BANK(wBGPals1)
@@ -160,13 +169,6 @@ LoadMansionPalette:
 MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
 
-johtoPalette:
-INCLUDE "gfx/tilesets/EcruteakCity.pal"
 
-LoadjohtoPalette:
-	ld a, BANK(wBGPals1)
-	ld de, wBGPals1
-	ld hl, johtoPalette
-	ld bc, 8 palettes
-	jmp FarCopyWRAM
+
 
