@@ -235,6 +235,3 @@
 	tilecoll TALL_GRASS, TALL_GRASS, FLOOR, TALL_GRASS ; ea
 	tilecoll TALL_GRASS, FLOOR, TALL_GRASS, FLOOR ; eb
 	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; ec
-	tilecoll , , ,  ; ed
-	tilecoll , , ,  ; ee
-	tilecoll , , ,  ; ef
