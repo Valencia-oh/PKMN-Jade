@@ -10,7 +10,8 @@ def_scene_scripts
 GoldenrodIsleMoltresCallback:
 	checkevent EVENT_FOUGHT_MOLTRES
 	iftrue .NoAppear
-	checkitem MEW_DNA
+	setval LUGIA
+	special FindPartyMonThatSpecies
 	iftrue .Appear
 	sjump .NoAppear
 
