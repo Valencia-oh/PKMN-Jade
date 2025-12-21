@@ -53,7 +53,7 @@ GoldenrodIsle_MapEvents:
 	def_bg_events
 
 	def_object_events
-object_event  13,  11, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherryTowerMew, GOLDENROD_MOLTRES
+object_event  13,  15, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, GoldenrodIsleMoltres, GOLDENROD_MOLTRES
 
 
 
