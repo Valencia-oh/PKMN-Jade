@@ -389,7 +389,7 @@ ENDM
 	connection west, Route32, ROUTE_32, -20
 	connection east, CherrygroveCity, CHERRYGROVE_CITY, 7
 
-	map_attributes GoldrodIsle, GOLDENROD_ISLE, $2c, WEST | EAST
+	map_attributes GoldenrodIsle, GOLDENROD_ISLE, $2c, WEST | EAST
 	connection west, Route41, ROUTE_41, 0
 	connection west, GoldenrodCity, GOLDENROD_CITY, 0
 
