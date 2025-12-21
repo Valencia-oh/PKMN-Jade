@@ -165,7 +165,7 @@ LoadjohtoPalette:
 	ld a, BANK(wBGPals1)
 	ld de, wBGPals1
 	ld hl, johtoPalette
-	ld bc, 8 palettes
+	ld bc, 48 palettes
 	jmp FarCopyWRAM
 
 johtoPalette:
