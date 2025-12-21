@@ -64,14 +64,7 @@ LoadSpecialMapPalette:
 	ret
 
 .johto
-	ld hl, JohtoPalette
-	ld a, [wTimeOfDayPal]
-	maskbits NUM_DAYTIMES
-	ld bc, 8 palettes
-	call AddNTimes
-	ld de, wBGPals1
-	ld a, BANK(wBGPals1)
-	call FarCopyWRAM
+	call LoadjohtoPalette
 	scf
 	ret
 
