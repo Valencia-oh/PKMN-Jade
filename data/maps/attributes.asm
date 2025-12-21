@@ -107,7 +107,8 @@ ENDM
 	connection east, Route29, ROUTE_29, 0
 
 
-	map_attributes VioletCity, VIOLET_CITY, $05, SOUTH | WEST | EAST
+	map_attributes VioletCity, VIOLET_CITY, $05, NORTH | SOUTH | WEST | EAST
+	connection north, Route49, ROUTE_49, -8
 	connection south, Route32, ROUTE_32, 0
 	connection west, Route36, ROUTE_36, 0
 	connection east, Route31, ROUTE_31, 9
@@ -212,7 +213,8 @@ ENDM
 	connection north, Route40, ROUTE_40, 15
 	connection west, CianwoodCity, CIANWOOD_CITY, 0
 
-	map_attributes Route42, ROUTE_42, $05, WEST | EAST
+	map_attributes Route42, ROUTE_42, $05, SOUTH | WEST | EAST
+	connection south, Route49, ROUTE_49, 9
 	connection west, EcruteakCity, ECRUTEAK_CITY, -9
 	connection east, MahoganyTown, MAHOGANY_TOWN, 0
 
@@ -230,6 +232,10 @@ ENDM
 	map_attributes Route46, ROUTE_46, $05, SOUTH | EAST
 	connection south, Route29, ROUTE_29, -10
 	connection east, Route45, ROUTE_45, -36
+
+	map_attributes Route49, ROUTE_49, $05, NORTH | SOUTH
+	connection north , Route42, ROUTE_42, -9	
+	connection south, VioletCity, VIOLET_CITY, 8
 
 	map_attributes PewterCity, PEWTER_CITY, $0f, SOUTH | EAST
 	connection south, Route2, ROUTE_2, 5
