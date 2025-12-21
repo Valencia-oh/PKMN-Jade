@@ -244,6 +244,6 @@
 	tilecoll FLOOR, WALL, FLOOR, WALL ; f3
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; f4
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; f5
-	tilecoll , , ,  ; f6
+	tilecoll WALL, FLOOR, WALL, FLOOR  ; f6
 	tilecoll FLOOR, WALL, FLOOR, WALL ; f7
 	tilecoll WALL, WALL, WALL, FLOOR ; f8
