@@ -18,6 +18,9 @@ Route36_Blocks:
 Route44_Blocks:
 	INCBIN "maps/Route44.ablk"
 
+GoldenrodIsle_Blocks:
+	INCBIN "maps/GoldenrodIsle.ablk"
+
 Route28_Blocks:
 	INCBIN "maps/Route28.ablk"
 
