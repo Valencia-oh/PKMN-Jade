@@ -391,7 +391,7 @@ ENDM
 
 	map_attributes GoldenrodIsle, GOLDENROD_ISLE, $2c, WEST | EAST
 	connection west, Route41, ROUTE_41, 0
-	connection west, GoldenrodCity, GOLDENROD_CITY, 0
+	connection east, GoldenrodCity, GOLDENROD_CITY, 0
 
 	map_attributes CianwoodPalace, CIANWOOD_PALACE, $2c, SOUTH
 	connection south, Route48, ROUTE_48, -1
