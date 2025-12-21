@@ -40,4 +40,5 @@ SpriteMons:
 	dw CHI_YU
 	dw KAKUNA
 	dw METAPOD
+	dw SLOWKING
 	assert_table_length NUM_POKEMON_SPRITES
