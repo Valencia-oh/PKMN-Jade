@@ -63,8 +63,8 @@ LoadSpecialMapPalette:
 	scf
 	ret
 
-.johto
-	call LoadJohtoPalette
+.ecruteak
+	call LoadEcruteakPalette
 	scf
 	ret
 
@@ -139,9 +139,6 @@ LoadJohtoPalette:
 	ld bc, 8 palettes
 	jmp FarCopyWRAM
 
-JohtoPalette:
-INCLUDE "maps/EcruteakCity.pal"
-
 MansionPalette1:
 INCLUDE "gfx/tilesets/mansion_1.pal"
 
@@ -169,3 +166,6 @@ LoadMansionPalette:
 
 MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
+
+LoadEcruteakPalette:
+INCLUDE "maps/EcruteakCity.pal"
