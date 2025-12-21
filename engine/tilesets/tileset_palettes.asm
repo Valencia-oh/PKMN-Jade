@@ -64,7 +64,6 @@ LoadSpecialMapPalette:
 	ret
 
 .johto
-	ld a, [wEnvironment]
 	call LoadjohtoPalette
 	scf
 	ret
@@ -165,7 +164,7 @@ LoadjohtoPalette:
 	ld a, BANK(wBGPals1)
 	ld de, wBGPals1
 	ld hl, johtoPalette
-	ld bc, 48 palettes
+	ld bc, 32 palettes
 	jmp FarCopyWRAM
 
 johtoPalette:
