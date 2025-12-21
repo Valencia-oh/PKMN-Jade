@@ -158,7 +158,7 @@ if DEF(_DEBUG)
 	givepokemove WATERFALL,  wPartyMon3, 3
 	; misc pokemon for testing
 	givepoke AMPHAROS, 50
-	givepoke GENGAR, 50
+	givepoke LUGIA, 50
 	givepoke FLYGON, 50
 	; intro events
 	addcellnum PHONE_MOM
