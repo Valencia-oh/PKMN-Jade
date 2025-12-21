@@ -126,3 +126,11 @@
 	tilecoll WALL, WALL, WALL, WALL ; 7d
 	tilecoll WALL, WALL, WALL, WALL ; 7e
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 7f
+	tilecoll WALL, WALL, WALL, WALL ; 80
+	tilecoll WALL, WALL, WALL, WALL ; 81
+	tilecoll WALL, WALL, WALL, WALL ; 82
+	tilecoll FLOOR, FLOOR, WALL, WALL ; 83
+	tilecoll FLOOR, WALL, FLOOR, WALL ; 84
+	tilecoll FLOOR, FLOOR, FLOOR, TALL_GRASS ; 85
+	tilecoll FLOOR, FLOOR, TALL_GRASS, FLOOR ; 86
+	tilecoll TALL_GRASS, TALL_GRASS, FLOOR, FLOOR ; 87
