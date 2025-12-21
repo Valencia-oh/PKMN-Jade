@@ -138,6 +138,9 @@ LoadMiscTiles:
 	farcall LoadEmote
 	ld c, EMOTE_PUDDLE_SPLASH
 	jmp LoadEmote
+.load_emote
+ 	farcall LoadEmote
+ 	ret
 
 SafeGetSprite:
 	push hl
