@@ -179,10 +179,46 @@
 	tilecoll PUDDLE, WALL, PUDDLE, WALL ; b2
 	tilecoll PUDDLE, WATER, WATER, WATER ; b3
 	tilecoll WALL, WALL, WALL, WALL ; b4
-	tilecoll FLOOR, FLOOR, HOP_DOWN, HOP_DOWN ; b5
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; b5
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; b6
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; b7
 	tilecoll FLOOR, HEADBUTT_TREE, FLOOR, HEADBUTT_TREE ; b8
 	tilecoll HEADBUTT_TREE, FLOOR, HEADBUTT_TREE, FLOOR ; b9
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; ba
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; bb
+	tilecoll PUDDLE, PUDDLE, PUDDLE, PUDDLE ; bc
+	tilecoll FLOOR, FLOOR, PUDDLE, FLOOR ; bd
+	tilecoll FLOOR, FLOOR, FLOOR, PUDDLE ; be
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; bf
+	tilecoll WALL, FLOOR, WALL, FLOOR ; c0
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; c1
+	tilecoll WALL, WALL, FLOOR, WALL ; c2
+	tilecoll HOP_LEFT, FLOOR, HOP_LEFT, FLOOR ; c3
+	tilecoll WALL, FLOOR, WALL, WALL ; c4
+	tilecoll WALL, WALL, WALL, WALL ; c5
+	tilecoll FLOOR, WALL, WALL, WALL ; c6
+	tilecoll HOP_LEFT, FLOOR, HOP_LEFT, FLOOR ; c7
+	tilecoll FLOOR, FLOOR, WALL, FLOOR ; c8
+	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, WALL, WALL ; c9
+	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, WALL, WALL ; ca
+	tilecoll HOP_LEFT, FLOOR, HOP_LEFT, FLOOR ; cb
+	tilecoll FLOOR, FLOOR, HEADBUTT_TREE, HEADBUTT_TREE ; cc
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; cd
+	tilecoll FLOOR, FLOOR, TALL_GRASS, TALL_GRASS ; ce
+	tilecoll PUDDLE, FLOOR, FLOOR, FLOOR ; cf
+	tilecoll TALL_GRASS, FLOOR, FLOOR, FLOOR ; d0
+	tilecoll FLOOR, FLOOR, FLOOR, TALL_GRASS ; d1
+	tilecoll TALL_GRASS, TALL_GRASS, FLOOR, FLOOR ; d2
+	tilecoll FLOOR, PUDDLE, FLOOR, FLOOR ; d3
+	tilecoll FLOOR, FLOOR, FLOOR, WALL ; d4
+	tilecoll FLOOR, WALL, FLOOR, FLOOR ; d5
+	tilecoll WALL, TALL_GRASS, WALL, TALL_GRASS ; d6
+	tilecoll WALL, TALL_GRASS, WALL, WALL ; d7
+	tilecoll FLOOR, FLOOR, WALL, FLOOR ; d8
+	tilecoll FLOOR, FLOOR, WALL, WALL ; d9
+	tilecoll FLOOR, WALL, FLOOR, WALL ; da
+	tilecoll WALL, FLOOR, WALL, FLOOR ; db
+	tilecoll FLOOR, FLOOR, WATER, WATER ; dc
+	tilecoll PUDDLE, WALL, PUDDLE, WALL ; dd
+	tilecoll PUDDLE, FLOOR, PUDDLE, FLOOR ; de
+	tilecoll PUDDLE, WATER, WATER, WATER ; df
