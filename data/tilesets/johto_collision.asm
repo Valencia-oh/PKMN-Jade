@@ -222,3 +222,19 @@
 	tilecoll PUDDLE, WALL, PUDDLE, WALL ; dd
 	tilecoll PUDDLE, FLOOR, PUDDLE, FLOOR ; de
 	tilecoll PUDDLE, WATER, WATER, WATER ; df
+	tilecoll WALL, WALL, WALL, WALL ; e0
+	tilecoll WALL, WALL, FLOOR, FLOOR ; e1
+	tilecoll FLOOR, WALL, FLOOR, WALL ; e2
+	tilecoll WALL, WALL, WATER, WATER ; e3
+	tilecoll WALL, WALL, WALL, WALL ; e4
+	tilecoll FLOOR, FLOOR, WALL, WALL ; e5
+	tilecoll WALL, WALL, WALL, WALL ; e6
+	tilecoll WALL, WALL, WALL, WALL ; e7
+	tilecoll PUDDLE, HEADBUTT_TREE, PUDDLE, FLOOR ; e8
+	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, TALL_GRASS, TALL_GRASS ; e9
+	tilecoll TALL_GRASS, TALL_GRASS, FLOOR, TALL_GRASS ; ea
+	tilecoll TALL_GRASS, FLOOR, TALL_GRASS, FLOOR ; eb
+	tilecoll HOP_DOWN, HOP_DOWN, WALL, WALL ; ec
+	tilecoll , , ,  ; ed
+	tilecoll , , ,  ; ee
+	tilecoll , , ,  ; ef
