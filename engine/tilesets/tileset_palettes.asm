@@ -140,7 +140,7 @@ LoadJohtoPalette:
 	jmp FarCopyWRAM
 
 JohtoPalette:
-INCLUDE "gfx/tilesets/EcruteakCity.pal"
+INCLUDE "maps/EcruteakCity.pal
 
 MansionPalette1:
 INCLUDE "gfx/tilesets/mansion_1.pal"
