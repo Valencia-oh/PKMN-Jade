@@ -130,7 +130,6 @@ LoadMiscTiles:
 	call LoadEmote
 	call GetMapEnvironment
 	call CheckOutdoorMap
-	ld c, EMOTE_GRASS_RUSTLE
 	jr z, .outdoor
 	ld c, EMOTE_BOULDER_DUST
 	jr .load_emote
