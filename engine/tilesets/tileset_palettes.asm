@@ -21,7 +21,7 @@ LoadSpecialMapPalette:
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
 	cp TILESET_JOHTO
-	jr z, .ecruteak
+	jr z, .johto
 	jr .do_nothing
 
 .darkness
@@ -63,8 +63,8 @@ LoadSpecialMapPalette:
 	scf
 	ret
 
-.ecruteak
-	call LoadEcruteakPalette
+.johto
+	call LoadjohtoPalette
 	scf
 	ret
 
@@ -160,12 +160,12 @@ LoadMansionPalette:
 MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
 
-LoadEcruteakPalette:
+LoadjohtoPalette:
 	ld a, BANK(wBGPals1)
 	ld de, wBGPals1
-	ld hl, EcruteakPalette
+	ld hl, johtoPalette
 	ld bc, 8 palettes
 	jmp FarCopyWRAM
 
-EcruteakPalette:
+johtoPalette:
 INCLUDE "maps/EcruteakCity.pal"
