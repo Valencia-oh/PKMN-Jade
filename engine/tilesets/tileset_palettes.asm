@@ -168,4 +168,4 @@ LoadjohtoPalette:
 	jmp FarCopyWRAM
 
 johtoPalette:
-INCLUDE "maps/EcruteakCity.pal"
+INCLUDE "gfx/tilesets/EcruteakCity.pal"
