@@ -20,7 +20,7 @@ LoadSpecialMapPalette:
 	jr z, .radio_tower
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
-	cp TILESET_ECRUTEAK
+	cp TILESET_JOHTO
 	jr z, .ecruteak
 	jr .do_nothing
 
