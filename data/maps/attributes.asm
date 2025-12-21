@@ -121,9 +121,10 @@ ENDM
 	map_attributes CianwoodCity, CIANWOOD_CITY, $35, EAST
 	connection east, Route41, ROUTE_41, 0
 
-	map_attributes GoldenrodCity, GOLDENROD_CITY, $35, NORTH | SOUTH
+	map_attributes GoldenrodCity, GOLDENROD_CITY, $35, NORTH | SOUTH | WEST
 	connection north, Route35, ROUTE_35, 5
 	connection south, Route34, ROUTE_34, 5
+	connection west, GoldenrodIsle, GOLDENROD_ISLE, 0
 
 	map_attributes OlivineCity, OLIVINE_CITY, $35, NORTH | WEST
 	connection north, Route39, ROUTE_39, 5
@@ -209,9 +210,10 @@ ENDM
 	connection south, Route41, ROUTE_41, -15
 	connection east, OlivineCity, OLIVINE_CITY, -9
 
-	map_attributes Route41, ROUTE_41, $35, NORTH | WEST
+	map_attributes Route41, ROUTE_41, $35, NORTH | WEST | EAST
 	connection north, Route40, ROUTE_40, 15
 	connection west, CianwoodCity, CIANWOOD_CITY, 0
+	connection east, GoldenrodIsle, GOLDENROD_ISLE, 0
 
 	map_attributes Route42, ROUTE_42, $05, SOUTH | WEST | EAST
 	connection south, Route49, ROUTE_49, 1
@@ -386,6 +388,10 @@ ENDM
 	map_attributes Route47, ROUTE_47, $2c, WEST | EAST
 	connection west, Route32, ROUTE_32, -20
 	connection east, CherrygroveCity, CHERRYGROVE_CITY, 7
+
+	map_attributes GoldrodIsle, GOLDENROD_ISLE, $2c, WEST | EAST
+	connection west, Route41, ROUTE_41, 0
+	connection west, GoldenrodCity, GOLDENROD_CITY, 0
 
 	map_attributes CianwoodPalace, CIANWOOD_PALACE, $2c, SOUTH
 	connection south, Route48, ROUTE_48, -1
