@@ -132,13 +132,6 @@ LoadRadioTowerPalette:
 RadioTowerPalette:
 INCLUDE "gfx/tilesets/radio_tower.pal"
 
-LoadEcruteakPalette:
-	ld a, BANK(wBGPals1)
-	ld de, wBGPals1
-	ld hl, EcruteakPalette
-	ld bc, 8 palettes
-	jmp FarCopyWRAM
-
 MansionPalette1:
 INCLUDE "gfx/tilesets/mansion_1.pal"
 
@@ -168,4 +161,11 @@ MansionPalette2:
 INCLUDE "gfx/tilesets/mansion_2.pal"
 
 LoadEcruteakPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, EcruteakPalette
+	ld bc, 8 palettes
+	jmp FarCopyWRAM
+
+EcruteakPalette:
 INCLUDE "maps/EcruteakCity.pal"
