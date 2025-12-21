@@ -193,11 +193,11 @@
 	tilecoll WALL, FLOOR, WALL, FLOOR ; c0
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; c1
 	tilecoll WALL, WALL, FLOOR, WALL ; c2
-	tilecoll HOP_LEFT, FLOOR, HOP_LEFT, FLOOR ; c3
+	tilecoll WALL, HOP_LEFT, WALL, HOP_LEFT ; c3
 	tilecoll WALL, FLOOR, WALL, WALL ; c4
 	tilecoll WALL, WALL, WALL, WALL ; c5
 	tilecoll FLOOR, WALL, WALL, WALL ; c6
-	tilecoll HOP_LEFT, FLOOR, HOP_LEFT, FLOOR ; c7
+	tilecoll WALL, HOP_LEFT, WALL, HOP_LEFT ; c7
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; c8
 	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, WALL, WALL ; c9
 	tilecoll HEADBUTT_TREE, HEADBUTT_TREE, WALL, WALL ; ca
