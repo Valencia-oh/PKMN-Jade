@@ -1352,6 +1352,7 @@ DewgongEvosAttacks:
 	dbw 16, AURORA_BEAM
 	dbw 21, REST
 	dbw 32, TAKE_DOWN
+	dbw 37, WATER_PULSE
 	dbw 43, ICE_BEAM
 	dbw 60, SAFEGUARD
 	db 0 ; no more level-up moves
