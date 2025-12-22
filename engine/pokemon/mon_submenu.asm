@@ -24,7 +24,7 @@ MonSubmenu:
 	db 1 ; default option
 
 .GetTopCoord:
-; [wMenuBorderTopCoord] = 1 + [wMenuBorderBottomCoord] - 2 * ([wMonSubmenuCount] + 1)
+; [wMenuBorderTopCoord] = 1  [wMenuBorderBottomCoord] - 2 * ([wMonSubmenuCount]  1)
 	ld a, [wMonSubmenuCount]
 	inc a
 	add a
@@ -67,7 +67,7 @@ MonMenuLoop:
 
 PopulateMonMenu:
 	call MenuBoxCoord2Tile
-	ld bc, 2 * SCREEN_WIDTH + 2
+	ld bc, 2 * SCREEN_WIDTH  2
 	add hl, bc
 	ld de, wMonSubmenuItems
 .loop
@@ -86,7 +86,7 @@ PopulateMonMenu:
 	jr .loop
 
 GetMonMenuString:
-	ld hl, MonMenuOptions + 1
+	ld hl, MonMenuOptions  1
 	ld de, 4
 	call IsInArray
 	dec hl
@@ -115,28 +115,14 @@ GetMonSubmenuItems:
 	ld a, [wLinkMode]
 	and a
 	jr nz, .skip_moves
-	ld a, MON_MOVES
-	call GetPartyParamLocation
-	ld d, h
-	ld e, l
-	ld c, NUM_MOVES
-.loop
-	push bc
-	push de
-	ld a, [de]
-	and a
-	jr z, .next
-	push hl
-	call IsFieldMove
-	pop hl
-	call c,  AddMonMenuItem
-; fallthrough
-.next
-	pop de
-	inc de
-	pop bc
-	dec c
-	jr nz, .loop
+
+	call CanUseFlash
+	call CanUseFly
+	call CanUseDig
+	call Can_Use_Sweet_Scent
+	call CanUseTeleport
+	call CanUseSoftboiled
+	call CanUseMilkdrink
 
 .skip_moves
 	ld a, MONMENUITEM_STATS
@@ -204,7 +190,7 @@ ResetMonSubmenu:
 	xor a
 	ld [wMonSubmenuCount], a
 	ld hl, wMonSubmenuItems
-	ld bc, NUM_MONMENU_ITEMS + 1
+	ld bc, NUM_MONMENU_ITEMS  1
 	jmp ByteFill
 
 TerminateMonSubmenu:
@@ -277,3 +263,96 @@ BattleMonMenu:
 	db "SWITCH@"
 	db "STATS@"
 	db "CANCEL@"
+
+CheckMonCanLearn_TM_HM:
+; Check if wCurPartySpecies can learn move in 'a'
+	ld [wPutativeTMHMMove], a
+	ld a, [wCurPartySpecies]
+	farcall CanLearnTMHMMove
+.check
+	ld a, c
+	and a
+	ret z
+; yes
+	scf
+	ret
+
+CheckMonKnowsMove:
+	ld b, a
+	ld a, MON_MOVES
+	call GetPartyParamLocation
+	ld d, h
+	ld e, l
+	ld c, NUM_MOVES
+.loop
+	ld a, [de]
+	and a
+	jr z, .next
+	cp b
+	jr z, .found ; knows move
+.next
+	inc de
+	dec c
+	jr nz, .loop
+	ld a, -1
+	scf ; mon doesnt know move
+	ret
+.found
+	xor a
+	ret z
+
+CheckLvlUpMoves:
+; move looking for in a
+	ld d, a
+	ld a, [wCurPartySpecies]
+	dec a
+	ld b, 0
+	ld c, a
+	ld hl, EvosAttacksPointers
+	add hl, bc
+	add hl, bc
+	ld a, BANK(EvosAttacksPointers)
+	ld b, a
+	call GetFarWord
+	ld a, b
+	call GetFarByte
+	inc hl
+	and a
+	jr z, .find_move
+	dec hl
+	call MonSubMenu_SkipEvolutions
+.find_move
+	call MonSubMenu_GetNextEvoAttackByte
+	and a
+	jr z, .notfound ; end of mon's lvl up learnset
+	call MonSubMenu_GetNextEvoAttackByte
+	cp d ;MAKE SURE NOT CLOBBERED
+	jr z, .found
+	jr .find_move
+.found
+	xor a
+	ret z ; move is in lvl up learnset
+.notfound
+	scf ; move isnt in lvl up learnset
+	ret
+
+MonSubMenu_SkipEvolutions:
+; Receives a pointer to the evos and attacks for a mon in b:hl, and skips to the attacks.
+	ld a, b
+	call GetFarByte
+	inc hl
+	and a
+	ret z
+	cp EVOLVE_STAT
+	jr nz, .no_extra_skip
+	inc hl
+.no_extra_skip
+	inc hl
+	inc hl
+	jr MonSubMenu_SkipEvolutions
+
+MonSubMenu_GetNextEvoAttackByte:
+	ld a, BANK(EvosAttacksPointers)
+	call GetFarByte
+	inc hl
+	ret
