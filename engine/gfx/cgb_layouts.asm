@@ -455,10 +455,10 @@ _CGB_Pokedex_EvoPage:
 	hlcoord 1, 12, wAttrmap
 	ld bc, 4
 	call ByteFill
-	
+
 	hlcoord 1, 16, wAttrmap
 	ld bc, 4
-	call ByteFill				
+	call ByteFill		
 
 	call InitPartyMenuOBPals
 	call ApplyAttrmap
