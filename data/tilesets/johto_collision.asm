@@ -130,7 +130,7 @@
 	tilecoll TALL_GRASS, HOP_RIGHT, TALL_GRASS, HOP_RIGHT ; 81
 	tilecoll FLOOR, TALL_GRASS, FLOOR, FLOOR ; 82
 	tilecoll TALL_GRASS, FLOOR, FLOOR, FLOOR ; 83
-	tilecoll TALL_GRASS, TALL_GRASS, HOP_DOWN, HOP_DOWN ; 84
+	tilecoll FLOOR, TALL_GRASS, FLOOR, TALL_GRASS ; 84
 	tilecoll FLOOR, FLOOR, TALL_GRASS, FLOOR ; 85
 	tilecoll FLOOR, FLOOR, FLOOR, TALL_GRASS ; 86
 	tilecoll HEADBUTT_TREE, FLOOR, FLOOR, TALL_GRASS ; 87
@@ -190,8 +190,8 @@
 	tilecoll FLOOR, FLOOR, PUDDLE, FLOOR ; bd
 	tilecoll FLOOR, FLOOR, FLOOR, PUDDLE ; be
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; bf
-	tilecoll WALL, FLOOR, WALL, FLOOR ; c0
-	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; c1
+	tilecoll WALL, WALL, WALL, FLOOR ; c0
+	tilecoll WALL, WALL, FLOOR, FLOOR ; c1
 	tilecoll WALL, WALL, FLOOR, WALL ; c2
 	tilecoll WALL, HOP_LEFT, WALL, HOP_LEFT ; c3
 	tilecoll WALL, FLOOR, WALL, WALL ; c4
@@ -252,5 +252,4 @@
 	tilecoll WATER, BUOY, WHIRLPOOL, BUOY ; fb
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; fc
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; fd
-	tilecoll , , ,  ; fe
-	tilecoll , , ,  ; ff
+	tilecoll TALL_GRASS, FLOOR, FLOOR, FLOOR ; fe
