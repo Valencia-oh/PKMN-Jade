@@ -431,8 +431,6 @@ Cable_Club_Map_Names: ;newgroup CABLE_CLUB
 	dw Cable_Club_Map_Name2 ; map_const TRADE_CENTER ;  2
 	dw Cable_Club_Map_Name3 ; map_const COLOSSEUM ;  3
 	dw Cable_Club_Map_Name4 ; map_const TIME_CAPSULE ;  4
-	dw Cable_Club_Map_Name5 ; map_const MOBILE_TRADE_ROOM ;  5
-	dw Cable_Club_Map_Name6 ; map_const MOBILE_BATTLE_ROOM ;  6
 	assert_table_length NUM_CABLE_CLUB_MAPS
 
 Celadon_Map_Names: ;newgroup CELADON
@@ -483,6 +481,9 @@ Cianwood_Map_Names: ;newgroup CIANWOOD
 	dw Cianwood_Map_Name14 ; map_const BATTLE_TOWER_HALLWAY,                        11,  2 ; 14
 	dw Cianwood_Map_Name15 ; map_const ROUTE_40_BATTLE_TOWER_GATE ; 15
 	dw Cianwood_Map_Name16 ; map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ; 16
+	dw Cianwood_Map_Name17 ; map_const ROUTE_48,
+	dw Cianwood_Map_Name18 ; map_const CIANWOOD_PALACE,
+	dw Cianwood_Map_Name19 ; map_const GOLDENROD_ISLE,
 	assert_table_length NUM_CIANWOOD_MAPS
 
 Viridian_Map_Names: ;newgroup VIRIDIAN ; 23
@@ -1252,6 +1253,12 @@ Cianwood_Map_Name15: ; map_const ROUTE_40_BATTLE_TOWER_GATE ; 15
 	db "ROUTE 40 GATE@"
 Cianwood_Map_Name16: ; map_const BATTLE_TOWER_OUTSIDE ; 16
 	db "BATTLE TOWER@"
+Cianwood_Map_Name17: ; map_const ROUTE_48 ; 16
+	db "ROUTE 48@"
+Cianwood_Map_Name18: ; map_const CIANWOOD_PALACE ; 16
+	db "CIANWOOD PALACE@"
+Cianwood_Map_Name19: ; map_const GOLDENROD_ISLE ; 16
+	db "GOLDENROD ISLE@"
 
 Viridian_Map_Name1: ; map_const ROUTE_2,;  1
 	db "ROUTE 2@"
