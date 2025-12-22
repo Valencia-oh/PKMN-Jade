@@ -1,4 +1,4 @@
-TreeMons:
+TreeMons::
 ; entries correspond to TREEMON_SET_* constants
 	table_width 2
 	dw TreeMonSet_City
@@ -8,9 +8,20 @@ TreeMons:
 	dw TreeMonSet_Kanto
 	dw TreeMonSet_Lake
 	dw TreeMonSet_Forest
-	dw TreeMonSet_Rock
+	;dw TreeMonSet_Rock
 	assert_table_length NUM_TREEMON_SETS
 	dw TreeMonSet_City ; unused
+
+
+
+
+
+RockSmashMons::
+	; broke off from the above table, for nayru's pokedex
+	; delineation was needed because there is no 'rare' table for rocksmash
+	table_width 2, RockSmashMons
+	dw TreeMonSet_Rock
+	assert_table_length NUM_ROCKSMASH_SETS
 
 ; Two tables each (common, rare).
 ; Structure:
