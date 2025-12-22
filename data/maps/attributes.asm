@@ -402,7 +402,7 @@ ENDM
 	connection north, CianwoodPalace, CIANWOOD_PALACE, 1
 
 	map_attributes OlivineRanch, OLIVINE_RANCH, $2c, EAST
-	connection east, Route39, ROUTE_39, 0
+	connection east, Route39, ROUTE_39, 1
 
 	map_attributes OlivineQuarry, OLIVINE_QUARRY, $2c, NORTH
 	connection north, Route39, ROUTE_39, 6
