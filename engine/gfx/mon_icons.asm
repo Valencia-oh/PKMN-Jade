@@ -522,6 +522,7 @@ FlyFunction_GetMonIcon:
 	ld a, e
 	call GetIcon_a
 
+SetOWFlyMonColor:
 	; Edit the OBJ 0 palette so that the cursor Pokémon has the right colors.
 	ld a, MON_DVS
 	call GetPartyParamLocation
