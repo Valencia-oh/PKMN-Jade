@@ -140,7 +140,7 @@ CheckPartyCanLearnMove:
 	ld b,b
 	ld a, d
 	push de
-	call OW_CheckLvlUpMoves
+	call CheckLvlUpMoves
 	pop de
 	jr nc, .yes
 ; done checking
