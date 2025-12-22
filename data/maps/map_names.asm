@@ -586,9 +586,9 @@ Olivine_Map_Name13: ; map_const ROUTE_39, ; 13
 	db "ROUTE 39@"
 Olivine_Map_Name14: ; map_const OLIVINE_CITY ; 14
 	db "OLIVINE CITY@"
-Olivine_Map_Name14: ; map_const OLIVINE_RANCH ; 14
+Olivine_Map_Name15: ; map_const OLIVINE_RANCH ; 15
 	db "OLIVINE RANCH@"
-Olivine_Map_Name14: ; map_const OLIVINE_QUARRY ; 14
+Olivine_Map_Name16: ; map_const OLIVINE_QUARRY ; 16
 	db "OLIVINE QUARRY@"
 
 Mahogany_Map_Name1: ; map_const MAHOGANY_RED_GYARADOS_SPEECH_HOUSE ;  1
