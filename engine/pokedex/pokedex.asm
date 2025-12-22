@@ -2667,8 +2667,8 @@ Pokedex_CheckSeen:
 	push hl
 	ld a, [wTempSpecies]
 	call CheckSeenMon
-	; ld a, 1 ; DEBUG, to unlock all unseen mon
-	; and a ; DEBUG, to unlock all unseen mon
+	ld a, 1 ; DEBUG, to unlock all unseen mon
+	and a ; DEBUG, to unlock all unseen mon
 	pop hl
 	pop de
 	ret
