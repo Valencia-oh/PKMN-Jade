@@ -199,7 +199,7 @@ ENDM
 	connection south, Route36, ROUTE_36, -10
 
 	map_attributes Route38, ROUTE_38, $05, SOUTH | WEST | EAST
-	connection east, OlivineQuarry, OLIVINE_QUARRY, -6	
+	connection south, OlivineQuarry, OLIVINE_QUARRY, -6	
 	connection west, Route39, ROUTE_39, 0
 	connection east, EcruteakCity, ECRUTEAK_CITY, -5
 
