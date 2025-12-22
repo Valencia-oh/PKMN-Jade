@@ -2631,6 +2631,8 @@ wStartHour::   db
 wStartMinute:: db
 wStartSecond:: db
 
+wRTC:: ds 4
+
 wPokedexEntryType::     db
 wPokedexEntryPageNum::  db
 wPokedexEvoStage2::		db
