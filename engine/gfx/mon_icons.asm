@@ -22,7 +22,7 @@ SetMenuMonIconColor:
 	ld [wCurPartySpecies], a
 	call GetMenuMonIconPalette
 	ld hl, wShadowOAMSprite00Attributes
-	jr _ApplyMenuMonIconColor
+	jp _ApplyMenuMonIconColor
 
 SetDexMonIconColor_NoShiny:
 	push hl
