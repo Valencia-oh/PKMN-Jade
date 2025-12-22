@@ -252,5 +252,5 @@
 	tilecoll WATER, BUOY, WHIRLPOOL, BUOY ; fb
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; fc
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; fd
-	tilecoll GRASS, FLOOR, FLOOR, FLOOR ; fe
-	tilecoll FLOOR, FLOOR, GRASS, GRASS ; ff
+	tilecoll TALL_GRASS, FLOOR, FLOOR, FLOOR ; fe
+	tilecoll FLOOR, FLOOR, TALL_GRASS, TALL_GRASS ; ff
