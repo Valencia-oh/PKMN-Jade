@@ -44,6 +44,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - Pokecrystal devs for making this posible, as well as the code so easy to use and providing numerous incredibly helpful tutorials
 - RaJa239 on the pret discord for the script to make the pocket pc only work outdoors
 - the code for Abilities, Hail, Psysical/Special Split, and several moves is from Aaronjeter's Budget Crystal Romhack
+- code for the 
 
 ## Timeline
 Currently focusing on adding pokemon, but after the next pokemon addition update, I will begin working on new Routes and Locations
@@ -76,8 +77,9 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Vibrava                                  ✔️
 - Flygon                                   ✔️
 ### v.0.8 goals - IN PROGRESS
-- Olivine Woods + Creek                    ✖️
-- Ecruteak Woods                           ✖️
+- Olivine Woods + Creek                    -- Ranch
+- Ecruteak Woods                           -- Quarry
+- HM Fix 
 - Hisuian Growelithe                       ✖️
 - Hisuian Arcanine                         ✖️
 - Dripplin                                 ✖️
@@ -85,5 +87,5 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 ### v.0.9 goals - IN PROGRESS
 - Hoenn Legend Trio -- Sprites Obtained, Code Not Started ✖️
 - Spear Pillar ✖️
-- Legendary Bird Islands ✖️
+- Legendary Bird Islands -- Began
 - Remove Team Rocket Story Line ✖️
