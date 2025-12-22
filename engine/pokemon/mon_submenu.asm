@@ -533,7 +533,7 @@ CanUseSoftboiled:
 	ret
 
 CanUseMilkdrink:
-	ld hl, MILKDRINK
+	ld hl, MILK_DRINK
 	call GetMoveIDFromIndex
 	call CheckMonKnowsMove
 	and a
