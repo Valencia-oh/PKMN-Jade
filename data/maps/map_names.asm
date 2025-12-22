@@ -614,7 +614,10 @@ Mahogany_Map_Name5: ; map_const ROUTE_42,  ;  5
 Mahogany_Map_Name6: ; map_const ROUTE_44, ;  6
 	db "ROUTE 44@"
 Mahogany_Map_Name7: ; map_const MAHOGANY_TOWN,  ;  7
-	db "MAHOGANY TOWN@"                                           ;  3
+	db "MAHOGANY TOWN@"                       
+Mahogany_Map_Name8: ; map_const MAHOGANY_TOWN,  ;  7
+	db "ROUTE 49@"
+
 Dungeons_Map_Name1: ; map_const SPROUT_TOWER_1F, ;  1
 	db "SPROUT TOWER 1F@"
 Dungeons_Map_Name2: ; map_const SPROUT_TOWER_2F, ;  2
