@@ -24,7 +24,7 @@ FalknerGroup:
 	db -1 ; end
 
 	next_list_item ; FALKNER (2)
-	db "FALKNER@", TRAINERTYPE_MOVES
+	db "FALKNER@", TRAINERTYPE_NORMAL
 	db 6
 	dw XATU
 	db 5
@@ -65,15 +65,17 @@ WhitneyGroup:
 	dw POUND, MIMIC, ENCORE, METRONOME
 	db 7
 	dw WIGGLYTUFF
+	dw MOONBLAST, SING, DRAINING_KISS, METRONOME
 	db 10
 	dw MILTANK
 	dw ROLLOUT, ATTRACT, STOMP, MILK_DRINK
 	db 8
-	dw LINOONE
-	db 10
 	dw SNUBBULL
 	db 10
+	dw PLAY_ROUGH, CRUNCH, ATTRACT, SHADOW_BALL
+	db 9
 	dw FURRET
+	dw BIZZARD, FIRE_FANG, FURY_SWIPES, DEFENSE_CURL
 	db -1 ; end
 
 	end_list_items
@@ -1949,7 +1951,7 @@ BeautyGroup:
 	db -1 ; end
 
 	next_list_item ; BEAUTY (16)
-	db "VALERIE@", TRAINERTYPE_MOVES
+	db "VALERIE@", TRAINERTYPE_NORMAL
 	db 1
 	dw HOPPIP
 	db 2
