@@ -126,7 +126,7 @@
 	tilecoll WALL, WALL, WALL, WALL ; 7d
 	tilecoll WALL, WALL, WALL, WALL ; 7e
 	tilecoll WALL, WALL, WALL, WALL ; 7f
-	tilecoll TALL_GRASS, FLOOR, FLOOR, FLOOR ; 80
+	tilecoll GRASS, FLOOR, FLOOR, FLOOR ; 80
 	tilecoll TALL_GRASS, HOP_RIGHT, TALL_GRASS, HOP_RIGHT ; 81
 	tilecoll FLOOR, TALL_GRASS, FLOOR, FLOOR ; 82
 	tilecoll TALL_GRASS, FLOOR, FLOOR, FLOOR ; 83
@@ -252,3 +252,4 @@
 	tilecoll WATER, BUOY, WHIRLPOOL, BUOY ; fb
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; fc
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; fd
+	tilecoll FLOOR, TALL_GRASS, FLOOR, TALL_GRASS ; fe
