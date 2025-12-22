@@ -271,7 +271,7 @@ CheckMapForSomethingToCut:
 	ld a, l
 	ld [wCutWhirlpoolOverworldBlockAddr], a
 	ld a, h
-	ld [wCutWhirlpoolOverworldBlockAddr  1], a
+	ld [wCutWhirlpoolOverworldBlockAddr + 1], a
 	ld a, b
 	ld [wCutWhirlpoolReplacementBlock], a
 	ld a, c
@@ -1252,7 +1252,7 @@ TryWhirlpoolMenu:
 	ld a, l
 	ld [wCutWhirlpoolOverworldBlockAddr], a
 	ld a, h
-	ld [wCutWhirlpoolOverworldBlockAddr  1], a
+	ld [wCutWhirlpoolOverworldBlockAddr + 1], a
 	ld a, b
 	ld [wCutWhirlpoolReplacementBlock], a
 	ld a, c
