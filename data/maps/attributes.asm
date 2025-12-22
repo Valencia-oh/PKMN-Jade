@@ -405,7 +405,7 @@ ENDM
 	connection east, Route39, ROUTE_39, 1
 
 	map_attributes OlivineQuarry, OLIVINE_QUARRY, $2c, NORTH
-	connection north, Route39, ROUTE_39, 6
+	connection north, Route38, ROUTE_38, 6
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
