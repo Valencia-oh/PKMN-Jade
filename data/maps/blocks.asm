@@ -12,6 +12,12 @@ Route47_Blocks:
 Route49_Blocks:
 	INCBIN "maps/Route49.ablk"
 
+OlivineRanch_Blocks:
+	INCBIN "maps/OlivineRanch.ablk"
+
+OlivineQuarry_Blocks:
+	INCBIN "maps/OlivineQuarry.ablk"
+
 Route36_Blocks:
 	INCBIN "maps/Route36.ablk"
 
