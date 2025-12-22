@@ -84,10 +84,10 @@ JohtoWaterWildMons:
 
 	def_water_wildmons WHIRL_ISLAND_SW
 	db 4 percent ; encounter rate
-	dbw 20, TENTACOOL
-	dbw 15, HORSEA
-	dbw 20, TENTACOOL
-	dbw 25, MANTINE
+	dbw 2, TENTACOOL
+	dbw 4, HORSEA
+	dbw 6, TENTACOOL
+	dbw 3, MANTINE
 	end_water_wildmons
 
 	def_water_wildmons WHIRL_ISLAND_B2F
@@ -196,18 +196,18 @@ JohtoWaterWildMons:
 
 	def_water_wildmons ROUTE_41
 	db 2 percent ; encounter rate
-	dbw 20, WINGULL
-	dbw 20, TENTACOOL
-	dbw 20, MANTINE
-	dbw 20, WINGULL
+	dbw 4, WINGULL
+	dbw 2, TENTACOOL
+	dbw 5, MANTINE
+	dbw 6, WINGULL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_42
 	db 4 percent ; encounter rate
-	dbw 20, GOLDEEN
-	dbw 15, SEEL
-	dbw 20, GOLDEEN
-	dbw 25, WOOPER
+	dbw 4, GOLDEEN
+	dbw 5, SEEL
+	dbw 2, GOLDEEN
+	dbw 3, WOOPER
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_43
@@ -236,10 +236,10 @@ JohtoWaterWildMons:
 
 	def_water_wildmons ROUTE_47
 	db 6 percent ; encounter rate
-	dbw 35, QWILFISH
-	dbw 26, WOOPER
-	dbw 24, TENTACOOL
-	dbw 34, CLOYSTER
+	dbw 5, QWILFISH
+	dbw 6, WOOPER
+	dbw 4, TENTACOOL
+	dbw 3, CLOYSTER
 	end_water_wildmons
 
 	def_water_wildmons NEW_BARK_TOWN
@@ -284,18 +284,18 @@ JohtoWaterWildMons:
 
 	def_water_wildmons ECRUTEAK_CITY
 	db 2 percent ; encounter rate
-	dbw 20, POLIWAG
-	dbw 15, POLIWAG
-	dbw 20, POLIWHIRL
-	dbw 25, POLIWHIRL
+	dbw 2, POLIWAG
+	dbw 5, POLIWAG
+	dbw 4, POLIWHIRL
+	dbw 5, POLIWHIRL
 	end_water_wildmons
 
 	def_water_wildmons LAKE_OF_RAGE
 	db 6 percent ; encounter rate
-	dbw 33, GYARADOS
-	dbw 27, MAGIKARP
-	dbw 25, MAGIKARP
-	dbw 10, TOTODILE
+	dbw 3, GYARADOS
+	dbw 4, MAGIKARP
+	dbw 5, MAGIKARP
+	dbw 1, TOTODILE
 	end_water_wildmons
 
 	def_water_wildmons BLACKTHORN_CITY
@@ -308,17 +308,17 @@ JohtoWaterWildMons:
 
 	def_water_wildmons SILVER_CAVE_OUTSIDE
 	db 2 percent ; encounter rate
-	dbw 35, POLIWHIRL
-	dbw 40, POLIWHIRL
-	dbw 35, POLIWAG
-	dbw 35, POLIWAG
+	dbw 3, POLIWHIRL
+	dbw 4, POLIWHIRL
+	dbw 5, POLIWAG
+	dbw 5, POLIWAG
 	end_water_wildmons
 
 	def_water_wildmons CIANWOOD_CAVE
 	db 6 percent ; encounter rate
-	dbw 20, WINGULL
-	dbw 15, SHELLDER
-	dbw 15, CORSOLA
-	dbw 20, SQUIRTLE
+	dbw 2, WINGULL
+	dbw 4, SHELLDER
+	dbw 5, CORSOLA
+	dbw 3, SQUIRTLE
 
 	db -1 ; end
