@@ -50,7 +50,7 @@ ENDM
 	map_const ROUTE_38,                                    20,  9 ; 12
 	map_const ROUTE_39,                                    10, 18 ; 13
 	map_const OLIVINE_CITY,                                20, 18 ; 14
-	map_const OLIVINE_RANCH,                               16, 12 ; 15
+	map_const OLIVINE_RANCH,                               16, 15 ; 15
 	map_const OLIVINE_QUARRY,                              10, 9  ; 16
 	endgroup
 
