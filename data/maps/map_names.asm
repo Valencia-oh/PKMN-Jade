@@ -555,6 +555,7 @@ Cherrygrove_Map_Names:
 	dw Cherrygrove_Map_Name9 ; map_const ROUTE_30_BERRY_HOUSE ;  9
 	dw Cherrygrove_Map_Name10 ; map_const MR_POKEMONS_HOUSE ; 10
 	dw Cherrygrove_Map_Name11 ; map_const ROUTE_31_VIOLET_GATE ; 11
+	dw Cherrygrove_Map_Name12 ; map_const ROUTE_47        ;  12
 	assert_table_length NUM_CHERRYGROVE_MAPS
 
 ; MAX LENGTH: 17
@@ -1162,8 +1163,6 @@ Cable_Club_Map_Name2: ; map_const TRADE_CENTER ;  2
 	db "<PKMN> TRADE CENTER@"
 Cable_Club_Map_Name3: ; map_const COLOSSEUM ;  3
 	db "<PKMN> COLOSSEUM@"
-Cable_Club_Map_Name4: ; map_const TIME_CAPSULE ;  4
-	db "<PKMN> TIME CAPSULE@"
 Cable_Club_Map_Name5: ; map_const MOBILE_TRADE_ROOM ;  5
 	db "MOBILE TRADE@"
 Cable_Club_Map_Name6: ; map_const MOBILE_BATTLE_ROOM ;  6
@@ -1362,3 +1361,5 @@ Cherrygrove_Map_Name10: ; map_const MR_POKEMONS_HOUSE ; 10
 	db "MR. #MON HOUSE@"
 Cherrygrove_Map_Name11: ; map_const ROUTE_31_VIOLET_GATE ; 11
 	db "ROUTE 31 GATE@"
+Cherrygrove_Map_Name12: ; map_const ROUTE_47         ;  12
+	db "ROUTE 47@"
