@@ -252,5 +252,3 @@
 	tilecoll WATER, BUOY, WHIRLPOOL, BUOY ; fb
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; fc
 	tilecoll WALL, FLOOR, FLOOR, FLOOR ; fd
-	tilecoll , , ,  ; fe
-	tilecoll , , ,  ; ff
