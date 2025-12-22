@@ -198,12 +198,14 @@ ENDM
 	connection north, EcruteakCity, ECRUTEAK_CITY, -5
 	connection south, Route36, ROUTE_36, -10
 
-	map_attributes Route38, ROUTE_38, $05, WEST | EAST
+	map_attributes Route38, ROUTE_38, $05, SOUTH | WEST | EAST
+	connection east, OlivineQuarry, OLIVINE_QUARRY, -6	
 	connection west, Route39, ROUTE_39, 0
 	connection east, EcruteakCity, ECRUTEAK_CITY, -5
 
-	map_attributes Route39, ROUTE_39, $05, SOUTH | EAST
+	map_attributes Route39, ROUTE_39, $05, SOUTH | WEST | EAST
 	connection south, OlivineCity, OLIVINE_CITY, -5
+	connection west, OlivineRanch, OLIVINE_RANCH, 0
 	connection east, Route38, ROUTE_38, 0
 
 	map_attributes Route40, ROUTE_40, $35, SOUTH | EAST
@@ -398,6 +400,12 @@ ENDM
 
 	map_attributes Route48, ROUTE_48, $2c, NORTH
 	connection north, CianwoodPalace, CIANWOOD_PALACE, 1
+
+	map_attributes OlivineRanch, OLIVINE_RANCH, $2c, EAST
+	connection east, Route39, ROUTE_39, 0
+
+	map_attributes OlivineQuarry, OLIVINE_QUARRY, $2c, NORTH
+	connection North, Route39, ROUTE_39, 6
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
