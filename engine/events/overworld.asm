@@ -159,60 +159,35 @@ CheckPartyCanLearnMove:
 	ld a, 1
 	ret
 
-OW_CheckLvlUpMoves:
-; move looking for in a
+CheckLvlUpMoves:
 	ld d, a
-	ld a, [wCurPartySpecies]
-	dec a
-	ld b, 0
-	ld c, a
+	ld a, [wTempSpecies]
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
 	ld hl, EvosAttacksPointers
-	add hl, bc
-	add hl, bc
 	ld a, BANK(EvosAttacksPointers)
-	ld b, a
-	call GetFarWord
-	ld a, b
+	call LoadDoubleIndirectPointer
+	ld [wStatsScreenFlags], a ; bank
+	call FarSkipEvolutions
+.learnset_loop
 	call GetFarByte
+  	and a
+	jr z, .notfound
 	inc hl
-	and a
-	jr z, .find_move ; no evolutions
-	dec hl ; does have evolution(s)
-	call OW_SkipEvolutions
-.find_move
-	call OW_GetNextEvoAttackByte
-	and a
-	jr z, .notfound ; end of mon's lvl up learnset
-	call OW_GetNextEvoAttackByte
+	call GetFarWord
+	call GetMoveIDFromIndex
 	cp d
 	jr z, .found
-	jr .find_move
+	inc hl
+	inc hl
+	jr .learnset_loop
+
 .found
 	xor a
 	ret ; move is in lvl up learnset
 .notfound
 	scf ; move isnt in lvl up learnset
-	ret
-
-OW_SkipEvolutions:
-; Receives a pointer to the evos and attacks, and skips to the attacks.
-	ld a, b
-	call GetFarByte
-	inc hl
-	and a
-	ret z
-	cp EVOLVE_STAT
-	jr nz, .no_extra_skip
-	inc hl
-.no_extra_skip
-	inc hl
-	inc hl
-	jr OW_SkipEvolutions
-
-OW_GetNextEvoAttackByte:
-	ld a, BANK(EvosAttacksPointers)
-	call GetFarByte
-	inc hl
 	ret
 
 FieldMoveFailed:
@@ -296,7 +271,7 @@ CheckMapForSomethingToCut:
 	ld a, l
 	ld [wCutWhirlpoolOverworldBlockAddr], a
 	ld a, h
-	ld [wCutWhirlpoolOverworldBlockAddr + 1], a
+	ld [wCutWhirlpoolOverworldBlockAddr  1], a
 	ld a, b
 	ld [wCutWhirlpoolReplacementBlock], a
 	ld a, c
@@ -619,13 +594,15 @@ TrySurfOW::
 	jr z, .quit
 
 ; Step 3
-  	ld d, SURF
+ 	ld hl, SURF
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
 	and a
 	jr z, .yes
 
 ; Step 4
-	ld d, SURF
+	ld hl, SURF
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .quit
 .yes
@@ -824,13 +801,15 @@ TryWaterfallOW::
 	jr z, .failed
 
 ; Step 3
-	ld d, WATERFALL
+	ld hl, WATERFALL
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
 	and a
 	jr z, .yes
 
 ; Step 4
-	ld d, WATERFALL
+	ld hl, WATERFALL
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .failed
 .yes
@@ -1273,7 +1252,7 @@ TryWhirlpoolMenu:
 	ld a, l
 	ld [wCutWhirlpoolOverworldBlockAddr], a
 	ld a, h
-	ld [wCutWhirlpoolOverworldBlockAddr + 1], a
+	ld [wCutWhirlpoolOverworldBlockAddr  1], a
 	ld a, b
 	ld [wCutWhirlpoolReplacementBlock], a
 	ld a, c
@@ -1330,13 +1309,15 @@ TryWhirlpoolOW::
 	jr z, .failed
 
 ; Step 3
-	ld d, WHIRLPOOL
+	ld hl, WHIRLPOOL
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
        and a
 	jr z, .yes
 
 ; Step 4
-	ld d, WHIRLPOOL
+	ld hl, WHIRLPOOL
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .failed
 
@@ -1953,13 +1934,15 @@ TryCutOW::
 	jr z, .cant_cut
 
 ; Step 3
-	ld d, CUT
+	ld hl, CUT
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
        and a
 	jr z, .yes
 
 ; Step 4
-	ld d, CUT
+	ld hl, CUT
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .cant_cut
 .yes
