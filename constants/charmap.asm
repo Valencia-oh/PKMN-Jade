@@ -55,11 +55,11 @@
 	; needed for StatsScreen_PlaceShinyIcon and PrintPartyMonPage1
 	charmap "⁂",         $3f ; gfx/stats/stats_tiles.png, tile 14
 	charmap "<DEX_⁂>",   $64 ; gfx/stats/stats_tiles.png, tile 14, VRAM0
-	charmap ">",		 $c0
-	charmap "<",		 $c1
-	charmap "=",		 $c2
-	charmap "+",		 $c3
-	charmap "<%>",		 $c4
+	charmap ">",		 $bb
+	charmap "<",		 $bc
+	charmap "=",		 $bd
+	charmap "+",		 $be
+	charmap "<%>",		 $bf
 
 ; Actual characters (from gfx/font/font.png)
 
