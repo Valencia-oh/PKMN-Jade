@@ -880,7 +880,7 @@ Evos_Page:
 	ld a, DEXENTRY_EVO
 	ld [wPokedexEntryType], a
 .evopage_loop
-	farcall PlaySpriteAnimations
+	callfar PlaySpriteAnimations
 	call JoyTextDelay
 	ld hl, hJoyPressed
 	ld a, [hl]
@@ -1004,7 +1004,7 @@ Pics_Page:
 	farcall HDMATransferTilemapToWRAMBank3	
 	call ClearSprites
 	call DisableSpriteUpdates
-	farcall ClearSpriteAnims2
+	callfar ClearSpriteAnims2
 	xor a
 	ldh [hBGMapMode], a
 	ldh [hSCX], a
@@ -1058,10 +1058,10 @@ Pics_Page:
 	farcall Dex_Pics_DrawBorder
 	call WaitBGMap
 	farcall Pokedex_place_Mon_Icon
-	farcall PlaySpriteAnimations
+	callfar PlaySpriteAnimations
 	farcall Pokedex_PlayMonCry_AnimateFrontpic
 .spritepage_loop
-	farcall PlaySpriteAnimations
+	callfar PlaySpriteAnimations
 	call JoyTextDelay
 	ld hl, hJoyPressed
 	ld a, [hl]
@@ -1965,10 +1965,8 @@ Pokedex_DrawDexEntryScreenBG:
 	call Pokedex_PlaceFrontpicTopLeftCorner
 ; Check to see if we caught it.  Get out of here if we haven't.
 	ld a, [wTempSpecies]
-	call GetPokemonIndexFromID
-	ld d, h
-	ld e, l
-	call CheckCaughtMonIndex ; call CheckCaughtMon
+	dec a
+	call CheckCaughtMon
 	ret z
 ; place Caught ball icon
 	hlcoord 16, 1
@@ -2603,8 +2601,6 @@ Pokedex_PlaceDefaultStringIfNotSeen:
 	push hl
 	push de
 	call CheckSeenMonIndex
-	; ld a, 1 ; DEBUG
-	; and a ; DEBUG
 	pop de
 	pop hl
 	ret nz
