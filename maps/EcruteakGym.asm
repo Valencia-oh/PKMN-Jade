@@ -5,18 +5,12 @@
 	const ECRUTEAKGYM_GRANNY1
 	const ECRUTEAKGYM_GRANNY2
 	const ECRUTEAKGYM_GYM_GUIDE
-	const ECRUTEAKGYM_GRAMPS
 
 EcruteakGym_MapScripts:
 	def_scene_scripts
-	scene_script EcruteakGymForcedToLeaveScene, SCENE_ECRUTEAKGYM_FORCED_TO_LEAVE
 	scene_script EcruteakGymNoopScene,          SCENE_ECRUTEAKGYM_NOOP
 
 	def_callbacks
-
-EcruteakGymForcedToLeaveScene:
-	sdefer EcruteakGymClosed
-	end
 
 EcruteakGymNoopScene:
 	end
@@ -99,22 +93,6 @@ EcruteakGymActivateRockets:
 
 .RadioTowerRockets:
 	jumpstd RadioTowerRocketsScript
-
-EcruteakGymClosed:
-	applymovement PLAYER, EcruteakGymPlayerStepUpMovement
-	applymovement ECRUTEAKGYM_GRAMPS, EcruteakGymGrampsSlowStepDownMovement
-	opentext
-	writetext EcruteakGymClosedText
-	waitbutton
-	closetext
-	follow PLAYER, ECRUTEAKGYM_GRAMPS
-	applymovement PLAYER, EcruteakGymPlayerSlowStepDownMovement
-	stopfollow
-	special FadeOutToWhite
-	playsound SFX_ENTER_DOOR
-	waitsfx
-	warp ECRUTEAK_CITY, 6, 27
-	end
 
 TrainerSageJeffrey:
 	trainer SAGE, JEFFREY, EVENT_BEAT_SAGE_JEFFREY, SageJeffreySeenText, SageJeffreyBeatenText, 0, .Script
@@ -456,4 +434,3 @@ EcruteakGym_MapEvents:
 	object_event  7,  5, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumMartha, -1
 	object_event  7,  9, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerMediumGrace, -1
 	object_event  7, 15, SPRITE_GYM_GUIDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakGymGuideScript, -1
-	object_event  4, 14, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ECRUTEAK_GYM_GRAMPS
