@@ -67,7 +67,7 @@ MonMenuLoop:
 
 PopulateMonMenu:
 	call MenuBoxCoord2Tile
-	ld bc, 2 * SCREEN_WIDTH  2
+	ld bc, 2 * SCREEN_WIDTH + 2
 	add hl, bc
 	ld de, wMonSubmenuItems
 .loop
