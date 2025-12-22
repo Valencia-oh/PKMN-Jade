@@ -1322,6 +1322,14 @@ TryWhirlpoolOW::
 	jr c, .failed
 
 .yes
+	call TryWhirlpoolMenu
+	jr c, .failed
+
+	ld a, BANK(Script_AskWhirlpoolOW)
+	ld hl, Script_AskWhirlpoolOW
+	call CallScript
+	scf
+	ret
 
 .failed
 	ld a, BANK(Script_MightyWhirlpool)
