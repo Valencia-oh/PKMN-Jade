@@ -811,19 +811,29 @@ Script_UsedWaterfall:
 	text_end
 
 TryWaterfallOW::
-	ld hl, WATERFALL
-	call CheckPartyMoveIndex
-	jr c, .failed
+; Step 1
 	ld de, ENGINE_RISINGBADGE
 	call CheckEngineFlag
 	jr c, .failed
-	call CheckMapCanWaterfall
+
+; Step 2
+	ld a, HM_WATERFALL
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jr z, .failed
+
+; Step 3
+	ld d, WATERFALL
+	call CheckPartyCanLearnMove
+	and a
+	jr z, .yes
+
+; Step 4
+	ld d, WATERFALL
+	call CheckPartyMove
 	jr c, .failed
-	ld a, BANK(Script_AskWaterfall)
-	ld hl, Script_AskWaterfall
-	call CallScript
-	scf
-	ret
+.yes
 
 .failed
 	ld a, BANK(Script_CantDoWaterfall)
@@ -1152,9 +1162,30 @@ BouldersMayMoveText:
 	text_end
 
 TryStrengthOW:
-	ld hl, STRENGTH
-	call CheckPartyMoveIndex
+; Step 1	
+	ld de, ENGINE_PLAINBADGE
+	call CheckEngineFlag
 	jr c, .nope
+
+; Step 2
+	ld a, HM_STRENGTH
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jr z, .nope
+
+; Step 3
+	ld d, STRENGTH
+	call CheckPartyCanLearnMove
+	and a
+	jr z, .yes
+
+; Step 4
+	ld d, STRENGTH
+	call CheckPartyMove
+	jr c, .nope
+
+.yes
 
 	ld de, ENGINE_PLAINBADGE
 	call CheckEngineFlag
@@ -1283,19 +1314,33 @@ DisappearWhirlpool:
 	jmp GetMovementPermissions
 
 TryWhirlpoolOW::
-	ld hl, WHIRLPOOL
-	call CheckPartyMoveIndex
-	jr c, .failed
+	; Step 1
 	ld de, ENGINE_GLACIERBADGE
-	call CheckEngineFlag
+	ld b, CHECK_FLAG
+	farcall EngineFlagAction
+	ld a, c
+	and a
+	jr z, .failed  ; .fail, dont have needed badge
+
+; Step 2
+	ld a, HM_WHIRLPOOL
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jr z, .failed
+
+; Step 3
+	ld d, WHIRLPOOL
+	call CheckPartyCanLearnMove
+       and a
+	jr z, .yes
+
+; Step 4
+	ld d, WHIRLPOOL
+	call CheckPartyMove
 	jr c, .failed
-	call TryWhirlpoolMenu
-	jr c, .failed
-	ld a, BANK(Script_AskWhirlpoolOW)
-	ld hl, Script_AskWhirlpoolOW
-	call CallScript
-	scf
-	ret
+
+.yes
 
 .failed
 	ld a, BANK(Script_MightyWhirlpool)
