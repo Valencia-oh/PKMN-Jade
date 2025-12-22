@@ -182,6 +182,14 @@ Dungeons_Map_Names: ;newgroup DUNGEONS
 	dw Dungeons_Map_Name89 ; map_const SAFARI_ZONE_FUCHSIA_GATE_BETA ; 89
 	dw Dungeons_Map_Name90 ; map_const SAFARI_ZONE_BETA,                            10, 18 ; 90
 	dw Dungeons_Map_Name91 ; map_const VICTORY_ROAD,; 91
+	dw Dungeons_Map_Name92
+	dw Dungeons_Map_Name93 
+	dw Dungeons_Map_Name94 
+	dw Dungeons_Map_Name95 
+	dw Dungeons_Map_Name96 
+	dw Dungeons_Map_Name97 
+	dw Dungeons_Map_Name98 
+	dw Dungeons_Map_Name99  
 	assert_table_length NUM_DUNGEONS_MAPS
 	
 
@@ -789,6 +797,22 @@ Dungeons_Map_Name90: ; map_const SAFARI_ZONE_BETA,; 90
 	db "SAFARI ZONE@"
 Dungeons_Map_Name91: ; map_const VICTORY_ROAD,;  4
 	db "VICTORY ROAD@"
+Dungeons_Map_Name92: ; map_const CIANWOOD_CAVE,; 87
+	db "CHERRY TOWER 1F@"
+Dungeons_Map_Name93: ; map_const CHERRY_TOWER_F1,; 87
+	db "CHERRY TOWER 1F@"
+Dungeons_Map_Name94: ; map_const CHERRY_TOWER_F2,; 88
+	db "CHERRY TOWER 2F@"
+Dungeons_Map_Name95: ; map_const CHERRY_TOWER_F3,; 87
+	db "CHERRY TOWER 3F@"
+Dungeons_Map_Name96: ; map_const CHERRY_TOWER_F4,; 88
+	db "CHERRY TOWER 4F@"
+Dungeons_Map_Name97: ; map_const CHERRY_TOWER_F5,; 87
+	db "CHERRY TOWER 5F@"
+Dungeons_Map_Name98: ; map_const CHERRY_TOWER_ROOF,; 88
+	db "CHERRY TOWER ROOF@"
+Dungeons_Map_Name99: ; map_const CHERRY_CAVE,; 87
+	db "CHERRY CAVE@"
 
 Ecruteak_Map_Name1: ; map_const ECRUTEAK_TIN_TOWER_ENTRANCE,;  1
 	db "TIN TOWER PATH@"
