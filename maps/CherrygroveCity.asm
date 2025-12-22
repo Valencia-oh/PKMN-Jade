@@ -99,7 +99,7 @@ CherrygroveCityGuideGent:
 	end
 
 CherrygroveRivalSceneSouth:
-	moveobject CHERRYGROVECITY_RIVAL, 39, 7
+	moveobject CHERRYGROVECITY_RIVAL, 35, 7
 CherrygroveRivalSceneNorth:
 	turnobject PLAYER, RIGHT
 	showemote EMOTE_SHOCK, PLAYER, 15
