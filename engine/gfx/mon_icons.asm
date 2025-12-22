@@ -261,7 +261,7 @@ Unused_GetPartyMenuMonIcon:
 	push hl
 	push bc
 	ld d, a
-	callfar ItemIsMail
+	farcall ItemIsMail
 	pop bc
 	pop hl
 	jr c, .not_mail
@@ -335,7 +335,7 @@ PartyMenu_InitAnimatedMonIcon:
 	push hl
 	push bc
 	ld d, a
-	callfar ItemIsMail
+	farcall ItemIsMail
 	pop bc
 	pop hl
 	jr c, .mail
