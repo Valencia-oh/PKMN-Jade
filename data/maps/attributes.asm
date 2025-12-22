@@ -205,7 +205,7 @@ ENDM
 
 	map_attributes Route39, ROUTE_39, $05, SOUTH | WEST | EAST
 	connection south, OlivineCity, OLIVINE_CITY, -5
-	connection west, OlivineRanch, OLIVINE_RANCH, 0
+	connection west, OlivineRanch, OLIVINE_RANCH, -1
 	connection east, Route38, ROUTE_38, 0
 
 	map_attributes Route40, ROUTE_40, $35, SOUTH | EAST
