@@ -202,18 +202,22 @@ Dex_Pics_DrawBorder:
 	lb bc, 7, 1
 	ld a, $71
 	call FillBoxWithByte
+
 	hlcoord 10, 1
 	lb bc, 7, 1
 	ld a, $71
 	call FillBoxWithByte
+
 	hlcoord 8, 1
 	lb bc, 7, 1
 	ld a, $71
 	call FillBoxWithByte
+
 	hlcoord 18, 1
 	lb bc, 7, 1
 	ld a, $71
 	call FillBoxWithByte
+
 	hlcoord 9, 0
 	lb bc, 9, 1
 	ld a, $7f
