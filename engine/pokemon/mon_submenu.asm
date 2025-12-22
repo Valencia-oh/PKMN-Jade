@@ -86,7 +86,7 @@ PopulateMonMenu:
 	jr .loop
 
 GetMonMenuString:
-	ld hl, MonMenuOptions  1
+	ld hl, MonMenuOptions + 1
 	ld de, 4
 	call IsInArray
 	dec hl
@@ -190,7 +190,7 @@ ResetMonSubmenu:
 	xor a
 	ld [wMonSubmenuCount], a
 	ld hl, wMonSubmenuItems
-	ld bc, NUM_MONMENU_ITEMS  1
+	ld bc, NUM_MONMENU_ITEMS + 1
 	jmp ByteFill
 
 TerminateMonSubmenu:
