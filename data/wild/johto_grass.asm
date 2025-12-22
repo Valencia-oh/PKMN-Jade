@@ -1533,13 +1533,13 @@ JohtoGrassWildMons:
 	dbw 4, TAUROS
 	dbw 3, TAUROS
 	; nite
-	dbw 16, INKAY
-	dbw 16, RATTATA
-	dbw 16, MAGNEMITE
-	dbw 16, NOCTOWL
-	dbw 18, INKAY
-	dbw 18, MEOWTH
-	dbw 18, MEOWTH
+	dbw 6, INKAY
+	dbw 6, RATTATA
+	dbw 6, MAGNEMITE
+	dbw 6, NOCTOWL
+	dbw 8, INKAY
+	dbw 8, MEOWTH
+	dbw 8, MEOWTH
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_42
@@ -1990,3 +1990,88 @@ def_grass_wildmons CIANWOOD_PALACE
 	dbw 4, PWOOPER
 	dbw 4, PWOOPER
 	end_grass_wildmons
+
+def_grass_wildmons ROUTE_49
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 3, EKANS
+	dbw 2, MAREEP
+	dbw 4, GIRAFARIG
+	dbw 4, VULPIX
+	dbw 5, GROWLITHE
+	dbw 3, SPEAROW
+	dbw 3, NATU
+	; day
+	dbw 3, EKANS
+	dbw 2, MAREEP
+	dbw 4, GIRAFARIG
+	dbw 4, VULPIX
+	dbw 5, GROWLITHE
+	dbw 3, SPEAROW
+	dbw 3, NATU
+	; nite
+	dbw 3, EKANS
+	dbw 2, MASCHIFF
+	dbw 4, POOCHYENA
+	dbw 4, ZUBAT
+	dbw 5, POLIWAG
+	dbw 3, ZUBAT
+	dbw 3, HOUNDOUR
+	end_grass_wildmons
+
+def_grass_wildmons OLIVINE_RANCH
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 3, TAUROS
+	dbw 4, MEOWTH
+	dbw 3, MAGNEMITE
+	dbw 4, WINGULL
+	dbw 3, MILTANK
+	dbw 4, TAUROS
+	dbw 3, TAUROS
+	; day
+	dbw 3, TAUROS
+	dbw 4, MEOWTH
+	dbw 3, MAGNEMITE
+	dbw 4, WINGULL
+	dbw 3, MILTANK
+	dbw 4, TAUROS
+	dbw 3, TAUROS
+	; nite
+	dbw 6, INKAY
+	dbw 6, TAUROS
+	dbw 6, MAGNEMITE
+	dbw 6, HOOTHOOT
+	dbw 7, INKAY
+	dbw 7, MEOWTH
+	dbw 7, MEOWTH
+	end_grass_wildmons
+
+def_grass_wildmons OLIVINE_QUARRY
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 3, TRAPINCH
+	dbw 4, TEDDIURSA
+	dbw 3, MAGNEMITE
+	dbw 4, WINGULL
+	dbw 3, MAGNEMITE
+	dbw 4, EEVEE
+	dbw 3, TAUROS
+	; day
+	dbw 3, TRAPINCH
+	dbw 4, TEDDIURSA
+	dbw 3, MAGNEMITE
+	dbw 4, WINGULL
+	dbw 3, MAGNEMITE
+	dbw 4, EEVEE
+	dbw 3, TAUROS
+	; nite
+	dbw 6, TRAPINCH
+	dbw 6, TAUROS
+	dbw 6, MAGNEMITE
+	dbw 6, HOOTHOOT
+	dbw 7, INKAY
+	dbw 7, GASTLY
+	dbw 7, GASTLY
+	end_grass_wildmons
+
