@@ -2631,7 +2631,10 @@ wStartHour::   db
 wStartMinute:: db
 wStartSecond:: db
 
-wRTC:: ds 4
+wPokedexEntryType::     db
+wPokedexEntryPageNum::  db
+wPokedexEvoStage2::		db
+wPokedexEvoStage3::     db
 
 wDST::
 ; bit 7: dst
@@ -2645,6 +2648,10 @@ wGameTimeSeconds:: db
 wGameTimeFrames::  db
 
 wCurDay:: db
+
+wPokedexShinyToggle::
+; bit 0: set if displaying shiny palettes
+	db
 
 wObjectFollow_Leader:: db
 wObjectFollow_Follower:: db
@@ -2747,7 +2754,7 @@ wPokegearFlags::
 	db
 wRadioTuningKnob:: db
 wLastDexMode:: db
-
+wCurPokedexColor:: db ; current dex color
 wWhichRegisteredItem:: db
 wRegisteredItem:: db
 
