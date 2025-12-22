@@ -492,9 +492,9 @@ Pokedex_Calc_EggMovesPtr:
 	push bc ; num of egg moves we've already printed on previous pages
 
 	ld a, [wCurPartySpecies]
-	callfar GetLowestEvolutionStage ; uses wCurPartySpecies
+	farcall GetLowestEvolutionStage ; uses wCurPartySpecies
 	ld a, [wCurPartySpecies]
-	callfar GetLowestEvolutionStage ; uses wCurPartySpecies
+	farcall GetLowestEvolutionStage ; uses wCurPartySpecies
 	ld a, [wCurPartySpecies]
 	ld [wTempSpecies], a
 	ld [wCurSpecies], a
