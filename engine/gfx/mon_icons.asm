@@ -8,9 +8,9 @@ _LoadOverworldMonIcon:
 	ld de, IconPointers
 	add hl, de
 	ld a, [hli]
-	ld d, [hl]
 	ld e, a
-	jmp GetIconBank
+	ld d, [hl]
+	jp GetIconBank
 
 SetMenuMonIconColor:
 	push hl
@@ -80,7 +80,7 @@ SetMenuMonIconColor_NoShiny:
 	and a
 	call GetMenuMonIconPalette_PredeterminedShininess
 	ld hl, wShadowOAMSprite00Attributes
-	jr _ApplyMenuMonIconColor
+	jp _ApplyMenuMonIconColor
 
 LoadPartyMenuMonIconColors:
 	push hl
@@ -144,7 +144,11 @@ _ApplyMenuMonIconColor:
 	jr nz, .loop
 	; fallthrough
 _FinishMenuMonIconColor:
-	jmp PopAFBCDEHL
+	pop af
+	pop bc
+	pop de
+	pop hl
+	ret
 
 GetMonPalInBCDE:
 ; Sets BCDE to mon icon palette.
@@ -170,7 +174,7 @@ GetMonPalInBCDE:
 	; Now we have the target color. Get the palette (+ 2 to avoid white).
 	ld hl, PartyMenuOBPals + 2
 	ld bc, 1 palettes
-	rst AddNTimes
+	call AddNTimes
 
 	push hl
 	ld a, BANK(PartyMenuOBPals)
@@ -213,7 +217,10 @@ LoadMenuMonIcon:
 	push de
 	push bc
 	call .LoadIcon
-	jmp PopBCDEHL
+	pop bc
+	pop de
+	pop hl
+	ret
 
 .LoadIcon:
 	ld d, 0
@@ -233,19 +240,20 @@ LoadMenuMonIcon:
 	dw Trade_LoadMonIconGFX             ; MONICON_TRADE
 	dw Mobile_InitAnimatedMonIcon       ; MONICON_MOBILE1
 	dw Mobile_InitPartyMenuBGPal71      ; MONICON_MOBILE2
-	dw Pokedex_InitAnimatedMonIcon 		; Unused_GetPartyMenuMonIcon       ; MONICON_UNUSED
+	dw Pokedex_InitAnimatedMonIcon ; Unused_GetPartyMenuMonIcon       ; MONICON_UNUSED
 
 Unused_GetPartyMenuMonIcon:
 	call InitPartyMenuIcon
 	call .GetPartyMonItemGFX
-	jmp SetPartyMonIconAnimSpeed
+	call SetPartyMonIconAnimSpeed
+	ret
 
 .GetPartyMonItemGFX:
 	push bc
 	ldh a, [hObjectStructIndex]
 	ld hl, wPartyMon1Item
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	pop bc
 	ld a, [hl]
 	and a
@@ -253,7 +261,7 @@ Unused_GetPartyMenuMonIcon:
 	push hl
 	push bc
 	ld d, a
-	farcall ItemIsMail
+	callfar ItemIsMail
 	pop bc
 	pop hl
 	jr c, .not_mail
@@ -275,13 +283,16 @@ Mobile_InitAnimatedMonIcon:
 	call PartyMenu_InitAnimatedMonIcon
 	ld hl, SPRITEANIMSTRUCT_ANIM_SEQ_ID
 	add hl, bc
-	ld [hl], SPRITE_ANIM_FUNC_NULL
+	ld a, SPRITE_ANIM_FUNC_NULL
+	ld [hl], a
 	ld hl, SPRITEANIMSTRUCT_XCOORD
 	add hl, bc
-	ld [hl], 9 * TILE_WIDTH
+	ld a, 9 * TILE_WIDTH
+	ld [hl], a
 	ld hl, SPRITEANIMSTRUCT_YCOORD
 	add hl, bc
-	ld [hl], 9 * TILE_WIDTH
+	ld a, 9 * TILE_WIDTH
+	ld [hl], a
 	ret
 
 Mobile_InitPartyMenuBGPal71:
@@ -289,13 +300,16 @@ Mobile_InitPartyMenuBGPal71:
 	call SetPartyMonIconAnimSpeed
 	ld hl, SPRITEANIMSTRUCT_ANIM_SEQ_ID
 	add hl, bc
-	ld [hl], SPRITE_ANIM_FUNC_NULL
+	ld a, SPRITE_ANIM_FUNC_NULL
+	ld [hl], a
 	ld hl, SPRITEANIMSTRUCT_XCOORD
 	add hl, bc
-	ld [hl], 3 * TILE_WIDTH
+	ld a, 3 * TILE_WIDTH
+	ld [hl], a
 	ld hl, SPRITEANIMSTRUCT_YCOORD
 	add hl, bc
-	ld [hl], 12 * TILE_WIDTH
+	ld a, 12 * TILE_WIDTH
+	ld [hl], a
 	ld a, c
 	ld [wc608], a
 	ld a, b
@@ -305,14 +319,15 @@ Mobile_InitPartyMenuBGPal71:
 PartyMenu_InitAnimatedMonIcon:
 	call InitPartyMenuIcon
 	call .SpawnItemIcon
-	jr SetPartyMonIconAnimSpeed
+	call SetPartyMonIconAnimSpeed
+	ret
 
 .SpawnItemIcon:
 	push bc
 	ldh a, [hObjectStructIndex]
 	ld hl, wPartyMon1Item
 	ld bc, PARTYMON_STRUCT_LENGTH
-	rst AddNTimes
+	call AddNTimes
 	pop bc
 	ld a, [hl]
 	and a
@@ -320,13 +335,16 @@ PartyMenu_InitAnimatedMonIcon:
 	push hl
 	push bc
 	ld d, a
-	farcall ItemIsMail
+	callfar ItemIsMail
 	pop bc
 	pop hl
-	; a = carry ? SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_MAIL : SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_ITEM
-	assert SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_MAIL + 1 == SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_ITEM
-	sbc a
-	add SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_ITEM
+	jr c, .mail
+	ld a, SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_ITEM
+	jr .okay
+
+.mail
+	ld a, SPRITE_ANIM_FRAMESET_PARTY_MON_WITH_MAIL
+.okay
 	ld hl, SPRITEANIMSTRUCT_FRAMESET_ID
 	add hl, bc
 	ld [hl], a
@@ -418,7 +436,8 @@ MoveList_InitAnimatedMonIcon:
 	ld [wCurIcon], a
 	xor a
 	call GetIconGFX
-	lb de, 3 * TILE_WIDTH + 2, 4 * TILE_WIDTH + 4
+	ld d, 3 * TILE_WIDTH + 2 ; depixel 3, 4, 2, 4
+	ld e, 4 * TILE_WIDTH + 4
 	ld a, SPRITE_ANIM_OBJ_PARTY_MON
 	call _InitSpriteAnimStruct
 	ld hl, SPRITEANIMSTRUCT_ANIM_SEQ_ID
@@ -475,21 +494,12 @@ Pokedex_InitAnimatedMonIcon:
 	ret
 
 Trade_LoadMonIconGFX:
-	; hl = wPlayerTrademonDVs or wOTTrademonDVs
-	ld h, b
-	ld l, c
 	ld a, [wTempIconSpecies]
-	ld [wCurPartySpecies], a
 	ld [wCurIcon], a
-	call GetMenuMonIconPalette
-	add a
-	add a
-	add a
-	ld e, a
-	farcall SetSecondOBJPalette
 	ld a, $62
 	ld [wCurIconTile], a
-	jr GetMemIconGFX
+	call GetMemIconGFX
+	ret
 
 GetSpeciesIcon:
 ; Load species icon into VRAM at tile a
@@ -501,7 +511,8 @@ GetSpeciesIcon:
 	ld [wCurIcon], a
 	pop de
 	ld a, e
-	jr GetIconGFX
+	call GetIconGFX
+	ret
 
 FlyFunction_GetMonIcon:
 	push de
@@ -510,9 +521,7 @@ FlyFunction_GetMonIcon:
 	pop de
 	ld a, e
 	call GetIcon_a
-; todo: made up this label location... fix this!
-; fallthrough
-SetOWFlyMonColor:
+
 	; Edit the OBJ 0 palette so that the cursor Pokémon has the right colors.
 	ld a, MON_DVS
 	call GetPartyParamLocation
@@ -521,7 +530,16 @@ SetOWFlyMonColor:
 	add a
 	add a
 	ld e, a
-	farjp SetFirstOBJPalette
+	farcall SetFirstOBJPalette
+	ret
+
+GetMonIconDE: ; unreferenced
+	push de
+	ld a, [wTempIconSpecies]
+	ld [wCurIcon], a
+	pop de
+	call GetIcon_de
+	ret
 
 GetMemIconGFX:
 	ld a, [wCurIconTile]
@@ -575,8 +593,8 @@ endr
 	add hl, de
 .is_egg
 	ld a, [hli]
-	ld d, [hl]
 	ld e, a
+	ld d, [hl]
 	pop hl
 
 	call GetIconBank
@@ -589,18 +607,9 @@ GetIconBank:
 	push hl
 	ld a, [wCurIcon]
 	call GetPokemonIndexFromID
-	lb bc, BANK("Mon Icons 1"), 8 ; Default Bank
-	ld a, h
-	cp HIGH(WINGULL) ; first species in "Mon Icons 3"
-	jr c, .check_2
-	ld a, l
-	cp LOW(WINGULL)
-	jr c, .check_2
-	ld b, BANK("Mon Icons 3")
-	jr .return
-.check_2
 	ld a, h
 	cp HIGH(MAGIKARP) ; first species in "Mon Icons 2"
+	lb bc, BANK("Mon Icons 1"), 8
 	jr c, .return
 	ld a, l
 	cp LOW(MAGIKARP)
@@ -613,8 +622,8 @@ GetIconBank:
 GetGFXUnlessMobile:
 	ld a, [wLinkMode]
 	cp LINK_MOBILE
-	jmp nz, Request2bpp
-	jmp Get2bppViaHDMA
+	jp nz, Request2bpp
+	jp Get2bppViaHDMA
 
 
 GetStorageIcon_a:
@@ -633,7 +642,7 @@ GetStorageIcon:
 	call _LoadOverworldMonIcon
 	ld c, 4
 	pop hl
-	farjp BillsPC_SafeGet2bpp
+	newfarjp BillsPC_SafeGet2bpp
 
 FreezeMonIcons:
 	ld hl, wSpriteAnimationStructs
@@ -645,9 +654,13 @@ FreezeMonIcons:
 	and a
 	jr z, .next
 	cp d
+	jr z, .loadwithtwo
 	ld a, SPRITE_ANIM_FUNC_NULL
-	jr nz, .ok
+	jr .ok
+
+.loadwithtwo
 	ld a, SPRITE_ANIM_FUNC_PARTY_MON_SWITCH
+
 .ok
 	push hl
 	ld c, l
@@ -695,8 +708,11 @@ HoldSwitchmonIcon:
 	and a
 	jr z, .next
 	cp d
+	jr z, .is_switchmon
 	ld a, SPRITE_ANIM_FUNC_PARTY_MON_SELECTED
-	jr nz, .join_back
+	jr .join_back
+
+.is_switchmon
 	ld a, SPRITE_ANIM_FUNC_PARTY_MON_SWITCH
 .join_back
 	push hl
