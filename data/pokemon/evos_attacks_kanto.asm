@@ -990,6 +990,7 @@ PoliwrathEvosAttacks:
 	dbw 1, DOUBLESLAP
 	dbw 1, SUBMISSION
 	dbw 35, SUBMISSION
+	dbw 40, THUNDERPUNCH
 	dbw 51, MIND_READER
 	db 0 ; no more level-up moves
 
