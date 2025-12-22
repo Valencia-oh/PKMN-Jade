@@ -248,3 +248,9 @@
 	tilecoll FLOOR, WALL, FLOOR, WALL ; f7
 	tilecoll WALL, WALL, WALL, FLOOR ; f8
 	tilecoll WALL, WALL, WALL, WALL ; f9
+	tilecoll PUDDLE, WATER, WATER, WATER ; fa
+	tilecoll WATER, BUOY, WHIRLPOOL, BUOY ; fb
+	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; fc
+	tilecoll WALL, FLOOR, FLOOR, FLOOR ; fd
+	tilecoll , , ,  ; fe
+	tilecoll , , ,  ; ff
