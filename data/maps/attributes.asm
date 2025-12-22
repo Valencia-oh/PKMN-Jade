@@ -199,7 +199,7 @@ ENDM
 	connection south, Route36, ROUTE_36, -10
 
 	map_attributes Route38, ROUTE_38, $05, SOUTH | WEST | EAST
-	connection south, OlivineQuarry, OLIVINE_QUARRY, 6	
+	connection south, OlivineQuarry, OLIVINE_QUARRY, 10
 	connection west, Route39, ROUTE_39, 0
 	connection east, EcruteakCity, ECRUTEAK_CITY, -5
 
@@ -405,7 +405,7 @@ ENDM
 	connection east, Route39, ROUTE_39, 1
 
 	map_attributes OlivineQuarry, OLIVINE_QUARRY, $2c, NORTH
-	connection north, Route38, ROUTE_38, -6
+	connection north, Route38, ROUTE_38, -10
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0
