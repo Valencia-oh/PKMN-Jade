@@ -21,6 +21,8 @@ INCLUDE "maps/Route47.asm"
 INCLUDE "maps/Route48.asm"
 INCLUDE "maps/Route49.asm"
 INCLUDE "maps/GoldenrodIsle.asm"
+INCLUDE "maps/OlivineRanch.asm"
+INCLUDE "maps/OlivineQuarry.asm"
 
 
 SECTION "Map Scripts 2", ROMX
