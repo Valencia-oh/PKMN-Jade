@@ -76,6 +76,7 @@ DoDexSearchSlowpokeFrame:
 	db -1
 
 DisplayDexEntry:
+	call Dex_PrintMonTypeTiles
 	call GetPokemonName
 	hlcoord 9, 3
 	rst PlaceString ; mon species
