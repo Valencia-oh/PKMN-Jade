@@ -1057,7 +1057,7 @@ SchoolboyGroup:
 	db -1 ; end
 
 	next_list_item ; SCHOOLBOY (22)
-	db "ALAN@", TRAINERTYPE_MOVES
+	db "ALAN@", TRAINERTYPE_NORMAL
 	db 3
 	dw TANGELA
 	db 3
@@ -1505,13 +1505,14 @@ CooltrainerMGroup:
 	next_list_item ; COOLTRAINERM (8)
 	db "RYAN@", TRAINERTYPE_MOVES
 	db 3
-	dw PIDGEY
+	dw PIDGEOT
 	dw SAND_ATTACK, QUICK_ATTACK, WHIRLWIND, WING_ATTACK
 	db 3
 	dw ELECTABUZZ
 	dw THUNDERPUNCH, LIGHT_SCREEN, SWIFT, SCREECH
 	db 3
 	dw MAGMAR
+	dw FLAMETHROWER, CONFUSE_RAY,SMOKESCREEN, PSYCHIC_M
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (9)
@@ -1618,7 +1619,7 @@ CooltrainerMGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERM (19)
-	db "ALLEN@", TRAINERTYPE_MOVES
+	db "ALLEN@", TRAINERTYPE_NORMAL
 	db 3
 	dw CHARMANDER
 	db 3
@@ -1775,13 +1776,11 @@ CooltrainerFGroup:
 	db -1 ; end
 
 	next_list_item ; COOLTRAINERF (16)
-	db "CYBIL@", TRAINERTYPE_MOVES
+	db "CYBIL@", TRAINERTYPE_NORMAL
 	db 2
 	dw CATERPIE
-	dw CONFUSION, SLEEP_POWDER, WHIRLWIND, GUST
 	db 3
 	dw BELLOSSOM
-	dw ABSORB, STUN_SPORE, ACID, SOLARBEAM
 	db 3
 	dw WOOPER
 	db -1 ; end
@@ -2811,14 +2810,13 @@ FisherGroup:
 	db -1 ; end
 
 	next_list_item ; FISHER (22)
-	db "WILTON@", TRAINERTYPE_MOVES
+	db "WILTON@", TRAINERTYPE_NORMAL
 	db 3
 	dw GOLDEEN
 	db 4
 	dw GOLDEEN
 	db 5
 	dw REMORAID
-	dw PSYBEAM, AURORA_BEAM, BUBBLEBEAM, HYPER_BEAM
 	db -1 ; end
 
 	next_list_item ; FISHER (23)
@@ -3683,12 +3681,11 @@ HikerGroup:
 	db -1 ; end
 
 	next_list_item ; HIKER (10)
-	db "TIMOTHY@", TRAINERTYPE_MOVES
+	db "TIMOTHY@", TRAINERTYPE_NORMAL
 	db 3
 	dw SANDSHREW
 	db 4
 	dw DIGLETT
-	dw MAGNITUDE, DIG, SAND_ATTACK, SLASH
 	db 3
 	dw SHROOMISH
 	db -1 ; end
@@ -4297,13 +4294,11 @@ PsychicGroup:
 	db -1 ; end
 
 	next_list_item ; PSYCHIC_T (8)
-	db "PHIL@", TRAINERTYPE_MOVES
+	db "PHIL@", TRAINERTYPE_NORMAL
 	db 3
 	dw XATU
-	dw LEER, NIGHT_SHADE, FUTURE_SIGHT, CONFUSE_RAY
 	db 3
 	dw KADABRA
-	dw DISABLE, PSYBEAM, RECOVER, FUTURE_SIGHT
 	db 4
 	dw SLOWKING
 	db -1 ; end
@@ -4491,10 +4486,9 @@ PicnickerGroup:
 	db -1 ; end
 
 	next_list_item ; PICNICKER (20)
-	db "TIFFANY@", TRAINERTYPE_MOVES
+	db "TIFFANY@", TRAINERTYPE_NORMAL
 	db 3
 	dw CLEFAIRY
-	dw ENCORE, SING, DOUBLESLAP, MINIMIZE
 	db 3
 	dw ELECTRIKE
 	db 3
@@ -4745,7 +4739,7 @@ CamperGroup:
 	db -1 ; end
 
 	next_list_item ; CAMPER (21)
-	db "TODD@", TRAINERTYPE_MOVES
+	db "TODD@", TRAINERTYPE_NORMAL
 	db 4
 	dw GEODUDE
 	db 4
