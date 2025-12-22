@@ -1163,10 +1163,9 @@ Cable_Club_Map_Name2: ; map_const TRADE_CENTER ;  2
 	db "<PKMN> TRADE CENTER@"
 Cable_Club_Map_Name3: ; map_const COLOSSEUM ;  3
 	db "<PKMN> COLOSSEUM@"
-Cable_Club_Map_Name5: ; map_const MOBILE_TRADE_ROOM ;  5
-	db "MOBILE TRADE@"
-Cable_Club_Map_Name6: ; map_const MOBILE_BATTLE_ROOM ;  6
-	db "MOBILE BATTLE@"                                          ; 21
+Cable_Club_Map_Name4: ; map_const TIME_CAPSULE ;  3
+	db "<PKMN> TIME CAPSULE@"
+
 
 Celadon_Map_Name1: ; map_const ROUTE_7,;  1
 	db "ROUTE 7@"
