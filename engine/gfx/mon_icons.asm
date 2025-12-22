@@ -24,6 +24,51 @@ SetMenuMonIconColor:
 	ld hl, wShadowOAMSprite00Attributes
 	jr _ApplyMenuMonIconColor
 
+SetDexMonIconColor_NoShiny:
+	push hl
+	push de
+	push bc
+	push af
+
+	ld a, [wTempIconSpecies]
+	ld [wCurPartySpecies], a
+	and a
+	call GetMenuMonIconPalette_PredeterminedShininess
+	ld hl, wShadowOAMSprite00Attributes
+	push af
+	ldh a, [hObjectStructIndex]
+	swap a
+	ld d, 0
+	ld e, a
+	add hl, de
+	pop af
+	jp _ApplyMenuMonIconColor
+
+SetDexMonIconColor_SpritePage:
+	push hl
+	push de
+	push bc
+	push af
+
+	ld a, [wTempIconSpecies]
+	ld [wCurPartySpecies], a
+	and a
+	ld hl, wPokedexShinyToggle
+	bit 0, [hl]
+	jr z, .not_shiny
+	scf
+.not_shiny
+	call GetMenuMonIconPalette_PredeterminedShininess
+	ld hl, wShadowOAMSprite00Attributes
+	push af
+	ldh a, [hObjectStructIndex]
+	swap a
+	ld d, 0
+	ld e, a
+	add hl, de
+	pop af
+	jp _ApplyMenuMonIconColor
+
 SetMenuMonIconColor_NoShiny:
 	push hl
 	push de
