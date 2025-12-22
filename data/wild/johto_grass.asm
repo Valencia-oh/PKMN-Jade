@@ -1795,7 +1795,7 @@ def_grass_wildmons ROUTE_47
 	dbw 5, MUK
 	end_grass_wildmons
 
-def_grass_wildmons CHERRY_TOWER_F1
+	def_grass_wildmons CHERRY_TOWER_F1
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, MUK
@@ -1851,7 +1851,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 5, MUK 
 	end_grass_wildmons
 
-def_grass_wildmons CHERRY_TOWER_F3
+	def_grass_wildmons CHERRY_TOWER_F3
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, MUK
@@ -1879,7 +1879,7 @@ def_grass_wildmons CHERRY_TOWER_F3
 	dbw 5, MUK 
 	end_grass_wildmons
 
-def_grass_wildmons CHERRY_TOWER_F4
+	def_grass_wildmons CHERRY_TOWER_F4
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, MUK
@@ -1907,7 +1907,7 @@ def_grass_wildmons CHERRY_TOWER_F4
 	dbw 5, MUK 
 	end_grass_wildmons
 
-def_grass_wildmons CHERRY_TOWER_F5
+	def_grass_wildmons CHERRY_TOWER_F5
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, MUK
@@ -1963,7 +1963,7 @@ def_grass_wildmons CHERRY_TOWER_F5
 	dbw 4, PWOOPER
 	end_grass_wildmons
 
-def_grass_wildmons CIANWOOD_PALACE
+	def_grass_wildmons CIANWOOD_PALACE
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 6, PWOOPER
@@ -1991,7 +1991,7 @@ def_grass_wildmons CIANWOOD_PALACE
 	dbw 4, PWOOPER
 	end_grass_wildmons
 
-def_grass_wildmons ROUTE_49
+	def_grass_wildmons ROUTE_49
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, EKANS
@@ -2019,7 +2019,7 @@ def_grass_wildmons ROUTE_49
 	dbw 3, HOUNDOUR
 	end_grass_wildmons
 
-def_grass_wildmons OLIVINE_RANCH
+	def_grass_wildmons OLIVINE_RANCH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, TAUROS
@@ -2047,7 +2047,7 @@ def_grass_wildmons OLIVINE_RANCH
 	dbw 7, MEOWTH
 	end_grass_wildmons
 
-def_grass_wildmons OLIVINE_QUARRY
+	def_grass_wildmons OLIVINE_QUARRY
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, TRAPINCH
