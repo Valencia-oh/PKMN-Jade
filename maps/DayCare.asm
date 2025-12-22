@@ -95,6 +95,13 @@ DayCareManText_GiveOddEgg:
 	para "How incredible is"
 	line "that?"
 
+	para "You know, your"
+	line "#DEX shows EGG"
+	cont "groups, and how"
+
+	para "long they take to"
+	line "hatch!"
+
 	para "Well, wouldn't you"
 	line "like this EGG?"
 
