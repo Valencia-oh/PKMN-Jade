@@ -29,6 +29,8 @@ SGBLayoutJumptable:
 	dw .SGB_PokegearPals
 	dw .SGB_StatsScreenHPPals
 	dw .SGB_Pokedex
+	dw .SGB_Pokedex_EvoPage
+	dw .SGB_Pokedex_PicsPage
 	dw .SGB_SlotMachine
 	dw .SGB_BetaTitleScreen
 	dw .SGB_GSIntro
@@ -205,14 +207,14 @@ SGBLayoutJumptable:
 	ld hl, PalPacket_Pal01
 	ld de, wSGBPals
 	ld bc, PALPACKET_LENGTH
-	rst CopyBytes
+	call CopyBytes
 	ld hl, wSGBPals + 3
-	ld a, LOW(palred 31 + palgreen 20 + palblue 10)
-	ld [hli], a
-	ld a, HIGH(palred 31 + palgreen 20 + palblue 10)
-	ld [hli], a
-	ld a, LOW(palred 26 + palgreen 10 + palblue 6)
-	ld [hli], a
+	ld [hl], LOW(palred 31 + palgreen 20 + palblue 10)
+	inc hl
+	ld [hl], HIGH(palred 31 + palgreen 20 + palblue 10)
+	inc hl
+	ld [hl], LOW(palred 26 + palgreen 10 + palblue 6)
+	inc hl
 	ld [hl], HIGH(palred 26 + palgreen 10 + palblue 6)
 	ld a, [wCurPartySpecies]
 	call GetMonPalettePointer
@@ -226,6 +228,10 @@ SGBLayoutJumptable:
 	ld [wSGBPals + 12], a
 	ld hl, wSGBPals
 	ld de, BlkPacket_Pokedex_PC
+	ret
+
+.SGB_Pokedex_EvoPage:
+.SGB_Pokedex_PicsPage:
 	ret
 
 .SGB_BillsPC:
