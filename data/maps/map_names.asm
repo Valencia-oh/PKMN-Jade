@@ -85,6 +85,7 @@ Mahogany_Map_Names: ;newgroup MAHOGANY
 	dw Mahogany_Map_Name5 ; map_const ROUTE_42,  ;  5
 	dw Mahogany_Map_Name6 ; map_const ROUTE_44, ;  6
 	dw Mahogany_Map_Name7 ; map_const MAHOGANY_TOWN,  ;  7
+	dw Mahogany_Map_Name8 ; map_const ROUTE_49, ;  8
 	assert_table_length NUM_MAHOGANY_MAPS
 	
 
