@@ -261,6 +261,8 @@ AnimationIdlePointers:
 	dw PelipperAnimationIdle
 	dw ShroomishAnimationIdle
 	dw BreloomAnimationIdle
+	dw SkittyAnimationIdle
+	dw DelcattyAnimationIdle
 	dw ElectrikeAnimationIdle
 	dw ManectricAnimationIdle
 	dw TorkoalAnimationIdle
