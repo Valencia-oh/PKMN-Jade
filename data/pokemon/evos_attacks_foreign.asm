@@ -337,7 +337,7 @@ FeebasEvosAttacks:
 MiloticEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, THRASH
-	dbw 20, BITE
+	dbw 20, POUND
 	dbw 25, MOON_BLAST
 	dbw 30, LEER
 	dbw 31, AQUA_JET
