@@ -236,7 +236,7 @@ ENDM
 
 	map_attributes Route46, ROUTE_46, $05, SOUTH | WEST | EAST
 	connection south, Route29, ROUTE_29, -10
-	connection west, CherryCutoff, CHERRY_CUTOFF, 5
+	connection west, CherryCutoff, CHERRY_CUTOFF, 7
 	connection east, Route45, ROUTE_45, -36
 
 	map_attributes Route49, ROUTE_49, $05, NORTH | SOUTH
@@ -399,7 +399,7 @@ ENDM
 
 	map_attributes CherryCutoff, CHERRY_CUTOFF, $2c, WEST | EAST
 	connection west, Route30, ROUTE_30, 10
-	connection east, Route46, ROUTE_46, 5
+	connection east, Route46, ROUTE_46, -7
 
 	map_attributes CianwoodPalace, CIANWOOD_PALACE, $2c, SOUTH
 	connection south, Route48, ROUTE_48, -1
