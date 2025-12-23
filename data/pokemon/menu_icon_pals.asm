@@ -269,6 +269,8 @@ MonMenuIconPals:
 	icon_pals BLUE,   GREEN  ; PELIPPER
 	icon_pals GREEN,  RED    ; SHROOMISH
 	icon_pals GREEN,  BROWN  ; BRELOOM
+	icon_pals PINK,   RED    ; SKITTY
+	icon_pals PURPLE, RED    ; DELCATTY
 	icon_pals GREEN,  BLUE   ; ELECTRIKE
 	icon_pals BLUE,   GREEN  ; MANECTRIC
 	icon_pals RED,    BROWN  ; TORKOAL
