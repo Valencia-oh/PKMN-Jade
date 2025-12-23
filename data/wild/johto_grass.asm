@@ -1765,7 +1765,6 @@ def_grass_wildmons ROUTE_47
 	dbw 1, CHARMANDER
 	dbw 1, CYNDAQUIL
 	end_grass_wildmons
-	db -1 ; end
 
 	def_grass_wildmons CHERRY_CAVE
 	db 2 percent, 2 percent, 2 percent ; encounter rates: morn/day/nite
@@ -2074,4 +2073,4 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 7, GASTLY
 	dbw 7, GASTLY
 	end_grass_wildmons
-
+	db -1 ; end
