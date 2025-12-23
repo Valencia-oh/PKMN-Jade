@@ -1857,11 +1857,10 @@ BikeFunction:
 	cp CAVE
 	jr z, .ok
 	cp GATE
-	jr z, .ok
-	jr .nope
-
+	jr z, .nope
+;fallthrough
 .ok
-	call GetPlayerTile
+	call GetPlayerTilePermission
 	and $f ; lo nybble only
 	jr nz, .nope ; not FLOOR_TILE
 	xor a
