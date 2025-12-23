@@ -140,7 +140,7 @@ CheckPartyCanLearnMove:
 	ld b,b
 	ld a, d
 	push de
-	call CheckLvlUpMoves
+	call OW_CheckLvlUpMoves
 	pop de
 	jr nc, .yes
 ; done checking
@@ -159,7 +159,7 @@ CheckPartyCanLearnMove:
 	ld a, 1
 	ret
 
-CheckLvlUpMoves:
+OW_CheckLvlUpMoves:
 	ld d, a
 	ld a, [wTempSpecies]
 	call GetPokemonIndexFromID
