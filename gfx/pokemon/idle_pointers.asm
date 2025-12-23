@@ -269,6 +269,8 @@ AnimationIdlePointers:
 	dw TrapinchAnimationIdle
 	dw VibravaAnimationIdle
 	dw FlygonAnimationIdle
+	dw FeebasAnimationIdle
+	dw MiloticAnimationIdle
 ;gen4
 	dw HonchkrowAnimationIdle
 	dw BronzorAnimationIdle
