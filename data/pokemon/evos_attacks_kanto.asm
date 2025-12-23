@@ -622,7 +622,7 @@ ClefairyEvosAttacks:
 	dbw 19, MINIMIZE
 	dbw 26, DEFENSE_CURL
 	dbw 34, METRONOME
-	dbw 40, MOON_BLAST
+	dbw 40, MOONBLAST
 	dbw 43, MOONLIGHT
 	dbw 53, LIGHT_SCREEN
 	db 0 ; no more level-up moves
@@ -633,7 +633,7 @@ ClefableEvosAttacks:
 	dbw 1, DOUBLESLAP
 	dbw 1, METRONOME
 	dbw 1, MOONLIGHT
-	dbw 1, MOON_BLAST
+	dbw 1, MOONBLAST
 	db 0 ; no more level-up moves
 
 VulpixEvosAttacks:
