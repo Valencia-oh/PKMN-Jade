@@ -167,7 +167,7 @@ ENDM
 	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH | EAST
 	connection north, Route31, ROUTE_31, -10
 	connection south, CherrygroveCity, CHERRYGROVE_CITY, -3
-	connection east, CherryCutoff, CHERRY_CUTOFF, -10
+	connection east, CherryCutoff, CHERRY_CUTOFF, 10
 
 	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
 	connection south, Route30, ROUTE_30, 10
@@ -398,7 +398,7 @@ ENDM
 	connection east, GoldenrodCity, GOLDENROD_CITY, 0
 
 	map_attributes CherryCutoff, CHERRY_CUTOFF, $2c, WEST | EAST
-	connection west, Route30, ROUTE_30, 10
+	connection west, Route30, ROUTE_30, -10
 	connection east, Route46, ROUTE_46, -9
 
 	map_attributes CianwoodPalace, CIANWOOD_PALACE, $2c, SOUTH
