@@ -41,6 +41,8 @@ NewPokedexOrder:
 	dw LEDIAN
 	dw SPINARAK
 	dw ARIADOS
+	dw SKITTY
+	dw DELCATTY
 	dw GEODUDE
 	dw GRAVELER
 	dw GOLEM
