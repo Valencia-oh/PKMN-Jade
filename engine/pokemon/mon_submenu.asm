@@ -263,12 +263,11 @@ BattleMonMenu:
 	db "SWITCH@"
 	db "STATS@"
 	db "CANCEL@"
-
 CheckMonCanLearn_TM_HM:
 ; Check if wCurPartySpecies can learn move in 'a'
 	ld [wPutativeTMHMMove], a
 	ld a, [wCurPartySpecies]
-	farcall CanLearnTMHMMove
+farcall CanLearnTMHMMove
 .check
 	ld a, c
 	and a
