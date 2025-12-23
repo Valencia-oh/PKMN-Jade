@@ -18,6 +18,9 @@ OlivineRanch_Blocks:
 OlivineQuarry_Blocks:
 	INCBIN "maps/OlivineQuarry.ablk"
 
+CherryCutoff_Blocks:
+	INCBIN "maps/CherryCutoff.ablk"
+
 Route36_Blocks:
 	INCBIN "maps/Route36.ablk"
 
