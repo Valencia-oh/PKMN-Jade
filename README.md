@@ -11,10 +11,6 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 - Expanded Gym teams to feature new pokemon for Falkner, Bugsy, Morty, and Pryce (with Whitney also getting a snubbull)
 - A surprise near Ecruteak City
 
-All new Pokemon, with evolutions or locations in Johto changed, will be found here: in the [Pokedex tab](https://github.com/Valencia-oh/PKMN-Labradorite/blob/core/Pokedex.md)
-
-(currently on v.0.4, v.05 will be input soon)
-
 
 
 Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) and the Apples for Applin are sold in the Goldenrod Department Store,
@@ -34,10 +30,11 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 
 ### Credits 
 - The majority of systems would not work without the use of the CSE engine, so shout out to all the devs on there
-- Falinks, Chi-yu, Volcarona, and Applin line Sprites are from Sage Deoxys
+- Falinks, Chi-yu, Volcarona, and Applin line, as well as Feebas and Milotic(back) Sprites are from Sage Deoxys
 - nuukiie made the Glaceon, Leafeon, Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Linoon, Flygon, Torkoal, Espathra, Clodsire, Toucannon, Mightyena, Breloom, Galvantula, Manectric, and Pelipper lines
 - Maschiff and Mabosstiff use edited versions of Egg3ggEgg's sprites
-- Bronzor and Bronzong sprites are from BlueEmerald
+- Bronzor and Bronzong sprites are from BlueEmerald and the Rainbow Devs
+- Milotic (front) is from BlueEmerald, Rainbow Devs, and Rosie
 - Ursaluna Sprites by Me, free to use
 - Crystal Legacy Team for inspiration on some pokemon locations
 - Polished Crystal and Emerald Seaglass for giving me inspiration to start this project
