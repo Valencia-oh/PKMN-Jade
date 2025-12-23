@@ -261,6 +261,8 @@ AnimationPointers:
 	dw PelipperAnimation
 	dw ShroomishAnimation
 	dw BreloomAnimation
+	dw SkittyAnimation
+	dw DelcattyAnimation
 	dw ElectrikeAnimation
 	dw ManectricAnimation
 	dw TorkoalAnimation
