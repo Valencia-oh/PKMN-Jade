@@ -164,9 +164,10 @@ ENDM
 	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0
 	connection east, NewBarkTown, NEW_BARK_TOWN, 0
 
-	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH
+	map_attributes Route30, ROUTE_30, $05, NORTH | SOUTH | EAST
 	connection north, Route31, ROUTE_31, -10
 	connection south, CherrygroveCity, CHERRYGROVE_CITY, -3
+	connection east, CherryCutoff, CHERRY_CUTOFF, -10
 
 	map_attributes Route31, ROUTE_31, $05, SOUTH | WEST
 	connection south, Route30, ROUTE_30, 10
@@ -233,8 +234,9 @@ ENDM
 	connection north, BlackthornCity, BLACKTHORN_CITY, 0
 	connection west, Route46, ROUTE_46, 36
 
-	map_attributes Route46, ROUTE_46, $05, SOUTH | EAST
+	map_attributes Route46, ROUTE_46, $05, SOUTH | WEST | EAST
 	connection south, Route29, ROUTE_29, -10
+	connection west, CherryCutoff, CHERRY_CUTOFF, 5
 	connection east, Route45, ROUTE_45, -36
 
 	map_attributes Route49, ROUTE_49, $05, NORTH | SOUTH
@@ -394,6 +396,10 @@ ENDM
 	map_attributes GoldenrodIsle, GOLDENROD_ISLE, $2c, WEST | EAST
 	connection west, Route41, ROUTE_41, 0
 	connection east, GoldenrodCity, GOLDENROD_CITY, 0
+
+	map_attributes CherryCutoff, CHERRY_CUTOFF, $2c, WEST | EAST
+	connection west, Route30, ROUTE_30, 10
+	connection east, Route46, ROUTE_46, 5
 
 	map_attributes CianwoodPalace, CIANWOOD_PALACE, $2c, SOUTH
 	connection south, Route48, ROUTE_48, -1
