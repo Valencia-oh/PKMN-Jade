@@ -103,13 +103,6 @@ TryOW_MonMenu:
 	ld a, [wPutativeTMHMMove]
   	cp b
 	jr z, .sucess
-	; egg moves
-	predef CanLearnViaEggMove
-	ld a, [wNamedObjectIndex]
-	ld b, a
-	ld a, [wPutativeTMHMMove]
-  	cp b
-	jr z, .sucess
 	; TM/HM/Move Tutor
 	predef CanLearnTMHMMove ; returns result in c, 0 if cannot learn
 	ld a, c
