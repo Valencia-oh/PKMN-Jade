@@ -195,9 +195,11 @@ SkittyEvosAttacks:
 	dbw 13, DOUBLESLAP
 	dbw 19, MINIMIZE
 	dbw 26, DEFENSE_CURL
+	dbw 29, BITE
 	dbw 34, METRONOME
 	dbw 37, FIRE_FANG
-	dbw 40, MOON_BLAST
+	dbw 39, CRUNCH
+	dbw 40, MOONBLAST
 	dbw 43, MOONLIGHT
 	dbw 53, LIGHT_SCREEN
 	db 0 ; no more level-up moves
@@ -208,9 +210,12 @@ DelcattyEvosAttacks:
 	dbw 1, DOUBLESLAP
 	dbw 1, METRONOME
 	dbw 1, MOONLIGHT
-	dbw 1, MOON_BLAST
+	dbw 1, MOONBLAST
+	dbw 29, BITE
+	dbw 34, METRONOME
 	dbw 37, FIRE_FANG
-	dbw 40, MOON_BLAST
+	dbw 39, CRUNCH
+	dbw 40, MOONBLAST
 	dbw 43, MOONLIGHT
 	dbw 53, LIGHT_SCREEN
 	db 0 ; no more level-up moves
