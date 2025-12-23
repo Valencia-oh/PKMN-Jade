@@ -672,6 +672,12 @@ DetermineEvolutionItemResults::
 	inc hl
 	jr .loop
 
+GetNextEvoAttackByte:
+	ldh a, [hTemp]
+	call GetFarByte
+	inc hl
+	ret
+
 GetEvoItem:
 ; Return evolution item in register b
 	call GetNextEvoAttackByte
