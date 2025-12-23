@@ -73,6 +73,7 @@ AlphabeticalPokedexOrder:
 	dw FALINKS
 	dw FARFETCH_D
 	dw FEAROW
+	dw FEEBAS
 	dw FERALIGATR
 	dw FLAAFFY
 	dw FLAPPLE
@@ -163,6 +164,7 @@ AlphabeticalPokedexOrder:
 	dw MEW
 	dw MEWTWO
 	dw MIGHTYENA
+	dw MILOTIC
 	dw MILTANK
 	dw MISDREAVUS
 	dw MOLTRES
