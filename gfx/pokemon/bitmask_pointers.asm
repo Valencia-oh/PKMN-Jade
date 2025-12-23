@@ -261,6 +261,8 @@ BitmasksPointers:
 	dw PelipperBitmasks
 	dw ShroomishBitmasks
 	dw BreloomBitmasks
+	dw SkittyBitmasks
+	dw DelcattyBitmasks
 	dw ElectrikeBitmasks
 	dw ManectricBitmasks
 	dw TorkoalBitmasks
