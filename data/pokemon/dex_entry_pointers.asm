@@ -262,6 +262,8 @@ PokedexDataPointerTable:
 	dba PelipperPokedexEntry
 	dba ShroomishPokedexEntry
 	dba BreloomPokedexEntry
+	dba SkittyPokedexEntry
+	dba DelcattyPokedexEntry
 	dba ElectrikePokedexEntry
 	dba ManectricPokedexEntry
 	dba TorkoalPokedexEntry
