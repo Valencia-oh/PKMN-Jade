@@ -156,7 +156,7 @@ CanUseFlash:
 	ret
 
 Can_Use_Sweet_Scent:
-	farcall CanUseSweetScent
+	farcall CanEncounterWildMon
 	ret nc
 	farcall GetMapEncounterRate
 	ld a, b
