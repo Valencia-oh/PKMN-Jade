@@ -102,6 +102,8 @@ NewPokedexOrder:
 	dw POLITOED
 	dw MAGIKARP
 	dw GYARADOS
+	dw FEEBAS
+	dw MILOTIC
 	dw FALINKS
 	dw GOLDEEN
 	dw SEAKING
