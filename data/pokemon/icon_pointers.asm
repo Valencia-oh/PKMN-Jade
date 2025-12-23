@@ -266,6 +266,8 @@ IconPointers:
 	dw PelipperIcon
 	dw ShroomishIcon
 	dw BreloomIcon
+	dw SkittyIcon
+	dw DelcattyIcon
 	dw ElectrikeIcon
 	dw ManectricIcon
 	dw TorkoalIcon
