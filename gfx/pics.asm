@@ -803,6 +803,8 @@ TrumbeakFrontpic:    INCBIN "gfx/pokemon/trumbeak/front.animated.2bpp.lz"
 TrumbeakBackpic:     INCBIN "gfx/pokemon/trumbeak/back.2bpp.lz"
 ToucannonFrontpic:   INCBIN "gfx/pokemon/toucannon/front.animated.2bpp.lz"
 ToucannonBackpic:    INCBIN "gfx/pokemon/toucannon/back.2bpp.lz"
+
+SECTION "Pics 22", ROMX
 ChiyuFrontpic:       INCBIN "gfx/pokemon/chi_yu/front.animated.2bpp.lz"
 ChiyuBackpic:        INCBIN "gfx/pokemon/chi_yu/back.2bpp.lz"
 TorkoalFrontpic:     INCBIN "gfx/pokemon/torkoal/front.animated.2bpp.lz"
