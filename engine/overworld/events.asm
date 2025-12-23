@@ -1182,18 +1182,6 @@ WildBattleScript:
 	reloadmapafterbattle
 	end
 
-CanUseSweetScent::
-	ld hl, wStatusFlags
-	bit STATUSFLAGS_NO_WILD_ENCOUNTERS_F, [hl]
-	jr nz, .no
-	ld a, [wEnvironment]
-	cp CAVE
-	jr z, .ice_check
-	cp DUNGEON
-	jr z, .ice_check
-	farcall CheckGrassCollision
-	jr nc, .no
-
 CanEncounterWildMon::
 	ld hl, wStatusFlags
 	bit STATUSFLAGS_NO_WILD_ENCOUNTERS_F, [hl]
