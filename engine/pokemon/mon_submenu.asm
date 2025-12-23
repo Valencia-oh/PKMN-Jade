@@ -126,6 +126,124 @@ TryOW_MonMenu:
 	pop hl
 	jr .fail
 
+Iterate_OW_Submenu_Moves:
+	; this reflects the order that the moves will appear stacked on each other if multiple are added
+	call CanUseFlash
+	call CanUseFly
+	call CanUseDig
+	call Can_Use_Sweet_Scent
+	call CanUseTeleport
+	call CanUseSoftboiled
+	call CanUseMilkdrink
+	ret
+
+CanUseFlash:
+; Location Check
+	farcall SpecialAerodactylChamber
+	jr c, .valid_location ; can use flash
+	ld a, [wTimeOfDayPalset]
+	cp DARKNESS_PALSET
+	ret nz ; .fail ; not a darkcave
+
+.valid_location
+	ld a, OW_MOVE_FLASH
+	call TryOW_MonMenu
+	and a
+	ret nz ; if not zero, do not add
+; found
+	ld a, MONMENUITEM_FLASH
+	call AddMonMenuItem
+	ret
+
+Can_Use_Sweet_Scent:
+	farcall CanUseSweetScent
+	ret nc
+	farcall GetMapEncounterRate
+	ld a, b
+	and a
+	ret z
+
+	ld a, OW_MOVE_SWEET_SCENT
+	call TryOW_MonMenu
+	and a
+	ret nz ; if not zero, do not add
+
+	ld a, MONMENUITEM_SWEETSCENT
+	call AddMonMenuItem
+	ret
+
+CanUseDig:
+	call GetMapEnvironment
+	cp CAVE
+	jr z, .valid_location
+	cp DUNGEON
+	ret nz ; fail, not inside cave or dungeon
+
+.valid_location
+	ld a, OW_MOVE_DIG
+	call TryOW_MonMenu
+	and a
+	ret nz ; if not zero, do not add
+; found
+	ld a, MONMENUITEM_DIG
+	call AddMonMenuItem
+	ret
+
+CanUseFly:
+	call GetMapEnvironment
+	call CheckOutdoorMap
+	ret nz ; not outdoors, cant fly
+	
+	ld a, OW_MOVE_FLY
+	call TryOW_MonMenu
+	and a
+	ret nz ; if not zero, do not add
+; found
+	ld a, MONMENUITEM_FLY
+	call AddMonMenuItem
+	ret
+
+CanUseTeleport:
+	call GetMapEnvironment
+	call CheckOutdoorMap
+	jr z, .valid_location
+	
+	call GetMapEnvironment
+	cp CAVE
+	jr z, .valid_location
+	cp DUNGEON
+	ret nz ; last valid location
+
+.valid_location
+	ld a, OW_MOVE_TELEPORT
+	call TryOW_MonMenu
+	and a
+	ret nz ; if not zero, do not add
+
+	ld a, MONMENUITEM_TELEPORT
+	call AddMonMenuItem	
+	ret
+
+CanUseSoftboiled:
+	ld a, OW_MOVE_SOFTBOILED
+	call TryOW_MonMenu
+	and a
+	ret nz ; if not zero, do not add
+	ld a, MONMENUITEM_SOFTBOILED
+	call AddMonMenuItem
+	ret
+
+CanUseMilkdrink:
+	ld a, OW_MOVE_MILK_DRINK
+	call TryOW_MonMenu
+	and a
+	ret nz ; if not zero, do not add
+
+	ld a, MONMENUITEM_MILKDRINK
+	call AddMonMenuItem
+	ret
+
+
 MonSubmenu:
 	xor a
 	ldh [hBGMapMode], a
