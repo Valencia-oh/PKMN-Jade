@@ -15,6 +15,8 @@ TorkoalFrames: INCLUDE "gfx/pokemon/torkoal/frames.asm"
 TrapinchFrames: INCLUDE "gfx/pokemon/trapinch/frames.asm"
 VibravaFrames:   INCLUDE "gfx/pokemon/vibrava/frames.asm"
 FlygonFrames: INCLUDE "gfx/pokemon/flygon/frames.asm"
+FeebasFrames:   INCLUDE "gfx/pokemon/feebas/frames.asm"
+MiloticFrames: INCLUDE "gfx/pokemon/milotic/frames.asm"
 ;gen4
 HonchkrowFrames: INCLUDE "gfx/pokemon/honchkrow/frames.asm"
 BronzorFrames: INCLUDE "gfx/pokemon/bronzor/frames.asm"
