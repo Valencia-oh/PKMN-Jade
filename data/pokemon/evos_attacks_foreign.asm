@@ -327,7 +327,7 @@ dbbw EVOLVE_LEVEL, 26, FLYGON
 	db 0 ; no more level-up moves
 
 FeebasEvosAttacks:
-	dbbw EVOLVE_ITEM, SHINY_STONE, MILOTIC
+	dbbw EVOLVE_ITEM, SHINYSTONE, MILOTIC
 	db 0 ; no more evolutions
 	dbw 1, SPLASH
 	dbw 15, TACKLE
@@ -338,7 +338,7 @@ MiloticEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, THRASH
 	dbw 20, POUND
-	dbw 25, MOON_BLAST
+	dbw 25, MOONBLAST
 	dbw 30, LEER
 	dbw 31, AQUA_JET
 	dbw 35, TWISTER
