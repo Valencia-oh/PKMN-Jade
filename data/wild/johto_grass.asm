@@ -2085,7 +2085,7 @@ def_grass_wildmons CHERRY_CUTOFF
 	dbw 2, SKITTY
 	dbw 2, RATTATA
 	; day
-	dbw 2, ZIGAZAGOON
+	dbw 2, ZIGZAGOON
 	dbw 2, SPEAROW
 	dbw 3, GEODUDE
 	dbw 3, PHANPY
