@@ -274,6 +274,8 @@ IconPointers:
 	dw TrapinchIcon
 	dw VibravaIcon
 	dw FlygonIcon
+	dw FeebasIcon
+	dw MiloticIcon
 	dw HonchkrowIcon
 	dw BronzorIcon
 	dw BronzongIcon
