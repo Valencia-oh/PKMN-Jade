@@ -290,6 +290,8 @@ DEF FOREIGN_POKEMON EQU const_value
 	const TRAPINCH
 	const VIBRAVA
 	const FLYGON
+	const FEEBAS
+	const MILOTIC
 	const HONCHKROW  ; 106
 	const BRONZOR 	 ; 107 
 	const BRONZONG	 ; 108 
