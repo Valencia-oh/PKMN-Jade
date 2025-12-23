@@ -10,7 +10,7 @@
 	dw MYSTERYBERRY, MOON_STONE ; items
 	db GENDER_F75 ; gender ratio
 	db 15 ; step cycles to hatch
-	INCBIN "gfx/pokemon/skitty/front.dimensions"
+	INCBIN "gfx/pokemon/delcatty/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)
 	db GROWTH_FAST ; growth rate
 	dn EGG_FAIRY, EGG_GROUND ; egg groups
