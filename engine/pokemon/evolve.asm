@@ -57,7 +57,7 @@ EvolveAfterBattle_MasterLoop:
 	pop hl
 
 .loop
-	call GetNextEvoAttackByte
+	ld a, [hli]
 	and a
 	jr z, EvolveAfterBattle_MasterLoop
 
