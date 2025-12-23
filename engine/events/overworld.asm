@@ -92,7 +92,7 @@ FieldMoveJumptableReset:
 
 FieldMoveJumptable:
 	ld a, [wFieldMoveJumptableIndex]
-	rst JumpTable
+	Call JumpTable
 	ld [wFieldMoveJumptableIndex], a
 	bit 7, a
 	jr nz, .okay
@@ -349,6 +349,7 @@ Script_Cut:
 	end
 
 CutDownTreeOrGrass:
+	farcall CopyBGGreenToOBPal7
 	ld hl, wCutWhirlpoolOverworldBlockAddr
 	ld a, [hli]
 	ld h, [hl]
@@ -357,7 +358,7 @@ CutDownTreeOrGrass:
 	ld [hl], a
 	xor a
 	ldh [hBGMapMode], a
-	call OverworldTextModeSwitch
+	call LoadOverworldTilemapAndAttrmapPals
 	call UpdateSprites
 	call DelayFrame
 	ld a, [wCutWhirlpoolAnimationType]
@@ -366,9 +367,7 @@ CutDownTreeOrGrass:
 	call BufferScreen
 	call GetMovementPermissions
 	call UpdateSprites
-	call DelayFrame
-	call LoadStandardFont
-	ret
+	jmp DelayFrame
 
 CheckOverworldTileArrays:
 	; Input: c contains the tile you're facing
@@ -493,7 +492,7 @@ SurfFunction:
 	cp PLAYER_SURF_PIKA
 	jr z, .alreadyfail
 	call GetFacingTileCoord
-	call GetTileCollision
+	call GetTilePermission
 	cp WATER_TILE
 	jr nz, .cannotsurf
 	call CheckDirection
@@ -631,7 +630,7 @@ TrySurfOW::
 
 ; Must be facing water.
 	ld a, [wFacingTileID]
-	call GetTileCollision
+	call GetTilePermission
 	cp WATER_TILE
 	jr nz, .quit
 
@@ -820,7 +819,7 @@ Script_UsedWaterfall:
 .CheckContinueWaterfall:
 	xor a
 	ld [wScriptVar], a
-	ld a, [wPlayerTile]
+	ld a, [wPlayerTileCollision]
 	call CheckWaterfallTile
 	ret z
 	farcall StubbedTrainerRankings_Waterfall
@@ -1309,13 +1308,12 @@ DisappearWhirlpool:
 	ld [hl], a
 	xor a
 	ldh [hBGMapMode], a
-	call OverworldTextModeSwitch
+	call LoadOverworldTilemapAndAttrmapPals
 	ld a, [wCutWhirlpoolAnimationType]
 	ld e, a
 	farcall PlayWhirlpoolSound
 	call BufferScreen
-	call GetMovementPermissions
-	ret
+	jmp GetMovementPermissions
 
 TryWhirlpoolOW::
 	ld a, OW_MOVE_WHIRLPOOL ; index for WHIRLPOOL
@@ -1573,16 +1571,17 @@ FishFunction:
 	dw .FishNoFish
 
 .TryFish:
-; BUG: You can fish on top of NPCs (see docs/bugs_and_glitches.md)
 	ld a, [wPlayerState]
 	cp PLAYER_SURF
 	jr z, .fail
 	cp PLAYER_SURF_PIKA
 	jr z, .fail
 	call GetFacingTileCoord
-	call GetTileCollision
+	call GetTilePermission
 	cp WATER_TILE
-	jr z, .facingwater
+	jr nz, .fail
+	farcall CheckFacingObject
+	jr nc, .facingwater
 .fail
 	ld a, $3
 	ret
