@@ -301,7 +301,7 @@ CheckMonKnowsMove:
 	xor a
 	ret z
 
-CheckLevelUpMoves:
+CheckLvlUpMoves:
 	ld d, a
 	ld a, [wTempSpecies]
 	call GetPokemonIndexFromID
