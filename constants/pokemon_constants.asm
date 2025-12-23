@@ -282,6 +282,8 @@ DEF FOREIGN_POKEMON EQU const_value
 	const PELIPPER   ; 101
 	const SHROOMISH  ; 102
 	const BRELOOM    ; 103
+	const SKITTY
+	const DELCATTY
 	const ELECTRIKE  ; 104
 	const MANECTRIC  ; 105
 	const TORKOAL
