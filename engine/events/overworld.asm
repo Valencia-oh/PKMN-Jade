@@ -221,13 +221,6 @@ CheckPartyCanLearnMove:
 	ld a, [wPutativeTMHMMove]
 	cp c
 	jr z, .yes
-; Check the Pokemon's Egg Moves
-	predef CanLearnViaEggMove
-	ld a, [wNamedObjectIndex]
-	ld c, a
-	ld a, [wPutativeTMHMMove]
-	cp c
-	jr z, .yes
 
 .next
 	ld a, [wCurPartyMon]
