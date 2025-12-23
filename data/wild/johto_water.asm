@@ -263,7 +263,7 @@ JohtoWaterWildMons:
 	dbw 3, POLIWAG
 	dbw 1, POLIWAG
 	dbw 2, POLIWAG
-	dbw 2, POLIWHIRL
+	dbw 2, FEEBAS
 	end_water_wildmons
 
 	def_water_wildmons CIANWOOD_CITY
