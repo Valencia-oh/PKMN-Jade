@@ -36,6 +36,7 @@ MystifyMons::
 	dw SLOWKING
 	dw MISDREAVUS
 	dw UNOWN
+	dw MILOTIC
 	dw -1
 
 SnareMons::
