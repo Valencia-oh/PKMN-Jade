@@ -1412,10 +1412,24 @@ HeadbuttScript:
 	end
 
 TryHeadbuttOW::
-	ld hl, HEADBUTT
-	call CheckPartyMoveIndex
-	jr c, .no
+; Step 1
+	ld a, TM_HEADBUTT
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jr z, .no
 
+; Step 2
+	ld d, HEADBUTT
+	call CheckPartyCanLearnMove
+       and a
+	jr z, .can_use ; cannot learn headbutt
+
+; Step 3
+	ld d, HEADBUTT
+	call CheckPartyMove
+	jr c, .no
++.can_use
 	ld a, BANK(AskHeadbuttScript)
 	ld hl, AskHeadbuttScript
 	call CallScript
@@ -1536,11 +1550,30 @@ AskRockSmashText:
 	text_end
 
 HasRockSmash:
-	ld hl, ROCK_SMASH
-	call CheckPartyMoveIndex
-	; a = carry ? TRUE : FALSE
-	sbc a
-	and TRUE
+	; Step 1
+	ld a, TM_ROCK_SMASH
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	jr z, .no
+
+; Step 2
+	ld d, ROCK_SMASH
+	call CheckPartyCanLearnMove
+       and a
+	jr z, .yes
+
+; Step 3
+	ld d, ROCK_SMASH
+	call CheckPartyMove
+	jr nc, .yes
+.no
+	ld a, 1
+	jr .done
+.yes
+	xor a
+	jr .done
+.done
 	ld [wScriptVar], a
 	ret
 
