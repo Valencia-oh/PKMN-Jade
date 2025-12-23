@@ -1254,7 +1254,7 @@ JohtoGrassWildMons:
 	dbw 3, HOPPIP
 	; nite
 	dbw 2, HOOTHOOT
-	dbw 2, RATTATA
+	dbw 2, SKITTY
 	dbw 1, POOCHYENA
 	dbw 3, RATTATA
 	dbw 2, RATTATA
@@ -1286,7 +1286,7 @@ JohtoGrassWildMons:
 	dbw 1, POLIWAG
 	dbw 4, POOCHYENA
 	dbw 3, ZUBAT
-	dbw 3, POOCHYENA
+	dbw 3, SKITTY
 	dbw 3, HOOTHOOT
 	end_grass_wildmons
 
@@ -1311,7 +1311,7 @@ JohtoGrassWildMons:
 	; nite
 	dbw 3, SPINARAK
 	dbw 3, POLIWAG
-	dbw 2, BELLSPROUT
+	dbw 2, SKITTY
 	dbw 4, HOOTHOOT
 	dbw 2, POOCHYENA
 	dbw 1, GASTLY
@@ -1620,7 +1620,7 @@ JohtoGrassWildMons:
 	dbw 3, TANGELA
 	dbw 4, POLIWAG
 	dbw 3, BELLSPROUT
-	dbw 3, BELLSPROUT
+	dbw 3, SKITTY
 	dbw 3, POOCHYENA
 	dbw 5, POLIWAG
 	dbw 6, POLITOED
