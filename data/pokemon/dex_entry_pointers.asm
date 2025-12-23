@@ -270,6 +270,8 @@ PokedexDataPointerTable:
 	dba TrapinchPokedexEntry
 	dba VibravaPokedexEntry
 	dba FlygonPokedexEntry
+	dba FeebasPokedexEntry
+	dba MiloticPokedexEntry
 	dba HonchkrowPokedexEntry
 	dba BronzorPokedexEntry
 	dba BronzongPokedexEntry
