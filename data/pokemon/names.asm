@@ -265,6 +265,8 @@ PokemonNames::
 	dname "PELIPPER"
 	dname "SHROOMISH"
 	dname "BRELOOM"
+	dname "SKITTY"
+	dname "DELCATTY"
 	dname "ELECTRIKE"
 	dname "MANECTRIC"
 	dname "TORKOAL"
