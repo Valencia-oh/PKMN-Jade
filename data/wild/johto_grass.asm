@@ -1237,8 +1237,8 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_29
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 2, FEEBAS
-	dbw 2, MILOTIC
+	dbw 2, PIDGEY
+	dbw 2, SENTRET
 	dbw 1, ZIGZAGOON
 	dbw 3, ZIGZAGOON
 	dbw 2, RATTATA
@@ -2073,4 +2073,33 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 7, GASTLY
 	dbw 7, GASTLY
 	end_grass_wildmons
+
+def_grass_wildmons ROUTE_46
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	dbw 2, LEDYBA
+	dbw 2, SPEAROW
+	dbw 3, GEODUDE
+	dbw 3, PHANPY
+	dbw 2, PHANPY
+	dbw 2, SKITTY
+	dbw 2, RATTATA
+	; day
+	dbw 2, ZIGAZAGOON
+	dbw 2, SPEAROW
+	dbw 3, GEODUDE
+	dbw 3, PHANPY
+	dbw 2, PHANPY
+	dbw 2, SKITTY
+	dbw 2, RATTATA
+	; nite
+	dbw 2, MASCHIFF
+	dbw 2, RATTATA
+	dbw 3, GEODUDE
+	dbw 3, POOCHYENA
+	dbw 2, POOCHYENA
+	dbw 2, SKITTY
+	dbw 2, RATTATA
+	end_grass_wildmons
+
 	db -1 ; end
