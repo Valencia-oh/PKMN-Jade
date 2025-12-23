@@ -2074,7 +2074,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 7, GASTLY
 	end_grass_wildmons
 
-def_grass_wildmons ROUTE_46
+def_grass_wildmons CHERRY_CUTOFF
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 2, LEDYBA
