@@ -57,7 +57,7 @@ EvolveAfterBattle_MasterLoop:
 	pop hl
 
 .loop
-	ld a, [hli]
+	call GetNextEvoAttackByte
 	and a
 	jr z, EvolveAfterBattle_MasterLoop
 
@@ -671,12 +671,6 @@ DetermineEvolutionItemResults::
 	inc hl
 	inc hl
 	jr .loop
-
-GetNextEvoAttackByte:
-	ldh a, [hTemp]
-	call GetFarByte
-	inc hl
-	ret
 
 GetEvoItem:
 ; Return evolution item in register b
