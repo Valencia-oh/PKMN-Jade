@@ -9,6 +9,8 @@ EvosAttacksPointers3::
 	dw PelipperEvosAttacks
 	dw ShroomishEvosAttacks
 	dw BreloomEvosAttacks
+	dw SkittyEvosAttacks
+	dw DelcattyEvosAttacks
 	dw ElectrikeEvosAttacks
 	dw ManectricEvosAttacks
 	dw TorkoalEvosAttacks
@@ -183,6 +185,31 @@ BreloomEvosAttacks:
 	dbw 37, GROWTH
 	dbw 43, GIGA_DRAIN
 	db 0 ; no more level-up moves
+
+SkittyEvosAttacks:
+	dbww EVOLVE_ITEM, MOON_STONE, DELCATTY
+	db 0 ; no more evolutions
+	dbw 1, POUND
+	dbw 1, GROWL
+	dbw 4, ENCORE
+	dbw 13, DOUBLESLAP
+	dbw 19, MINIMIZE
+	dbw 26, DEFENSE_CURL
+	dbw 34, METRONOME
+	dbw 40, MOON_BLAST
+	dbw 43, MOONLIGHT
+	dbw 53, LIGHT_SCREEN
+	db 0 ; no more level-up moves
+
+DelcattyEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, SING
+	dbw 1, DOUBLESLAP
+	dbw 1, METRONOME
+	dbw 1, MOONLIGHT
+	dbw 1, MOON_BLAST
+	db 0 ; no more level-up moves
+
 
 ElectrikeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 26, MANECTRIC
