@@ -12,7 +12,7 @@
 	db 40 ; step cycles to hatch
 	INCBIN "gfx/pokemon/milotic/front.dimensions"
 	dw NULL, NULL ; unused (beta front/back pics)
-	db GROWTH_ERRATIC ; growth rate
+	db GROWTH_MEDIUM_SLOW; growth rate
 	dn EGG_DRAGON, EGG_WATER_1 ; egg groups
 
 	; tm/hm learnset
