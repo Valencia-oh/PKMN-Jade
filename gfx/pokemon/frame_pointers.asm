@@ -261,6 +261,8 @@ FramesPointers:
 	dba PelipperFrames
 	dba ShroomishFrames
 	dba BreloomFrames
+	dba SkittyFrames
+	dba DelcattyFrames
 	dba ElectrikeFrames
 	dba ManectricFrames
 	dba TorkoalFrames
