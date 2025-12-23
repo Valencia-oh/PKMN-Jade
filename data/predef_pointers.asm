@@ -21,7 +21,6 @@ PredefPointers::
 	add_predef CalcMonStatC
 	add_predef CanLearnTMHMMove
 	add_predef CanLearnViaLvlUp
-	add_predef CanLearnViaEggMove
 	add_predef GetTMHMMove
 	add_predef LinkTextboxAtHL
 	add_predef PrintMoveDescription
