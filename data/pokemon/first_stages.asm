@@ -262,6 +262,8 @@ FirstEvoStages::
 	dw WINGULL		
 	dw SHROOMISH
 	dw SHROOMISH
+	dw SKITTY
+	dw SKITTY
 	dw ELECTRIKE
 	dw ELECTRIKE	
 	dw TORKOAL
