@@ -49,34 +49,3 @@ GetNextEvoAttackByte:
 	call GetFarByte
 	inc hl
 	ret
-
-CanLearnViaEggMove::
-; Check if given move is in eggmove table of species in wCurPartySpecies
-; Returns -1 in wNamedObjectIndex if move in wPutativeTMHMMove isnt found
-; Based on GetEggMove in engine/pokemon/breeding.asm
-	ld a, [wCurPartySpecies]
-	dec a
-	ld c, a
-    ld b, 0
-	ld hl, EggMovePointers ; EvosAttacksPointers
-	add hl, bc
-	add hl, bc
-	ld a, BANK(EggMovePointers)
-	call GetFarWord
-.loop_moves
-	ld a, BANK("Egg Moves")
-	call GetFarByte
-	inc hl
-    cp -1 ; last entry in egg move table is -1
-	jr z, .done
-
-	ld c, a ; the move just read from the eggmove table
-    ld a, [wPutativeTMHMMove]
-    cp c
-    jr z, .done
-	jr .loop_moves
-
-.done
-    ld a, c ; the move just read from the eggmove table
-    ld [wNamedObjectIndex], a ; -1 if not found
-	ret
