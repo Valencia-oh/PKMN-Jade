@@ -17,6 +17,8 @@ EvosAttacksPointers3::
 	dw TrapinchEvosAttacks
 	dw VibravaEvosAttacks
 	dw FlygonEvosAttacks
+	dw FeebasEvosAttacks
+	dw MiloticEvosAttacks
 	dw HonchkrowEvosAttacks
 	dw BronzorEvosAttacks
 	dw BronzongEvosAttacks
@@ -322,6 +324,27 @@ dbbw EVOLVE_LEVEL, 26, FLYGON
 	dbw 37, SLASH
 	dbw 49, EARTHQUAKE
 	dbw 61, FISSURE
+	db 0 ; no more level-up moves
+
+FeebasEvosAttacks:
+	dbbw EVOLVE_ITEM, SHINY_STONE, MILOTIC
+	db 0 ; no more evolutions
+	dbw 1, SPLASH
+	dbw 15, TACKLE
+	dbw 30, FLAIL
+	db 0 ; no more level-up moves
+
+MiloticEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, THRASH
+	dbw 20, BITE
+	dbw 25, MOON_BLAST
+	dbw 30, LEER
+	dbw 31, AQUA_JET
+	dbw 35, TWISTER
+	dbw 40, HYDRO_PUMP
+	dbw 45, RAIN_DANCE
+	dbw 50, HYPER_BEAM
 	db 0 ; no more level-up moves
 
 HonchkrowEvosAttacks:
