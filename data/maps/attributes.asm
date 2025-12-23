@@ -205,7 +205,7 @@ ENDM
 
 	map_attributes Route39, ROUTE_39, $05, SOUTH | WEST | EAST
 	connection south, OlivineCity, OLIVINE_CITY, -5
-	connection west, OlivineRanch, OLIVINE_RANCH, -1
+	connection west, OlivineRanch, OLIVINE_RANCH, 1
 	connection east, Route38, ROUTE_38, 0
 
 	map_attributes Route40, ROUTE_40, $35, SOUTH | EAST
@@ -402,7 +402,7 @@ ENDM
 	connection north, CianwoodPalace, CIANWOOD_PALACE, 1
 
 	map_attributes OlivineRanch, OLIVINE_RANCH, $2c, EAST
-	connection east, Route39, ROUTE_39, 1
+	connection east, Route39, ROUTE_39, -1
 
 	map_attributes OlivineQuarry, OLIVINE_QUARRY, $2c, NORTH
 	connection north, Route38, ROUTE_38, -1
