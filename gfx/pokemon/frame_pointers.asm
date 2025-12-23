@@ -269,6 +269,8 @@ FramesPointers:
 	dba TrapinchFrames
 	dba VibravaFrames
 	dba FlygonFrames
+	dba FeebasFrames
+	dba MiloticFrames
 ;gen4
 	dba HonchkrowFrames
 	dba BronzorFrames
