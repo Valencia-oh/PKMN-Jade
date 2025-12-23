@@ -267,6 +267,8 @@ PokemonCries::
 	mon_cry CRY_PIDGEOTTO,    93,   35 ; PELIPPER
 	mon_cry CRY_PARAS,        32,  352 ; SHROOMISH
 	mon_cry CRY_PARAS,        66,  383 ; BRELOOM
+	mon_cry CRY_CLEFAIRY,    119,  144 ; SKITTY
+	mon_cry CRY_CLEFAIRY,    153,  383 ; DELCATTY
 	mon_cry CRY_TOTODILE,   -266,  256 ; ELECTRIKE
 	mon_cry CRY_TOTODILE,     78,  256 ; MANECTRIC
 	mon_cry CRY_SQUIRTLE,     96,  192 ; TORKOAL
