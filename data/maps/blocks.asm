@@ -15,6 +15,12 @@ Route49_Blocks:
 OlivineRanch_Blocks:
 	INCBIN "maps/OlivineRanch.ablk"
 
+AzaleaShore_Blocks:
+	INCBIN "maps/AzaleaShore.ablk"
+
+ForgottenPillar_Blocks:
+	INCBIN "maps/ForgottenPillar.ablk"
+
 OlivineQuarry_Blocks:
 	INCBIN "maps/OlivineQuarry.ablk"
 
