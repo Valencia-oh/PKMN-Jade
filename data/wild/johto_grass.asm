@@ -1998,7 +1998,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 4, GIRAFARIG
 	dbw 4, VULPIX
 	dbw 5, GROWLITHE
-	dbw 3, SPEAROW
+	dbw 3, PIKACHU
 	dbw 3, NATU
 	; day
 	dbw 3, EKANS
@@ -2006,7 +2006,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 4, GIRAFARIG
 	dbw 4, VULPIX
 	dbw 5, GROWLITHE
-	dbw 3, SPEAROW
+	dbw 3, PIKACHU
 	dbw 3, NATU
 	; nite
 	dbw 3, EKANS
