@@ -290,8 +290,8 @@ DEF FOREIGN_POKEMON EQU const_value
 	const TRAPINCH
 	const VIBRAVA
 	const FLYGON
-	const SWABLU
-	const ALTARIA
+	;const SWABLU
+	;const ALTARIA
 	const FEEBAS
 	const MILOTIC
 	const HONCHKROW  ; 106
@@ -301,11 +301,11 @@ DEF FOREIGN_POKEMON EQU const_value
 	const LEAFEON  	 ; 10a
 	const GLACEON 	 ; 10b
 	const MAMOSWINE  ; 10c
-	const DWEBBLE
-	const CRUSTLE
-	const VENIPEDE
-	const WHIRLIPEDE
-	const SCOLIPEDE
+	;const DWEBBLE
+	;const CRUSTLE
+	;const VENIPEDE
+	;const WHIRLIPEDE
+	;const SCOLIPEDE
 	const JOLTIK     ; 10d
 	const GALVANTULA ; 10e
 	const LARVESTA   ; 10f
@@ -327,7 +327,7 @@ DEF FOREIGN_POKEMON EQU const_value
 	const ESPATHRA	 ; 11c 
 	const PWOOPER 	 ; 11d 
 	const CLODSIRE	 ; 11e
-	const FARIGIRAF
+	;const FARIGIRAF
 	const CHI_YU
 	const ERSRHEADBBY; 11f
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
