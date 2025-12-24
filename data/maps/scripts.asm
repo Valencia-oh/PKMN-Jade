@@ -63,6 +63,8 @@ INCLUDE "maps/RadioTower2F.asm"
 INCLUDE "maps/RadioTower3F.asm"
 INCLUDE "maps/RadioTower4F.asm"
 INCLUDE "maps/CianwoodPalace.asm"
+INCLUDE "maps/ForgottenPillar.asm"
+INCLUDE "maps/AzaleaShore.asm"
 
 
 SECTION "Map Scripts 4", ROMX
