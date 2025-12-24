@@ -304,6 +304,7 @@ BlastoiseEvosAttacks:
 	dbw 19, BITE
 	dbw 25, RAPID_SPIN
 	dbw 31, PROTECT
+	dbw 37, AQUA_JET
 	dbw 42, RAIN_DANCE
 	dbw 55, SKULL_BASH
 	dbw 68, HYDRO_PUMP
