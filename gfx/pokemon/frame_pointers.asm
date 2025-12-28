@@ -269,6 +269,8 @@ FramesPointers:
 	dba TrapinchFrames
 	dba VibravaFrames
 	dba FlygonFrames
+	dba SwabluFrames
+	dba AltariaFrames
 	dba FeebasFrames
 	dba MiloticFrames
 ;gen4
