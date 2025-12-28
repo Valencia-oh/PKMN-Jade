@@ -267,6 +267,8 @@ TorkoalBitmasks:    INCLUDE "gfx/pokemon/torkoal/bitmask.asm"
 TrapinchBitmasks:   INCLUDE "gfx/pokemon/trapinch/bitmask.asm"
 VibravaBitmasks:    INCLUDE "gfx/pokemon/vibrava/bitmask.asm"
 FlygonBitmasks:     INCLUDE "gfx/pokemon/flygon/bitmask.asm"
+SwabluBitmasks:     INCLUDE "gfx/pokemon/swablu/bitmask.asm"
+AltariaBitmasks:    INCLUDE "gfx/pokemon/altaria/bitmask.asm"
 FeebasBitmasks:     INCLUDE "gfx/pokemon/feebas/bitmask.asm"
 MiloticBitmasks:    INCLUDE "gfx/pokemon/milotic/bitmask.asm"
 ;gen4
