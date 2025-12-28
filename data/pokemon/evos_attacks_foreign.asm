@@ -374,6 +374,7 @@ BronzorEvosAttacks:
 	dbw 35, ZEN_HEADBUTT
 	dbw 43, AMNESIA
 	dbw 48, PSYCHIC_M
+	db 0 ; no more level-up moves
 
 BronzongEvosAttacks:
 	db 0 ; no more evolutions
@@ -388,6 +389,7 @@ BronzongEvosAttacks:
 	dbw 35, ZEN_HEADBUTT
 	dbw 43, AMNESIA
 	dbw 48, PSYCHIC_M
+	db 0 ; no more level-up moves
 
 TogekissEvosAttacks:
 	db 0 ; no more evolutions
@@ -737,6 +739,7 @@ FlittleEvosAttacks:
 	dbw 35, FUTURE_SIGHT
 	dbw 50, CONFUSE_RAY
 	dbw 65, PSYCHIC_M
+	db 0 ; no more level-up moves
 
 EspathraEvosAttacks:
 	db 0 ; no more evolutions
@@ -751,6 +754,7 @@ EspathraEvosAttacks:
 	dbw 35, FUTURE_SIGHT
 	dbw 50, CONFUSE_RAY
 	dbw 65, PSYCHIC_M
+	db 0 ; no more level-up moves
 
 PwooperEvosAttacks:
 	dbbw EVOLVE_LEVEL, 20, CLODSIRE
