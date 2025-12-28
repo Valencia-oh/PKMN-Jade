@@ -269,6 +269,8 @@ AnimationPointers:
 	dw TrapinchAnimation
 	dw VibravaAnimation
 	dw FlygonAnimation
+	dw SwabluAnimation
+	dw AltariaAnimation
 	dw FeebasAnimation
 	dw MiloticAnimation
 ;gen4
