@@ -269,6 +269,8 @@ BitmasksPointers:
 	dw TrapinchBitmasks
 	dw VibravaBitmasks
 	dw FlygonBitmasks
+	dw SwabluBitmasks
+	dw AltariaBitmasks
 	dw FeebasBitmasks
 	dw MiloticBitmasks
 ;gen4
