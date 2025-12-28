@@ -267,6 +267,8 @@ TorkoalAnimation:    INCLUDE "gfx/pokemon/torkoal/anim.asm"
 TrapinchAnimation:   INCLUDE "gfx/pokemon/trapinch/anim.asm"
 VibravaAnimation:    INCLUDE "gfx/pokemon/vibrava/anim.asm"
 FlygonAnimation:     INCLUDE "gfx/pokemon/flygon/anim.asm"
+SwabluAnimation:     INCLUDE "gfx/pokemon/swablu/anim.asm"
+AltariaAnimation:    INCLUDE "gfx/pokemon/altaria/anim.asm"
 FeebasAnimation:     INCLUDE "gfx/pokemon/feebas/anim.asm"
 MiloticAnimation:    INCLUDE "gfx/pokemon/milotic/anim.asm"
 ;gen4
