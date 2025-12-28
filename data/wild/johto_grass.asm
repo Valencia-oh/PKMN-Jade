@@ -442,9 +442,9 @@ JohtoGrassWildMons:
 	dbw 6, ONIX
 	; nite
 	dbw 2, GEODUDE
-	dbw 3, RATTATA
+	dbw 3, CLEFAIRY
 	dbw 4, WOOPER
-	dbw 4, RATTATA
+	dbw 4, CLEFAIRY
 	dbw 7, JOLTIK
 	dbw 6, ONIX
 	dbw 6, ONIX
@@ -474,8 +474,8 @@ JohtoGrassWildMons:
 	dbw 5, WOOPER
 	dbw 5, ONIX
 	dbw 6, JOLTIK
-	dbw 5, RATTATA
-	dbw 6, RATTATA
+	dbw 5, CLEFAIRY
+	dbw 6, CLEFAIRY
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_B2F
