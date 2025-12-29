@@ -335,7 +335,7 @@ dbbw EVOLVE_LEVEL, 35, ALTARIA
 	dbw 8, ASTONISH
 	dbw 10, WING_ATTACK
 	dbw 15, SUPERSONIC
-	dbw 20, RAINY_DAY
+	dbw 20, RAIN_DANCE
 	dbw 28, MIST
 	db 0 ; no more level-up moves
 
@@ -348,7 +348,7 @@ AltariaEvosAttacks:
 	dbw 8, ASTONISH
 	dbw 10, WING_ATTACK
 	dbw 15, SUPERSONIC
-	dbw 20, RAINY_DAY
+	dbw 20, RAIN_DANCE
 	dbw 28, MIST
 	dbw 36, TWISTER
 	dbw 38, AQUA_JET
