@@ -275,6 +275,8 @@ PokemonCries::
 	mon_cry CRY_DIGLETT,     170,  129 ; TRAPINCH
 	mon_cry CRY_DIGLETT,      42,  144 ; VIBRAVA
 	mon_cry CRY_DIGLETT,      42,  144 ; FLYGON
+	mon_cry CRY_PIDGEOTTO,    48,   22 ; SWABLU
+	mon_cry CRY_PIDGEOTTO,    93,   35 ; ALTARIA
 	mon_cry CRY_EKANS,       128,  128 ; MAGIKARP
 	mon_cry CRY_EKANS,         0,  256 ; GYARADOS
 	mon_cry CRY_MARILL,      -64,  394 ; HONCHKROW
