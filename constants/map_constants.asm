@@ -231,7 +231,7 @@ ENDM
 	map_const AZALEA_GYM,                                   5,  8 ;  5
 	map_const ROUTE_33,                                    10,  9 ;  6
 	map_const AZALEA_TOWN,                                 20,  9 ;  7
-	map_const AZALEA_SHORE,                                3,  12 ;  8
+	map_const AZALEA_SHORE,                                3,  15 ;  8
 	map_const FORGOTTEN_PILLAR,                            15, 17 ;  9
 	endgroup
 
