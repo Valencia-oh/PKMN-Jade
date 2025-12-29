@@ -267,6 +267,8 @@ TorkoalAnimationIdle:    INCLUDE "gfx/pokemon/torkoal/anim_idle.asm"
 TrapinchAnimationIdle:   INCLUDE "gfx/pokemon/trapinch/anim_idle.asm"
 VibravaAnimationIdle:    INCLUDE "gfx/pokemon/vibrava/anim_idle.asm"
 FlygonAnimationIdle:     INCLUDE "gfx/pokemon/flygon/anim_idle.asm"
+SwabluAnimationIdle:     INCLUDE "gfx/pokemon/swablu/anim_idle.asm"
+AltariaAnimationIdle:    INCLUDE "gfx/pokemon/altaria/anim_idle.asm"
 FeebasAnimationIdle:     INCLUDE "gfx/pokemon/feebas/anim_idle.asm"
 MiloticAnimationIdle:    INCLUDE "gfx/pokemon/milotic/anim_idle.asm"
 ;gen4
