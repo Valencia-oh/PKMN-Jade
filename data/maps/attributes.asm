@@ -180,7 +180,6 @@ ENDM
 	connection east, Route47, ROUTE_47, 20
 	connection east, ForgottenPillar, FORGOTTEN_PILLAR, -40
 
-
 	map_attributes Route33, ROUTE_33, $05, NORTH | WEST | EAST
 	connection north, Route32, ROUTE_32, 0
 	connection west, AzaleaTown, AZALEA_TOWN, 0
