@@ -178,7 +178,7 @@ ENDM
 	connection south, Route33, ROUTE_33, 0
 	connection south, AzaleaShore, AZALEA_SHORE, -4
 	connection east, Route47, ROUTE_47, 20
-	connection east, ForgottenPillar, FORGOTTEN_PILLAR, 9
+	connection east, ForgottenPillar, FORGOTTEN_PILLAR, 29
 
 	map_attributes Route33, ROUTE_33, $05, NORTH | WEST | EAST
 	connection north, Route32, ROUTE_32, 0
@@ -399,7 +399,7 @@ ENDM
 
 	map_attributes ForgottenPillar, FORGOTTEN_PILLAR, $2c,  NORTH | WEST 
 	connection north, Route47, ROUTE_47, 4
-	connection west, Route32, ROUTE_32, -9
+	connection west, Route32, ROUTE_32, -29
 	connection west, AzaleaShore, AZALEA_SHORE, -2
 
 	map_attributes AzaleaShore, AZALEA_SHORE, $2c, NORTH | WEST | EAST
