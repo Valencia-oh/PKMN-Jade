@@ -397,11 +397,11 @@ ENDM
 
 	map_attributes ForgottenPillar, FORGOTTEN_PILLAR, $2c,  NORTH | WEST 
 	connection north, Route47, ROUTE_47, 0
-	connection west, AzaleaShore, AZALEA_SHORE, 0
+	connection west, AzaleaShore, AZALEA_SHORE, -3
 
 	map_attributes AzaleaShore, AZALEA_SHORE, $2c,  WEST | EAST
 	connection east, Route33, ROUTE_33, 0
-	connection west, ForgottenPillar, FORGOTTEN_PILLAR, 0
+	connection west, ForgottenPillar, FORGOTTEN_PILLAR, 3
 
 	map_attributes GoldenrodIsle, GOLDENROD_ISLE, $2c, WEST | EAST
 	connection west, Route41, ROUTE_41, 0
