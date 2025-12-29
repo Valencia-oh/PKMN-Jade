@@ -391,18 +391,18 @@ ENDM
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
 	map_attributes Route47, ROUTE_47, $2c,  SOUTH | WEST | EAST
-	connection south, ForgottenPillar, FORGOTTEN_PILLAR, -6
+	connection south, ForgottenPillar, FORGOTTEN_PILLAR, -9
 	connection west, Route32, ROUTE_32, -20
 	connection east, CherrygroveCity, CHERRYGROVE_CITY, 7
 
 	map_attributes ForgottenPillar, FORGOTTEN_PILLAR, $2c,  NORTH | WEST 
-	connection north, Route47, ROUTE_47, 6
+	connection north, Route47, ROUTE_47, 9
 	connection west, Route32, ROUTE_32, -40
-	connection west, AzaleaShore, AZALEA_SHORE, 9
+	connection west, AzaleaShore, AZALEA_SHORE, 6
 
 	map_attributes AzaleaShore, AZALEA_SHORE, $2c, NORTH | WEST | EAST
 	connection north, Route32, ROUTE_32, 3
-	connection east, ForgottenPillar, FORGOTTEN_PILLAR, -9
+	connection east, ForgottenPillar, FORGOTTEN_PILLAR, -6
 	connection west, Route33, ROUTE_33, 0
 
 	map_attributes GoldenrodIsle, GOLDENROD_ISLE, $2c, WEST | EAST
