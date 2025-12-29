@@ -277,6 +277,8 @@ MonMenuIconPals:
 	icon_pals BROWN,  GREEN  ; TRAPINCH
 	icon_pals GREEN,  BROWN  ; VIBRAVA
 	icon_pals GREEN,  GREEN  ; FLYGON
+	icon_pals TEAL,   BROWN  ; SWABLU
+	icon_pals TEAL,   BROWN  ; ALTARIA
 	icon_pals TEAL,   GREEN  ; FEEBAS
 	icon_pals RED,    BROWN   ; MILOTIC
 	icon_pals BLUE,   PINK   ; HONCHKROW
