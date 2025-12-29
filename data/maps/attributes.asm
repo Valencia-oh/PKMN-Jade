@@ -397,7 +397,7 @@ ENDM
 	connection north, Route47, ROUTE_47, 0
 	connection west, AzaleaShore, AZALEA_SHORE, 0
 
-	map_attributes AzaleaShore, AZALEA_SHORE, $2c, WEST | EAST
+	map_attributes AzaleaShore, AZALEA_SHORE, $05, WEST | EAST
 	connection east, ForgottenPillar, FORGOTTEN_PILLAR, 0
 	connection west, Route33, ROUTE_33, 2
 
