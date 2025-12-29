@@ -135,33 +135,11 @@ MartGoldenrod4F:
 	dw SUN_STONE
 	dw LINK_CABLE
 
-MartGoldenrod5F1:
+MartGoldenrod5F:
 	db 3 ; # items
 	dw TM_THUNDERPUNCH
 	dw TM_FIRE_PUNCH
 	dw TM_ICE_PUNCH
-
-MartGoldenrod5F2:
-	db 4 ; # items
-	dw TM_THUNDERPUNCH
-	dw TM_FIRE_PUNCH
-	dw TM_ICE_PUNCH
-	dw TM_HEADBUTT
-
-MartGoldenrod5F3:
-	db 4 ; # items
-	dw TM_THUNDERPUNCH
-	dw TM_FIRE_PUNCH
-	dw TM_ICE_PUNCH
-	dw TM_ROCK_SMASH
-
-MartGoldenrod5F4:
-	db 5 ; # items
-	dw TM_THUNDERPUNCH
-	dw TM_FIRE_PUNCH
-	dw TM_ICE_PUNCH
-	dw TM_HEADBUTT
-	dw TM_ROCK_SMASH
 
 MartOlivine:
 	db 9 ; # items
