@@ -155,7 +155,6 @@ TeachTMHM:
 
 	ld c, HAPPINESS_LEARNMOVE
 	farcall ChangeHappiness
-	call ConsumeTM
 	jr .learned_move
 
 .nope
@@ -382,26 +381,7 @@ TMHM_DisplayPocketItems:
 	pop hl
 	ld bc, 3
 	add hl, bc
-	push hl
 	rst PlaceString
-	pop hl
-	pop bc
-	ld a, c
-	push bc
-	cp NUM_TMS + 1
-	jr nc, .hm2
-	ld bc, SCREEN_WIDTH + 9
-	add hl, bc
-	ld a, '×'
-	ld [hli], a
-	pop bc
-	push bc
-	ld a, b
-	ld [wTempTMHM], a
-	ld de, wTempTMHM
-	lb bc, 1, 2
-	call PrintNum
-.hm2
 	pop bc
 	pop de
 	pop hl
@@ -466,27 +446,6 @@ TMHM_PlaySFX_ReadText2:
 	ld de, SFX_READ_TEXT_2
 	call PlaySFX
 	pop de
-	ret
-
-ConsumeTM:
-	call ConvertCurItemIntoCurTMHM
-	ld a, [wTempTMHM]
-	dec a
-	ld hl, wTMsHMs
-	ld b, 0
-	ld c, a
-	add hl, bc
-	ld a, [hl]
-	and a
-	ret z
-	dec a
-	ld [hl], a
-	ret nz
-	ld a, [wTMHMPocketScrollPosition]
-	and a
-	ret z
-	dec a
-	ld [wTMHMPocketScrollPosition], a
 	ret
 
 CountTMsHMs:
