@@ -273,6 +273,8 @@ PokemonNames::
 	dname "TRAPINCH"
 	dname "VIBRAVA"
 	dname "FLYGON"
+	dname "SWABLU"
+	dname "ALTARIA"
 	dname "FEEBAS"
 	dname "MILOTIC"
 	dname "HONCHKROW"
