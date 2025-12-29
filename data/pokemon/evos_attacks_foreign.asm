@@ -17,6 +17,8 @@ EvosAttacksPointers3::
 	dw TrapinchEvosAttacks
 	dw VibravaEvosAttacks
 	dw FlygonEvosAttacks
+	dw SwabluEvosAttacks
+	dw AltariaEvosAttacks
 	dw FeebasEvosAttacks
 	dw MiloticEvosAttacks
 	dw HonchkrowEvosAttacks
