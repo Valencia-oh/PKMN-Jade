@@ -270,6 +270,8 @@ FirstEvoStages::
 	dw TRAPINCH
 	dw TRAPINCH
 	dw TRAPINCH	
+	dw SWABLU
+	dw SWABLU
 	dw FEEBAS
 	dw FEEBAS	
 	dw MURKROW
