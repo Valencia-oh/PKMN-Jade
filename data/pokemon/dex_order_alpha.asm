@@ -6,6 +6,7 @@ AlphabeticalPokedexOrder:
 	dw AERODACTYL
 	dw AIPOM
 	dw ALAKAZAM
+	dw ALTARIA
 	dw AMPHAROS
 	dw APPLETUN
 	dw APPLIN
@@ -255,6 +256,7 @@ AlphabeticalPokedexOrder:
 	dw SUICUNE
 	dw SUNFLORA
 	dw SUNKERN
+	dw SWABLU
 	dw SWINUB
 	dw TANGELA
 	dw TAUROS
