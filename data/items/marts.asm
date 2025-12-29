@@ -278,11 +278,10 @@ MartCeladon2F2:
 
 MartCeladon3F:
 	db 5 ; # items
-	dw TM_HIDDEN_POWER
-	dw TM_SUNNY_DAY
-	dw TM_PROTECT
-	dw TM_RAIN_DANCE
-	dw TM_SANDSTORM
+	db TM_THUNDERPUNCH
+	db TM_FIRE_PUNCH
+	db TM_ICE_PUNCH
+	db TM_PSYCH_UP
 
 MartCeladon4F:
 	db 3 ; # items
