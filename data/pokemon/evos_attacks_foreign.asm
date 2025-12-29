@@ -355,7 +355,7 @@ AltariaEvosAttacks:
 	dbw 36, TWISTER
 	dbw 38, AQUA_JET
 	dbw 39, MOONBLAST
-	dbw 47, DRAGON_BREATH
+	dbw 47, DRAGONBREATH
 	db 0 ; no more level-up moves
 
 FeebasEvosAttacks:
