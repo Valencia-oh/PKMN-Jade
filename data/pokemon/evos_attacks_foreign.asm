@@ -309,7 +309,6 @@ dbbw EVOLVE_LEVEL, 35, FLYGON
 	db 0 ; no more level-up moves
 
 FlygonEvosAttacks:
-dbbw EVOLVE_LEVEL, 26, FLYGON
 	db 0 ; no more evolutions
 	dbw 1, TRI_ATTACK
 	dbw 1, SCRATCH
@@ -324,6 +323,37 @@ dbbw EVOLVE_LEVEL, 26, FLYGON
 	dbw 37, SLASH
 	dbw 49, EARTHQUAKE
 	dbw 61, FISSURE
+	db 0 ; no more level-up moves
+
+SwabluEvosAttacks:
+dbbw EVOLVE_LEVEL, 35, ALTARIA
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 5, QUICK_ATTACK
+	dbw 8, ASTONISH
+	dbw 10, WING_ATTACK
+	dbw 15, SUPERSONIC
+	dbw 20, RAINY_DAY
+	dbw 28, MIST
+	db 0 ; no more level-up moves
+
+AltariaEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, SCRATCH
+	dbw 1, GROWL
+	dbw 5, QUICK_ATTACK
+	dbw 8, ASTONISH
+	dbw 10, WING_ATTACK
+	dbw 15, SUPERSONIC
+	dbw 20, RAINY_DAY
+	dbw 28, MIST
+	dbw 36, TWISTER
+	dbw 38, AQUA_JET
+	dbw 39, MOONBLAST
+	dbw 47, DRAGON_BREATH
 	db 0 ; no more level-up moves
 
 FeebasEvosAttacks:
