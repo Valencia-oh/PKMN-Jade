@@ -174,7 +174,7 @@ ENDM
 	map_attributes Route32, ROUTE_32, $05, NORTH | SOUTH | EAST
 	connection north, VioletCity, VIOLET_CITY, 0
 	connection south, Route33, ROUTE_33, -1
-	connection south, AzaleaShore, AZALEA_SHORE, 8
+	connection south, AzaleaShore, AZALEA_SHORE, -4
 	connection east, Route47, ROUTE_47, 20
 	connection east, ForgottenPillar, FORGOTTEN_PILLAR, -5
 
@@ -401,7 +401,7 @@ ENDM
 	connection west, AzaleaShore, AZALEA_SHORE, 11
 
 	map_attributes AzaleaShore, AZALEA_SHORE, $2c, NORTH | WEST | EAST
-	connection north, Route32, ROUTE_32, -8
+	connection north, Route32, ROUTE_32, 4
 	connection east, ForgottenPillar, FORGOTTEN_PILLAR, -11
 	connection west, Route33, ROUTE_33, 0
 
