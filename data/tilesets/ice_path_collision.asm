@@ -64,4 +64,3 @@
 	tilecoll ICE, ICE, ICE, LADDER ; 3f
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 40
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 41
-	tilecoll , , ,  ; 42
