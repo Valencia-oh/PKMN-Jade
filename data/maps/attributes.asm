@@ -181,7 +181,7 @@ ENDM
 	map_attributes Route33, ROUTE_33, $05, NORTH | WEST | EAST
 	connection north, Route32, ROUTE_32, 0
 	connection west, AzaleaTown, AZALEA_TOWN, 0
-	connection east, AzaleaShore, AZALEA_SHORE, 0
+	connection east, AzaleaShore, AZALEA_SHORE, -2
 
 	map_attributes Route34, ROUTE_34, $05, NORTH | EAST
 	connection north, GoldenrodCity, GOLDENROD_CITY, -5
@@ -401,7 +401,7 @@ ENDM
 
 	map_attributes AzaleaShore, AZALEA_SHORE, $2c,  WEST | EAST
 	connection west, ForgottenPillar, FORGOTTEN_PILLAR, -3
-	connection east, Route33, ROUTE_33, 0
+	connection east, Route33, ROUTE_33, 2
 
 	map_attributes GoldenrodIsle, GOLDENROD_ISLE, $2c, WEST | EAST
 	connection west, Route41, ROUTE_41, 0
