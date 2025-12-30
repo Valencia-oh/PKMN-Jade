@@ -1630,7 +1630,7 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 3, GEODUDE
-	dbw 5, GEODUDE
+	dbw 5, SWABLU
 	dbw 6, GLIGAR
 	dbw 4, PHANPY
 	dbw 3, PHANPY
@@ -1638,7 +1638,7 @@ JohtoGrassWildMons:
 	dbw 4, SKARMORY
 	; day
 	dbw 3, MANKEY
-	dbw 5, GEODUDE
+	dbw 5, SWABLU
 	dbw 6, GLIGAR
 	dbw 4, PHANPY
 	dbw 3, TEDDIURSA
@@ -1646,7 +1646,7 @@ JohtoGrassWildMons:
 	dbw 4, SKARMORY
 	; nite
 	dbw 3, GEODUDE
-	dbw 5, GEODUDE
+	dbw 5, SKARMORY
 	dbw 6, GLIGAR
 	dbw 3, GEODUDE
 	dbw 4, GEODUDE
@@ -1659,7 +1659,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 2, GEODUDE
 	dbw 2, SPEAROW
-	dbw 3, GEODUDE
+	dbw 3, SWABLU
 	dbw 3, PHANPY
 	dbw 2, PHANPY
 	dbw 2, RATTATA
@@ -1667,7 +1667,7 @@ JohtoGrassWildMons:
 	; day
 	dbw 2, GEODUDE
 	dbw 2, SPEAROW
-	dbw 3, GEODUDE
+	dbw 3, SWABLU
 	dbw 3, PHANPY
 	dbw 2, PHANPY
 	dbw 2, RATTATA
@@ -1675,7 +1675,7 @@ JohtoGrassWildMons:
 	; nite
 	dbw 2, GEODUDE
 	dbw 2, RATTATA
-	dbw 3, GEODUDE
+	dbw 3, SKARMORY
 	dbw 3, POOCHYENA
 	dbw 2, POOCHYENA
 	dbw 2, RATTATA
