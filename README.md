@@ -7,6 +7,8 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 - 39 new pokemon, bringing the total to 297 (Applin, Clodsire, Toucannon, Espathra, Bronzong, Pelipper, Malamar, Linoone, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, Flygon, Torkoal, Delcatty, Milotic, Chi-yu and Falinks lines + Glaceon, Leafeon, Ursaluna, Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
 - overhauled PC (added with CSE)
 - Fairy Type
+- EXP ALL
+- Link Cable
 - Expanded Gym teams to feature new pokemon for Falkner, Bugsy, Morty, and Pryce (with Whitney also getting a snubbull)
 - A surprise near Ecruteak City
 
@@ -16,7 +18,6 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 
 ## Planned Features
 
-- EXP ALL with toggle
 - Overhaulled Level Curve
 - Expanded Johto
 - **350 pokemon** There will eventually be around 350 pokemon (all gens 1+2) and ~100 selected from later generations thanks to the Extended 16-bit Indexes featured in CSE
@@ -25,7 +26,6 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
   - Future Evos still not added: Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile
     - Future Babies/Pre-evos are unlikely
   - Regional Varients Planned: Alolan Vulpix + Ninetails, Alolan Raichu, Hisuian Growelith + Arcanine
-- Link Cable
 
 ### Credits 
 - The majority of systems would not work without the use of the CSE engine, so shout out to all the devs on there
@@ -39,7 +39,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - Polished Crystal and Emerald Seaglass for giving me inspiration to start this project
 - Pokecrystal devs for making this posible, as well as the code so easy to use and providing numerous incredibly helpful tutorials
 - RaJa239 on the pret discord for the script to make the pocket pc only work outdoors
-- the code for Abilities, Hail, Psysical/Special Split, and several moves is from Aaronjeter's Budget Crystal Romhack
+- the code for Abilities, EXP ALL, Psysical/Special Split, and several moves is from Aaronjeter's Budget Crystal Romhack
 
 ## Timeline
 Currently focusing on adding pokemon, but after the next pokemon addition update, I will begin working on new Routes and Locations
