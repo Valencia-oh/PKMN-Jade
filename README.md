@@ -60,7 +60,7 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Toucannnon                               ✔️
 - Locations near Cianwood with Alola Mons  -- (Locations Done, Alola Mons not added yet)
 - 
-### v.0.7 goals  - DONEa
+### v.0.7 goals  - DONE
 - add Torkoal ✔️
 - More attacks ✔️
 - Abilities ✔️
@@ -72,14 +72,14 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Vibrava                                  ✔️
 - Flygon                                   ✔️
 ### v.0.8 goals - IN PROGRESS
-- Olivine Woods + Creek                    ✖️
-- Ecruteak Woods                           ✖️
+- Olivine Woods + Creek                    ✔️
+- Ecruteak Woods                           ✔️
 - Hisuian Growelithe                       ✖️
 - Hisuian Arcanine                         ✖️
 - Dripplin                                 ✖️
 - Hydrapple                                ✖️
 ### v.0.9 goals - IN PROGRESS
 - Hoenn Legend Trio -- Sprites Obtained, Code Not Started ✖️
-- Spear Pillar ✖️
-- Legendary Bird Islands ✖️
+- Spear Pillar -- remapped to forgotten pillar, not yet enterable
+- Legendary Bird Islands -- Moltres has an island
 - Remove Team Rocket Story Line ✖️
