@@ -1463,16 +1463,16 @@ JohtoGrassWildMons:
 	; morn
 	dbw 3, LEDYBA
 	dbw 4, GROWLITHE
-	dbw 5, PIDGEY
-	dbw 6, GROWLITHE
+	dbw 5, TYROGUE
+	dbw 6, STANTLER
 	dbw 5, PIDGEY
 	dbw 5, LEDIAN
 	dbw 5, VULPIX
 	; day
 	dbw 3, PIDGEY
 	dbw 4, GROWLITHE
-	dbw 5, PIDGEY
-	dbw 6, GROWLITHE
+	dbw 5, TEDDIURSA
+	dbw 6, STANTLER
 	dbw 5, PIDGEY
 	dbw 5, VULPIX
 	dbw 5, PIDGEY
@@ -1548,7 +1548,7 @@ JohtoGrassWildMons:
 	dbw 3, EKANS
 	dbw 2, SANDSLASH
 	dbw 4, GIRAFARIG
-	dbw 4, RATTATA
+	dbw 4, HERACROSS
 	dbw 5, EKANS
 	dbw 3, SPEAROW
 	dbw 3, NATU
@@ -1556,7 +1556,7 @@ JohtoGrassWildMons:
 	dbw 3, EKANS
 	dbw 2, SANDSLASH
 	dbw 4, GIRAFARIG
-	dbw 4, RATTATA
+	dbw 4, HERACROSS
 	dbw 5, EKANS
 	dbw 3, SPEAROW
 	dbw 3, NATU
@@ -1585,7 +1585,7 @@ JohtoGrassWildMons:
 	dbw 4, GIRAFARIG
 	dbw 4, FARFETCH_D
 	dbw 3, FALINKS
-	dbw 2, SHROOMISH
+	dbw 2, MAREEP
 	dbw 4, SHROOMISH
 	dbw 3, FALINKS
 	; nite
@@ -1605,7 +1605,7 @@ JohtoGrassWildMons:
 	dbw 4, LICKITUNG
 	dbw 3, BELLSPROUT
 	dbw 3, SHROOMISH
-	dbw 3, LICKITUNG
+	dbw 3, YANMA
 	dbw 5, ELECTRIKE
 	dbw 6, STANTLER
 	; day
@@ -1613,7 +1613,7 @@ JohtoGrassWildMons:
 	dbw 4, LICKITUNG
 	dbw 3, POLIWAG
 	dbw 3, BELLSPROUT
-	dbw 3, LICKITUNG
+	dbw 3, MAREEP
 	dbw 5, SHROOMISH
 	dbw 6, LICKITUNG
 	; nite
