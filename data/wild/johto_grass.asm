@@ -1326,7 +1326,7 @@ JohtoGrassWildMons:
 	dbw 4, BELLSPROUT
 	dbw 6, MAREEP
 	dbw 4, MAREEP
-	dbw 3, HOPPIP
+	dbw 3, ODDISH
 	dbw 4, HOPPIP
 	; day
 	dbw 4, EKANS
@@ -1334,7 +1334,7 @@ JohtoGrassWildMons:
 	dbw 4, BELLSPROUT
 	dbw 6, MAREEP
 	dbw 4, WOOPER
-	dbw 3, WOOPER
+	dbw 3, ODDISH
 	dbw 4, HOPPIP
 	; nite
 	dbw 4, WOOPER
@@ -1354,7 +1354,7 @@ JohtoGrassWildMons:
 	dbw 4, GEODUDE
 	dbw 2, HOPPIP
 	dbw 3, EKANS
-	dbw 4, HOPPIP
+	dbw 4, ODDISH
 	dbw 5, HOPPIP
 	; day
 	dbw 2, RATTATA
@@ -1362,7 +1362,7 @@ JohtoGrassWildMons:
 	dbw 4, GEODUDE
 	dbw 2, HOPPIP
 	dbw 3, EKANS
-	dbw 4, HOPPIP
+	dbw 4, AIPOM
 	dbw 5, HOPPIP
 	; nite
 	dbw 2, RATTATA
