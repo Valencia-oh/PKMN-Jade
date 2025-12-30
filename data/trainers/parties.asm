@@ -2717,13 +2717,12 @@ FisherGroup:
 	db -1 ; end
 
 	next_list_item ; FISHER (11)
-	db "EDGAR@", TRAINERTYPE_MOVES
+	db "EDGAR@", TRAINERTYPE_NORMAL
 	db 2
 	dw REMORAID
-	db 3
-	dw REMORAID
-	dw LOCK_ON, PSYBEAM, AURORA_BEAM, BUBBLEBEAM
-	db 3
+	db 5
+	dw QUAGSIRE
+	db 4
 	dw MANTINE
 	db -1 ; end
 
