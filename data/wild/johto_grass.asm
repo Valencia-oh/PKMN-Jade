@@ -1508,7 +1508,7 @@ JohtoGrassWildMons:
 	dbw 3, GASTLY
 	dbw 3, MISDREAVUS
 	dbw 3, MAGNEMITE
-	dbw 3, NOCTOWL
+	dbw 3, SKITTY
 	dbw 2, MEOWTH
 	dbw 2, MURKROW
 	dbw 1, ERSRHEADBBY
@@ -1536,10 +1536,10 @@ JohtoGrassWildMons:
 	dbw 6, INKAY
 	dbw 6, RATTATA
 	dbw 6, MAGNEMITE
-	dbw 6, NOCTOWL
+	dbw 6, HOOTHOOT
 	dbw 8, INKAY
 	dbw 8, MEOWTH
-	dbw 8, MEOWTH
+	dbw 8, SKITTY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_42
