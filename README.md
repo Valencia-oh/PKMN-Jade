@@ -9,12 +9,12 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 - Fairy Type
 - EXP ALL
 - Link Cable
-- Expanded Gym teams to feature new pokemon for Falkner, Bugsy, Morty, and Pryce (with Whitney also getting a snubbull)
-- A surprise near Ecruteak City
+- Expanded Gym teams
+- Level Scaling
 
 
 
-Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) and the Apples for Applin are sold in the Goldenrod Department Store,
+Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) and the Apples for Applin are sold in the Goldenrod Department Store
 
 ## Planned Features
 
