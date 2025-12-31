@@ -281,6 +281,11 @@ FirstEvoStages::
 	dw EEVEE
 	dw EEVEE
 	dw SWINUB	 	
+	dw DWEBBLE
+	dw DWEBBLE
+	dw VENIPEDE
+	dw VENIPEDE
+	dw VENIPEDE
 	dw JOLTIK
 	dw JOLTIK
 	dw LARVESTA
