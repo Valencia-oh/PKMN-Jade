@@ -1406,12 +1406,12 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 2, SNUBBULL
-	dbw 4, ELECTRIKE
+	dbw 4, YANMA
 	dbw 3, GROWLITHE
 	dbw 2, ABRA
 	dbw 3, EEVEE
 	dbw 2, EEVEE
-	dbw 2, YANMA
+	dbw 2, ELECTRIKE
 	; day
 	dbw 2, SNUBBULL
 	dbw 4, ELECTRIKE
