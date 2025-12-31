@@ -282,6 +282,11 @@ BitmasksPointers:
 	dw GlaceonBitmasks
 	dw MamoswineBitmasks
 ;gen5
+	dw DwebbleBitmasks
+	dw CrustleBitmasks
+	dw VenipedeBitmasks
+	dw WhirlipedeBitmasks
+	dw ScolipedeBitmasks
 	dw JoltikBitmasks
 	dw GalvantulaBitmasks
 	dw LarvestaBitmasks
