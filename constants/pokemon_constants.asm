@@ -301,11 +301,11 @@ DEF FOREIGN_POKEMON EQU const_value
 	const LEAFEON  	 ; 10a
 	const GLACEON 	 ; 10b
 	const MAMOSWINE  ; 10c
-	;const DWEBBLE
-	;const CRUSTLE
-	;const VENIPEDE
-	;const WHIRLIPEDE
-	;const SCOLIPEDE
+	const DWEBBLE
+	const CRUSTLE
+	const VENIPEDE
+	const WHIRLIPEDE
+	const SCOLIPEDE
 	const JOLTIK     ; 10d
 	const GALVANTULA ; 10e
 	const LARVESTA   ; 10f
