@@ -282,6 +282,11 @@ AnimationIdlePointers:
 	dw GlaceonAnimationIdle
 	dw MamoswineAnimationIdle
 ;gen5
+	dw DwebbleAnimationIdle
+	dw CrustleAnimationIdle
+	dw VenipedeAnimationIdle
+	dw WhirlipedeAnimationIdle
+	dw ScolipedeAnimationIdle
 	dw JoltikAnimationIdle
 	dw GalvantulaAnimationIdle
 	dw LarvestaAnimationIdle
