@@ -79,6 +79,12 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Dripplin                                 ✖️
 - Hydrapple                                ✖️
 ### v.0.9 goals - IN PROGRESS
+- Infinite TMS                    ✔️
+- Altaria                    ✔️
+- Scolipede                       ✖️
+- Crustle                         ✖️
+- Farigiraf                                 ✖️
+- Move Evolution                                ✖️
 - Hoenn Legend Trio -- Sprites Obtained, Code Not Started ✖️
 - Spear Pillar -- remapped to forgotten pillar, not yet enterable
 - Legendary Bird Islands -- Moltres has an island
