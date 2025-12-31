@@ -574,6 +574,14 @@ PokemonPicPointers::
 	dba GlaceonBackpic
 	dba MamoswineFrontpic
 	dba MamoswineBackpic
+	dba DwebbleFrontpic
+	dba DwebbleBackpic
+	dba CrustleFrontpic
+	dba CrustleBackpic
+	dba VenipedeFrontpic
+	dba VenipedeBackpic
+	dba WhilipedeFrontpic
+	dba WhirlipedeBackpic
 	dba JoltikFrontpic
 	dba JoltikBackpic
 	dba GalvantulaFrontpic
