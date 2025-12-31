@@ -282,6 +282,11 @@ FramesPointers:
 	dba GlaceonFrames
 	dba MamoswineFrames
 ;gen5
+	dba DwebbleFrames
+	dba CrustleFrames
+	dba VenipedeFrames
+	dba WhirlipedeFrames
+	dba SculipedeFrames
 	dba JoltikFrames
 	dba GalvantulaFrames
 	dba LarvestaFrames
