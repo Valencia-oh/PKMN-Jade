@@ -580,8 +580,10 @@ PokemonPicPointers::
 	dba CrustleBackpic
 	dba VenipedeFrontpic
 	dba VenipedeBackpic
-	dba WhilipedeFrontpic
+	dba WhirlipedeFrontpic
 	dba WhirlipedeBackpic
+	dba ScolipedeFrontpic
+	dba ScolipedeBackpic
 	dba JoltikFrontpic
 	dba JoltikBackpic
 	dba GalvantulaFrontpic
