@@ -286,6 +286,11 @@ PokemonCries::
 	mon_cry CRY_AIPOM,       162,  320 ; LEAFEON
 	mon_cry CRY_VENONAT,    -233,  240 ; GLACEON
 	mon_cry CRY_MAGCARGO,   -265,  256 ; MAMOSWINE
+	mon_cry CRY_KRABBY,       32,  352 ; DWEBBLE
+	mon_cry CRY_KRABBY,      238,  352 ; CRUSTLE
+	mon_cry CRY_SPINARAK,     17,  512 ; VENIPEDE
+	mon_cry CRY_SPINARAK,   -174,  482 ; WHIRLIPEDE
+	mon_cry CRY_SPINARAK,   -180,  500 ; SCOLIPEDE
 	mon_cry CRY_SPINARAK,     17,  512 ; JOLTIK
 	mon_cry CRY_SPINARAK,   -174,  482 ; GALVANTULA
 	mon_cry CRY_METAPOD,      90,  256 ; LARVESTA
