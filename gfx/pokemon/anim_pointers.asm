@@ -282,6 +282,11 @@ AnimationPointers:
 	dw LeafeonAnimation
 	dw MamoswineAnimation
 ;gen5
+	dw DwebbleAnimation
+	dw CrustleAnimation
+	dw VenipedeAnimation
+	dw WhirlipedeAnimation
+	dw ScolipedeAnimation
 	dw JoltikAnimation
 	dw GalvantulaAnimation
 	dw LarvestaAnimation
