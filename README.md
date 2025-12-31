@@ -4,7 +4,7 @@ Labradorite is an in development romhack based off the CSE engine for Pokecrysta
 
 ## Implemented Features
 - Removed Trade+Item Evos, now just use the item
-- 39 new pokemon, bringing the total to 297 (Applin, Clodsire, Toucannon, Espathra, Bronzong, Pelipper, Malamar, Linoone, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, Flygon, Torkoal, Delcatty, Milotic, Chi-yu and Falinks lines + Glaceon, Leafeon, Ursaluna, Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
+- 49 new pokemon, bringing the total to 300 (Applin, Clodsire, Toucannon, Espathra, Bronzong, Pelipper, Malamar, Linoone, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, Flygon, Torkoal, Delcatty, Milotic, Chi-yu and Falinks lines + Glaceon, Leafeon, Ursaluna, Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
 - overhauled PC (added with CSE)
 - Fairy Type
 - EXP ALL
