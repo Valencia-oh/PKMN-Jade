@@ -1993,7 +1993,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	def_grass_wildmons ROUTE_49
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 3, EKANS
+	dbw 3, TORKOAL
 	dbw 2, MAREEP
 	dbw 4, GIRAFARIG
 	dbw 4, VULPIX
@@ -2001,7 +2001,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 3, PIKACHU
 	dbw 3, NATU
 	; day
-	dbw 3, EKANS
+	dbw 3, TORKOAL
 	dbw 2, MAREEP
 	dbw 4, GIRAFARIG
 	dbw 4, VULPIX
@@ -2009,7 +2009,7 @@ def_grass_wildmons CHERRY_TOWER_F2
 	dbw 3, PIKACHU
 	dbw 3, NATU
 	; nite
-	dbw 3, EKANS
+	dbw 3, TORKOAL
 	dbw 2, MASCHIFF
 	dbw 4, POOCHYENA
 	dbw 4, ZUBAT
