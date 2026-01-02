@@ -553,7 +553,7 @@ WhirlipedeEvosAttacks:
 	dbw 41, AGILITY
 	db 0 ; no more level-up moves
 
-WhirlipedeEvosAttacks:
+ScolipedeEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, POISON_STING
 	dbw 1, LEER
