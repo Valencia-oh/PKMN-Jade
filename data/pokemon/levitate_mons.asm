@@ -8,6 +8,8 @@ LevitateMons::
 	dw WEEZING
 	dw VIBRAVA
 	dw FLYGON
+	dw BRONZOR
+	dw BRONZONG
 	dw -1
 
 WaterproofMons::
