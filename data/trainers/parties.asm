@@ -117,8 +117,8 @@ MortyGroup:
 	db "MORTY@", TRAINERTYPE_MOVES
 	db 4
 	dw HAUNTER
-	db 5
 	dw LICK, SPITE, MEAN_LOOK, CURSE
+	db 5
 	dw MISDREAVUS
 	dw SPITE, MEAN_LOOK, MIMIC, NIGHT_SHADE
 	db 6
@@ -222,7 +222,7 @@ JasmineGroup:
 
 ChuckGroup:
 	next_list_item ; CHUCK (1)
-	db "CHUCK@", TRAINERTYPE_MOVES
+	db "CHUCK@", TRAINERTYPE_NORMAL
 	db 5
 	dw MANKEY
 	dw LEER, RAGE, KARATE_CHOP, FURY_SWIPES
@@ -234,6 +234,7 @@ ChuckGroup:
 	db -1 ; end
 
 	next_list_item ; CHUCK (2)
+	db "CHUCK@", TRAINERTYPE_MOVES
 	db 8
 	dw HITMONCHAN
 	dw MACH_PUNCH, FIRE_PUNCH, DIZZY_PUNCH, ICE_PUNCH
