@@ -24,10 +24,6 @@ CheckWeatherHealAbility:
 	jr z, .Done
 	jr c, .Done
 
-	call IceBody
-	jr z, .Done
-	jr c, .Done
-
 	.Done
 	ret
 
@@ -79,22 +75,6 @@ CheckSandBodyMon:
 	farcall CheckSandBodyAbility
 	ret	
 
-IceBody:
-	call CheckHail
-	jr nz, .NotHail
-
-	call CheckIceBodyMon
-	jr nc, .NotIceBodyMon
-	
-	.NotHail
-	.NotIceBodyMon
-	ret
-
-CheckIceBodyMon:	
-	call GetActiveMon
-	farcall CheckIceBodyAbility
-	ret	
-
 CheckRaining:
 	ld a, [wBattleWeather]
 	cp WEATHER_RAIN
@@ -108,11 +88,6 @@ CheckSun:
 CheckSandstorm:
 	ld a, [wBattleWeather]
 	cp WEATHER_SANDSTORM
-	ret
-
-CheckHail:
-	ld a, [wBattleWeather]
-	cp WEATHER_HAIL
 	ret
 
 GetActiveMon:
