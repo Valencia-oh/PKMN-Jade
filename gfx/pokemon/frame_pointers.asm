@@ -286,7 +286,7 @@ FramesPointers:
 	dba CrustleFrames
 	dba VenipedeFrames
 	dba WhirlipedeFrames
-	dba SculipedeFrames
+	dba ScolipedeFrames
 	dba JoltikFrames
 	dba GalvantulaFrames
 	dba LarvestaFrames
