@@ -501,7 +501,7 @@ DwebbleEvosAttacks:
 	dbw 8, FLAIL
 	dbw 17, PIN_MISSILE
 	dbw 20, SLASH
-	dbw 24, ROCKSLIDE
+	dbw 24, ROCK_SLIDE
 	dbw 27, SANDSTORM
 	dbw 30, ROLLOUT
 	dbw 37, HEADBUTT
@@ -515,7 +515,7 @@ CrustleEvosAttacks:
 	dbw 8, FLAIL
 	dbw 17, PIN_MISSILE
 	dbw 20, SLASH
-	dbw 24, ROCKSLIDE
+	dbw 24, ROCK_SLIDE
 	dbw 27, SANDSTORM
 	dbw 30, ROLLOUT
 	dbw 37, HEADBUTT
@@ -566,7 +566,7 @@ ScolipedeEvosAttacks:
 	dbw 33, TOXIC
 	dbw 36, SLEEP_POWDER
 	dbw 41, AGILITY
-	dbw 43, IRONTAIL
+	dbw 43, IRON_TAIL
 	dbw 45, MEGAHORN
 	db 0 ; no more level-up moves
 
