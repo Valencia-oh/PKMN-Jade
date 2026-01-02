@@ -1281,7 +1281,7 @@ ld a, [wCurPartySpecies]
 
 	push de
 	push bc
-	call CheckStabAbility
+	farcall CheckStabAbility
 	pop bc
 	pop de
 	jr c, .stab ;If we used a stab move+ability, skip to stab
@@ -1332,7 +1332,7 @@ ld a, [wCurPartySpecies]
 
 	push de
 	push bc
-	call CheckStabilityMon
+	farcall CheckStabilityMon
 	pop bc
 	pop de
 	jr c, .doubleStab
