@@ -222,7 +222,7 @@ JasmineGroup:
 
 ChuckGroup:
 	next_list_item ; CHUCK (1)
-	db "CHUCK@", TRAINERTYPE_NORMAL
+	db "CHUCK@", TRAINERTYPE_MOVES
 	db 9
 	dw MANKEY
 	dw LEER, RAGE, KARATE_CHOP, FURY_SWIPES
