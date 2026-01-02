@@ -4026,7 +4026,7 @@ SendOutPlayerMon:
 	ld a, [wCurPartySpecies]
 	ld [wTempAbilityMon], a
 	call PlayStereoCry	
-	call Check_Entrance_Ability
+	farcall Check_Entrance_Ability
 
 .statused
 	call UpdatePlayerHUD
