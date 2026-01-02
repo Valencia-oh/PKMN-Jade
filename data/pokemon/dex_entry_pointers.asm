@@ -281,6 +281,11 @@ PokedexDataPointerTable:
 	dba LeafeonPokedexEntry
 	dba GlaceonPokedexEntry
 	dba MamoswinePokedexEntry
+	dba DwebblePokedexEntry
+	dba CrustlePokedexEntry
+	dba VenipedePokedexEntry
+	dba WhirlipedePokedexEntry
+	dba ScolipedePokedexEntry
 	dba JoltikPokedexEntry
 	dba GalvantulaPokedexEntry
 	dba LarvestaPokedexEntry
