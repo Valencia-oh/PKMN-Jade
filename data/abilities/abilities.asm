@@ -115,6 +115,7 @@ LevitateMons::
 	dw WEEZING
 	dw VIBRAVA
 	dw FLYGON
+	dw FLAPPLE
 	dw -1
 
 WaterproofMons::
