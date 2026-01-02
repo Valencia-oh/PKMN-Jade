@@ -1633,7 +1633,6 @@ BattleCommand_DamageVariation:
 	ld [hl], a
 	ret
 
-INCLUDE "data/pokemon/levitate_mons.asm"
 
 BattleCommand_CheckHit:
 	call .Levitate
@@ -1728,11 +1727,7 @@ BattleCommand_CheckHit:
 
 	call GetTargetSpecies
 	call GetPokemonIndexFromID
-	ld b, h
-	ld c, l
-	ld de, 2
-	ld hl, LevitateMons
-	call IsInWordArray
+	farcall CheckLevitateAbility
 	jr c, .Levitating
 
 	or 1
@@ -1757,11 +1752,7 @@ BattleCommand_CheckHit:
 
 	call GetTargetSpecies
 	call GetPokemonIndexFromID
-	ld b, h
-	ld c, l
-	ld de, 2
-	ld hl, WaterproofMons
-	call IsInWordArray
+	farcall CheckWaterproofAbility
 	jr c, .IsWaterproof
 
 	or 1
