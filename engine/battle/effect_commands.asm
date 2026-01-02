@@ -1276,7 +1276,7 @@ BattleCommand_Stab:
 	call CompareMove
 	ret z
 
-ld a, [wCurPartySpecies]
+	ld a, [wCurPartySpecies]
 	ld [wTempAbilityMon], a
 
 	push de
@@ -1321,7 +1321,7 @@ ld a, [wCurPartySpecies]
 	pop bc
 	pop de
 	pop hl
-
+	
 	ld a, [wCurType]
 	cp b
 	jr z, .stab
@@ -1336,6 +1336,7 @@ ld a, [wCurPartySpecies]
 	pop bc
 	pop de
 	jr c, .doubleStab
+
 	jr .normalStab
 
 .doubleStab
