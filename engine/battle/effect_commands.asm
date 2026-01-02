@@ -1281,7 +1281,7 @@ BattleCommand_Stab:
 
 	push de
 	push bc
-	farcall CheckStabAbility
+	call CheckStabAbility
 	pop bc
 	pop de
 	jr c, .stab ;If we used a stab move+ability, skip to stab
@@ -1332,7 +1332,7 @@ BattleCommand_Stab:
 
 	push de
 	push bc
-	farcall CheckStabilityMon
+	call CheckStabilityMon
 	pop bc
 	pop de
 	jr c, .doubleStab
