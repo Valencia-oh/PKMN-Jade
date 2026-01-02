@@ -43,6 +43,7 @@ AlphabeticalPokedexOrder:
 	dw CORSOLA
 	dw CROBAT
 	dw CROCONAW
+	dw CRUSTLE
 	dw CUBONE
 	dw CYNDAQUIL
 	dw DELCATTY
@@ -59,6 +60,7 @@ AlphabeticalPokedexOrder:
 	dw DROWZEE
 	dw DUGTRIO
 	dw DUNSPARCE
+	dw DWEBBLE
 	dw EEVEE
 	dw EKANS
 	dw ELECTABUZZ
@@ -225,6 +227,7 @@ AlphabeticalPokedexOrder:
 	dw SANDSHREW
 	dw SANDSLASH
 	dw SCIZOR
+	dw SCOLIPEDE
 	dw SCYTHER
 	dw SEADRA
 	dw SEAKING
@@ -279,6 +282,7 @@ AlphabeticalPokedexOrder:
 	dw URSARING
 	dw URSALUNA
 	dw VAPOREON
+	dw VENIPEDE
 	dw VENOMOTH
 	dw VENONAT
 	dw VENUSAUR
@@ -292,6 +296,7 @@ AlphabeticalPokedexOrder:
 	dw WEEDLE
 	dw WEEPINBELL
 	dw WEEZING
+	dw WHIRLIPEDE
 	dw WIGGLYTUFF
 	dw WINGULL
 	dw WOBBUFFET
