@@ -28,6 +28,9 @@ EvosAttacksPointers3::
 	dw LeafeonEvosAttacks
 	dw GlaceonEvosAttacks
 	dw MamoswineEvosAttacks
+	dw VenipedeEvosAttacks
+	dw WhirlipedeEvosAttacks
+	dw ScolipedeEvosAttacks
 	dw JoltikEvosAttacks
 	dw GalvantulaEvosAttacks
 	dw LarvestaEvosAttacks
@@ -485,6 +488,56 @@ MamoswineEvosAttacks:
 	dbw 50, ICY_WIND
 	dbw 56, BLIZZARD
 	dbw 70, AMNESIA
+	db 0 ; no more level-up moves
+
+VenipedeEvosAttacks:
+	dbbw EVOLVE_LEVEL, 22, WHIRLIPEDE
+	db 0 ; no more evolutions
+	dbw 1, POISON_STING
+	dbw 1, LEER
+	dbw 7, ROLLOUT
+	dbw 8, PROTECT
+	dbw 17, PIN_MISSILE
+	dbw 20, POISONPOWDER
+	dbw 25, SCREECH
+	dbw 28, STUN_SPORE
+	dbw 33, TOXIC
+	dbw 36, SLEEP_POWDER
+	dbw 41, AGILITY
+	db 0 ; no more level-up moves
+
+
+WhirlipedeEvosAttacks:
+	dbbw EVOLVE_LEVEL, 30, SCOLIPEDE
+	db 0 ; no more evolutions
+	dbw 1, POISON_STING
+	dbw 1, LEER
+	dbw 7, ROLLOUT
+	dbw 8, PROTECT
+	dbw 17, PIN_MISSILE
+	dbw 20, POISONPOWDER
+	dbw 25, SCREECH
+	dbw 28, STUN_SPORE
+	dbw 33, TOXIC
+	dbw 36, SLEEP_POWDER
+	dbw 41, AGILITY
+	db 0 ; no more level-up moves
+
+WhirlipedeEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, POISON_STING
+	dbw 1, LEER
+	dbw 7, ROLLOUT
+	dbw 8, PROTECT
+	dbw 17, PIN_MISSILE
+	dbw 20, POISONPOWDER
+	dbw 25, SCREECH
+	dbw 28, STUN_SPORE
+	dbw 33, TOXIC
+	dbw 36, SLEEP_POWDER
+	dbw 41, AGILITY
+	dbw 43, IRONTAIL
+	dbw 45, MEGAHORN
 	db 0 ; no more level-up moves
 
 JoltikEvosAttacks:
