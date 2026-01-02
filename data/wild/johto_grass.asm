@@ -431,7 +431,7 @@ JohtoGrassWildMons:
 	dbw 4, RATTATA
 	dbw 7, JOLTIK
 	dbw 6, ONIX
-	dbw 6, ONIX
+	dbw 6, DWEBBLE
 	; day
 	dbw 2, GEODUDE
 	dbw 3, SANDSHREW
@@ -439,7 +439,7 @@ JohtoGrassWildMons:
 	dbw 4, RATTATA
 	dbw 7, JOLTIK
 	dbw 6, ONIX
-	dbw 6, ONIX
+	dbw 6, DWEBBLE
 	; nite
 	dbw 2, GEODUDE
 	dbw 3, CLEFAIRY
@@ -583,7 +583,7 @@ JohtoGrassWildMons:
 	; nite
 	dbw 6, ODDISH
 	dbw 2, VENONAT
-	dbw 3, ODDISH
+	dbw 3, VENIPEDE
 	dbw 4, PSYDUCK
 	dbw 1, HOOTHOOT
 	dbw 2, PARAS
@@ -1633,7 +1633,7 @@ JohtoGrassWildMons:
 	dbw 5, SWABLU
 	dbw 6, GLIGAR
 	dbw 4, PHANPY
-	dbw 3, PHANPY
+	dbw 3, DWEBBLE
 	dbw 3, SKARMORY
 	dbw 4, SKARMORY
 	; day
@@ -1648,10 +1648,10 @@ JohtoGrassWildMons:
 	dbw 3, GEODUDE
 	dbw 5, SKARMORY
 	dbw 6, GLIGAR
-	dbw 3, GEODUDE
-	dbw 4, GEODUDE
-	dbw 3, POOCHYENA
+	dbw 3, DWEBBLE
 	dbw 4, POOCHYENA
+	dbw 3, POOCHYENA
+	dbw 4, HOUNDOUR
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_46
