@@ -51,6 +51,8 @@ NewPokedexOrder:
 	dw CROBAT
 	dw JOLTIK
 	dw GALVANTULA
+	dw DWEBBLE
+	dw CRUSTLE
 	dw CLEFFA
 	dw CLEFAIRY
 	dw CLEFABLE
@@ -114,6 +116,9 @@ NewPokedexOrder:
 	dw GLOOM
 	dw VILEPLUME
 	dw BELLOSSOM
+	dw VENIPEDE
+	dw WHIRLIPEDE
+	dw SCOLIPEDE
 	dw APPLIN
 	dw APPLETUN
 	dw FLAPPLE
