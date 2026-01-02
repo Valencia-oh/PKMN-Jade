@@ -1,23 +1,25 @@
+include "data/abilities/ability_lookup.asm"
+
 ;Mons with enter the battlefield effect abilities
 
-AbilityDrizzleMons::
+DrizzleMons::
 	dw POLITOED
 	dw PELIPPER
 	dw -1
 
-AbilityDroughtMons::
+DroughtMons::
 	dw NINETALES
 	dw MOLTRES
 	dw SUNFLORA
 	dw -1
 
-AbilitySandStreamMons::
+SandStreamMons::
 	dw RHYDON
 	dw DUNSPARCE
 	dw TYRANITAR
 	dw -1
 
-AbilityIntimidateMons::
+IntimidateMons::
 	dw ARBOK
 	dw ARCANINE
 	dw TAUROS
@@ -27,7 +29,7 @@ AbilityIntimidateMons::
 	dw MANECTRIC
 	dw -1
 
-AbilityMystifyMons::
+MystifyMons::
 	dw CLEFABLE
 	dw WIGGLYTUFF
 	dw DRAGONITE
@@ -38,20 +40,20 @@ AbilityMystifyMons::
 	dw MILOTIC
 	dw -1
 
-AbilitySnareMons::
+SnareMons::
 	dw VICTREEBEL
 	dw TENTACRUEL
 	dw TANGELA
 	dw ARIADOS
 	dw -1
 
-AbilityHasteMons::
+HasteMons::
 	dw PONYTA
 	dw RAPIDASH
 	dw DODRIO	
 	dw -1
 
-AbilityAimMons::
+AimMons::
 	dw PIDGEY
 	dw PIDGEOTTO
 	dw PIDGEOT
@@ -59,7 +61,7 @@ AbilityAimMons::
 	dw MAGMAR
 	dw -1
 
-AbilityFocusMons::
+FocusMons::
 	dw SPEAROW
 	dw FEAROW
 	dw MACHOP
@@ -67,23 +69,23 @@ AbilityFocusMons::
 	dw MACHAMP
 	dw -1
 
-AbilityVeiledMons::
+VeiledMons::
 	dw LUGIA
 	dw TOGEPI
 	dw TOGETIC
 	dw TOGEKISS
 	dw -1
 
-AbilityInvisibleWallMons::
+InvisibleWallMons::
 	dw MR__MIME
 	dw JYNX
 	dw -1
 
-AbilityImpostorMons::
+ImpostorMons::
 	dw DITTO
 	dw -1
 
-AbilityDebrisMons::
+DebrisMons::
 	dw SUDOWOODO
 	dw PINECO
 	dw FORRETRESS
@@ -93,7 +95,7 @@ AbilityDebrisMons::
 
 ;Levitate/Waterproof mons ----------------------------------------------
 
-AbilityLevitateMons::
+LevitateMons::
 	dw MAGNEMITE
 	dw MAGNETON
 	dw GASTLY
@@ -105,7 +107,7 @@ AbilityLevitateMons::
 	dw FLYGON
 	dw -1
 
-AbilityWaterproofMons::
+WaterproofMons::
 	dw WOOPER
 	dw QUAGSIRE
 	dw SLUGMA
@@ -114,7 +116,7 @@ AbilityWaterproofMons::
 
 ;Damage Boosting Ability Mons ----------------------------------------------
 
-AbilityElementalFistMons::
+ElementalFistMons::
 	dw MANKEY
 	dw PRIMEAPE
 	dw KADABRA
@@ -125,7 +127,7 @@ AbilityElementalFistMons::
 	dw BRELOOM
 	dw -1
 
-AbilityElementalFangMons::
+ElementalFangMons::
 	dw RATTATA
 	dw RATICATE
 	dw TOTODILE
@@ -135,7 +137,7 @@ AbilityElementalFangMons::
 	dw LINOONE
 	dw -1
 
-AbilityElementalBladeMons::	
+ElementalBladeMons::	
 	dw PERSIAN
 	dw FARFETCH_D
 	dw SCYTHER
@@ -144,7 +146,7 @@ AbilityElementalBladeMons::
 	dw SNEASEL
 	dw -1
 
-AbilityStabilityMons::
+StabilityMons::
 	dw PICHU
 	dw PIKACHU
 	dw RAICHU
@@ -170,7 +172,7 @@ AbilityStabilityMons::
 
 ;Healing Ability Mons ----------------------------------------------
 
-AbilityRegenerationMons:
+RegenerationMons:
 	dw GRIMER
 	dw MUK
 	dw STARYU
@@ -179,14 +181,14 @@ AbilityRegenerationMons:
 	dw BLISSEY
 	dw -1
 
-AbilityRainDishMons::
+RainDishMons::
 	dw SQUIRTLE
 	dw WARTORTLE
 	dw BLASTOISE
 	dw SLOWBRO
 	dw -1
 
-AbilitySunbaskMons::
+SunbaskMons::
 	dw BULBASAUR
 	dw IVYSAUR
 	dw VENUSAUR
@@ -195,7 +197,7 @@ AbilitySunbaskMons::
 	dw CHARIZARD
 	dw -1
 
-AbilitySandBodyMons::
+SandBodyMons::
 	dw GEODUDE
 	dw GRAVELER
 	dw GOLEM
