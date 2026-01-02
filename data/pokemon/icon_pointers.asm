@@ -285,6 +285,11 @@ IconPointers:
 	dw LeafeonIcon
 	dw GlaceonIcon
 	dw MamoswineIcon
+	dw DwebbleIcon
+	dw CrustleIcon
+	dw VenipedeIcon
+	dw WhirlipedeIcon
+	dw ScolipedeIcon
 	dw JoltikIcon
 	dw GalvantulaIcon
 	dw LarvestaIcon
