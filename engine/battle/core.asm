@@ -8932,5 +8932,3 @@ GetWeatherImage:
 	db $88, $14 ; y/x - bottom left
 	db $80, $1c ; y/x - top right
 	db $80, $14 ; y/x - top left
-
-include "engine/battle/entrance_abilities.asm"
