@@ -288,6 +288,11 @@ MonMenuIconPals:
 	icon_pals GREEN,  GREEN  ; LEAFEON
 	icon_pals TEAL,   TEAL   ; GLACEON
 	icon_pals BROWN,  GREEN  ; MAMOSWINE
+	icon_pals BROWN,  GREEN  ; DWEBBLE
+	icon_pals BROWN,  GREEN  ; CRUSTLE
+	icon_pals PINK,   RED    ; VENIPEDE
+	icon_pals PINK,   RED    ; WHIRLIPEDE
+	icon_pals PINK,   RED    ; SCOLIPEDE
 	icon_pals GREEN,  BLUE   ; JOLTIK
 	icon_pals GREEN,  BLUE   ; GALVANTULA
 	icon_pals RED,    GREEN  ; LARVESTA
