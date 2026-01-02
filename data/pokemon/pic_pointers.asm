@@ -626,6 +626,8 @@ PokemonPicPointers::
 	dba PwooperBackpic
 	dba ClodsireFrontpic
 	dba ClodsireBackpic
+	dba FlamigoFrontpic
+	dba FlamigoBackpic
 	dba ChiyuFrontpic
 	dba ChiyuBackpic
 	dba ErsrheadbbyFrontpic
