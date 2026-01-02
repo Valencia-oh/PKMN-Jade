@@ -93,6 +93,16 @@ DebrisMons::
 	dw SKARMORY
 	dw -1
 
+AbilityLeechMons::
+	dw PARAS
+	dw PARASECT
+	dw HOPPIP
+	dw SKIPLOOM
+	dw JUMPLUFF
+	dw SHROOMISH
+	dw BRELOOM
+	dw -1
+
 ;Levitate/Waterproof mons ----------------------------------------------
 
 LevitateMons::
@@ -124,7 +134,6 @@ ElementalFistMons::
 	dw HITMONCHAN
 	dw LEDYBA
 	dw LEDIAN
-	dw BRELOOM
 	dw -1
 
 ElementalFangMons::
