@@ -1,5 +1,3 @@
-INCLUDE "data/pokemon/heal_ability_mons.asm"
-
 CheckHealAbility:
 	call Regeneration
 	ret
@@ -10,11 +8,7 @@ Regeneration:
 
 CheckRegenerationMon:	
 	call GetActiveMon
-	ld b, h
-	ld c, l
-	ld de, 2
-	ld hl, RegenerationMons
-	call IsInWordArray
+	farcall CheckRegenerationAbility
 	ret	
 
 CheckWeatherHealAbility:
@@ -27,6 +21,10 @@ CheckWeatherHealAbility:
 	jr c, .Done
 
 	call SandBody
+	jr z, .Done
+	jr c, .Done
+
+	call IceBody
 	jr z, .Done
 	jr c, .Done
 
@@ -46,11 +44,7 @@ RainDish:
 
 CheckRainDishMon:	
 	call GetActiveMon
-	ld b, h
-	ld c, l
-	ld de, 2
-	ld hl, RainDishMons
-	call IsInWordArray
+	farcall CheckRainDishAbility
 	ret	
 
 Sunbask:
@@ -66,11 +60,7 @@ Sunbask:
 
 CheckSunbaskMon:	
 	call GetActiveMon
-	ld b, h
-	ld c, l
-	ld de, 2
-	ld hl, SunbaskMons
-	call IsInWordArray
+	farcall CheckSunbaskAbility
 	ret	
 
 SandBody:
@@ -86,11 +76,23 @@ SandBody:
 
 CheckSandBodyMon:	
 	call GetActiveMon
-	ld b, h
-	ld c, l
-	ld de, 2
-	ld hl, SandBodyMons
-	call IsInWordArray
+	farcall CheckSandBodyAbility
+	ret	
+
+IceBody:
+	call CheckHail
+	jr nz, .NotHail
+
+	call CheckIceBodyMon
+	jr nc, .NotIceBodyMon
+	
+	.NotHail
+	.NotIceBodyMon
+	ret
+
+CheckIceBodyMon:	
+	call GetActiveMon
+	farcall CheckIceBodyAbility
 	ret	
 
 CheckRaining:
@@ -106,6 +108,11 @@ CheckSun:
 CheckSandstorm:
 	ld a, [wBattleWeather]
 	cp WEATHER_SANDSTORM
+	ret
+
+CheckHail:
+	ld a, [wBattleWeather]
+	cp WEATHER_HAIL
 	ret
 
 GetActiveMon:
