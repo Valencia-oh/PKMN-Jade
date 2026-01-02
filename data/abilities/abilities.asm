@@ -93,7 +93,7 @@ DebrisMons::
 	dw SKARMORY
 	dw -1
 
-AbilityLeechMons::
+LeechMons::
 	dw PARAS
 	dw PARASECT
 	dw HOPPIP
