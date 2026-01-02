@@ -328,7 +328,7 @@ DEF FOREIGN_POKEMON EQU const_value
 	const PWOOPER 	 ; 11d 
 	const CLODSIRE	 ; 11e
 	const FLAMIGO
-	;const FARIGIRAF
+	const FARIGIRAF
 	const CHI_YU
 	const ERSRHEADBBY; 11f
 DEF NUM_FOREIGN_POKEMON EQU const_value - 1
