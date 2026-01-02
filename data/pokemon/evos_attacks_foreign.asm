@@ -28,6 +28,8 @@ EvosAttacksPointers3::
 	dw LeafeonEvosAttacks
 	dw GlaceonEvosAttacks
 	dw MamoswineEvosAttacks
+	dw DwebbleEvosAttacks
+	dw CrustleEvosAttacks
 	dw VenipedeEvosAttacks
 	dw WhirlipedeEvosAttacks
 	dw ScolipedeEvosAttacks
@@ -490,6 +492,35 @@ MamoswineEvosAttacks:
 	dbw 70, AMNESIA
 	db 0 ; no more level-up moves
 
+DwebbleEvosAttacks:
+	dbbw EVOLVE_LEVEL, 34, CRUSTLE
+	db 0 ; no more evolutions
+	dbw 1, FURY_CUTTER
+	dbw 1, SAND_ATTACK
+	dbw 4, WITHDRAW
+	dbw 8, FLAIL
+	dbw 17, PIN_MISSILE
+	dbw 20, SLASH
+	dbw 24, ROCKSLIDE
+	dbw 27, SANDSTORM
+	dbw 30, ROLLOUT
+	dbw 37, HEADBUTT
+	db 0 ; no more level-up moves
+
+CrustleEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, FURY_CUTTER
+	dbw 1, SAND_ATTACK
+	dbw 4, WITHDRAW
+	dbw 8, FLAIL
+	dbw 17, PIN_MISSILE
+	dbw 20, SLASH
+	dbw 24, ROCKSLIDE
+	dbw 27, SANDSTORM
+	dbw 30, ROLLOUT
+	dbw 37, HEADBUTT
+	db 0 ; no more level-up moves
+
 VenipedeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 22, WHIRLIPEDE
 	db 0 ; no more evolutions
@@ -505,7 +536,6 @@ VenipedeEvosAttacks:
 	dbw 36, SLEEP_POWDER
 	dbw 41, AGILITY
 	db 0 ; no more level-up moves
-
 
 WhirlipedeEvosAttacks:
 	dbbw EVOLVE_LEVEL, 30, SCOLIPEDE
