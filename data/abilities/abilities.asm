@@ -11,6 +11,7 @@ DroughtMons::
 	dw NINETALES
 	dw MOLTRES
 	dw SUNFLORA
+	dw TORKOAL
 	dw -1
 
 SandStreamMons::
