@@ -626,10 +626,10 @@ PokemonPicPointers::
 	dba PwooperBackpic
 	dba ClodsireFrontpic
 	dba ClodsireBackpic
-	dba FlamigoFrontpic
-	dba FlamigoBackpic
-	dba FarigirafFrontpic
-	dba FarigirafBackpic
+	;dba FlamigoFrontpic
+	;dba FlamigoBackpic
+	;dba FarigirafFrontpic
+	;dba FarigirafBackpic
 	dba ChiyuFrontpic
 	dba ChiyuBackpic
 	dba ErsrheadbbyFrontpic
