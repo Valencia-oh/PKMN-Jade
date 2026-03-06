@@ -310,6 +310,8 @@ PokemonNames::
 	dname "ESPATHRA"
 	dname "WOOPER"
 	dname "CLODSIRE"
+	dname "FLAMIGO"
+	dname "FARIGIRAF"
 	dname "CHI-YU"
 	dname "ERSRHEDBBY"
 	assert_table_length NUM_POKEMON
