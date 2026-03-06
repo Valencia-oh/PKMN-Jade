@@ -311,6 +311,8 @@ IconPointers:
 	dw EspathraIcon
 	dw PwooperIcon
 	dw ClodsireIcon
+	dw FlamigoIcon
+	dw FarigirafeIcon
 	dw ChiyuIcon
 	dw ErsrheadbbyIcon
 	assert_table_length NUM_POKEMON + 1
