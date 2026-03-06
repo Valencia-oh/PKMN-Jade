@@ -307,6 +307,8 @@ FirstEvoStages::
 	dw FLITTLE
 	dw PWOOPER
 	dw PWOOPER
+	dw FLAMIGO
+	dw GIRAFARIG
 	dw CHI_YU
 	dw ERSRHEADBBY
 	assert_table_length NUM_POKEMON
