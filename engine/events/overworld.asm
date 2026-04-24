@@ -45,7 +45,6 @@ CheckEngineFlag:
 	xor a
 	ret
 
-
 CheckPartyMoveIndex:
 ; Check if a monster in your party has move hl.
 	call GetMoveIDFromIndex
@@ -92,89 +91,6 @@ CheckPartyMove:
 	ret
 .no
 	scf
-	ret
-
-CheckPartyCanLearnMove:
-; CHECK IF MONSTER IN PARTY CAN LEARN MOVE D
-	ld e, 0
-	xor a
-	ld [wCurPartyMon], a
-.loop
-	ld c, e
-	ld b, 0
-	ld hl, wPartySpecies
-	add hl, bc
-	ld a, [hl]
-	and a
-	jr z, .no
-	cp -1
-	jr z, .no
-	cp EGG
-	jr z, .next
-
-	ld [wCurPartySpecies], a
-	ld a, d
-; Check the TM/HM/Move Tutor list
-	ld [wPutativeTMHMMove], a
-	push de
-	farcall CanLearnTMHMMove
-	pop de
-.check
-	ld a, c
-	and a
-	jr nz, .yes
-; Check the Pokemon's Level-Up Learnset
-	ld b,b
-	ld a, d
-	push de
-	call OW_CheckLvlUpMoves
-	pop de
-	jr nc, .yes
-; done checking
-
-.next
-	inc e
-	jr .loop
-
-.yes
-	ld a, e
-	; which mon can learn the move
-	ld [wCurPartyMon], a
-	xor a
-	ret
-.no
-	ld a, 1
-	ret
-
-OW_CheckLvlUpMoves:
-	ld d, a
-	ld a, [wTempSpecies]
-	call GetPokemonIndexFromID
-	ld b, h
-	ld c, l
-	ld hl, EvosAttacksPointers
-	ld a, BANK(EvosAttacksPointers)
-	call LoadDoubleIndirectPointer
-	ld [wStatsScreenFlags], a ; bank
-	call FarSkipEvolutions
-.learnset_loop
-	call GetFarByte
-  	and a
-	jr z, .notfound
-	inc hl
-	call GetFarWord
-	call GetMoveIDFromIndex
-	cp d
-	jr z, .found
-	inc hl
-	inc hl
-	jr .learnset_loop
-
-.found
-	xor a
-	ret ; move is in lvl up learnset
-.notfound
-	scf ; move isnt in lvl up learnset
 	ret
 
 FieldMoveFailed:
@@ -340,8 +256,7 @@ FlashFunction:
 	ld [wFieldMoveSucceeded], a
 	ret
 
-.CheckUseFlash:
-
+.CheckUseFlash:	
 	push hl
 	farcall SpecialAerodactylChamber
 	pop hl
@@ -358,7 +273,6 @@ FlashFunction:
 	call FieldMoveFailed
 	ld a, JUMPTABLE_EXIT
 	ret
-
 
 UseFlash:
 	ld hl, Script_UseFlash
@@ -548,31 +462,15 @@ TrySurfOW::
 
 ; Check tile permissions.
 	call CheckDirection
-	jr c, .quit
-
-	ld de, ENGINE_FOGBADGE
-	call CheckEngineFlag
-	jr c, .quit
+	jr c, .quit	
 
 ; Step 2
-	ld a, HM_SURF
+	ld hl, HM_SURF
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	ld hl, wNumItems
 	call CheckItem
 	jr z, .quit
-
-; Step 3
-  	ld hl, SURF
-	call GetMoveIDFromIndex
-	call CheckPartyCanLearnMove
-	and a
-	jr z, .yes
-
-; Step 4
-	ld hl, SURF
-	call GetMoveIDFromIndex
-	call CheckPartyMove
-	jr c, .quit
 .yes
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
@@ -620,7 +518,7 @@ FlyFunction:
 	dw .DoFly
 	dw .FailFly
 
-.TryFly:
+.TryFly:	
 	call GetMapEnvironment
 	call CheckOutdoorMap
 	jr nz, .indoors
@@ -692,9 +590,7 @@ WaterfallFunction:
 	ld [wFieldMoveSucceeded], a
 	ret
 
-.TryWaterfall:
-	ld a, JUMPTABLE_EXIT
-	ret c
+.TryWaterfall:	
 	call CheckMapCanWaterfall
 	jr c, .failed
 	ld hl, Script_WaterfallFromMenu
@@ -758,30 +654,13 @@ Script_UsedWaterfall:
 	text_end
 
 TryWaterfallOW::
-; Step 1
-	ld de, ENGINE_RISINGBADGE
-	call CheckEngineFlag
-	jr c, .failed
-
 ; Step 2
-	ld a, HM_WATERFALL
+	ld hl, HM_WATERFALL
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	ld hl, wNumItems
 	call CheckItem
 	jr z, .failed
-
-; Step 3
-	ld hl, WATERFALL
-	call GetMoveIDFromIndex
-	call CheckPartyCanLearnMove
-	and a
-	jr z, .yes
-
-; Step 4
-	ld hl, WATERFALL
-	call GetMoveIDFromIndex
-	call CheckPartyMove
-	jr c, .failed
 .yes
 	call CheckMapCanWaterfall
 	jr c, .failed
@@ -1031,7 +910,7 @@ StrengthFunction:
 	ld [wFieldMoveSucceeded], a
 	ret
 
-.TryStrength:
+.TryStrength:	
 	jr .UseStrength
 
 .AlreadyUsingStrengthText:
@@ -1115,31 +994,13 @@ BouldersMayMoveText:
 	text_end
 
 TryStrengthOW:
-; Step 1	
-	ld de, ENGINE_PLAINBADGE
-	call CheckEngineFlag
-	jr c, .nope
-
 ; Step 2
-	ld a, HM_STRENGTH
+	ld hl, HM_STRENGTH
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	ld hl, wNumItems
 	call CheckItem
 	jr z, .nope
-
-; Step 3
-	ld hl, STRENGTH
-	call GetMoveIDFromIndex
-	call CheckPartyCanLearnMove
-	and a
-	jr z, .yes
-
-; Step 4
-	ld hl, STRENGTH
-	call GetMoveIDFromIndex
-	call CheckPartyMove
-	jr c, .nope
-
 .yes
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_STRENGTH_ACTIVE_F, [hl]
@@ -1173,7 +1034,7 @@ WhirlpoolFunction:
 	dw .DoWhirlpool
 	dw .FailWhirlpool
 
-.TryWhirlpool:
+.TryWhirlpool:	
 	call TryWhirlpoolMenu
 	jr c, .failed
 	ld a, $1
@@ -1257,35 +1118,14 @@ DisappearWhirlpool:
 	jmp GetMovementPermissions
 
 TryWhirlpoolOW::
-; Step 1
-	ld de, ENGINE_GLACIERBADGE
-	ld b, CHECK_FLAG
-	farcall EngineFlagAction
-	ld a, c
-	and a
-	jr z, .failed  ; .fail, dont have needed badge
-
 ; Step 2
-	ld a, HM_WHIRLPOOL
+	ld hl, HM_WHIRLPOOL
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	ld hl, wNumItems
 	call CheckItem
 	jr z, .failed
-
-; Step 3
-	ld hl, WHIRLPOOL
-	call GetMoveIDFromIndex
-	call CheckPartyCanLearnMove
-       and a
-	jr z, .yes
-
-; Step 4
-	ld hl, WHIRLPOOL
-	call GetMoveIDFromIndex
-	call CheckPartyMove
-	jr c, .failed
-
-.yes
+.yes	
 	call TryWhirlpoolMenu
 	jr c, .failed
 	ld a, BANK(Script_AskWhirlpoolOW)
@@ -1376,24 +1216,12 @@ HeadbuttScript:
 
 TryHeadbuttOW::
 ; Step 1
-	ld a, TM_HEADBUTT
+	ld hl, TM_HEADBUTT
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	ld hl, wNumItems
 	call CheckItem
 	jr z, .no
-
-; Step 2
-	ld hl, HEADBUTT
-	call GetMoveIDFromIndex
-	call CheckPartyCanLearnMove
-       and a
-	jr z, .can_use ; cannot learn headbutt
-
-; Step 3
-	ld hl, HEADBUTT
-	call GetMoveIDFromIndex
-	call CheckPartyMoveIndex
-	jr c, .no
 .can_use
 	ld a, BANK(AskHeadbuttScript)
 	ld hl, AskHeadbuttScript
@@ -1515,32 +1343,11 @@ AskRockSmashText:
 	text_end
 
 HasRockSmash:
-	; Step 1
-	ld a, TM_ROCK_SMASH
-	ld [wCurItem], a
-	ld hl, wNumItems
-	call CheckItem
-	jr z, .no
-
-; Step 2
 	ld hl, ROCK_SMASH
-	call GetMoveIDFromIndex
-	call CheckPartyCanLearnMove
-       and a
-	jr z, .yes
-
-; Step 3
-	ld hl, ROCK_SMASH
-	call GetMoveIDFromIndex
-	call CheckPartyMove
-	jr nc, .yes
-.no
-	ld a, 1
-	jr .done
-.yes
-	xor a
-	jr .done
-.done
+	call CheckPartyMoveIndex
+	; a = carry ? TRUE : FALSE
+	sbc a
+	and TRUE
 	ld [wScriptVar], a
 	ret
 
@@ -1737,48 +1544,6 @@ RodNothingText:
 	text_far _RodNothingText
 	text_end
 
-_PocketPCFunction:
-	call .LoadPocketPC
-	ld a, [wEnvironment]
-    cp INDOOR 
-    jr z, .noSignal
-	and $7f
-	ld [wFieldMoveSucceeded], a
-	ret
-
-	.noSignal
-    ld hl, .PocketPCNoSignal
-    call CallScript
-    ret
-
-.LoadPocketPC:
-	ld a, [wPlayerState]
-	ld hl, Script_LoadPocketPC
-	ld de, Script_LoadPocketPC_Register
-	call .CheckIfRegistered
-	call QueueScript
-	ld a, TRUE
-	ret
-
-.CheckIfRegistered:
-	ld a, [wUsingItemWithSelect]
-	and a
-	ret z
-	ld h, d
-	ld l, e
-	ret
-
-	.PocketPCNoSignal
-    opentext
-    writetext NoSignalText
-    waitbutton
-    closetext
-    end
-
-	NoSignalText:
-    text_far _PocketPCNoSignalText
-    text_end
-
 BikeFunction:
 	call .TryBike
 	and JUMPTABLE_INDEX_MASK
@@ -1864,18 +1629,6 @@ BikeFunction:
 	scf
 	ret
 
-Script_LoadPocketPC:
-	reloadmappart
-	special UpdateTimePals
-	special PokemonCenterPC
-	reloadmappart
-	end
-
-Script_LoadPocketPC_Register:
-	special PokemonCenterPC
-	reloadmappart
-	end
-
 Script_GetOnBike:
 	refreshmap
 	special UpdateTimePals
@@ -1926,32 +1679,15 @@ GotOnBikeText:
 GotOffBikeText:
 	text_far _GotOffBikeText
 	text_end
+
 TryCutOW::
-
-; Step 1
-	ld de, ENGINE_HIVEBADGE
-	call CheckEngineFlag
-	jr c, .cant_cut
-
 ; Step 2
-	ld a, HM_CUT
+	ld hl, HM_CUT
+	call GetItemIDFromIndex
 	ld [wCurItem], a
 	ld hl, wNumItems
 	call CheckItem
 	jr z, .cant_cut
-
-; Step 3
-	ld hl, CUT
-	call GetMoveIDFromIndex
-	call CheckPartyCanLearnMove
-       and a
-	jr z, .yes
-
-; Step 4
-	ld hl, CUT
-	call GetMoveIDFromIndex
-	call CheckPartyMove
-	jr c, .cant_cut
 .yes
 	ld a, BANK(AskCutScript)
 	ld hl, AskCutScript
