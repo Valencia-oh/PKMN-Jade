@@ -5131,41 +5131,39 @@ PokefanMGroup:
 KimonoGirlGroup:
 	next_list_item ; KIMONO_GIRL (1)
 	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 20
+	db 5
 	dw SKIPLOOM
-	db 20
-	dw VULPIX
-	db 18
-	dw SKIPLOOM
+	db 7
+	dw LEAFEON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (2)
 	db "NAOKO@", TRAINERTYPE_NORMAL
-	db 17
+	db 5
 	dw FLAREON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (3)
 	db "SAYO@", TRAINERTYPE_NORMAL
-	db 17
+	db 7
 	dw ESPEON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (4)
 	db "ZUBATKI@", TRAINERTYPE_NORMAL
-	db 17
+	db 7
 	dw UMBREON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (5)
 	db "KUNI@", TRAINERTYPE_NORMAL
-	db 17
+	db 6
 	dw VAPOREON
 	db -1 ; end
 
 	next_list_item ; KIMONO_GIRL (6)
 	db "MIKI@", TRAINERTYPE_NORMAL
-	db 17
+	db 3
 	dw JOLTEON
 	db -1 ; end
 
