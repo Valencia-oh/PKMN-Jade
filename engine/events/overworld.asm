@@ -563,13 +563,15 @@ TrySurfOW::
 	jr z, .quit
 
 ; Step 3
-  	ld d, SURF
+	ld hl, SURF
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
 	and a
 	jr z, .yes
 
 ; Step 4
-	ld d, SURF
+	ld hl, SURF
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .quit
 .yes
@@ -770,13 +772,15 @@ TryWaterfallOW::
 	jr z, .failed
 
 ; Step 3
-	ld d, WATERFALL
+	ld hl, WATERFALL
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
 	and a
 	jr z, .yes
 
 ; Step 4
-	ld d, WATERFALL
+	ld hl, WATERFALL
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .failed
 .yes
@@ -1111,13 +1115,15 @@ TryStrengthOW:
 	jr z, .nope
 
 ; Step 3
-	ld d, STRENGTH
+	ld hl, STRENGTH
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
 	and a
 	jr z, .yes
 
 ; Step 4
-	ld d, STRENGTH
+	ld hl, STRENGTH
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .nope
 
@@ -1254,13 +1260,15 @@ TryWhirlpoolOW::
 	jr z, .failed
 
 ; Step 3
-	ld d, WHIRLPOOL
+	ld hl, WHIRLPOOL
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
        and a
 	jr z, .yes
 
 ; Step 4
-	ld d, WHIRLPOOL
+	ld hl, WHIRLPOOL
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .failed
 
@@ -1362,13 +1370,15 @@ TryHeadbuttOW::
 	jr z, .no
 
 ; Step 2
-	ld d, HEADBUTT
+	ld hl, HEADBUTT
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
        and a
 	jr z, .can_use ; cannot learn headbutt
 
 ; Step 3
 	ld hl, HEADBUTT
+	call GetMoveIDFromIndex
 	call CheckPartyMoveIndex
 	jr c, .no
 .can_use
@@ -1500,13 +1510,15 @@ HasRockSmash:
 	jr z, .no
 
 ; Step 2
-	ld d, ROCK_SMASH
+	ld hl, ROCK_SMASH
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
        and a
 	jr z, .yes
 
 ; Step 3
-	ld d, ROCK_SMASH
+	ld hl, ROCK_SMASH
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr nc, .yes
 .no
@@ -1916,13 +1928,15 @@ TryCutOW::
 	jr z, .cant_cut
 
 ; Step 3
-	ld d, CUT
+	ld hl, CUT
+	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
        and a
 	jr z, .yes
 
 ; Step 4
-	ld d, CUT
+	ld hl, CUT
+	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .cant_cut
 .yes
