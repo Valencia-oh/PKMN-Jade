@@ -115,28 +115,14 @@ GetMonSubmenuItems:
 	ld a, [wLinkMode]
 	and a
 	jr nz, .skip_moves
-	ld a, MON_MOVES
-	call GetPartyParamLocation
-	ld d, h
-	ld e, l
-	ld c, NUM_MOVES
-.loop
-	push bc
-	push de
-	ld a, [de]
-	and a
-	jr z, .next
-	push hl
-	call IsFieldMove
-	pop hl
-	call c,  AddMonMenuItem
-; fallthrough
-.next
-	pop de
-	inc de
-	pop bc
-	dec c
-	jr nz, .loop
+
+	call CanUseFlash
+	call CanUseFly
+	call CanUseDig
+	call Can_Use_Sweet_Scent
+	call CanUseTeleport
+	call CanUseSoftboiled
+	call CanUseMilkdrink
 
 .skip_moves
 	ld a, MONMENUITEM_STATS
@@ -277,3 +263,249 @@ BattleMonMenu:
 	db "SWITCH@"
 	db "STATS@"
 	db "CANCEL@"
+
+CheckLvlUpMoves:
+	ld d, a
+	ld a, [wTempSpecies]
+	call GetPokemonIndexFromID
+	ld b, h
+	ld c, l
+	ld hl, EvosAttacksPointers
+	ld a, BANK(EvosAttacksPointers)
+	call LoadDoubleIndirectPointer
+	ld [wStatsScreenFlags], a ; bank
+	call FarSkipEvolutions
+.learnset_loop
+	call GetFarByte
+  	and a
+	jr z, .notfound
+	inc hl
+	call GetFarWord
+	call GetMoveIDFromIndex
+	cp d
+	jr z, .found
+	inc hl
+	inc hl
+	jr .learnset_loop
+
+.found
+	xor a
+	ret ; move is in lvl up learnset
+.notfound
+	scf ; move isnt in lvl up learnset
+	ret
+
+CanUseFlash:
+; Step 1: Badge Check
+	ld de, ENGINE_ZEPHYRBADGE
+	ld b, CHECK_FLAG
+	farcall EngineFlagAction
+	ld a, c
+	and a
+	ret z ; .fail, dont have needed badge
+
+; Step 2: Location Check
+	farcall SpecialAerodactylChamber
+	jr c, .valid_location ; can use flash
+	ld a, [wTimeOfDayPalset]
+	cp DARKNESS_PALSET
+	ret nz ; .fail ; not a darkcave
+
+.valid_location
+; Step 3: Check if Mon knows Move
+	ld hl, FLASH
+	call GetMoveIDFromIndex
+	call CheckMonKnowsMove
+	and a
+	jr z, .yes
+
+; Step 4: Check for TM/HM in bag
+	ld a, HM_FLASH
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	ret nc ; hm isnt in bag
+
+; Step 5: Check if Mon can learn move from TM/HM/Move Tutor
+	ld hl, FLASH
+	call GetMoveIDFromIndex
+	call CheckMonCanLearn_TM_HM
+	jr c, .yes
+
+; Step 6: Check if Mon can learn move from LVL-UP
+	ld hl, FLASH
+	call GetMoveIDFromIndex
+	call CheckLvlUpMoves
+	ret c ; fail
+
+.yes
+	ld a, MONMENUITEM_FLASH
+	call AddMonMenuItem
+	ret
+
+CanUseFly:
+; Step 1: Badge Check
+	ld de, ENGINE_STORMBADGE
+	ld b, CHECK_FLAG
+	farcall EngineFlagAction
+	ld a, c
+	and a
+	ret z ; .fail, dont have needed badge
+
+; Step 2: Location Check
+	call GetMapEnvironment
+	call CheckOutdoorMap
+	ret nz ; not outdoors, cant fly
+
+; Step 3: Check if Mon knows Move
+	ld hl, FLY
+	call GetMoveIDFromIndex
+	call CheckMonKnowsMove
+	and a
+	jr z, .yes
+
+; Step 4: Check if HM is in bag
+	ld a, HM_FLY
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	ret nc ; .fail, hm isnt in bag
+
+; Step 5: Check if mon can learn move via HM/TM/Move Tutor
+	ld hl, FLY
+	call GetMoveIDFromIndex
+	call CheckMonCanLearn_TM_HM
+	jr c, .yes
+
+; Step 6: Check if Mon can learn move via LVL-UP
+	ld hl, FLY
+	call GetMoveIDFromIndex
+	call CheckLvlUpMoves
+	ret c ; fail
+.yes
+	ld a, MONMENUITEM_FLY
+	call AddMonMenuItem
+	ret
+
+Can_Use_Sweet_Scent:
+; Step 1: Location check
+	farcall CanEncounterWildMon ; CanUseSweetScent instead for older versions of pokecrystal
+	ret nc
+	farcall GetMapEncounterRate
+	ld a, b
+	and a
+	ret z
+
+.valid_location
+; Step 2: Check if mon knows Move 
+	ld hl, SWEET_SCENT
+	call GetMoveIDFromIndex
+	call CheckMonKnowsMove
+	and a
+	jr z, .yes
+
+; Step 3: Check if TM is in bag
+	ld a, TM_SWEET_SCENT
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	ret nc ; .fail, tm not in bag
+
+; Step 4: Check if mon can learn Move via TM/HM/Move tutor
+	ld hl, SWEET_SCENT
+	call GetMoveIDFromIndex
+	call CheckMonCanLearn_TM_HM
+	jr c, .yes
+
+; Step 5: Check if mon can learn move via LVL-UP
+	ld hl, SWEET_SCENT
+	call GetMoveIDFromIndex
+	call CheckLvlUpMoves
+	ret c ; fail
+.yes
+	ld a, MONMENUITEM_SWEETSCENT
+	call AddMonMenuItem
+	ret
+
+CanUseDig:
+; Step 1: Location Check
+	call GetMapEnvironment
+	cp CAVE
+	jr z, .valid_location
+	cp DUNGEON
+	ret nz ; fail, not inside cave or dungeon
+
+.valid_location
+; Step 2: Check if Mon knows Move
+	ld hl, DIG
+	call GetMoveIDFromIndex
+	call CheckMonKnowsMove
+	and a
+	jr z, .yes
+
+; Step 3: Check if TM/HM is in bag
+	ld a, TM_DIG
+	ld [wCurItem], a
+	ld hl, wNumItems
+	call CheckItem
+	ret nc ; .fail ; TM not in bag
+
+; Step 4: Check if Mon can learn Dig via TM/HM/Move Tutor
+	ld hl, DIG
+	call GetMoveIDFromIndex
+	call CheckMonCanLearn_TM_HM
+	jr c, .yes
+
+; Step 5: Check if Mon can learn move via LVL-UP
+	ld hl, DIG
+	call GetMoveIDFromIndex
+	call CheckLvlUpMoves
+	ret c ; fail
+.yes
+	ld a, MONMENUITEM_DIG
+	call AddMonMenuItem
+	ret
+
+CanUseTeleport:
+; Step 1: Location Check
+	call GetMapEnvironment
+	call CheckOutdoorMap
+	ret nz ; .fail
+	
+; Step 2: Check if mon knows move
+	ld hl, TELEPORT
+	call GetMoveIDFromIndex
+	call CheckMonKnowsMove
+	and a
+	jr z, .yes
+
+; Step 3: Check if mon learns move via LVL-UP
+	ld hl, TELEPORT
+	call GetMoveIDFromIndex
+	call CheckLvlUpMoves
+	ret c ; fail
+.yes
+	ld a, MONMENUITEM_TELEPORT
+	call AddMonMenuItem	
+	ret
+
+CanUseSoftboiled:
+	ld hl, SOFT_BOILED
+	call GetMoveIDFromIndex
+	call CheckMonKnowsMove
+	and a
+	ret nz
+	ld a, MONMENUITEM_SOFTBOILED
+	call AddMonMenuItem
+	ret
+
+CanUseMilkdrink:
+	ld hl, MILK_DRINK
+	call GetMoveIDFromIndex
+	call CheckMonKnowsMove
+	and a
+	ret nz
+
+	ld a, MONMENUITEM_MILKDRINK
+	call AddMonMenuItem
+	ret
