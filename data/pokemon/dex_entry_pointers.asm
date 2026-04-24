@@ -307,6 +307,7 @@ PokedexDataPointerTable:
 	dba EspathraPokedexEntry
 	dba PwooperPokedexEntry
 	dba ClodsirePokedexEntry
+	dba FlamigoPokedexEntry
 	dba FarigirafPokedexEntry
 	dba ChiyuPokedexEntry
 	dba ErsrheadbbyPokedexEntry
