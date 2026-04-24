@@ -455,7 +455,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 3, GEODUDE
 	dbw 4, ZUBAT
-	dbw 5, ZUBAT
+	dbw 5, DWEBBLE
 	dbw 5, ONIX
 	dbw 6, JOLTIK
 	dbw 5, RATTATA
@@ -463,7 +463,7 @@ JohtoGrassWildMons:
 	; day
 	dbw 3, GEODUDE
 	dbw 4, ZUBAT
-	dbw 5, ZUBAT
+	dbw 5, DWEBBLE
 	dbw 5, ONIX
 	dbw 6, JOLTIK
 	dbw 5, RATTATA
@@ -483,7 +483,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 7, GEODUDE
 	dbw 8, ZUBAT
-	dbw 9, ZUBAT
+	dbw 9, DWEBBLE
 	dbw 10, ONIX
 	dbw 4, JOLTIK
 	dbw 6, KABUTO
@@ -491,7 +491,7 @@ JohtoGrassWildMons:
 	; day
 	dbw 7, GEODUDE
 	dbw 8, ZUBAT
-	dbw 9, ZUBAT
+	dbw 9, DWEBBLE
 	dbw 5, ONIX
 	dbw 4, JOLTIK
 	dbw 6, KABUTO
@@ -499,7 +499,7 @@ JohtoGrassWildMons:
 	; nite
 	dbw 7, GEODUDE
 	dbw 8, ZUBAT
-	dbw 9, ZUBAT
+	dbw 9, DWEBBLE
 	dbw 5, ONIX
 	dbw 4, JOLTIK
 	dbw 6, KABUTO
