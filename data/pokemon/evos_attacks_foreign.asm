@@ -909,9 +909,9 @@ FlamigoEvosAttacks:
 	dbw 12, WING_ATTACK
 	dbw 15, FOCUS_ENERGY
 	dbw 18, LOW_KICK
-	dbw 21, FEINT
-	dbw 27, PAYBACK
-	dbw 35, AIR_SLASH
+	dbw 21, FALSE_SWIPE
+	dbw 27, PURSUIT
+	dbw 35, SKY_ATTACK
 	db 0 ; no more level-up moves
 
 FarigirafEvosAttacks:
