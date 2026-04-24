@@ -154,18 +154,9 @@ if DEF(_DEBUG)
 	; hm slaves
 	givepoke MEW, 100, LEFTOVERS
 	givepoke LANTURN, 100, LEFTOVERS
-	givepokemove FLY,        wPartyMon2, 0
-	givepokemove SURF,       wPartyMon2, 1
-	givepokemove STRENGTH,   wPartyMon2, 2
-	givepokemove CUT,        wPartyMon2, 3
-	givepokemove FLASH,      wPartyMon3, 0
-	givepokemove ROCK_SMASH, wPartyMon3, 1
-	givepokemove HEADBUTT,   wPartyMon3, 2
-	givepokemove WATERFALL,  wPartyMon3, 3
 	; misc pokemon for testing
 	givepoke AMPHAROS, 50
 	givepoke LUGIA, 50
-	givepokemove WHIRLPOOL,  wPartyMon5, 0
 	givepoke FLYGON, 50
 	; intro events
 	addcellnum PHONE_MOM
