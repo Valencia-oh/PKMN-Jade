@@ -308,6 +308,8 @@ AnimationIdlePointers:
 	dw EspathraAnimationIdle
 	dw PwooperAnimationIdle
 	dw ClodsireAnimationIdle
+	dw FlamigoAnimationIdle
+	dw FarigirafAnimationIdle
 	dw ChiyuAnimationIdle
 	dw ErsrheadbbyAnimationIdle
 	assert_table_length NUM_POKEMON
