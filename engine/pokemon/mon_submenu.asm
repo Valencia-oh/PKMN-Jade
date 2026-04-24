@@ -553,7 +553,7 @@ CanUseTeleport:
 	ret
 
 CanUseSoftboiled:
-	ld hl, SOFT_BOILED
+	ld hl, SOFTBOILED
 	call GetMoveIDFromIndex
 	call CheckMonKnowsMove
 	and a
