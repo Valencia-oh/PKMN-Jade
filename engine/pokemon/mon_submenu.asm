@@ -264,36 +264,99 @@ BattleMonMenu:
 	db "STATS@"
 	db "CANCEL@"
 
-CheckLvlUpMoves:
-	ld d, a
-	ld a, [wTempSpecies]
-	call GetPokemonIndexFromID
-	ld b, h
-	ld c, l
-	ld hl, EvosAttacksPointers
-	ld a, BANK(EvosAttacksPointers)
-	call LoadDoubleIndirectPointer
-	ld [wStatsScreenFlags], a ; bank
-	call FarSkipEvolutions
-.learnset_loop
-	call GetFarByte
-  	and a
-	jr z, .notfound
-	inc hl
-	call GetFarWord
-	call GetMoveIDFromIndex
-	cp d
-	jr z, .found
-	inc hl
-	inc hl
-	jr .learnset_loop
+CheckMonCanLearn_TM_HM:
+; Check if wCurPartySpecies can learn move in 'a'
+       ld [wPutativeTMHMMove], a
+       ld a, [wCurPartySpecies]
+       farcall CanLearnTMHMMove
+.check
+       ld a, c
+       and a
+       ret z
+; yes
+       scf
+       ret
 
+CheckMonKnowsMove:
+       ld b, a
+       ld a, MON_MOVES
+       call GetPartyParamLocation
+       ld d, h
+       ld e, l
+       ld c, NUM_MOVES
+.loop
+       ld a, [de]
+       and a
+       jr z, .next
+       cp b
+       jr z, .found ; knows move
+.next
+       inc de
+       dec c
+       jr nz, .loop
+       ld a, -1
+       scf ; mon doesnt know move
+       ret
 .found
-	xor a
-	ret ; move is in lvl up learnset
+       xor a
+       ret z
+
+CheckLvlUpMoves:
+; move looking for in a
+       ld d, a
+       ld a, [wCurPartySpecies]
+       dec a
+       ld b, 0
+       ld c, a
+       ld hl, EvosAttacksPointers
+       add hl, bc
+       add hl, bc
+       ld a, BANK(EvosAttacksPointers)
+       ld b, a
+       call GetFarWord
+       ld a, b
+       call GetFarByte
+       inc hl
+       and a
+       jr z, .find_move
+       dec hl
+       call MonSubMenu_SkipEvolutions
+.find_move
+       call MonSubMenu_GetNextEvoAttackByte
+       and a
+       jr z, .notfound ; end of mon's lvl up learnset
+       call MonSubMenu_GetNextEvoAttackByte
+       cp d ;MAKE SURE NOT CLOBBERED
+       jr z, .found
+       jr .find_move
+.found
+       xor a
+       ret z ; move is in lvl up learnset
 .notfound
-	scf ; move isnt in lvl up learnset
-	ret
+       scf ; move isnt in lvl up learnset
+       ret
+
+MonSubMenu_SkipEvolutions:
+; Receives a pointer to the evos and attacks for a mon in b:hl, and skips to the attacks.
+       ld a, b
+       call GetFarByte
+       inc hl
+       and a
+       ret z
+       cp EVOLVE_STAT
+       jr nz, .no_extra_skip
+       inc hl
+.no_extra_skip
+       inc hl
+       inc hl
+       jr MonSubMenu_SkipEvolutions
+
+MonSubMenu_GetNextEvoAttackByte:
+       ld a, BANK(EvosAttacksPointers)
+       call GetFarByte
+       inc hl
+       ret
+
 
 CanUseFlash:
 ; Step 1: Badge Check
