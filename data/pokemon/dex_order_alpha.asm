@@ -80,6 +80,7 @@ AlphabeticalPokedexOrder:
 	dw FEEBAS
 	dw FERALIGATR
 	dw FLAAFFY
+	dw FLAMIGO
 	dw FLAPPLE
 	dw FLAREON
 	dw FLITTLE
