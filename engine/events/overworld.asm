@@ -573,7 +573,7 @@ TrySurfOW::
 	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .quit
-+.yes
+.yes
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
 	jr nz, .quit
