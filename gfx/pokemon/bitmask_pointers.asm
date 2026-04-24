@@ -312,6 +312,8 @@ BitmasksPointers:
 	dw EspathraBitmasks
 	dw PwooperBitmasks
 	dw ClodsireBitmasks
+	dw FlamigoBitmasks
+	dw FarigirafBitmasks
 	dw ChiyuBitmasks
 	dw ErsrheadbbyBitmasks
 	assert_table_length NUM_POKEMON
