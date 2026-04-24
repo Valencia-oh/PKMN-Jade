@@ -596,7 +596,7 @@ JohtoGrassWildMons:
 	dbw 4, RATTATA
 	dbw 3, ZUBAT
 	dbw 4, MACHOP
-	dbw 3, ZUBAT
+	dbw 3, VENEPEDE
 	dbw 4, TORKOAL
 	dbw 6, MAGMAR
 	dbw 6, PRIMEAPE
@@ -606,7 +606,7 @@ JohtoGrassWildMons:
 	dbw 4, MACHOP
 	dbw 3, ZUBAT
 	dbw 4, TORKOAL
-	dbw 6, RATTATA
+	dbw 6, HOUNDOUR
 	dbw 6, RATTATA
 	; nite
 	dbw 4, HOUNDOUR
@@ -633,7 +633,7 @@ JohtoGrassWildMons:
 	dbw 4, MAGMAR
 	dbw 5, MACHOP
 	dbw 4, RATTATA
-	dbw 5, ZUBAT
+	dbw 5, VENEPEDE
 	dbw 5, LARVESTA
 	dbw 5, ZUBAT
 	; nite
@@ -665,7 +665,7 @@ JohtoGrassWildMons:
 	dbw 3, LARVESTA
 	dbw 3, ZUBAT
 	; nite
-	dbw 3, GEODUDE
+	dbw 3, VENEPEDE
 	dbw 3, MAGMAR
 	dbw 3, SLUGMA
 	dbw 3, ZUBAT
@@ -690,7 +690,7 @@ JohtoGrassWildMons:
 	dbw 7, ZUBAT
 	dbw 6, MACHOP
 	dbw 6, GEODUDE
-	dbw 8, RATTATA
+	dbw 8, VENEPEDE
 	dbw 4, RATTATA
 	; nite
 	dbw 5, ZUBAT
