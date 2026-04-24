@@ -1,10 +1,10 @@
 # Pokemon Labradorite
 
-Labradorite is an in development romhack based off the CSE engine for Pokecrystal with the goal of creating a johto with greateer pokemon variety through adding many pokemon from future generations to the game, reworking existing route spawns, and eventually adding in several new locations.
+Labradorite is an in development romhack based off the CSE engine for Pokecrystal with the goal of creating a johto with greater pokemon variety through adding many pokemon from future generations to the game, reworking existing route spawns, and adding in several new locations.
 
 ## Implemented Features
 - Removed Trade+Item Evos, now just use the item
-- 49 new pokemon, bringing the total to 300 (Applin, Clodsire, Toucannon, Espathra, Bronzong, Pelipper, Malamar, Linoone, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, Flygon, Torkoal, Delcatty, Milotic, Chi-yu and Falinks lines + Glaceon, Leafeon, Ursaluna, Mamoswine, Honchkrow, Wyrdeer, and Togekiss)
+- 55 new pokemon, bringing the total to ~305 (Applin, Clodsire, Toucannon, Espathra, Bronzong, Pelipper, Malamar, Linoone, Volcarona, Galvantula, Mabosstiff, Manectric, Breloom, Flygon, Torkoal, Delcatty, Milotic, Chi-yu, Flamigo, Crustle, Skulipede, and Falinks lines + Glaceon, Leafeon, Ursaluna, Mamoswine, Honchkrow, Wyrdeer, Farigiraf, and Togekiss)
 - overhauled PC (added with CSE)
 - Fairy Type
 - EXP ALL
@@ -23,14 +23,14 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - **350 pokemon** There will eventually be around 350 pokemon (all gens 1+2) and ~100 selected from later generations thanks to the Extended 16-bit Indexes featured in CSE
   - Need to get sprites for Dripplin and Hyrdapple
   - Requested Mons: sigilyph, Lurantis (and all evos and pre-evos thereof)
-  - Future Evos still not added: Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Farigiraf, Dudunsparce, Gliscor, Weavile
+  - Future Evos still not added: Mismageous, Annihilape, Magnezone, Lickilicky, Rhyperior, Tangrowth, Kleavor, Electivire, Magmortar, Porygon-Z, Ambipom, Yanmega, Dudunsparce, Gliscor, Weavile
     - Future Babies/Pre-evos are unlikely
   - Regional Varients Planned: Alolan Vulpix + Ninetails, Alolan Raichu, Hisuian Growelith + Arcanine
 
 ### Credits 
 - The majority of systems would not work without the use of the CSE engine, so shout out to all the devs on there
-- Falinks, Chi-yu, Volcarona, and Applin line, as well as Feebas and Milotic(back) Sprites are from Sage Deoxys
-- nuukiie made the Glaceon, Leafeon, Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Linoon, Flygon, Torkoal, Espathra, Clodsire, Toucannon, Mightyena, Breloom, Galvantula, Manectric, Altaria and Pelipper lines
+- Falinks, Chi-yu, Volcarona, Flamigo, and Applin line, as well as Feebas and Milotic(back) Sprites are from Sage Deoxys
+- nuukiie made the Glaceon, Leafeon, Togekiss, Mamoswine, Wyrdeer, and Honchkrow spites plus the Linoon, Flygon, Torkoal, Espathra, Clodsire, Toucannon, Mightyena, Breloom, Galvantula, Manectric, Altaria, Crustle, Skulipede, and Pelipper lines
 - Maschiff and Mabosstiff use edited versions of Egg3ggEgg's sprites
 - Bronzor and Bronzong sprites are from BlueEmerald and the Rainbow Devs
 - Milotic (front) is from BlueEmerald, Rainbow Devs, and Rosie
@@ -42,7 +42,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - the code for Abilities, EXP ALL, Psysical/Special Split, and several moves is from Aaronjeter's Budget Crystal Romhack
 
 ## Timeline
-Currently focusing on adding pokemon, but after the next pokemon addition update, I will begin working on new Routes and Locations
+Still focusing on adding pokemon, now working on redoing the story for a finalized release
 ### V.0.4 goals - DONE
 Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link Cable
 
@@ -65,8 +65,8 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - More attacks ✔️
 - Abilities ✔️
 - Physical/Special Split ✔️
-- Rebalance Levels South of Goldenrod      -- (suspended)
-- Olivine + Cianwood Reblanace             -- (suspended)
+- Rebalance Levels South of Goldenrod      -- (suspended due to level curve implementation)
+- Olivine + Cianwood Reblanace             -- (suspended due to level curve implementation)
 - Level Scaling ✔️
 - Trapinch                                 ✔️
 - Vibrava                                  ✔️
@@ -78,14 +78,18 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Hisuian Arcanine                         ✖️
 - Dripplin                                 ✖️
 - Hydrapple                                ✖️
-### v.0.9 goals - IN PROGRESS
+### v.0.9 goals - DONE
 - Infinite TMS                    ✔️
 - Altaria                    ✔️
-- Scolipede                       ✖️
-- Crustle                         ✖️
-- Farigiraf                                 ✖️
-- Move Evolution                                ✖️
+- Scolipede                       ✔️
+- Crustle                         ✔️
+- Farigiraf                                 ✔️
+- Move Evolution -- forgot what I meant by this
 - Hoenn Legend Trio -- Sprites Obtained, Code Not Started ✖️
 - Spear Pillar -- remapped to forgotten pillar, not yet enterable
 - Legendary Bird Islands -- Moltres has an island
 - Remove Team Rocket Story Line ✖️
+
+### v.0.10 goals - IN PROGRESS
+- Remove HM fix
+- 
