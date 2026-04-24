@@ -312,7 +312,7 @@ IconPointers:
 	dw PwooperIcon
 	dw ClodsireIcon
 	dw FlamigoIcon
-	dw FarigirafeIcon
+	dw FarigirafIcon
 	dw ChiyuIcon
 	dw ErsrheadbbyIcon
 	assert_table_length NUM_POKEMON + 1
