@@ -1577,7 +1577,7 @@ JohtoGrassWildMons:
 	dbw 4, GIRAFARIG
 	dbw 4, FARFETCH_D
 	dbw 3, FALINKS
-	dbw 2, SHROOMISH
+	dbw 2, FLAMIGO
 	dbw 4, SENTRET
 	dbw 3, FALINKS
 	; day
@@ -1586,7 +1586,7 @@ JohtoGrassWildMons:
 	dbw 4, FARFETCH_D
 	dbw 3, FALINKS
 	dbw 2, MAREEP
-	dbw 4, SHROOMISH
+	dbw 4, FLAMIGO
 	dbw 3, FALINKS
 	; nite
 	dbw 5, VENONAT
