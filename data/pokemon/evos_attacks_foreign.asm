@@ -54,6 +54,7 @@ EvosAttacksPointers3::
 	dw EspathraEvosAttacks
 	dw PwooperEvosAttacks
 	dw ClodsireEvosAttacks
+	dw FlamigoEvosAttacks
 	dw FarigirafEvosAttacks
 	dw ChiyuEvosAttacks
 	dw ErsrheadbbyEvosAttacks
@@ -897,6 +898,20 @@ ClodsireEvosAttacks:
 	dbw 47, DIG
 	dbw 59, MIST
 	dbw 59, HAZE
+	db 0 ; no more level-up moves
+
+FlamigoEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, PECK
+	dbw 1, MIMIC
+	dbw 5, DOUBLE_KICK
+	dbw 9, DETECT
+	dbw 12, WING_ATTACK
+	dbw 15, FOCUS_ENERGY
+	dbw 18, LOW_KICK
+	dbw 21, FEINT
+	dbw 27, PAYBACK
+	dbw 35, AIR_SLASH
 	db 0 ; no more level-up moves
 
 FarigirafEvosAttacks:
