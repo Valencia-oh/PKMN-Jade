@@ -84,7 +84,6 @@ Implemented Inkay, Malamar, Leafeon, Glaceon, Zigzagoon, Linoone, and the Link C
 - Scolipede                       ✔️
 - Crustle                         ✔️
 - Farigiraf                                 ✔️
-- Move Evolution -- forgot what I meant by this
 - Hoenn Legend Trio -- Sprites Obtained, Code Not Started ✖️
 - Spear Pillar -- remapped to forgotten pillar, not yet enterable
 - Legendary Bird Islands -- Moltres has an island
