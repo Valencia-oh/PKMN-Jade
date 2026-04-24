@@ -550,7 +550,6 @@ TrySurfOW::
 	call CheckDirection
 	jr c, .quit
 
-; Step 1
 	ld de, ENGINE_FOGBADGE
 	call CheckEngineFlag
 	jr c, .quit
@@ -563,7 +562,7 @@ TrySurfOW::
 	jr z, .quit
 
 ; Step 3
-	ld hl, SURF
+  	ld hl, SURF
 	call GetMoveIDFromIndex
 	call CheckPartyCanLearnMove
 	and a
@@ -574,7 +573,7 @@ TrySurfOW::
 	call GetMoveIDFromIndex
 	call CheckPartyMove
 	jr c, .quit
-.yes
++.yes
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_ALWAYS_ON_BIKE_F, [hl]
 	jr nz, .quit
