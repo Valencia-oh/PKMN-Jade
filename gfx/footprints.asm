@@ -307,6 +307,8 @@ INCBIN "gfx/footprints/flittle.1bpp"
 INCBIN "gfx/footprints/espathra.1bpp"
 INCBIN "gfx/footprints/pwooper.1bpp"
 INCBIN "gfx/footprints/clodsire.1bpp"
+INCBIN "gfx/footprints/flamigo.1bpp"
+INCBIN "gfx/footprints/farigiraf.1bpp"
 INCBIN "gfx/footprints/chi_yu.1bpp"
 INCBIN "gfx/footprints/ersrheadbby.1bpp"
 
