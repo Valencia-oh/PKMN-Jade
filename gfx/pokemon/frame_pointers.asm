@@ -308,6 +308,8 @@ FramesPointers:
 	dba EspathraFrames
 	dba PwooperFrames
 	dba ClodsireFrames
+	dba FlamigoFrames
+	dba FarigirafFrames
 	dba ChiyuFrames
 	dba ErsrheadbbyFrames
 	assert_table_length NUM_POKEMON
