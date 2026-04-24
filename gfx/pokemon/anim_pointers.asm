@@ -312,6 +312,8 @@ AnimationPointers:
 	dw EspathraAnimation
 	dw PwooperAnimation
 	dw ClodsireAnimation
+	dw FlamigoAnimation
+	dw FarigirafAnimation
 	dw ChiyuAnimation
 	dw ErsrheadbbyAnimation
 	assert_table_length NUM_POKEMON
