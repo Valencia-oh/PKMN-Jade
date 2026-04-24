@@ -102,6 +102,7 @@ NewPokedexOrder:
 	dw POLIWHIRL
 	dw POLIWRATH
 	dw POLITOED
+	dw FLAMIGO
 	dw MAGIKARP
 	dw GYARADOS
 	dw FEEBAS
