@@ -78,6 +78,12 @@ if DEF(_DEBUG)
 	giveitem GOLD_BERRY, 10
 	giveitem MINT_BERRY, 10
 	giveitem MYSTERYBERRY, 10
+	giveitem HM_SURF, 1
+	giveitem HM_CUT, 1
+	giveitem HM_WHIRLPOOL, 1
+	giveitem HM_WATERFALL, 1
+	giveitem HM_STRENGTH, 1
+	giveitem HM_FLY, 1
 	giveitem QUICK_CLAW
 	giveitem KINGS_ROCK
 	giveitem AMULET_COIN
