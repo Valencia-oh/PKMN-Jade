@@ -542,7 +542,7 @@ TrySurfOW::
 
 ; Must be facing water.
 	ld a, [wFacingTileID]
-	call GetTileCollision
+	call GetTilePermission
 	cp WATER_TILE
 	jr nz, .quit
 
@@ -784,6 +784,20 @@ TryWaterfallOW::
 	call CheckPartyMove
 	jr c, .failed
 .yes
+	call CheckMapCanWaterfall
+	jr c, .failed
+	ld a, BANK(Script_AskWaterfall)
+	ld hl, Script_AskWaterfall
+	call CallScript
+	scf
+	ret
+
+.failed
+	ld a, BANK(Script_CantDoWaterfall)
+	ld hl, Script_CantDoWaterfall
+	call CallScript
+	scf
+	ret
 
 Script_CantDoWaterfall:
 	jumptext .HugeWaterfallText
