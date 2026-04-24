@@ -54,6 +54,7 @@ EvosAttacksPointers3::
 	dw EspathraEvosAttacks
 	dw PwooperEvosAttacks
 	dw ClodsireEvosAttacks
+	dw FarigirafEvosAttacks
 	dw ChiyuEvosAttacks
 	dw ErsrheadbbyEvosAttacks
 .IndirectEnd::
@@ -896,6 +897,21 @@ ClodsireEvosAttacks:
 	dbw 47, DIG
 	dbw 59, MIST
 	dbw 59, HAZE
+	db 0 ; no more level-up moves
+
+FarigirafEvosAttacks:
+	db 0 ; no more evolutions
+	dbw 1, TACKLE
+	dbw 1, GROWL
+	dbw 1, CONFUSION
+	dbw 1, STOMP
+	dbw 7, CONFUSION
+	dbw 13, STOMP
+	dbw 20, AGILITY
+	dbw 30, BATON_PASS
+	dbw 35, ZEN_HEADBUTT
+	dbw 41, PSYBEAM
+	dbw 54, CRUNCH
 	db 0 ; no more level-up moves
 
 ChiyuEvosAttacks:
