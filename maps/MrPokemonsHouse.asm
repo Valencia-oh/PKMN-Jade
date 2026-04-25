@@ -3,7 +3,6 @@
 
 MrPokemonsHouse_MapScripts:
 	def_scene_scripts
-	scene_script MrPokemonsHouseMeetMrPokemonScene, SCENE_MRPOKEMONSHOUSE_MEET_MR_POKEMON
 	scene_script MrPokemonsHouseNoopScene,          SCENE_MRPOKEMONSHOUSE_NOOP
 
 	def_callbacks
@@ -17,7 +16,6 @@ MrPokemonsHouse_MrPokemonScript:
 	checkitem RED_SCALE
 	iftrue .RedScale
 	iffalse .AlwaysNewDiscoveries
-	writetext MrPokemonText_ImDependingOnYou
 	waitbutton
 	closetext
 	end
