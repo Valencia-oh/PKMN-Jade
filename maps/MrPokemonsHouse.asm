@@ -16,7 +16,7 @@ MrPokemonsHouse_MrPokemonScript:
 	opentext
 	checkitem RED_SCALE
 	iftrue .RedScale
-	.AlwaysNewDiscoveries
+	iffalse .AlwaysNewDiscoveries
 	writetext MrPokemonText_ImDependingOnYou
 	waitbutton
 	closetext
