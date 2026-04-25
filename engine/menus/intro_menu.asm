@@ -690,11 +690,11 @@ StarterChoice:
 	db "Wingull@"
 
 .StartShroomish:
-givepoke SHROOMISH, 5, BERRY
+	givepoke SHROOMISH, 5, BERRY
 	ret
 
 .StartWingull:
-givepoke WINGULL, 5, BERRY
+	givepoke WINGULL, 5, BERRY
 	ret
 
 NamePlayer:
