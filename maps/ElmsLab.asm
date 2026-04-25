@@ -80,6 +80,10 @@ AideScript_GivePocketPC:
 	closetext
 	end
 
+AideScript_ReceiveTheBalls:
+	jumpstd ReceiveItemScript
+	end
+
 ElmEggHatchedScript:
 	loadmonindex 1, TOGEPI
 	special FindPartyMonThatSpeciesYourTrainerID
