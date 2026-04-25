@@ -622,7 +622,6 @@ endc
 	ld hl, OakText6
 	call PrintText
 	call NamePlayer
-	call StarterChoice
 	ld hl, OakText7
 	jmp PrintText
 
