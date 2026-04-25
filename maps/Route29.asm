@@ -32,18 +32,6 @@ Route29TuscanyCallback:
 	appear ROUTE29_TUSCANY
 	endcallback
 
-.BoxFull:
-	writetext CatchingTutorialBoxFullText
-	waitbutton
-	closetext
-	end
-
-.Declined:
-	writetext CatchingTutorialDeclinedText
-	waitbutton
-	closetext
-	end
-
 Route29YoungsterScript:
 	jumptextfaceplayer Route29YoungsterText
 
