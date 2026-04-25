@@ -18,9 +18,11 @@ PlayersHouse2FInitializeRoomCallback:
 	iftrue .SkipInitialization
 	jumpstd InitializeEventsScript
 	checkevent EVENT_SHROOMISH_CHOICE
-	iftrue givepoke SHROOMISH, 5, BERRY
+	iftrue 
+	givepoke SHROOMISH, 5, BERRY
 	checkevent EVENT_WINGULL_CHOICE
-	iftrue givepoke WINGULL, 5, BERRY
+	iftrue 
+	givepoke WINGULL, 5, BERRY
 	endcallback
 
 .SkipInitialization:
