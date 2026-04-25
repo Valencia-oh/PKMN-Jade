@@ -1,14 +1,11 @@
 	object_const_def
 	const ELMSLAB_ELM
 	const ELMSLAB_ELMS_AIDE
-	const ELMSLAB_OFFICER
 
 ElmsLab_MapScripts:
 	def_scene_scripts
 	scene_script ElmsLabNoop2Scene,   SCENE_ELMSLAB_NOOP
-	scene_script ElmsLabNoop3Scene,   SCENE_ELMSLAB_MEET_OFFICER
 	scene_script ElmsLabNoop4Scene,   SCENE_ELMSLAB_UNUSED
-	scene_script ElmsLabNoop5Scene,   SCENE_ELMSLAB_AIDE_GIVES_POTION
 	scene_const SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
 
 	def_callbacks
@@ -57,6 +54,7 @@ ElmCheckEverstone:
 	iftrue ShowElmTogepiScript
 	writetext ElmThoughtEggHatchedText
 	waitbutton
+	writetext ElmText
 	closetext
 	end
 
@@ -105,11 +103,6 @@ ElmsLabHealingMachine_HealParty:
 	special HealMachineAnim
 	pause 30
 	special RestartMapMusic
-	closetext
-	end
-
-ElmAfterTheftDoneScript:
-	waitbutton
 	closetext
 	end
 
@@ -230,38 +223,11 @@ ElmsAideScript:
 	closetext
 	end
 
-MeetCopScript2:
-	applymovement PLAYER, MeetCopScript2_StepLeft
-
-MeetCopScript:
-	applymovement PLAYER, MeetCopScript_WalkUp
-CopScript:
-	turnobject ELMSLAB_OFFICER, LEFT
-	opentext
-	writetext ElmsLabOfficerText1
-	promptbutton
-	special NameRival
-	writetext ElmsLabOfficerText2
-	waitbutton
-	closetext
-	applymovement ELMSLAB_OFFICER, OfficerLeavesMovement
-	disappear ELMSLAB_OFFICER
-	setscene SCENE_ELMSLAB_NOOP
-	end
-
 ElmsLabWindow:
 	opentext
 	checkflag ENGINE_FLYPOINT_VIOLET
 	iftrue .Normal
-	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
-	iftrue .BreakIn
 	sjump .Normal
-
-.BreakIn:
-	writetext ElmsLabWindowText2
-	waitbutton
-	closetext
-	end
 
 .Normal:
 	writetext ElmsLabWindowText1
@@ -299,28 +265,6 @@ ElmsLab_WalkUpToElmMovement:
 	step UP
 	step UP
 	turn_head LEFT
-	step_end
-
-ElmsLab_CantLeaveMovement:
-	step UP
-	step_end
-
-MeetCopScript2_StepLeft:
-	step LEFT
-	step_end
-
-MeetCopScript_WalkUp:
-	step UP
-	step UP
-	turn_head RIGHT
-	step_end
-
-OfficerLeavesMovement:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
 	step_end
 
 AideWalksRight1:
@@ -394,25 +338,14 @@ ElmsLabHealingMachineText2:
 	line "heal your #MON?"
 	done
 
-ElmAfterTheftText1:
-	text "ELM: <PLAY_G>, this"
-	line "is terrible…"
+ElmText:
+	text "ELM: I need you to"
+	line "go out and find"
 
-	para "Oh, yes, what was"
-	line "MR.#MON's big"
-	cont "discovery?"
-	done
+	para "what has caused so"
+	line "many new #MON?"
 
-ElmAfterTheftText6:
-	text "…<PLAY_G>. The"
-	line "road to the"
-
-	para "championship will"
-	line "be a long one."
-
-	para "Before you leave,"
-	line "make sure that you"
-	cont "talk to your mom."
+	para "to come to Johto"
 	done
 
 ElmStudyingEggText:
@@ -506,26 +439,6 @@ ElmGiveEverstoneText2:
 	cont "to evolve."
 	done
 
-ElmText_CallYou:
-	text "ELM: <PLAY_G>, I'll"
-	line "call you if any-"
-	cont "thing comes up."
-	done
-
-AideText_AfterTheft:
-	text "…sigh… That"
-	line "stolen #MON."
-
-	para "I wonder how it's"
-	line "doing."
-
-	para "They say a #MON"
-	line "raised by a bad"
-
-	para "person turns bad"
-	line "itself."
-	done
-
 ElmGiveMasterBallText1:
 	text "ELM: Hi, <PLAY_G>!"
 	line "Thanks to you, my"
@@ -604,45 +517,11 @@ ElmGiveTicketText2:
 	line "PROF.OAK in KANTO!"
 	done
 
-AideText_GiveYouPotion:
-	text "<PLAY_G>, I want"
-	line "you to have this"
-	cont "for your errand."
-	done
 
 AideText_AlwaysBusy:
 	text "There are only two"
 	line "of us, so we're"
 	cont "always busy."
-	done
-
-ElmsLabOfficerText1:
-	text "I heard a #MON"
-	line "was stolen here…"
-
-	para "I was just getting"
-	line "some information"
-	cont "from PROF.ELM."
-
-	para "Apparently, it was"
-	line "a young male with"
-	cont "long, red hair…"
-
-	para "What?"
-
-	para "You battled a"
-	line "trainer like that?"
-
-	para "Did you happen to"
-	line "get his name?"
-	done
-
-ElmsLabOfficerText2:
-	text "OK! So <RIVAL>"
-	line "was his name."
-
-	para "Thanks for helping"
-	line "my investigation!"
 	done
 
 ElmsLabWindowText1:
