@@ -54,7 +54,29 @@ ElmCheckEverstone:
 	iftrue ShowElmTogepiScript
 	writetext ElmThoughtEggHatchedText
 	waitbutton
-	writetext ElmText
+AideScript_GiveYouBalls:
+	opentext
+	writetext AideText_GiveYouBalls
+	promptbutton
+	getitemname STRING_BUFFER_4, POKE_BALL
+	scall AideScript_ReceiveTheBalls
+	giveitem POKE_BALL, 5
+	writetext AideText_ExplainBalls
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+AideScript_GivePocketPC:
+	opentext
+	writetext AideText_GetPocketPCText
+	promptbutton
+	giveitem POCKET_PC
+	writetext AideText_PocketPCInfoText
+	waitbutton
+	closetext
+	setscene SCENE_ELMSLAB_NOOP
+	end
 	closetext
 	end
 
@@ -508,6 +530,23 @@ ElmGiveTicketText1:
 	line "#MON in KANTO."
 	done
 
+AideText_GiveYouBalls:
+	text "<PLAY_G>!"
+
+	para "Use these on your"
+	line "#DEX quest!"
+	done
+
+AideText_ExplainBalls:
+	text "To add to your"
+	line "#DEX, you have"
+	cont "to catch #MON."
+
+	para "Throw # BALLS"
+	line "at wild #MON"
+	cont "to get them."
+	done
+
 ElmGiveTicketText2:
 	text "The ship departs"
 	line "from OLIVINE CITY."
@@ -598,6 +637,18 @@ ElmsLabPCText:
 
 	para "…It says on the"
 	line "screen…"
+	done
+
+AideText_GetPocketPCText:
+	text "Oh, I have this"
+	line "for you too."
+
+	para "It's a Pocket PC!"
+	done
+	
+AideText_PocketPCInfoText:
+	text "Use this to manage"
+	line "your party."
 	done
 
 ElmsLab_MapEvents:
