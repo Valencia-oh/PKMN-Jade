@@ -4,8 +4,6 @@
 	const ROUTE30_YOUNGSTER3
 	const ROUTE30_BUG_CATCHER
 	const ROUTE30_YOUNGSTER4
-	const ROUTE30_MONSTER1
-	const ROUTE30_MONSTER2
 	const ROUTE30_FRUIT_TREE1
 	const ROUTE30_FRUIT_TREE2
 	const ROUTE30_COOLTRAINER_F
@@ -15,26 +13,6 @@ Route30_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
-
-YoungsterJoey_ImportantBattleScript:
-	waitsfx
-	playmusic MUSIC_JOHTO_TRAINER_BATTLE
-	opentext
-	writetext Text_UseTackle
-	pause 30
-	closetext
-	playsound SFX_TACKLE
-	applymovement ROUTE30_MONSTER2, Route30_JoeysRattataAttacksMovement
-	opentext
-	faceplayer
-	writetext Text_ThisIsABigBattle
-	waitbutton
-	turnobject ROUTE30_YOUNGSTER1, UP
-	closetext
-	playsound SFX_TACKLE
-	applymovement ROUTE30_MONSTER1, Route30_MikeysRattataAttacksMovement
-	special RestartMapMusic
-	end
 
 TrainerYoungsterJoey:
 	trainer YOUNGSTER, JOEY1, EVENT_BEAT_YOUNGSTER_JOEY, YoungsterJoey1SeenText, YoungsterJoey1BeatenText, 0, .Script
@@ -208,14 +186,6 @@ TrainerBugCatcherDon:
 Route30YoungsterScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .CompletedEggQuest
-	writetext Route30YoungsterText_DirectionsToMrPokemonsHouse
-	waitbutton
-	closetext
-	end
-
-.CompletedEggQuest:
 	writetext Route30YoungsterText_EveryoneIsBattling
 	waitbutton
 	closetext
@@ -247,30 +217,6 @@ Route30FruitTree2:
 
 Route30HiddenPotion:
 	hiddenitem POTION, EVENT_ROUTE_30_HIDDEN_POTION
-
-Route30_JoeysRattataAttacksMovement:
-	fix_facing
-	big_step UP
-	big_step DOWN
-	step_end
-
-Route30_MikeysRattataAttacksMovement:
-	fix_facing
-	big_step DOWN
-	big_step UP
-	step_end
-
-Text_UseTackle:
-	text "Go, RATTATA!"
-
-	para "TACKLE!"
-	done
-
-Text_ThisIsABigBattle:
-	text "What? This is a"
-	line "big battle!"
-	cont "Leave me alone!"
-	done
 
 YoungsterJoey1SeenText:
 	text "I just lost, so"
@@ -421,8 +367,6 @@ Route30_MapEvents:
 	bg_event 14,  9, BGEVENT_ITEM, Route30HiddenPotion
 
 	def_object_events
-	object_event  5, 26, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, YoungsterJoey_ImportantBattleScript, EVENT_ROUTE_30_BATTLE
-	object_event  2, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterJoey, EVENT_ROUTE_30_YOUNGSTER_JOEY
 	object_event  5, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerYoungsterMikey, -1
 	object_event  1,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDon, -1
 	object_event  7, 30, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route30YoungsterScript, -1
