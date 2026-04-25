@@ -79,11 +79,11 @@ MeetMomScript:
 	waitbutton
 	writetext MomGiveStarter
 	checkevent EVENT_SHROOMISH_CHOICE
-	iftrue ShroomishGiveScript
+	iftrue .ShroomishGiveScript
 	checkevent EVENT_WINGULL_CHOICE
-	iftrue WingullGiveScript
+	iftrue .WingullGiveScript
 	checkevent EVENT_TORKOAL_CHOICE
-	iftrue TorkoalGiveScript
+	iftrue .TorkoalGiveScript
 	closetext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .FromRight
