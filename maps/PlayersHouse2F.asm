@@ -6,7 +6,8 @@
 
 PlayersHouse2F_MapScripts:
 	def_scene_scripts
-
+	
+	
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, PlayersHouse2FInitializeRoomCallback
 	callback MAPCALLBACK_TILES, PlayersHouse2FSetUpTileDecorationsCallback
@@ -17,23 +18,11 @@ PlayersHouse2FInitializeRoomCallback:
 	checkevent EVENT_INITIALIZED_EVENTS
 	iftrue .SkipInitialization
 	jumpstd InitializeEventsScript
-	checkevent EVENT_SHROOMISH_CHOICE
-	iftrue ShroomishGiveScript
-	checkevent EVENT_WINGULL_CHOICE
-	iftrue WingullGiveScript
-	givepoke WINGULL, 5, BERRY
+
 	endcallback
 
 .SkipInitialization:
 	endcallback
-
-ShroomishGiveScript:
-	givepoke SHROOMISH, 5, BERRY
-	end
-
-WingullGiveScript:
-	givepoke WINGULL, 5, BERRY
-	end
 
 PlayersHouse2FSetUpTileDecorationsCallback:
 	special ToggleMaptileDecorations
