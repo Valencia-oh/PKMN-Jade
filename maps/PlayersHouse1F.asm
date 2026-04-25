@@ -84,8 +84,10 @@ MeetMomScript:
 	iftrue .WingullGiveScript
 	checkevent EVENT_TORKOAL_CHOICE
 	iftrue .TorkoalGiveScript
-	giveitem pokeball, 5
+	giveitem POKE_BALL, 5
 	giveitem POCKET_PC
+	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
+	setevent EVENT_ROUTE_30_BATTLE
 	closetext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .FromRight
