@@ -278,12 +278,6 @@ AideScript_TheftTestimony:
 	closetext
 	end
 
-AideScript_ExplainBalls:
-	writetext AideText_ExplainBalls
-	waitbutton
-	closetext
-	end
-
 AideScript_AfterTheft:
 	writetext AideText_AfterTheft
 	waitbutton
