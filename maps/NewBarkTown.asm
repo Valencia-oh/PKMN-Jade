@@ -21,24 +21,7 @@ NewBarkTownFlypointCallback:
 NewBarkTownTeacherScript:
 	faceplayer
 	opentext
-	.MonIsAdorable
-	closetext
-	end
-
-.MonIsAdorable:
 	writetext Text_YourMonIsAdorable
-	waitbutton
-	closetext
-	end
-
-.TellMomYoureLeaving:
-	writetext Text_TellMomIfLeaving
-	waitbutton
-	closetext
-	end
-
-.CallMom:
-	writetext Text_CallMomOnGear
 	waitbutton
 	closetext
 	end
