@@ -3,6 +3,11 @@ _OakText6::
 	line "say your name was?"
 	prompt
 
+_OakStarterText::
+	text "Which #MON did"
+	line "you start with?"
+	prompt
+
 _OakText7::
 	text "<PLAYER>, are you"
 	line "ready?"
