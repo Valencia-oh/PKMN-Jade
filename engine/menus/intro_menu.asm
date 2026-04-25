@@ -690,11 +690,15 @@ StarterChoice:
 	db "Wingull@"
 
 .StartShroomish:
-	givepoke SHROOMISH, 5, BERRY
+	ld de, EVENT_SHROOMISH_CHOICE
+    ld b, SET_FLAG
+	call EventFlagAction
 	ret
 
 .StartWingull:
-	givepoke WINGULL, 5, BERRY
+	ld de, EVENT_WINGULL_CHOICE
+    ld b, SET_FLAG
+	call EventFlagAction
 	ret
 
 NamePlayer:
