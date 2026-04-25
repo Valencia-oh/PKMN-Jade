@@ -84,6 +84,8 @@ MeetMomScript:
 	iftrue .WingullGiveScript
 	checkevent EVENT_TORKOAL_CHOICE
 	iftrue .TorkoalGiveScript
+	giveitem pokeball, 5
+	giveitem POCKET_PC
 	closetext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .FromRight
