@@ -5,14 +5,10 @@
 
 NewBarkTown_MapScripts:
 	def_scene_scripts
-	scene_script NewBarkTownNoop1Scene, SCENE_NEWBARKTOWN_TEACHER_STOPS_YOU
 	scene_script NewBarkTownNoop2Scene, SCENE_NEWBARKTOWN_NOOP
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, NewBarkTownFlypointCallback
-
-NewBarkTownNoop1Scene:
-	end
 
 NewBarkTownNoop2Scene:
 	end
