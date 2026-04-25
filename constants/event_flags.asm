@@ -270,6 +270,7 @@
 	const EVENT_TIFFANY_GAVE_PINK_BOW
 	const EVENT_SHROOMISH_CHOICE
 	const EVENT_WINGULL_CHOICE
+	const EVENT_TORKOAL_CHOICE
 ; Unused: next 338 events
 
 	const_next 600
