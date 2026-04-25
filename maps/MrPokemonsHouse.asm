@@ -8,10 +8,6 @@ MrPokemonsHouse_MapScripts:
 
 	def_callbacks
 
-MrPokemonsHouseMeetMrPokemonScene:
-	sdefer MrPokemonsHouseMrPokemonEventScript
-	end
-
 MrPokemonsHouseNoopScene:
 	end
 
@@ -20,6 +16,13 @@ MrPokemonsHouse_MrPokemonScript:
 	opentext
 	checkitem RED_SCALE
 	iftrue .RedScale
+	.AlwaysNewDiscoveries
+	writetext MrPokemonText_ImDependingOnYou
+	waitbutton
+	closetext
+	end
+
+.AlwaysNewDiscoveries:
 	writetext MrPokemonText_AlwaysNewDiscoveries
 	waitbutton
 	closetext
@@ -56,6 +59,22 @@ MrPokemonText_AlwaysNewDiscoveries:
 
 	para "discoveries to be"
 	line "made!"
+	done
+
+MrPokemonText_GimmeTheScale:
+	text "Hm? That SCALE!"
+	line "What's that?"
+	cont "A red GYARADOS?"
+
+	para "That's rare!"
+	line "I, I want it…"
+
+	para "<PLAY_G>, would you"
+	line "care to trade it?"
+
+	para "I can offer this"
+	line "EGG I got"
+	cont "from PROF.OAK."
 	done
 
 MrPokemonText_Disappointed:
