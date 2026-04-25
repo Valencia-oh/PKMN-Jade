@@ -3,7 +3,7 @@ _OakText6::
 	line "say your name was?"
 	prompt
 
-_OakStarterText::
+_OakTextStarter::
 	text "Which #MON did"
 	line "you start with?"
 	prompt
