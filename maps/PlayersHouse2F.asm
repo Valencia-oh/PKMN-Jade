@@ -18,15 +18,22 @@ PlayersHouse2FInitializeRoomCallback:
 	iftrue .SkipInitialization
 	jumpstd InitializeEventsScript
 	checkevent EVENT_SHROOMISH_CHOICE
-	iftrue 
-	givepoke SHROOMISH, 5, BERRY
+	iftrue ShroomishGiveScript
 	checkevent EVENT_WINGULL_CHOICE
-	iftrue 
+	iftrue WingullGiveScript
 	givepoke WINGULL, 5, BERRY
 	endcallback
 
 .SkipInitialization:
 	endcallback
+
+ShroomishGiveScript:
+	givepoke SHROOMISH, 5, BERRY
+	end
+
+WingullGiveScript:
+	givepoke WINGULL, 5, BERRY
+	end
 
 PlayersHouse2FSetUpTileDecorationsCallback:
 	special ToggleMaptileDecorations
