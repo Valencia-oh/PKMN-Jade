@@ -86,6 +86,7 @@ MeetMomScript:
 	iftrue .TorkoalGiveScript
 	giveitem POKE_BALL, 5
 	giveitem POCKET_PC
+	setflag ENGINE_POKEDEX
 	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
 	setevent EVENT_ROUTE_30_BATTLE
 	closetext
