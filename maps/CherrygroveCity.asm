@@ -1,6 +1,5 @@
 	object_const_def
 	const CHERRYGROVECITY_GRAMPS
-	const CHERRYGROVECITY_RIVAL
 	const CHERRYGROVECITY_TEACHER
 	const CHERRYGROVECITY_YOUNGSTER
 	const CHERRYGROVECITY_FISHER
@@ -98,81 +97,6 @@ CherrygroveCityGuideGent:
 	closetext
 	end
 
-CherrygroveRivalSceneSouth:
-	moveobject CHERRYGROVECITY_RIVAL, 35, 7
-CherrygroveRivalSceneNorth:
-	turnobject PLAYER, RIGHT
-	showemote EMOTE_SHOCK, PLAYER, 15
-	special FadeOutMusic
-	pause 15
-	appear CHERRYGROVECITY_RIVAL
-	applymovement CHERRYGROVECITY_RIVAL, CherrygroveCity_RivalWalksToYou
-	turnobject PLAYER, RIGHT
-	playmusic MUSIC_RIVAL_ENCOUNTER
-	opentext
-	writetext CherrygroveRivalText_Seen
-	waitbutton
-	closetext
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Chikorita
-	winlosstext RivalCherrygroveWinText, RivalCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_RIVAL
-	loadtrainer RIVAL1, RIVAL1_1_TOTODILE
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
-
-.Totodile:
-	winlosstext RivalCherrygroveWinText, RivalCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_RIVAL
-	loadtrainer RIVAL1, RIVAL1_1_CHIKORITA
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
-
-.Chikorita:
-	winlosstext RivalCherrygroveWinText, RivalCherrygroveLossText
-	setlasttalked CHERRYGROVECITY_RIVAL
-	loadtrainer RIVAL1, RIVAL1_1_CYNDAQUIL
-	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
-	startbattle
-	dontrestartmapmusic
-	reloadmap
-	iftrue .AfterVictorious
-	sjump .AfterYourDefeat
-
-.AfterVictorious:
-	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext CherrygroveRivalText_YouWon
-	waitbutton
-	closetext
-	sjump .FinishRival
-
-.AfterYourDefeat:
-	playmusic MUSIC_RIVAL_AFTER
-	opentext
-	writetext CherrygroveRivalText_YouLost
-	waitbutton
-	closetext
-.FinishRival:
-	playsound SFX_TACKLE
-	applymovement PLAYER, CherrygroveCity_RivalPushesYouOutOfTheWay
-	turnobject PLAYER, LEFT
-	applymovement CHERRYGROVECITY_RIVAL, CherrygroveCity_RivalExitsStageLeft
-	disappear CHERRYGROVECITY_RIVAL
-	setscene SCENE_CHERRYGROVECITY_NOOP
-	special HealParty
-	playmapmusic
-	end
 
 CherrygroveTeacherScript:
 	faceplayer
@@ -550,8 +474,7 @@ CherrygroveCity_MapEvents:
 	warp_event 27, 11, CHERRYGROVE_EVOLUTION_SPEECH_HOUSE, 1
 
 	def_coord_events
-	coord_event 29,  6, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherrygroveRivalSceneNorth
-	coord_event 29,  7, SCENE_CHERRYGROVECITY_MEET_RIVAL, CherrygroveRivalSceneSouth
+
 
 	def_bg_events
 	bg_event 26,  8, BGEVENT_READ, CherrygroveCitySign
@@ -561,7 +484,6 @@ CherrygroveCity_MapEvents:
 
 	def_object_events
 	object_event 28,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
-	object_event 35,  6, SPRITE_RIVAL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
 	object_event 23, 12, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 19,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	object_event  7,  9, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
