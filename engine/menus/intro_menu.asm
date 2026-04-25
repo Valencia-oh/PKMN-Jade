@@ -660,47 +660,6 @@ OakText7:
 	text_far _OakText7
 	text_end
 
-OakTextStarter:
-	text_far _OakTextStarter
-	text_end
-
-StarterChoice:
-	ld hl, OakTextStarter
-	call PrintText
-	ld hl, .StarterMenuHeader
-	call LoadMenuHeader
-	call VerticalMenu
-	call CloseWindow	
-	ld a, [wMenuCursorY]
-	cp $1
-	jr z, .StartShroomish
-	cp $2
-	jr z, .StartWingull
-
-.StarterMenuHeader:
-	db MENU_BACKUP_TILES ; flags
-	menu_coords 0, 2, 15, TEXTBOX_Y - 1
-	dw .StarterMenuData
-	db 1 ; default option
-
-.StarterMenuData:
-	db STATICMENU_CURSOR ; flags
-	db 2 ; items
-	db "Shroomish@"
-	db "Wingull@"
-
-.StartShroomish:
-	ld de, EVENT_SHROOMISH_CHOICE
-    ld b, SET_FLAG
-	call EventFlagAction
-	ret
-
-.StartWingull:
-	ld de, EVENT_WINGULL_CHOICE
-    ld b, SET_FLAG
-	call EventFlagAction
-	ret
-
 NamePlayer:
 	farcall MovePlayerPicRight
 	farcall ShowPlayerNamingChoices
