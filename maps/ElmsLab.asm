@@ -80,15 +80,6 @@ ElmCheckGotEggAgain:
 	iftrue ElmWaitingEggHatchScript
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue ElmAideHasEggScript
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue ElmStudyingEggScript
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-	iftrue ElmAfterTheftScript
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue ElmDescribesMrPokemonScript
-	writetext ElmText_LetYourMonBattleIt
-	waitbutton
-	closetext
 	end
 
 ElmsLabHealingMachine:
@@ -121,32 +112,6 @@ ElmsLabHealingMachine_HealParty:
 ElmAfterTheftDoneScript:
 	waitbutton
 	closetext
-	end
-
-ElmAfterTheftScript:
-	writetext ElmAfterTheftText1
-	checkitem MYSTERY_EGG
-	iffalse ElmAfterTheftDoneScript
-	promptbutton
-	writetext ElmAfterTheftText2
-	waitbutton
-	takeitem MYSTERY_EGG
-	scall ElmJumpBackScript1
-	writetext ElmAfterTheftText3
-	waitbutton
-	scall ElmJumpBackScript2
-	writetext ElmAfterTheftText4
-	promptbutton
-	writetext ElmAfterTheftText5
-	promptbutton
-	setevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	setflag ENGINE_MOBILE_SYSTEM
-	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
-	setevent EVENT_ROUTE_30_BATTLE
-	writetext ElmAfterTheftText6
-	waitbutton
-	closetext
-	setscene SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS
 	end
 
 ElmStudyingEggScript:
@@ -261,25 +226,7 @@ ElmJumpRightScript:
 ElmsAideScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iftrue AideScript_AfterTheft
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue AideScript_ExplainBalls
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-	iftrue AideScript_TheftTestimony
 	writetext AideText_AlwaysBusy
-	waitbutton
-	closetext
-	end
-
-AideScript_TheftTestimony:
-	writetext AideText_TheftTestimony
-	waitbutton
-	closetext
-	end
-
-AideScript_AfterTheft:
-	writetext AideText_AfterTheft
 	waitbutton
 	closetext
 	end
@@ -438,115 +385,6 @@ ElmsLab_ElmToDefaultPositionMovement2:
 	turn_head DOWN
 	step_end
 
-AfterCyndaquilMovement:
-	step LEFT
-	step UP
-	turn_head UP
-	step_end
-
-AfterTotodileMovement:
-	step LEFT
-	step LEFT
-	step UP
-	turn_head UP
-	step_end
-
-AfterChikoritaMovement:
-	step LEFT
-	step LEFT
-	step LEFT
-	step UP
-	turn_head UP
-	step_end
-
-ElmText_Intro:
-	text "ELM: <PLAY_G>!"
-	line "There you are!"
-
-if !DEF(_DEBUG)
-	para "I needed to ask"
-	line "you a favor."
-
-	para "I'm conducting new"
-	line "#MON research"
-
-	para "right now. I was"
-	line "wondering if you"
-
-	para "could help me with"
-	line "it, <PLAY_G>."
-
-	para "You see…"
-
-	para "I'm writing a"
-	line "paper that I want"
-
-	para "to present at a"
-	line "conference."
-
-	para "But there are some"
-	line "things I don't"
-
-	para "quite understand"
-	line "yet."
-
-	para "So!"
-
-	para "I'd like you to"
-	line "raise a #MON"
-
-	para "that I recently"
-	line "caught."
-endc
-	done
-
-ElmText_Accepted:
-	text "Thanks, <PLAY_G>!"
-
-	para "You're a great"
-	line "help!"
-	done
-
-ElmText_Refused:
-	text "But… Please, I"
-	line "need your help!"
-	done
-
-ElmText_ResearchAmbitions:
-	text "When I announce my"
-	line "findings, I'm sure"
-
-	para "we'll delve a bit"
-	line "deeper into the"
-
-	para "many mysteries of"
-	line "#MON."
-
-	para "You can count on"
-	line "it!"
-	done
-
-GotElmsNumberText:
-	text "<PLAYER> got ELM's"
-	line "phone number."
-	done
-
-ElmDescribesMrPokemonText:
-	text "MR.#MON goes"
-	line "everywhere and"
-	cont "finds rarities."
-
-	para "Too bad they're"
-	line "just rare and"
-	cont "not very useful…"
-	done
-
-ElmPokeBallText:
-	text "It contains a"
-	line "#MON caught by"
-	cont "PROF.ELM."
-	done
-
 ElmsLabHealingMachineText1:
 	text "I wonder what this"
 	line "does?"
@@ -564,60 +402,6 @@ ElmAfterTheftText1:
 	para "Oh, yes, what was"
 	line "MR.#MON's big"
 	cont "discovery?"
-	done
-
-ElmAfterTheftText2:
-	text "<PLAYER> handed"
-	line "the MYSTERY EGG to"
-	cont "PROF.ELM."
-	done
-
-ElmAfterTheftText3:
-	text "ELM: This?"
-	done
-
-ElmAfterTheftText4:
-	text "But… Is it a"
-	line "#MON EGG?"
-
-	para "If it is, it is a"
-	line "great discovery!"
-	done
-
-ElmAfterTheftText5:
-	text "ELM: What?!?"
-
-if !DEF(_DEBUG)
-	para "PROF.OAK gave you"
-	line "a #DEX?"
-
-	para "<PLAY_G>, is that"
-	line "true? Th-that's"
-	cont "incredible!"
-
-	para "He is superb at"
-	line "seeing the poten-"
-	cont "tial of people as"
-	cont "trainers."
-
-	para "Wow, <PLAY_G>. You"
-	line "may have what it"
-
-	para "takes to become"
-	line "the CHAMPION."
-
-	para "You seem to be"
-	line "getting on great"
-	cont "with #MON too."
-
-	para "You should take"
-	line "the #MON GYM"
-	cont "challenge."
-
-	para "The closest GYM"
-	line "would be the one"
-	cont "in VIOLET CITY."
-endc
 	done
 
 ElmAfterTheftText6:
@@ -833,48 +617,6 @@ AideText_AlwaysBusy:
 	cont "always busy."
 	done
 
-AideText_TheftTestimony:
-	text "There was a loud"
-	line "noise outside…"
-
-	para "When we went to"
-	line "look, someone"
-	cont "stole a #MON."
-
-	para "It's unbelievable"
-	line "that anyone would"
-	cont "do that!"
-
-	para "…sigh… That"
-	line "stolen #MON."
-
-	para "I wonder how it's"
-	line "doing."
-
-	para "They say a #MON"
-	line "raised by a bad"
-
-	para "person turns bad"
-	line "itself."
-	done
-
-AideText_GiveYouBalls:
-	text "<PLAY_G>!"
-
-	para "Use these on your"
-	line "#DEX quest!"
-	done
-
-AideText_ExplainBalls:
-	text "To add to your"
-	line "#DEX, you have"
-	cont "to catch #MON."
-
-	para "Throw # BALLS"
-	line "at wild #MON"
-	cont "to get them."
-	done
-
 ElmsLabOfficerText1:
 	text "I heard a #MON"
 	line "was stolen here…"
@@ -974,18 +716,6 @@ ElmsLabPCText:
 	line "screen…"
 	done
 
-AideText_GetPocketPCText:
-	text "Oh, I have this"
-	line "for you too."
-
-	para "It's a Pocket PC!"
-	done
-	
-AideText_PocketPCInfoText:
-	text "Use this to manage"
-	line "your party."
-	done
-
 ElmsLab_MapEvents:
 	db 0, 0 ; filler
 
@@ -994,8 +724,6 @@ ElmsLab_MapEvents:
 	warp_event  5, 11, NEW_BARK_TOWN, 1
 
 	def_coord_events
-	coord_event  4,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
-	coord_event  5,  6, SCENE_ELMSLAB_CANT_LEAVE, LabTryToLeaveScript
 	coord_event  4,  5, SCENE_ELMSLAB_MEET_OFFICER, MeetCopScript
 	coord_event  5,  5, SCENE_ELMSLAB_MEET_OFFICER, MeetCopScript2
 
