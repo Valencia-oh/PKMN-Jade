@@ -487,6 +487,12 @@ ElmGiveMasterBallText2:
 	line "southern seas!"
 	done
 
+ElmText_CallYou:
+	text "ELM: <PLAY_G>, I'll"
+	line "call you if any-"
+	cont "thing comes up."
+	done
+
 ElmGiveTicketText1:
 	text "ELM: <PLAY_G>!"
 	line "There you are!"
