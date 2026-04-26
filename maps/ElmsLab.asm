@@ -37,16 +37,15 @@ ProfElmScript:
 
 
 ElmIntroScript:
+	opentext
 	writetext AideText_GiveYouBalls
 	promptbutton
 	getitemname STRING_BUFFER_4, POKE_BALL
-	jumpstd ReceiveItemScript
+	scall AideScript_ReceiveTheBalls
 	giveitem POKE_BALL, 5
 	writetext AideText_ExplainBalls
 	promptbutton
 	itemnotify
-	closetext
-	opentext
 	writetext AideText_GetPocketPCText
 	promptbutton
 	giveitem POCKET_PC
@@ -56,7 +55,10 @@ ElmIntroScript:
     ld b, SET_FLAG
 	call EventFlagAction
 	closetext
-	setscene SCENE_ELMSLAB_NOOP
+
+AideScript_ReceiveTheBalls:
+	jumpstd ReceiveItemScript
+	end
 
 ElmsLabHealingMachine:
 	opentext
