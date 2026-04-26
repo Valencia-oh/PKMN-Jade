@@ -53,6 +53,7 @@ ElmIntroScript:
 	waitbutton
 	setevent EVENT_ELM_GIVEN_DEX
 	closetext
+	end
 
 AideScript_ReceiveTheBalls:
 	jumpstd ReceiveItemScript
