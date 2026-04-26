@@ -30,80 +30,34 @@ ElmsLabNoop5Scene:
 ProfElmScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_SS_TICKET_FROM_ELM
-	iftrue ElmCheckMasterBall
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iftrue ElmGiveTicketScript
-ElmCheckMasterBall:
-	checkevent EVENT_GOT_MASTER_BALL_FROM_ELM
-	iftrue ElmCheckEverstone
-	readvar VAR_BADGES
-	ifgreater 7, ElmGiveMasterBallScript
-ElmCheckEverstone:
-	checkevent EVENT_GOT_EVERSTONE_FROM_ELM
-	iftrue ElmScript_CallYou
-	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
-	iftrue ElmGiveEverstoneScript
-	checkevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
-	iffalse ElmCheckTogepiEgg
-	loadmonindex 1, TOGEPI
-	special FindPartyMonThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	loadmonindex 2, TOGETIC
-	special FindPartyMonThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	writetext ElmThoughtEggHatchedText
-	waitbutton
-AideScript_GiveYouBalls:
-	opentext
+	checkevent EVENT_ELM_GIVEN_DEX
+	iftrue ElmText
+	ElmIntroScript
+	end
+
+
+ElmIntroScript:
 	writetext AideText_GiveYouBalls
 	promptbutton
 	getitemname STRING_BUFFER_4, POKE_BALL
-	scall AideScript_ReceiveTheBalls
+	jumpstd ReceiveItemScript
 	giveitem POKE_BALL, 5
 	writetext AideText_ExplainBalls
 	promptbutton
 	itemnotify
 	closetext
-	end
-
-AideScript_GivePocketPC:
 	opentext
 	writetext AideText_GetPocketPCText
 	promptbutton
 	giveitem POCKET_PC
 	writetext AideText_PocketPCInfoText
 	waitbutton
+	ld de, EVENT_ELM_GIVEN_DEX
+    ld b, SET_FLAG
+	call EventFlagAction
 	closetext
+setflag
 	setscene SCENE_ELMSLAB_NOOP
-	end
-	closetext
-	end
-
-AideScript_ReceiveTheBalls:
-	jumpstd ReceiveItemScript
-	end
-
-ElmEggHatchedScript:
-	loadmonindex 1, TOGEPI
-	special FindPartyMonThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	loadmonindex 2, TOGETIC
-	special FindPartyMonThatSpeciesYourTrainerID
-	iftrue ShowElmTogepiScript
-	sjump ElmCheckGotEggAgain
-
-ElmCheckTogepiEgg:
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iffalse ElmCheckGotEggAgain
-	checkevent EVENT_TOGEPI_HATCHED
-	iftrue ElmEggHatchedScript
-ElmCheckGotEggAgain:
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE ; why are we checking it again?
-	iftrue ElmWaitingEggHatchScript
-	checkflag ENGINE_ZEPHYRBADGE
-	iftrue ElmAideHasEggScript
-	end
 
 ElmsLabHealingMachine:
 	opentext
@@ -411,60 +365,6 @@ ElmThoughtEggHatchedText:
 	line "#MON?"
 	done
 
-ShowElmTogepiText1:
-	text "ELM: <PLAY_G>, you"
-	line "look great!"
-	done
-
-ShowElmTogepiText2:
-	text "What?"
-	line "That #MON!?!"
-	done
-
-ShowElmTogepiText3:
-	text "The EGG hatched!"
-	line "So, #MON are"
-	cont "born from EGGS…"
-
-	para "No, perhaps not"
-	line "all #MON are."
-
-	para "Wow, there's still"
-	line "a lot of research"
-	cont "to be done."
-	done
-
-ElmGiveEverstoneText1:
-	text "Thanks, <PLAY_G>!"
-	line "You're helping"
-
-	para "unravel #MON"
-	line "mysteries for us!"
-
-	para "I want you to have"
-	line "this as a token of"
-	cont "our appreciation."
-	done
-
-ElmGiveEverstoneText2:
-	text "That's an"
-	line "EVERSTONE."
-
-	para "Some species of"
-	line "#MON evolve"
-
-	para "when they grow to"
-	line "certain levels."
-
-	para "A #MON holding"
-	line "the EVERSTONE"
-	cont "won't evolve."
-
-	para "Give it to a #-"
-	line "MON you don't want"
-	cont "to evolve."
-	done
-
 ElmGiveMasterBallText1:
 	text "ELM: Hi, <PLAY_G>!"
 	line "Thanks to you, my"
@@ -511,27 +411,6 @@ ElmGiveMasterBallText2:
 
 	para "place near the"
 	line "southern seas!"
-	done
-
-ElmText_CallYou:
-	text "ELM: <PLAY_G>, I'll"
-	line "call you if any-"
-	cont "thing comes up."
-	done
-
-ElmGiveTicketText1:
-	text "ELM: <PLAY_G>!"
-	line "There you are!"
-
-	para "I called because I"
-	line "have something for"
-	cont "you."
-
-	para "See? It's an"
-	line "S.S.TICKET."
-
-	para "Now you can catch"
-	line "#MON in KANTO."
 	done
 
 AideText_GiveYouBalls:
