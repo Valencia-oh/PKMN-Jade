@@ -29,10 +29,12 @@ ElmsLabNoop5Scene:
 
 ProfElmScript:
 	faceplayer
-	opentext
 	checkevent EVENT_ELM_GIVEN_DEX
-	iftrue ElmText
 	iffalse ElmIntroScript
+	checkevent EVENT_ELM_GIVEN_DEX
+	opentext	
+	writetext ElmText
+	closetext
 	end
 
 
