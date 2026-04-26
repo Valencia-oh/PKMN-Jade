@@ -51,8 +51,7 @@ ElmIntroScript:
 	giveitem POCKET_PC
 	writetext AideText_PocketPCInfoText
 	waitbutton
-	ld de, EVENT_ELM_GIVEN_DEX
-    ld b, SET_FLAG
+	setevent EVENT_ELM_GIVEN_DEX
 	call EventFlagAction
 	closetext
 
