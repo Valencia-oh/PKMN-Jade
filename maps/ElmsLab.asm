@@ -52,7 +52,6 @@ ElmIntroScript:
 	writetext AideText_PocketPCInfoText
 	waitbutton
 	setevent EVENT_ELM_GIVEN_DEX
-	call EventFlagAction
 	closetext
 
 AideScript_ReceiveTheBalls:
