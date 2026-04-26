@@ -32,7 +32,7 @@ ProfElmScript:
 	opentext
 	checkevent EVENT_ELM_GIVEN_DEX
 	iftrue ElmText
-	ElmIntroScript
+	iffalse ElmIntroScript
 	end
 
 
@@ -56,7 +56,6 @@ ElmIntroScript:
     ld b, SET_FLAG
 	call EventFlagAction
 	closetext
-setflag
 	setscene SCENE_ELMSLAB_NOOP
 
 ElmsLabHealingMachine:
