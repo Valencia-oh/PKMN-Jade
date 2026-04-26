@@ -271,6 +271,7 @@
 	const EVENT_SHROOMISH_CHOICE
 	const EVENT_WINGULL_CHOICE
 	const EVENT_TORKOAL_CHOICE
+	const ELM_GIVEN_DEX
 ; Unused: next 338 events
 
 	const_next 600
