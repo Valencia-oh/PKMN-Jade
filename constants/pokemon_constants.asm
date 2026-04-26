@@ -286,6 +286,8 @@ DEF FOREIGN_POKEMON EQU const_value
 	const DELCATTY
 	const ELECTRIKE  ; 104
 	const MANECTRIC  ; 105
+	const NUMEL
+	const CAMERUPT
 	const TORKOAL
 	const TRAPINCH
 	const VIBRAVA
