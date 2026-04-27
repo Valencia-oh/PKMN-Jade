@@ -35,6 +35,7 @@ Note: All Evolution Stones (Dusk, Fire, Thunder, Water, Leaf, Moon, Sun, Shiny) 
 - Bronzor and Bronzong sprites are from BlueEmerald and the Rainbow Devs
 - Milotic (front) is from BlueEmerald, Rainbow Devs, and Rosie
 - Ursaluna Sprites by Me, free to use
+- Peanutella made the goodra line sprites
 - Crystal Legacy Team for inspiration on some pokemon locations
 - Polished Crystal and Emerald Seaglass for giving me inspiration to start this project
 - Pokecrystal devs for making this posible, as well as the code so easy to use and providing numerous incredibly helpful tutorials
