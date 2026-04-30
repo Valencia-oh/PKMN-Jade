@@ -40,6 +40,7 @@ MeetMomScript:
 	scall PlayersHouse1FReceiveItemStd
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
+	setflag ENGINE_POKEDEX
 	addcellnum PHONE_MOM
 	setscene SCENE_PLAYERSHOUSE1F_NOOP
 	setevent EVENT_PLAYERS_HOUSE_MOM_1
@@ -84,11 +85,6 @@ MeetMomScript:
 	iftrue .WingullGiveScript
 	checkevent EVENT_TORKOAL_CHOICE
 	iftrue .TorkoalGiveScript
-	giveitem POKE_BALL, 5
-	giveitem POCKET_PC
-	setflag ENGINE_POKEDEX
-	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
-	setevent EVENT_ROUTE_30_BATTLE
 	closetext
 	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 	iftrue .FromRight
