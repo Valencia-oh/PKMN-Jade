@@ -85,12 +85,6 @@ MeetMomScript:
 	iftrue .WingullGiveScript
 	checkevent EVENT_TORKOAL_CHOICE
 	iftrue .TorkoalGiveScript
-	closetext
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
-	iftrue .FromRight
-	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
-	iffalse .FromLeft
-	sjump .Finish
 
 .ShroomishGiveScript:
 	givepoke SHROOMISH, 5, BERRY
@@ -103,6 +97,12 @@ MeetMomScript:
 .TorkoalGiveScript:
 	givepoke TORKOAL, 5, BERRY
 	end
+	closetext
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iftrue .FromRight
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_2
+	iffalse .FromLeft
+	sjump .Finish
 
 .FromRight:
 	applymovement PLAYERSHOUSE1F_MOM1, MomTurnsBackMovement
